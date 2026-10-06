@@ -101,10 +101,8 @@ previous turn.
     options include *"your ideal count of 8 sentences"* and *"honoring your
     1-sentence preference"*. This is a counterfactual-generation artifact, and the
     text is agent-visible because it is part of the question.
-13. **Length bias: the correct option is usually the shortest.** The correct option
-    is the originally generated turn, while the four alternatives are rewrites that
-    tend to run longer. In the sample, the correct option is the shortest in 8 of
-    10 items. **On the full benchmark, a label-free "pick the shortest" rule scores
+13. **Length bias: the correct option is usually the shortest.** In the sample, the
+    correct option is the shortest in 8 of 10 items. **On the full benchmark, a label-free "pick the shortest" rule scores
     78.2% (95% CI 76.9–79.5%)**, against 52.8% for the best model in the
     HorizonBench paper and 20% chance:
 
@@ -123,6 +121,18 @@ previous turn.
     distractor is shorter than the correct option in only 8.4% of the 1,492 evolved
     items that have one, so length does not explain models choosing it. Every
     summary reports the shortest-option rule as a reference line.
+
+    The measurement was reproduced from the raw parquet files by a separate script
+    that uses no harness code. The paper checks position bias (§6.1) but, as far as
+    we can tell, not option length. **The cause is not established.** Two candidates:
+    - *Generation:* the correct option is the turn originally generated in the
+      conversation, and the four alternatives are rewrites that may run longer.
+    - *Filtering:* items are kept only if 5 LLMs all answer wrong *without* the
+      history. If those LLMs favor fuller, more elaborate answers, the filter would
+      discard items whose correct option is long. "Pick the longest" scoring 2.5%,
+      far below chance, fits this explanation.
+
+    Telling them apart needs the unfiltered items, which are not released.
 14. **HB's parser mis-splits 147 items (3.5%).** `parse_conversations` treats any
     line beginning `Date: ` as a new session, and any line beginning `Scenario: `
     as the session's scenario, even inside turn text:
@@ -136,7 +146,10 @@ previous turn.
     The harness uses `hb_compat.parse_sessions`, which starts a session only on a
     full `YYYY-MM-DDTHH:MM:SS` timestamp and reads `Scenario:` only before a
     session's first turn. Its output is identical to upstream's on the other 4,098
-    items. A turn line that begins `User: ` or `Assistant: ` still can't be told
+    items. HB's headline evaluation (`build_prompt`) passes the raw text to the
+    model and never calls this parser, so **the paper's reported scores are not
+    affected**; the bug matters only to methods that split conversations with
+    `parse_conversations`, as HB suggests for retrieval. A turn line that begins `User: ` or `Assistant: ` still can't be told
     apart from a real turn; item 8's mislabelled line may be one.
 
 ### Reproducing the audit

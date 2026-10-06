@@ -17,8 +17,9 @@ interfaces for those exist but are empty (see [Extension points](#extension-poin
 >   **78.2%**. The best model in the HorizonBench paper scores 52.8%.
 > - **Sessions dated after the question.** These appear in 33% of `sonnet-4.5`
 >   items, inside the benchmark's own history.
-> - **Mis-split conversations.** HorizonBench's parser splits 3.5% of items in the
->   wrong places; the harness uses a corrected parser.
+> - **Mis-split conversations.** HorizonBench's `parse_conversations` helper splits
+>   3.5% of items in the wrong places. Its main evaluation doesn't use that helper,
+>   so published scores are unaffected; the harness uses a corrected parser.
 
 ## Setup
 
