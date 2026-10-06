@@ -1,0 +1,57 @@
+================================================================
+  agent / fake  (sample_fake_agent)
+================================================================
+  Overall            0.0%  [0.0, 0.0]     (n=10)
+  Evolved            0.0%  [0.0, 0.0]     (n=6)
+  Static             0.0%  [0.0, 0.0]     (n=4)
+  Chance            20.0%
+  Shortest-option   80.0%  (label-free reference heuristic)
+  Errors: 0   Invalid answers: 0
+  Old-preference distractor chosen:  33.3% of 6 evolved items;  33.3% of 6 errors (chance 25.0%)
+  Wrote memory on an evolution-event date: 100.0% of evolved items
+  Mean file ops/item: 173.9   mean file reads/item: 1
+  Model calls: 1822   tokens: {'input_tokens': 4842501, 'output_tokens': 122855, 'cache_read_input_tokens': 0, 'cache_creation_input_tokens': 0}
+  Mean latency/item: 0.11s
+  By generator:
+  gemini-3-flash     0.0%  [0.0, 0.0]     (n=4)
+  o3                 0.0%  [0.0, 0.0]     (n=3)
+  sonnet-4.5         0.0%  [0.0, 0.0]     (n=3)
+================================================================
+================================================================
+  summary / fake  (sample_fake_summary)
+================================================================
+  Overall            0.0%  [0.0, 0.0]     (n=10)
+  Evolved            0.0%  [0.0, 0.0]     (n=6)
+  Static             0.0%  [0.0, 0.0]     (n=4)
+  Chance            20.0%
+  Shortest-option   80.0%  (label-free reference heuristic)
+  Errors: 0   Invalid answers: 0
+  Old-preference distractor chosen:  33.3% of 6 evolved items;  33.3% of 6 errors (chance 25.0%)
+  Wrote memory on an evolution-event date:   n/a of evolved items
+  Mean file ops/item: 0   mean file reads/item: 0
+  Model calls: 911   tokens: {'input_tokens': 2556753, 'output_tokens': 981204, 'cache_read_input_tokens': 0, 'cache_creation_input_tokens': 0}
+  Mean latency/item: 0.02s
+  By generator:
+  gemini-3-flash     0.0%  [0.0, 0.0]     (n=4)
+  o3                 0.0%  [0.0, 0.0]     (n=3)
+  sonnet-4.5         0.0%  [0.0, 0.0]     (n=3)
+================================================================
+================================================================
+  recent / fake  (sample_fake_recent)
+================================================================
+  Overall            0.0%  [0.0, 0.0]     (n=10)
+  Evolved            0.0%  [0.0, 0.0]     (n=6)
+  Static             0.0%  [0.0, 0.0]     (n=4)
+  Chance            20.0%
+  Shortest-option   80.0%  (label-free reference heuristic)
+  Errors: 0   Invalid answers: 0
+  Old-preference distractor chosen:  50.0% of 6 evolved items;  50.0% of 6 errors (chance 25.0%)
+  Wrote memory on an evolution-event date:   n/a of evolved items
+  Mean file ops/item: 0   mean file reads/item: 0
+  Model calls: 10   tokens: {'input_tokens': 131670, 'output_tokens': 30, 'cache_read_input_tokens': 0, 'cache_creation_input_tokens': 0}
+  Mean latency/item: 0.01s
+  By generator:
+  gemini-3-flash     0.0%  [0.0, 0.0]     (n=4)
+  o3                 0.0%  [0.0, 0.0]     (n=3)
+  sonnet-4.5         0.0%  [0.0, 0.0]     (n=3)
+================================================================

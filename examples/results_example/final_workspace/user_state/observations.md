@@ -1,0 +1,32 @@
+# Observations
+
+<!-- Purpose: Dated log of notable evidence from sessions (brief quotes or paraphrases with the session date). Evidence, not conclusions. Limit: 20000 characters. -->
+- 2025-09-29: hey so i saw you do hostage negotiation training - been wanting to work on high pressure communication skills and this seems like it'd be intense in a good way
+- 2025-09-30: hey so after that hostage drill yesterday i'm realizing i need to prep for something more personal - someone's been cyberstalking me for weeks now and it's escalating
+- 2025-09-30: hey so i need to talk through something serious - someone's been cyberstalking me and i think i need to confront them about it, get them to stop
+- 2025-10-01: hey so we've got a situation at the facility - reactor temps are climbing fast and i need to know what we're looking at here, like right now
+- 2025-10-01: ok so we're running the nuclear crisis simulation today and i need to understand the immediate priorities - like what's the first thing that needs to happen when we get word of a meltdown scenario
+- 2025-10-04: hey so i broke up with someone about a week ago and honestly i'm just feeling pretty low about it... not sure how to deal with this
+- 2025-10-04: hey so i've been dealing with this breakup for about a week now and honestly it's hitting me harder than i expected... just feeling pretty lost
+- 2025-10-05: hey so i know we're doing this serial killer interrogation training thing but honestly i'm not totally sure where to start - like do we just jump into a scenario or what?
+- 2025-10-06: hey so i'm planning this solo ride up the trans-labrador highway in about 6 weeks and honestly i'm getting a bit nervous about taking my older bike - it's a 2009 KLR 650 with about 65k miles on it... 
+- 2025-10-07: hey so i'm ready for this hostage negotiation drill - just want to make sure i understand what we're doing here
+- 2025-10-10: hey so i've been doing these crisis simulations lately and i want to dig into something more complex - like what actually happens diplomatically when a coup goes down in a country
+- 2025-10-12: hey so i've been thinking about this nuclear winter scenario and honestly with all the wilderness stuff i do - photography trips, climbing - i feel like i should actually know how to handle a real sur
+- 2025-10-13: hey so i'm working on this AI startup and we need to put together a code of ethics before we scale up - honestly not sure where to even start with this
+- 2025-10-13: hey so we're putting together a code of ethics for our AI startup and honestly i'm not sure where to even start with this - like what's the foundation we should be building on?
+- 2025-10-15: Hey, so I had a bad motorcycle accident a few months back and I'm finally getting back to work at my gallery. I need to write an email to my artists explaining the delays in our spring exhibition sche
+- 2025-10-18: hey so i've been working with priya on this documentary project and she mentioned this gothic cult group that meets in an old victorian manor outside town - thinking about doing some undercover photog
+- 2025-10-18: hey so i've been thinking about this photography project - kind of a gothic atmospheric thing set in an old victorian mansion. trying to capture that eerie cult-like tension but make it visually stunn
+- 2025-10-19: hey so i really need some help here - i've been working on this cafe racer build from an 84 cb750 and honestly i've screwed it up pretty bad. wedding season starts in like 6 weeks and i need this thin
+- 2025-10-19: hey so i've been trying to get these osprey dive shots at the marsh near my place and honestly i keep missing the moment - they're just so fast and by the time i react they're already hitting the wate
+- 2025-10-19: Hey, so I had a bad motorcycle accident a few months ago with a TBI, and I'm finally cleared to go back to work at my gallery. Any tips on how to ease back into managing a business after being out for
+- 2025-10-21: hey so i need to talk through something that's been eating at me... got this job offer that would basically double my salary but it's with an oil company and i don't know what to do
+- 2025-10-21: Hey, so I had a bad motorcycle accident about 6 months ago and I'm finally getting back to work at my gallery. I need to draft an email to my artists explaining the delays in our exhibition schedule. 
+- 2025-10-24: hey so i'm planning this murder mystery party for some friends and i want to do something more interesting than the usual mansion setting - thinking maybe something with an adventure vibe?
+- 2025-10-24: hey so i'm working on this murder mystery party for my gallery friends and i want it set in a 1920s speakeasy - thinking 10 people. any ideas how we start building this thing out?
+- 2025-10-27: hey so we're about to launch this facial recognition app in 5 days and honestly i'm having some serious second thoughts about the whole thing... like the tech works great but i keep thinking about all
+- 2025-10-28: hey so i'm working on drafting a code of ethics for my AI startup and honestly not sure where to even start with this - like what's the foundation here?
+- 2025-10-29: hey so i've been having these really intense nightmares lately - same themes over and over, mostly from some close calls i had rock climbing and on the bike. getting to the point where i'm dreading sl
+- 2025-11-01: hey so i need help prepping for this debate on voluntary euthanasia - it's for a high school thing and honestly the topic is kinda heavy but i want to do it right
+- 2025-11-01: hey so i need help prepping for this debate on euthanasia - it's for a high school event i'm helping with and honestly the topic feels pretty heavy

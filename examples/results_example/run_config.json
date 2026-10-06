@@ -1,0 +1,46 @@
+{
+  "harness_version": "0.1.0",
+  "horizonbench_commit": "4b5076b147c952499b7921f20f811dd5aca7ef0b",
+  "method": "agent",
+  "model_settings": {
+    "model": "fake",
+    "max_tokens": 16000,
+    "effort": "medium",
+    "thinking": null,
+    "temperature": null,
+    "fallbacks": true,
+    "max_retries": 5,
+    "timeout_s": 600.0
+  },
+  "method_config": {
+    "budgets": {
+      "context_max_chars": 8000,
+      "file_max_chars": 20000
+    },
+    "max_update_steps": 8,
+    "max_answer_steps": 6,
+    "answer_budget_chars": 48000,
+    "summary_max_chars": 8000,
+    "action_log_max_chars": 60000
+  },
+  "dataset": {
+    "config": "sample",
+    "source": null,
+    "order": "chronological",
+    "show_scenarios": true,
+    "max_sessions": null,
+    "item_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  "log_prompts": false
+}

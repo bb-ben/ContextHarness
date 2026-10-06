@@ -1,0 +1,82 @@
+{
+  "n_items": 10,
+  "n_errors": 0,
+  "n_invalid": 0,
+  "overall": {
+    "n": 10,
+    "accuracy": 0,
+    "ci95": [
+      0,
+      0
+    ]
+  },
+  "evolved": {
+    "n": 6,
+    "accuracy": 0,
+    "ci95": [
+      0,
+      0
+    ]
+  },
+  "static": {
+    "n": 4,
+    "accuracy": 0,
+    "ci95": [
+      0,
+      0
+    ]
+  },
+  "evolved_minus_static": 0,
+  "distractor": {
+    "n_evolved_with_distractor": 6,
+    "chose_distractor_rate": 0.3333333333333333,
+    "n_wrong": 6,
+    "distractor_share_of_errors": 0.3333333333333333,
+    "chance_share_of_errors": 0.25
+  },
+  "by_generator": {
+    "gemini-3-flash": {
+      "n": 4,
+      "accuracy": 0,
+      "ci95": [
+        0,
+        0
+      ]
+    },
+    "o3": {
+      "n": 3,
+      "accuracy": 0,
+      "ci95": [
+        0,
+        0
+      ]
+    },
+    "sonnet-4.5": {
+      "n": 3,
+      "accuracy": 0,
+      "ci95": [
+        0,
+        0
+      ]
+    }
+  },
+  "memory": {
+    "evolved_items_with_write_on_evolution_date": 1,
+    "mean_file_ops": 173.9,
+    "mean_file_reads": 1
+  },
+  "cost": {
+    "tokens_total": {
+      "input_tokens": 4842501,
+      "output_tokens": 122855,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0
+    },
+    "model_calls_total": 1822,
+    "mean_latency_s": 0.1084,
+    "tool_errors_total": 63,
+    "refusals_total": 0
+  },
+  "chance": 0.2,
+  "shortest_option_accuracy": 0.8
+}

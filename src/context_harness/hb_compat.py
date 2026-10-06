@@ -1,0 +1,48 @@
+"""Parsing helpers vendored verbatim from HorizonBench's evaluate.py.
+
+Source: https://github.com/stellalisy/HorizonBench (Apache-2.0),
+commit 4b5076b147c952499b7921f20f811dd5aca7ef0b. Vendored rather than imported
+because HorizonBench's evaluate.py is a top-level script, not an installable
+package, and importing it pulls in `datasets`/`litellm`. Keep these byte-for-byte
+compatible with upstream so parsing and letter extraction match the benchmark's.
+"""
+
+import re
+
+HB_COMMIT = "4b5076b147c952499b7921f20f811dd5aca7ef0b"
+
+QUESTION_STEM = "Which of the following responses would align with the user's preferences the most?"
+
+
+def parse_conversations(conversation_text: str) -> list[dict]:
+    segments = []
+    current_segment = None
+
+    for line in conversation_text.split("\n"):
+        if line.startswith("Conversation History:"):
+            continue
+        elif line.startswith("Date: "):
+            if current_segment is not None:
+                segments.append(current_segment)
+            current_segment = {"date": line[6:], "scenario": "", "turns": []}
+        elif line.startswith("Scenario: ") and current_segment is not None:
+            current_segment["scenario"] = line[10:]
+        elif line.startswith("User: ") and current_segment is not None:
+            current_segment["turns"].append({"role": "user", "content": line[6:]})
+        elif line.startswith("Assistant: ") and current_segment is not None:
+            current_segment["turns"].append({"role": "assistant", "content": line[11:]})
+        elif current_segment is not None and current_segment["turns"]:
+            current_segment["turns"][-1]["content"] += "\n" + line
+
+    if current_segment is not None:
+        segments.append(current_segment)
+    return segments
+
+
+def extract_letter(response_text: str) -> str:
+    """Extract the selected letter (A-E) from a model response."""
+    text = response_text.strip()
+    if text and text[0] in "ABCDE":
+        return text[0]
+    match = re.search(r"\b([A-E])\b", text)
+    return match.group(1) if match else ""
