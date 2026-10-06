@@ -1,0 +1,186 @@
+{
+  "n_items": 4245,
+  "n_parse_errors": 0,
+  "parse_errors": [],
+  "overall": {
+    "n": 4245,
+    "shortest_option_accuracy": 0.7818610129564193,
+    "shortest_option_ci95": [
+      0.7691401648998822,
+      0.7948174322732626
+    ],
+    "shortest_by_words_accuracy": 0.7634864546525324,
+    "longest_option_accuracy": 0.025206124852767964,
+    "correct_length_rank_share": {
+      "1": 0.7868080094228505,
+      "2": 0.11236749116607773,
+      "3": 0.04546525323910483,
+      "4": 0.03109540636042403,
+      "5": 0.02426383981154299
+    },
+    "median_correct_vs_median_other_length": 0.696,
+    "items_with_post_probe_sessions": 347,
+    "share_items_with_post_probe_sessions": 0.0817432273262662,
+    "users_with_post_probe_sessions": 31,
+    "users_total": 346,
+    "post_probe_sessions_total": 3294,
+    "mean_post_probe_sessions_when_present": 9.492795389048991,
+    "share_text_order_not_monotonic": 0.08527679623085983,
+    "share_scenarioless_prefix_ge_3": 0.08527679623085983,
+    "items_with_evolution_event_after_probe": 0,
+    "share_probe_ends_with_user": 0.9997644287396937,
+    "mean_history_sessions": 97.74275618374558
+  },
+  "by_generator": {
+    "gemini-3-flash": {
+      "n": 2212,
+      "shortest_option_accuracy": 0.833634719710669,
+      "shortest_option_ci95": [
+        0.8187160940325497,
+        0.849005424954792
+      ],
+      "shortest_by_words_accuracy": 0.8218806509945751,
+      "longest_option_accuracy": 0.02531645569620253,
+      "correct_length_rank_share": {
+        "1": 0.8363471971066908,
+        "2": 0.08905967450271247,
+        "3": 0.029837251356238697,
+        "4": 0.019891500904159132,
+        "5": 0.024864376130198915
+      },
+      "median_correct_vs_median_other_length": 0.6733480614116234,
+      "items_with_post_probe_sessions": 0,
+      "share_items_with_post_probe_sessions": 0.0,
+      "users_with_post_probe_sessions": 0,
+      "users_total": 120,
+      "post_probe_sessions_total": 0,
+      "mean_post_probe_sessions_when_present": 0,
+      "share_text_order_not_monotonic": 0,
+      "share_scenarioless_prefix_ge_3": 0,
+      "items_with_evolution_event_after_probe": 0,
+      "share_probe_ends_with_user": 0.9995479204339964,
+      "mean_history_sessions": 99.30967450271248
+    },
+    "o3": {
+      "n": 981,
+      "shortest_option_accuracy": 0.7981651376146789,
+      "shortest_option_ci95": [
+        0.7726809378185525,
+        0.8236493374108053
+      ],
+      "shortest_by_words_accuracy": 0.7696228338430173,
+      "longest_option_accuracy": 0.019367991845056064,
+      "correct_length_rank_share": {
+        "1": 0.7981651376146789,
+        "2": 0.12436289500509684,
+        "3": 0.034658511722731905,
+        "4": 0.023445463812436288,
+        "5": 0.019367991845056064
+      },
+      "median_correct_vs_median_other_length": 0.505166475315729,
+      "items_with_post_probe_sessions": 0,
+      "share_items_with_post_probe_sessions": 0.0,
+      "users_with_post_probe_sessions": 0,
+      "users_total": 120,
+      "post_probe_sessions_total": 0,
+      "mean_post_probe_sessions_when_present": 0,
+      "share_text_order_not_monotonic": 0,
+      "share_scenarioless_prefix_ge_3": 0,
+      "items_with_evolution_event_after_probe": 0,
+      "share_probe_ends_with_user": 1,
+      "mean_history_sessions": 97.03975535168196
+    },
+    "sonnet-4.5": {
+      "n": 1052,
+      "shortest_option_accuracy": 0.6577946768060836,
+      "shortest_option_ci95": [
+        0.6283269961977186,
+        0.6863117870722434
+      ],
+      "shortest_by_words_accuracy": 0.6349809885931559,
+      "longest_option_accuracy": 0.030418250950570342,
+      "correct_length_rank_share": {
+        "1": 0.6720532319391636,
+        "2": 0.15019011406844107,
+        "3": 0.08840304182509506,
+        "4": 0.06178707224334601,
+        "5": 0.027566539923954372
+      },
+      "median_correct_vs_median_other_length": 0.8193018745959922,
+      "items_with_post_probe_sessions": 347,
+      "share_items_with_post_probe_sessions": 0.32984790874524716,
+      "users_with_post_probe_sessions": 31,
+      "users_total": 106,
+      "post_probe_sessions_total": 3294,
+      "mean_post_probe_sessions_when_present": 9.492795389048991,
+      "share_text_order_not_monotonic": 0.344106463878327,
+      "share_scenarioless_prefix_ge_3": 0.344106463878327,
+      "items_with_evolution_event_after_probe": 0,
+      "share_probe_ends_with_user": 1,
+      "mean_history_sessions": 95.10361216730038
+    }
+  },
+  "evolved": {
+    "n": 2484,
+    "shortest_option_accuracy": 0.7991143317230274,
+    "shortest_option_ci95": [
+      0.783816425120773,
+      0.8148148148148148
+    ],
+    "shortest_by_words_accuracy": 0.7765700483091788,
+    "longest_option_accuracy": 0.023349436392914653,
+    "correct_length_rank_share": {
+      "1": 0.8039452495974235,
+      "2": 0.10225442834138486,
+      "3": 0.039452495974235106,
+      "4": 0.03140096618357488,
+      "5": 0.022946859903381644
+    },
+    "median_correct_vs_median_other_length": 0.684614286224253,
+    "items_with_post_probe_sessions": 205,
+    "share_items_with_post_probe_sessions": 0.08252818035426732,
+    "users_with_post_probe_sessions": 29,
+    "users_total": 332,
+    "post_probe_sessions_total": 2040,
+    "mean_post_probe_sessions_when_present": 9.951219512195122,
+    "share_text_order_not_monotonic": 0.08695652173913043,
+    "share_scenarioless_prefix_ge_3": 0.08695652173913043,
+    "items_with_evolution_event_after_probe": 0,
+    "share_probe_ends_with_user": 0.999597423510467,
+    "mean_history_sessions": 96.98188405797102
+  },
+  "static": {
+    "n": 1761,
+    "shortest_option_accuracy": 0.7575241340147644,
+    "shortest_option_ci95": [
+      0.7365133446905168,
+      0.7773992049971608
+    ],
+    "shortest_by_words_accuracy": 0.7450312322544009,
+    "longest_option_accuracy": 0.027825099375354913,
+    "correct_length_rank_share": {
+      "1": 0.7626348665530949,
+      "2": 0.12663259511641112,
+      "3": 0.05394662123793299,
+      "4": 0.030664395229982964,
+      "5": 0.02612152186257808
+    },
+    "median_correct_vs_median_other_length": 0.7098865478119936,
+    "items_with_post_probe_sessions": 142,
+    "share_items_with_post_probe_sessions": 0.08063600227143668,
+    "users_with_post_probe_sessions": 31,
+    "users_total": 327,
+    "post_probe_sessions_total": 1254,
+    "mean_post_probe_sessions_when_present": 8.830985915492958,
+    "share_text_order_not_monotonic": 0.08290743895513912,
+    "share_scenarioless_prefix_ge_3": 0.08290743895513912,
+    "items_with_evolution_event_after_probe": 0,
+    "share_probe_ends_with_user": 1,
+    "mean_history_sessions": 98.8160136286201
+  },
+  "distractor": {
+    "n": 1492,
+    "distractor_shorter_than_correct_share": 0.08445040214477212,
+    "distractor_is_shortest_share": 0.030831099195710455
+  }
+}

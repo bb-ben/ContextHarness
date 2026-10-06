@@ -11,10 +11,14 @@ baselines. There are no external action tools, no web access, and no approval lo
 interfaces for those exist but are empty (see [Extension points](#extension-points)).
 
 > **Read [`docs/DATASET_NOTES.md`](docs/DATASET_NOTES.md) before interpreting results.**
-> It records how the real data differs from the intended design. Two findings matter
-> most. First, in 2 of 10 sample items, the benchmark's own history contains sessions
-> dated *after* the question. Second, in the sample, the correct option is the shortest
-> one in 8 of 10 items.
+> It records how the real data differs from the intended design. Across the full
+> 4,245-item benchmark, three findings matter most:
+> - **Length bias.** Picking the shortest option, without reading anything, scores
+>   **78.2%**. The best model in the HorizonBench paper scores 52.8%.
+> - **Sessions dated after the question.** These appear in 33% of `sonnet-4.5`
+>   items, inside the benchmark's own history.
+> - **Mis-split conversations.** HorizonBench's parser splits 3.5% of items in the
+>   wrong places; the harness uses a corrected parser.
 
 ## Setup
 
@@ -22,7 +26,7 @@ Requires Python ≥ 3.12 and [uv](https://docs.astral.sh/uv/).
 
 ```bash
 uv sync                      # creates .venv with anthropic, pyarrow, huggingface_hub, pytest
-uv run pytest -q             # 53 tests, offline, no credentials
+uv run pytest -q             # 58 tests, offline, no credentials
 ```
 
 Real-model runs use the Anthropic API. The SDK resolves credentials from
@@ -52,6 +56,9 @@ uv run context-harness run --method recent  --model claude-opus-5-5 --config sam
 # Re-aggregate and compare runs; inspect the data's ordering anomalies
 uv run context-harness summarize runs/<run-a> runs/<run-b>
 uv run context-harness inspect-data --config sample
+
+# Audit ordering anomalies and option-length bias on the full benchmark (reads labels; ~1.6 GB download)
+uv run context-harness audit-data --config benchmark --out data/audit_benchmark
 ```
 
 Useful flags: `--order text` replays the benchmark's exact text order (see A1 and A2 in
@@ -217,6 +224,7 @@ mostly the shortest ones; hence 0%. Files: [`examples/results_example/`](example
 - `test_workspace.py`: allowlist, traversal, symlinks, per-item isolation, diffs, approval denial, and tamper detection on the raw log.
 - `test_scoring.py`: letter extraction, scoring, aggregation, text fallback, and invalid answers.
 - `test_end_to_end.py`: CLI runs for every method, determinism, and resume.
+- `test_audit.py`: the dataset audit's ordering and length measures.
 - `test_anthropic_adapter.py`: request parameters bind to the installed SDK signatures; tool-use, usage, refusal and fallback parsing on SDK-typed responses.
 
 ## Extension points
@@ -234,8 +242,15 @@ mostly the shortest ones; hence 0%. Files: [`examples/results_example/`](example
 - **Memory evaluation is deterministic for now.** It counts file ops per session,
   sizes, and writes on the date of each evolution event. An evaluator-side LLM judge of
   the final memory against `preference_evolution` is the natural next step.
-- **The length bias and the post-probe sessions are verified on the sample only.**
-  Checking how widespread both are in the 4,245-item benchmark needs the ~1.8 GB download.
+- **Raw accuracy is confounded by option length.** A method that just learns "this
+  user likes short answers" would score well without tracking any change. A
+  length-balanced evaluation subset would remove this: the same number of items for
+  each length rank of the correct option, about 500 items in total. On it, any
+  length-only rule scores 20%. The audit's per-item records already contain the
+  ranks needed to build it.
+- **Results on `sonnet-4.5` items depend on the ordering policy.** A third of them
+  contain sessions dated after the question. The default `chronological` policy
+  drops those sessions; use `--order text` when comparing against published numbers.
 - **Replay is sequential and costs one loop per session.** Message Batches, or
   parallelism across items, would cut wall-clock time for larger runs.
 - **The sample is 10 items.** Confidence intervals are wide at this size, so

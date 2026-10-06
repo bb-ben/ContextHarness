@@ -54,7 +54,7 @@ def evolution_diagnostics(gold: GoldLabel, session_log: list[dict[str, Any]]) ->
     return out
 
 
-def _bootstrap_ci(values: list[int], n_boot: int = 2000, seed: int = 0) -> tuple[float, float]:
+def bootstrap_ci(values: list[int], n_boot: int = 2000, seed: int = 0) -> tuple[float, float]:
     if not values:
         return (0.0, 0.0)
     rng = random.Random(seed)
@@ -66,7 +66,7 @@ def _acc(rows: list[dict[str, Any]]) -> dict[str, Any]:
     if not rows:
         return {"n": 0, "accuracy": None, "ci95": None}
     vals = [int(r["correct"]) for r in rows]
-    lo, hi = _bootstrap_ci(vals)
+    lo, hi = bootstrap_ci(vals)
     return {"n": len(rows), "accuracy": mean(vals), "ci95": [lo, hi]}
 
 

@@ -10,7 +10,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Iterator, Literal
 
-from .hb_compat import QUESTION_STEM, parse_conversations
+from .hb_compat import QUESTION_STEM, parse_sessions
 from .types import (
     BenchmarkItem,
     Episode,
@@ -94,7 +94,7 @@ def parse_item(
     show_scenarios: bool = True,
     max_sessions: int | None = None,
 ) -> BenchmarkItem:
-    segments = parse_conversations(row["conversation"])
+    segments = parse_sessions(row["conversation"])
     if len(segments) < 2:
         raise ValueError(f"Item {row['id']!r}: expected history sessions plus a probe segment")
     *history, probe_seg = segments
@@ -205,7 +205,7 @@ def item_slug(item: BenchmarkItem) -> str:
 
 
 def _turns(seg: dict[str, Any]) -> tuple[Turn, ...]:
-    # parse_conversations appends trailing blank lines to the last turn; strip them.
+    # The parser appends trailing blank lines to the last turn; strip them.
     return tuple(Turn(role=t["role"], content=t["content"].rstrip()) for t in seg["turns"])
 
 

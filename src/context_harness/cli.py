@@ -102,6 +102,16 @@ def cmd_inspect(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_audit(args: argparse.Namespace) -> int:
+    """Evaluator-side audit of ordering anomalies and option-length bias (reads labels)."""
+    from .audit import format_audit, run_audit
+
+    summary = run_audit(iter_rows(args.config, args.dataset), Path(args.out), args.max_items)
+    print(format_audit(summary))
+    print(f"Per-item records and summary written to {args.out}/")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="context-harness", description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
@@ -134,6 +144,13 @@ def main(argv: list[str] | None = None) -> int:
     p = sub.add_parser("inspect-data", help="Print per-item session structure and ordering anomalies")
     _add_dataset_args(p)
     p.set_defaults(func=cmd_inspect)
+
+    p = sub.add_parser("audit-data", help="Audit ordering anomalies and option-length bias (evaluator-side)")
+    p.add_argument("--config", default="sample", help="HF config: sample or benchmark")
+    p.add_argument("--dataset", help="Local .parquet/.jsonl/.json file instead of the HF dataset")
+    p.add_argument("--max-items", type=int)
+    p.add_argument("--out", default="data/audit", help="Directory for audit_items.jsonl and audit_summary.json")
+    p.set_defaults(func=cmd_audit)
 
     args = parser.parse_args(argv)
     return args.func(args)

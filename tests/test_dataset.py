@@ -95,3 +95,27 @@ def test_real_sample_replay_is_chronological_with_no_future_sessions():
     dropped = {it.gold.user_id: len(it.ordering.dropped_after_probe) for it in items}
     assert dropped["sonnet-4.5/user_112"] == 13 and dropped["sonnet-4.5/user_68"] == 19
     assert sum(dropped.values()) == 32
+
+
+def test_guarded_parser_keeps_date_and_scenario_lines_inside_turns():
+    from context_harness.hb_compat import parse_sessions
+
+    text = fixture_data.build_conversation([
+        {"date": "2025-10-01T09:00:00.000001", "scenario": "Real scenario.",
+         "turns": [("user", "Catalog this:\nDate: 1943-04-15\nDate: YYYY-MM-DD\nScenario: a plot twist"),
+                   ("assistant", "Done.")]},
+        {"date": "2025-10-02T09:00:00.000001", "turns": [("user", "Next?")]},
+    ])
+    upstream, guarded = parse_conversations(text), parse_sessions(text)
+    assert len(upstream) == 4  # upstream invents sessions at both "Date:" lines
+    assert upstream[2]["scenario"] == "a plot twist"  # and lets turn text overwrite a scenario
+    assert len(guarded) == 2
+    assert guarded[0]["scenario"] == "Real scenario."
+    assert guarded[0]["turns"][0]["content"] == "Catalog this:\nDate: 1943-04-15\nDate: YYYY-MM-DD\nScenario: a plot twist"
+
+
+def test_guarded_parser_matches_upstream_on_clean_text():
+    from context_harness.hb_compat import parse_sessions
+
+    for row in fixture_data.rows():
+        assert parse_sessions(row["conversation"]) == parse_conversations(row["conversation"])

@@ -46,6 +46,12 @@ previous turn.
    For these two users they sit at the front of `conversation_record`. As a result,
    (a) the benchmark's own prompt contains **future events** for these items, and
    (b) life events appear *before* the preferences they later change.
+
+   **Full benchmark (audit, see below):** this happens only with the `sonnet-4.5`
+   generator, in **347 of its 1,052 items (33%), from 31 of its 106 users**. That
+   is 8.2% of all items and 3,294 post-question sessions in total. No `o3` or
+   `gemini-3-flash` item is affected. No item's *tested* evolution event is dated
+   after its question, so the label itself is never in the future.
 2. **Timestamps are not unique.** Sessions on the same day share an identical
    synthetic timestamp (10–54 duplicates per item), so date alone can't order
    them. Ties keep text order.
@@ -81,7 +87,8 @@ previous turn.
    - item 0 has the same user turn twice in a row;
    - item 8 has a user line labelled `Assistant:`.
 
-   No content line was mis-split by the prefix parser (all `Date:` values parse as ISO).
+   In the sample, no turn text was mis-split by the prefix parser. In the full
+   benchmark, some was: see finding 14.
 10. **Scale.** History has 29–142 sessions per sample item (820–3,690 turns).
     Sessions range from 450 to 65K characters. A per-session agent loop
     therefore costs ~30–140 update loops per item.
@@ -94,12 +101,54 @@ previous turn.
     options include *"your ideal count of 8 sentences"* and *"honoring your
     1-sentence preference"*. This is a counterfactual-generation artifact, and the
     text is agent-visible because it is part of the question.
-13. **Length bias in the sample: the correct option is the shortest of the five in
-    8 of 10 items.** The correct option is the originally generated turn, while the
-    four alternatives are rewrites that tend to run longer. A label-free "pick the
-    shortest" rule scores 80% on the sample, against 52.8% for the best model in the
-    HorizonBench paper. *Not yet checked on the full `benchmark` config.* Every
-    summary therefore reports a shortest-option reference line.
+13. **Length bias: the correct option is usually the shortest.** The correct option
+    is the originally generated turn, while the four alternatives are rewrites that
+    tend to run longer. In the sample, the correct option is the shortest in 8 of
+    10 items. **On the full benchmark, a label-free "pick the shortest" rule scores
+    78.2% (95% CI 76.9–79.5%)**, against 52.8% for the best model in the
+    HorizonBench paper and 20% chance:
+
+    | Group | Items | Shortest-option rule | Correct option's length rank 1 / 2 / 3 / 4 / 5 |
+    |---|---|---|---|
+    | All | 4,245 | 78.2% | 78.7 / 11.2 / 4.5 / 3.1 / 2.4 % |
+    | gemini-3-flash | 2,212 | 83.4% | 83.6 / 8.9 / 3.0 / 2.0 / 2.5 % |
+    | o3 | 981 | 79.8% | 79.8 / 12.4 / 3.5 / 2.3 / 1.9 % |
+    | sonnet-4.5 | 1,052 | 65.8% | 67.2 / 15.0 / 8.8 / 6.2 / 2.8 % |
+    | evolved | 2,484 | 79.9% | 80.4 / 10.2 / 3.9 / 3.1 / 2.3 % |
+    | static | 1,761 | 75.8% | 76.3 / 12.7 / 5.4 / 3.1 / 2.6 % |
+
+    Rank 1 means shortest; tied lengths share the better rank. The median correct
+    option is 0.70× the median length of the other four. Counting words instead of
+    characters gives 76.3%, and "pick the longest" scores 2.5%. The old-preference
+    distractor is shorter than the correct option in only 8.4% of the 1,492 evolved
+    items that have one, so length does not explain models choosing it. Every
+    summary reports the shortest-option rule as a reference line.
+14. **HB's parser mis-splits 147 items (3.5%).** `parse_conversations` treats any
+    line beginning `Date: ` as a new session, and any line beginning `Scenario: `
+    as the session's scenario, even inside turn text:
+
+    | What the turn text contains | Upstream result | Items |
+    |---|---|---|
+    | `Date: YYYY-MM-DD`, `Date: [counting backward]` | invents a session with an unparseable date | 44 |
+    | `Scenario: …` (e.g. a fantasy-football reply) | overwrites the session's real scenario; the line is lost | 98 |
+    | `Date: 1943-04-15` (a quoted archive record) | invents a session dated 1943, which date-sorting would move to the front | 5 |
+
+    The harness uses `hb_compat.parse_sessions`, which starts a session only on a
+    full `YYYY-MM-DDTHH:MM:SS` timestamp and reads `Scenario:` only before a
+    session's first turn. Its output is identical to upstream's on the other 4,098
+    items. A turn line that begins `User: ` or `Assistant: ` still can't be told
+    apart from a real turn; item 8's mislabelled line may be one.
+
+### Reproducing the audit
+
+```bash
+uv run context-harness audit-data --config benchmark --out data/audit_benchmark
+```
+
+It takes about 20 seconds after the ~1.6 GB download. It writes one record per
+item to `audit_items.jsonl` and the aggregates to `audit_summary.json`; a copy of
+the summary is in `docs/benchmark_audit_summary.json`. The audit reads labels, so
+it is evaluator-side only.
 
 ## Decisions (ambiguities resolved)
 
@@ -114,3 +163,4 @@ previous turn.
 | A7 | "Memory evaluation" in milestone 1 | Deterministic: per-file edit counts and sizes, no-op sessions, plus an evaluator-side check of whether the agent wrote to memory during the evolution-event session(s) | LLM-judge over final memory (next milestone) |
 | A8 | Item identity shown to agent | Opaque `item_key` (hash). The raw `id` would leak the domain | — |
 | A9 | Length artifact (finding 13) | Every summary reports the accuracy of a label-free shortest-option heuristic as a reference | — |
+| A10 | Parser mis-splits (finding 14) | `parse_sessions`: sessions start only on full timestamps; `Scenario:` only before the first turn | `hb_compat.parse_conversations` kept verbatim for comparison |
