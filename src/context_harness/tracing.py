@@ -28,6 +28,7 @@ class TraceStats:
     file_ops: int = 0  # successful workspace mutations
     file_reads: int = 0
     refusals: int = 0
+    access: list[dict[str, Any]] = field(default_factory=list)  # per tool call: tool, kind, paths, ok
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -43,6 +44,19 @@ class TraceStats:
             "refusals": self.refusals,
         }
 
+    @classmethod
+    def from_dict(cls, d: dict[str, Any], access: list[dict[str, Any]] | None = None) -> "TraceStats":
+        stats = cls(
+            model_calls=d["model_calls"], usage=Usage(**d["usage"]), tool_calls=d["tool_calls"],
+            tool_errors=d["tool_errors"], file_ops=d["file_ops"], file_reads=d["file_reads"],
+            refusals=d["refusals"], access=list(access or []),
+        )
+        for phase, u in d["usage_by_phase"].items():
+            stats.usage_by_phase[phase] = Usage(**u)
+        stats.calls_by_phase.update(d["calls_by_phase"])
+        stats.served_by.update(d["served_by"])
+        return stats
+
 
 class TraceWriter:
     def __init__(self, path: Path, log_prompts: bool = False):
@@ -53,7 +67,9 @@ class TraceWriter:
         self._t0 = time.perf_counter()
         self._file = path.open("a")
 
-    def emit(self, event: str, **fields: Any) -> None:
+    def emit(self, event: str, /, **fields: Any) -> None:
+        if "event" in fields:
+            raise ValueError("'event' is the record type; pass the event's ID as event_id")
         record = {"seq": self._seq, "t": round(time.perf_counter() - self._t0, 4), "event": event}
         record.update(fields)
         self._file.write(json.dumps(record, ensure_ascii=False, default=str) + "\n")
@@ -125,6 +141,24 @@ class RawSessionLog:
         self.path = path
         self._prev = "0" * 64
         self._file = path.open("x")  # never overwrite an existing log
+
+    @classmethod
+    def resume(cls, path: Path, keep: int) -> "RawSessionLog":
+        """Reopen a paused item's log, keeping its first `keep` records.
+
+        Records past `keep` belong to an event that was interrupted and will be
+        replayed, so they are dropped. The kept prefix must verify.
+        """
+        lines = path.read_text().splitlines()[:keep]
+        os.chmod(path, stat.S_IRUSR | stat.S_IWUSR)
+        path.write_text("".join(line + "\n" for line in lines))
+        if not cls.verify(path):
+            raise ValueError(f"{path} failed hash-chain verification; cannot resume")
+        log = cls.__new__(cls)
+        log.path = path
+        log._prev = json.loads(lines[-1])["sha256"] if lines else "0" * 64
+        log._file = path.open("a")
+        return log
 
     def append(self, session: Session) -> str:
         body = {

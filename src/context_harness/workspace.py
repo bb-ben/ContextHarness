@@ -1,72 +1,74 @@
-"""Per-item agent workspace: a fixed allowlist of markdown files with size budgets.
+"""The state workspace: a layout of markdown files with size limits.
 
-The workspace root contains only the allowlisted files. Traces, raw session logs,
-and evaluator outputs live in sibling directories that no tool can address.
+A Layout says which files exist, their limits, and which entry types each may
+hold (see agent.md). Layouts are data, so a FoodBody deployment can add files
+(e.g. decisions) without code changes. The workspace root contains only the
+layout's files; traces, raw logs and evaluator outputs live in sibling
+directories that no tool can address.
 """
 
 from __future__ import annotations
 
 import difflib
 import hashlib
-from dataclasses import dataclass
-from pathlib import Path, PurePosixPath
+from dataclasses import dataclass, replace
+from pathlib import Path
 from typing import Callable
 
 CONTEXT_FILE = "context.md"
+EPISODES_FILE = "memory/episodes.md"
+TRANSIENT_FILE = "state/transient.md"
+ARCHIVE_FILE = "memory/archive.md"
 
-FILE_PURPOSES: dict[str, str] = {
-    CONTEXT_FILE: (
-        "Working context. Its full current contents are shown to you automatically at the "
-        "start of every model call, and it is the only file that is. Keep here what you need "
-        "most often to serve this user well right now: who they are, what is currently true "
-        "about their preferences and situation, active threads, and pointers to the files "
-        "that hold more detail. Replace stale content rather than appending indefinitely."
-    ),
-    "long_term_memory.md": (
-        "Durable facts about the user that are unlikely to change soon: identity, background, "
-        "relationships, and significant history, with dates. Read on demand."
-    ),
-    "user_state/goals.md": (
-        "What the user is trying to accomplish: goals and projects with status "
-        "(active / completed / abandoned) and dates."
-    ),
-    "user_state/persistent_state.md": (
-        "Stable preferences and traits, such as how the user likes to be helped and "
-        "communicated with. Note when each was first observed and last confirmed. When one "
-        "changes, record the new value as current and keep the old value as superseded, "
-        "with the date and the reason."
-    ),
-    "user_state/transient_state.md": (
-        "Short-lived state: current mood, stressors, temporary constraints or circumstances, "
-        "with dates and, if known, when they are expected to end."
-    ),
-    "user_state/progress.md": (
-        "Progress on ongoing tasks and threads across sessions: what was done, what is next, "
-        "open questions."
-    ),
-    "user_state/observations.md": (
-        "Dated log of notable evidence from sessions (brief quotes or paraphrases with the "
-        "session date). Evidence, not conclusions."
-    ),
-    "user_state/hypotheses.md": (
-        "Tentative inferences about the user, each with confidence and supporting or "
-        "contradicting evidence. Promote to state files when confirmed; retire when refuted."
-    ),
-}
-WORKSPACE_FILES: tuple[str, ...] = tuple(FILE_PURPOSES)
+
+@dataclass(frozen=True)
+class FileSpec:
+    path: str
+    title: str
+    limit: int
+    entry_types: tuple[str, ...]  # entry ID prefixes allowed in this file; () for context.md
+
+
+@dataclass(frozen=True)
+class Layout:
+    name: str
+    files: tuple[FileSpec, ...]
+
+    @property
+    def paths(self) -> tuple[str, ...]:
+        return tuple(f.path for f in self.files)
+
+    def spec(self, path: str) -> FileSpec | None:
+        return next((f for f in self.files if f.path == path), None)
+
+    def file_for_type(self, entry_type: str) -> FileSpec | None:
+        return next((f for f in self.files if entry_type in f.entry_types), None)
+
+    def with_limit(self, path: str, limit: int) -> "Layout":
+        return replace(self, files=tuple(replace(f, limit=limit) if f.path == path else f for f in self.files))
+
+
+_CORE = (
+    FileSpec(CONTEXT_FILE, "Working context", 6000, ()),
+    FileSpec(EPISODES_FILE, "Episodes", 60000, ("E", "O")),
+    FileSpec("state/profile.md", "Profile", 12000, ("F",)),
+    FileSpec("state/preferences.md", "Preferences", 12000, ("P",)),
+    FileSpec("state/goals.md", "Goals", 12000, ("G",)),
+    FileSpec(TRANSIENT_FILE, "Transient state", 8000, ("T",)),
+    FileSpec("state/hypotheses.md", "Hypotheses", 12000, ("H",)),
+    # Closed state entries, moved here unchanged by the archive tool so state files stay bounded.
+    FileSpec(ARCHIVE_FILE, "Archive", 200000, ("F", "P", "G", "T", "H", "D", "R")),
+)
+
+# HorizonBench has no agent decisions or outcomes, so the decisions file is absent.
+HORIZONBENCH = Layout("horizonbench", _CORE)
+# Reserved for event sources that include the agent's own decisions and their outcomes.
+WITH_DECISIONS = Layout("with-decisions", _CORE + (FileSpec("memory/decisions.md", "Decisions", 20000, ("D", "R")),))
+LAYOUTS = {layout.name: layout for layout in (HORIZONBENCH, WITH_DECISIONS)}
 
 
 class WorkspaceError(Exception):
     """A rejected workspace operation. The message is shown to the agent."""
-
-
-@dataclass(frozen=True)
-class WorkspaceBudgets:
-    context_max_chars: int = 8000
-    file_max_chars: int = 20000
-
-    def limit(self, path: str) -> int:
-        return self.context_max_chars if path == CONTEXT_FILE else self.file_max_chars
 
 
 @dataclass(frozen=True)
@@ -80,32 +82,26 @@ class FileChange:
     diff: str
 
 
-def template(path: str, budgets: WorkspaceBudgets) -> str:
-    title = PurePosixPath(path).stem.replace("_", " ").capitalize()
-    return (
-        f"# {title}\n\n"
-        f"<!-- Purpose: {FILE_PURPOSES[path]} Limit: {budgets.limit(path)} characters. -->\n"
-    )
+def template(spec: FileSpec) -> str:
+    if spec.path == CONTEXT_FILE:
+        return "# Working context · as of (no events yet)\n\n## Now\n\n## Watch\n\n## Active\n"
+    return f"# {spec.title}\n"
 
 
 class Workspace:
-    def __init__(
-        self,
-        root: Path,
-        budgets: WorkspaceBudgets,
-        on_change: Callable[[FileChange], None] | None = None,
-    ):
+    def __init__(self, root: Path, layout: Layout, on_change: Callable[[FileChange], None] | None = None):
         self.root = root.resolve()
-        self.budgets = budgets
+        self.layout = layout
         self.on_change = on_change
 
     @classmethod
-    def create(cls, root: Path, budgets: WorkspaceBudgets, **kwargs) -> "Workspace":
+    def create(cls, root: Path, layout: Layout, **kwargs) -> "Workspace":
         root.mkdir(parents=True, exist_ok=False)
-        (root / "user_state").mkdir()
-        ws = cls(root, budgets, **kwargs)
-        for path in WORKSPACE_FILES:
-            (ws.root / path).write_text(template(path, budgets))
+        ws = cls(root, layout, **kwargs)
+        for spec in layout.files:
+            target = ws.root / spec.path
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_text(template(spec))
         return ws
 
     # ---------------------------------------------------------------- access
@@ -113,13 +109,9 @@ class Workspace:
     def resolve(self, path: str) -> Path:
         if not isinstance(path, str):
             raise WorkspaceError("path must be a string")
-        normalized = path.strip()
-        if normalized.startswith("./"):
-            normalized = normalized[2:]
-        if normalized not in FILE_PURPOSES:
-            raise WorkspaceError(
-                f"Unknown file {path!r}. Allowed files: {', '.join(WORKSPACE_FILES)}"
-            )
+        normalized = path.strip().removeprefix("./")
+        if self.layout.spec(normalized) is None:
+            raise WorkspaceError(f"Unknown file {path!r}. Allowed files: {', '.join(self.layout.paths)}")
         full = self.root / normalized
         # Defense in depth: the allowlist already excludes traversal, but refuse
         # symlinks or anything that resolves outside the root.
@@ -127,11 +119,11 @@ class Workspace:
             raise WorkspaceError(f"Refusing to access {path!r}")
         return full
 
+    def limit(self, path: str) -> int:
+        return self.layout.spec(path.strip().removeprefix("./")).limit
+
     def list_files(self) -> list[dict]:
-        return [
-            {"path": p, "chars": len(self.read(p)), "limit": self.budgets.limit(p)}
-            for p in WORKSPACE_FILES
-        ]
+        return [{"path": f.path, "chars": len(self.read(f.path)), "limit": f.limit} for f in self.layout.files]
 
     def read(self, path: str) -> str:
         return self.resolve(path).read_text()
@@ -150,13 +142,11 @@ class Workspace:
             raise WorkspaceError("old_text must be non-empty")
         count = current.count(old_text)
         if count != 1:
-            raise WorkspaceError(
-                f"old_text must match exactly once in {path}; found {count} matches"
-            )
+            raise WorkspaceError(f"old_text must match exactly once in {path}; found {count} matches")
         return self._commit(path, "edit_file", current.replace(old_text, new_text, 1))
 
     def snapshot(self) -> dict[str, str]:
-        return {p: self.read(p) for p in WORKSPACE_FILES}
+        return {p: self.read(p) for p in self.layout.paths}
 
     def save_snapshot(self, dest: Path) -> None:
         for path, content in self.snapshot().items():
@@ -164,13 +154,18 @@ class Workspace:
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_text(content)
 
+    def restore_snapshot(self, files: dict[str, str]) -> None:
+        """Overwrite the workspace with a saved snapshot (used when resuming a run)."""
+        for path, content in files.items():
+            self.resolve(path).write_text(content)
+
     # -------------------------------------------------------------- internals
 
     def _commit(self, path: str, op: str, new_content: str) -> FileChange:
         if not isinstance(new_content, str):
             raise WorkspaceError("content must be a string")
         full = self.resolve(path)
-        limit = self.budgets.limit(path)
+        limit = self.limit(path)
         if len(new_content) > limit:
             raise WorkspaceError(
                 f"Rejected: {path} would be {len(new_content)} characters, over its limit of "
@@ -178,8 +173,9 @@ class Workspace:
             )
         before = full.read_text()
         full.write_text(new_content)
+        clean = path.strip().removeprefix("./")
         change = FileChange(
-            path=path.strip().removeprefix("./"),
+            path=clean,
             op=op,
             before_sha256=_sha(before),
             after_sha256=_sha(new_content),
@@ -189,8 +185,8 @@ class Workspace:
                 difflib.unified_diff(
                     before.splitlines(keepends=True),
                     new_content.splitlines(keepends=True),
-                    fromfile=f"a/{path}",
-                    tofile=f"b/{path}",
+                    fromfile=f"a/{clean}",
+                    tofile=f"b/{clean}",
                 )
             ),
         )

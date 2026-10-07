@@ -1,0 +1,25 @@
+# Archive
+- T-0.1 | expired | 2025-09-29 | review: 2025-10-06 | basis: O-0.1 | ended: 2025-10-06 | Currently working on: hey so i saw you do hostage negotiation training - been wanting to work on high
+- T-1.1 | expired | 2025-09-30 | review: 2025-10-07 | basis: O-1.1 | ended: 2025-10-07 | Currently working on: hey so after that hostage drill yesterday i'm realizing i need to prep for somet
+- T-2.1 | expired | 2025-09-30 | review: 2025-10-07 | basis: O-2.1 | ended: 2025-10-07 | Currently working on: hey so i need to talk through something serious - someone's been cyberstalking m
+- T-3.1 | expired | 2025-10-01 | review: 2025-10-08 | basis: O-3.1 | ended: 2025-10-10 | Currently working on: hey so we've got a situation at the facility - reactor temps are climbing fast a
+- T-4.1 | expired | 2025-10-01 | review: 2025-10-08 | basis: O-4.1 | ended: 2025-10-10 | Currently working on: ok so we're running the nuclear crisis simulation today and i need to understand
+- T-5.1 | expired | 2025-10-04 | review: 2025-10-11 | basis: O-5.1 | ended: 2025-10-12 | Currently working on: hey so i broke up with someone about a week ago and honestly i'm just feeling pr
+- T-6.1 | expired | 2025-10-04 | review: 2025-10-11 | basis: O-6.1 | ended: 2025-10-12 | Currently working on: hey so i've been dealing with this breakup for about a week now and honestly it'
+- T-7.1 | expired | 2025-10-05 | review: 2025-10-12 | basis: O-7.1 | ended: 2025-10-12 | Currently working on: hey so i know we're doing this serial killer interrogation training thing but ho
+- T-8.1 | expired | 2025-10-06 | review: 2025-10-13 | basis: O-8.1 | ended: 2025-10-13 | Currently working on: hey so i'm planning this solo ride up the trans-labrador highway in about 6 week
+- T-9.1 | expired | 2025-10-07 | review: 2025-10-14 | basis: O-9.1 | ended: 2025-10-15 | Currently working on: hey so i'm ready for this hostage negotiation drill - just want to make sure i u
+- T-10.1 | expired | 2025-10-10 | review: 2025-10-17 | basis: O-10.1 | ended: 2025-10-18 | Currently working on: hey so i've been doing these crisis simulations lately and i want to dig into so
+- T-11.1 | expired | 2025-10-12 | review: 2025-10-19 | basis: O-11.1 | ended: 2025-10-19 | Currently working on: hey so i've been thinking about this nuclear winter scenario and honestly with a
+- T-12.1 | expired | 2025-10-13 | review: 2025-10-20 | basis: O-12.1 | ended: 2025-10-21 | Currently working on: hey so i'm working on this AI startup and we need to put together a code of ethi
+- T-13.1 | expired | 2025-10-13 | review: 2025-10-20 | basis: O-13.1 | ended: 2025-10-21 | Currently working on: hey so we're putting together a code of ethics for our AI startup and honestly i
+- T-14.1 | expired | 2025-10-15 | review: 2025-10-22 | basis: O-14.1 | ended: 2025-10-24 | Currently working on: Hey, so I had a bad motorcycle accident a few months back and I'm finally gettin
+- T-15.1 | expired | 2025-10-18 | review: 2025-10-25 | basis: O-15.1 | ended: 2025-10-27 | Currently working on: hey so i've been working with priya on this documentary project and she mentione
+- T-16.1 | expired | 2025-10-18 | review: 2025-10-25 | basis: O-16.1 | ended: 2025-10-27 | Currently working on: hey so i've been thinking about this photography project - kind of a gothic atmo
+- T-17.1 | expired | 2025-10-19 | review: 2025-10-26 | basis: O-17.1 | ended: 2025-10-27 | Currently working on: hey so i really need some help here - i've been working on this cafe racer build
+- T-18.1 | expired | 2025-10-19 | review: 2025-10-26 | basis: O-18.1 | ended: 2025-10-27 | Currently working on: hey so i've been trying to get these osprey dive shots at the marsh near my plac
+- T-19.1 | expired | 2025-10-19 | review: 2025-10-26 | basis: O-19.1 | ended: 2025-10-27 | Currently working on: Hey, so I had a bad motorcycle accident a few months ago with a TBI, and I'm fin
+- T-20.1 | expired | 2025-10-21 | review: 2025-10-28 | basis: O-20.1 | ended: 2025-10-28 | Currently working on: hey so i need to talk through something that's been eating at me... got this job
+- T-21.1 | expired | 2025-10-21 | review: 2025-10-28 | basis: O-21.1 | ended: 2025-10-28 | Currently working on: Hey, so I had a bad motorcycle accident about 6 months ago and I'm finally getti
+- T-22.1 | expired | 2025-10-24 | review: 2025-10-31 | basis: O-22.1 | ended: 2025-11-01 | Currently working on: hey so i'm planning this murder mystery party for some friends and i want to do
+- T-23.1 | expired | 2025-10-24 | review: 2025-10-31 | basis: O-23.1 | ended: 2025-11-01 | Currently working on: hey so i'm working on this murder mystery party for my gallery friends and i wan

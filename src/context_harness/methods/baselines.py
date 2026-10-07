@@ -3,11 +3,12 @@
 from __future__ import annotations
 
 import difflib
+from typing import Any
 
 from .. import prompts
 from ..models.base import ModelRequest, TextBlock
 from ..tools import SubmitAnswer, ToolExecutor
-from ..types import AnswerResult, Probe, Question, Session
+from ..types import AnswerResult, Event, Probe, Question, Session
 from .base import MethodContext, answer_with_tools
 
 
@@ -29,8 +30,8 @@ class RecentHistory:
         self.sessions: list[Session] = []
         self._window = ""
 
-    def observe_session(self, session: Session) -> None:
-        self.sessions.append(session)
+    def observe(self, event: Event) -> None:
+        self.sessions.append(event)
 
     def build_window(self) -> tuple[str, int]:
         budget = self.ctx.config.answer_budget_chars
@@ -49,14 +50,14 @@ class RecentHistory:
         n_full = sum(1 for p in parts if not p.startswith("[earlier"))
         return "\n\n".join(reversed(parts)), n_full
 
-    def answer(self, probe: Probe, question: Question) -> AnswerResult:
+    def answer(self, probe: Probe, question: Question, probe_event_id: str) -> AnswerResult:
         window, n_full = self.build_window()
         self._window = window
         self.ctx.trace.emit("history_window", sessions_in_full=n_full, chars=len(window))
         submit = SubmitAnswer(question.letters)
         fixed = (
             f"<recent_history>\n{window}\n</recent_history>\n\n"
-            + prompts.render_probe(probe)
+            + prompts.render_probe(probe, probe_event_id)
             + "\n\n"
             + prompts.render_question(question)
         )
@@ -74,6 +75,12 @@ class RecentHistory:
     def memory_snapshot(self) -> dict[str, str]:
         return {"recent_history_window.md": self._window}
 
+    def export_state(self) -> dict[str, Any]:
+        return {"observed": len(self.sessions)}
+
+    def restore_state(self, state: dict[str, Any], history: tuple[Session, ...]) -> None:
+        self.sessions = list(history[: state["observed"]])
+
 
 class RollingSummary:
     """One fixed-prompt model call per session rewrites a bounded summary."""
@@ -89,7 +96,8 @@ class RollingSummary:
             tracking_guidance=prompts.TRACKING_GUIDANCE, max_chars=self.max_chars
         )
 
-    def observe_session(self, session: Session) -> None:
+    def observe(self, event: Event) -> None:
+        session = event
         request = ModelRequest(
             phase="summary_update",
             system=self.system,
@@ -100,12 +108,12 @@ class RollingSummary:
                     + "\n\nWrite the complete updated summary."
                 ),
             ),
-            metadata={"session": session.index},
+            metadata={"event_id": session.event_id},
         )
         response = self.ctx.model.complete(request)
         new = response.text.strip()
         if response.stop_reason == "refusal" or not new:
-            self.ctx.trace.emit("summary_unchanged", session=session.index, reason=response.stop_reason or "empty")
+            self.ctx.trace.emit("summary_unchanged", event_id=session.event_id, reason=response.stop_reason or "empty")
             return
         truncated = len(new) > self.max_chars
         new = new[: self.max_chars]
@@ -115,15 +123,15 @@ class RollingSummary:
             )
         )
         self.ctx.trace.emit(
-            "summary_update", session=session.index, chars=len(new), truncated=truncated, diff=diff
+            "summary_update", event_id=session.event_id, chars=len(new), truncated=truncated, diff=diff
         )
         self.summary = new
 
-    def answer(self, probe: Probe, question: Question) -> AnswerResult:
+    def answer(self, probe: Probe, question: Question, probe_event_id: str) -> AnswerResult:
         submit = SubmitAnswer(question.letters)
         fixed = (
             f"<summary>\n{self.summary or '(empty)'}\n</summary>\n\n"
-            + prompts.render_probe(probe)
+            + prompts.render_probe(probe, probe_event_id)
             + "\n\n"
             + prompts.render_question(question)
         )
@@ -138,3 +146,9 @@ class RollingSummary:
 
     def memory_snapshot(self) -> dict[str, str]:
         return {"summary.md": self.summary}
+
+    def export_state(self) -> dict[str, Any]:
+        return {"summary": self.summary}
+
+    def restore_state(self, state: dict[str, Any], history: tuple[Session, ...]) -> None:
+        self.summary = state["summary"]

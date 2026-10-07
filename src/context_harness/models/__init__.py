@@ -1,12 +1,26 @@
-from .base import ModelAdapter, ModelRequest, ModelResponse, ModelSettings, TextBlock, ToolCall, ToolSpec, Usage
+from .base import (
+    ModelAdapter,
+    ModelRequest,
+    ModelResponse,
+    ModelSettings,
+    QuotaExhausted,
+    TextBlock,
+    ToolCall,
+    ToolSpec,
+    Usage,
+)
 
 
 def make_model(settings: ModelSettings) -> ModelAdapter:
-    """`fake` selects the deterministic offline model; anything else is an Anthropic model id."""
+    """`fake` is the offline model; `gemini-*` uses Google; anything else is an Anthropic model id."""
     if settings.model == "fake":
         from .fake import FakeModel
 
         return FakeModel(settings)
+    if settings.model.startswith("gemini-"):
+        from .gemini_adapter import GeminiAdapter
+
+        return GeminiAdapter(settings)
     from .anthropic_adapter import AnthropicAdapter
 
     return AnthropicAdapter(settings)
@@ -17,6 +31,7 @@ __all__ = [
     "ModelRequest",
     "ModelResponse",
     "ModelSettings",
+    "QuotaExhausted",
     "TextBlock",
     "ToolCall",
     "ToolSpec",

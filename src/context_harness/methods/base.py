@@ -11,8 +11,8 @@ from ..hb_compat import extract_letter
 from ..models.base import ModelRequest, ModelResponse, TextBlock, ToolCall
 from ..tools import ToolExecutor, ToolResult
 from ..tracing import TracedModel, TraceWriter
-from ..types import AnswerResult, Probe, Question, Session
-from ..workspace import WorkspaceBudgets
+from ..types import AnswerResult, Event, Probe, Question, Session
+from ..workspace import HORIZONBENCH, Layout
 
 
 @dataclass(frozen=True)
@@ -24,7 +24,8 @@ class MethodConfig:
     the recent-history window, or the rolling summary.
     """
 
-    budgets: WorkspaceBudgets = field(default_factory=WorkspaceBudgets)
+    layout: Layout = HORIZONBENCH
+    contract_path: str | None = None  # agent.md by default
     max_update_steps: int = 8
     max_answer_steps: int = 6
     answer_budget_chars: int = 48000
@@ -38,17 +39,26 @@ class MethodContext:
     trace: TraceWriter
     item_dir: Path
     config: MethodConfig
+    resume: bool = False  # reopen an existing workspace instead of creating one
 
 
 class MemoryMethod(Protocol):
     name: str
-    has_workspace: bool  # True if it writes agent-managed files (enables file-op diagnostics)
+    has_workspace: bool  # True if it keeps a state workspace (enables memory checks)
 
-    def observe_session(self, session: Session) -> None: ...
+    def observe(self, event: Event) -> None: ...
 
-    def answer(self, probe: Probe, question: Question) -> AnswerResult: ...
+    def answer(self, probe: Probe, question: Question, probe_event_id: str) -> AnswerResult: ...
 
     def memory_snapshot(self) -> dict[str, str]: ...
+
+    def export_state(self) -> dict[str, Any]:
+        """JSON-serializable state not already on disk, for pausing mid-item."""
+        ...
+
+    def restore_state(self, state: dict[str, Any], history: tuple[Session, ...]) -> None:
+        """Restore after a pause; `history` holds the events already observed."""
+        ...
 
 
 class ActionLog:
@@ -153,6 +163,9 @@ def run_step_loop(
         last = model.complete(request)
         if last.stop_reason == "refusal":
             return LoopOutcome("refusal", step + 1, last)
+        if last.stop_reason == "malformed_tool_call":
+            log.note("harness", "Your last tool call was malformed and did not run. Try again.")
+            continue
         if last.text.strip():
             log.note("your", last.text)
         if not last.tool_calls:

@@ -1,32 +1,44 @@
 """Deterministic stand-ins for an LLM, for credential-free runs and tests.
 
-FakeModel reads only the request it is given, exactly as a real model would, so
-it exercises replay, workspace semantics, logging, and scoring end to end. Its
-answer heuristic (word overlap between options and memory) is label-free.
+FakeModel reads only the request it is given, as a real model would, and follows
+the memory contract (agent.md) exactly, so a fake run should produce zero memory
+violations: any violation it does produce is a bug in the checks or the layer.
+Its answer heuristic (word overlap between options and memory) is label-free.
 """
 
 from __future__ import annotations
 
 import json
 import re
+from datetime import date as Date, timedelta
 from typing import Callable
 
 from .base import ModelRequest, ModelResponse, ModelSettings, ToolCall, Usage
 
-_SESSION = re.compile(r'<session date="([^"]+)">(.*?)</session>', re.S)
+_EVENT = re.compile(r'<event id="S-(\d+)" type="[^"]*" date="([^"]+)">(.*?)</event>', re.S)
 _USER_LINE = re.compile(r"^User: (.*)$", re.M)
 _WORKING = re.compile(r"<working_context[^>]*>\n(.*?)\n</working_context>", re.S)
+_DUE = re.compile(r"<due>\n(.*?)\n</due>", re.S)
 _SUMMARY = re.compile(r"<current_summary>\n(.*?)\n</current_summary>", re.S)
 _OPTION = re.compile(r"^([A-E]): (.*)$", re.M)
 _QUESTION = re.compile(r"<question>.*?</question>", re.S)
-_SEEN = re.compile(r"Sessions seen: (\d+)")
+_SEEN = re.compile(r"events seen: (\d+)")
 _WORD = re.compile(r"[a-z]{4,}")
 
 
-def _session_facts(prompt: str) -> tuple[str, str]:
-    date, body = _SESSION.search(prompt).groups()
+def _clean(text: str, n: int) -> str:
+    return " ".join(text.replace("|", "/").split())[:n]
+
+
+def _event_facts(prompt: str) -> tuple[int, str, str]:
+    index, date, body = _EVENT.search(prompt).groups()
     first_user = _USER_LINE.search(body)
-    return date, first_user.group(1) if first_user else ""
+    return int(index), date, first_user.group(1) if first_user else ""
+
+
+def _body(request: ModelRequest) -> str:
+    """The user message only. The system prompt (agent.md) contains example tags."""
+    return "\n".join(b.text for b in request.blocks)
 
 
 def _usage(request: ModelRequest, text: str, calls: list[ToolCall]) -> Usage:
@@ -42,10 +54,9 @@ class FakeModel:
 
     def complete(self, request: ModelRequest) -> ModelResponse:
         self.requests.append(request)
-        handler = {
-            "memory_update": self._memory_update,
-            "summary_update": self._summary_update,
-        }.get(request.phase, self._answer)
+        handler = {"memory_update": self._memory_update, "summary_update": self._summary_update}.get(
+            request.phase, self._answer
+        )
         text, calls = handler(request)
         return ModelResponse(
             text=text,
@@ -62,38 +73,61 @@ class FakeModel:
 
     def _memory_update(self, request: ModelRequest) -> tuple[str, list[ToolCall]]:
         if request.metadata.get("step", 0) > 0:
-            return "Done with this session.", []
-        prompt = request.prompt_text()
-        date, first_user = _session_facts(prompt)
+            return "Done with this event.", []
+        prompt = _body(request)
+        k, date, first_user = _event_facts(prompt)
         working = _WORKING.search(prompt).group(1)
-        # The session counter lives only in context.md, so it advances only if
+        # The event counter lives only in context.md, so it advances only if
         # edits to context.md really reach the next model call.
         seen = int(m.group(1)) + 1 if (m := _SEEN.search(working)) else 1
-        context = (
-            "# Context\n\n"
-            f"Sessions seen: {seen}\n"
-            f"Last session: {date[:10]}: {first_user[:160]}\n"
-            "Details: user_state/observations.md\n"
-        )
-        note = f"- {date[:10]}: {first_user[:200]}"
-        return "Recording this session.", [
-            self._call("append_file", path="user_state/observations.md", text=note),
-            self._call("write_file", path="context.md", content=context),
+        review = (Date.fromisoformat(date) + timedelta(days=7)).isoformat()
+        calls = [
+            self._call(
+                "append_file",
+                path="memory/episodes.md",
+                text=f"- E-{k} | {date} | source: S-{k} | Conversation: {_clean(first_user, 100)}\n"
+                f"  - O-{k}.1 | behavior | Asked: {_clean(first_user, 140)}",
+            ),
+            self._call(
+                "append_file",
+                path="state/transient.md",
+                text=f"- T-{k}.1 | active | {date} | review: {review} | basis: O-{k}.1 | "
+                f"Currently working on: {_clean(first_user, 80)}",
+            ),
         ]
+        due = _DUE.search(prompt).group(1)
+        due_lines = [] if due == "(none)" else due.splitlines()
+        for line in due_lines:
+            *head, statement = [s.strip() for s in line.split("|")]
+            head[1] = "expired"
+            calls.append(self._call("edit_file", path="state/transient.md", old_text=line,
+                                    new_text=" | ".join(head + [f"ended: {date}", statement])))
+        if due_lines:  # closed entries move to the archive so the state file stays bounded
+            calls.append(self._call("archive", ids=[line.split("|")[0].strip(" -") for line in due_lines]))
+        calls.append(
+            self._call(
+                "write_file",
+                path="context.md",
+                content=f"# Working context · as of {date} (S-{k}) · events seen: {seen}\n\n"
+                f"## Now\n- Latest request: {_clean(first_user, 80)} (T-{k}.1)\n\n## Watch\n\n## Active\n",
+            )
+        )
+        calls.append(self._call("finish"))
+        return "Recording this event.", calls
 
     def _summary_update(self, request: ModelRequest) -> tuple[str, list[ToolCall]]:
-        prompt = request.prompt_text()
-        date, first_user = _session_facts(prompt)
+        prompt = _body(request)
+        _, date, first_user = _event_facts(prompt)
         current = _SUMMARY.search(prompt).group(1)
         lines = [] if current == "(empty)" else current.splitlines()
-        lines = (lines + [f"- {date[:10]}: {first_user[:200]}"])[-30:]
+        lines = (lines + [f"- {date}: {first_user[:200]}"])[-30:]
         return "\n".join(lines), []
 
     def _answer(self, request: ModelRequest) -> tuple[str, list[ToolCall]]:
         tool_names = {t.name for t in request.tools}
         if request.metadata.get("step", 0) == 0 and "read_file" in tool_names:
-            return "", [self._call("read_file", path="user_state/observations.md")]
-        prompt = request.prompt_text()
+            return "", [self._call("read_file", path="memory/episodes.md")]
+        prompt = _body(request)
         question = _QUESTION.search(prompt).group(0)
         memory_words = set(_WORD.findall(_QUESTION.sub("", prompt).lower()))
         options = _OPTION.findall(question)

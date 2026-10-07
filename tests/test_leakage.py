@@ -4,7 +4,7 @@ labels reach it ever."""
 import re
 
 import pytest
-from conftest import run_config
+from conftest import ev, run_config
 from fixture_data import FORBIDDEN_ALWAYS, FORBIDDEN_DURING_REPLAY
 
 from context_harness.models.fake import FakeModel
@@ -31,7 +31,7 @@ def test_no_leakage(method, items, tmp_path):
     # sessions (earlier ones may appear via memory the method wrote itself).
     replay = [r for r in model.requests if r.phase != "answer"]
     for req in (r for r in replay if "SESSION_MARKER" in r.blocks[0].text):
-        current = req.metadata["session"]
+        current = ev(req)
         assert f"SESSION_MARKER_{current}" in req.blocks[0].text
         seen = {int(m) for m in MARKER.findall(req.prompt_text())}
         assert max(seen) <= current, f"future session visible at session {current}: {sorted(seen)}"
@@ -42,18 +42,18 @@ def test_long_term_files_are_not_auto_included(evolved_item, tmp_path):
     from context_harness.models.fake import ScriptedModel
 
     def script(req):
-        session, step = req.metadata.get("session"), req.metadata.get("step")
+        session, step = ev(req), req.metadata.get("step")
         if req.phase == "memory_update" and session == 0 and step == 0:
-            return "", [("write_file", {"path": "long_term_memory.md", "content": "LONG_TERM_SECRET"})]
+            return "", [("write_file", {"path": "state/profile.md", "content": "LONG_TERM_SECRET"})]
         if req.phase == "memory_update" and session == 1 and step == 0:
-            return "", [("read_file", {"path": "long_term_memory.md"})]
+            return "", [("read_file", {"path": "state/profile.md"})]
         if req.phase == "answer":
             return "", [("submit_answer", {"letter": "A"})]
         return "done", []
 
     model = ScriptedModel(script)
     run([evolved_item], model, tmp_path / "run", run_config("agent"), progress=lambda *_: None)
-    by_key = {(r.phase, r.metadata.get("session"), r.metadata.get("step")): r.prompt_text() for r in model.requests}
+    by_key = {(r.phase, ev(r), r.metadata.get("step")): r.prompt_text() for r in model.requests}
     assert "LONG_TERM_SECRET" not in by_key[("memory_update", 1, 0)]
     assert "LONG_TERM_SECRET" in by_key[("memory_update", 1, 1)]  # after the explicit read
     assert "LONG_TERM_SECRET" not in by_key[("answer", None, 0)]

@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "anthropic>=1.0.0",
+    "google-genai>=1.0",
     "huggingface_hub>=0.24",
     "pyarrow>=17",
 ]
@@ -25,3 +26,5 @@ packages = ["src/context_harness"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+# Raised inside google-genai on Python 3.14; not from this project.
+filterwarnings = ["ignore:'_UnionGenericAlias' is deprecated:DeprecationWarning"]

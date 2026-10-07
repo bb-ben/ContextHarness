@@ -1,0 +1,59 @@
+# Episodes
+- E-0 | 2025-09-29 | source: S-0 | Conversation: hey so i saw you do hostage negotiation training - been wanting to work on high pressure communicati
+  - O-0.1 | behavior | Asked: hey so i saw you do hostage negotiation training - been wanting to work on high pressure communication skills and this seems like it'd be in
+- E-1 | 2025-09-30 | source: S-1 | Conversation: hey so after that hostage drill yesterday i'm realizing i need to prep for something more personal -
+  - O-1.1 | behavior | Asked: hey so after that hostage drill yesterday i'm realizing i need to prep for something more personal - someone's been cyberstalking me for wee
+- E-2 | 2025-09-30 | source: S-2 | Conversation: hey so i need to talk through something serious - someone's been cyberstalking me and i think i need
+  - O-2.1 | behavior | Asked: hey so i need to talk through something serious - someone's been cyberstalking me and i think i need to confront them about it, get them to 
+- E-3 | 2025-10-01 | source: S-3 | Conversation: hey so we've got a situation at the facility - reactor temps are climbing fast and i need to know wh
+  - O-3.1 | behavior | Asked: hey so we've got a situation at the facility - reactor temps are climbing fast and i need to know what we're looking at here, like right now
+- E-4 | 2025-10-01 | source: S-4 | Conversation: ok so we're running the nuclear crisis simulation today and i need to understand the immediate prior
+  - O-4.1 | behavior | Asked: ok so we're running the nuclear crisis simulation today and i need to understand the immediate priorities - like what's the first thing that
+- E-5 | 2025-10-04 | source: S-5 | Conversation: hey so i broke up with someone about a week ago and honestly i'm just feeling pretty low about it...
+  - O-5.1 | behavior | Asked: hey so i broke up with someone about a week ago and honestly i'm just feeling pretty low about it... not sure how to deal with this
+- E-6 | 2025-10-04 | source: S-6 | Conversation: hey so i've been dealing with this breakup for about a week now and honestly it's hitting me harder 
+  - O-6.1 | behavior | Asked: hey so i've been dealing with this breakup for about a week now and honestly it's hitting me harder than i expected... just feeling pretty l
+- E-7 | 2025-10-05 | source: S-7 | Conversation: hey so i know we're doing this serial killer interrogation training thing but honestly i'm not total
+  - O-7.1 | behavior | Asked: hey so i know we're doing this serial killer interrogation training thing but honestly i'm not totally sure where to start - like do we just
+- E-8 | 2025-10-06 | source: S-8 | Conversation: hey so i'm planning this solo ride up the trans-labrador highway in about 6 weeks and honestly i'm g
+  - O-8.1 | behavior | Asked: hey so i'm planning this solo ride up the trans-labrador highway in about 6 weeks and honestly i'm getting a bit nervous about taking my old
+- E-9 | 2025-10-07 | source: S-9 | Conversation: hey so i'm ready for this hostage negotiation drill - just want to make sure i understand what we're
+  - O-9.1 | behavior | Asked: hey so i'm ready for this hostage negotiation drill - just want to make sure i understand what we're doing here
+- E-10 | 2025-10-10 | source: S-10 | Conversation: hey so i've been doing these crisis simulations lately and i want to dig into something more complex
+  - O-10.1 | behavior | Asked: hey so i've been doing these crisis simulations lately and i want to dig into something more complex - like what actually happens diplomatic
+- E-11 | 2025-10-12 | source: S-11 | Conversation: hey so i've been thinking about this nuclear winter scenario and honestly with all the wilderness st
+  - O-11.1 | behavior | Asked: hey so i've been thinking about this nuclear winter scenario and honestly with all the wilderness stuff i do - photography trips, climbing -
+- E-12 | 2025-10-13 | source: S-12 | Conversation: hey so i'm working on this AI startup and we need to put together a code of ethics before we scale u
+  - O-12.1 | behavior | Asked: hey so i'm working on this AI startup and we need to put together a code of ethics before we scale up - honestly not sure where to even star
+- E-13 | 2025-10-13 | source: S-13 | Conversation: hey so we're putting together a code of ethics for our AI startup and honestly i'm not sure where to
+  - O-13.1 | behavior | Asked: hey so we're putting together a code of ethics for our AI startup and honestly i'm not sure where to even start with this - like what's the 
+- E-14 | 2025-10-15 | source: S-14 | Conversation: Hey, so I had a bad motorcycle accident a few months back and I'm finally getting back to work at my
+  - O-14.1 | behavior | Asked: Hey, so I had a bad motorcycle accident a few months back and I'm finally getting back to work at my gallery. I need to write an email to my
+- E-15 | 2025-10-18 | source: S-15 | Conversation: hey so i've been working with priya on this documentary project and she mentioned this gothic cult g
+  - O-15.1 | behavior | Asked: hey so i've been working with priya on this documentary project and she mentioned this gothic cult group that meets in an old victorian mano
+- E-16 | 2025-10-18 | source: S-16 | Conversation: hey so i've been thinking about this photography project - kind of a gothic atmospheric thing set in
+  - O-16.1 | behavior | Asked: hey so i've been thinking about this photography project - kind of a gothic atmospheric thing set in an old victorian mansion. trying to cap
+- E-17 | 2025-10-19 | source: S-17 | Conversation: hey so i really need some help here - i've been working on this cafe racer build from an 84 cb750 an
+  - O-17.1 | behavior | Asked: hey so i really need some help here - i've been working on this cafe racer build from an 84 cb750 and honestly i've screwed it up pretty bad
+- E-18 | 2025-10-19 | source: S-18 | Conversation: hey so i've been trying to get these osprey dive shots at the marsh near my place and honestly i kee
+  - O-18.1 | behavior | Asked: hey so i've been trying to get these osprey dive shots at the marsh near my place and honestly i keep missing the moment - they're just so f
+- E-19 | 2025-10-19 | source: S-19 | Conversation: Hey, so I had a bad motorcycle accident a few months ago with a TBI, and I'm finally cleared to go b
+  - O-19.1 | behavior | Asked: Hey, so I had a bad motorcycle accident a few months ago with a TBI, and I'm finally cleared to go back to work at my gallery. Any tips on h
+- E-20 | 2025-10-21 | source: S-20 | Conversation: hey so i need to talk through something that's been eating at me... got this job offer that would ba
+  - O-20.1 | behavior | Asked: hey so i need to talk through something that's been eating at me... got this job offer that would basically double my salary but it's with a
+- E-21 | 2025-10-21 | source: S-21 | Conversation: Hey, so I had a bad motorcycle accident about 6 months ago and I'm finally getting back to work at m
+  - O-21.1 | behavior | Asked: Hey, so I had a bad motorcycle accident about 6 months ago and I'm finally getting back to work at my gallery. I need to draft an email to m
+- E-22 | 2025-10-24 | source: S-22 | Conversation: hey so i'm planning this murder mystery party for some friends and i want to do something more inter
+  - O-22.1 | behavior | Asked: hey so i'm planning this murder mystery party for some friends and i want to do something more interesting than the usual mansion setting - 
+- E-23 | 2025-10-24 | source: S-23 | Conversation: hey so i'm working on this murder mystery party for my gallery friends and i want it set in a 1920s 
+  - O-23.1 | behavior | Asked: hey so i'm working on this murder mystery party for my gallery friends and i want it set in a 1920s speakeasy - thinking 10 people. any idea
+- E-24 | 2025-10-27 | source: S-24 | Conversation: hey so we're about to launch this facial recognition app in 5 days and honestly i'm having some seri
+  - O-24.1 | behavior | Asked: hey so we're about to launch this facial recognition app in 5 days and honestly i'm having some serious second thoughts about the whole thin
+- E-25 | 2025-10-28 | source: S-25 | Conversation: hey so i'm working on drafting a code of ethics for my AI startup and honestly not sure where to eve
+  - O-25.1 | behavior | Asked: hey so i'm working on drafting a code of ethics for my AI startup and honestly not sure where to even start with this - like what's the foun
+- E-26 | 2025-10-29 | source: S-26 | Conversation: hey so i've been having these really intense nightmares lately - same themes over and over, mostly f
+  - O-26.1 | behavior | Asked: hey so i've been having these really intense nightmares lately - same themes over and over, mostly from some close calls i had rock climbing
+- E-27 | 2025-11-01 | source: S-27 | Conversation: hey so i need help prepping for this debate on voluntary euthanasia - it's for a high school thing a
+  - O-27.1 | behavior | Asked: hey so i need help prepping for this debate on voluntary euthanasia - it's for a high school thing and honestly the topic is kinda heavy but
+- E-28 | 2025-11-01 | source: S-28 | Conversation: hey so i need help prepping for this debate on euthanasia - it's for a high school event i'm helping
+  - O-28.1 | behavior | Asked: hey so i need help prepping for this debate on euthanasia - it's for a high school event i'm helping with and honestly the topic feels prett

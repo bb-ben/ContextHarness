@@ -4,18 +4,18 @@
   "n_invalid": 0,
   "overall": {
     "n": 10,
-    "accuracy": 0,
+    "accuracy": 0.1,
     "ci95": [
       0,
-      0
+      0.3
     ]
   },
   "evolved": {
     "n": 6,
-    "accuracy": 0,
+    "accuracy": 0.16666666666666666,
     "ci95": [
       0,
-      0
+      0.5
     ]
   },
   "static": {
@@ -26,21 +26,21 @@
       0
     ]
   },
-  "evolved_minus_static": 0,
+  "evolved_minus_static": 0.16666666666666666,
   "distractor": {
     "n_evolved_with_distractor": 6,
-    "chose_distractor_rate": 0.3333333333333333,
-    "n_wrong": 6,
-    "distractor_share_of_errors": 0.3333333333333333,
+    "chose_distractor_rate": 0.16666666666666666,
+    "n_wrong": 5,
+    "distractor_share_of_errors": 0.2,
     "chance_share_of_errors": 0.25
   },
   "by_generator": {
     "gemini-3-flash": {
       "n": 4,
-      "accuracy": 0,
+      "accuracy": 0.25,
       "ci95": [
         0,
-        0
+        0.75
       ]
     },
     "o3": {
@@ -62,21 +62,39 @@
   },
   "memory": {
     "evolved_items_with_write_on_evolution_date": 1,
-    "mean_file_ops": 173.9,
+    "mean_file_ops": 390.4,
     "mean_file_reads": 1
   },
   "cost": {
     "tokens_total": {
-      "input_tokens": 4842501,
-      "output_tokens": 122855,
+      "input_tokens": 4557305,
+      "output_tokens": 284137,
       "cache_read_input_tokens": 0,
       "cache_creation_input_tokens": 0
     },
-    "model_calls_total": 1822,
-    "mean_latency_s": 0.1084,
-    "tool_errors_total": 63,
+    "model_calls_total": 921,
+    "mean_latency_s": 0.30569999999999997,
+    "tool_errors_total": 0,
     "refusals_total": 0
   },
   "chance": 0.2,
-  "shortest_option_accuracy": 0.8
+  "memory_layer": {
+    "items": 10,
+    "events": 901,
+    "violations_per_event": 0.0,
+    "share_events_with_violations": 0.0,
+    "violations_by_code": {},
+    "final_provenance_share": 1.0,
+    "final_context_coverage": 0.17396825396825397,
+    "evidence_chain_stages": {
+      "not_replayed": 0,
+      "not_recorded": 0,
+      "recorded": 0,
+      "observed": 0,
+      "hypothesized": 0,
+      "in_state": 10
+    }
+  },
+  "shortest_option_accuracy": 0.8,
+  "paused_at": null
 }

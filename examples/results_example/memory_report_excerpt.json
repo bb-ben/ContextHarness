@@ -1,0 +1,234 @@
+{
+ "layout": "horizonbench",
+ "events": 29,
+ "violations_by_code": {},
+ "events_with_violations": 0,
+ "access_totals": {
+  "context.md": {
+   "writes": 29
+  },
+  "memory/archive.md": {
+   "writes": 13
+  },
+  "memory/episodes.md": {
+   "writes": 29
+  },
+  "state/transient.md": {
+   "writes": 66
+  }
+ },
+ "final_metrics": {
+  "entries": {
+   "E": 29,
+   "O": 29,
+   "T": 29
+  },
+  "live_entries": {
+   "T": 5
+  },
+  "provenance_share": 1.0,
+  "context_bullets": 1,
+  "context_cited_ids": 1,
+  "context_coverage_of_live_state": 0.2,
+  "episodes_recorded": 29
+ },
+ "per_event": [
+  {
+   "event_id": "S-0",
+   "index": 0,
+   "date": "2025-09-29",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/transient.md": {
+     "writes": 1
+    }
+   },
+   "violations": {},
+   "metrics": {
+    "entries": {
+     "E": 1,
+     "O": 1,
+     "T": 1
+    },
+    "live_entries": {
+     "T": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 1,
+    "context_cited_ids": 1,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 1
+   }
+  },
+  {
+   "event_id": "S-1",
+   "index": 1,
+   "date": "2025-09-30",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/transient.md": {
+     "writes": 1
+    }
+   },
+   "violations": {},
+   "metrics": {
+    "entries": {
+     "E": 2,
+     "O": 2,
+     "T": 2
+    },
+    "live_entries": {
+     "T": 2
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 1,
+    "context_cited_ids": 1,
+    "context_coverage_of_live_state": 0.5,
+    "episodes_recorded": 2
+   }
+  },
+  {
+   "event_id": "S-2",
+   "index": 2,
+   "date": "2025-09-30",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/transient.md": {
+     "writes": 1
+    }
+   },
+   "violations": {},
+   "metrics": {
+    "entries": {
+     "E": 3,
+     "O": 3,
+     "T": 3
+    },
+    "live_entries": {
+     "T": 3
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 1,
+    "context_cited_ids": 1,
+    "context_coverage_of_live_state": 0.3333333333333333,
+    "episodes_recorded": 3
+   }
+  },
+  "... 26 more events"
+ ],
+ "violations": [],
+ "lifecycle": {
+  "E-0": {
+   "type": "E",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-0.1": {
+   "type": "O",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "T-0.1": {
+   "type": "T",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     "active"
+    ],
+    [
+     "S-8",
+     "expired"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-1": {
+   "type": "E",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-1.1": {
+   "type": "O",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "T-1.1": {
+   "type": "T",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     "active"
+    ],
+    [
+     "S-9",
+     "expired"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-2": {
+   "type": "E",
+   "created": "S-2",
+   "statuses": [
+    [
+     "S-2",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-2.1": {
+   "type": "O",
+   "created": "S-2",
+   "statuses": [
+    [
+     "S-2",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "...": "79 more entries"
+ }
+}

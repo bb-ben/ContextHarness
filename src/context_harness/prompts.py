@@ -1,14 +1,45 @@
-"""All prompt text and rendering in one place, so prompt changes are easy to audit.
+"""Prompt text and rendering.
 
-Prompts describe the task generically (keep memory of a user whose preferences
-can change). They never mention the benchmark, multiple-choice evaluation, or
-preference domains, and nothing here writes preferences on the agent's behalf.
+The agent's system prompt is agent.md, loaded verbatim, so the documented memory
+contract and the instructions the model receives cannot drift apart. Phase
+instructions (process an event vs. respond) go in the per-call dynamic block.
+Baseline prompts live here too and share the generic tracking guidance.
 """
 
 from __future__ import annotations
 
+from functools import lru_cache
+from pathlib import Path
+
+from .entries import Entry
 from .types import Probe, Question, Session
-from .workspace import FILE_PURPOSES
+
+CONTRACT_PATH = Path(__file__).resolve().parents[2] / "agent.md"
+
+
+@lru_cache(maxsize=4)
+def load_contract(path: str | None = None) -> str:
+    target = Path(path) if path else CONTRACT_PATH
+    if not target.exists():
+        raise FileNotFoundError(f"Memory contract not found at {target}")
+    return target.read_text()
+
+
+UPDATE_INSTRUCTION = (
+    "Process the event above as the contract describes: append its episode block, resolve "
+    "anything under <due>, update hypotheses and state, and refresh context.md. Call finish "
+    "together with your last edits."
+)
+
+
+def answer_instruction(read_budget_left: int) -> str:
+    return (
+        "You are now responding to the person in <current_conversation>. Memory is read-only. "
+        f"You can read at most {read_budget_left} more characters with read_file and lookup. "
+        "Choose the candidate response that best fits this person as they are now, then call "
+        "submit_answer with its letter."
+    )
+
 
 TRACKING_GUIDANCE = (
     "People's preferences, goals and circumstances can change over time. Keep track of what "
@@ -16,43 +47,10 @@ TRACKING_GUIDANCE = (
     "old one as superseded, with dates."
 )
 
-AGENT_UPDATE_SYSTEM = """\
-You manage the memory of an AI assistant that has an ongoing relationship with one user. You \
-do not talk to the user. After each conversation session between the user and the assistant, \
-you are shown that session and may update a small set of memory files. In later sessions the \
-assistant will rely on this memory to respond the way this user wants at that time.
-
-Each call shows you:
-- <session>: the session that just ended (its date, an optional scenario note, and the turns).
-- <working_context>: the full current contents of context.md. It is the only file shown \
-automatically, and it is refreshed after every edit. Limit: {context_max_chars} characters.
-- <workspace>: every memory file with its size and limit. Use read_file to see any other file.
-- <actions_so_far>: the tools you have already called for this session, with their results.
-
-Memory files:
-{file_list}
-
-How to work:
-- {tracking_guidance}
-- Tie what you record to the session date. Write concise, specific notes, not transcript copies.
-- Doing nothing is fine when a session adds nothing worth remembering.
-- You may make several tool calls in one turn. When you are finished with this session, reply \
-briefly without calling any tools. You have at most {max_steps} model calls per session.
-- A write that would push a file over its limit is rejected."""
-
 ANSWER_TASK = (
     "You will be shown candidate next responses. Choose the one that best fits this user's "
     "preferences as they are now, then call submit_answer with its letter."
 )
-
-AGENT_ANSWER_SYSTEM = """\
-You are an AI assistant with an ongoing relationship with one user. You are partway through a \
-conversation with them, shown in <current_conversation>. Earlier sessions are not shown. What \
-you know about the user comes from your memory files: context.md is shown in \
-<working_context>, and you can read the other files with read_file. Memory is read-only now, \
-and you can read at most {read_budget} characters in total.
-
-{answer_task}"""
 
 RECENT_ANSWER_SYSTEM = """\
 You are an AI assistant with an ongoing relationship with one user. You are partway through a \
@@ -79,31 +77,22 @@ summary. {tracking_guidance} Stay under {max_chars} characters; anything longer 
 Output only the summary text."""
 
 
-def agent_update_system(context_max_chars: int, max_steps: int) -> str:
-    file_list = "\n".join(f"- {path}: {purpose}" for path, purpose in FILE_PURPOSES.items())
-    return AGENT_UPDATE_SYSTEM.format(
-        context_max_chars=context_max_chars,
-        file_list=file_list,
-        tracking_guidance=TRACKING_GUIDANCE,
-        max_steps=max_steps,
-    )
-
-
 def _speaker(role: str) -> str:
     return "User" if role == "user" else "Assistant"
 
 
-def render_session(s: Session) -> str:
-    lines = [f'<session date="{s.date}">']
+def render_event(s: Session) -> str:
+    """Render one event. Conversation sessions are the only event type so far."""
+    lines = [f'<event id="{s.event_id}" type="{s.event_type}" date="{s.date[:10]}">']
     if s.scenario:
         lines.append(f"Scenario: {s.scenario}")
     lines += [f"{_speaker(t.role)}: {t.content}" for t in s.turns]
-    lines.append("</session>")
+    lines.append("</event>")
     return "\n".join(lines)
 
 
-def render_probe(p: Probe) -> str:
-    lines = [f'<current_conversation date="{p.date}">']
+def render_probe(p: Probe, event_id: str) -> str:
+    lines = [f'<current_conversation id="{event_id}" date="{p.date[:10]}">']
     if p.scenario:
         lines.append(f"Scenario: {p.scenario}")
     lines += [f"{_speaker(t.role)}: {t.content}" for t in p.turns]
@@ -117,10 +106,7 @@ def render_question(q: Question) -> str:
 
 
 def render_working_context(content: str, limit: int) -> str:
-    return (
-        f'<working_context file="context.md" chars="{len(content)}" limit="{limit}">\n'
-        f"{content}\n</working_context>"
-    )
+    return f'<working_context file="context.md" chars="{len(content)}" limit="{limit}">\n{content}\n</working_context>'
 
 
 def render_workspace(files: list[dict]) -> str:
@@ -128,5 +114,14 @@ def render_workspace(files: list[dict]) -> str:
     return f"<workspace>\n{rows}\n</workspace>"
 
 
+def render_due(due: list[tuple[Entry, str]]) -> str:
+    body = "\n".join(line for _, line in due) if due else "(none)"
+    return f"<due>\n{body}\n</due>"
+
+
 def render_actions(actions_text: str) -> str:
     return f"<actions_so_far>\n{actions_text or '(none yet)'}\n</actions_so_far>"
+
+
+# Baselines render sessions the same way the agent sees events.
+render_session = render_event

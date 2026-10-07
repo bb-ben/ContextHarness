@@ -7,9 +7,27 @@ the leakage boundary: methods only ever receive pieces of an `Episode`.
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Any, Literal
+from typing import Any, Literal, Protocol
 
 Role = Literal["user", "assistant"]
+
+
+class Event(Protocol):
+    """Anything the memory layer observes, in time order.
+
+    HorizonBench supplies conversation sessions. Other sources (e.g. FoodBody
+    logs, decisions, outcomes) can implement this protocol plus a renderer in
+    prompts.render_event, without changing the workspace or checks.
+    """
+
+    @property
+    def event_id(self) -> str: ...
+
+    @property
+    def event_type(self) -> str: ...
+
+    @property
+    def date(self) -> str: ...
 
 
 @dataclass(frozen=True)
@@ -27,6 +45,12 @@ class Session:
     date: str  # ISO timestamp exactly as given in the data
     scenario: str  # generator narration; "" if absent or hidden
     turns: tuple[Turn, ...]
+
+    event_type = "conversation"
+
+    @property
+    def event_id(self) -> str:
+        return f"S-{self.index}"
 
 
 @dataclass(frozen=True)

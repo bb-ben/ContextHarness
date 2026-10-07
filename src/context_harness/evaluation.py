@@ -4,10 +4,11 @@ orchestrator's post-answer section ever read GoldLabel."""
 from __future__ import annotations
 
 import random
-from collections import defaultdict
+from collections import Counter, defaultdict
 from statistics import mean
 from typing import Any
 
+from .entries import ParsedWorkspace
 from .types import AnswerResult, GoldLabel, Question
 
 CHANCE = 0.2
@@ -51,6 +52,43 @@ def evolution_diagnostics(gold: GoldLabel, session_log: list[dict[str, Any]]) ->
                 "memory_writes": sum(s["file_ops"] for s in same_day),
             }
         )
+    return out
+
+
+STAGES = ("not_replayed", "not_recorded", "recorded", "observed", "hypothesized", "in_state")
+
+
+def evidence_chain(gold: GoldLabel, session_log: list[dict[str, Any]], parsed: ParsedWorkspace) -> list[dict[str, Any]] | None:
+    """For each ground-truth evolution event, how far its evidence got through the
+    contract's chain: episode -> observation -> hypothesis -> state."""
+    if not gold.preference_evolution:
+        return None
+    entries = parsed.entries
+    out = []
+    for step in gold.preference_evolution.get("evolution_history", []):
+        day = str(step.get("date", ""))[:10]
+        events = [s["index"] for s in session_log if s["date"][:10] == day]
+        episodes = [f"E-{i}" for i in events if f"E-{i}" in entries]
+        observations = sorted(e.id for e in entries.values() if e.type == "O" and e.event in events)
+        citing = [e for e in entries.values() if e.type in "FPGTH" and set(observations) & {r for ids in e.refs().values() for r in ids}]
+        hypotheses = sorted(e.id for e in citing if e.type == "H")
+        state = {e.id for e in citing if e.type in "FPGT"}
+        state |= {e.fields["resolved_into"] for e in citing if e.type == "H" and e.fields.get("resolved_into") in entries}
+        stage = (
+            "not_replayed" if not events else "not_recorded" if not episodes else "recorded" if not observations
+            else "observed" if not (hypotheses or state) else "hypothesized" if not state else "in_state"
+        )
+        out.append({
+            "date": day,
+            "event_name": step.get("event_name", ""),
+            "events": [f"S-{i}" for i in events],
+            "episodes": episodes,
+            "observations": observations,
+            "hypotheses": hypotheses,
+            "state_entries": sorted(state),
+            "live_state_entries": sorted(i for i in state if entries[i].live),
+            "stage": stage,
+        })
     return out
 
 
@@ -125,11 +163,39 @@ def aggregate(results: list[dict[str, Any]]) -> dict[str, Any]:
             "refusals_total": sum(r["stats"]["refusals"] for r in results),
         },
         "chance": CHANCE,
+        "memory_layer": _memory_aggregate(results),
         "shortest_option_accuracy": (
             mean(int(r["reference_heuristics"]["shortest_option_correct"]) for r in scored)
             if scored and all("reference_heuristics" in r for r in scored)
             else None
         ),
+    }
+
+
+def _memory_aggregate(results: list[dict[str, Any]]) -> dict[str, Any] | None:
+    reports = [r["memory"] for r in results if r.get("memory")]
+    if not reports:
+        return None
+    events = sum(m["events"] for m in reports)
+    codes: Counter = Counter()
+    for m in reports:
+        codes.update(m["violations_by_code"])
+    finals = [m["final_metrics"] for m in reports]
+
+    def avg(key):
+        vals = [f[key] for f in finals if f.get(key) is not None]
+        return mean(vals) if vals else None
+
+    stages = Counter(step["stage"] for r in results for step in (r.get("evidence_chain") or []))
+    return {
+        "items": len(reports),
+        "events": events,
+        "violations_per_event": sum(codes.values()) / events if events else None,
+        "share_events_with_violations": sum(m["events_with_violations"] for m in reports) / events if events else None,
+        "violations_by_code": dict(codes.most_common()),
+        "final_provenance_share": avg("provenance_share"),
+        "final_context_coverage": avg("context_coverage_of_live_state"),
+        "evidence_chain_stages": {s: stages.get(s, 0) for s in STAGES},
     }
 
 
@@ -162,6 +228,17 @@ def format_summary(agg: dict[str, Any], title: str) -> str:
         f"  Model calls: {c['model_calls_total']}   tokens: {c['tokens_total']}",
         f"  Mean latency/item: {c['mean_latency_s']:.2f}s" if c["mean_latency_s"] is not None else "",
     ]
+    mem = agg.get("memory_layer")
+    if mem:
+        top = ", ".join(f"{k} {v}" for k, v in list(mem["violations_by_code"].items())[:5]) or "none"
+        lines += [
+            f"  Memory layer: {mem['events']} events, "
+            f"{(mem['violations_per_event'] or 0):.2f} violations/event "
+            f"({_pct(mem['share_events_with_violations'])} of events); top: {top}",
+            f"  Final provenance {_pct(mem['final_provenance_share'])}; context covers "
+            f"{_pct(mem['final_context_coverage'])} of live state",
+            "  Evolution evidence reached: " + ", ".join(f"{k} {v}" for k, v in mem["evidence_chain_stages"].items() if v),
+        ]
     if len(agg["by_generator"]) > 1:
         lines.append("  By generator:")
         lines += [acc_line(g, a) for g, a in agg["by_generator"].items()]

@@ -1,4 +1,4 @@
-"""Command line: `context-harness run | summarize | inspect-data`."""
+"""Command line: `context-harness run | summarize | inspect-memory | inspect-data | audit-data`."""
 
 from __future__ import annotations
 
@@ -13,9 +13,9 @@ from .evaluation import aggregate, format_summary
 from .methods import METHODS, MethodConfig
 from .models import ModelSettings, make_model
 from .orchestrator import RunConfig, run
-from .workspace import WorkspaceBudgets
+from .workspace import CONTEXT_FILE, LAYOUTS
 
-DEFAULT_MODEL = "claude-opus-5-5"
+DEFAULT_MODEL = "gemini-3.7-flash"
 
 
 def _add_dataset_args(p: argparse.ArgumentParser) -> None:
@@ -49,10 +49,11 @@ def cmd_run(args: argparse.Namespace) -> int:
         model=args.model,
         max_tokens=args.max_tokens,
         effort=None if args.effort == "none" else args.effort,
+        requests_per_minute=args.rpm,
         fallbacks=not args.no_fallbacks,
     )
     method_config = MethodConfig(
-        budgets=WorkspaceBudgets(context_max_chars=args.context_chars, file_max_chars=args.file_chars),
+        layout=LAYOUTS[args.layout].with_limit(CONTEXT_FILE, args.context_chars),
         max_update_steps=args.max_update_steps,
         max_answer_steps=args.max_answer_steps,
         answer_budget_chars=args.answer_budget_chars,
@@ -83,6 +84,35 @@ def cmd_summarize(args: argparse.Namespace) -> int:
         summary = aggregate(results)
         (run_dir / "summary.json").write_text(json.dumps(summary, indent=2))
         print(format_summary(summary, f"{cfg['method']} / {cfg['model_settings']['model']}  ({run_dir.name})"))
+    return 0
+
+
+def cmd_inspect_memory(args: argparse.Namespace) -> int:
+    """Per-event file access and memory-check violations for one item directory."""
+    item_dir = Path(args.item_dir)
+    path = item_dir / "memory_report.json"
+    if not path.exists():
+        print(f"No memory_report.json in {item_dir} (the item may be unfinished, or the method keeps no workspace).")
+        return 1
+    report = json.loads(path.read_text())
+    files = sorted({p for r in report["per_event"] for p in r["access"]})
+    short = {p: p.split("/")[-1].removesuffix(".md")[:11] for p in files}
+    print(f"{report['events']} events · layout {report['layout']} · "
+          f"{report['events_with_violations']} events with violations")
+    print("Access per event (r = reads, w = writes, ! = errors):")
+    print("  event   " + " ".join(f"{short[p]:>11}" for p in files) + "  violations")
+    for r in report["per_event"]:
+        cells = []
+        for p in files:
+            c = r["access"].get(p, {})
+            cell = "".join(f"{c[k]}{k[0] if k != 'errors' else '!'}" for k in ("reads", "writes", "errors") if c.get(k))
+            cells.append(f"{cell or '.':>11}")
+        v = ", ".join(f"{k}×{n}" for k, n in r["violations"].items())
+        print(f"  {r['event_id']:<7} " + " ".join(cells) + f"  {v}")
+    print("Violations by code:", report["violations_by_code"] or "none")
+    print("Final metrics:", json.dumps(report["final_metrics"]))
+    for v in report["violations"][: args.limit]:
+        print(f"  [{v['event_id']}] {v['code']}: {v['path']}:{v['line']} {v.get('id') or ''} {v['detail']}")
     return 0
 
 
@@ -118,14 +148,16 @@ def main(argv: list[str] | None = None) -> int:
 
     p = sub.add_parser("run", help="Replay items through a method and score the final question")
     p.add_argument("--method", choices=sorted(METHODS), default="agent")
-    p.add_argument("--model", default=DEFAULT_MODEL, help=f"'fake' or an Anthropic model id (default {DEFAULT_MODEL})")
+    p.add_argument("--model", default=DEFAULT_MODEL,
+                   help=f"'fake', a gemini-* id, or an Anthropic model id (default {DEFAULT_MODEL})")
     _add_dataset_args(p)
     p.add_argument("--max-tokens", type=int, default=16000)
-    p.add_argument("--effort", default="medium", choices=["low", "medium", "high", "xhigh", "max", "none"],
-                   help="output_config.effort; 'none' omits it (required for Haiku 4.5)")
+    p.add_argument("--effort", default="medium", choices=["minimal", "low", "medium", "high", "xhigh", "max", "none"],
+                   help="Gemini thinking level (minimal-high) or Anthropic effort (low-max); 'none' omits it")
+    p.add_argument("--rpm", type=float, help="Pace requests to at most this many per minute (free-tier quotas)")
+    p.add_argument("--layout", choices=sorted(LAYOUTS), default="horizonbench", help="Workspace file layout")
     p.add_argument("--no-fallbacks", action="store_true", help="Disable server-side refusal fallback")
-    p.add_argument("--context-chars", type=int, default=8000, help="context.md limit")
-    p.add_argument("--file-chars", type=int, default=20000, help="Limit for every other workspace file")
+    p.add_argument("--context-chars", type=int, default=6000, help="context.md limit")
     p.add_argument("--answer-budget-chars", type=int, default=48000,
                    help="Memory text visible at answer time, for every method")
     p.add_argument("--summary-chars", type=int, default=8000, help="Rolling-summary limit")
@@ -140,6 +172,11 @@ def main(argv: list[str] | None = None) -> int:
     p = sub.add_parser("summarize", help="Recompute and print aggregates for run directories")
     p.add_argument("run_dirs", nargs="+")
     p.set_defaults(func=cmd_summarize)
+
+    p = sub.add_parser("inspect-memory", help="Show per-event file access and memory violations for one item")
+    p.add_argument("item_dir", help="runs/<run>/items/<item>")
+    p.add_argument("--limit", type=int, default=30, help="Detailed violations to print")
+    p.set_defaults(func=cmd_inspect_memory)
 
     p = sub.add_parser("inspect-data", help="Print per-item session structure and ordering anomalies")
     _add_dataset_args(p)

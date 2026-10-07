@@ -36,14 +36,23 @@ def test_cli_run_writes_all_outputs(tmp_path, method):
     item_dir = sorted((run_dir / "items").iterdir())[0]
     events = [json.loads(l)["event"] for l in (item_dir / "trace.jsonl").read_text().splitlines()]
     assert events[0] == "item_start" and events[-1] == "evaluation"
-    assert events.count("session_start") == 4  # future session dropped
+    assert events.count("event_start") == 4  # future session dropped
     assert "question_start" in events and "answer" in events
-    assert events.index("question_start") > max(i for i, e in enumerate(events) if e == "session_end")
+    assert events.index("question_start") > max(i for i, e in enumerate(events) if e == "event_end")
     assert (item_dir / "snapshots" / "final").is_dir()
     if method == "agent":
         assert "file_diff" in events and (item_dir / "snapshots" / "initial" / "context.md").exists()
-        diag = json.loads((item_dir / "result.json").read_text())["evolution_diagnostics"]
-        assert diag[0]["replayed_sessions"] == [2] and diag[0]["memory_writes"] == 2
+        result = json.loads((item_dir / "result.json").read_text())
+        diag = result["evolution_diagnostics"]
+        assert diag[0]["replayed_sessions"] == [2] and diag[0]["memory_writes"] >= 2
+        # The fake follows agent.md exactly, so the checks must find nothing.
+        report = json.loads((item_dir / "memory_report.json").read_text())
+        assert report["violations_by_code"] == {} and report["events"] == 4
+        assert report["final_metrics"]["provenance_share"] == 1.0
+        assert {"memory/episodes.md", "state/transient.md", "context.md"} <= set(report["access_totals"])
+        chain = result["evidence_chain"][0]
+        assert chain["stage"] == "in_state" and chain["episodes"] == ["E-2"] and chain["observations"] == ["O-2.1"]
+        assert "memory_check" in events and not (item_dir / "checkpoint.json").exists()
     else:  # no agent-managed files, so the file-op diagnostic does not apply
         assert json.loads((item_dir / "result.json").read_text())["evolution_diagnostics"] is None
     assert summary["shortest_option_accuracy"] is not None
@@ -55,7 +64,7 @@ def test_fake_runs_are_deterministic(tmp_path):
     strip = lambda d: [(r["item_key"], r["predicted_letter"], r["stats"]["usage"]) for r in
                        map(json.loads, (d / "results.jsonl").read_text().splitlines())]
     assert strip(a) == strip(b)
-    for path in ("workspace/context.md", "workspace/user_state/observations.md"):
+    for path in ("workspace/context.md", "workspace/memory/episodes.md"):
         item = sorted((a / "items").iterdir())[0].name
         assert (a / "items" / item / path).read_text() == (b / "items" / item / path).read_text()
 

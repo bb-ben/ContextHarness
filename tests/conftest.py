@@ -34,3 +34,9 @@ def run_config(method: str = "agent", **method_kwargs) -> RunConfig:
         settings=ModelSettings(model="fake", effort=None, fallbacks=False),
         method_config=MethodConfig(**method_kwargs),
     )
+
+
+def ev(request) -> int | None:
+    """Replay index of the event a model request was made for (None in the answer phase)."""
+    event = request.metadata.get("event_id")
+    return int(event.split("-")[1]) if event else None

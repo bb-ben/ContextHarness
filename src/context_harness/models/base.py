@@ -82,12 +82,21 @@ class ModelSettings:
 
     model: str
     max_tokens: int = 16000
-    effort: str | None = "medium"  # output_config.effort; None to omit
+    effort: str | None = "medium"  # Anthropic output_config.effort / Gemini thinking_level; None to omit
     thinking: dict[str, Any] | None = None  # None = provider/model default
     temperature: float | None = None  # rejected by Claude Opus 5.5; leave None
-    fallbacks: bool = True  # server-side refusal fallback ("default" routing)
+    fallbacks: bool = True  # server-side refusal fallback ("default" routing); Anthropic only
     max_retries: int = 5
     timeout_s: float = 600.0
+    requests_per_minute: float | None = None  # client-side pacing, e.g. for free-tier quotas
+
+
+class QuotaExhausted(Exception):
+    """The provider's quota for the current period is used up.
+
+    The orchestrator pauses the run at the last completed event so it can be
+    resumed later with --resume, rather than recording the item as failed.
+    """
 
 
 class ModelAdapter(Protocol):
