@@ -100,3 +100,25 @@ def test_refusal_is_reported_not_raised():
 def test_sdk_version_supports_default_fallbacks():
     assert "fallbacks" in inspect.signature(BetaMessages.create).parameters
     assert anthropic.__version__.split(".")[0] >= "1"
+
+
+def test_outages_after_sdk_retries_pause_the_run():
+    import httpx2
+    import pytest
+
+    from context_harness.models.base import ProviderUnavailable
+
+    class Failing:
+        def __init__(self, exc):
+            self.exc = exc
+
+        def create(self, **kwargs):
+            raise self.exc
+
+    request = httpx2.Request("POST", "https://api.anthropic.com/v1/messages")
+    for exc in (anthropic.OverloadedError("overloaded", response=httpx2.Response(529, request=request), body=None),
+                anthropic.APIConnectionError(request=request)):
+        client = _StubClient(_message())
+        client.beta.messages = Failing(exc)
+        with pytest.raises(ProviderUnavailable):
+            AnthropicAdapter(ModelSettings(model="claude-opus-5-5"), client=client).complete(REQUEST)

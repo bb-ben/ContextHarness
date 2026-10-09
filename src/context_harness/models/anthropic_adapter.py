@@ -7,7 +7,7 @@ from typing import Any
 
 import anthropic
 
-from .base import ModelRequest, ModelResponse, ModelSettings, ToolCall, Usage
+from .base import ModelRequest, ModelResponse, ModelSettings, ProviderUnavailable, ToolCall, Usage
 
 FALLBACK_BETA = "server-side-fallback-2026-07-01"
 
@@ -58,12 +58,14 @@ class AnthropicAdapter:
     def complete(self, request: ModelRequest) -> ModelResponse:
         params = self.build_params(request)
         start = time.perf_counter()
-        if self.settings.fallbacks:
-            message = self.client.beta.messages.create(
-                **params, betas=[FALLBACK_BETA], fallbacks="default"
-            )
-        else:
-            message = self.client.messages.create(**params)
+        try:  # the SDK has already retried these max_retries times
+            if self.settings.fallbacks:
+                message = self.client.beta.messages.create(**params, betas=[FALLBACK_BETA], fallbacks="default")
+            else:
+                message = self.client.messages.create(**params)
+        except (anthropic.APIConnectionError, anthropic.RateLimitError, anthropic.InternalServerError,
+                anthropic.OverloadedError, anthropic.ServiceUnavailableError) as e:
+            raise ProviderUnavailable(f"Anthropic unavailable after retries: {type(e).__name__}") from e
         latency = time.perf_counter() - start
 
         texts, calls, fallback_events = [], [], []

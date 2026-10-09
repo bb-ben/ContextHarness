@@ -25,7 +25,7 @@ from .entries import parse_workspace
 from .evaluation import aggregate, evidence_chain, evolution_diagnostics, reference_heuristics, score
 from .hb_compat import HB_COMMIT
 from .methods import MethodConfig, MethodContext, make_method
-from .models.base import ModelAdapter, ModelSettings, QuotaExhausted
+from .models.base import ModelAdapter, ModelSettings, PauseRun
 from .prompts import load_contract
 from .tracing import RawSessionLog, TracedModel, TraceStats, TraceWriter
 from .types import AnswerResult, BenchmarkItem
@@ -156,7 +156,7 @@ def run_item(item: BenchmarkItem, model: ModelAdapter, item_dir: Path, cfg: RunC
         trace.emit("question_start", probe_date=episode.probe.date, probe_turns=len(episode.probe.turns))
         answer = method.answer(episode.probe, episode.question, f"S-{len(episode.sessions)}")
         trace.emit("answer", letter=answer.letter, via=answer.via, details=answer.details)
-    except QuotaExhausted as e:
+    except PauseRun as e:  # quota, request cap, or provider outage: stop at the last completed event
         paused = True
         trace.emit("item_paused", reason=str(e), resume_from=len(session_log))
     except Exception as e:  # record and continue with the next item
@@ -213,7 +213,8 @@ def run_item(item: BenchmarkItem, model: ModelAdapter, item_dir: Path, cfg: RunC
     trace.emit("evaluation", **scored, correct_letter=item.gold.correct_letter, error=error)
     trace.close()
     (item_dir / "result.json").write_text(json.dumps(result, indent=2, ensure_ascii=False))
-    checkpoint_path.unlink(missing_ok=True)
+    if error is None:  # keep the checkpoint after a failure so the progress is not lost
+        checkpoint_path.unlink(missing_ok=True)
     return result
 
 
@@ -247,7 +248,7 @@ def run(items: list[BenchmarkItem], model: ModelAdapter, run_dir: Path, cfg: Run
         if result is None:
             done = json.loads((item_dir / CHECKPOINT).read_text())["next_event"] if (item_dir / CHECKPOINT).exists() else 0
             paused_at = f"{item_dir.name} after {done} of {len(item.episode.sessions)} events"
-            progress(f"[{n}/{len(items)}] {item_dir.name}: PAUSED (quota or request cap) after {done} events; rerun with --resume")
+            progress(f"[{n}/{len(items)}] {item_dir.name}: PAUSED (quota, request cap, or provider outage) after {done} events; rerun with --resume")
             break
         results.append(result)
         status = "ERROR " + result["error"] if result["error"] else ("correct" if result["correct"] else "wrong")

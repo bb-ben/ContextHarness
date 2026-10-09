@@ -10,7 +10,7 @@ import re
 import time
 from typing import Any
 
-from .base import ModelRequest, ModelResponse, ModelSettings, QuotaExhausted, ToolCall, Usage
+from .base import ModelRequest, ModelResponse, ModelSettings, ProviderUnavailable, QuotaExhausted, ToolCall, Usage
 
 THINKING_LEVELS = {"minimal", "low", "medium", "high"}
 REFUSAL_REASONS = {"SAFETY", "PROHIBITED_CONTENT", "BLOCKLIST", "SPII", "RECITATION", "IMAGE_SAFETY"}
@@ -110,9 +110,9 @@ class GeminiAdapter:
                 parsed = self._parse(response, time.perf_counter() - start)
                 parsed.extra.update(attempts=attempt + 1, retry_wait_s=round(waited, 1))
                 return parsed
-            except httpx.TransportError:  # timeouts and dropped connections are temporary
+            except httpx.TransportError as e:  # timeouts and dropped connections are temporary
                 if attempt == self.settings.max_retries:
-                    raise
+                    raise ProviderUnavailable(f"Gemini unreachable after {attempt + 1} attempts: {e}") from e
                 delay = min(60.0, 2.0 ** attempt * 5)
                 waited += delay
                 self._sleep(delay)
@@ -123,15 +123,16 @@ class GeminiAdapter:
                 if kind == "daily":
                     raise QuotaExhausted(f"Gemini daily quota exhausted for {self.settings.model}: {e.message}") from e
                 if attempt == self.settings.max_retries:
-                    raise
+                    raise ProviderUnavailable(f"Gemini rate limit persisted after {attempt + 1} attempts") from e
                 delay = delay if delay is not None else min(60.0, 2.0 ** attempt * 5)
                 waited += delay
                 self._sleep(delay)
-            except errors.ServerError:
+            except errors.ServerError as e:  # e.g. 503 "high demand": wait longer, then pause
                 if attempt == self.settings.max_retries:
-                    raise
-                waited += min(60.0, 2.0 ** attempt * 5)
-                self._sleep(min(60.0, 2.0 ** attempt * 5))
+                    raise ProviderUnavailable(f"Gemini unavailable after {attempt + 1} attempts: {e.code} {e.status}") from e
+                delay = min(120.0, 15.0 * 2.0 ** attempt)
+                waited += delay
+                self._sleep(delay)
         raise RuntimeError("unreachable")
 
     def _parse(self, response, latency: float) -> ModelResponse:

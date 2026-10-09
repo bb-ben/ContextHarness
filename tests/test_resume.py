@@ -122,3 +122,34 @@ def test_request_cap_pauses_the_run_and_resume_continues(evolved_item, tmp_path)
     assert results == [] and capped.count == 2 and summary["paused_at"].endswith("after 2 of 4 events")
     results, _ = run([evolved_item], RequestCap(FakeModel(), 100), tmp_path / "r", cfg, resume=True, progress=_quiet)
     assert len(results) == 1 and results[0]["predicted_letter"]
+
+
+def test_provider_outage_pauses_and_unexpected_errors_keep_the_checkpoint(evolved_item, tmp_path):
+    from context_harness.models.base import ProviderUnavailable
+
+    class OutageAt(QuotaAfter):
+        def complete(self, request):
+            if self.calls >= self.limit:
+                raise ProviderUnavailable("503 high demand (test)")
+            self.calls += 1
+            return self.inner.complete(request)
+
+    cfg = run_config("agent")
+    results, summary = run([evolved_item], OutageAt(FakeModel(), 2), tmp_path / "o", cfg, progress=_quiet)
+    item = _item_dir(tmp_path / "o")
+    assert results == [] and not (item / "result.json").exists()
+    assert json.loads((item / "checkpoint.json").read_text())["next_event"] == 2
+    results, _ = run([evolved_item], FakeModel(), tmp_path / "o", cfg, resume=True, progress=_quiet)
+    assert len(results) == 1 and results[0]["error"] is None
+
+    class Broken(QuotaAfter):
+        def complete(self, request):
+            if self.calls >= self.limit:
+                raise ValueError("a bug, not an outage")
+            self.calls += 1
+            return self.inner.complete(request)
+
+    results, _ = run([evolved_item], Broken(FakeModel(), 2), tmp_path / "b", cfg, progress=_quiet)
+    item = _item_dir(tmp_path / "b")
+    assert results[0]["error"].startswith("ValueError")
+    assert json.loads((item / "checkpoint.json").read_text())["next_event"] == 2  # progress kept

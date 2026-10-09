@@ -155,3 +155,20 @@ def test_client_is_created_with_the_request_timeout(monkeypatch):
     monkeypatch.setattr(google.genai, "Client", FakeClient)
     GeminiAdapter(ModelSettings(model="gemini-3.7-flash", timeout_s=240))
     assert captured["http_options"].timeout == 240_000  # milliseconds
+
+
+def test_persistent_overload_pauses_instead_of_failing():
+    from context_harness.models.base import ProviderUnavailable
+
+    sleeps = []
+    busy = errors.ServerError(503, {"error": {"code": 503, "status": "UNAVAILABLE", "message": "high demand"}})
+    a = adapter([busy] * 6, sleeps=sleeps)
+    with pytest.raises(ProviderUnavailable, match="503"):
+        a.complete(REQUEST)
+    assert sleeps == [15.0, 30.0, 60.0, 120.0, 120.0] and len(a.client.models.calls) == 6
+
+
+def test_a_brief_overload_recovers():
+    busy = errors.ServerError(503, {"error": {"code": 503, "status": "UNAVAILABLE", "message": "high demand"}})
+    r = adapter([busy, response([{"text": "ok"}])]).complete(REQUEST)
+    assert r.text == "ok" and r.extra["attempts"] == 2

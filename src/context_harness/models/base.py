@@ -91,12 +91,20 @@ class ModelSettings:
     requests_per_minute: float | None = None  # client-side pacing, e.g. for free-tier quotas
 
 
-class QuotaExhausted(Exception):
-    """The provider's quota for the current period is used up.
+class PauseRun(Exception):
+    """A condition that should pause the run rather than fail the item.
 
-    The orchestrator pauses the run at the last completed event so it can be
-    resumed later with --resume, rather than recording the item as failed.
+    The orchestrator stops at the last completed event; --resume continues
+    from there.
     """
+
+
+class QuotaExhausted(PauseRun):
+    """The provider's quota for the current period (or this run's request cap) is used up."""
+
+
+class ProviderUnavailable(PauseRun):
+    """The provider kept failing (overload, server errors, dropped connections) through all retries."""
 
 
 class ModelAdapter(Protocol):
@@ -112,7 +120,7 @@ class RequestCap:
     at the last completed event and can be continued with --resume.
     """
 
-    def __init__(self, inner: ModelAdapter, limit: int):
+    def __init__(self, inner: "ModelAdapter", limit: int):
         self.inner, self.limit, self.settings, self.count = inner, limit, inner.settings, 0
 
     def complete(self, request: ModelRequest) -> ModelResponse:
