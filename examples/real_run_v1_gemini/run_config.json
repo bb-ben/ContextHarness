@@ -1,0 +1,49 @@
+{
+  "harness_version": "0.1.0",
+  "horizonbench_commit": "4b5076b147c952499b7921f20f811dd5aca7ef0b",
+  "method": "agent",
+  "model_settings": {
+    "model": "gemini-3.7-flash",
+    "max_tokens": 16000,
+    "effort": "medium",
+    "thinking": null,
+    "temperature": null,
+    "fallbacks": true,
+    "max_retries": 5,
+    "timeout_s": 240.0,
+    "requests_per_minute": 5.0
+  },
+  "method_config": {
+    "layout": {
+      "name": "horizonbench",
+      "files": {
+        "context.md": 6000,
+        "memory/episodes.md": 60000,
+        "state/profile.md": 12000,
+        "state/preferences.md": 12000,
+        "state/goals.md": 12000,
+        "state/transient.md": 8000,
+        "state/hypotheses.md": 12000,
+        "memory/archive.md": 200000
+      }
+    },
+    "contract_path": null,
+    "max_update_steps": 8,
+    "max_answer_steps": 6,
+    "answer_budget_chars": 48000,
+    "summary_max_chars": 8000,
+    "action_log_max_chars": 60000
+  },
+  "contract_sha256": "c2bfcbf4c199be8b2df76a8abe42993d83963434505cc69228308df00d3629d0",
+  "dataset": {
+    "config": "sample",
+    "source": null,
+    "order": "chronological",
+    "show_scenarios": true,
+    "max_sessions": null,
+    "item_indices": [
+      0
+    ]
+  },
+  "log_prompts": false
+}

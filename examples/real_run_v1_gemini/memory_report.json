@@ -1,0 +1,556 @@
+{
+ "layout": "horizonbench",
+ "events": 3,
+ "violations_by_code": {},
+ "events_with_violations": 0,
+ "access_totals": {
+  "context.md": {
+   "writes": 3
+  },
+  "memory/episodes.md": {
+   "reads": 3,
+   "writes": 3
+  },
+  "state/goals.md": {
+   "reads": 3,
+   "writes": 3
+  },
+  "state/hypotheses.md": {
+   "writes": 3,
+   "reads": 2
+  },
+  "state/preferences.md": {
+   "reads": 3,
+   "writes": 1
+  },
+  "state/profile.md": {
+   "reads": 3,
+   "writes": 2
+  },
+  "state/transient.md": {
+   "reads": 2,
+   "writes": 1
+  }
+ },
+ "final_metrics": {
+  "entries": {
+   "E": 3,
+   "O": 16,
+   "F": 4,
+   "P": 1,
+   "G": 2,
+   "T": 1,
+   "H": 3
+  },
+  "live_entries": {
+   "F": 4,
+   "P": 1,
+   "G": 2,
+   "T": 1,
+   "H": 2
+  },
+  "provenance_share": 1.0,
+  "context_bullets": 8,
+  "context_cited_ids": 10,
+  "context_coverage_of_live_state": 1.0,
+  "episodes_recorded": 3
+ },
+ "per_event": [
+  {
+   "event_id": "S-0",
+   "index": 0,
+   "date": "2025-09-29",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "reads": 1,
+     "writes": 1
+    },
+    "state/goals.md": {
+     "reads": 1,
+     "writes": 1
+    },
+    "state/hypotheses.md": {
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "reads": 1
+    },
+    "state/profile.md": {
+     "reads": 1,
+     "writes": 1
+    }
+   },
+   "violations": {},
+   "metrics": {
+    "entries": {
+     "E": 1,
+     "O": 5,
+     "F": 2,
+     "G": 1,
+     "H": 1
+    },
+    "live_entries": {
+     "F": 2,
+     "G": 1,
+     "H": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 3,
+    "context_cited_ids": 4,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 1
+   }
+  },
+  {
+   "event_id": "S-1",
+   "index": 1,
+   "date": "2025-09-30",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "reads": 1,
+     "writes": 1
+    },
+    "state/goals.md": {
+     "reads": 1,
+     "writes": 1
+    },
+    "state/hypotheses.md": {
+     "reads": 1,
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "reads": 1
+    },
+    "state/profile.md": {
+     "reads": 1,
+     "writes": 1
+    },
+    "state/transient.md": {
+     "reads": 1,
+     "writes": 1
+    }
+   },
+   "violations": {},
+   "metrics": {
+    "entries": {
+     "E": 2,
+     "O": 11,
+     "F": 4,
+     "G": 2,
+     "T": 1,
+     "H": 2
+    },
+    "live_entries": {
+     "F": 4,
+     "G": 2,
+     "T": 1,
+     "H": 2
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 7,
+    "context_cited_ids": 9,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 2
+   }
+  },
+  {
+   "event_id": "S-2",
+   "index": 2,
+   "date": "2025-09-30",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "reads": 1,
+     "writes": 1
+    },
+    "state/goals.md": {
+     "reads": 1,
+     "writes": 1
+    },
+    "state/hypotheses.md": {
+     "reads": 1,
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "reads": 1,
+     "writes": 1
+    },
+    "state/profile.md": {
+     "reads": 1
+    },
+    "state/transient.md": {
+     "reads": 1
+    }
+   },
+   "violations": {},
+   "metrics": {
+    "entries": {
+     "E": 3,
+     "O": 16,
+     "F": 4,
+     "P": 1,
+     "G": 2,
+     "T": 1,
+     "H": 3
+    },
+    "live_entries": {
+     "F": 4,
+     "P": 1,
+     "G": 2,
+     "T": 1,
+     "H": 2
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 8,
+    "context_cited_ids": 10,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 3
+   }
+  }
+ ],
+ "violations": [],
+ "lifecycle": {
+  "E-0": {
+   "type": "E",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     null
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "O-0.1": {
+   "type": "O",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     null
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "O-0.2": {
+   "type": "O",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     null
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "O-0.3": {
+   "type": "O",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     null
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "O-0.4": {
+   "type": "O",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     null
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "O-0.5": {
+   "type": "O",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     null
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "F-0.1": {
+   "type": "F",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     "current"
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "F-0.2": {
+   "type": "F",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     "current"
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "G-0.1": {
+   "type": "G",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     "active"
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "H-0.1": {
+   "type": "H",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     "open"
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "E-1": {
+   "type": "E",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     null
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "O-1.1": {
+   "type": "O",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     null
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "O-1.2": {
+   "type": "O",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     null
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "O-1.3": {
+   "type": "O",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     null
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "O-1.4": {
+   "type": "O",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     null
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "O-1.5": {
+   "type": "O",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     null
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "O-1.6": {
+   "type": "O",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     null
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "F-1.1": {
+   "type": "F",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     "current"
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "F-1.2": {
+   "type": "F",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     "current"
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "G-1.1": {
+   "type": "G",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     "active"
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "T-1.1": {
+   "type": "T",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     "active"
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "H-1.1": {
+   "type": "H",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     "open"
+    ],
+    [
+     "S-2",
+     "confirmed"
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "E-2": {
+   "type": "E",
+   "created": "S-2",
+   "statuses": [
+    [
+     "S-2",
+     null
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "O-2.1": {
+   "type": "O",
+   "created": "S-2",
+   "statuses": [
+    [
+     "S-2",
+     null
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "O-2.2": {
+   "type": "O",
+   "created": "S-2",
+   "statuses": [
+    [
+     "S-2",
+     null
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "O-2.3": {
+   "type": "O",
+   "created": "S-2",
+   "statuses": [
+    [
+     "S-2",
+     null
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "O-2.4": {
+   "type": "O",
+   "created": "S-2",
+   "statuses": [
+    [
+     "S-2",
+     null
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "O-2.5": {
+   "type": "O",
+   "created": "S-2",
+   "statuses": [
+    [
+     "S-2",
+     null
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "P-2.1": {
+   "type": "P",
+   "created": "S-2",
+   "statuses": [
+    [
+     "S-2",
+     "current"
+    ]
+   ],
+   "last_seen": "S-2"
+  },
+  "H-2.1": {
+   "type": "H",
+   "created": "S-2",
+   "statuses": [
+    [
+     "S-2",
+     "open"
+    ]
+   ],
+   "last_seen": "S-2"
+  }
+ }
+}

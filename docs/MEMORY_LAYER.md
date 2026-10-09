@@ -18,20 +18,23 @@ The layer has three parts:
 | Kind | Files | Shown to the agent |
 |---|---|---|
 | Short-term working context | `context.md` (6,000 chars) | In full, re-read before every call |
-| Long-term episodic memory | `memory/episodes.md` (one `E` line per event, with `O` observations beneath), `memory/archive.md` (closed entries) | By `read_file` or `lookup` |
-| Current user state | `state/profile.md`, `preferences.md`, `goals.md`, `transient.md`, `hypotheses.md` | By `read_file` or `lookup`; sizes always shown |
+| Long-term episodic memory | `memory/episodes.md` (one `E` line per event, with `O` observations beneath), `memory/archive.md` (closed entries and rolled-over episodes) | By `lookup` (or `read_file`) |
+| Current user state | `state/profile.md`, `preferences.md`, `goals.md`, `transient.md`, `hypotheses.md` | In full, re-read before every call (contract v2; `--no-preload` restores v1, where these too need a read) |
 
-`context.md` is a working set and an index. Every bullet cites the ID of a live
-state entry or hypothesis; it never copies one.
+`context.md` is a working set and an index: a short briefing on what matters right
+now. Every bullet cites the ID of a live state entry or hypothesis; it never copies
+one.
 
 Evidence flows **event → observation → hypothesis → state**:
 - A belief changes by adding a new entry that supersedes the old one. The old entry
   stays, marked `superseded`.
 - Closed entries can move to the archive. They are never deleted.
-- The layer itself does only two things on the agent's behalf:
+- The layer itself does only three things on the agent's behalf:
   - it lists transient entries whose expiry or review date has arrived, under
     `<due>`;
-  - it moves entries to the archive when asked.
+  - it moves entries to the archive when asked;
+  - it rolls the oldest episode blocks into the archive, unchanged, once the episode
+    log passes 80% of its limit.
 
 ## What one model call contains
 
@@ -39,6 +42,7 @@ Evidence flows **event → observation → hypothesis → state**:
 system   agent.md
 user     <event id="S-14" type="conversation" date="2025-10-15"> … </event>   (cached for the event's loop)
          <working_context> context.md now </working_context>
+         <state> the five state files, in full </state>
          <workspace> every file's size / limit </workspace>
          <due> transient entries now due, verbatim </due>
          <actions_so_far> this event's tool calls and results </actions_so_far>
@@ -48,8 +52,8 @@ tools    list_files, read_file, lookup, append_file, edit_file, write_file, arch
 
 Each call is a fresh single-turn request. A `context.md` edit replaces the old
 version in the next call, and nothing persists between events except the files.
-`finish` lets the agent end an event in the same turn as its edits. With a
-batched turn, an event costs one call.
+`finish` lets the agent end an event in the same turn as its edits. With state
+already visible, most events take one call.
 
 ## Instrumentation
 
@@ -117,12 +121,24 @@ No FoodBody data schema has been supplied, so none is assumed. These seams exist
 - **Layouts.** File sets and limits are data (`workspace.Layout`), so a deployment can
   add files without code changes.
 
+## Design log
+
+**v1 → v2 (2026-10-09).** The first real-model run (Gemini 3.7 Flash, 3½ events; see
+[`examples/real_run_v1_gemini/`](../examples/real_run_v1_gemini)) followed the format
+with zero violations. It also promoted a hypothesis to a preference across two
+events, exactly as specified. Three problems drove v2:
+
+| Observed in v1 | Change in v2 |
+|---|---|
+| The agent read every state file in every event and never used `lookup`, so each event cost two calls | State files are pre-loaded into every call; episodes and the archive stay on demand. In the answer phase the pre-loaded text counts against the shared 48,000-character budget |
+| A stated preference became only a hypothesis, while a one-off request was tagged `stated` | Evidence kinds redefined with worked examples, including lasting vs. situational |
+| About 730 chars of observations per event would fill the episode log at around event 80 | A "worth recording" rule (zero to two observations per event, about 150 chars each), plus layer-driven rollover of old episodes into the archive |
+
 ## Known gaps
 
-- **Episodes are append-only and capped at 60,000 characters.** That's enough for
-  HorizonBench (at most 142 events), but months of FoodBody data will need
-  rollover.
+- **The archive itself has no rollover yet** (200,000 chars). That's enough for
+  HorizonBench, but not for years of FoodBody data.
 - **Semantic contradictions aren't detected yet.** Two current entries with
   different topics that conflict would need an LLM judge.
-- **There is no real-model data yet.** Behavior under a real model, such as whether it
-  reads before editing or keeps `context.md` current, is unmeasured.
+- **Real-model data is thin.** It covers 3½ events under v1 and none yet under v2.
+  How the agent handles a life event and a later supersession is still unmeasured.

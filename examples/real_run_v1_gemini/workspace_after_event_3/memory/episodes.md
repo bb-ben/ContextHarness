@@ -1,0 +1,20 @@
+# Episodes
+- E-0 | 2025-09-29 | source: S-0 | First hostage negotiation drill with Dr. Chen; completed an intermediate convenience store simulation.
+  - O-0.1 | stated | Wants to develop high-pressure communication skills through hostage negotiation training.
+  - O-0.2 | stated | Has zero formal negotiation experience but assesses risk and stays calm under pressure through climbing and riding.
+  - O-0.3 | stated | Introduced himself as Marcus.
+  - O-0.4 | behavior | Successfully de-escalated barricaded suspect Derek, securing hostage release and peaceful surrender.
+  - O-0.5 | stated | Requested a more complex follow-up scenario to experience making mistakes and recovering.
+- E-1 | 2025-09-30 | source: S-1 | Discussed safety plan and response strategy for escalating cyberstalking.
+  - O-1.1 | event | Has been experiencing escalating cyberstalking across Instagram and personal accounts for weeks, including stalker referencing his motorcycle.
+  - O-1.2 | stated | Runs an art gallery.
+  - O-1.3 | stated | Rides with a motorcycle club and has a close friend named Ryan.
+  - O-1.4 | behavior | Sought rehearsal for confronting the stalker, but pivoted to non-confrontation and legal reporting upon advice.
+  - O-1.5 | stated | Requested advice broken down step-by-step with an actionable checklist.
+  - O-1.6 | stated | Committed to filing a police report tomorrow, enabling 2FA, securing metadata, and notifying staff and riding crew.
+- E-2 | 2025-09-30 | source: S-2 | Detailed discussion of safety planning, legal options, and immediate actions regarding ongoing cyberstalking.
+  - O-2.1 | event | Cyberstalker has pursued him for 3 months across gallery social media, email, and phone, referencing his motorcycle rides and hiking spots.
+  - O-2.2 | stated | Initially wanted to confront the stalker directly to set boundaries, but agreed to strict no-contact and legal action.
+  - O-2.3 | stated | Requested concrete, prioritized steps and a checklist due to feeling overwhelmed.
+  - O-2.4 | stated | Prefers a casual tone rather than formal language, noting he is already stressed.
+  - O-2.5 | stated | Committed to completing documentation tonight and filing a police report tomorrow.

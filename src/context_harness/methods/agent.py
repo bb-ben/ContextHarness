@@ -10,7 +10,7 @@ from .. import prompts
 from ..entries import Entry, parse_file
 from ..tools import Finish, ReadBudget, SubmitAnswer, ToolExecutor, workspace_tools
 from ..types import AnswerResult, Event, Probe, Question, Session
-from ..workspace import CONTEXT_FILE, TRANSIENT_FILE, FileChange, Workspace
+from ..workspace import ARCHIVE_FILE, CONTEXT_FILE, EPISODES_FILE, TRANSIENT_FILE, FileChange, Workspace, WorkspaceError
 from .base import ActionLog, MethodContext, answer_with_tools, run_step_loop
 
 
@@ -50,17 +50,58 @@ class WorkspaceAgent:
                 out.append((e, lines[e.line - 1]))
         return out
 
+    def preloaded(self) -> dict[str, str]:
+        if not self.ctx.config.preload_state:
+            return {}
+        return {path: self.ws.read(path) for path in self.ws.layout.preloaded}
+
     def _render_state(self, actions: str) -> list[str]:
         limit = self.ws.limit(CONTEXT_FILE)
-        return [
-            prompts.render_working_context(self.ws.read(CONTEXT_FILE), limit),
-            prompts.render_workspace(self.ws.list_files()),
-        ]
+        blocks = [prompts.render_working_context(self.ws.read(CONTEXT_FILE), limit)]
+        if state := self.preloaded():
+            blocks.append(prompts.render_state(state))
+        return blocks + [prompts.render_workspace(self.ws.list_files())]
+
+    def _rollover_episodes(self) -> None:
+        """Move the oldest episode blocks, unchanged, into the archive when the log nears its limit."""
+        layout, cfg = self.ws.layout, self.ctx.config
+        if layout.spec(EPISODES_FILE) is None or layout.spec(ARCHIVE_FILE) is None:
+            return
+        text, limit = self.ws.read(EPISODES_FILE), self.ws.limit(EPISODES_FILE)
+        if len(text) <= cfg.episode_rollover_at * limit:
+            return
+        segments: list[list[str]] = []  # each is a block: an E line plus its indented lines, or a lone line
+        for line in text.splitlines():
+            if line.startswith("- E-") or not segments or not line.startswith((" ", "\t")):
+                segments.append([line])
+            else:
+                segments[-1].append(line)
+        target, size, moved = cfg.episode_rollover_to * limit, len(text), []
+        for seg in segments:
+            if size <= target:
+                break
+            if seg[0].startswith("- E-"):
+                moved.append(seg)
+                size -= sum(len(line) + 1 for line in seg)
+        if not moved:
+            return
+        kept = [line for seg in segments if seg not in moved for line in seg]
+        phase, self._phase = self._phase, "rollover"
+        try:
+            self.ws.append(ARCHIVE_FILE, "\n".join(line for seg in moved for line in seg))
+            self.ws.write(EPISODES_FILE, "\n".join(kept) + "\n")
+            self.ctx.trace.emit("episode_rollover", event_id=self._event_id, episodes=len(moved),
+                                first=moved[0][0].split(" |")[0][2:], last=moved[-1][0].split(" |")[0][2:])
+        except WorkspaceError as e:
+            self.ctx.trace.emit("episode_rollover_failed", event_id=self._event_id, error=str(e))
+        finally:
+            self._phase = phase
 
     def observe(self, event: Event) -> None:
         self._phase, self._event_id = "memory_update", event.event_id
         self.finish.called = False
         date = event.date[:10]
+        self._rollover_episodes()
 
         def render(actions: str, calls_left: int) -> str:
             return "\n\n".join(
@@ -89,8 +130,9 @@ class WorkspaceAgent:
     def answer(self, probe: Probe, question: Question, probe_event_id: str) -> AnswerResult:
         self._phase, self._event_id = "answer", probe_event_id
         cfg = self.ctx.config
-        # context.md is always visible; reads draw on what remains of the shared budget.
-        budget = ReadBudget(max(0, cfg.answer_budget_chars - len(self.ws.read(CONTEXT_FILE))))
+        # context.md and any pre-loaded state are always visible; reads draw on what remains.
+        always = len(self.ws.read(CONTEXT_FILE)) + sum(len(c) for c in self.preloaded().values())
+        budget = ReadBudget(max(0, cfg.answer_budget_chars - always))
         submit = SubmitAnswer(question.letters)
         executor = ToolExecutor(workspace_tools(self.ws, writable=False, read_budget=budget) + [submit], self.ctx.trace)
 

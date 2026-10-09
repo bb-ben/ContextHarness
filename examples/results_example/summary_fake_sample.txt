@@ -10,8 +10,8 @@
   Old-preference distractor chosen:  16.7% of 6 evolved items;  20.0% of 5 errors (chance 25.0%)
   Wrote memory on an evolution-event date: 100.0% of evolved items
   Mean file ops/item: 390.4   mean file reads/item: 1
-  Model calls: 921   tokens: {'input_tokens': 4557305, 'output_tokens': 284137, 'cache_read_input_tokens': 0, 'cache_creation_input_tokens': 0}
-  Mean latency/item: 0.31s
+  Model calls: 921   tokens: {'input_tokens': 5373868, 'output_tokens': 284137, 'cache_read_input_tokens': 0, 'cache_creation_input_tokens': 0}
+  Mean latency/item: 0.35s
   Memory layer: 901 events, 0.00 violations/event (  0.0% of events); top: none
   Final provenance 100.0%; context covers  17.4% of live state
   Evolution evidence reached: in_state 10

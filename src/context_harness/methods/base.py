@@ -26,6 +26,9 @@ class MethodConfig:
 
     layout: Layout = HORIZONBENCH
     contract_path: str | None = None  # agent.md by default
+    preload_state: bool = True  # contract v2: show the layout's state files in full in every call
+    episode_rollover_at: float = 0.8  # roll old episodes into the archive above this share of the limit...
+    episode_rollover_to: float = 0.5  # ...until the episode log is back under this share
     max_update_steps: int = 8
     max_answer_steps: int = 6
     answer_budget_chars: int = 48000

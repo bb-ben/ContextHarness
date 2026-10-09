@@ -95,3 +95,54 @@ def test_contract_prompt_event_ids_finish_and_due_reminders(evolved_item, tmp_pa
     assert "T-0.1 | active" in _due_block(reqs[("memory_update", 2, 0)])  # 2025-10-12: due
     report = json.loads(next((tmp_path / "run" / "items").iterdir()).joinpath("memory_report.json").read_text())
     assert report["violations_by_code"]["overdue_transient"] == 2  # flagged at S-2 and S-3
+
+
+def test_old_episodes_roll_over_into_the_archive_unchanged(evolved_item, tmp_path):
+    import json
+    import re
+
+    from context_harness.entries import parse_workspace
+    from context_harness.workspace import EPISODES_FILE, HORIZONBENCH
+
+    def script(req):
+        if req.phase == "answer":
+            return "", [("submit_answer", {"letter": "A"})]
+        k, date = re.search(r'<event id="S-(\d+)" type="[^"]*" date="([^"]+)"', req.blocks[0].text).groups()
+        block = f"- E-{k} | {date} | source: S-{k} | " + "x" * 150 + f"\n  - O-{k}.1 | behavior | " + "y" * 60
+        return "", [("append_file", {"path": EPISODES_FILE, "text": block}), ("finish", {})]
+
+    layout = HORIZONBENCH.with_limit(EPISODES_FILE, 1000)
+    results, _ = run([evolved_item], ScriptedModel(script), tmp_path / "run", run_config("agent", layout=layout),
+                     progress=lambda *_: None)
+    item = next((tmp_path / "run" / "items").iterdir())
+    final = {p: (item / "snapshots" / "final" / p).read_text() for p in layout.paths}
+    assert "- E-0 |" in final["memory/archive.md"] and "- E-1 |" in final["memory/archive.md"]
+    assert "- E-0 |" not in final[EPISODES_FILE] and "- E-3 |" in final[EPISODES_FILE]
+    parsed = parse_workspace(final, layout)
+    assert parsed.entries["O-0.1"].path == "memory/archive.md" and parsed.entries["O-0.1"].parent == "E-0"
+    report = json.loads((item / "memory_report.json").read_text())
+    assert not {"entry_deleted", "orphan_observation", "duplicate_id", "history_rewritten"} & set(report["violations_by_code"])
+    assert results[0]["stats"]["file_ops"] == 4  # the layer's rollover is not counted as the agent's edits
+    events = [json.loads(l)["event"] for l in (item / "trace.jsonl").read_text().splitlines()]
+    assert events.count("episode_rollover") == 1
+
+
+def test_answer_budget_counts_preloaded_state(evolved_item, tmp_path):
+    import re
+
+    def script(req):
+        if req.phase == "answer":
+            return "", [("submit_answer", {"letter": "A"})]
+        if ev(req) == 0:
+            return "", [("write_file", {"path": "state/goals.md", "content": "# Goals\n" + "g" * 500 + "\n"}), ("finish", {})]
+        return "", [("finish", {})]
+
+    model = ScriptedModel(script)
+    run([evolved_item], model, tmp_path / "run", run_config("agent"), progress=lambda *_: None)
+    item = next((tmp_path / "run" / "items").iterdir())
+    from context_harness.workspace import HORIZONBENCH
+
+    always = sum(len((item / "snapshots" / "final" / p).read_text()) for p in ("context.md",) + HORIZONBENCH.preloaded)
+    answer = next(r for r in model.requests if r.phase == "answer")
+    shown = int(re.search(r"at most (\d+) more characters", answer.blocks[1].text).group(1))
+    assert shown == 48000 - always and "g" * 500 in answer.blocks[1].text

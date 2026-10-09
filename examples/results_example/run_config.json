@@ -10,7 +10,7 @@
     "temperature": null,
     "fallbacks": true,
     "max_retries": 5,
-    "timeout_s": 600.0,
+    "timeout_s": 300.0,
     "requests_per_minute": null
   },
   "method_config": {
@@ -28,13 +28,16 @@
       }
     },
     "contract_path": null,
+    "preload_state": true,
+    "episode_rollover_at": 0.8,
+    "episode_rollover_to": 0.5,
     "max_update_steps": 8,
     "max_answer_steps": 6,
     "answer_budget_chars": 48000,
     "summary_max_chars": 8000,
     "action_log_max_chars": 60000
   },
-  "contract_sha256": "c2bfcbf4c199be8b2df76a8abe42993d83963434505cc69228308df00d3629d0",
+  "contract_sha256": "c66de581f7eae37fc3a0d93471a00aaca06017e65430731b0aa8bafca6040070",
   "dataset": {
     "config": "sample",
     "source": null,

@@ -11,10 +11,15 @@ contract. HorizonBench supplies long, dated conversation histories in which
 preferences change after life events. That makes it a sequential testbed for
 whether the layer keeps the user's state current.
 
-**Status:** the layer, instrumentation and Gemini adapter are built and tested
-offline (113 tests). A model that follows the contract produces zero violations
-across all 901 events of the HorizonBench sample. **No real model has run yet.** The
-Gemini demo below is ready and needs an API key.
+**Status:** contract **v2**. The layer, instrumentation and Gemini adapter are built
+and tested offline (123 tests). A model that follows the contract produces zero
+violations across all 901 events of the HorizonBench sample.
+
+The first real-model run under v1 got through 3½ events: zero violations and a
+correct hypothesis-to-preference promotion. It also showed three problems that v2
+fixes; see [`examples/real_run_v1_gemini/`](examples/real_run_v1_gemini). A full
+run under v2 is next. On Gemini's free tier (about 20 requests a day) one item takes
+about 1½ days.
 
 | Read | For |
 |---|---|
@@ -28,7 +33,7 @@ Requires Python ≥ 3.12 and [uv](https://docs.astral.sh/uv/).
 
 ```bash
 uv sync
-uv run pytest -q                     # 113 tests, offline, no credentials
+uv run pytest -q                     # 123 tests, offline, no credentials
 export GEMINI_API_KEY=...            # for real-model runs (default model: gemini-3.7-flash)
 ```
 
@@ -45,10 +50,10 @@ Anthropic model ID as `--model`.
 uv run context-harness run --model fake --dataset tests/fixtures/tiny_benchmark.jsonl
 uv run context-harness run --model fake --config sample
 
-# Real-model demo: sample item 0, all 29 events, paced for the free tier
-uv run context-harness run --model gemini-3.7-flash --items 0 --rpm 5 --run-name demo_item0
-# When the daily quota runs out the run pauses at the last completed event. Next day:
-uv run context-harness run --model gemini-3.7-flash --items 0 --rpm 5 --run-name demo_item0 --resume
+# Real-model demo: sample item 0, all 29 events, paced and capped for the free tier
+uv run context-harness run --model gemini-3.7-flash --items 0 --rpm 5 --timeout 240 --max-requests 40 --run-name demo_item0
+# A daily quota, provider outage or the request cap pauses it at the last completed event. Later:
+uv run context-harness run --model gemini-3.7-flash --items 0 --rpm 5 --timeout 240 --max-requests 40 --run-name demo_item0 --resume
 
 # Quicker smoke test: only the 16 most recent events (still includes item 0's life event)
 uv run context-harness run --model gemini-3.7-flash --items 0 --max-sessions 16 --rpm 5
@@ -69,6 +74,9 @@ uv run context-harness audit-data --config benchmark --out data/audit_benchmark
 Other options:
 - `--effort minimal|low|medium|high`: Gemini thinking level.
 - `--context-chars`: the `context.md` limit (default 6,000).
+- `--no-preload`: contract v1 behavior, where state files must be read explicitly.
+- `--max-requests`: a hard cap per invocation (the run pauses).
+- `--timeout`: seconds per response before a retry.
 - `--layout with-decisions`: adds the decisions file.
 - `--order text`: the benchmark's original order (see the dataset notes).
 - `--no-scenarios`, `--log-prompts`.
@@ -140,8 +148,9 @@ overlap. Files are in [`examples/results_example/`](examples/results_example).
 
 ## Next steps
 
-1. **Run the Gemini demo** on item 0 and read its `inspect-memory` output and trace.
-   Then adjust `agent.md` based on what the model actually does.
+1. **Run item 0 under v2** with Gemini. Read its `inspect-memory` output and trace,
+   especially the life event at S-14 and whether the old preference is superseded.
+   Then adjust `agent.md`.
 2. **Build a length-balanced evaluation subset** before comparing accuracy (see the
    dataset notes).
 3. **Add an LLM judge** for meaning-level contradictions and for whether the final

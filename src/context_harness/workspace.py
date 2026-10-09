@@ -27,6 +27,7 @@ class FileSpec:
     title: str
     limit: int
     entry_types: tuple[str, ...]  # entry ID prefixes allowed in this file; () for context.md
+    preload: bool = False  # shown in full in every call when the method pre-loads state
 
 
 @dataclass(frozen=True)
@@ -41,6 +42,10 @@ class Layout:
     def spec(self, path: str) -> FileSpec | None:
         return next((f for f in self.files if f.path == path), None)
 
+    @property
+    def preloaded(self) -> tuple[str, ...]:
+        return tuple(f.path for f in self.files if f.preload)
+
     def file_for_type(self, entry_type: str) -> FileSpec | None:
         return next((f for f in self.files if entry_type in f.entry_types), None)
 
@@ -51,13 +56,15 @@ class Layout:
 _CORE = (
     FileSpec(CONTEXT_FILE, "Working context", 6000, ()),
     FileSpec(EPISODES_FILE, "Episodes", 60000, ("E", "O")),
-    FileSpec("state/profile.md", "Profile", 12000, ("F",)),
-    FileSpec("state/preferences.md", "Preferences", 12000, ("P",)),
-    FileSpec("state/goals.md", "Goals", 12000, ("G",)),
-    FileSpec(TRANSIENT_FILE, "Transient state", 8000, ("T",)),
-    FileSpec("state/hypotheses.md", "Hypotheses", 12000, ("H",)),
-    # Closed state entries, moved here unchanged by the archive tool so state files stay bounded.
-    FileSpec(ARCHIVE_FILE, "Archive", 200000, ("F", "P", "G", "T", "H", "D", "R")),
+    # Current state: small, bounded by archiving, and pre-loaded into every call (contract v2).
+    FileSpec("state/profile.md", "Profile", 12000, ("F",), preload=True),
+    FileSpec("state/preferences.md", "Preferences", 12000, ("P",), preload=True),
+    FileSpec("state/goals.md", "Goals", 12000, ("G",), preload=True),
+    FileSpec(TRANSIENT_FILE, "Transient state", 8000, ("T",), preload=True),
+    FileSpec("state/hypotheses.md", "Hypotheses", 12000, ("H",), preload=True),
+    # Closed state entries (moved by the archive tool) and old episodes (rolled over by the
+    # layer), kept unchanged so every ID still resolves.
+    FileSpec(ARCHIVE_FILE, "Archive", 200000, ("E", "O", "F", "P", "G", "T", "H", "D", "R")),
 )
 
 # HorizonBench has no agent decisions or outcomes, so the decisions file is absent.

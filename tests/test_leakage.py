@@ -37,23 +37,29 @@ def test_no_leakage(method, items, tmp_path):
         assert max(seen) <= current, f"future session visible at session {current}: {sorted(seen)}"
 
 
-def test_long_term_files_are_not_auto_included(evolved_item, tmp_path):
-    """Only context.md is injected; other files appear only after read_file."""
+def test_what_is_visible_without_a_read(evolved_item, tmp_path):
+    """v2: state files are pre-loaded into every call; episodes need read_file or lookup.
+    With preload_state=False (v1) state files also need an explicit read."""
     from context_harness.models.fake import ScriptedModel
 
     def script(req):
         session, step = ev(req), req.metadata.get("step")
         if req.phase == "memory_update" and session == 0 and step == 0:
-            return "", [("write_file", {"path": "state/profile.md", "content": "LONG_TERM_SECRET"})]
+            return "", [("write_file", {"path": "state/profile.md", "content": "# Profile\nPROFILE_SECRET\n"}),
+                        ("append_file", {"path": "memory/episodes.md", "text": "EPISODE_SECRET"})]
         if req.phase == "memory_update" and session == 1 and step == 0:
-            return "", [("read_file", {"path": "state/profile.md"})]
+            return "", [("read_file", {"path": "memory/episodes.md"})]
         if req.phase == "answer":
             return "", [("submit_answer", {"letter": "A"})]
         return "done", []
 
-    model = ScriptedModel(script)
-    run([evolved_item], model, tmp_path / "run", run_config("agent"), progress=lambda *_: None)
-    by_key = {(r.phase, ev(r), r.metadata.get("step")): r.prompt_text() for r in model.requests}
-    assert "LONG_TERM_SECRET" not in by_key[("memory_update", 1, 0)]
-    assert "LONG_TERM_SECRET" in by_key[("memory_update", 1, 1)]  # after the explicit read
-    assert "LONG_TERM_SECRET" not in by_key[("answer", None, 0)]
+    for preload in (True, False):
+        model = ScriptedModel(script)
+        run([evolved_item], model, tmp_path / f"run_{preload}", run_config("agent", preload_state=preload),
+            progress=lambda *_: None)
+        by_key = {(r.phase, ev(r), r.metadata.get("step")): r.prompt_text() for r in model.requests}
+        assert "EPISODE_SECRET" not in by_key[("memory_update", 1, 0)]
+        assert "EPISODE_SECRET" in by_key[("memory_update", 1, 1)]  # only after the explicit read
+        assert "EPISODE_SECRET" not in by_key[("answer", None, 0)]
+        for key in (("memory_update", 1, 0), ("answer", None, 0)):
+            assert ("PROFILE_SECRET" in by_key[key]) is preload, (preload, key)

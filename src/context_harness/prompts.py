@@ -26,9 +26,9 @@ def load_contract(path: str | None = None) -> str:
 
 
 UPDATE_INSTRUCTION = (
-    "Process the event above as the contract describes: append its episode block, resolve "
-    "anything under <due>, update hypotheses and state, and refresh context.md. Call finish "
-    "together with your last edits."
+    "Process the event above as the contract describes, in one turn if you can: append its "
+    "episode block, resolve anything under <due>, update hypotheses and state, rewrite "
+    "context.md, and call finish together with those edits."
 )
 
 
@@ -112,6 +112,11 @@ def render_working_context(content: str, limit: int) -> str:
 def render_workspace(files: list[dict]) -> str:
     rows = "\n".join(f"{f['path']}  ({f['chars']}/{f['limit']} chars)" for f in files)
     return f"<workspace>\n{rows}\n</workspace>"
+
+
+def render_state(files: dict[str, str]) -> str:
+    body = "\n".join(f'<file path="{path}">\n{content.rstrip()}\n</file>' for path, content in files.items())
+    return f"<state>\n{body}\n</state>"
 
 
 def render_due(due: list[tuple[Entry, str]]) -> str:
