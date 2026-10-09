@@ -146,3 +146,27 @@ def test_archiving_a_live_entry_is_flagged():
     snap["memory/archive.md"] = "# Archive\n" + goal
     found = codes(snap)
     assert found["archived_live"] == 1 and "entry_deleted" not in found
+
+
+def test_memory_diff_reports_additions_changes_moves_and_removals():
+    from context_harness.checks import diff_memory
+
+    before = parse_workspace(CLEAN, HORIZONBENCH)
+    after_snap = dict(CLEAN)
+    after_snap["state/transient.md"] = "# Transient state\n"
+    after_snap["memory/archive.md"] = "# Archive\n" + CLEAN["state/transient.md"].splitlines()[1].replace(
+        "| active |", "| expired |") + "\n"
+    after_snap["state/goals.md"] = CLEAN["state/goals.md"].replace("| active |", "| achieved |")
+    after_snap["state/profile.md"] = "# Profile\n- F-2.1 | current | 2025-10-09 | topic: diet | basis: O-2.1 | Vegetarian.\n"
+    after_snap["context.md"] = CLEAN["context.md"].replace("- Stressed (T-1.1)\n", "- Vegetarian (F-2.1)\n")
+    after_snap["memory/episodes.md"] = CLEAN["memory/episodes.md"].replace("  - O-0.1 | stated | Likes long, detailed answers.\n", "")
+    d = diff_memory(before, parse_workspace(after_snap, HORIZONBENCH))
+    assert [a["id"] for a in d["state"]["added"]] == ["F-2.1"]
+    assert {c["id"]: c["status"] for c in d["state"]["changed"]} == {"G-1.1": ["active", "achieved"], "T-1.1": ["active", "expired"]}
+    assert d["state"]["moved"] == [{"id": "T-1.1", "from": "state/transient.md", "to": "memory/archive.md"}]
+    assert [r["id"] for r in d["episodic"]["removed"]] == ["O-0.1"]
+    wc = d["working_context"]
+    assert wc["added"] == ["Vegetarian (F-2.1)"] and wc["removed"] == ["Stressed (T-1.1)"]
+    assert wc["cited_added"] == ["F-2.1"] and wc["cited_removed"] == ["T-1.1"]
+    first = diff_memory(None, before)  # first event: everything is new
+    assert len(first["episodic"]["added"]) == 6 and first["working_context"]["removed"] == []

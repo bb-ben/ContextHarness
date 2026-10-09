@@ -12,6 +12,7 @@ from .dataset import iter_rows, load_items, parse_item
 from .evaluation import aggregate, format_summary
 from .methods import METHODS, MethodConfig
 from .models import ModelSettings, RequestCap, make_model
+from .models.pricing import CostCap
 from .orchestrator import RunConfig, run
 from .workspace import CONTEXT_FILE, LAYOUTS
 
@@ -78,6 +79,9 @@ def cmd_run(args: argparse.Namespace) -> int:
     if args.max_requests is not None:
         model = RequestCap(model, args.max_requests)
         print(f"Request cap: at most {args.max_requests} model requests in this invocation")
+    if args.max_cost_usd is not None:
+        model = CostCap(model, args.max_cost_usd)
+        print(f"Cost cap: pause once estimated spend reaches ${args.max_cost_usd:.2f} in this invocation")
     _, summary = run(items, model, run_dir, cfg, resume=args.resume)
     print(format_summary(summary, f"{args.method} / {args.model}  ({run_dir.name})"))
     return 0
@@ -122,6 +126,53 @@ def cmd_inspect_memory(args: argparse.Namespace) -> int:
     return 0
 
 
+def _short(text: str, n: int) -> str:
+    return text if len(text) <= n else text[: n - 1] + "…"
+
+
+def cmd_memory_timeline(args: argparse.Namespace) -> int:
+    """What each event added, changed, archived and removed in each kind of memory."""
+    path = Path(args.item_dir) / "memory_report.json"
+    if not path.exists():
+        print(f"No memory_report.json in {args.item_dir}.")
+        return 1
+    timeline = json.loads(path.read_text()).get("timeline", [])
+    kinds = args.kind or ["working_context", "episodic", "state", "decisions"]
+    n = 10_000 if args.full else 110
+    totals: dict[str, dict[str, int]] = {k: {"added": 0, "changed": 0, "moved": 0, "removed": 0} for k in kinds}
+    for t in timeline:
+        lines = []
+        if "working_context" in kinds:
+            wc = t["working_context"]
+            for key in ("added", "removed"):
+                totals["working_context"][key] += len(wc[key])
+            if wc["added"] or wc["removed"]:
+                cites = " ".join([f"+{i}" for i in wc["cited_added"]] + [f"-{i}" for i in wc["cited_removed"]])
+                lines.append(f"  working context: {wc['bullets']} bullets" + (f" (cites {cites})" if cites else ""))
+                lines += [f"    + {_short(b, n)}" for b in wc["added"]] + [f"    - {_short(b, n)}" for b in wc["removed"]]
+        for kind in ("episodic", "state", "decisions"):
+            if kind not in kinds or kind not in t:
+                continue
+            d = t[kind]
+            for key in totals[kind]:
+                totals[kind][key] += len(d[key])
+            items = [f"    + {a['id']} [{a['status']}] {_short(a['statement'], n)}" for a in d["added"]]
+            items += [f"    ~ {c['id']} " + (f"{c['status'][0]} -> {c['status'][1]}" if c["status"][0] != c["status"][1] else "")
+                      + "".join(f" {k}: {v[1]}" for k, v in c["fields"].items() if k not in ("until",)) for c in d["changed"]]
+            items += [f"    > {m['id']} moved {m['from']} -> {m['to']}" for m in d["moved"]]
+            items += [f"    x {r['id']} REMOVED: {_short(r['statement'], n)}" for r in d["removed"]]
+            if items:
+                lines.append(f"  {kind}:")
+                lines += items
+        if lines:
+            print(f"{t['event_id']} · {t['date']}")
+            print("\n".join(lines))
+    print("\nTotals over the run:")
+    for kind, c in totals.items():
+        print(f"  {kind:<16} " + "  ".join(f"{k} {v}" for k, v in c.items() if kind != "working_context" or k in ("added", "removed")))
+    return 0
+
+
 def cmd_inspect(args: argparse.Namespace) -> int:
     """Print per-item structure and ordering anomalies (no labels beyond metadata)."""
     for i, row in enumerate(iter_rows(args.config, args.dataset)):
@@ -159,10 +210,13 @@ def main(argv: list[str] | None = None) -> int:
     _add_dataset_args(p)
     p.add_argument("--max-tokens", type=int, default=16000)
     p.add_argument("--effort", default="medium", choices=["minimal", "low", "medium", "high", "xhigh", "max", "none"],
-                   help="Gemini thinking level (minimal-high) or Anthropic effort (low-max); 'none' omits it")
+                   help="Reasoning effort: Gemini thinking level, OpenAI reasoning_effort, or Anthropic effort; "
+                        "'none' omits it")
     p.add_argument("--rpm", type=float, help="Pace requests to at most this many per minute (free-tier quotas)")
     p.add_argument("--timeout", type=float, default=300.0,
                    help="Seconds to wait for one model response before retrying (default 300)")
+    p.add_argument("--max-cost-usd", type=float,
+                   help="Pause once estimated spend reaches this many dollars in this invocation (priced models only)")
     p.add_argument("--max-requests", type=int,
                    help="Stop after this many model requests in this invocation (the run pauses; continue with --resume)")
     p.add_argument("--layout", choices=sorted(LAYOUTS), default="horizonbench", help="Workspace file layout")
@@ -189,6 +243,13 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("item_dir", help="runs/<run>/items/<item>")
     p.add_argument("--limit", type=int, default=30, help="Detailed violations to print")
     p.set_defaults(func=cmd_inspect_memory)
+
+    p = sub.add_parser("memory-timeline", help="Per event: what changed in working context, episodic memory and state")
+    p.add_argument("item_dir", help="runs/<run>/items/<item>")
+    p.add_argument("--kind", action="append", choices=["working_context", "episodic", "state", "decisions"],
+                   help="Show only this kind of memory (repeatable)")
+    p.add_argument("--full", action="store_true", help="Do not truncate statements")
+    p.set_defaults(func=cmd_memory_timeline)
 
     p = sub.add_parser("inspect-data", help="Print per-item session structure and ordering anomalies")
     _add_dataset_args(p)

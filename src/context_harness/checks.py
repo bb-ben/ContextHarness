@@ -175,6 +175,51 @@ def metrics(parsed: ParsedWorkspace, events: list[EventInfo], current: int) -> d
     }
 
 
+MEMORY_KINDS = {
+    "episodic": {"E", "O"},
+    "state": {"F", "P", "G", "T", "H"},
+    "decisions": {"D", "R"},
+}
+
+
+def diff_memory(previous: ParsedWorkspace | None, current: ParsedWorkspace) -> dict[str, Any]:
+    """What one event added, changed, moved (archived or rolled over) and removed, per kind of memory."""
+    before = previous.entries if previous else {}
+    after = current.entries
+    out: dict[str, Any] = {}
+    for kind, types in MEMORY_KINDS.items():
+        added, changed, moved, removed = [], [], [], []
+        for entry_id, e in after.items():
+            if e.type not in types:
+                continue
+            old = before.get(entry_id)
+            if old is None:
+                added.append({"id": e.id, "status": e.status or e.fields.get("kind") or "episode", "path": e.path,
+                              "statement": e.statement})
+                continue
+            if old.path != e.path:
+                moved.append({"id": e.id, "from": old.path, "to": e.path})
+            field_changes = {k: [old.fields.get(k), v] for k, v in e.fields.items() if old.fields.get(k) != v}
+            if old.status != e.status or field_changes:
+                changed.append({"id": e.id, "status": [old.status, e.status], "fields": field_changes,
+                                "statement": e.statement})
+        removed = [{"id": i, "statement": o.statement} for i, o in before.items() if o.type in types and i not in after]
+        out[kind] = {"added": added, "changed": changed, "moved": moved, "removed": removed}
+    old_bullets = {text for _, text, _ in previous.context.bullets} if previous else set()
+    new_bullets = {text for _, text, _ in current.context.bullets}
+    old_ids = {i for _, _, ids in previous.context.bullets for i in ids} if previous else set()
+    new_ids = {i for _, _, ids in current.context.bullets for i in ids}
+    out["working_context"] = {
+        "added": sorted(new_bullets - old_bullets),
+        "removed": sorted(old_bullets - new_bullets),
+        "cited_added": sorted(new_ids - old_ids),
+        "cited_removed": sorted(old_ids - new_ids),
+        "bullets": len(new_bullets),
+        "as_of": current.context.as_of,
+    }
+    return out
+
+
 class MemoryMonitor:
     """Runs all checks after each event and accumulates a per-item report."""
 
@@ -185,6 +230,7 @@ class MemoryMonitor:
         self.per_event: list[dict[str, Any]] = []
         self.violations: list[dict[str, Any]] = []
         self.lifecycle: dict[str, dict[str, Any]] = {}
+        self.timeline: list[dict[str, Any]] = []
 
     def after_event(self, event: EventInfo, snapshot: dict[str, str], access: list[dict[str, Any]]) -> dict[str, Any]:
         self.events.append(event)
@@ -193,6 +239,7 @@ class MemoryMonitor:
         for p in problems:
             self.violations.append({"event_id": event.event_id, **asdict(p)})
         self._track(parsed, event)
+        self.timeline.append({"event_id": event.event_id, "date": event.date, **diff_memory(self.previous, parsed)})
         record = {
             "event_id": event.event_id,
             "index": event.index,
@@ -232,13 +279,15 @@ class MemoryMonitor:
             "per_event": self.per_event,
             "violations": self.violations,
             "lifecycle": self.lifecycle,
+            "timeline": self.timeline,
         }
 
     def state(self) -> dict[str, Any]:
         return {"events": [asdict(e) for e in self.events], "per_event": self.per_event,
-                "violations": self.violations, "lifecycle": self.lifecycle}
+                "violations": self.violations, "lifecycle": self.lifecycle, "timeline": self.timeline}
 
     def restore(self, state: dict[str, Any], snapshot: dict[str, str]) -> None:
         self.events = [EventInfo(**e) for e in state["events"]]
         self.per_event, self.violations, self.lifecycle = state["per_event"], state["violations"], state["lifecycle"]
+        self.timeline = state.get("timeline", [])
         self.previous = parse_workspace(snapshot, self.layout) if self.events else None

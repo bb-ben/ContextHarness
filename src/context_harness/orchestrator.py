@@ -26,6 +26,7 @@ from .evaluation import aggregate, evidence_chain, evolution_diagnostics, refere
 from .hb_compat import HB_COMMIT
 from .methods import MethodConfig, MethodContext, make_method
 from .models.base import ModelAdapter, ModelSettings, PauseRun
+from .models.pricing import cost_usd
 from .prompts import load_contract
 from .tracing import RawSessionLog, TracedModel, TraceStats, TraceWriter
 from .types import AnswerResult, BenchmarkItem
@@ -204,6 +205,7 @@ def run_item(item: BenchmarkItem, model: ModelAdapter, item_dir: Path, cfg: RunC
         "reference_heuristics": reference_heuristics(episode.question, item.gold),
         "latency_s": round(latency, 3),
         "stats": stats.to_dict(),
+        "estimated_cost_usd": cost_usd(stats.usage, cfg.settings.model),
         "memory_chars": {p: len(c) for p, c in snapshot.items()},
         "memory": memory_summary,
         "evolution_diagnostics": evolution_diagnostics(item.gold, session_log) if method.has_workspace else None,
