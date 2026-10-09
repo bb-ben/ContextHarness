@@ -3,7 +3,7 @@
 import httpx
 import openai
 import pytest
-from openai.types.chat import ChatCompletion
+from openai.types.responses import Response
 
 from context_harness.models.base import (
     ModelRequest, ModelSettings, ProviderUnavailable, QuotaExhausted, TextBlock, ToolSpec, Usage,
@@ -22,28 +22,35 @@ REQUEST = ModelRequest(
 )
 
 
-def completion(content=None, tool_calls=None, finish="tool_calls", refusal=None,
-               usage=(10_000, 6_000, 3_000, 2_000)):
+def completion(content=None, tool_calls=None, finish=None, refusal=None, usage=(10_000, 6_000, 3_000, 2_000)):
+    """A Responses API result. finish: None (completed) or an incomplete reason."""
     prompt, cached, out, reasoning = usage
-    return ChatCompletion.model_validate({
-        "id": "cc_1", "object": "chat.completion", "created": 0, "model": "gpt-5.4-mini-2026-03-17",
-        "choices": [{"index": 0, "finish_reason": finish, "message": {
-            "role": "assistant", "content": content, "refusal": refusal, "tool_calls": tool_calls}}],
-        "usage": {"prompt_tokens": prompt, "completion_tokens": out, "total_tokens": prompt + out,
-                  "prompt_tokens_details": {"cached_tokens": cached},
-                  "completion_tokens_details": {"reasoning_tokens": reasoning}},
+    output = [{"type": "reasoning", "id": "rs_1", "summary": []}]
+    parts = ([{"type": "output_text", "text": content, "annotations": []}] if content else [])
+    parts += ([{"type": "refusal", "refusal": refusal}] if refusal else [])
+    if parts:
+        output.append({"type": "message", "id": "msg_1", "role": "assistant", "status": "completed", "content": parts})
+    output += tool_calls or []
+    return Response.model_validate({
+        "id": "resp_1", "object": "response", "created_at": 0, "model": "gpt-5.4-mini-2026-03-17",
+        "status": "incomplete" if finish else "completed",
+        "incomplete_details": {"reason": finish} if finish else None,
+        "output": output, "parallel_tool_calls": True, "tool_choice": "auto", "tools": [],
+        "usage": {"input_tokens": prompt, "input_tokens_details": {"cached_tokens": cached, "cache_write_tokens": 0},
+                  "output_tokens": out, "output_tokens_details": {"reasoning_tokens": reasoning},
+                  "total_tokens": prompt + out},
     })
 
 
 def call(i, name, args):
-    return {"id": f"call_{i}", "type": "function", "function": {"name": name, "arguments": args}}
+    return {"type": "function_call", "id": f"fc_{i}", "call_id": f"call_{i}", "name": name, "arguments": args,
+            "status": "completed"}
 
 
 class Stub:
     def __init__(self, outcome):
         self.outcome, self.kwargs = outcome, None
-        self.chat = type("Chat", (), {})()
-        self.chat.completions = self
+        self.responses = self
 
     def create(self, **kwargs):
         self.kwargs = kwargs
@@ -58,14 +65,15 @@ def adapter(outcome, **settings):
 
 
 def test_request_shape():
-    a, stub = adapter(completion(content="ok", finish="stop"))
+    a, stub = adapter(completion(content="ok"))
     a.complete(REQUEST)
     k = stub.kwargs
-    assert k["model"] == "gpt-5.4-mini" and k["store"] is False and k["reasoning_effort"] == "medium"
-    assert k["messages"][0] == {"role": "developer", "content": "CONTRACT"}
-    assert [p["text"] for p in k["messages"][1]["content"]] == ["EVENT", "DYNAMIC"]
-    assert [t["function"]["name"] for t in k["tools"]] == ["read_file", "finish"] and k["tool_choice"] == "auto"
-    assert k["max_completion_tokens"] == 16000 and "temperature" not in k
+    assert k["model"] == "gpt-5.4-mini" and k["store"] is False and k["reasoning"] == {"effort": "medium"}
+    assert k["instructions"] == "CONTRACT"
+    assert [p["text"] for p in k["input"][0]["content"]] == ["EVENT", "DYNAMIC"] and k["input"][0]["role"] == "user"
+    assert [t["name"] for t in k["tools"]] == ["read_file", "finish"] and k["tool_choice"] == "auto"
+    assert all(t["type"] == "function" and t["strict"] is False for t in k["tools"])
+    assert k["max_output_tokens"] == 16000 and "temperature" not in k
     assert "S-3" not in str(k)  # bookkeeping metadata stays local
 
 
@@ -81,9 +89,10 @@ def test_parsing_tool_calls_text_and_usage():
 
 @pytest.mark.parametrize("kwargs,stop", [
     ({"tool_calls": [call(1, "read_file", "{not json")]}, "malformed_tool_call"),
-    ({"refusal": "I can't help with that.", "finish": "stop"}, "refusal"),
-    ({"content": "x", "finish": "length"}, "max_tokens"),
-    ({"content": "done", "finish": "stop"}, "end_turn"),
+    ({"refusal": "I can't help with that."}, "refusal"),
+    ({"content": "x", "finish": "content_filter"}, "refusal"),
+    ({"content": "x", "finish": "max_output_tokens"}, "max_tokens"),
+    ({"content": "done"}, "end_turn"),
 ])
 def test_stop_reasons(kwargs, stop):
     assert adapter(completion(**kwargs))[0].complete(REQUEST).stop_reason == stop
@@ -109,7 +118,7 @@ def test_cost_and_cost_cap():
     usage = Usage(input_tokens=4000, output_tokens=3000, cache_read_input_tokens=6000)
     assert cost_usd(usage, "gpt-5.4-mini") == pytest.approx((4000 * 0.75 + 6000 * 0.075 + 3000 * 4.50) / 1e6)
     assert cost_usd(usage, "unknown-model") is None
-    a, _ = adapter(completion(content="ok", finish="stop"))
+    a, _ = adapter(completion(content="ok"))
     capped = CostCap(a, max_usd=0.03)  # each call costs ~$0.017
     capped.complete(REQUEST)
     capped.complete(REQUEST)

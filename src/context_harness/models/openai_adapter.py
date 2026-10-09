@@ -1,8 +1,10 @@
-"""OpenAI adapter (openai SDK, Chat Completions with function tools).
+"""OpenAI adapter (openai SDK, Responses API with function tools).
 
-All OpenAI-specific code lives here. Each harness request is one stateless call:
-a developer message (the contract) plus one user message. `store=False` keeps
-completions out of OpenAI's stored-completions log.
+All OpenAI-specific code lives here. The Responses API is used because current
+reasoning models reject function tools combined with reasoning effort on Chat
+Completions. Each harness request is one stateless call: `instructions` (the
+contract) plus one user input; `store=False` keeps responses out of OpenAI's
+stored-response log.
 """
 
 from __future__ import annotations
@@ -34,21 +36,20 @@ class OpenAIAdapter:
         s = self.settings
         params: dict[str, Any] = {
             "model": s.model,
-            "messages": [
-                {"role": "developer", "content": request.system},
-                {"role": "user", "content": [{"type": "text", "text": b.text} for b in request.blocks]},
-            ],
-            "max_completion_tokens": s.max_tokens,
+            "instructions": request.system,
+            "input": [{"role": "user", "content": [{"type": "input_text", "text": b.text} for b in request.blocks]}],
+            "max_output_tokens": s.max_tokens,
             "store": False,
         }
         if request.tools:
             params["tools"] = [
-                {"type": "function", "function": {"name": t.name, "description": t.description, "parameters": t.input_schema}}
+                {"type": "function", "name": t.name, "description": t.description, "parameters": t.input_schema,
+                 "strict": False}
                 for t in request.tools
             ]
             params["tool_choice"] = "auto"
         if s.effort is not None:
-            params["reasoning_effort"] = s.effort
+            params["reasoning"] = {"effort": s.effort}
         if s.temperature is not None:
             params["temperature"] = s.temperature
         return params
@@ -67,57 +68,66 @@ class OpenAIAdapter:
         self._pace()
         start = time.perf_counter()
         try:  # the SDK has already retried these max_retries times
-            completion = self.client.chat.completions.create(**params)
+            response = self.client.responses.create(**params)
         except openai.RateLimitError as e:
             if getattr(e, "code", None) == "insufficient_quota":
                 raise QuotaExhausted(f"OpenAI quota or billing limit reached: {e}") from e
             raise ProviderUnavailable(f"OpenAI rate limit persisted after retries: {e}") from e
         except (openai.APIConnectionError, openai.InternalServerError) as e:
             raise ProviderUnavailable(f"OpenAI unavailable after retries: {type(e).__name__}") from e
-        return self._parse(completion, time.perf_counter() - start)
+        return self._parse(response, time.perf_counter() - start)
 
-    def _parse(self, completion, latency: float) -> ModelResponse:
-        choice = completion.choices[0]
-        message = choice.message
-        calls, malformed = [], False
-        for tc in message.tool_calls or []:
-            if getattr(tc, "type", "function") != "function":
-                continue
-            try:
-                arguments = json.loads(tc.function.arguments or "{}")
-            except json.JSONDecodeError:
-                malformed = True
-                continue
-            calls.append(ToolCall(id=tc.id, name=tc.function.name, arguments=arguments if isinstance(arguments, dict) else {}))
+    def _parse(self, response, latency: float) -> ModelResponse:
+        texts, calls, refusals, malformed = [], [], [], False
+        for item in response.output or []:
+            if item.type == "function_call":
+                try:
+                    arguments = json.loads(item.arguments or "{}")
+                except json.JSONDecodeError:
+                    malformed = True
+                    continue
+                calls.append(ToolCall(id=item.call_id, name=item.name,
+                                      arguments=arguments if isinstance(arguments, dict) else {}))
+            elif item.type == "message":
+                for part in item.content or []:
+                    if part.type == "output_text":
+                        texts.append(part.text)
+                    elif part.type == "refusal":
+                        refusals.append(part.refusal)
 
-        finish = choice.finish_reason or ""
-        if getattr(message, "refusal", None) or finish == "content_filter":
+        reason = getattr(getattr(response, "incomplete_details", None), "reason", None)
+        if refusals or reason == "content_filter":
             stop = "refusal"
         elif malformed and not calls:
             stop = "malformed_tool_call"
-        elif finish == "length":
+        elif reason == "max_output_tokens":
             stop = "max_tokens"
         else:
             stop = "tool_use" if calls else "end_turn"
 
-        u = completion.usage
-        prompt = (u.prompt_tokens or 0) if u else 0
-        cached = (getattr(u.prompt_tokens_details, "cached_tokens", 0) or 0) if u and u.prompt_tokens_details else 0
-        reasoning = (getattr(u.completion_tokens_details, "reasoning_tokens", 0) or 0) if u and u.completion_tokens_details else 0
-        extra: dict[str, Any] = {"finish_reason": finish, "thought_tokens": reasoning}
-        if getattr(message, "refusal", None):
-            extra["refusal"] = message.refusal
+        u = response.usage
+        details_in = getattr(u, "input_tokens_details", None) if u else None
+        details_out = getattr(u, "output_tokens_details", None) if u else None
+        cached = (getattr(details_in, "cached_tokens", 0) or 0) if details_in else 0
+        written = (getattr(details_in, "cache_write_tokens", 0) or 0) if details_in else 0
+        reasoning = (getattr(details_out, "reasoning_tokens", 0) or 0) if details_out else 0
+        extra: dict[str, Any] = {"status": response.status, "thought_tokens": reasoning}
+        if reason:
+            extra["incomplete_reason"] = reason
+        if refusals:
+            extra["refusal"] = " ".join(refusals)
         return ModelResponse(
-            text=message.content or "",
+            text="".join(texts),
             tool_calls=tuple(calls),
             stop_reason=stop,
             usage=Usage(
-                input_tokens=prompt - cached,
-                output_tokens=(u.completion_tokens or 0) if u else 0,
+                input_tokens=((u.input_tokens or 0) if u else 0) - cached - written,
+                output_tokens=(u.output_tokens or 0) if u else 0,
                 cache_read_input_tokens=cached,
+                cache_creation_input_tokens=written,
             ),
-            model=completion.model,
+            model=response.model,
             latency_s=latency,
-            request_id=getattr(completion, "_request_id", None),
+            request_id=getattr(response, "_request_id", None),
             extra=extra,
         )
