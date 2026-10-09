@@ -238,7 +238,7 @@ def run(items: list[BenchmarkItem], model: ModelAdapter, run_dir: Path, cfg: Run
         if result is None:
             done = json.loads((item_dir / CHECKPOINT).read_text())["next_event"] if (item_dir / CHECKPOINT).exists() else 0
             paused_at = f"{item_dir.name} after {done} of {len(item.episode.sessions)} events"
-            progress(f"[{n}/{len(items)}] {item_dir.name}: PAUSED (quota) after {done} events; rerun with --resume")
+            progress(f"[{n}/{len(items)}] {item_dir.name}: PAUSED (quota or request cap) after {done} events; rerun with --resume")
             break
         results.append(result)
         status = "ERROR " + result["error"] if result["error"] else ("correct" if result["correct"] else "wrong")

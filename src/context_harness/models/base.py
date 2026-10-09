@@ -103,3 +103,20 @@ class ModelAdapter(Protocol):
     settings: ModelSettings
 
     def complete(self, request: ModelRequest) -> ModelResponse: ...
+
+
+class RequestCap:
+    """Hard ceiling on model requests for one run, as a guard against runaway usage.
+
+    Raises QuotaExhausted once `limit` requests have been made, so the run pauses
+    at the last completed event and can be continued with --resume.
+    """
+
+    def __init__(self, inner: ModelAdapter, limit: int):
+        self.inner, self.limit, self.settings, self.count = inner, limit, inner.settings, 0
+
+    def complete(self, request: ModelRequest) -> ModelResponse:
+        if self.count >= self.limit:
+            raise QuotaExhausted(f"request cap of {self.limit} reached for this run")
+        self.count += 1
+        return self.inner.complete(request)

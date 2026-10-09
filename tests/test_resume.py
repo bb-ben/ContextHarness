@@ -111,3 +111,14 @@ def test_baseline_state_survives_a_pause(evolved_item, tmp_path):
     a = (_item_dir(tmp_path / "straight") / "snapshots" / "final" / "summary.md").read_text()
     b = (_item_dir(tmp_path / "p") / "snapshots" / "final" / "summary.md").read_text()
     assert a == b and a.count("\n") == 3
+
+
+def test_request_cap_pauses_the_run_and_resume_continues(evolved_item, tmp_path):
+    from context_harness.models.base import RequestCap
+
+    cfg = run_config("agent")
+    capped = RequestCap(FakeModel(), 2)
+    results, summary = run([evolved_item], capped, tmp_path / "r", cfg, progress=_quiet)
+    assert results == [] and capped.count == 2 and summary["paused_at"].endswith("after 2 of 4 events")
+    results, _ = run([evolved_item], RequestCap(FakeModel(), 100), tmp_path / "r", cfg, resume=True, progress=_quiet)
+    assert len(results) == 1 and results[0]["predicted_letter"]

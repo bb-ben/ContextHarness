@@ -11,7 +11,7 @@ from pathlib import Path
 from .dataset import iter_rows, load_items, parse_item
 from .evaluation import aggregate, format_summary
 from .methods import METHODS, MethodConfig
-from .models import ModelSettings, make_model
+from .models import ModelSettings, RequestCap, make_model
 from .orchestrator import RunConfig, run
 from .workspace import CONTEXT_FILE, LAYOUTS
 
@@ -72,7 +72,11 @@ def cmd_run(args: argparse.Namespace) -> int:
     run_name = args.run_name or f"{time.strftime('%Y%m%d-%H%M%S')}_{args.method}_{args.model.replace('/', '_')}"
     run_dir = Path(args.out) / run_name
     print(f"Run directory: {run_dir}")
-    _, summary = run(items, make_model(settings), run_dir, cfg, resume=args.resume)
+    model = make_model(settings)
+    if args.max_requests is not None:
+        model = RequestCap(model, args.max_requests)
+        print(f"Request cap: at most {args.max_requests} model requests in this invocation")
+    _, summary = run(items, model, run_dir, cfg, resume=args.resume)
     print(format_summary(summary, f"{args.method} / {args.model}  ({run_dir.name})"))
     return 0
 
@@ -155,6 +159,8 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--effort", default="medium", choices=["minimal", "low", "medium", "high", "xhigh", "max", "none"],
                    help="Gemini thinking level (minimal-high) or Anthropic effort (low-max); 'none' omits it")
     p.add_argument("--rpm", type=float, help="Pace requests to at most this many per minute (free-tier quotas)")
+    p.add_argument("--max-requests", type=int,
+                   help="Stop after this many model requests in this invocation (the run pauses; continue with --resume)")
     p.add_argument("--layout", choices=sorted(LAYOUTS), default="horizonbench", help="Workspace file layout")
     p.add_argument("--no-fallbacks", action="store_true", help="Disable server-side refusal fallback")
     p.add_argument("--context-chars", type=int, default=6000, help="context.md limit")
