@@ -31,6 +31,15 @@ from .tracing import RawSessionLog, TracedModel, TraceStats, TraceWriter
 from .types import AnswerResult, BenchmarkItem
 
 CHECKPOINT = "checkpoint.json"
+# Settings that change how requests are sent but not what the model produces; a paused
+# run may resume with different values for these.
+OPERATIONAL_SETTINGS = {"max_retries", "timeout_s", "requests_per_minute"}
+
+
+def _comparable(config: dict[str, Any]) -> dict[str, Any]:
+    out = {k: v for k, v in config.items() if k != "dataset"}
+    out["model_settings"] = {k: v for k, v in out["model_settings"].items() if k not in OPERATIONAL_SETTINGS}
+    return out
 
 
 @dataclass(frozen=True)
@@ -218,7 +227,7 @@ def run(items: list[BenchmarkItem], model: ModelAdapter, run_dir: Path, cfg: Run
     config = cfg.to_dict()
     if resume and config_path.exists():
         previous = json.loads(config_path.read_text())
-        if {k: v for k, v in previous.items() if k != "dataset"} != {k: v for k, v in config.items() if k != "dataset"}:
+        if _comparable(previous) != _comparable(config):
             raise ValueError(f"--resume with different settings than {config_path}")
     config_path.write_text(json.dumps(config, indent=2))
 

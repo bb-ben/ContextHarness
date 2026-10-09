@@ -132,3 +132,26 @@ def test_pacing_spaces_requests_by_requests_per_minute():
 def test_rejects_effort_levels_gemini_does_not_have():
     with pytest.raises(ValueError, match="thinking levels"):
         adapter([], effort="xhigh")
+
+
+def test_timeouts_and_dropped_connections_are_retried():
+    import httpx
+
+    sleeps = []
+    r = adapter([httpx.ReadTimeout("no reply"), response([{"text": "ok"}])], sleeps=sleeps).complete(REQUEST)
+    assert r.text == "ok" and sleeps == [5.0]
+    assert r.extra["attempts"] == 2 and r.extra["retry_wait_s"] == 5.0
+
+
+def test_client_is_created_with_the_request_timeout(monkeypatch):
+    import google.genai
+
+    captured = {}
+
+    class FakeClient:
+        def __init__(self, **kwargs):
+            captured.update(kwargs)
+
+    monkeypatch.setattr(google.genai, "Client", FakeClient)
+    GeminiAdapter(ModelSettings(model="gemini-3.7-flash", timeout_s=240))
+    assert captured["http_options"].timeout == 240_000  # milliseconds

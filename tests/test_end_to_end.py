@@ -78,3 +78,14 @@ def test_resume_reuses_finished_items_and_rejects_overwrite(tmp_path):
     assert (run_dir / "results.jsonl").read_text() == before
     with pytest.raises(ValueError, match="different settings"):
         _run(tmp_path, "r", "--resume", "--context-chars", "4000")
+
+
+def test_resume_allows_operational_changes_only(tmp_path):
+    run_dir = tmp_path / "r"
+    argv = ["run", "--model", "fake", "--dataset", str(fixture_data.FIXTURE_PATH), "--out", str(tmp_path), "--run-name", "r"]
+    assert main(argv) == 0
+    assert main(argv + ["--resume", "--timeout", "60", "--rpm", "30"]) == 0  # how requests are sent: fine
+    with pytest.raises(ValueError, match="different settings"):
+        main(argv + ["--resume", "--effort", "low"])  # what the model produces: refused
+    events = [json.loads(l)["event"] for l in next((run_dir / "items").iterdir()).joinpath("trace.jsonl").read_text().splitlines()]
+    assert events.count("model_request") == events.count("model_call")  # every request logged before it is sent

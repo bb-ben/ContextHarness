@@ -102,6 +102,8 @@ class TracedModel:
                 "blocks": [b.text for b in request.blocks],
                 "tools": [t.name for t in request.tools],
             }
+        # Logged before the call so a request that is waiting on the provider is visible.
+        self.trace.emit("model_request", phase=request.phase, **request.metadata)
         try:
             response = self.inner.complete(request)
         except Exception as e:

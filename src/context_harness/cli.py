@@ -50,6 +50,7 @@ def cmd_run(args: argparse.Namespace) -> int:
         max_tokens=args.max_tokens,
         effort=None if args.effort == "none" else args.effort,
         requests_per_minute=args.rpm,
+        timeout_s=args.timeout,
         fallbacks=not args.no_fallbacks,
     )
     method_config = MethodConfig(
@@ -159,6 +160,8 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--effort", default="medium", choices=["minimal", "low", "medium", "high", "xhigh", "max", "none"],
                    help="Gemini thinking level (minimal-high) or Anthropic effort (low-max); 'none' omits it")
     p.add_argument("--rpm", type=float, help="Pace requests to at most this many per minute (free-tier quotas)")
+    p.add_argument("--timeout", type=float, default=300.0,
+                   help="Seconds to wait for one model response before retrying (default 300)")
     p.add_argument("--max-requests", type=int,
                    help="Stop after this many model requests in this invocation (the run pauses; continue with --resume)")
     p.add_argument("--layout", choices=sorted(LAYOUTS), default="horizonbench", help="Workspace file layout")

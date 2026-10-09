@@ -48,8 +48,11 @@ class GeminiAdapter:
         self.settings = settings
         if client is None:
             from google import genai
+            from google.genai import types
 
-            client = genai.Client()  # reads GEMINI_API_KEY (or GOOGLE_API_KEY)
+            # Reads GEMINI_API_KEY (or GOOGLE_API_KEY). Without an explicit timeout a request
+            # that never gets a reply blocks forever; HttpOptions.timeout is in milliseconds.
+            client = genai.Client(http_options=types.HttpOptions(timeout=int(settings.timeout_s * 1000)))
         self.client = client
         self._sleep = sleep
         self._last_start = 0.0
@@ -94,15 +97,25 @@ class GeminiAdapter:
         self._last_start = time.monotonic()
 
     def complete(self, request: ModelRequest) -> ModelResponse:
+        import httpx
         from google.genai import errors
 
         config, contents = self.build_config(request), self.build_contents(request)
+        waited = 0.0
         for attempt in range(self.settings.max_retries + 1):
             self._pace()
             start = time.perf_counter()
             try:
                 response = self.client.models.generate_content(model=self.settings.model, contents=contents, config=config)
-                return self._parse(response, time.perf_counter() - start)
+                parsed = self._parse(response, time.perf_counter() - start)
+                parsed.extra.update(attempts=attempt + 1, retry_wait_s=round(waited, 1))
+                return parsed
+            except httpx.TransportError:  # timeouts and dropped connections are temporary
+                if attempt == self.settings.max_retries:
+                    raise
+                delay = min(60.0, 2.0 ** attempt * 5)
+                waited += delay
+                self._sleep(delay)
             except errors.ClientError as e:
                 if e.code != 429:
                     raise
@@ -111,10 +124,13 @@ class GeminiAdapter:
                     raise QuotaExhausted(f"Gemini daily quota exhausted for {self.settings.model}: {e.message}") from e
                 if attempt == self.settings.max_retries:
                     raise
-                self._sleep(delay if delay is not None else min(60.0, 2.0 ** attempt * 5))
+                delay = delay if delay is not None else min(60.0, 2.0 ** attempt * 5)
+                waited += delay
+                self._sleep(delay)
             except errors.ServerError:
                 if attempt == self.settings.max_retries:
                     raise
+                waited += min(60.0, 2.0 ** attempt * 5)
                 self._sleep(min(60.0, 2.0 ** attempt * 5))
         raise RuntimeError("unreachable")
 
