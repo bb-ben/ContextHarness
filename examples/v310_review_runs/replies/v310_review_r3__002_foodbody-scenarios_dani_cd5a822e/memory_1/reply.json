@@ -1,0 +1,109 @@
+{
+  "source": "v310_review_r3__002_foodbody-scenarios_dani_cd5a822e",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Absolutely — a few easy vegetarian dinners for the week:\n\n- Spicy peanut noodles with tofu and broccoli\n- Sheet-pan gnocchi with zucchini, cherry tomatoes, and white beans\n- Chickpea coconut curry over rice\n- Black bean taco bowls with salsa, avocado, and chili crisp\n- Pesto tortellini with spinach and roasted mushrooms\n- Lentil soup with crusty bread and extra chili oil\n\nIf you want, I can turn these into a 5-night plan.",
+  "applied": [
+    "F-7.1",
+    "F-4.1",
+    "P-1.1",
+    "P-7.1",
+    "P-6.1"
+  ],
+  "skipped": [
+    "P-0.1",
+    "P-0.2",
+    "H-3.1",
+    "T-7.1"
+  ],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "F-7.1",
+      "F-4.1",
+      "P-1.1",
+      "P-7.1",
+      "P-6.1"
+    ],
+    "live": [
+      "F-7.1",
+      "F-4.1",
+      "P-1.1",
+      "P-7.1",
+      "P-6.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-1.1",
+      "P-7.1",
+      "P-6.1"
+    ],
+    "recently_changed": [
+      "F-7.1",
+      "P-7.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "answer_length",
+      "current": "very_brief",
+      "original": "detailed_explanations",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It stays fairly concise, giving just a short list of dinner ideas rather than detailed explanations."
+    },
+    {
+      "attribute": "cooking_style",
+      "current": "one_pan_freezer_friendly",
+      "original": "elaborate_weekend_projects",
+      "changed": true,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "It includes a few easy dishes, but it doesn’t clearly emphasize one-pan or freezer-friendly cooking."
+    },
+    {
+      "attribute": "diet",
+      "current": "vegetarian",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "All the suggestions are vegetarian."
+    },
+    {
+      "attribute": "spice",
+      "current": "loves_spicy",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Several options are explicitly spicy, with chili crisp, chili oil, salsa, and spicy peanut noodles."
+    }
+  ],
+  "changed_fit_current": 0.5,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 0.75,
+  "judge_cost_usd": 0.00574,
+  "reply_cost_usd": 0.0056
+}

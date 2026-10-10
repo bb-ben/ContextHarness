@@ -1,0 +1,6 @@
+# Preferences
+- P-1.1 | current | 2025-01-12 | topic: tone | basis: O-0.1, O-0.3, O-1.1, O-5.1, O-8.1 | confirmed: 2025-03-03 | Wants a playful, casual vibe with emojis.
+- P-2.1 | current | 2025-01-19 | topic: output-style | basis: O-0.2, O-2.1, O-5.2, O-8.2 | confirmed: 2025-03-03 | Wants food ideas framed playfully and without nutrition talk.
+- P-4.1 | superseded | 2025-02-03 | topic: output-style | scope: client-menu | basis: O-0.2, O-4.1 | until: 2025-02-24 | superseded_by: P-7.1 | Wants client-menu descriptions professional and without nutrition talk.
+- P-7.1 | superseded | 2025-02-24 | topic: output-style | scope: client-menu | basis: O-4.1, O-6.1, O-7.1, O-7.2 | supersedes: P-4.1 | changed: nutrition details now included; clean table and no emojis now wanted | until: 2025-03-17 | superseded_by: P-10.1 | Wants client-menu descriptions professional, with a clean table and calories and protein per serving; no emojis.
+- P-10.1 | current | 2025-03-17 | topic: output-style | scope: client-facing | basis: O-9.1, O-10.1, O-10.2 | supersedes: P-7.1 | changed: applies the macro-table format to all client-facing work, not just client-menu copy | Wants client-facing work professional in a clean macro table with calories and protein per serving; no emojis.

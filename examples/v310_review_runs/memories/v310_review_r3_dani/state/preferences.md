@@ -1,0 +1,6 @@
+# Preferences
+- P-0.1 | current | 2025-06-02 | topic: explanation-style | basis: O-0.1 | Wants explanations of the why behind each step and the science.
+- P-0.2 | current | 2025-06-02 | topic: detail-level | basis: O-0.2, O-1.2, O-2.1, O-3.1 | confirmed: 2025-06-22 | Wants detailed, thorough answers.
+- P-1.1 | current | 2025-06-08 | topic: spice-level | basis: O-1.3, O-7.3 | confirmed: 2025-07-24 | new_dimension: No existing dimension covers heat and chili-usage preferences. | Wants food spicy and likes chili crisp on everything.
+- P-6.1 | current | 2025-07-16 | topic: output-style | basis: O-5.2, O-6.1 | confirmed: 2025-07-16 | new_dimension: No existing dimension covers the register and voice of produced work separate from detail-level. | Wants terse outputs with no explanations.
+- P-7.1 | current | 2025-07-24 | topic: constraints | basis: O-5.1, O-6.2, O-7.1 | confirmed: 2025-07-24 | review: 2025-08-07 | supersedes: T-6.2 | changed: one-pan/batchable dinner constraints now a standing preference; one-handed remains useful when needed. | Wants easy, batchable one-pan meal ideas; one-handed helps when possible.

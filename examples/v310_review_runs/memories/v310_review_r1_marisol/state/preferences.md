@@ -1,0 +1,8 @@
+# Preferences
+- P-0.1 | current | 2025-01-06 | topic: tone | basis: O-0.1, O-0.3, O-1.1 | confirmed: 2025-01-12 | Wants replies to feel fun and playful; emojis are welcome.
+- P-0.2 | current | 2025-01-06 | topic: output-style | basis: O-0.2, O-0.3 | Wants dinner ideas without nutrition details.
+- P-2.1 | current | 2025-01-19 | topic: output-style | scope: kid-focused | basis: O-1.1, O-2.1, O-5.1, O-8.1 | confirmed: 2025-03-03 | Wants kid-focused ideas to be playful and silly.
+- P-4.1 | current | 2025-02-03 | topic: output-style | scope: client-facing-copy | basis: O-4.1, O-9.1 | confirmed: 2025-03-10 | Wants client-facing copy to sound professional.
+- P-7.1 | superseded | 2025-02-24 | topic: output-style | scope: client-facing-menu | basis: O-6.1, O-7.1 | until: 2025-02-24 | superseded_by: P-7.2 | Wants client-facing menus to use a clean table and include calories and protein per serving, with no emojis.
+- P-7.2 | current | 2025-02-24 | topic: output-style | scope: client-facing-menu | basis: O-6.1, O-7.1 | supersedes: P-7.1 | changed: no extra copy now; still clean table, calories and protein per serving, no emojis | Wants client-facing menus to use a clean table, include calories and protein per serving, and omit extra copy and emojis.
+- P-10.1 | current | 2025-03-17 | topic: output-style | scope: client-facing-work | basis: O-10.1 | Wants client-facing work to use a macro table.

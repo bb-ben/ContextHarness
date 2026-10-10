@@ -550,6 +550,36 @@ and all six replies to the client request followed the new values.
 "gentle check-ins" preference as irrelevant to a grocery request in 5 of 6; and
 recording varies run to run ("one-pan" collected in 4 of 6).
 
+### v3.10: non-overlapping dimensions, check feedback, and a review step
+
+v3.10 moves answer length out of `help-format` (only `detail-level` has it), shows
+the agent the memory checks' open problems in its next update, and can add a short
+review call after each update ("re-read memory as your edits left it; fix
+contradictions, scopes that cover every request, unrecorded statements or facts").
+Same three scenarios, three runs per condition, medium effort; $7.28 for the round;
+see [`examples/v310_review_runs/`](../examples/v310_review_runs).
+
+| | v3.9 | v3.10 | v3.10 + review |
+|---|---|---|---|
+| Replies follow the new values (mean of 9) | 0.72 | 0.67 | **0.83** |
+| New parent: "detailed" still current | 3 of 3 | 3 of 3 | **1 of 3** |
+| Burnout: "exact numbers" still current | 1 of 3 | 2 of 3 | **0 of 3** |
+| Answers correct | 9 of 9 | 9 of 9 | 9 of 9 |
+| Cost for 9 runs | $2.56 | $2.63 | $4.30 |
+
+- **Fixing the dimension overlap alone didn't help.** Both values now sat on
+  `detail-level`, and the agent dodged the conflict with a scope instead: "shorter
+  answers in late-night, one-handed situations", leaving "detailed, thorough" as the
+  default.
+- **The review step did.** It replaced the stale value ("very short answers, about 3
+  lines, for now") and removed the stale "exact numbers", and replies rose from 0.67 to
+  0.83, at 63% more cost. A second look at its own result catches what the agent
+  misses in the first pass.
+- **Still missed in every condition:** burnout replies treat "gentle check-ins" as
+  irrelevant to a grocery request, and the meal-prep memory mostly loses "family
+  cooking stays casual" (1 of 9 runs keeps it). Nine runs per condition is still a
+  small sample.
+
 ## Known gaps
 
 - **The archive itself has no rollover yet** (200,000 chars). That's enough for
@@ -568,8 +598,10 @@ recording varies run to run ("one-pan" collected in 4 of 6).
 - **Run-to-run variance, not reasoning effort.** High effort gave the same results as
   medium at 1.7 times the cost; the same settings still produce different memories on
   different runs.
-- **Seed dimensions overlap** (`help-format` and `detail-level` both cover length), and
-  nothing checks for contradicting values across dimensions.
+- **Scopes can dodge a conflict**: a stale value can survive as the "default" while
+  the change is scoped to a narrow situation. The review step catches some of these.
+- **The review step costs 63% more**; whether its gain holds on long histories is
+  untested.
 - **A rolling summary still matches or beats the layer on these short scenarios**, at
   a fraction of the cost. The layer's edge so far is that what it believes, why and
   what it used are all inspectable.

@@ -1,0 +1,109 @@
+{
+  "source": "v310_review_r3__003_foodbody-scenarios_lena_a7a829dd",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Absolutely — here’s a simple Mediterranean-style grocery plan for you and your partner, kept low-fuss and without numbers:\n\n- Produce: salad greens, cucumbers, tomatoes, peppers, onions, garlic, lemons, and a few fruits you both like\n- Protein: eggs, Greek yogurt, chicken or fish, chickpeas, lentils, and/or tuna\n- Carbs: whole-grain bread or pita, rice, pasta, potatoes, and oats\n- Pantry: olive oil, olives, canned tomatoes, beans, nuts, and a few herbs/spices\n- Extras: feta, hummus, and any easy snacks you both enjoy\n\nIf you want, I can turn this into a full meal plan for the week or tighten it up for a specific budget.",
+  "applied": [
+    "F-0.1",
+    "F-0.2",
+    "P-5.1",
+    "P-7.1",
+    "T-6.1",
+    "T-6.2"
+  ],
+  "skipped": [
+    "P-7.2"
+  ],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "F-0.1",
+      "F-0.2",
+      "P-5.1",
+      "P-7.1",
+      "T-6.1",
+      "T-6.2"
+    ],
+    "live": [
+      "F-0.1",
+      "F-0.2",
+      "P-5.1",
+      "P-7.1",
+      "T-6.1",
+      "T-6.2"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-5.1",
+      "P-7.1"
+    ],
+    "recently_changed": [
+      "P-5.1",
+      "T-6.1",
+      "T-6.2"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "nutrition_numbers",
+      "current": "no_numbers",
+      "original": "exact_macros",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It explicitly says the plan is \"without numbers,\" matching a no-numbers style."
+    },
+    {
+      "attribute": "check_in_style",
+      "current": "gentle_check_ins",
+      "original": "weekly_data_reports",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "neutral"
+      ],
+      "reason": "The tone is soft and low-pressure, with an optional follow-up offer rather than a formal report."
+    },
+    {
+      "attribute": "cuisine",
+      "current": "mediterranean",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It directly gives a Mediterranean-style grocery plan."
+    },
+    {
+      "attribute": "household",
+      "current": "cooking_for_two",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It’s framed for \"you and your partner,\" which matches cooking for two."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 1.0,
+  "judge_cost_usd": 0.00625,
+  "reply_cost_usd": 0.01099
+}

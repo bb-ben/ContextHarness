@@ -1,0 +1,98 @@
+{
+  "source": "v310_base_r1__003_foodbody-scenarios_lena_a7a829dd",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Absolutely — I can help. Since you cook for you and your partner, I can put together a Mediterranean-leaning grocery list for the week and keep it free of grams or calories. If you want, I can organize it by meals or by aisle.",
+  "applied": [
+    "P-0.1",
+    "P-5.1",
+    "F-0.1"
+  ],
+  "skipped": [
+    "T-7.1"
+  ],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "P-0.1",
+      "P-5.1",
+      "F-0.1"
+    ],
+    "live": [
+      "P-0.1",
+      "P-5.1",
+      "F-0.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-0.1",
+      "P-5.1"
+    ],
+    "recently_changed": [
+      "P-5.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "nutrition_numbers",
+      "current": "no_numbers",
+      "original": "exact_macros",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It explicitly avoids grams or calories, matching a no-numbers approach."
+    },
+    {
+      "attribute": "check_in_style",
+      "current": "gentle_check_ins",
+      "original": "weekly_data_reports",
+      "changed": true,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "It doesn’t really do any check-in style, gentle or otherwise."
+    },
+    {
+      "attribute": "cuisine",
+      "current": "mediterranean",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It directly frames the plan as Mediterranean-leaning."
+    },
+    {
+      "attribute": "household",
+      "current": "cooking_for_two",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It assumes cooking for you and your partner, matching cooking for two."
+    }
+  ],
+  "changed_fit_current": 0.5,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 0.75,
+  "judge_cost_usd": 0.005,
+  "reply_cost_usd": 0.00717
+}

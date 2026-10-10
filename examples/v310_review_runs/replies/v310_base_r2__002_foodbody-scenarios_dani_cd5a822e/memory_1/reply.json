@@ -1,0 +1,112 @@
+{
+  "source": "v310_base_r2__002_foodbody-scenarios_dani_cd5a822e",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Absolutely — here are a few vegetarian, spicy dinners that fit the one-handed / one-pan brief and won’t ask much of you on a baby-sleep schedule:\n\n1. Chickpea coconut curry with spinach\n   - Sauté onion, garlic, ginger, and curry paste.\n   - Add chickpeas + coconut milk, simmer 10 minutes, then stir in spinach.\n   - Serve over rice or with naan.\n   - Why it works: one pot, very forgiving, and leftovers reheat well.\n\n2. Sheet-pan harissa vegetables with halloumi or tofu\n   - Roast peppers, zucchini, red onion, and chickpeas with olive oil + harissa.\n   - Add halloumi for the last few minutes, or roast tofu on the tray.\n   - Finish with lemon and yogurt.\n   - Why it works: almost no active cooking, just a tray and an oven.\n\n3. Spicy peanut noodles with tofu\n   - Toss noodles with peanut butter, soy sauce, chili crisp, lime, and a little hot water.\n   - Add quick-sautéed greens and tofu.\n   - Why it works: fast, one-pan-ish, and easy to eat one-handed.\n\n4. Lentil taco skillet\n   - Simmer lentils with salsa, cumin, smoked paprika, and corn.\n   - Top with cheese, avocado, and hot sauce; scoop into tortillas.\n   - Why it works: hearty, spicy, and all in one skillet.\n\n5. Kimchi fried rice with egg or tofu\n   - Fry garlic, kimchi, and cooked rice; add egg or tofu and sesame oil.\n   - Why it works: very fast, very spicy, and ideal for leftover rice.\n\nIf you want, I can turn this into a 5-night plan or a shopping list.",
+  "applied": [
+    "F-1.1",
+    "F-4.1",
+    "P-0.1",
+    "P-0.2",
+    "P-1.1",
+    "P-7.1",
+    "T-7.2"
+  ],
+  "skipped": [
+    "P-6.1"
+  ],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "F-1.1",
+      "F-4.1",
+      "P-0.1",
+      "P-0.2",
+      "P-1.1",
+      "P-7.1",
+      "T-7.2"
+    ],
+    "live": [
+      "F-1.1",
+      "F-4.1",
+      "P-0.1",
+      "P-0.2",
+      "P-1.1",
+      "P-7.1",
+      "T-7.2"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-0.1",
+      "P-0.2",
+      "P-1.1",
+      "P-7.1"
+    ],
+    "recently_changed": [
+      "T-7.2"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "answer_length",
+      "current": "very_brief",
+      "original": "detailed_explanations",
+      "changed": true,
+      "fit": "original",
+      "votes": [
+        "original",
+        "other",
+        "original"
+      ],
+      "reason": "It gives a fairly long list with step-by-step bullets and explanations, not a very brief reply."
+    },
+    {
+      "attribute": "cooking_style",
+      "current": "one_pan_freezer_friendly",
+      "original": "elaborate_weekend_projects",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "The suggestions center on simple one-pan or one-pot meals with leftovers-friendly options, matching the current style."
+    },
+    {
+      "attribute": "diet",
+      "current": "vegetarian",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "All the dinner ideas are vegetarian, with no meat or fish."
+    },
+    {
+      "attribute": "spice",
+      "current": "loves_spicy",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "The list leans spicy throughout, using curry paste, harissa, chili crisp, kimchi, hot sauce, and curry spices."
+    }
+  ],
+  "changed_fit_current": 0.5,
+  "changed_fit_original": 0.5,
+  "all_fit_current": 0.75,
+  "judge_cost_usd": 0.01003,
+  "reply_cost_usd": 0.01396
+}

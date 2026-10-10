@@ -1,0 +1,91 @@
+{
+  "source": "v310_review_r1__004_foodbody-scenarios_marisol_183be56c",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "| Day | Menu | Calories | Protein | Carbs | Fat |\n|---|---|---:|---:|---:|---:|\n| Mon | Lemon-herb chicken, quinoa, roasted broccoli | 540 | 41g | 46g | 18g |\n| Tue | Turkey meatballs, marinara, penne, spinach | 580 | 37g | 57g | 20g |\n| Wed | Baked salmon, sweet potato, asparagus | 520 | 34g | 33g | 24g |\n| Thu | Beef fajita bowl with rice and peppers | 550 | 36g | 50g | 21g |\n| Fri | Pesto chicken pasta salad with cherry tomatoes | 570 | 38g | 52g | 19g |",
+  "applied": [
+    "P-4.1",
+    "P-7.2",
+    "P-10.1"
+  ],
+  "skipped": [
+    "F-3.1",
+    "F-5.1",
+    "P-0.1",
+    "P-0.2",
+    "P-2.1"
+  ],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "P-4.1",
+      "P-7.2",
+      "P-10.1"
+    ],
+    "live": [
+      "P-4.1",
+      "P-7.2",
+      "P-10.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-4.1",
+      "P-7.2",
+      "P-10.1"
+    ],
+    "recently_changed": [
+      "P-7.2"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "client_writing_tone",
+      "current": "professional",
+      "original": "casual_fun",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "The reply is written in a polished, businesslike table format, matching a professional tone."
+    },
+    {
+      "attribute": "client_nutrition_detail",
+      "current": "per_serving_macros_table",
+      "original": "no_numbers",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It provides a per-day macros table with calories, protein, carbs, and fat, which fits the requested nutrition detail style."
+    },
+    {
+      "attribute": "family_cooking_style",
+      "current": "casual_fun",
+      "changed": false,
+      "fit": "other",
+      "votes": [
+        "other",
+        "neutral",
+        "other"
+      ],
+      "reason": "The menu is straightforward and formal rather than casual or playful, so it does not match the current casual-fun style."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 0.667,
+  "judge_cost_usd": 0.00684,
+  "reply_cost_usd": 0.02233
+}

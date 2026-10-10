@@ -1,0 +1,321 @@
+{
+  "item_index": 2,
+  "item_id": "Dani Morales_foodbody_new_parent",
+  "item_key": "cd5a822e9b39",
+  "method": "agent",
+  "model": "gpt-5.4-mini",
+  "predicted_letter": "B",
+  "answer_via": "tool",
+  "correct": true,
+  "invalid": false,
+  "chose_distractor": false,
+  "predicted_value": "brief_one_pan",
+  "error": null,
+  "gold": {
+    "correct_letter": "B",
+    "distractor_letter": "A",
+    "has_evolved": true,
+    "generator": "foodbody-scenarios",
+    "user_id": "foodbody-scenarios/dani",
+    "preference_domain": "cooking_help_style"
+  },
+  "ordering": {
+    "policy": "chronological",
+    "n_history_sessions_in_text": 8,
+    "n_replayed": 8,
+    "text_order_monotonic": true,
+    "n_moved": 0,
+    "dropped_after_probe": [],
+    "truncated_to_last": null
+  },
+  "answer_details": {
+    "stop": "stop_condition",
+    "steps": 1,
+    "applied": [
+      "F-1.1",
+      "P-1.1",
+      "P-5.1",
+      "P-7.1"
+    ],
+    "read_chars": 0
+  },
+  "utilization": {
+    "applied": [
+      "F-1.1",
+      "P-1.1",
+      "P-5.1",
+      "P-7.1"
+    ],
+    "live": [
+      "F-1.1",
+      "P-1.1",
+      "P-5.1",
+      "P-7.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-1.1",
+      "P-5.1",
+      "P-7.1"
+    ],
+    "recently_changed": [
+      "P-5.1"
+    ]
+  },
+  "reference_heuristics": {
+    "shortest_option": "C",
+    "shortest_option_correct": false
+  },
+  "latency_s": 471.384,
+  "stats": {
+    "model_calls": 53,
+    "usage": {
+      "input_tokens": 108900,
+      "output_tokens": 115398,
+      "cache_read_input_tokens": 377344,
+      "cache_creation_input_tokens": 0
+    },
+    "usage_by_phase": {
+      "memory_update": {
+        "input_tokens": 81605,
+        "output_tokens": 86406,
+        "cache_read_input_tokens": 242176,
+        "cache_creation_input_tokens": 0
+      },
+      "memory_review": {
+        "input_tokens": 24838,
+        "output_tokens": 28601,
+        "cache_read_input_tokens": 128512,
+        "cache_creation_input_tokens": 0
+      },
+      "answer": {
+        "input_tokens": 2457,
+        "output_tokens": 391,
+        "cache_read_input_tokens": 6656,
+        "cache_creation_input_tokens": 0
+      }
+    },
+    "calls_by_phase": {
+      "memory_update": 35,
+      "memory_review": 17,
+      "answer": 1
+    },
+    "served_by": {
+      "gpt-5.4-mini-2026-03-17": 53
+    },
+    "tool_calls": 97,
+    "tool_errors": 7,
+    "file_ops": 58,
+    "file_reads": 15,
+    "refusals": 0
+  },
+  "estimated_cost_usd": 0.6292668,
+  "memory_chars": {
+    "context.md": 386,
+    "memory/episodes.md": 2246,
+    "state/profile.md": 176,
+    "state/preferences.md": 948,
+    "state/goals.md": 8,
+    "state/transient.md": 781,
+    "state/hypotheses.md": 515,
+    "memory/archive.md": 10
+  },
+  "memory": {
+    "events": 8,
+    "violations_by_code": {
+      "dangling_ref": 4,
+      "history_rewritten": 4,
+      "context_uncited": 1
+    },
+    "events_with_violations": 8,
+    "events_with_new_violations": 5,
+    "unresolved_at_end": 1,
+    "access_totals": {
+      "context.md": {
+        "writes": 16
+      },
+      "memory/episodes.md": {
+        "writes": 11,
+        "errors": 6,
+        "reads": 10
+      },
+      "state/hypotheses.md": {
+        "writes": 4,
+        "errors": 1
+      },
+      "state/preferences.md": {
+        "writes": 20,
+        "reads": 3
+      },
+      "state/profile.md": {
+        "reads": 1,
+        "writes": 2
+      },
+      "state/transient.md": {
+        "writes": 5
+      }
+    },
+    "final_metrics": {
+      "entries": {
+        "E": 8,
+        "O": 19,
+        "F": 2,
+        "P": 5,
+        "T": 4,
+        "H": 3
+      },
+      "live_entries": {
+        "F": 2,
+        "P": 4,
+        "T": 1,
+        "H": 1
+      },
+      "provenance_share": 1.0,
+      "context_bullets": 6,
+      "context_cited_ids": 7,
+      "context_coverage_of_live_state": 0.875,
+      "episodes_recorded": 8
+    }
+  },
+  "evolution_diagnostics": [
+    {
+      "date": "2025-07-01",
+      "event_name": "Became a parent",
+      "replayed_sessions": [
+        4
+      ],
+      "memory_writes": 7
+    }
+  ],
+  "evidence_chain": [
+    {
+      "date": "2025-07-01",
+      "event_name": "Became a parent",
+      "events": [
+        "S-4"
+      ],
+      "episodes": [
+        "E-4"
+      ],
+      "observations": [
+        "O-4.1"
+      ],
+      "hypotheses": [
+        "H-4.1"
+      ],
+      "state_entries": [
+        "F-4.1",
+        "P-5.1",
+        "T-4.1",
+        "T-5.1",
+        "T-7.1"
+      ],
+      "live_state_entries": [
+        "F-4.1",
+        "P-5.1",
+        "T-7.1"
+      ],
+      "stage": "in_state"
+    }
+  ],
+  "sessions": [
+    {
+      "index": 0,
+      "event_id": "S-0",
+      "date": "2025-06-02T09:00:00.000001",
+      "file_ops": 5,
+      "model_calls": 4,
+      "input_tokens": 33323,
+      "output_tokens": 3815,
+      "latency_s": 19.278,
+      "violations": 2,
+      "new_violations": 2
+    },
+    {
+      "index": 1,
+      "event_id": "S-1",
+      "date": "2025-06-08T09:00:00.000001",
+      "file_ops": 10,
+      "model_calls": 9,
+      "input_tokens": 82369,
+      "output_tokens": 17778,
+      "latency_s": 78.912,
+      "violations": 2,
+      "new_violations": 2
+    },
+    {
+      "index": 2,
+      "event_id": "S-2",
+      "date": "2025-06-15T09:00:00.000001",
+      "file_ops": 7,
+      "model_calls": 6,
+      "input_tokens": 52762,
+      "output_tokens": 10983,
+      "latency_s": 46.735,
+      "violations": 2,
+      "new_violations": 2
+    },
+    {
+      "index": 3,
+      "event_id": "S-3",
+      "date": "2025-06-22T09:00:00.000001",
+      "file_ops": 5,
+      "model_calls": 4,
+      "input_tokens": 35381,
+      "output_tokens": 8423,
+      "latency_s": 36.871,
+      "violations": 2,
+      "new_violations": 2
+    },
+    {
+      "index": 4,
+      "event_id": "S-4",
+      "date": "2025-07-01T09:00:00.000001",
+      "file_ops": 7,
+      "model_calls": 7,
+      "input_tokens": 63573,
+      "output_tokens": 17260,
+      "latency_s": 68.946,
+      "violations": 2,
+      "new_violations": 0
+    },
+    {
+      "index": 5,
+      "event_id": "S-5",
+      "date": "2025-07-10T09:00:00.000001",
+      "file_ops": 5,
+      "model_calls": 7,
+      "input_tokens": 65085,
+      "output_tokens": 25965,
+      "latency_s": 101.774,
+      "violations": 1,
+      "new_violations": 1
+    },
+    {
+      "index": 6,
+      "event_id": "S-6",
+      "date": "2025-07-16T09:00:00.000001",
+      "file_ops": 12,
+      "model_calls": 9,
+      "input_tokens": 85821,
+      "output_tokens": 14514,
+      "latency_s": 58.229,
+      "violations": 1,
+      "new_violations": 0
+    },
+    {
+      "index": 7,
+      "event_id": "S-7",
+      "date": "2025-07-24T09:00:00.000001",
+      "file_ops": 7,
+      "model_calls": 6,
+      "input_tokens": 58817,
+      "output_tokens": 16269,
+      "latency_s": 58.708,
+      "violations": 1,
+      "new_violations": 0
+    }
+  ]
+}

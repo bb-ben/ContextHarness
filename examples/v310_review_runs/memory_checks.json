@@ -1,0 +1,431 @@
+{
+ "v3.9": [
+  {
+   "scenario": "dani",
+   "expected_present": {
+    "brief answers": true,
+    "one-pan / freezer": true,
+    "vegetarian": true,
+    "spicy": true
+   },
+   "stale_present": {
+    "detailed answers still standing": true
+   },
+   "scoped_values": 0,
+   "answer_correct": true,
+   "cost_usd": 0.267,
+   "finished": true
+  },
+  {
+   "scenario": "lena",
+   "expected_present": {
+    "no numbers": true,
+    "gentle check-ins": true,
+    "Mediterranean": true,
+    "cooks for two": true
+   },
+   "stale_present": {
+    "exact numbers still standing": true
+   },
+   "scoped_values": 0,
+   "answer_correct": true,
+   "cost_usd": 0.194,
+   "finished": true
+  },
+  {
+   "scenario": "marisol",
+   "expected_present": {
+    "professional for clients": true,
+    "macros for clients": true,
+    "family stays casual": false
+   },
+   "stale_present": {
+    "no numbers still standing (unscoped)": false
+   },
+   "scoped_values": 3,
+   "answer_correct": true,
+   "cost_usd": 0.257,
+   "finished": true
+  },
+  {
+   "scenario": "dani",
+   "expected_present": {
+    "brief answers": false,
+    "one-pan / freezer": false,
+    "vegetarian": true,
+    "spicy": true
+   },
+   "stale_present": {
+    "detailed answers still standing": true
+   },
+   "scoped_values": 0,
+   "answer_correct": true,
+   "cost_usd": 0.372,
+   "finished": true
+  },
+  {
+   "scenario": "lena",
+   "expected_present": {
+    "no numbers": true,
+    "gentle check-ins": true,
+    "Mediterranean": true,
+    "cooks for two": true
+   },
+   "stale_present": {
+    "exact numbers still standing": false
+   },
+   "scoped_values": 0,
+   "answer_correct": true,
+   "cost_usd": 0.241,
+   "finished": true
+  },
+  {
+   "scenario": "marisol",
+   "expected_present": {
+    "professional for clients": true,
+    "macros for clients": true,
+    "family stays casual": true
+   },
+   "stale_present": {
+    "no numbers still standing (unscoped)": true
+   },
+   "scoped_values": 2,
+   "answer_correct": true,
+   "cost_usd": 0.311,
+   "finished": true
+  },
+  {
+   "scenario": "dani",
+   "expected_present": {
+    "brief answers": true,
+    "one-pan / freezer": true,
+    "vegetarian": true,
+    "spicy": true
+   },
+   "stale_present": {
+    "detailed answers still standing": true
+   },
+   "scoped_values": 1,
+   "answer_correct": true,
+   "cost_usd": 0.346,
+   "finished": true
+  },
+  {
+   "scenario": "lena",
+   "expected_present": {
+    "no numbers": true,
+    "gentle check-ins": true,
+    "Mediterranean": true,
+    "cooks for two": true
+   },
+   "stale_present": {
+    "exact numbers still standing": false
+   },
+   "scoped_values": 0,
+   "answer_correct": true,
+   "cost_usd": 0.267,
+   "finished": true
+  },
+  {
+   "scenario": "marisol",
+   "expected_present": {
+    "professional for clients": true,
+    "macros for clients": true,
+    "family stays casual": false
+   },
+   "stale_present": {
+    "no numbers still standing (unscoped)": false
+   },
+   "scoped_values": 1,
+   "answer_correct": true,
+   "cost_usd": 0.307,
+   "finished": true
+  }
+ ],
+ "v3.10": [
+  {
+   "scenario": "dani",
+   "expected_present": {
+    "brief answers": true,
+    "one-pan / freezer": false,
+    "vegetarian": true,
+    "spicy": true
+   },
+   "stale_present": {
+    "detailed answers still standing": true
+   },
+   "scoped_values": 1,
+   "answer_correct": true,
+   "cost_usd": 0.327,
+   "finished": true
+  },
+  {
+   "scenario": "lena",
+   "expected_present": {
+    "no numbers": true,
+    "gentle check-ins": false,
+    "Mediterranean": true,
+    "cooks for two": true
+   },
+   "stale_present": {
+    "exact numbers still standing": false
+   },
+   "scoped_values": 0,
+   "answer_correct": true,
+   "cost_usd": 0.244,
+   "finished": true
+  },
+  {
+   "scenario": "marisol",
+   "expected_present": {
+    "professional for clients": true,
+    "macros for clients": true,
+    "family stays casual": false
+   },
+   "stale_present": {
+    "no numbers still standing (unscoped)": false
+   },
+   "scoped_values": 2,
+   "answer_correct": true,
+   "cost_usd": 0.286,
+   "finished": true
+  },
+  {
+   "scenario": "dani",
+   "expected_present": {
+    "brief answers": true,
+    "one-pan / freezer": true,
+    "vegetarian": true,
+    "spicy": true
+   },
+   "stale_present": {
+    "detailed answers still standing": true
+   },
+   "scoped_values": 1,
+   "answer_correct": true,
+   "cost_usd": 0.279,
+   "finished": true
+  },
+  {
+   "scenario": "lena",
+   "expected_present": {
+    "no numbers": true,
+    "gentle check-ins": true,
+    "Mediterranean": true,
+    "cooks for two": true
+   },
+   "stale_present": {
+    "exact numbers still standing": true
+   },
+   "scoped_values": 1,
+   "answer_correct": true,
+   "cost_usd": 0.281,
+   "finished": true
+  },
+  {
+   "scenario": "marisol",
+   "expected_present": {
+    "professional for clients": true,
+    "macros for clients": true,
+    "family stays casual": false
+   },
+   "stale_present": {
+    "no numbers still standing (unscoped)": true
+   },
+   "scoped_values": 1,
+   "answer_correct": true,
+   "cost_usd": 0.412,
+   "finished": true
+  },
+  {
+   "scenario": "dani",
+   "expected_present": {
+    "brief answers": true,
+    "one-pan / freezer": true,
+    "vegetarian": true,
+    "spicy": true
+   },
+   "stale_present": {
+    "detailed answers still standing": true
+   },
+   "scoped_values": 1,
+   "answer_correct": true,
+   "cost_usd": 0.243,
+   "finished": true
+  },
+  {
+   "scenario": "lena",
+   "expected_present": {
+    "no numbers": true,
+    "gentle check-ins": false,
+    "Mediterranean": true,
+    "cooks for two": true
+   },
+   "stale_present": {
+    "exact numbers still standing": true
+   },
+   "scoped_values": 0,
+   "answer_correct": true,
+   "cost_usd": 0.223,
+   "finished": true
+  },
+  {
+   "scenario": "marisol",
+   "expected_present": {
+    "professional for clients": true,
+    "macros for clients": true,
+    "family stays casual": false
+   },
+   "stale_present": {
+    "no numbers still standing (unscoped)": false
+   },
+   "scoped_values": 2,
+   "answer_correct": true,
+   "cost_usd": 0.339,
+   "finished": true
+  }
+ ],
+ "v3.10+review": [
+  {
+   "scenario": "dani",
+   "expected_present": {
+    "brief answers": true,
+    "one-pan / freezer": true,
+    "vegetarian": true,
+    "spicy": true
+   },
+   "stale_present": {
+    "detailed answers still standing": false
+   },
+   "scoped_values": 0,
+   "answer_correct": true,
+   "cost_usd": 0.629,
+   "finished": true
+  },
+  {
+   "scenario": "lena",
+   "expected_present": {
+    "no numbers": true,
+    "gentle check-ins": false,
+    "Mediterranean": true,
+    "cooks for two": true
+   },
+   "stale_present": {
+    "exact numbers still standing": false
+   },
+   "scoped_values": 0,
+   "answer_correct": true,
+   "cost_usd": 0.379,
+   "finished": true
+  },
+  {
+   "scenario": "marisol",
+   "expected_present": {
+    "professional for clients": true,
+    "macros for clients": true,
+    "family stays casual": false
+   },
+   "stale_present": {
+    "no numbers still standing (unscoped)": true
+   },
+   "scoped_values": 4,
+   "answer_correct": true,
+   "cost_usd": 0.446,
+   "finished": true
+  },
+  {
+   "scenario": "dani",
+   "expected_present": {
+    "brief answers": true,
+    "one-pan / freezer": false,
+    "vegetarian": true,
+    "spicy": true
+   },
+   "stale_present": {
+    "detailed answers still standing": false
+   },
+   "scoped_values": 1,
+   "answer_correct": true,
+   "cost_usd": 0.58,
+   "finished": true
+  },
+  {
+   "scenario": "lena",
+   "expected_present": {
+    "no numbers": true,
+    "gentle check-ins": true,
+    "Mediterranean": true,
+    "cooks for two": true
+   },
+   "stale_present": {
+    "exact numbers still standing": false
+   },
+   "scoped_values": 0,
+   "answer_correct": true,
+   "cost_usd": 0.412,
+   "finished": true
+  },
+  {
+   "scenario": "marisol",
+   "expected_present": {
+    "professional for clients": true,
+    "macros for clients": true,
+    "family stays casual": false
+   },
+   "stale_present": {
+    "no numbers still standing (unscoped)": false
+   },
+   "scoped_values": 1,
+   "answer_correct": true,
+   "cost_usd": 0.463,
+   "finished": true
+  },
+  {
+   "scenario": "dani",
+   "expected_present": {
+    "brief answers": false,
+    "one-pan / freezer": true,
+    "vegetarian": true,
+    "spicy": true
+   },
+   "stale_present": {
+    "detailed answers still standing": true
+   },
+   "scoped_values": 0,
+   "answer_correct": true,
+   "cost_usd": 0.485,
+   "finished": true
+  },
+  {
+   "scenario": "lena",
+   "expected_present": {
+    "no numbers": true,
+    "gentle check-ins": true,
+    "Mediterranean": true,
+    "cooks for two": true
+   },
+   "stale_present": {
+    "exact numbers still standing": false
+   },
+   "scoped_values": 0,
+   "answer_correct": true,
+   "cost_usd": 0.46,
+   "finished": true
+  },
+  {
+   "scenario": "marisol",
+   "expected_present": {
+    "professional for clients": true,
+    "macros for clients": true,
+    "family stays casual": false
+   },
+   "stale_present": {
+    "no numbers still standing (unscoped)": false
+   },
+   "scoped_values": 0,
+   "answer_correct": true,
+   "cost_usd": 0.447,
+   "finished": true
+  }
+ ]
+}

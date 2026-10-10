@@ -1,0 +1,85 @@
+{
+  "source": "v310_review_r2__004_foodbody-scenarios_marisol_183be56c",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Absolutely — here’s a clean draft for next week’s Tuesday client menu. Macros are estimated per serving.\n\n| Day | Menu | Calories | Protein | Carbs | Fat |\n|---|---|---:|---:|---:|---:|\n| Tue 1 | Lemon herb chicken, roasted baby potatoes, green beans | 520 | 38g | 42g | 18g |\n| Tue 2 | Turkey chili with rice and sweet corn | 560 | 41g | 48g | 19g |\n| Tue 3 | Salmon rice bowl with cucumber, edamame, and sesame dressing | 610 | 36g | 50g | 24g |\n| Tue 4 | Beef bolognese with whole-wheat penne and spinach | 640 | 39g | 58g | 22g |\n| Tue 5 | Teriyaki tofu noodle bowl with broccoli and carrots | 540 | 31g | 56g | 20g |\n\nIf you want, I can turn this into a client-ready version with portion sizes, allergens, or swap options.",
+  "applied": [
+    "P-10.1",
+    "T-10.2"
+  ],
+  "skipped": [
+    "P-1.1",
+    "F-0.1",
+    "F-2.1"
+  ],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "P-10.1",
+      "T-10.2"
+    ],
+    "live": [
+      "P-10.1",
+      "T-10.2"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-10.1"
+    ],
+    "recently_changed": [
+      "P-10.1",
+      "T-10.2"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "client_writing_tone",
+      "current": "professional",
+      "original": "casual_fun",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "The reply is polished and businesslike, with a concise intro, clear table, and client-ready wording."
+    },
+    {
+      "attribute": "client_nutrition_detail",
+      "current": "per_serving_macros_table",
+      "original": "no_numbers",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It gives estimated per-serving macros in a structured table, matching the requested nutrition detail style."
+    },
+    {
+      "attribute": "family_cooking_style",
+      "current": "casual_fun",
+      "changed": false,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "The reply is straightforward but doesn’t במיוחד lean into a casual, fun family-cooking vibe one way or the other."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 0.667,
+  "judge_cost_usd": 0.0075,
+  "reply_cost_usd": 0.01278
+}

@@ -11,8 +11,8 @@ contract. HorizonBench supplies long, dated conversation histories in which
 preferences change after life events. That makes it a sequential testbed for
 whether the layer keeps the user's state current.
 
-**Status:** contract **v3.8**. The layer, instrumentation, and Gemini and OpenAI
-adapters are built and tested offline (186 tests). A model that follows the
+**Status:** contract **v3.10**. The layer, instrumentation, and Gemini and OpenAI
+adapters are built and tested offline (193 tests). A model that follows the
 contract produces zero violations across all 901 events of the HorizonBench sample.
 
 **Real runs so far:**
@@ -72,6 +72,11 @@ contract produces zero violations across all 901 events of the HorizonBench samp
   revision of the style value added to it ("now also…") instead of replacing it. What
   works on 8-event scenarios erodes over 75. See
   [`examples/v38_item6/`](examples/v38_item6).
+- **v3.9–v3.10 on three scenarios, 54 runs (about $15 with vetting).** Reasoning
+  effort didn't matter; run-to-run variance did. A review call after each update,
+  where the agent re-reads its memory and fixes contradictions, cut stale values and
+  raised replies that follow the new preferences from 0.67 to 0.83, at 63% more cost.
+  See [`examples/v310_review_runs/`](examples/v310_review_runs).
 - **Memory judge on that item.** Graded against the ground-truth attributes, v3
   holds 0.38 of the person's current preferences, v2 0.0, and the rolling summary
   0.75. The summary's lead comes from role-play content recorded before the change,
@@ -90,7 +95,7 @@ Requires Python ≥ 3.12 and [uv](https://docs.astral.sh/uv/).
 
 ```bash
 uv sync
-uv run pytest -q                     # 186 tests, offline, no credentials
+uv run pytest -q                     # 193 tests, offline, no credentials
 export GEMINI_API_KEY=...            # for real-model runs (default model: gemini-3.7-flash)
 ```
 
@@ -157,6 +162,10 @@ Other options:
   dimensions (`general` is the default; `with-decisions` adds the decisions file;
   `foodbody` adds profile topics such as diet and allergies).
 - `--max-cost-usd`: pauses once estimated spend reaches the cap (priced models).
+- `--review-step`: after each update, one more short call in which the agent re-reads
+  its memory and fixes contradictions (about 60% more cost; raised reply fit from
+  0.67 to 0.83 on the scenarios).
+- `--no-check-feedback`: don't show the agent the memory checks' open problems.
 - `--answer-strategy dimension-first|default`: how the agent uses memory when it
   answers. `dimension-first` (the default) finds the dimension the candidate
   responses differ on and reads its current value first.
@@ -244,8 +253,8 @@ v2), so it says nothing about the layer.
 
 ## Next steps
 
-1. **Re-derive values from recent evidence** instead of patching the previous value,
-   so a change that arrives gradually over many events replaces the old value.
+1. **Test v3.10 with the review step on the 75-event item**, where values grew by
+   addition; it's the one place the design hasn't held.
 2. **Measure variance:** run each scenario several times per version and compare
    distributions, not single runs.
 3. **Add more neutral-ending scenarios.** They are the only tests so far where replies

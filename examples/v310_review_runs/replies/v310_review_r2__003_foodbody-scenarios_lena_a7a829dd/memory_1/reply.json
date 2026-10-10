@@ -1,0 +1,102 @@
+{
+  "source": "v310_review_r2__003_foodbody-scenarios_lena_a7a829dd",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Absolutely — here’s a simple Mediterranean-leaning grocery plan for the week for you and your partner, kept flexible and low-tracking:\n\n- Produce: lemons, garlic, onions, tomatoes, cucumbers, bell peppers, spinach or greens, zucchini, carrots, berries, apples, fresh herbs\n- Proteins: chicken, salmon or other fish, eggs, Greek yogurt, chickpeas, lentils, feta\n- Carbs/starches: rice or couscous, potatoes, whole-grain bread or pita, pasta\n- Pantry: olive oil, olives, canned tomatoes, broth, tahini, hummus, beans, nuts\n- Extras: avocado, pickles, anything you like for easy mezze-style meals\n\nIf you want, I can turn this into a full day-by-day dinner plan or trim it to a budget.",
+  "applied": [
+    "P-0.2",
+    "P-5.1",
+    "F-0.1",
+    "T-7.1"
+  ],
+  "skipped": [
+    "P-7.1"
+  ],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "P-0.2",
+      "P-5.1",
+      "F-0.1",
+      "T-7.1"
+    ],
+    "live": [
+      "P-0.2",
+      "P-5.1",
+      "F-0.1",
+      "T-7.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-0.2",
+      "P-5.1"
+    ],
+    "recently_changed": [
+      "P-5.1",
+      "T-7.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "nutrition_numbers",
+      "current": "no_numbers",
+      "original": "exact_macros",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It avoids calorie or macro counts and stays low-tracking."
+    },
+    {
+      "attribute": "check_in_style",
+      "current": "gentle_check_ins",
+      "original": "weekly_data_reports",
+      "changed": true,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "This is a grocery-planning reply, not a check-in or report style."
+    },
+    {
+      "attribute": "cuisine",
+      "current": "mediterranean",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It explicitly frames the plan as Mediterranean-leaning."
+    },
+    {
+      "attribute": "household",
+      "current": "cooking_for_two",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It’s written for you and your partner, matching cooking for two."
+    }
+  ],
+  "changed_fit_current": 0.5,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 0.75,
+  "judge_cost_usd": 0.00576,
+  "reply_cost_usd": 0.01025
+}

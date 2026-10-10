@@ -1,0 +1,106 @@
+{
+  "source": "v310_base_r3__003_foodbody-scenarios_lena_a7a829dd",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Absolutely — I can help with that.\n\nHere’s a simple Mediterranean-style weekly grocery plan sized for you and your partner, with protein-forward meals and no grams/calories.\n\n**Easy dinner lineup**\n- Lemon chicken with potatoes and salad\n- Tuna or salmon rice bowls with cucumber, tomato, and feta\n- Turkey meatballs with couscous and roasted vegetables\n- Greek chicken pitas with tzatziki and greens\n- Chickpea + egg shakshuka with bread\n- Leftover night / big salad with grilled protein\n- Omelet or frittata night with vegetables and cheese\n\n**Shopping list**\n**Protein**\n- Chicken breasts or thighs\n- Turkey mince\n- Eggs\n- Canned tuna or salmon\n- Greek yogurt\n- Feta\n- Chickpeas\n\n**Produce**\n- Cucumbers\n- Tomatoes\n- Bell peppers\n- Onions\n- Garlic\n- Lemons\n- Salad greens\n- Spinach\n- Potatoes\n- Fresh herbs if you like them\n\n**Carbs / staples**\n- Rice or couscous\n- Pita or flatbread\n- Bread for shakshuka night\n- Oats if you want easy breakfasts\n\n**Pantry**\n- Olive oil\n- Olives\n- Canned tomatoes\n- Broth\n- Salt, pepper, oregano, cumin, paprika\n\nIf you want, I can turn this into a more exact 7-day meal plan or a one-store shopping list.",
+  "applied": [
+    "P-0.1",
+    "P-0.3",
+    "P-5.1",
+    "F-0.1",
+    "T-7.2"
+  ],
+  "skipped": [
+    "T-7.1"
+  ],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "P-0.1",
+      "P-0.3",
+      "P-5.1",
+      "F-0.1",
+      "T-7.2"
+    ],
+    "live": [
+      "P-0.1",
+      "P-0.3",
+      "P-5.1",
+      "F-0.1",
+      "T-7.2"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-0.1",
+      "P-0.3",
+      "P-5.1"
+    ],
+    "recently_changed": [
+      "P-5.1",
+      "T-7.2"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "nutrition_numbers",
+      "current": "no_numbers",
+      "original": "exact_macros",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It avoids exact macro counts and says there are no grams/calories, matching the no-numbers style."
+    },
+    {
+      "attribute": "check_in_style",
+      "current": "gentle_check_ins",
+      "original": "weekly_data_reports",
+      "changed": true,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "The reply is a grocery plan and offers follow-up options, but it does not do any check-in style messaging."
+    },
+    {
+      "attribute": "cuisine",
+      "current": "mediterranean",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It explicitly frames the plan as Mediterranean-style and includes Mediterranean ingredients and meals."
+    },
+    {
+      "attribute": "household",
+      "current": "cooking_for_two",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It sizes the plan for 'you and your partner,' which matches cooking for two."
+    }
+  ],
+  "changed_fit_current": 0.5,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 0.75,
+  "judge_cost_usd": 0.0062,
+  "reply_cost_usd": 0.01393
+}

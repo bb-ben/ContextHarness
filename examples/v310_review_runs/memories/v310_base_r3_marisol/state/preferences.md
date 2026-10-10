@@ -1,0 +1,8 @@
+# Preferences
+- P-0.1 | superseded | 2025-01-06 | topic: output-style | scope: family-dinner-ideas | review: 2025-01-20 | basis: O-0.1, O-0.2 | until: 2025-01-12 | superseded_by: P-1.1 | Wants family-dinner-ideas replies fun, emoji-friendly, and free of nutrition details.
+- P-1.1 | retracted | 2025-01-12 | topic: output-style | basis: O-0.1, O-0.2, O-1.1 | supersedes: P-0.1 | changed: promoted too soon from one behavior event, not a confirmed preference | Wants replies fun and emoji-friendly.
+- P-2.1 | current | 2025-01-19 | topic: output-style | confirmed: 2025-02-10 | basis: O-0.1, O-0.2, O-1.1, O-2.1, O-5.1, O-8.1 | Wants replies fun and emoji-friendly.
+- P-6.1 | superseded | 2025-02-17 | topic: output-style | scope: client-menus | basis: O-4.1, O-6.1 | until: 2025-02-24 | superseded_by: P-7.1 | Wants client menus to sound professional and include calories and protein per serving.
+- P-7.1 | superseded | 2025-02-24 | topic: output-style | scope: client-menus | basis: O-4.1, O-6.1, O-7.1 | supersedes: P-6.1 | changed: no emojis for client-facing menus now too | until: 2025-03-10 | superseded_by: P-9.1 | Wants client menus to sound professional, include calories and protein per serving, and avoid emojis.
+- P-9.1 | current | 2025-03-10 | topic: output-style | scope: client-menus | basis: O-4.1, O-6.1, O-7.1, O-9.1 | supersedes: P-7.1 | changed: now wants macros for swaps too, not just calories and protein per serving | Wants client menus to sound professional, include macros for swaps, and avoid emojis.
+- P-10.1 | current | 2025-03-17 | topic: help-format | scope: client-facing | basis: O-7.2, O-10.1 | Wants client-facing work laid out in clean macro tables.

@@ -1,0 +1,2 @@
+# Hypotheses
+- H-4.1 | confirmed | 2025-07-01 | confidence: low | for: O-4.1, O-4.2, O-5.1, O-5.2 | topic: constraints | resolved_into: P-5.1 | The newborn may mean they need extra-low-effort help for a while.

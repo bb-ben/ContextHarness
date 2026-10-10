@@ -1,0 +1,114 @@
+{
+  "source": "v310_review_r1__002_foodbody-scenarios_dani_cd5a822e",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Yep — mostly one-pan:\n- chickpea tikka skillet\n- spicy peanut tofu noodles\n- fajita rice bowls with peppers/onions\n- harissa cauliflower + chickpeas\n- coconut red lentil curry with spinach",
+  "applied": [
+    "P-5.1",
+    "P-7.1",
+    "P-1.1",
+    "F-1.1",
+    "F-4.1",
+    "T-7.1",
+    "H-6.1"
+  ],
+  "skipped": [
+    "P-0.1",
+    "H-4.1",
+    "H-6.2"
+  ],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "P-5.1",
+      "P-7.1",
+      "P-1.1",
+      "F-1.1",
+      "F-4.1",
+      "T-7.1",
+      "H-6.1"
+    ],
+    "live": [
+      "P-5.1",
+      "P-7.1",
+      "P-1.1",
+      "F-1.1",
+      "F-4.1",
+      "T-7.1",
+      "H-6.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-5.1",
+      "P-7.1",
+      "P-1.1"
+    ],
+    "recently_changed": [
+      "P-5.1",
+      "T-7.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "answer_length",
+      "current": "very_brief",
+      "original": "detailed_explanations",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Very short list of ideas with no extra explanation."
+    },
+    {
+      "attribute": "cooking_style",
+      "current": "one_pan_freezer_friendly",
+      "original": "elaborate_weekend_projects",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It explicitly leans into one-pan, quick dinner ideas rather than elaborate projects."
+    },
+    {
+      "attribute": "diet",
+      "current": "vegetarian",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "All the suggestions are vegetarian."
+    },
+    {
+      "attribute": "spice",
+      "current": "loves_spicy",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Several options are clearly spicy or spice-forward, like tikka, harissa, fajita, and spicy peanut noodles."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 1.0,
+  "judge_cost_usd": 0.00634,
+  "reply_cost_usd": 0.00519
+}

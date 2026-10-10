@@ -1,0 +1,95 @@
+{
+  "source": "v310_review_r3__004_foodbody-scenarios_marisol_183be56c",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Absolutely — here’s a clean draft for next Tuesday’s client menu.\n\n| Meal | Description | Protein | Carbs | Fat | Calories |\n|---|---|---:|---:|---:|---:|\n| Lemon Herb Chicken Bowl | Grilled chicken, roasted potatoes, green beans, lemon herb pan sauce | 38g | 34g | 14g | 430 |\n| Turkey Meatball Marinara | Turkey meatballs, whole-wheat pasta, zucchini, light marinara | 36g | 42g | 12g | 445 |\n| Salmon Rice Plate | Roasted salmon, jasmine rice, broccoli, sesame-ginger glaze | 34g | 40g | 16g | 470 |\n| Chickpea Coconut Curry | Chickpeas, basmati rice, spinach, cauliflower, mild coconut curry | 22g | 48g | 15g | 410 |\n\nIf you want, I can turn this into a higher-protein version, vegetarian version, or match a specific calorie target per meal.",
+  "applied": [
+    "F-3.1",
+    "P-1.1",
+    "P-7.3",
+    "P-9.1",
+    "P-10.1"
+  ],
+  "skipped": [
+    "F-5.1"
+  ],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "F-3.1",
+      "P-1.1",
+      "P-7.3",
+      "P-9.1",
+      "P-10.1"
+    ],
+    "live": [
+      "F-3.1",
+      "P-1.1",
+      "P-7.3",
+      "P-9.1",
+      "P-10.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-1.1",
+      "P-7.3",
+      "P-9.1",
+      "P-10.1"
+    ],
+    "recently_changed": [
+      "P-7.3",
+      "P-9.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "client_writing_tone",
+      "current": "professional",
+      "original": "casual_fun",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "The reply is polished and businesslike, matching a professional tone."
+    },
+    {
+      "attribute": "client_nutrition_detail",
+      "current": "per_serving_macros_table",
+      "original": "no_numbers",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It uses a per-meal macros table with protein, carbs, fat, and calories."
+    },
+    {
+      "attribute": "family_cooking_style",
+      "current": "casual_fun",
+      "changed": false,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "It’s a straightforward client menu draft and doesn’t really signal a casual-fun family cooking style either way."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 0.667,
+  "judge_cost_usd": 0.00801,
+  "reply_cost_usd": 0.01274
+}

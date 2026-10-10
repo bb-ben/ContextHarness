@@ -1,0 +1,98 @@
+{
+  "source": "v310_base_r2__003_foodbody-scenarios_lena_a7a829dd",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Absolutely — here’s a calm, Mediterranean-style grocery list for the week for you and your partner, kept non-numeric:\n\n**Produce**\n- Salad greens\n- Cucumbers\n- Tomatoes\n- Bell peppers\n- Zucchini\n- Eggplant\n- Carrots\n- Onions\n- Garlic\n- Lemons\n- Fresh herbs like parsley, basil, dill, or mint\n- A few fruits for snacks and breakfast, like berries, apples, oranges, or grapes\n\n**Proteins**\n- Chicken or turkey\n- Fish, especially salmon, tuna, or white fish\n- Eggs\n- Greek yogurt\n- Chickpeas or lentils\n- Feta or halloumi, if you like them\n\n**Carbs and pantry**\n- Rice or couscous\n- Pasta\n- Potatoes\n- Bread or wraps\n- Olive oil\n- Olives\n- Capers\n- Canned tomatoes\n- Beans\n- Broth\n- Tahini\n\n**Easy flavor builders**\n- Cumin\n- Oregano\n- Paprika\n- Black pepper\n- Red pepper flakes\n- Vinegar\n\nIf you want, I can also turn this into a simple meal plan for the week using only these ingredients.",
+  "applied": [
+    "P-5.1",
+    "F-0.1",
+    "T-7.1"
+  ],
+  "skipped": [
+    "P-7.1"
+  ],
+  "accounted_for_all": true,
+  "steps": 2,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "P-5.1",
+      "F-0.1",
+      "T-7.1"
+    ],
+    "live": [
+      "P-5.1",
+      "F-0.1",
+      "T-7.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-5.1"
+    ],
+    "recently_changed": [
+      "P-5.1",
+      "T-7.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "nutrition_numbers",
+      "current": "no_numbers",
+      "original": "exact_macros",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It explicitly keeps things non-numeric, matching the no-numbers preference."
+    },
+    {
+      "attribute": "check_in_style",
+      "current": "gentle_check_ins",
+      "original": "weekly_data_reports",
+      "changed": true,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "It doesn’t really do any check-in style, gentle or data-reporting; it just provides a grocery list."
+    },
+    {
+      "attribute": "cuisine",
+      "current": "mediterranean",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "The list is clearly framed as Mediterranean-style and uses Mediterranean staples."
+    },
+    {
+      "attribute": "household",
+      "current": "cooking_for_two",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It’s written for “you and your partner,” which matches cooking for two."
+    }
+  ],
+  "changed_fit_current": 0.5,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 0.75,
+  "judge_cost_usd": 0.00525,
+  "reply_cost_usd": 0.0109
+}

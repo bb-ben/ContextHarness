@@ -1,0 +1,104 @@
+{
+  "source": "v310_review_r2__002_foodbody-scenarios_dani_cd5a822e",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Absolutely—here are a few vegetarian, spicy, low-effort dinners for this week:\n\n- Chickpea curry with rice\n- Tofu stir-fry with frozen veg and chili crisp\n- Black bean tacos with salsa and avocado\n- Pasta with marinara, spinach, and white beans\n- Veggie fried rice with egg and gochujang",
+  "applied": [
+    "F-1.1",
+    "P-1.1",
+    "P-6.1",
+    "P-6.2"
+  ],
+  "skipped": [
+    "P-0.1",
+    "P-0.2",
+    "F-4.1"
+  ],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "F-1.1",
+      "P-1.1",
+      "P-6.1",
+      "P-6.2"
+    ],
+    "live": [
+      "F-1.1",
+      "P-1.1",
+      "P-6.1",
+      "P-6.2"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-1.1",
+      "P-6.1",
+      "P-6.2"
+    ],
+    "recently_changed": [
+      "P-6.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "answer_length",
+      "current": "very_brief",
+      "original": "detailed_explanations",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Short list of dinner ideas, matching a very brief response."
+    },
+    {
+      "attribute": "cooking_style",
+      "current": "one_pan_freezer_friendly",
+      "original": "elaborate_weekend_projects",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "neutral"
+      ],
+      "reason": "Leans toward simple weeknight meals with some one-pan and frozen-ingredient options rather than elaborate projects."
+    },
+    {
+      "attribute": "diet",
+      "current": "vegetarian",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "All the suggestions are vegetarian."
+    },
+    {
+      "attribute": "spice",
+      "current": "loves_spicy",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Includes multiple spicy cues like chili crisp, salsa, and gochujang."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 1.0,
+  "judge_cost_usd": 0.00739,
+  "reply_cost_usd": 0.00512
+}

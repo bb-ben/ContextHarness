@@ -1,0 +1,103 @@
+{
+  "source": "v310_review_r1__003_foodbody-scenarios_lena_a7a829dd",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Absolutely — here’s a simple, Mediterranean-leaning grocery list for the week, built to keep meals easy and protein-friendly without any tracking numbers:\n\n**Protein**\n- Chicken or turkey\n- Eggs\n- Greek yogurt\n- Cottage cheese or skyr\n- Canned tuna or salmon\n- Chickpeas or lentils\n- Tofu, if you like it\n\n**Veg + fruit**\n- Salad greens\n- Cucumbers\n- Tomatoes\n- Bell peppers\n- Zucchini\n- Onions\n- Garlic\n- Lemons\n- Berries\n- Apples or oranges\n\n**Carbs + staples**\n- Rice or quinoa\n- Potatoes or sweet potatoes\n- Pasta\n- Pita or wraps\n- Oats\n- Beans\n\n**Mediterranean extras**\n- Olive oil\n- Feta\n- Hummus\n- Olives\n- Nuts\n- Jarred roasted peppers\n- Salsa or tomato sauce\n- Herbs and spices you like\n\nIf you want, I can turn this into a few easy dinners for the week too.",
+  "applied": [
+    "F-0.1",
+    "P-0.2",
+    "P-5.1",
+    "T-7.1",
+    "G-0.1"
+  ],
+  "skipped": [],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "F-0.1",
+      "P-0.2",
+      "P-5.1",
+      "T-7.1",
+      "G-0.1"
+    ],
+    "live": [
+      "F-0.1",
+      "P-0.2",
+      "P-5.1",
+      "T-7.1",
+      "G-0.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-0.2",
+      "P-5.1"
+    ],
+    "recently_changed": [
+      "P-5.1",
+      "T-7.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "nutrition_numbers",
+      "current": "no_numbers",
+      "original": "exact_macros",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Uses no tracking numbers and explicitly avoids numeric macros."
+    },
+    {
+      "attribute": "check_in_style",
+      "current": "gentle_check_ins",
+      "original": "weekly_data_reports",
+      "changed": true,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "It’s just a grocery list, with no real check-in cadence or reporting style."
+    },
+    {
+      "attribute": "cuisine",
+      "current": "mediterranean",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "The list is clearly Mediterranean-leaning with olive oil, feta, hummus, olives, and similar staples."
+    },
+    {
+      "attribute": "household",
+      "current": "cooking_for_two",
+      "changed": false,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "No clear tailoring to cooking for two; it’s a generic grocery list."
+    }
+  ],
+  "changed_fit_current": 0.5,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 0.5,
+  "judge_cost_usd": 0.00692,
+  "reply_cost_usd": 0.00773
+}

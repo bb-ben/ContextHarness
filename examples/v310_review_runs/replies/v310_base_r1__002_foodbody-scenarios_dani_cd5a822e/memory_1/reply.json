@@ -1,0 +1,103 @@
+{
+  "source": "v310_base_r1__002_foodbody-scenarios_dani_cd5a822e",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Absolutely — I’d lean toward vegetarian, weeknight-friendly dinners with built-in heat, and I’ll keep the “why it works” with each one:\n\n1. **Chili crisp tofu rice bowls**\n   - Crisp tofu, broccoli, and scallions over rice, then finish with chili crisp and a soy-lime sauce.\n   - Why it works: high-protein, fast, and the crunchy/spicy topping carries the whole bowl.\n\n2. **Coconut chickpea curry with spinach**\n   - Chickpeas, curry paste, coconut milk, and a big handful of spinach; serve with rice or naan.\n   - Why it works: pantry-friendly, very forgiving, and the fat in coconut milk rounds out the heat.\n\n3. **Gochujang eggplant or tofu stir-fry**\n   - Stir-fry eggplant, tofu, or both with garlic, ginger, and gochujang.\n   - Why it works: gochujang brings sweetness, funk, and heat, so you get depth without much effort.\n\n4. **Spicy black bean sweet potato tacos**\n   - Roast sweet potato, warm black beans with cumin/chili powder, then top with salsa and lime yogurt.\n   - Why it works: sweet + smoky + spicy is a strong combo, and it reheats well.\n\n5. **Miso peanut noodles with cucumber**\n   - Toss noodles with a peanut-miso-chili sauce, then add cucumber and edamame or tofu.\n   - Why it works: one sauce does most of the work, and the cold crunch balances the heat.\n\nIf you want, I can turn these into a **full 5-night plan** with a short grocery list.",
+  "applied": [
+    "F-1.1",
+    "F-4.1",
+    "P-0.1",
+    "P-0.2",
+    "P-1.1"
+  ],
+  "skipped": [
+    "P-6.1"
+  ],
+  "accounted_for_all": true,
+  "steps": 2,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "F-1.1",
+      "F-4.1",
+      "P-0.1",
+      "P-0.2",
+      "P-1.1"
+    ],
+    "live": [
+      "F-1.1",
+      "F-4.1",
+      "P-0.1",
+      "P-0.2",
+      "P-1.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-0.1",
+      "P-0.2",
+      "P-1.1"
+    ],
+    "recently_changed": []
+  },
+  "attributes": [
+    {
+      "attribute": "answer_length",
+      "current": "very_brief",
+      "original": "detailed_explanations",
+      "changed": true,
+      "fit": "original",
+      "votes": [
+        "original",
+        "original",
+        "original"
+      ],
+      "reason": "It gives several options with mini-explanations, matching a more detailed style rather than very brief."
+    },
+    {
+      "attribute": "cooking_style",
+      "current": "one_pan_freezer_friendly",
+      "original": "elaborate_weekend_projects",
+      "changed": true,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "The ideas are weeknight-friendly, but it does not clearly focus on one-pan or freezer-friendly cooking."
+    },
+    {
+      "attribute": "diet",
+      "current": "vegetarian",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "All the suggestions are vegetarian, with tofu, chickpeas, beans, eggplant, and noodles."
+    },
+    {
+      "attribute": "spice",
+      "current": "loves_spicy",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It repeatedly leans into heat with chili crisp, curry paste, gochujang, chili powder, and other spicy flavors."
+    }
+  ],
+  "changed_fit_current": 0.0,
+  "changed_fit_original": 0.5,
+  "all_fit_current": 0.5,
+  "judge_cost_usd": 0.01206,
+  "reply_cost_usd": 0.0189
+}

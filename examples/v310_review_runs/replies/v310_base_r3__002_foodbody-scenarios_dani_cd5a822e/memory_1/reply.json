@@ -1,0 +1,103 @@
+{
+  "source": "v310_base_r3__002_foodbody-scenarios_dani_cd5a822e",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Absolutely — here are a few vegetarian, spicy, low-effort weeknight options that fit the one-pan/easy lane:\n\n- Chili crisp tofu + broccoli + rice\n- Sheet-pan gnocchi with zucchini, peppers, and chickpeas\n- Spicy peanut noodles with edamame and scallions\n- One-pan chickpea fajita bowls\n- Coconut red curry with tofu and veggies\n\nIf you want, I can turn this into a 5-night plan with a grocery list.",
+  "applied": [
+    "F-1.1",
+    "F-4.1",
+    "P-1.1",
+    "P-7.1"
+  ],
+  "skipped": [
+    "P-0.1",
+    "P-0.2",
+    "P-6.1"
+  ],
+  "accounted_for_all": true,
+  "steps": 2,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "F-1.1",
+      "F-4.1",
+      "P-1.1",
+      "P-7.1"
+    ],
+    "live": [
+      "F-1.1",
+      "F-4.1",
+      "P-1.1",
+      "P-7.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-1.1",
+      "P-7.1"
+    ],
+    "recently_changed": [
+      "P-7.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "answer_length",
+      "current": "very_brief",
+      "original": "detailed_explanations",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It stays concise and list-like, with no detailed explanations."
+    },
+    {
+      "attribute": "cooking_style",
+      "current": "one_pan_freezer_friendly",
+      "original": "elaborate_weekend_projects",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It suggests quick, one-pan/easy weeknight meals rather than elaborate projects."
+    },
+    {
+      "attribute": "diet",
+      "current": "vegetarian",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "All the ideas are vegetarian, including tofu, chickpeas, and veggies."
+    },
+    {
+      "attribute": "spice",
+      "current": "loves_spicy",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It explicitly includes spicy options like chili crisp, spicy peanut noodles, and red curry."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 1.0,
+  "judge_cost_usd": 0.00827,
+  "reply_cost_usd": 0.02106
+}

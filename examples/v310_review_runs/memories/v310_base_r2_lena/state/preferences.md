@@ -1,0 +1,4 @@
+# Preferences
+- P-0.1 | superseded | 2025-03-03 | scope: meal-plans | topic: meal-plan-specs | confirmed: 2025-03-16 | new_dimension: Meal-plan requests need both cuisine style and exact gram detail. | basis: O-0.1, O-0.2, O-2.1 | until: 2025-04-08 | superseded_by: P-5.1 | Wants Mediterranean-style meal plans with exact grams per meal.
+- P-5.1 | current | 2025-04-08 | scope: meal-plans | topic: meal-plan-specs | basis: O-4.2, O-5.1, O-6.1 | confirmed: 2025-04-15 | supersedes: P-0.1 | changed: no exact grams or calorie counts now | Wants Mediterranean-style meal plans without grams or calories.
+- P-7.1 | current | 2025-04-22 | topic: help-format | review: 2025-04-29 | basis: O-1.1, O-3.1, O-7.1 | Wants gentle check-ins about eating instead of weekly reports.

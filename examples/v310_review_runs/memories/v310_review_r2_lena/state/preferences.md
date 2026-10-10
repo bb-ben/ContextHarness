@@ -1,0 +1,6 @@
+# Preferences
+- P-0.1 | superseded | 2025-03-03 | topic: numeric-specificity | basis: O-0.2, O-2.1, O-2.3 | confirmed: 2025-03-16 | new_dimension: exact quantities matter more than approximate portions | until: 2025-04-08 | superseded_by: P-5.1 | Wants exact gram amounts for every meal in meal plans.
+- P-0.2 | current | 2025-03-03 | topic: cuisine-style | basis: O-0.3, O-2.2, O-6.1 | confirmed: 2025-03-16 | new_dimension: meal-plan cuisine preference wasn't covered by existing dimensions | Wants Mediterranean-style meal plans.
+- P-3.1 | superseded | 2025-03-23 | topic: help-format | basis: O-1.1, O-3.1 | confirmed: 2025-03-23 | until: 2025-04-22 | superseded_by: P-7.1 | Wants weekly reports broken down by day.
+- P-5.1 | current | 2025-04-08 | topic: numeric-specificity | basis: O-5.1, O-6.2 | confirmed: 2025-04-15 | supersedes: P-0.1 | changed: no longer wants exact quantities; grams and calories are now omitted | Wants meal plans without grams or calories.
+- P-7.1 | current | 2025-04-22 | topic: help-format | basis: O-7.1 | supersedes: P-3.1 | changed: no longer wants weekly/day reports; wants gentle check-ins about how eating's going | Wants gentle check-ins about how eating's going instead of weekly reports.

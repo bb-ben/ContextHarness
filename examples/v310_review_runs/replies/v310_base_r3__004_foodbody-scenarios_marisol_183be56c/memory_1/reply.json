@@ -1,0 +1,83 @@
+{
+  "source": "v310_base_r3__004_foodbody-scenarios_marisol_183be56c",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Absolutely — here’s a clean draft for next week’s Tuesday client menu.\n\n### Next Week’s Menu\n\n| Day | Menu | Macros per serving |\n|---|---|---:|\n| Monday | Lemon-herb chicken, brown rice, roasted zucchini, and peppers | 540 kcal | 42g protein | 48g carbs | 18g fat |\n| Tuesday | Turkey chili with sweet potato and steamed broccoli | 510 kcal | 40g protein | 44g carbs | 17g fat |\n| Wednesday | Salmon quinoa salad with cucumber, tomato, and lemon vinaigrette | 560 kcal | 38g protein | 35g carbs | 28g fat |\n| Thursday | Beef stir-fry with jasmine rice and mixed vegetables | 590 kcal | 41g protein | 50g carbs | 22g fat |\n| Friday | Mediterranean veggie pasta with grilled chicken | 530 kcal | 39g protein | 46g carbs | 18g fat |\n\n### Swap Options\n\n| Swap | Updated macros per serving |\n|---|---:|\n| Brown rice to cauliflower rice | 420 kcal | 42g protein | 20g carbs | 18g fat |\n| Jasmine rice to cauliflower rice | 450 kcal | 41g protein | 22g carbs | 22g fat |\n| Pasta to zucchini noodles | 390 kcal | 39g protein | 20g carbs | 16g fat |\n\nIf you want, I can also turn this into a more client-ready version with a title, short intro, and a shopping-list-style layout.",
+  "applied": [
+    "P-9.1",
+    "P-10.1"
+  ],
+  "skipped": [
+    "P-2.1"
+  ],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "P-9.1",
+      "P-10.1"
+    ],
+    "live": [
+      "P-9.1",
+      "P-10.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-9.1",
+      "P-10.1"
+    ],
+    "recently_changed": [
+      "P-9.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "client_writing_tone",
+      "current": "professional",
+      "original": "casual_fun",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "The reply is polished and businesslike, with a straightforward draft and structured tables."
+    },
+    {
+      "attribute": "client_nutrition_detail",
+      "current": "per_serving_macros_table",
+      "original": "no_numbers",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It gives per-serving macro tables with calories, protein, carbs, and fat, matching the requested detail level."
+    },
+    {
+      "attribute": "family_cooking_style",
+      "current": "casual_fun",
+      "changed": false,
+      "fit": "neutral",
+      "votes": [
+        "other",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "The style is formal and client-facing rather than casual and fun."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 0.667,
+  "judge_cost_usd": 0.00712,
+  "reply_cost_usd": 0.01231
+}
