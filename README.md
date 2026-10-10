@@ -29,6 +29,10 @@ contract produces zero violations across all 901 events of the HorizonBench samp
   because the answering step leaned on the top of `context.md` rather than the
   revised value; see
   [`examples/real_run_v3_openai/`](examples/real_run_v3_openai).
+- **Baselines on that item ($0.44)** are wrong too: the full history in one call
+  answered D B B, recent history B B B, and the rolling summary A. The item is hard
+  for this model whatever memory it gets; see
+  [`examples/baselines_item0/`](examples/baselines_item0).
 
 | Read | For |
 |---|---|

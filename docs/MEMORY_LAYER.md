@@ -198,6 +198,22 @@ on each saved memory, about $0.002 each; see
   runs, 3 of 26 (v2) and 4 of 23 (v3) stated observations never reached any state
   entry or hypothesis.
 
+**Baselines on the same item and model** ($0.44; see
+[`examples/baselines_item0/`](../examples/baselines_item0)):
+
+| Method | Answers |
+|---|---|
+| Full history, all 29 sessions in one call (81K tokens) | D B B |
+| Recent history (the newest sessions that fit the answer budget) | B B B |
+| Rolling summary | A |
+
+**No method gets this item right.** Even with the whole history in front of it,
+gpt-5.4-mini answers the way our memory does (mostly B, once the trap D). So the
+layer is not losing something the raw history keeps. The item is hard for this model,
+or its label hinges on a distinction the history barely supports. Twenty-nine
+answers on one item can't separate those, which is why the next evaluation spans
+several items and grades memory directly.
+
 ### v3 → v3.1: apply what the person says
 
 | Problem in the v3 run | Change |
