@@ -22,7 +22,7 @@ from . import __version__
 from .checks import EventInfo, MemoryMonitor
 from .dataset import item_slug
 from .entries import parse_workspace
-from .evaluation import aggregate, evidence_chain, evolution_diagnostics, reference_heuristics, score
+from .evaluation import aggregate, evidence_chain, evolution_diagnostics, reference_heuristics, score, utilization
 from .hb_compat import HB_COMMIT
 from .methods import MethodConfig, MethodContext, make_method
 from .models.base import ModelAdapter, ModelSettings, PauseRun
@@ -178,14 +178,16 @@ def run_item(item: BenchmarkItem, model: ModelAdapter, item_dir: Path, cfg: RunC
         target = item_dir / "snapshots" / "final" / path
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(content)
-    memory_summary = chain = None
+    memory_summary = chain = used = None
     if monitor:
         report = monitor.report()
         (item_dir / "memory_report.json").write_text(json.dumps(report, indent=1, ensure_ascii=False))
         memory_summary = {k: report[k] for k in ("events", "violations_by_code", "events_with_violations",
                                                   "events_with_new_violations", "unresolved_at_end",
                                                   "access_totals", "final_metrics")}
-        chain = evidence_chain(item.gold, session_log, parse_workspace(snapshot, cfg.method_config.layout))
+        parsed_final = parse_workspace(snapshot, cfg.method_config.layout)
+        chain = evidence_chain(item.gold, session_log, parsed_final)
+        used = utilization(answer.details.get("applied", []), parsed_final)
     scored = score(answer, item.gold)
     result = {
         "item_index": item.index,
@@ -205,6 +207,7 @@ def run_item(item: BenchmarkItem, model: ModelAdapter, item_dir: Path, cfg: RunC
         },
         "ordering": asdict(item.ordering),
         "answer_details": answer.details,
+        "utilization": used,
         "reference_heuristics": reference_heuristics(episode.question, item.gold),
         "latency_s": round(latency, 3),
         "stats": stats.to_dict(),

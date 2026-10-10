@@ -261,6 +261,72 @@ def cmd_vet_items(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_respond_eval(args: argparse.Namespace) -> int:
+    """Write a reply to each item's final conversation under several memory conditions; judge each."""
+    from .entries import parse_workspace
+    from .evaluation import utilization
+    from .models.base import PauseRun
+    from .models.pricing import cost_usd
+    from .replay import find_snapshot, load_source_item
+    from .respond import (full_history_text, judge_response, respond_with_agent, respond_with_text, snapshot_kind,
+                          write)
+
+    def adapter(effort: str):
+        m = make_model(ModelSettings(model=args.model, max_tokens=args.max_tokens,
+                                     effort=None if effort == "none" else effort, timeout_s=args.timeout))
+        return CostCap(m, args.max_cost_usd) if args.max_cost_usd is not None else m
+
+    responder, judge = adapter(args.effort), adapter(args.judge_effort)
+    conditions = args.condition or ["memory", "none"]
+    run_dir = Path(args.out) / (args.run_name or f"{time.strftime('%Y%m%d-%H%M%S')}_respond")
+    spent, rows = 0.0, []
+    try:
+        for source in map(Path, args.sources):
+            item, snapshot = load_source_item(source), find_snapshot(source)
+            kind = snapshot_kind(snapshot)
+            label = f"{source.parent.parent.name}__{source.name}" if source.parent.name == "items" else source.name
+            cfg = RunConfig("agent", responder.settings, MethodConfig(layout=LAYOUTS[args.layout]), {}, False)
+            for condition in conditions:
+                for k in range(1, args.repeats + 1):
+                    if args.max_cost_usd is not None and spent >= args.max_cost_usd:
+                        raise PauseRun(f"cost cap ${args.max_cost_usd:.2f} reached")
+                    out = run_dir / label / f"{condition}_{k}"
+                    if condition == "memory" and kind == "agent":
+                        reply = respond_with_agent(item, snapshot, responder, cfg, out)
+                        used = utilization(reply["applied"], parse_workspace(
+                            {p: (snapshot / p).read_text() for p in cfg.method_config.layout.paths
+                             if (snapshot / p).exists()}, cfg.method_config.layout))
+                    elif condition == "memory" and kind == "summary":
+                        reply, used = respond_with_text(item, (snapshot / "summary.md").read_text(), "a rolling summary",
+                                                        responder, out), None
+                    elif condition == "full-history":
+                        reply, used = respond_with_text(item, full_history_text(item), "every earlier conversation",
+                                                        responder, out), None
+                    else:
+                        reply, used = respond_with_text(item, None, "", responder, out), None
+                    reply_cost = cost_usd(reply.pop("usage"), args.model) or 0.0
+                    grade = judge_response(judge, item.gold, item, reply["text"] or "", args.judge_repeats)
+                    spent += reply_cost + grade["judge_cost_usd"]
+                    row = {"source": label, "memory_kind": kind if condition == "memory" else condition,
+                           "condition": condition, "repeat": k, **reply, "utilization": used, **grade,
+                           "reply_cost_usd": round(reply_cost, 5)}
+                    write(out / "reply.json", row)
+                    rows.append(row)
+                    used_note = (f"; rests on {len(used['live'])} live, {len(used['closed'])} replaced entries"
+                                 if used else "")
+                    print(f"{label[:44]:<44} {condition:<13} #{k}: changed attributes fit now "
+                          f"{grade['changed_fit_current']}, fit before {grade['changed_fit_original']}{used_note}")
+    except PauseRun as e:
+        print(f"Stopped: {e}")
+    run_dir.mkdir(parents=True, exist_ok=True)
+    write(run_dir / "summary.json", {"model": args.model, "rows": [
+        {k: r[k] for k in ("source", "condition", "memory_kind", "repeat", "changed_fit_current",
+                           "changed_fit_original", "all_fit_current", "utilization")} for r in rows],
+        "estimated_cost_usd": round(spent, 4)})
+    print(f"\nEstimated cost ${spent:.3f}; replies and grades in {run_dir}")
+    return 0
+
+
 def _short(text: str, n: int) -> str:
     return text if len(text) <= n else text[: n - 1] + "…"
 
@@ -410,6 +476,24 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--max-cost-usd", type=float)
     p.add_argument("--out", help="Directory for judgements (default: memory_judgement.json in each item)")
     p.set_defaults(func=cmd_judge_memory)
+
+    p = sub.add_parser("respond-eval", help="Write replies from saved memory under several conditions; judge them")
+    p.add_argument("sources", nargs="+", help="Finished items: runs/<run>/items/<item> or examples/<run>")
+    p.add_argument("--condition", action="append", choices=["memory", "full-history", "none"],
+                   help="Repeatable; default: memory and none. 'memory' is the source's own memory "
+                        "(the agent's workspace or a summary)")
+    p.add_argument("--repeats", type=int, default=1, help="Replies per condition")
+    p.add_argument("--judge-repeats", type=int, default=3, help="Judgings per reply; the majority fit is kept")
+    p.add_argument("--model", default="gpt-5.4-mini")
+    p.add_argument("--effort", default="medium", choices=["minimal", "low", "medium", "high", "xhigh", "max", "none"])
+    p.add_argument("--judge-effort", default="high", choices=["minimal", "low", "medium", "high", "xhigh", "max", "none"])
+    p.add_argument("--layout", choices=sorted(LAYOUTS), default="general")
+    p.add_argument("--max-tokens", type=int, default=16000)
+    p.add_argument("--timeout", type=float, default=300.0)
+    p.add_argument("--max-cost-usd", type=float)
+    p.add_argument("--out", default="runs")
+    p.add_argument("--run-name")
+    p.set_defaults(func=cmd_respond_eval)
 
     p = sub.add_parser("vet-items", help="Check that each labeled preference change shows up in the sessions")
     _add_dataset_args(p)

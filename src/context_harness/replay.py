@@ -14,7 +14,8 @@ from pathlib import Path
 from typing import Any
 
 from .dataset import load_items
-from .evaluation import score
+from .entries import parse_workspace
+from .evaluation import score, utilization
 from .methods.agent import WorkspaceAgent
 from .methods.base import MethodContext
 from .models.base import ModelAdapter
@@ -73,6 +74,8 @@ def replay_answer(item: BenchmarkItem, snapshot: Path, model: ModelAdapter, cfg:
         **scored,
         "gold": {"correct_letter": item.gold.correct_letter, "distractor_letter": item.gold.distractor_letter},
         "answer_details": answer.details,
+        "utilization": utilization(answer.details.get("applied", []),
+                                   parse_workspace({p: ws.read(p) for p in layout.paths}, layout)),
         "stats": trace.stats.to_dict(),
         "estimated_cost_usd": cost_usd(trace.stats.usage, cfg.settings.model),
         "latency_s": round(latency, 2),

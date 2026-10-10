@@ -9,7 +9,7 @@ from typing import Any
 from .. import prompts
 from ..dimensions import HYPOTHESES_FILE, PREFERENCES_FILE, dimension_rows, render_dimensions
 from ..entries import Entry, parse_file
-from ..tools import Finish, ReadBudget, SubmitAnswer, ToolExecutor, workspace_tools
+from ..tools import Finish, ReadBudget, Respond, SubmitAnswer, ToolExecutor, workspace_tools
 from ..types import AnswerResult, Event, Probe, Question, Session
 from ..checks import goal_end
 from ..workspace import (ARCHIVE_FILE, CONTEXT_FILE, EPISODES_FILE, GOALS_FILE, TRANSIENT_FILE, FileChange, Workspace,
@@ -136,6 +136,32 @@ class WorkspaceAgent:
             stop_when=lambda: self.finish.called,
         )
         self.ctx.trace.emit("update_loop_end", event_id=event.event_id, stop=outcome.stop, steps=outcome.steps)
+
+    def respond(self, probe: Probe, probe_event_id: str) -> dict:
+        """Write a reply to the probe conversation from memory (the generated-response evaluation)."""
+        self._phase, self._event_id = "respond", probe_event_id
+        cfg = self.ctx.config
+        always = sum(len(block) for block in self._render_state(""))
+        budget = ReadBudget(max(0, cfg.answer_budget_chars - always))
+        reply = Respond()
+        executor = ToolExecutor(workspace_tools(self.ws, writable=False, read_budget=budget) + [reply], self.ctx.trace)
+
+        def render(actions: str, calls_left: int) -> str:
+            return "\n\n".join(self._render_state(actions) + [
+                prompts.render_actions(actions),
+                f"{prompts.respond_instruction(budget.max_chars - budget.used)} "
+                f"Model calls remaining after this one: {calls_left}.",
+            ])
+
+        outcome = run_step_loop(
+            model=self.ctx.model, executor=executor, phase="respond", system=self.system,
+            fixed_text=prompts.render_probe(probe, probe_event_id), render_dynamic=render,
+            max_steps=cfg.max_answer_steps, log=ActionLog(cfg.action_log_max_chars), metadata={},
+            stop_when=lambda: reply.text is not None,
+            on_no_tool_calls=lambda r, log: (log.note("harness", "Call respond with your reply.") or False),
+        )
+        return {"text": reply.text, "applied": reply.applied, "steps": outcome.steps, "stop": outcome.stop,
+                "read_chars": budget.used}
 
     def answer(self, probe: Probe, question: Question, probe_event_id: str) -> AnswerResult:
         self._phase, self._event_id = "answer", probe_event_id

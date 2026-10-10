@@ -92,6 +92,26 @@ def evidence_chain(gold: GoldLabel, session_log: list[dict[str, Any]], parsed: P
     return out
 
 
+def utilization(applied: list[str], parsed: ParsedWorkspace) -> dict[str, Any]:
+    """Which memory entries a response says it rests on, and whether those were live.
+
+    `applied` comes from the method; this reads only the method's own memory, so it can
+    run on any item. A response resting on superseded or expired entries used the past.
+    """
+    entries = parsed.entries
+    known = [i for i in applied if i in entries]
+    live = [i for i in known if entries[i].live]
+    return {
+        "applied": applied,
+        "live": live,
+        "closed": [i for i in known if not entries[i].live and entries[i].type != "O"],
+        "evidence": [i for i in known if entries[i].type == "O"],
+        "unknown": [i for i in applied if i not in entries],
+        "live_preferences": [i for i in live if entries[i].type == "P"],
+        "recently_changed": [i for i in live if entries[i].refs().get("supersedes")],
+    }
+
+
 def bootstrap_ci(values: list[int], n_boot: int = 2000, seed: int = 0) -> tuple[float, float]:
     if not values:
         return (0.0, 0.0)

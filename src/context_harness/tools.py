@@ -432,17 +432,43 @@ def workspace_tools(ws: Workspace, writable: bool, read_budget: ReadBudget | Non
     return tools
 
 
+class Respond(Tool):
+    """Submit a written reply to the person (the generated-response evaluation)."""
+
+    kind = "answer"
+
+    def __init__(self):
+        self.text: str | None = None
+        self.applied: list[str] = []
+        self.spec = ToolSpec(
+            "respond",
+            "Submit the reply you would send the person, and the IDs of the memory entries it rests on.",
+            _schema(required=("text",), text={"type": "string", "description": "Your reply, exactly as you would send it."},
+                    applied={"type": "array", "items": {"type": "string"},
+                             "description": "IDs of the memory entries your reply rests on, if any."}),
+        )
+
+    def run(self, args: dict[str, Any]) -> ToolResult:
+        self.text = args["text"]
+        self.applied = [i.strip() for i in args.get("applied", [])]
+        return ToolResult(True, "Reply recorded.")
+
+
 class SubmitAnswer(Tool):
     kind = "answer"
 
     def __init__(self, letters: tuple[str, ...]):
         self.letter: str | None = None
+        self.applied: list[str] = []
         self.spec = ToolSpec(
             "submit_answer",
             "Submit your final choice: the letter of the response that best fits the user.",
-            _schema(letter={"type": "string", "enum": list(letters)}),
+            _schema(required=("letter",), letter={"type": "string", "enum": list(letters)},
+                    applied={"type": "array", "items": {"type": "string"},
+                             "description": "IDs of the memory entries your choice rests on, if any."}),
         )
 
     def run(self, args: dict[str, Any]) -> ToolResult:
         self.letter = args["letter"]
+        self.applied = [i.strip() for i in args.get("applied", [])]
         return ToolResult(True, f"Answer {self.letter} recorded.")

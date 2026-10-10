@@ -223,7 +223,7 @@ def answer_with_tools(
         on_no_tool_calls=on_text_only,
     )
     raw = outcome.last.text if outcome.last else ""
-    details = {"stop": outcome.stop, "steps": outcome.steps}
+    details = {"stop": outcome.stop, "steps": outcome.steps, "applied": list(getattr(submit, "applied", []))}
     if submit.letter is not None:
         return AnswerResult(submit.letter, "tool", raw, details)
     if fallback.get("letter"):
