@@ -180,7 +180,134 @@ INJURY = _item(
     event_date="2025-08-30", event_name="Stress fracture, eight weeks without running", category="health",
 )
 
-SCENARIOS = [DIAGNOSIS, INJURY]
+# The last two scenarios end on a neutral message, so the reply can't take its cue from
+# the message itself: without memory there is nothing to say "short", "vegetarian" or
+# "no numbers".
+
+NEW_PARENT = _item(
+    "Dani Morales_foodbody_new_parent",
+    "dani", "cooking_help_style",
+    [
+        ("2025-06-02", "A weekend cooking project.", [
+            (U, "Weekend project: fresh pasta from scratch. Explain the why behind every step, I love the science."),
+            (A, "Gluten networks form as you knead: the proteins align, which is why resting the dough relaxes it..."),
+            (U, "Love the detail. More of this always."),
+        ]),
+        ("2025-06-08", "A long Sunday cook.", [
+            (U, "Vegetarian ramen broth with real depth? Go deep on technique, I've got all Sunday. "
+                "And make it spicy, I put chili crisp on everything."),
+            (A, "Roast kombu and shiitake for umami, char the aromatics, then a two-hour simmer... finish with chili crisp."),
+        ]),
+        ("2025-06-15", "Troubleshooting bread.", [
+            (U, "Why is my sourdough dense? Give me the full rundown."),
+            (A, "Usually underproofing: the starter, the temperature and the flour's protein all play a part. In detail..."),
+        ]),
+        ("2025-06-22", "Cooking for friends.", [
+            (U, "Planning a six-hour vegetarian mole for friends. Walk me through it properly."),
+            (A, "Toast the chiles, then the seeds and spices separately, because each burns at a different point..."),
+            (U, "Honestly this is the best part of my week."),
+        ]),
+        ("2025-07-01", "Big news.", [
+            (U, "Baby arrived early!! Total chaos, sleeping in 90-minute chunks."),
+            (A, "Congratulations! Look after yourselves; food can be simple for a while."),
+        ]),
+        ("2025-07-10", "Dinner with one free hand.", [
+            (U, "Need a dinner I can make one-handed. Keep it SHORT, like 3 lines. I read your answers at 3am."),
+            (A, "Sheet-pan chickpeas, peppers, harissa. 25 min at 220°C. Eat with pita."),
+        ]),
+        ("2025-07-16", "Batch cooking.", [
+            (U, "Freezer meals I can batch on one day? One pan if possible. Short list, no explanations."),
+            (A, "1. Black bean chili\n2. Spicy lentil dal\n3. Veggie enchilada bake"),
+            (U, "Perfect. Short is all I can handle now."),
+        ]),
+        ("2025-07-24", "Another quick one.", [
+            (U, "Another one-pan thing? Still vegetarian obviously, and spicy, my taste buds are the only thing awake."),
+            (A, "One-pan gochujang tofu and rice. 30 minutes."),
+        ]),
+        ("2025-07-30", None, [
+            (U, "Any ideas for dinner this week?"),
+        ]),
+    ],
+    [
+        ("A", "weekend_project", "How about a weekend project: hand-rolled vegetarian dumplings. Here's why the "
+                                 "dough rests, how pleating works, and the science of a crisp bottom."),
+        ("B", "brief_one_pan", "Three quick ones: spicy black bean sheet-pan tacos, harissa chickpea tray bake, "
+                               "chili-crisp fried rice. All one pan, all freeze well."),
+        ("C", "brief_with_meat", "Three quick ones: spicy chicken sheet-pan fajitas, sausage and pepper tray bake, "
+                                 "beef fried rice. All one pan, all freeze well."),
+        ("D", "mild_weekly_plan", "Here's a balanced weekly plan: Monday mild vegetable soup, Tuesday pasta "
+                                  "primavera, Wednesday cheese omelette, then leftovers to finish the week."),
+    ],
+    correct="B", trap="A",
+    original={"answer_length": "detailed_explanations", "cooking_style": "elaborate_weekend_projects",
+              "diet": "vegetarian", "spice": "loves_spicy"},
+    current={"answer_length": "very_brief", "cooking_style": "one_pan_freezer_friendly",
+             "diet": "vegetarian", "spice": "loves_spicy"},
+    event_date="2025-07-01", event_name="Became a parent", category="family",
+)
+
+BURNOUT = _item(
+    "Lena Fischer_foodbody_burnout",
+    "lena", "nutrition_tracking_style",
+    [
+        ("2025-03-03", "Setting up nutrition goals.", [
+            (U, "Log this: 140 g protein a day. I want exact grams for every meal you plan. Mediterranean style, "
+                "and I'm cooking for me and my partner."),
+            (A, "Got it: 140 g protein, Mediterranean, meals for two, with grams per meal."),
+        ]),
+        ("2025-03-09", "A weekly review.", [
+            (U, "Weekly report please: my fats were off by 12%. Break the numbers down by day."),
+            (A, "Mon 82 g, Tue 95 g, Wed 71 g... the over-runs were olive oil and feta on Tuesday and Friday."),
+        ]),
+        ("2025-03-16", "Planning dinners.", [
+            (U, "Plan 7 dinners for two, Mediterranean, exact macros per serving."),
+            (A, "1. Lemon chicken with farro: 42 g protein, 38 g carbs, 14 g fat per serving..."),
+            (U, "The per-serving grams are perfect."),
+        ]),
+        ("2025-03-23", "Another report.", [
+            (U, "Numbers again: what was my weekly protein average?"),
+            (A, "131 g a day, 9 g under target; Thursday was the low day."),
+        ]),
+        ("2025-04-02", "Time off work.", [
+            (U, "I've been signed off work with burnout. My therapist thinks the constant tracking is feeding my anxiety."),
+            (A, "I'm sorry. Rest comes first, and we can change how we do food whenever you want."),
+        ]),
+        ("2025-04-08", "A decision about tracking.", [
+            (U, "I'm stopping tracking. Please don't show me grams or calories anymore, seeing them sends me spiralling."),
+            (A, "Understood. No numbers from now on."),
+        ]),
+        ("2025-04-15", "A comforting dinner.", [
+            (U, "Dinner for two tonight, something Mediterranean and comforting? No numbers."),
+            (A, "A slow-baked white bean and tomato stew with crusty bread and a big green salad."),
+            (U, "Thank you for not putting numbers in. That felt calm."),
+        ]),
+        ("2025-04-22", "How to check in.", [
+            (U, "Instead of the weekly reports, could you just check in with me gently about how eating's going?"),
+            (A, "Of course. I'll ask how things feel, not how they measure."),
+        ]),
+        ("2025-04-28", None, [
+            (U, "Planning groceries for the week, can you help?"),
+        ]),
+    ],
+    [
+        ("A", "macro_targets", "Sure! For 140 g protein a day for two: 1.2 kg chicken, 1 kg Greek yogurt, 12 eggs, "
+                               "500 g lentils. I'll track the weekly totals and report back on Sunday."),
+        ("B", "gentle_no_numbers", "Happy to. For the two of you: chickpeas, lemons, feta, tomatoes, greens, crusty "
+                                   "bread, olive oil, fish for one night. How has eating felt this week?"),
+        ("C", "generic_single", "Sure. Here's a simple list for one: pasta, a jar of sauce, frozen pizza, cereal, "
+                                "milk, bananas, sandwich bread and cheese. Anything else you need?"),
+        ("D", "calorie_budget", "Happy to. A balanced Mediterranean week for two at about 1,900 kcal each: "
+                                "chickpeas, salmon, feta, greens. I'll keep a running calorie count."),
+    ],
+    correct="B", trap="A",
+    original={"nutrition_numbers": "exact_macros", "check_in_style": "weekly_data_reports",
+              "cuisine": "mediterranean", "household": "cooking_for_two"},
+    current={"nutrition_numbers": "no_numbers", "check_in_style": "gentle_check_ins",
+             "cuisine": "mediterranean", "household": "cooking_for_two"},
+    event_date="2025-04-02", event_name="Signed off work with burnout", category="health",
+)
+
+SCENARIOS = [DIAGNOSIS, INJURY, NEW_PARENT, BURNOUT]
 
 if __name__ == "__main__":
     out = Path(__file__).with_suffix(".jsonl")
