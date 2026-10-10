@@ -1,0 +1,188 @@
+"""FoodBody-style scenarios: short histories with one known preference change.
+
+Each scenario is a few dated sessions in which a person's preferences change after a
+life event, written in HorizonBench's item format so every harness command works on
+them: `--dataset scenarios/foodbody.jsonl`. They are small (about 8 events), so a
+full run costs cents, and their labels are written to match the conversations, which
+generated benchmark items do not always do.
+
+What each scenario checks:
+- the old value is replaced, not merged with the new one, and the change is noted;
+- what stays the same (cooking time, units, format) survives the change;
+- the reply to the last message follows the new values.
+
+Run `python scenarios/foodbody.py` to rebuild scenarios/foodbody.jsonl.
+"""
+
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+T = "T09:00:00.000001"
+
+
+def _conversation(sessions: list[tuple[str, str | None, list[tuple[str, str]]]]) -> str:
+    lines = ["Conversation History:"]
+    for date, scenario, turns in sessions:
+        lines.append(f"Date: {date}{T}")
+        if scenario:
+            lines.append(f"Scenario: {scenario}")
+        lines += [f"{role}: {text}" for role, text in turns]
+    return "\n".join(lines) + "\n"
+
+
+def _item(item_id, user, domain, sessions, options, correct, trap, original, current, event_date, event_name, category):
+    changed = {k: {"original": original[k], "current": current[k]} for k in current if original[k] != current[k]}
+    return {
+        "id": item_id,
+        "generator": "foodbody-scenarios",
+        "user_id": f"foodbody-scenarios/{user}",
+        "conversation": _conversation(sessions),
+        "correct_letter": correct,
+        "options": json.dumps([{"letter": L, "value": v, "option": o} for L, v, o in options]),
+        "has_evolved": "true",
+        "preference_domain": domain,
+        "distractor_letter": trap,
+        "preference_evolution": json.dumps({
+            "original_attributes": original,
+            "current_attributes": current,
+            "changed_attributes": changed,
+            "evolution_history": [{"date": f"{event_date}{T}", "event_name": event_name, "event_category": category,
+                                   "trigger": "evolution_event",
+                                   "attribute_changes": {k: {"from": v["original"], "to": v["current"]}
+                                                         for k, v in changed.items()}}],
+        }),
+    }
+
+
+U, A = "User", "Assistant"
+
+DIAGNOSIS = _item(
+    "Priya Raman_foodbody_diagnosis_meal_planning",
+    "priya", "meal_planning_style",
+    [
+        ("2025-09-01", "A grad student wants a quick dinner idea.", [
+            (U, "ok I need dinner ideas, nothing fancy. just throw a few at me, I hate rigid meal plans lol"),
+            (A, "Fried rice with frozen veg, a big quesadilla, or pasta with garlic and spinach. All under 20 minutes."),
+            (U, "perfect. and please no calorie stuff, numbers stress me out"),
+            (A, "Noted: ideas only, no numbers."),
+        ]),
+        ("2025-09-05", "Snacks for a late study night.", [
+            (U, "study night snacks?? make it fun"),
+            (A, "Popcorn with chili-lime, apple slices with peanut butter, or a 'snack board' of whatever's in the fridge."),
+            (U, "haha love the vibe, keep it like that"),
+        ]),
+        ("2025-09-10", "Using leftovers fast.", [
+            (U, "got a ton of leftover rice. something in under 20 min?"),
+            (A, "Egg fried rice: scramble two eggs, add rice, soy sauce, frozen peas. Ten minutes."),
+        ]),
+        ("2025-09-14", "Weekly groceries.", [
+            (U, "grocery list for the week but keep it loose, I'll wing the actual meals"),
+            (A, "Eggs, rice, tortillas, cheese, frozen veg, spinach, pasta, canned beans, fruit. Mix and match."),
+        ]),
+        ("2025-09-20", "Back from a doctor's appointment.", [
+            (U, "just got back from the doctor. type 2 diabetes. kind of freaking out tbh. what does this even mean for food"),
+            (A, "That's a lot to take in. Food still matters a lot and is very manageable: steady carbs, more fiber and "
+                "protein. Your doctor or a dietitian can set targets with you."),
+        ]),
+        ("2025-09-24", "Asks for a real plan.", [
+            (U, "ok I saw a dietitian. can you make me an actual plan for the week? breakfast lunch dinner. "
+                "and I need carb counts per meal now, she wants me under 45g a meal"),
+            (A, "Here's a Monday-to-Sunday plan, each meal with its carbs, all under 45 g and under 20 minutes."),
+            (U, "this is so much better. I actually need the structure now, winging it isn't working anymore"),
+        ]),
+        ("2025-09-29", "A quick dinner swap.", [
+            (U, "swap tuesday dinner for chili? how many carbs? still need it under 20 min"),
+            (A, "Quick turkey-bean chili: about 38 g carbs per bowl, 18 minutes."),
+            (U, "the per-meal carb numbers are exactly what I need. keep doing that"),
+        ]),
+        ("2025-10-03", "Next week's plan.", [
+            (U, "lay out next week the same way pls. days, meals, carbs. still keep it fun though"),
+            (A, "Week 2 plan, same layout, with a 'wild card' dinner on Friday."),
+        ]),
+        ("2025-10-08", "Tired after a long day.", [
+            (U, "ugh long day. what should I make for dinner tonight?"),
+        ]),
+    ],
+    [
+        ("A", "loose_ideas", "Long day, I feel you! Quick ideas: egg fried rice, a cheesy quesadilla, or garlic spinach "
+                             "pasta. Grab whatever sounds good and wing it, no numbers needed tonight."),
+        ("B", "structured_with_carbs", "Long day, I feel you! Tonight's plan: egg fried rice with extra veg and an egg, "
+                                       "about 40 g carbs, ready in 15 minutes. Want me to slot it into this week's plan?"),
+        ("C", "detailed_nutrition_lecture", "Managing diabetes means balancing carbohydrates, fiber, protein and fat at "
+                                            "every meal. Let's review glycemic index first, then build a dinner from "
+                                            "principles."),
+        ("D", "slow_gourmet", "Treat yourself: a slow-braised lentil stew with homemade flatbread takes about an hour "
+                              "and a half, but it's worth it on a hard day."),
+    ],
+    correct="B", trap="A",
+    original={"planning_style": "loose_ideas", "nutrition_detail": "no_numbers", "cooking_time": "under_20_min",
+              "tone": "playful"},
+    current={"planning_style": "structured_plan", "nutrition_detail": "carb_counts_per_meal",
+             "cooking_time": "under_20_min", "tone": "playful"},
+    event_date="2025-09-20", event_name="Diagnosed with type 2 diabetes", category="health",
+)
+
+INJURY = _item(
+    "Tom Okafor_foodbody_injury_coaching",
+    "tom", "coaching_style",
+    [
+        ("2025-08-04", "A runner training for a marathon.", [
+            (U, "Training for a sub-3:30 marathon. Be brutal with me. Weekly plan in a table, km please."),
+            (A, "| Day | Session | km |\n|---|---|---|\n| Tue | Intervals 6x1k | 12 |\n| Thu | Tempo | 14 |\n| Sun | Long run | 28 |"),
+        ]),
+        ("2025-08-09", "Feedback on a missed workout.", [
+            (U, "Skipped Thursday's tempo, felt tired."),
+            (A, "Tired isn't injured. Make it up Friday, no excuses."),
+            (U, "Yes. Exactly that. Push harder, don't coddle me."),
+        ]),
+        ("2025-08-15", "Fueling a long run.", [
+            (U, "How should I fuel a 32 km long run? Table please."),
+            (A, "| km | Fuel |\n|---|---|\n| 0 | 60 g carb breakfast |\n| 10, 20, 28 | gel, 25 g carb |\n| after | 1.2 g/kg carb + protein |"),
+        ]),
+        ("2025-08-22", "Race-week meals.", [
+            (U, "Race week meal plan. Performance only, I'll eat whatever wins."),
+            (A, "Carb-load days 3-1: 8-10 g/kg carbs, low fiber, familiar foods. Table attached."),
+        ]),
+        ("2025-08-30", "An injury.", [
+            (U, "Stress fracture in my foot. 8 weeks no running. Doctor says nutrition matters for healing. Gutted."),
+            (A, "I'm sorry, that's a hard blow. Calcium, vitamin D, protein and enough total energy all support bone "
+                "healing."),
+        ]),
+        ("2025-09-03", "How they want to be coached now.", [
+            (U, "Honestly I need you to go easier on me right now. The last plan made me feel like a failure. "
+                "Can we focus on healing, not performance?"),
+            (A, "Of course. Healing is the job now, and you're doing it."),
+        ]),
+        ("2025-09-08", "Bone-healing meals.", [
+            (U, "Meal ideas for bone healing? Table please, still in metric."),
+            (A, "| Meal | Calcium | Protein |\n|---|---|---|\n| Greek yogurt + oats | 300 mg | 20 g |\n| Salmon, greens | 250 mg | 35 g |"),
+            (U, "That was kind and useful. Helps way more than the drill-sergeant thing did."),
+        ]),
+        ("2025-09-14", "A setback.", [
+            (U, "Ate pizza three nights in a row. Feel like I'm undoing my recovery. What now?"),
+        ]),
+    ],
+    [
+        ("A", "blunt_performance", "Three nights of pizza is three nights wasted. No excuses: lock in the plan, "
+                                   "hit your protein, and get back to race shape. Table below, km as always."),
+        ("B", "gentle_recovery", "Three nights of pizza doesn't undo your recovery. Healing is steady, not perfect. "
+                                 "Here's a gentle table for the next few days, km as always, focused on calcium."),
+        ("C", "vague_reassurance", "Don't worry about it at all! Everyone has off days. Just do whatever feels right "
+                                   "and listen to your body, there's no need for any plan right now."),
+        ("D", "clinical_essay", "Bone remodeling depends on calcium, vitamin D, protein and energy availability. "
+                                "Let me explain osteoblast activity before we discuss what to eat."),
+    ],
+    correct="B", trap="A",
+    original={"challenge_level": "push_hard", "focus": "performance", "format": "tables_metric"},
+    current={"challenge_level": "gentle_supportive", "focus": "recovery", "format": "tables_metric"},
+    event_date="2025-08-30", event_name="Stress fracture, eight weeks without running", category="health",
+)
+
+SCENARIOS = [DIAGNOSIS, INJURY]
+
+if __name__ == "__main__":
+    out = Path(__file__).with_suffix(".jsonl")
+    out.write_text("".join(json.dumps(s) + "\n" for s in SCENARIOS))
+    print(f"Wrote {len(SCENARIOS)} scenarios to {out}")
