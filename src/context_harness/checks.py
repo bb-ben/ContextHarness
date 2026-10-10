@@ -42,6 +42,18 @@ class EventInfo:
     date: str  # YYYY-MM-DD
 
 
+def hypothesis_ripe_at(e: Entry) -> int | None:
+    """The event at which an open hypothesis first had support from two different events.
+
+    It must be decided in that same event (confirm, refute, withdraw, or defer with
+    review:). In the scenarios, "playful" and "gentler coaching" reached two events of
+    support in the last event before the person's message and were left open, so no
+    reply could rely on them.
+    """
+    events = sorted({int(ref.split("-")[1].split(".")[0]) for ref in e.refs().get("for", []) if ref.startswith("O-")})
+    return events[1] if len(events) >= 2 else None
+
+
 def goal_end(e: Entry) -> str | None:
     """The date by which an active goal must be reviewed: its review date if set, else its due date."""
     return e.fields.get("review") or e.fields.get("due")
@@ -155,6 +167,10 @@ def check_state(parsed: ParsedWorkspace, events: list[EventInfo], current: int,
             end = e.fields.get("expires") or e.fields.get("review")
             if end and is_valid_date(end) and end <= now.date:
                 add("overdue_transient", e, f"due {end}, still active on {now.date}")
+        if e.type == "H" and e.status == "open" and (ripe := hypothesis_ripe_at(e)) is not None and ripe <= current:
+            review = e.fields.get("review")
+            if not (review and is_valid_date(review) and review > now.date):
+                add("undecided_hypothesis", e, f"supported by two events since S-{ripe}, still open without a later review:")
         if e.type == "G" and e.status == "active":
             end = goal_end(e)
             if end and is_valid_date(end) and end < now.date:  # a goal is live through its due day

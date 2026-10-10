@@ -11,7 +11,7 @@ from ..dimensions import HYPOTHESES_FILE, PREFERENCES_FILE, dimension_rows, rend
 from ..entries import Entry, parse_file
 from ..tools import Finish, ReadBudget, Respond, SubmitAnswer, ToolExecutor, workspace_tools
 from ..types import AnswerResult, Event, Probe, Question, Session
-from ..checks import goal_end
+from ..checks import goal_end, hypothesis_ripe_at
 from ..workspace import (ARCHIVE_FILE, CONTEXT_FILE, EPISODES_FILE, GOALS_FILE, TRANSIENT_FILE, FileChange, Workspace,
                          WorkspaceError)
 from .base import ActionLog, MethodContext, answer_with_tools, run_step_loop
@@ -41,15 +41,21 @@ class WorkspaceAgent:
 
     def due(self, date: str) -> list[tuple[Entry, str]]:
         """The layer's reminders: active transient entries whose expires/review date has
-        arrived, and active goals whose review or due date has passed."""
+        arrived, active goals whose review or due date has passed, and open hypotheses
+        that two events support (unless deferred with a later review date)."""
         out = []
-        for path, kind in ((TRANSIENT_FILE, "T"), (GOALS_FILE, "G")):
+        for path, kind in ((TRANSIENT_FILE, "T"), (GOALS_FILE, "G"), (HYPOTHESES_FILE, "H")):
             if self.ws.layout.spec(path) is None:
                 continue
             text = self.ws.read(path)
             lines = text.splitlines()
             entries, _ = parse_file(path, text, (kind,))
             for e in entries:
+                if kind == "H":
+                    review = e.fields.get("review")
+                    if e.status == "open" and hypothesis_ripe_at(e) is not None and not (review and review > date):
+                        out.append((e, lines[e.line - 1]))
+                    continue
                 if e.status != "active":
                     continue
                 end = (e.fields.get("expires") or e.fields.get("review")) if kind == "T" else goal_end(e)

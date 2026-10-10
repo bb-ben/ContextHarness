@@ -116,6 +116,30 @@ def test_past_due_goals_are_listed_after_their_due_day(evolved_item, tmp_path):
     assert "G-0.1 | active" in _due_block(reqs[("memory_update", 2, 0)])  # 2025-10-12: passed
 
 
+def test_hypotheses_supported_by_two_events_come_due(evolved_item, tmp_path):
+    def script(req):
+        if req.phase == "answer":
+            return "", [("submit_answer", {"letter": "A"})]
+        if ev(req) == 0:
+            return "", [("append_file", {"path": "memory/episodes.md", "text":
+                         "- E-0 | 2025-10-02 | source: S-0 | Chat.\n  - O-0.1 | behavior | Joked around."}),
+                        ("append_file", {"path": "state/hypotheses.md",
+                                         "text": "- H-0.1 | open | 2025-10-02 | topic: tone | for: O-0.1 | May like a playful tone."}),
+                        ("finish", {})]
+        if ev(req) == 1:
+            return "", [("append_file", {"path": "memory/episodes.md", "text":
+                         "- E-1 | 2025-10-02 | source: S-1 | Chat.\n  - O-1.1 | reaction | Laughed at a joke."}),
+                        ("edit_file", {"path": "state/hypotheses.md", "old_text": "for: O-0.1", "new_text": "for: O-0.1, O-1.1"}),
+                        ("finish", {})]
+        return "", [("finish", {})]
+
+    model = ScriptedModel(script)
+    run([evolved_item], model, tmp_path / "run", run_config("agent"), progress=lambda *_: None)
+    reqs = {(r.phase, ev(r), r.metadata.get("step")): r for r in model.requests}
+    assert "H-0.1" not in _due_block(reqs[("memory_update", 1, 0)])  # one event of support so far
+    assert "H-0.1 | open" in _due_block(reqs[("memory_update", 2, 0)])  # two events: decide it
+
+
 def test_old_episodes_roll_over_into_the_archive_unchanged(evolved_item, tmp_path):
     import json
     import re

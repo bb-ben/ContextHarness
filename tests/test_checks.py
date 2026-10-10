@@ -179,6 +179,19 @@ def test_dimension_view_lists_open_hypotheses_under_their_dimension():
     assert 'open hypothesis: H-5.1 "May want formal, persuasive writing in general."' in "\n".join(block[:3])
 
 
+@pytest.mark.parametrize("for_,review,current,flagged", [
+    ("O-1.1", None, 3, False),          # one event of support: not ripe
+    ("O-0.1, O-1.1", None, 1, True),    # became ripe during S-1: decide it in S-1
+    ("O-0.1, O-1.1", None, 2, True),    # ripe since S-1, still open after S-2
+    ("O-0.1, O-1.1", "2025-10-15", 2, False),  # deferred with a later review date
+    ("O-0.1, O-1.1", "2025-10-05", 2, True),   # deferral already passed
+])
+def test_supported_hypotheses_must_be_decided(for_, review, current, flagged):
+    line = f"- H-1.2 | open | 2025-10-05 | topic: tone | for: {for_} | " + (f"review: {review} | " if review else "") + "May like a playful tone."
+    snap = dict(CLEAN, **{"state/hypotheses.md": CLEAN["state/hypotheses.md"] + line + "\n"})
+    assert (codes(snap, current=current)["undecided_hypothesis"] == 1) is flagged
+
+
 def test_archiving_a_live_entry_is_flagged():
     goal = "- G-1.1 | active | 2025-10-05 | review: 2025-10-23 | basis: O-1.1 | Pass the exams.\n  - 2025-10-09 (S-2): studying daily.\n"
     snap = with_change("state/goals.md", goal, "")
