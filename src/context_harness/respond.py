@@ -65,6 +65,8 @@ def snapshot_kind(snapshot: Path) -> str:
         return "agent"
     if (snapshot / "summary.md").exists():
         return "summary"
+    if (snapshot / "profile.md").exists():
+        return "profile"
     return "unknown"
 
 

@@ -55,7 +55,8 @@ class FakeModel:
     def complete(self, request: ModelRequest) -> ModelResponse:
         self.requests.append(request)
         handler = {"memory_update": self._memory_update, "summary_update": self._summary_update,
-                   "memory_review": lambda r: ("Nothing to fix.", [self._call("finish")])}.get(request.phase, self._answer)
+                   "memory_review": lambda r: ("Nothing to fix.", [self._call("finish")]),
+                   "profile_update": self._profile_update}.get(request.phase, self._answer)
         text, calls = handler(request)
         return ModelResponse(
             text=text,
@@ -113,6 +114,18 @@ class FakeModel:
         )
         calls.append(self._call("finish"))
         return "Recording this event.", calls
+
+    def _profile_update(self, request: ModelRequest) -> tuple[str, list[ToolCall]]:
+        """Contract-following stand-in: one observation, and a profile that cites it."""
+        prompt = _body(request)
+        k, date, first_user = _event_facts(prompt)
+        old = re.search(r"<profile>\n(.*?)\n</profile>", prompt, re.S).group(1)
+        line = f"- {date}: asked about {_clean(first_user, 60)} [O-{k}.1]"
+        lines = [x for x in old.splitlines() if x.startswith("- ")][-20:] + [line]
+        profile = "## How they want help\n" + "\n".join(lines)
+        return "", [self._call("record", episode=f"Conversation: {_clean(first_user, 80)}",
+                               observations=[{"kind": "behavior", "text": f"Asked: {_clean(first_user, 100)}"}],
+                               profile=profile)]
 
     def _summary_update(self, request: ModelRequest) -> tuple[str, list[ToolCall]]:
         prompt = _body(request)

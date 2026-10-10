@@ -315,6 +315,10 @@ def cmd_respond_eval(args: argparse.Namespace) -> int:
                     elif condition == "memory" and kind == "summary":
                         reply, used = respond_with_text(item, (snapshot / "summary.md").read_text(), "a rolling summary",
                                                         responder, out), None
+                    elif condition == "memory" and kind == "profile":
+                        reply, used = respond_with_text(item, (snapshot / "profile.md").read_text(),
+                                                        "a profile of who they are now, with evidence", responder,
+                                                        out), None
                     elif condition == "full-history":
                         reply, used = respond_with_text(item, full_history_text(item), "every earlier conversation",
                                                         responder, out), None

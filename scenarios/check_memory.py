@@ -46,6 +46,13 @@ EXPECT = {
 
 
 def live_beliefs(snapshot: Path) -> list[tuple[str, str]]:
+    """Current beliefs, one string each: state entries for the agent, the profile's lines
+    (without its Changes section, which names old values on purpose), or the summary."""
+    if (snapshot / "profile.md").exists():
+        text = (snapshot / "profile.md").read_text().split("## Changes")[0]
+        return [("profile", line) for line in text.splitlines() if line.strip()]
+    if (snapshot / "summary.md").exists():
+        return [("summary", line) for line in (snapshot / "summary.md").read_text().splitlines() if line.strip()]
     out = []
     for name in ("state/preferences.md", "state/profile.md", "state/transient.md"):
         path = snapshot / name
