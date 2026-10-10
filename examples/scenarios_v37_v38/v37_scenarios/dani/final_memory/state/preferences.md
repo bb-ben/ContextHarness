@@ -1,0 +1,9 @@
+# Preferences
+- P-0.1 | superseded | 2025-06-02 | topic: help-format | basis: O-0.1, O-1.1 | confirmed: 2025-06-08 | until: 2025-06-22 | superseded_by: P-3.1 | Wants step-by-step answers that explain the why behind each step.
+- P-0.2 | current | 2025-06-02 | topic: explanation-style | basis: O-0.1, O-1.1, O-2.2 | confirmed: 2025-06-15 | Wants science-backed explanations and reasons behind methods.
+- P-0.3 | superseded | 2025-06-02 | topic: detail-level | basis: O-0.1, O-1.1, O-2.1 | confirmed: 2025-06-15 | until: 2025-07-16 | superseded_by: P-6.1 | Wants lots of detail, not a skimpy overview.
+- P-1.1 | current | 2025-06-08 | topic: spice-level | new_dimension: No existing dimension covers a lasting taste preference for heat. | confirmed: 2025-07-24 | basis: O-1.2, O-7.2 | Likes spicy food and chili crisp.
+- P-3.1 | current | 2025-06-22 | topic: help-format | basis: O-0.1, O-1.1, O-3.1 | confirmed: 2025-06-22 | supersedes: P-0.1 | changed: reinforced by another step-by-step request | Wants step-by-step answers that explain the why behind each step.
+- P-5.1 | superseded | 2025-07-10 | topic: constraints | review: 2025-07-24 | basis: O-4.1, O-5.1 | until: 2025-07-24 | superseded_by: P-7.1 | Wants recommendations that fit limited time and one-handed cooking during newborn care.
+- P-6.1 | current | 2025-07-16 | review: 2025-07-30 | confirmed: 2025-07-16 | basis: O-0.1, O-1.1, O-2.1, O-5.2, O-6.1, O-6.2 | supersedes: P-0.3 | changed: now wants shorter answers when sleep-deprived | Wants lots of detail normally, but much shorter answers when sleep-deprived.
+- P-7.1 | current | 2025-07-24 | topic: constraints | review: 2025-08-07 | basis: O-4.1, O-5.1, O-7.1 | supersedes: P-5.1 | changed: now also wants one-pan cooking | Wants recommendations that fit limited time, one-handed newborn care, and one-pan cooking.

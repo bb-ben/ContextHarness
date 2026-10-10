@@ -1,0 +1,114 @@
+{
+  "source": "v37_scenarios__002_foodbody-scenarios_dani_cd5a822e",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 2,
+  "text": "Absolutely — keeping it short and newborn-friendly.\n\n1. **Chili-crisp chicken stir-fry**: ground chicken, green beans, garlic, soy, chili crisp; serve over rice. Fast, one pan, easy to eat one-handed.\n2. **Sheet-pan sausage with peppers and onions**: toss on one tray, roast, done. Minimal cleanup.\n3. **Coconut chickpea curry**: chickpeas, frozen spinach, curry paste, coconut milk; finish with chili crisp. Cheap, forgiving, and reheats well.\n4. **Skillet taco rice**: beef, turkey, or beans + salsa + rice + cheese. Good for leftovers.\n5. **Salmon and broccoli tray bake**: lemon, olive oil, broccoli, salmon; serve with couscous or rice. Very low effort.\n\nIf you want, I can turn this into a 5-night plan + grocery list.",
+  "applied": [
+    "P-6.1",
+    "P-3.1",
+    "P-0.2",
+    "P-7.1",
+    "P-1.1",
+    "F-4.1",
+    "T-7.1"
+  ],
+  "skipped": [],
+  "accounted_for_all": true,
+  "steps": 3,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "P-6.1",
+      "P-3.1",
+      "P-0.2",
+      "P-7.1",
+      "P-1.1",
+      "F-4.1",
+      "T-7.1"
+    ],
+    "live": [
+      "P-6.1",
+      "P-3.1",
+      "P-0.2",
+      "P-7.1",
+      "P-1.1",
+      "F-4.1",
+      "T-7.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-6.1",
+      "P-3.1",
+      "P-0.2",
+      "P-7.1",
+      "P-1.1"
+    ],
+    "recently_changed": [
+      "P-6.1",
+      "P-3.1",
+      "P-7.1",
+      "T-7.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "answer_length",
+      "current": "very_brief",
+      "original": "detailed_explanations",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "other",
+        "current",
+        "current"
+      ],
+      "reason": "Gives five meal ideas with details, so it’s much longer than very brief."
+    },
+    {
+      "attribute": "cooking_style",
+      "current": "one_pan_freezer_friendly",
+      "original": "elaborate_weekend_projects",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Focuses on quick one-pan, sheet-pan, skillet, and low-cleanup dinners."
+    },
+    {
+      "attribute": "diet",
+      "current": "vegetarian",
+      "changed": false,
+      "fit": "other",
+      "votes": [
+        "other",
+        "other",
+        "other"
+      ],
+      "reason": "Includes chicken, sausage, beef, turkey, and salmon rather than vegetarian options."
+    },
+    {
+      "attribute": "spice",
+      "current": "loves_spicy",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Uses chili crisp and curry paste, leaning into a spicy style."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 0.75,
+  "judge_cost_usd": 0.0109,
+  "reply_cost_usd": 0.03135
+}

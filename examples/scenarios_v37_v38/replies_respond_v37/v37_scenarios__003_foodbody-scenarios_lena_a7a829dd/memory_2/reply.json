@@ -1,0 +1,111 @@
+{
+  "source": "v37_scenarios__003_foodbody-scenarios_lena_a7a829dd",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 2,
+  "text": "Absolutely — I can help with that. Since you cook for you and your partner, I’d keep it simple and Mediterranean-leaning, with no grams/calories or day-by-day tracking.\n\nA good week could be built around:\n- Proteins: eggs, Greek yogurt, chicken, tuna or salmon, chickpeas, lentils\n- Vegetables: salad greens, tomatoes, cucumbers, peppers, zucchini, broccoli, onions\n- Fruit: berries, apples, bananas, citrus\n- Carbs: bread or pita, rice, pasta, potatoes, oats\n- Fats and flavor: olive oil, feta, olives, hummus, nuts, garlic, lemons, herbs\n\nIf you want, I can turn this into a full grocery list or a simple week of meals next.",
+  "applied": [
+    "F-0.1",
+    "P-0.2",
+    "P-5.1",
+    "P-5.2",
+    "P-7.1",
+    "T-7.1"
+  ],
+  "skipped": [
+    "P-7.2"
+  ],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "F-0.1",
+      "P-0.2",
+      "P-5.1",
+      "P-5.2",
+      "P-7.1",
+      "T-7.1"
+    ],
+    "live": [
+      "F-0.1",
+      "P-0.2",
+      "P-5.1",
+      "P-5.2",
+      "P-7.1",
+      "T-7.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-0.2",
+      "P-5.1",
+      "P-5.2",
+      "P-7.1"
+    ],
+    "recently_changed": [
+      "P-5.1",
+      "P-5.2",
+      "T-7.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "nutrition_numbers",
+      "current": "no_numbers",
+      "original": "exact_macros",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It explicitly avoids grams/calories and day-by-day tracking."
+    },
+    {
+      "attribute": "check_in_style",
+      "current": "gentle_check_ins",
+      "original": "weekly_data_reports",
+      "changed": true,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "It offers help, but doesn’t really do any check-in style reporting one way or the other."
+    },
+    {
+      "attribute": "cuisine",
+      "current": "mediterranean",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It clearly frames the plan as Mediterranean-leaning and uses Mediterranean foods."
+    },
+    {
+      "attribute": "household",
+      "current": "cooking_for_two",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It directly addresses cooking for you and your partner, i.e. two people."
+    }
+  ],
+  "changed_fit_current": 0.5,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 0.75,
+  "judge_cost_usd": 0.00587,
+  "reply_cost_usd": 0.00755
+}

@@ -1,0 +1,26 @@
+# Episodes
+- E-0 | 2025-09-01 | source: S-0 | Quick dinner-idea chat.
+  - O-0.1 | stated | topic: help-format | Wants a few quick dinner ideas and hates rigid meal plans.
+  - O-0.2 | stated | topic: output-style | Wants no calorie info or numbers because they stress them out.
+- E-1 | 2025-09-05 | source: S-1 | Snack ideas with a fun, casual vibe.
+  - O-1.1 | behavior | topic: tone | Asked to make snack ideas fun.
+  - O-1.2 | reaction | topic: tone | Said they loved the vibe and wanted more like that.
+- E-2 | 2025-09-10 | source: S-2 | Asked for a quick way to use leftover rice.
+  - O-2.1 | behavior | topic: constraints | Wanted something that takes under 20 minutes.
+- E-3 | 2025-09-14 | source: S-3 | Weekly groceries.
+  - O-3.1 | behavior | topic: help-format | Asked for a loose weekly grocery list and said they'll wing the meals.
+- E-4 | 2025-09-20 | source: S-4 | Back from doctor; diagnosed with type 2 diabetes and worried about food.
+  - O-4.1 | event | Was diagnosed with type 2 diabetes at a doctor appointment.
+  - O-4.2 | reaction | Feels freaked out about it.
+- E-5 | 2025-09-24 | source: S-5 | Asked for a structured week-long meal plan with breakfast, lunch, dinner, and carb counts.
+  - O-5.1 | stated | topic: help-format | Wants a real weekly breakfast-lunch-dinner plan with structure.
+  - O-5.2 | stated | topic: output-style | Wants carb counts shown in the plan.
+  - O-5.3 | stated | topic: constraints | Wants each meal kept under 45 g carbs.
+  - O-5.4 | reaction | topic: help-format | Said this is much better because winging it is not working anymore.
+- E-6 | 2025-09-29 | source: S-6 | Quick dinner swap and carb-count request.
+  - O-6.1 | stated | topic: output-style | Wants per-meal carb numbers shown.
+  - O-6.2 | behavior | topic: constraints | Still wants dinners kept under 20 minutes.
+- E-7 | 2025-10-03 | source: S-7 | Next week's meal plan requested again, with the same structured format.
+  - O-7.1 | behavior | topic: help-format | Asked to lay out next week the same way again.
+  - O-7.2 | behavior | topic: output-style | Asked for days, meals, and carb counts.
+  - O-7.3 | behavior | topic: tone | Asked to keep it fun.

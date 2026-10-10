@@ -1,0 +1,25 @@
+# Episodes
+- E-0 | 2025-06-02 | source: S-0
+  - O-0.1 | stated | topic: explanation-style | Wants the why behind every step, with science.
+  - O-0.2 | reaction | topic: detail-level | Wants more detail like this always.
+- E-1 | 2025-06-08 | source: S-1 | Long Sunday cook about vegetarian spicy ramen broth.
+  - O-1.1 | behavior | topic: detail-level | Wants a deep, technique-heavy answer and has all Sunday to spend on it.
+  - O-1.2 | stated | topic: spice-level | Wants the ramen spicy and says they put chili crisp on everything.
+  - O-1.3 | behavior | topic: diet | Asked for a vegetarian ramen broth.
+- E-2 | 2025-06-15 | source: S-2 | Brief troubleshooting chat about dense sourdough.
+  - O-2.1 | behavior | topic: detail-level | Asked for the full rundown on why sourdough can turn out dense.
+- E-3 | 2025-06-22 | source: S-3
+  - O-3.1 | behavior | topic: detail-level | Asked for a six-hour vegetarian mole and wanted a proper walkthrough.
+- E-4 | 2025-07-01 | source: S-4 | Big news: baby arrived early, and sleep is in 90-minute chunks.
+  - O-4.1 | event | Baby arrived early.
+  - O-4.2 | event | Sleeping in 90-minute chunks right now.
+- E-5 | 2025-07-10 | source: S-5 | Dinner request with one-handed cooking and very short answers.
+  - O-5.1 | behavior | topic: help-format | Wants dinner ideas in about three lines and readable at 3am.
+  - O-5.2 | behavior | topic: constraints | Needs the dinner to be doable one-handed.
+- E-6 | 2025-07-16 | source: S-6 | Batch-cooking freezer meals with a short follow-up.
+  - O-6.1 | reaction | topic: help-format | Said the short list was perfect and short is all they can handle now.
+- E-7 | 2025-07-24 | source: S-7 | Another quick one.
+  - O-7.1 | behavior | topic: constraints | Wants another one-pan dinner idea.
+  - O-7.2 | stated | topic: diet | Is still vegetarian.
+  - O-7.3 | stated | topic: spice-level | Wants spicy food.
+  - O-7.4 | behavior | topic: help-format | Asked for another quick one.

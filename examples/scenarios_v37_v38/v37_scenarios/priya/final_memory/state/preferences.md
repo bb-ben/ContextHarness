@@ -1,0 +1,9 @@
+# Preferences
+- P-0.1 | superseded | 2025-09-01 | topic: help-format | basis: O-0.1, O-3.1 | confirmed: 2025-09-14 | until: 2025-09-24 | superseded_by: P-5.1 | Wants loose, brief idea lists instead of rigid meal plans.
+- P-0.2 | superseded | 2025-09-01 | topic: output-style | basis: O-0.2 | until: 2025-09-24 | superseded_by: P-5.2 | Doesn't want calorie counts or other numbers in food ideas.
+- P-5.1 | current | 2025-09-24 | topic: help-format | basis: O-5.1, O-5.4, O-7.1 | confirmed: 2025-10-03 | supersedes: P-0.1 | changed: wants structured weekly meal plans, not loose idea lists | Wants structured weekly meal plans instead of loose idea lists.
+- P-5.2 | superseded | 2025-09-24 | topic: output-style | basis: O-5.2 | confirmed: 2025-09-24 | review: 2025-10-08 | supersedes: P-0.2 | changed: wants carb counts in meal plans, not number-free food ideas | until: 2025-09-29 | superseded_by: P-6.1 | Wants carb counts shown in meal plans.
+- P-5.3 | superseded | 2025-09-24 | topic: constraints | basis: O-5.3 | confirmed: 2025-09-24 | review: 2025-10-08 | until: 2025-09-29 | superseded_by: P-6.2 | Needs each meal kept under 45 g carbs.
+- P-6.1 | current | 2025-09-29 | topic: output-style | basis: O-5.2, O-6.1, O-7.2 | confirmed: 2025-10-03 | review: 2025-10-08 | changed: now explicitly wants per-meal carb numbers | supersedes: P-5.2 | Wants carb counts shown per meal in meal plans.
+- P-6.2 | current | 2025-09-29 | topic: constraints | basis: O-5.3, O-2.1, O-6.2 | review: 2025-10-08 | changed: now also wants meals under 20 minutes | supersedes: P-5.3 | Needs each meal kept under 45 g carbs and under 20 minutes.
+- P-7.1 | current | 2025-10-03 | topic: tone | basis: O-1.1, O-1.2, O-7.3 | confirmed: 2025-10-03 | Wants a playful, casual tone for food-related replies.

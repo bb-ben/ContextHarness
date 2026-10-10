@@ -1,0 +1,114 @@
+{
+  "source": "v37_scenarios__002_foodbody-scenarios_dani_cd5a822e",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Absolutely — here are 5 quick, one-pan dinner ideas that stay spicy-friendly and low-effort:\n\n1. Chili-crisp turkey taco skillet — ground turkey, canned beans, corn, salsa, tortillas.\n2. Sausage, pepper, and gnocchi skillet — fast, filling, and all in one pan.\n3. Chickpea coconut curry with spinach — use curry paste; serve with microwave rice.\n4. Chicken fajita skillet — peppers, onions, chicken, and hot sauce or chili crisp.\n5. Salmon and green beans on a sheet pan — finish with lemon and chili crisp.\n\nIf you want, I can turn any of these into a 20-minute grocery list.",
+  "applied": [
+    "F-4.1",
+    "T-7.1",
+    "P-1.1",
+    "P-3.1",
+    "P-0.2",
+    "P-6.1",
+    "P-7.1"
+  ],
+  "skipped": [],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "F-4.1",
+      "T-7.1",
+      "P-1.1",
+      "P-3.1",
+      "P-0.2",
+      "P-6.1",
+      "P-7.1"
+    ],
+    "live": [
+      "F-4.1",
+      "T-7.1",
+      "P-1.1",
+      "P-3.1",
+      "P-0.2",
+      "P-6.1",
+      "P-7.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-1.1",
+      "P-3.1",
+      "P-0.2",
+      "P-6.1",
+      "P-7.1"
+    ],
+    "recently_changed": [
+      "T-7.1",
+      "P-3.1",
+      "P-6.1",
+      "P-7.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "answer_length",
+      "current": "very_brief",
+      "original": "detailed_explanations",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Keeps it short and skimmable with just a few ideas."
+    },
+    {
+      "attribute": "cooking_style",
+      "current": "one_pan_freezer_friendly",
+      "original": "elaborate_weekend_projects",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Focuses on quick, one-pan, low-effort dinner ideas."
+    },
+    {
+      "attribute": "diet",
+      "current": "vegetarian",
+      "changed": false,
+      "fit": "other",
+      "votes": [
+        "other",
+        "other",
+        "other"
+      ],
+      "reason": "Includes meat and fish instead of vegetarian options."
+    },
+    {
+      "attribute": "spice",
+      "current": "loves_spicy",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Emphasizes spicy-friendly ingredients like chili crisp and hot sauce."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 0.75,
+  "judge_cost_usd": 0.00678,
+  "reply_cost_usd": 0.0165
+}

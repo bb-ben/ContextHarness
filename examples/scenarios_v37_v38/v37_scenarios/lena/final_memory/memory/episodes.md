@@ -1,0 +1,24 @@
+# Episodes
+- E-0 | 2025-03-03 | source: S-0 | Set nutrition targets.
+  - O-0.1 | stated | Wants 140 g protein a day.
+  - O-0.2 | stated | topic: output-style | Wants exact grams for every meal in plans.
+  - O-0.3 | stated | topic: dietary-style | Wants Mediterranean-style meal plans.
+  - O-0.4 | stated | Cooking for self and partner.
+- E-1 | 2025-03-09 | source: S-1 | Weekly report about fats being off target.
+  - O-1.1 | behavior | topic: detail-level | Asked for the weekly fat report numbers broken down by day.
+- E-2 | 2025-03-16 | source: S-2 | Planning dinners with exact macros.
+  - O-2.1 | reaction | topic: output-style | Said the per-serving grams are perfect.
+- E-3 | 2025-03-23 | source: S-3 | User asked for the weekly protein average again.
+  - O-3.1 | behavior | topic: detail-level | Asked for the weekly protein average again.
+- E-4 | 2025-04-02 | source: S-4 | Time off work for burnout.
+  - O-4.1 | event | Signed off work with burnout.
+  - O-4.2 | stated | Therapist thinks constant tracking is feeding anxiety.
+- E-5 | 2025-04-08 | source: S-5 | Stopped tracking and asked not to see grams or calories because they send them spiralling.
+  - O-5.1 | stated | topic: output-style | Wants meal plans without grams or calories.
+  - O-5.2 | stated | topic: detail-level | Wants food help without day-by-day numeric tracking.
+  - O-5.3 | stated | topic: transient | Seeing grams or calories sends them spiralling.
+- E-6 | 2025-04-15 | source: S-6 | Comforting dinner for two, Mediterranean, and no numbers.
+  - O-6.1 | reaction | topic: output-style | Thanked me for omitting numbers and said it felt calm.
+- E-7 | 2025-04-22 | source: S-7 | Short chat about check-ins on eating.
+  - O-7.1 | stated | topic: tone | Wants a gentle tone for eating check-ins.
+  - O-7.2 | stated | topic: help-format | Wants check-ins about eating instead of weekly reports.

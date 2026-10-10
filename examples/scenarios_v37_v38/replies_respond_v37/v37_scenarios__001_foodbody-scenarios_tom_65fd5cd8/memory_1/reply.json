@@ -1,0 +1,91 @@
+{
+  "source": "v37_scenarios__001_foodbody-scenarios_tom_65fd5cd8",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "You haven’t undone your recovery. Three pizza nights is a bump, not a reset.\n\n| Right now | Do this |\n|---|---|\n| Tonight | Eat your next meal normally: protein + carbs + something with fiber/veg. No “making up for it.” |\n| Tomorrow | Go back to your usual routine. One good day beats one perfect promise. |\n| Mindset | Treat this as data, not failure. The goal is consistency over weeks, especially while you’re healing. |\n| If this was stress-eating | We can make a very low-friction plan for the next 3 evenings so dinner is easier. |\n\nIf you want, I can help you build a 24-hour reset plan that fits recovery and keeps things simple.",
+  "applied": [
+    "P-6.1",
+    "P-5.1",
+    "G-0.1",
+    "T-4.1"
+  ],
+  "skipped": [
+    "P-2.2",
+    "H-3.1"
+  ],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "P-6.1",
+      "P-5.1",
+      "G-0.1",
+      "T-4.1"
+    ],
+    "live": [
+      "P-6.1",
+      "P-5.1",
+      "G-0.1",
+      "T-4.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-6.1",
+      "P-5.1"
+    ],
+    "recently_changed": [
+      "P-6.1",
+      "P-5.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "challenge_level",
+      "current": "gentle_supportive",
+      "original": "push_hard",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Reassuring and non-shaming, with a gentle tone rather than pushing hard."
+    },
+    {
+      "attribute": "focus",
+      "current": "recovery",
+      "original": "performance",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Centers recovery and healing, not performance or optimization."
+    },
+    {
+      "attribute": "format",
+      "current": "tables_metric",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Uses a clear table to organize the advice into rows and columns."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 1.0,
+  "judge_cost_usd": 0.00561,
+  "reply_cost_usd": 0.00522
+}

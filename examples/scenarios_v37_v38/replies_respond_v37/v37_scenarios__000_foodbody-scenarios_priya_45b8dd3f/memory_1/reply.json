@@ -1,0 +1,106 @@
+{
+  "source": "v37_scenarios__000_foodbody-scenarios_priya_45b8dd3f",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Ugh, yeah — let’s make dinner stupidly easy tonight.\n\n**Tonight’s pick:**\n- **Garlic chicken + bagged salad + microwaved cauliflower rice**\n- **Time:** about 15 minutes\n- **Carbs:** about **18 g per plate**\n\n**How:**\n1. Sauté chicken in a little oil with garlic, salt, and pepper.\n2. Heat cauliflower rice in the microwave.\n3. Toss the salad with olive oil + lemon or vinaigrette.\n4. Plate it all and call it a win.\n\nIf you want, I can give you 3 more fast dinner options in the same style.",
+  "applied": [
+    "P-5.1",
+    "P-6.1",
+    "P-6.2",
+    "P-7.1",
+    "F-4.1"
+  ],
+  "skipped": [],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "P-5.1",
+      "P-6.1",
+      "P-6.2",
+      "P-7.1",
+      "F-4.1"
+    ],
+    "live": [
+      "P-5.1",
+      "P-6.1",
+      "P-6.2",
+      "P-7.1",
+      "F-4.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-5.1",
+      "P-6.1",
+      "P-6.2",
+      "P-7.1"
+    ],
+    "recently_changed": [
+      "P-5.1",
+      "P-6.1",
+      "P-6.2"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "planning_style",
+      "current": "structured_plan",
+      "original": "loose_ideas",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It gives a specific dinner idea plus a step-by-step mini plan, which is structured rather than loose."
+    },
+    {
+      "attribute": "nutrition_detail",
+      "current": "carb_counts_per_meal",
+      "original": "no_numbers",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It includes a carb estimate per plate (“about 18 g per plate”), matching per-meal carb counts."
+    },
+    {
+      "attribute": "cooking_time",
+      "current": "under_20_min",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It explicitly says the meal takes about 15 minutes, which fits under 20 minutes."
+    },
+    {
+      "attribute": "tone",
+      "current": "playful",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "The phrasing is casual and playful (“stupidly easy,” “call it a win”)."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 1.0,
+  "judge_cost_usd": 0.00493,
+  "reply_cost_usd": 0.01004
+}

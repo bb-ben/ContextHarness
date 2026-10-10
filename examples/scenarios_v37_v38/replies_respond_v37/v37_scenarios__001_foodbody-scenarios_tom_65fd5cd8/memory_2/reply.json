@@ -1,0 +1,91 @@
+{
+  "source": "v37_scenarios__001_foodbody-scenarios_tom_65fd5cd8",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 2,
+  "text": "You haven’t undone your recovery. Three pizza nights are a bump, not a reset.\n\n| Now | Do this |\n|---|---|\n| Next meal | Go back to your normal recovery meal: protein + carbs + something with fiber. |\n| Today | Drink water, get a decent sleep, and keep the rest of the day steady. |\n| This week | Resume your usual plan at the next meal; no punishment, no “making up for it.” |\n| Mindset | Treat it like data, not a failure. One stretch of eating doesn’t erase weeks of healing. |\n\nIf you want, I can help you sketch a very normal “back on track” day for the next 24 hours.",
+  "applied": [
+    "P-6.1",
+    "P-5.1",
+    "T-4.1",
+    "G-0.1"
+  ],
+  "skipped": [
+    "P-2.2",
+    "H-3.1"
+  ],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "P-6.1",
+      "P-5.1",
+      "T-4.1",
+      "G-0.1"
+    ],
+    "live": [
+      "P-6.1",
+      "P-5.1",
+      "T-4.1",
+      "G-0.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-6.1",
+      "P-5.1"
+    ],
+    "recently_changed": [
+      "P-6.1",
+      "P-5.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "challenge_level",
+      "current": "gentle_supportive",
+      "original": "push_hard",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Reassuring and non-confrontational; it comforts rather than pushes."
+    },
+    {
+      "attribute": "focus",
+      "current": "recovery",
+      "original": "performance",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It centers recovery, normalizing a setback and emphasizing getting back to the usual plan."
+    },
+    {
+      "attribute": "format",
+      "current": "tables_metric",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It uses a clear table to organize the next steps, matching the requested tabular style."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 1.0,
+  "judge_cost_usd": 0.00815,
+  "reply_cost_usd": 0.00414
+}

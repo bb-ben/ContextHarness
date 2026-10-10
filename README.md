@@ -11,8 +11,8 @@ contract. HorizonBench supplies long, dated conversation histories in which
 preferences change after life events. That makes it a sequential testbed for
 whether the layer keeps the user's state current.
 
-**Status:** contract **v3.6**. The layer, instrumentation, and Gemini and OpenAI
-adapters are built and tested offline (183 tests). A model that follows the
+**Status:** contract **v3.8**. The layer, instrumentation, and Gemini and OpenAI
+adapters are built and tested offline (186 tests). A model that follows the
 contract produces zero violations across all 901 events of the HorizonBench sample.
 
 **Real runs so far:**
@@ -61,6 +61,12 @@ contract produces zero violations across all 901 events of the HorizonBench samp
   rolling summary still writes better-fitting replies on these short histories. See
   [`examples/scenarios_v34_v36/`](examples/scenarios_v34_v36) and the
   [design log](docs/MEMORY_LAYER.md#v34--v36-one-home-for-how-they-want-help).
+- **v3.7–v3.8 on four scenarios ($1.78).** Repeated wishes are collected under a
+  dimension and replies must account for all of memory; with both, replies from
+  memory fit the changed preferences in 7 of 8 cases and never the old ones (no
+  memory: 0 on the neutral-ending scenarios). A `foodbody` layout keeps diet,
+  allergies and household in view. Run-to-run variance is now the main limit. See
+  [`examples/scenarios_v37_v38/`](examples/scenarios_v37_v38).
 - **Memory judge on that item.** Graded against the ground-truth attributes, v3
   holds 0.38 of the person's current preferences, v2 0.0, and the rolling summary
   0.75. The summary's lead comes from role-play content recorded before the change,
@@ -79,7 +85,7 @@ Requires Python ≥ 3.12 and [uv](https://docs.astral.sh/uv/).
 
 ```bash
 uv sync
-uv run pytest -q                     # 183 tests, offline, no credentials
+uv run pytest -q                     # 186 tests, offline, no credentials
 export GEMINI_API_KEY=...            # for real-model runs (default model: gemini-3.7-flash)
 ```
 
@@ -142,8 +148,9 @@ Other options:
 - `--no-preload`: contract v1 behavior, where state files must be read explicitly.
 - `--max-requests`: a hard cap per invocation (the run pauses).
 - `--timeout`: seconds per response before a retry.
-- `--layout general|with-decisions`: the file set and seed preference dimensions
-  (`general` is the default; `with-decisions` adds the decisions file).
+- `--layout general|with-decisions|foodbody`: the file set and seed preference
+  dimensions (`general` is the default; `with-decisions` adds the decisions file;
+  `foodbody` adds profile topics such as diet and allergies).
 - `--max-cost-usd`: pauses once estimated spend reaches the cap (priced models).
 - `--answer-strategy dimension-first|default`: how the agent uses memory when it
   answers. `dimension-first` (the default) finds the dimension the candidate
@@ -232,11 +239,10 @@ v2), so it says nothing about the layer.
 
 ## Next steps
 
-1. **Run v3.6 on HorizonBench item 6** (about $6.70 with its evaluations) to see
-   whether it holds up over 75 events, and judge its memory and replies.
-2. **Turn repeated task wishes into preferences reliably** (the new-parent scenario's
-   "one-pan, freezer-friendly"), and have replies apply every preference that bears on
-   the request, not just some.
+1. **Run v3.8 on HorizonBench item 6** to see whether it holds up over 75 events,
+   and judge its memory and replies.
+2. **Measure variance:** run each scenario several times per version and compare
+   distributions, not single runs.
 3. **Add more neutral-ending scenarios.** They are the only tests so far where replies
    without memory fail.
 4. **Score answers only on `usable` items** (0, 2 and 7 in the sample), and grade

@@ -66,7 +66,7 @@ read and written. It then runs the checks below. Results go to the item's trace 
 | Question | Check codes |
 |---|---|
 | Does each entry follow the format? | `unparsed_line`, `unparsed_entry`, `wrong_file`, `orphan_observation`, `duplicate_id`, `bad_status`, `bad_kind` |
-| Are preferences disciplined? | `undeclared_dimension` (a topic outside the seed list with no `new_dimension:` reason), `near_duplicate_dimension`, `unsupported_promotion` (a preference resting on non-stated evidence from one event, with no confirmed hypothesis), `missing_change_note` (a preference or fact superseding another without `changed:`), `long_value` (a current preference or fact over 240 characters), `undecided_hypothesis` (supported by two events and still open), `overdue_preference_review`, `preference_into_transient` (a hypothesis about how they want help resolved into a transient entry), `unused_stated_observation` (a `stated` observation cited by no state entry, hypothesis or goal note) |
+| Are preferences disciplined? | `undeclared_dimension` (a topic outside the seed list with no `new_dimension:` reason), `near_duplicate_dimension`, `unsupported_promotion` (a preference resting on non-stated evidence from one event, with no confirmed hypothesis), `missing_change_note` (a preference or fact superseding another without `changed:`), `long_value` (a current preference or fact over 240 characters), `undecided_hypothesis` (supported by two events and still open), `overdue_preference_review`, `preference_into_transient` (a hypothesis about how they want help resolved into a transient entry), `uncollected_signals` (tagged signals on a dimension from two events that no belief cites), `unused_stated_observation` (a `stated` observation cited by no state entry, hypothesis or goal note) |
 | Does each entry have a source and date? | `future_id` (ID names an event that hasn't happened), `bad_date`, `date_mismatch` (date differs from its event's real date), `bad_source`, `parent_mismatch`, `missing_basis`, `dangling_ref`, `basis_not_observation`, `missing_topic`, `missing_end_date` (a transient entry with no `expires:`/`review:`, or an active goal with no `due:`/`review:`) |
 | Do current-state files contradict each other? | `topic_conflict` (two `current` entries for one topic), `incomplete_supersession`, `supersession_mismatch`, `unresolved_confirmation`, `overdue_transient`, `overdue_goal` (an active goal past its review or due date), `archived_live`, `context_stale`, `context_uncited`, `context_dangling`, `context_inactive` |
 | Does information survive across events? | `missing_episode` (an event left no `E` line), `entry_deleted`, `history_rewritten` (statement, date or kind changed, or basis lost), `status_reverted`; plus each entry's lifecycle (created, status changes, deleted) |
@@ -441,6 +441,40 @@ transient path for how someone wants help, the model's choice between "change" a
 "for now" was close to a coin flip, and the "for now" branch expired quietly. Removing
 the path fixed both scenarios where rewording v3.4 → v3.5 had made them worse.
 
+### v3.6 → v3.8: collecting repeated wishes, and replies that account for all of memory
+
+| Gap after v3.6 | Change |
+|---|---|
+| "One-handed", "freezer meals", "one-pan" were observed in three tasks and never linked; the agent doesn't see past observations at update time, and no seed dimension fitted | v3.7: preference signals are tagged with a dimension (`topic:` on `O` lines); the dimensions view lists each dimension's signals that no belief cites yet; check `uncollected_signals`; new seed dimension `constraints` |
+| A reply used some of what memory held and silently skipped the rest (a wanted check-in) | v3.7: `respond` needs every current preference, fact and active circumstance listed as applied or skipped, and returns the reply if any is missing |
+| v3.7 lost "still vegetarian, obviously", said in passing, and both replies suggested chicken | v3.8: a layout can carry profile topics (the `foodbody` layout: diet, allergies, health conditions, household, kitchen), shown in every call with their current fact or "(none yet)" |
+
+**v3.7 on all four scenarios** ($1.32 with replies; see
+[`examples/scenarios_v37_v38/`](../examples/scenarios_v37_v38)): all four answered
+correctly, and replies from memory fit the changed attributes in 7 of 8 cases (the
+eighth half), never the old values; every reply accounted for all of memory.
+
+| Reply follows the new values | Diagnosis | Injury | New parent | Burnout |
+|---|---|---|---|---|
+| No memory (earlier runs) | 0, 0 | 1, 1 | 0, 0 | 0, 0 |
+| v3.6 memory | (not rerun) | (not rerun) | 0.5, 0.5 | 0.5, 0.5 |
+| **v3.7 memory** | **1, 1** | **1, 1** | **1, 1** | **1, 0.5** |
+| Rolling summary | 1, 1 | 1, 1 | 1, 1 | 1, 1 |
+
+What v3.7's memories held: diagnosis kept "under 45 g carbs **and under 20 minutes**"
+and finally promoted "playful"; injury made "gentler, healing-focused coaching for now"
+the current preference with a review date; new parent collected "limited time,
+one-handed, one-pan" under `constraints`; burnout held no numbers, gentle check-ins,
+Mediterranean and cooking for two. The cost per scenario rose to $0.25–0.38 (v3.6:
+about $0.18).
+
+**v3.8 on the new-parent scenario** ($0.46 with replies) recorded vegetarian at its
+first mention and both replies kept to it, but this time "one-pan" was not collected
+and the replies missed it. **Run-to-run variance is now the main limit:** v3.7 caught
+one-pan and lost vegetarian, v3.8 the reverse. The structure makes the right outcome
+reachable; gpt-5.4-mini reaches it inconsistently, so a version has to be judged on
+repeated runs.
+
 ## Known gaps
 
 - **The archive itself has no rollover yet** (200,000 chars). That's enough for
@@ -456,11 +490,11 @@ the path fixed both scenarios where rewording v3.4 → v3.5 had made them worse.
   against a person's reading.
 - **v3.6 is untested on a long history.** The scenarios have about 8 events; whether
   it holds up over 75 (item 6) is open.
-- **Wishes repeated across tasks still don't reliably become preferences**
-  ("one-pan, freezer-friendly" in the new-parent scenario).
-- **Replies apply some of what memory holds, not all** (no check-in, though memory
-  says they want one), and a rolling summary still writes better-fitting replies on
-  short histories.
+- **Run-to-run variance.** The same scenario under the same contract collects
+  different things on different runs; single runs can't rank versions.
+- **A rolling summary still matches or beats the layer on these short scenarios**, at
+  a fraction of the cost. The layer's edge so far is that what it believes, why and
+  what it used are all inspectable.
 - **Replacement can drop what still holds** (the diagnosis scenario lost "quick" in
   v3.3 and v3.4).
 - **Open choices left for later:**

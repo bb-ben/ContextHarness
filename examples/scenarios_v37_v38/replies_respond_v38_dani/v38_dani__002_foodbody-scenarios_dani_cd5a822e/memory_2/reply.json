@@ -1,0 +1,111 @@
+{
+  "source": "v38_dani__002_foodbody-scenarios_dani_cd5a822e",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 2,
+  "text": "Absolutely — for a busy newborn week, I’d keep it vegetarian, a little spicy, and mostly low-effort:\n\n- Chickpea coconut curry with spinach and rice\n- Tofu veggie stir-fry with chili crisp and noodles\n- Black bean tacos or bowls with salsa, avocado, and peppers\n- Red lentil dal with naan or rice\n- Pesto pasta with peas and broccoli, finished with chili flakes\n\nWhy these work: legumes and tofu give filling protein and fiber, and the sauces/spices do most of the flavor work, so dinner stays easy.\n\nIf you want, I can turn this into a 7-night plan or a grocery list.",
+  "applied": [
+    "P-5.1",
+    "P-1.1",
+    "P-0.1",
+    "P-1.2",
+    "F-1.1",
+    "F-4.1",
+    "H-5.1",
+    "H-7.1"
+  ],
+  "skipped": [],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "P-5.1",
+      "P-1.1",
+      "P-0.1",
+      "P-1.2",
+      "F-1.1",
+      "F-4.1",
+      "H-5.1",
+      "H-7.1"
+    ],
+    "live": [
+      "P-5.1",
+      "P-1.1",
+      "P-0.1",
+      "P-1.2",
+      "F-1.1",
+      "F-4.1",
+      "H-5.1",
+      "H-7.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-5.1",
+      "P-1.1",
+      "P-0.1",
+      "P-1.2"
+    ],
+    "recently_changed": []
+  },
+  "attributes": [
+    {
+      "attribute": "answer_length",
+      "current": "very_brief",
+      "original": "detailed_explanations",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "original"
+      ],
+      "reason": "A short list with only a bit of explanation, so it reads as concise rather than detailed."
+    },
+    {
+      "attribute": "cooking_style",
+      "current": "one_pan_freezer_friendly",
+      "original": "elaborate_weekend_projects",
+      "changed": true,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "The ideas are easy weeknight meals, but they don’t especially emphasize one-pan or freezer-friendly cooking."
+    },
+    {
+      "attribute": "diet",
+      "current": "vegetarian",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It explicitly centers vegetarian dinners and only suggests vegetarian dishes."
+    },
+    {
+      "attribute": "spice",
+      "current": "loves_spicy",
+      "changed": false,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "current",
+        "neutral"
+      ],
+      "reason": "It includes some spicy elements, but the wording keeps them mild rather than clearly showing a love of spicy food."
+    }
+  ],
+  "changed_fit_current": 0.5,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 0.5,
+  "judge_cost_usd": 0.00966,
+  "reply_cost_usd": 0.01101
+}

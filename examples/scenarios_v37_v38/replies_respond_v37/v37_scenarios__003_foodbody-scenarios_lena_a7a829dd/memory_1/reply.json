@@ -1,0 +1,113 @@
+{
+  "source": "v37_scenarios__003_foodbody-scenarios_lena_a7a829dd",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Absolutely — I can help with a gentle Mediterranean-style grocery plan for you and your partner, with no grams/calories and no day-by-day tracking. If you want, I can make it as a 5-dinner list with leftovers, or tailor it to your budget and anything you avoid.",
+  "applied": [
+    "P-7.1",
+    "P-7.2",
+    "P-5.1",
+    "P-5.2",
+    "P-0.2",
+    "T-7.1",
+    "F-0.1"
+  ],
+  "skipped": [],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "P-7.1",
+      "P-7.2",
+      "P-5.1",
+      "P-5.2",
+      "P-0.2",
+      "T-7.1",
+      "F-0.1"
+    ],
+    "live": [
+      "P-7.1",
+      "P-7.2",
+      "P-5.1",
+      "P-5.2",
+      "P-0.2",
+      "T-7.1",
+      "F-0.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-7.1",
+      "P-7.2",
+      "P-5.1",
+      "P-5.2",
+      "P-0.2"
+    ],
+    "recently_changed": [
+      "P-5.1",
+      "P-5.2",
+      "T-7.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "nutrition_numbers",
+      "current": "no_numbers",
+      "original": "exact_macros",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It explicitly says there will be no grams/calories or day-by-day tracking."
+    },
+    {
+      "attribute": "check_in_style",
+      "current": "gentle_check_ins",
+      "original": "weekly_data_reports",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "The tone is gentle and optional, with no push for weekly report-style check-ins."
+    },
+    {
+      "attribute": "cuisine",
+      "current": "mediterranean",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It directly offers a Mediterranean-style grocery plan."
+    },
+    {
+      "attribute": "household",
+      "current": "cooking_for_two",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It frames the plan for you and your partner, matching cooking for two."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 1.0,
+  "judge_cost_usd": 0.00607,
+  "reply_cost_usd": 0.01358
+}

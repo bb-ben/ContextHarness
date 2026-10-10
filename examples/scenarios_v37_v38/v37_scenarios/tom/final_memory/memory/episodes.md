@@ -1,0 +1,21 @@
+# Episodes
+- E-0 | 2025-08-04 | source: S-0 | Marathon-training planning request.
+  - O-0.1 | stated | Training for a sub-3:30 marathon.
+  - O-0.2 | behavior | topic: challenge-level | Wants a brutal training response.
+  - O-0.3 | behavior | topic: help-format | Wants the weekly plan in a table.
+  - O-0.4 | behavior | topic: constraints | Wants distances in km.
+- E-1 | 2025-08-09 | source: S-1 | Feedback on a missed workout.
+  - O-1.1 | stated | topic: challenge-level | Wants blunt coaching; says push harder and don't coddle me.
+- E-2 | 2025-08-15 | source: S-2 | User asked for fueling advice for a 32 km run and requested a table.
+  - O-2.1 | behavior | topic: help-format | Asked for the fueling advice in a table.
+  - O-2.2 | behavior | topic: constraints | Used kilometers for the run distance.
+- E-3 | 2025-08-22 | source: S-3 | Race-week meal planning.
+  - O-3.1 | stated | topic: values | Wants performance prioritized over taste in race-week fueling.
+- E-4 | 2025-08-30 | source: S-4 | Stress fracture and running pause.
+  - O-4.1 | event | Has a stress fracture in the foot and will not run for eight weeks.
+  - O-4.2 | reaction | Is gutted about it.
+- E-5 | 2025-09-03 | source: S-5 | Coaching preference shifted toward gentler, healing-focused support.
+  - O-5.1 | behavior | topic: challenge-level | Wants you to go easier right now and focus on healing, not performance.
+- E-6 | 2025-09-08 | source: S-6 | Bone-healing meal ideas in metric.
+  - O-6.1 | behavior | topic: help-format | Asked for meal ideas in a table and kept metric units.
+  - O-6.2 | reaction | topic: challenge-level | Said the gentler healing-focused help was kind and useful, better than the drill-sergeant style.

@@ -1,0 +1,23 @@
+# Episodes
+- E-0 | 2025-06-02 | source: S-0 | Weekend cooking project about fresh pasta from scratch.
+  - O-0.1 | stated | Wants future cooking help to explain the why behind every step, with lots of scientific detail and more of this always.
+- E-1 | 2025-06-08 | source: S-1 | Long Sunday cook about vegetarian ramen broth.
+  - O-1.1 | behavior | topic: help-format | Asked for a deep, step-by-step technique walkthrough.
+  - O-1.2 | stated | topic: spice-level | Likes spicy food and puts chili crisp on everything.
+- E-2 | 2025-06-15 | source: S-2 | Troubleshooting bread.
+  - O-2.1 | behavior | topic: detail-level | Asked for the full rundown on why sourdough was dense.
+  - O-2.2 | behavior | topic: explanation-style | Asked for the causes of sourdough density.
+- E-3 | 2025-06-22 | source: S-3 | Planning a six-hour vegetarian mole for friends; asked for a proper walkthrough and reacted warmly.
+  - O-3.1 | behavior | topic: help-format | Asked for a proper step-by-step walkthrough of a six-hour vegetarian mole.
+  - O-3.2 | reaction | Said the walkthrough was the best part of the week.
+- E-4 | 2025-07-01 | source: S-4 | Baby arrived early; total chaos and sleep in 90-minute chunks.
+  - O-4.1 | event | Baby arrived early; life is chaotic and sleep is in 90-minute chunks.
+- E-5 | 2025-07-10 | source: S-5 | Dinner request for one-handed, very brief help at 3am.
+  - O-5.1 | behavior | topic: constraints | Needs dinner ideas that can be made one-handed.
+  - O-5.2 | behavior | topic: detail-level | Wants the answer kept to about 3 lines because they read at 3am.
+- E-6 | 2025-07-16 | source: S-6 | Batch-cooking chat about freezer meals and wanting brevity.
+  - O-6.1 | behavior | topic: constraints | Asked for freezer meals they can batch on one day, preferably one-pan, and wanted a short list with no explanations.
+  - O-6.2 | reaction | topic: detail-level | Said short is all they can handle now.
+- E-7 | 2025-07-24 | source: S-7
+  - O-7.1 | behavior | topic: constraints | Asked for another one-pan vegetarian meal.
+  - O-7.2 | stated | topic: spice-level | Said their taste buds are the only thing awake, emphasizing they want it spicy.

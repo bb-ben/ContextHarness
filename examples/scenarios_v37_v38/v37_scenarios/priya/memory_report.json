@@ -1,0 +1,1549 @@
+{
+ "layout": "general",
+ "events": 8,
+ "violations_by_code": {
+  "history_rewritten": 1
+ },
+ "events_with_violations": 1,
+ "events_with_new_violations": 1,
+ "unresolved_at_end": 1,
+ "access_totals": {
+  "context.md": {
+   "writes": 12,
+   "reads": 1
+  },
+  "memory/episodes.md": {
+   "writes": 8
+  },
+  "state/hypotheses.md": {
+   "writes": 5,
+   "reads": 1,
+   "errors": 1
+  },
+  "state/preferences.md": {
+   "writes": 13,
+   "reads": 1
+  },
+  "state/profile.md": {
+   "writes": 1,
+   "reads": 1
+  },
+  "state/transient.md": {
+   "writes": 2,
+   "reads": 1
+  }
+ },
+ "final_metrics": {
+  "entries": {
+   "E": 8,
+   "O": 17,
+   "F": 1,
+   "P": 8,
+   "T": 1,
+   "H": 2
+  },
+  "live_entries": {
+   "F": 1,
+   "P": 4
+  },
+  "provenance_share": 1.0,
+  "context_bullets": 4,
+  "context_cited_ids": 4,
+  "context_coverage_of_live_state": 0.8,
+  "episodes_recorded": 8
+ },
+ "per_event": [
+  {
+   "event_id": "S-0",
+   "index": 0,
+   "date": "2025-09-01",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "writes": 1
+    }
+   },
+   "violations": {},
+   "new_violations": {},
+   "metrics": {
+    "entries": {
+     "E": 1,
+     "O": 2,
+     "P": 2
+    },
+    "live_entries": {
+     "P": 2
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 2,
+    "context_cited_ids": 2,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 1
+   }
+  },
+  {
+   "event_id": "S-1",
+   "index": 1,
+   "date": "2025-09-05",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/hypotheses.md": {
+     "writes": 1
+    }
+   },
+   "violations": {},
+   "new_violations": {},
+   "metrics": {
+    "entries": {
+     "E": 2,
+     "O": 4,
+     "P": 2,
+     "H": 1
+    },
+    "live_entries": {
+     "P": 2,
+     "H": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 3,
+    "context_cited_ids": 3,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 2
+   }
+  },
+  {
+   "event_id": "S-2",
+   "index": 2,
+   "date": "2025-09-10",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/hypotheses.md": {
+     "writes": 1
+    }
+   },
+   "violations": {},
+   "new_violations": {},
+   "metrics": {
+    "entries": {
+     "E": 3,
+     "O": 5,
+     "P": 2,
+     "H": 2
+    },
+    "live_entries": {
+     "P": 2,
+     "H": 2
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 4,
+    "context_cited_ids": 4,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 3
+   }
+  },
+  {
+   "event_id": "S-3",
+   "index": 3,
+   "date": "2025-09-14",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "writes": 1
+    }
+   },
+   "violations": {},
+   "new_violations": {},
+   "metrics": {
+    "entries": {
+     "E": 4,
+     "O": 6,
+     "P": 2,
+     "H": 2
+    },
+    "live_entries": {
+     "P": 2,
+     "H": 2
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 4,
+    "context_cited_ids": 4,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 4
+   }
+  },
+  {
+   "event_id": "S-4",
+   "index": 4,
+   "date": "2025-09-20",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/profile.md": {
+     "writes": 1
+    },
+    "state/transient.md": {
+     "writes": 1
+    }
+   },
+   "violations": {},
+   "new_violations": {},
+   "metrics": {
+    "entries": {
+     "E": 5,
+     "O": 8,
+     "F": 1,
+     "P": 2,
+     "T": 1,
+     "H": 2
+    },
+    "live_entries": {
+     "F": 1,
+     "P": 2,
+     "T": 1,
+     "H": 2
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 6,
+    "context_cited_ids": 6,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 5
+   }
+  },
+  {
+   "event_id": "S-5",
+   "index": 5,
+   "date": "2025-09-24",
+   "access": {
+    "context.md": {
+     "reads": 1,
+     "writes": 4
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/hypotheses.md": {
+     "reads": 1
+    },
+    "state/preferences.md": {
+     "writes": 6,
+     "reads": 1
+    },
+    "state/profile.md": {
+     "reads": 1
+    },
+    "state/transient.md": {
+     "reads": 1
+    }
+   },
+   "violations": {},
+   "new_violations": {},
+   "metrics": {
+    "entries": {
+     "E": 6,
+     "O": 12,
+     "F": 1,
+     "P": 5,
+     "T": 1,
+     "H": 2
+    },
+    "live_entries": {
+     "F": 1,
+     "P": 3,
+     "T": 1,
+     "H": 2
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 6,
+    "context_cited_ids": 6,
+    "context_coverage_of_live_state": 0.8571428571428571,
+    "episodes_recorded": 6
+   }
+  },
+  {
+   "event_id": "S-6",
+   "index": 6,
+   "date": "2025-09-29",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/hypotheses.md": {
+     "errors": 1,
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "writes": 2
+    },
+    "state/transient.md": {
+     "writes": 1
+    }
+   },
+   "violations": {},
+   "new_violations": {},
+   "metrics": {
+    "entries": {
+     "E": 7,
+     "O": 14,
+     "F": 1,
+     "P": 7,
+     "T": 1,
+     "H": 2
+    },
+    "live_entries": {
+     "F": 1,
+     "P": 3,
+     "H": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 5,
+    "context_cited_ids": 5,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 7
+   }
+  },
+  {
+   "event_id": "S-7",
+   "index": 7,
+   "date": "2025-10-03",
+   "access": {
+    "context.md": {
+     "writes": 2
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/hypotheses.md": {
+     "writes": 2
+    },
+    "state/preferences.md": {
+     "writes": 3
+    }
+   },
+   "violations": {
+    "history_rewritten": 1
+   },
+   "new_violations": {
+    "history_rewritten": 1
+   },
+   "metrics": {
+    "entries": {
+     "E": 8,
+     "O": 17,
+     "F": 1,
+     "P": 8,
+     "T": 1,
+     "H": 2
+    },
+    "live_entries": {
+     "F": 1,
+     "P": 4
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 4,
+    "context_cited_ids": 4,
+    "context_coverage_of_live_state": 0.8,
+    "episodes_recorded": 8
+   }
+  }
+ ],
+ "violations": [
+  {
+   "event_id": "S-7",
+   "code": "history_rewritten",
+   "path": "state/hypotheses.md",
+   "line": 2,
+   "detail": "statement",
+   "id": "H-1.1"
+  }
+ ],
+ "lifecycle": {
+  "E-0": {
+   "type": "E",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-0.1": {
+   "type": "O",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-0.2": {
+   "type": "O",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "P-0.1": {
+   "type": "P",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     "current"
+    ],
+    [
+     "S-5",
+     "superseded"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "P-0.2": {
+   "type": "P",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     "current"
+    ],
+    [
+     "S-5",
+     "superseded"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "E-1": {
+   "type": "E",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-1.1": {
+   "type": "O",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-1.2": {
+   "type": "O",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "H-1.1": {
+   "type": "H",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     "open"
+    ],
+    [
+     "S-7",
+     "confirmed"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "E-2": {
+   "type": "E",
+   "created": "S-2",
+   "statuses": [
+    [
+     "S-2",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-2.1": {
+   "type": "O",
+   "created": "S-2",
+   "statuses": [
+    [
+     "S-2",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "H-2.1": {
+   "type": "H",
+   "created": "S-2",
+   "statuses": [
+    [
+     "S-2",
+     "open"
+    ],
+    [
+     "S-6",
+     "confirmed"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "E-3": {
+   "type": "E",
+   "created": "S-3",
+   "statuses": [
+    [
+     "S-3",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-3.1": {
+   "type": "O",
+   "created": "S-3",
+   "statuses": [
+    [
+     "S-3",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "E-4": {
+   "type": "E",
+   "created": "S-4",
+   "statuses": [
+    [
+     "S-4",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-4.1": {
+   "type": "O",
+   "created": "S-4",
+   "statuses": [
+    [
+     "S-4",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-4.2": {
+   "type": "O",
+   "created": "S-4",
+   "statuses": [
+    [
+     "S-4",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "F-4.1": {
+   "type": "F",
+   "created": "S-4",
+   "statuses": [
+    [
+     "S-4",
+     "current"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "T-4.1": {
+   "type": "T",
+   "created": "S-4",
+   "statuses": [
+    [
+     "S-4",
+     "active"
+    ],
+    [
+     "S-6",
+     "expired"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "E-5": {
+   "type": "E",
+   "created": "S-5",
+   "statuses": [
+    [
+     "S-5",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-5.1": {
+   "type": "O",
+   "created": "S-5",
+   "statuses": [
+    [
+     "S-5",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-5.2": {
+   "type": "O",
+   "created": "S-5",
+   "statuses": [
+    [
+     "S-5",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-5.3": {
+   "type": "O",
+   "created": "S-5",
+   "statuses": [
+    [
+     "S-5",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-5.4": {
+   "type": "O",
+   "created": "S-5",
+   "statuses": [
+    [
+     "S-5",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "P-5.1": {
+   "type": "P",
+   "created": "S-5",
+   "statuses": [
+    [
+     "S-5",
+     "current"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "P-5.2": {
+   "type": "P",
+   "created": "S-5",
+   "statuses": [
+    [
+     "S-5",
+     "current"
+    ],
+    [
+     "S-6",
+     "superseded"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "P-5.3": {
+   "type": "P",
+   "created": "S-5",
+   "statuses": [
+    [
+     "S-5",
+     "current"
+    ],
+    [
+     "S-6",
+     "superseded"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "E-6": {
+   "type": "E",
+   "created": "S-6",
+   "statuses": [
+    [
+     "S-6",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-6.1": {
+   "type": "O",
+   "created": "S-6",
+   "statuses": [
+    [
+     "S-6",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-6.2": {
+   "type": "O",
+   "created": "S-6",
+   "statuses": [
+    [
+     "S-6",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "P-6.1": {
+   "type": "P",
+   "created": "S-6",
+   "statuses": [
+    [
+     "S-6",
+     "current"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "P-6.2": {
+   "type": "P",
+   "created": "S-6",
+   "statuses": [
+    [
+     "S-6",
+     "current"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "E-7": {
+   "type": "E",
+   "created": "S-7",
+   "statuses": [
+    [
+     "S-7",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-7.1": {
+   "type": "O",
+   "created": "S-7",
+   "statuses": [
+    [
+     "S-7",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-7.2": {
+   "type": "O",
+   "created": "S-7",
+   "statuses": [
+    [
+     "S-7",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-7.3": {
+   "type": "O",
+   "created": "S-7",
+   "statuses": [
+    [
+     "S-7",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "P-7.1": {
+   "type": "P",
+   "created": "S-7",
+   "statuses": [
+    [
+     "S-7",
+     "current"
+    ]
+   ],
+   "last_seen": "S-7"
+  }
+ },
+ "timeline": [
+  {
+   "event_id": "S-0",
+   "date": "2025-09-01",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-0",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Quick dinner-idea chat."
+     },
+     {
+      "id": "O-0.1",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Wants a few quick dinner ideas and hates rigid meal plans."
+     },
+     {
+      "id": "O-0.2",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Wants no calorie info or numbers because they stress them out."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "P-0.1",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Wants loose, brief idea lists instead of rigid meal plans."
+     },
+     {
+      "id": "P-0.2",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Doesn't want calorie counts or other numbers in food ideas."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Doesn't want calorie counts or other numbers in food ideas (P-0.2)",
+     "Wants loose, brief idea lists instead of rigid meal plans (P-0.1)"
+    ],
+    "removed": [],
+    "cited_added": [
+     "P-0.1",
+     "P-0.2"
+    ],
+    "cited_removed": [],
+    "bullets": 2,
+    "as_of": "S-0"
+   }
+  },
+  {
+   "event_id": "S-1",
+   "date": "2025-09-05",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-1",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Snack ideas with a fun, casual vibe."
+     },
+     {
+      "id": "O-1.1",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Asked to make snack ideas fun."
+     },
+     {
+      "id": "O-1.2",
+      "status": "reaction",
+      "path": "memory/episodes.md",
+      "statement": "Said they loved the vibe and wanted more like that."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "H-1.1",
+      "status": "open",
+      "path": "state/hypotheses.md",
+      "statement": "Wants a playful, casual tone for snack ideas."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "May want a playful, casual tone for snack ideas (H-1.1)"
+    ],
+    "removed": [],
+    "cited_added": [
+     "H-1.1"
+    ],
+    "cited_removed": [],
+    "bullets": 3,
+    "as_of": "S-1"
+   }
+  },
+  {
+   "event_id": "S-2",
+   "date": "2025-09-10",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-2",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Asked for a quick way to use leftover rice."
+     },
+     {
+      "id": "O-2.1",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Wanted something that takes under 20 minutes."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "H-2.1",
+      "status": "open",
+      "path": "state/hypotheses.md",
+      "statement": "May want quick food ideas under 20 minutes."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "May care about quick food ideas under 20 minutes (H-2.1)"
+    ],
+    "removed": [],
+    "cited_added": [
+     "H-2.1"
+    ],
+    "cited_removed": [],
+    "bullets": 4,
+    "as_of": "S-2"
+   }
+  },
+  {
+   "event_id": "S-3",
+   "date": "2025-09-14",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-3",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Weekly groceries."
+     },
+     {
+      "id": "O-3.1",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Asked for a loose weekly grocery list and said they'll wing the meals."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [],
+    "changed": [
+     {
+      "id": "P-0.1",
+      "status": [
+       "current",
+       "current"
+      ],
+      "fields": {
+       "basis": [
+        "O-0.1",
+        "O-0.1, O-3.1"
+       ],
+       "confirmed": [
+        null,
+        "2025-09-14"
+       ]
+      },
+      "statement": "Wants loose, brief idea lists instead of rigid meal plans."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [],
+    "removed": [],
+    "cited_added": [],
+    "cited_removed": [],
+    "bullets": 4,
+    "as_of": "S-3"
+   }
+  },
+  {
+   "event_id": "S-4",
+   "date": "2025-09-20",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-4",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Back from doctor; diagnosed with type 2 diabetes and worried about food."
+     },
+     {
+      "id": "O-4.1",
+      "status": "event",
+      "path": "memory/episodes.md",
+      "statement": "Was diagnosed with type 2 diabetes at a doctor appointment."
+     },
+     {
+      "id": "O-4.2",
+      "status": "reaction",
+      "path": "memory/episodes.md",
+      "statement": "Feels freaked out about it."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "F-4.1",
+      "status": "current",
+      "path": "state/profile.md",
+      "statement": "Has type 2 diabetes."
+     },
+     {
+      "id": "T-4.1",
+      "status": "active",
+      "path": "state/transient.md",
+      "statement": "Feels freaked out after a type 2 diabetes diagnosis."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Feels freaked out after diagnosis; review 2025-09-27 (T-4.1)",
+     "Has type 2 diabetes (F-4.1)",
+     "May want quick food ideas under 20 minutes (H-2.1)"
+    ],
+    "removed": [
+     "May care about quick food ideas under 20 minutes (H-2.1)"
+    ],
+    "cited_added": [
+     "F-4.1",
+     "T-4.1"
+    ],
+    "cited_removed": [],
+    "bullets": 6,
+    "as_of": "S-4"
+   }
+  },
+  {
+   "event_id": "S-5",
+   "date": "2025-09-24",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-5",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Asked for a structured week-long meal plan with breakfast, lunch, dinner, and carb counts."
+     },
+     {
+      "id": "O-5.1",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Wants a real weekly breakfast-lunch-dinner plan with structure."
+     },
+     {
+      "id": "O-5.2",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Wants carb counts shown in the plan."
+     },
+     {
+      "id": "O-5.3",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Wants each meal kept under 45 g carbs."
+     },
+     {
+      "id": "O-5.4",
+      "status": "reaction",
+      "path": "memory/episodes.md",
+      "statement": "Said this is much better because winging it is not working anymore."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "P-5.1",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Wants structured weekly meal plans instead of loose idea lists."
+     },
+     {
+      "id": "P-5.2",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Wants carb counts shown in meal plans."
+     },
+     {
+      "id": "P-5.3",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Needs each meal kept under 45 g carbs."
+     }
+    ],
+    "changed": [
+     {
+      "id": "P-0.1",
+      "status": [
+       "current",
+       "superseded"
+      ],
+      "fields": {
+       "until": [
+        null,
+        "2025-09-24"
+       ],
+       "superseded_by": [
+        null,
+        "P-5.1"
+       ]
+      },
+      "statement": "Wants loose, brief idea lists instead of rigid meal plans."
+     },
+     {
+      "id": "P-0.2",
+      "status": [
+       "current",
+       "superseded"
+      ],
+      "fields": {
+       "until": [
+        null,
+        "2025-09-24"
+       ],
+       "superseded_by": [
+        null,
+        "P-5.2"
+       ]
+      },
+      "statement": "Doesn't want calorie counts or other numbers in food ideas."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Needs each meal kept under 45 g carbs (P-5.3)",
+     "Wants carb counts shown in meal plans (P-5.2)",
+     "Wants structured weekly meal plans instead of loose idea lists (P-5.1)"
+    ],
+    "removed": [
+     "Doesn't want calorie counts or other numbers in food ideas (P-0.2)",
+     "Feels freaked out after diagnosis; review 2025-09-27 (T-4.1)",
+     "Wants loose, brief idea lists instead of rigid meal plans (P-0.1)"
+    ],
+    "cited_added": [
+     "P-5.1",
+     "P-5.2",
+     "P-5.3"
+    ],
+    "cited_removed": [
+     "P-0.1",
+     "P-0.2",
+     "T-4.1"
+    ],
+    "bullets": 6,
+    "as_of": "S-5"
+   }
+  },
+  {
+   "event_id": "S-6",
+   "date": "2025-09-29",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-6",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Quick dinner swap and carb-count request."
+     },
+     {
+      "id": "O-6.1",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Wants per-meal carb numbers shown."
+     },
+     {
+      "id": "O-6.2",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Still wants dinners kept under 20 minutes."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "P-6.1",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Wants carb counts shown per meal in meal plans."
+     },
+     {
+      "id": "P-6.2",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Needs each meal kept under 45 g carbs and under 20 minutes."
+     }
+    ],
+    "changed": [
+     {
+      "id": "P-5.2",
+      "status": [
+       "current",
+       "superseded"
+      ],
+      "fields": {
+       "until": [
+        null,
+        "2025-09-29"
+       ],
+       "superseded_by": [
+        null,
+        "P-6.1"
+       ]
+      },
+      "statement": "Wants carb counts shown in meal plans."
+     },
+     {
+      "id": "P-5.3",
+      "status": [
+       "current",
+       "superseded"
+      ],
+      "fields": {
+       "until": [
+        null,
+        "2025-09-29"
+       ],
+       "superseded_by": [
+        null,
+        "P-6.2"
+       ]
+      },
+      "statement": "Needs each meal kept under 45 g carbs."
+     },
+     {
+      "id": "T-4.1",
+      "status": [
+       "active",
+       "expired"
+      ],
+      "fields": {
+       "ended": [
+        null,
+        "2025-09-29"
+       ]
+      },
+      "statement": "Feels freaked out after a type 2 diabetes diagnosis."
+     },
+     {
+      "id": "H-2.1",
+      "status": [
+       "open",
+       "confirmed"
+      ],
+      "fields": {
+       "for": [
+        "O-2.1",
+        "O-2.1, O-6.2"
+       ],
+       "challenges": [
+        null,
+        "P-5.3"
+       ],
+       "resolved_into": [
+        null,
+        "P-6.2"
+       ]
+      },
+      "statement": "May want quick food ideas under 20 minutes."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Needs each meal kept under 45 g carbs and under 20 minutes (P-6.2)",
+     "Wants carb counts shown per meal in meal plans (P-6.1)"
+    ],
+    "removed": [
+     "May want quick food ideas under 20 minutes (H-2.1)",
+     "Needs each meal kept under 45 g carbs (P-5.3)",
+     "Wants carb counts shown in meal plans (P-5.2)"
+    ],
+    "cited_added": [
+     "P-6.1",
+     "P-6.2"
+    ],
+    "cited_removed": [
+     "H-2.1",
+     "P-5.2",
+     "P-5.3"
+    ],
+    "bullets": 5,
+    "as_of": "S-6"
+   }
+  },
+  {
+   "event_id": "S-7",
+   "date": "2025-10-03",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-7",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Next week's meal plan requested again, with the same structured format."
+     },
+     {
+      "id": "O-7.1",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Asked to lay out next week the same way again."
+     },
+     {
+      "id": "O-7.2",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Asked for days, meals, and carb counts."
+     },
+     {
+      "id": "O-7.3",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Asked to keep it fun."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "P-7.1",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Wants a playful, casual tone for food-related replies."
+     }
+    ],
+    "changed": [
+     {
+      "id": "P-5.1",
+      "status": [
+       "current",
+       "current"
+      ],
+      "fields": {
+       "basis": [
+        "O-5.1, O-5.4",
+        "O-5.1, O-5.4, O-7.1"
+       ],
+       "confirmed": [
+        "2025-09-24",
+        "2025-10-03"
+       ]
+      },
+      "statement": "Wants structured weekly meal plans instead of loose idea lists."
+     },
+     {
+      "id": "P-6.1",
+      "status": [
+       "current",
+       "current"
+      ],
+      "fields": {
+       "basis": [
+        "O-5.2, O-6.1",
+        "O-5.2, O-6.1, O-7.2"
+       ],
+       "confirmed": [
+        "2025-09-29",
+        "2025-10-03"
+       ]
+      },
+      "statement": "Wants carb counts shown per meal in meal plans."
+     },
+     {
+      "id": "H-1.1",
+      "status": [
+       "open",
+       "confirmed"
+      ],
+      "fields": {
+       "for": [
+        "O-1.1, O-1.2",
+        "O-1.1, O-1.2, O-7.3"
+       ],
+       "resolved_into": [
+        null,
+        "P-7.1"
+       ]
+      },
+      "statement": "Wants a playful, casual tone for food-related replies."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Wants a playful, casual tone for food-related replies (P-7.1)"
+    ],
+    "removed": [
+     "Has type 2 diabetes (F-4.1)",
+     "May want a playful, casual tone for snack ideas (H-1.1)"
+    ],
+    "cited_added": [
+     "P-7.1"
+    ],
+    "cited_removed": [
+     "F-4.1",
+     "H-1.1"
+    ],
+    "bullets": 4,
+    "as_of": "S-7"
+   }
+  }
+ ]
+}

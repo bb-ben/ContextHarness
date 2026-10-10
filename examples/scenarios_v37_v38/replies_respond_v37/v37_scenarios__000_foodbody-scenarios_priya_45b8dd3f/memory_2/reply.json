@@ -1,0 +1,110 @@
+{
+  "source": "v37_scenarios__000_foodbody-scenarios_priya_45b8dd3f",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 2,
+  "text": "Oof, let’s make dinner easy tonight:\n\n**Garlic chicken + bagged salad + microwave rice**\n- Pan-sear chicken breast or thighs with garlic, salt, pepper\n- Toss a bagged salad with olive oil + vinegar\n- Add 1/2 cup microwave rice or skip it if you want even lower carbs\n\n**Rough carbs:** ~20–25 g if you do the rice, way less without it.\n**Time:** about 15–20 minutes.\n\nIf you want, I can give you 3 more super-quick options in the same carb range.",
+  "applied": [
+    "P-5.1",
+    "P-6.1",
+    "P-6.2",
+    "P-7.1",
+    "F-4.1"
+  ],
+  "skipped": [
+    "T-4.1",
+    "H-1.1",
+    "H-2.1"
+  ],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "P-5.1",
+      "P-6.1",
+      "P-6.2",
+      "P-7.1",
+      "F-4.1"
+    ],
+    "live": [
+      "P-5.1",
+      "P-6.1",
+      "P-6.2",
+      "P-7.1",
+      "F-4.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-5.1",
+      "P-6.1",
+      "P-6.2",
+      "P-7.1"
+    ],
+    "recently_changed": [
+      "P-5.1",
+      "P-6.1",
+      "P-6.2"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "planning_style",
+      "current": "structured_plan",
+      "original": "loose_ideas",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It gives a concrete dinner idea with clear bullet steps, which is nicely structured."
+    },
+    {
+      "attribute": "nutrition_detail",
+      "current": "carb_counts_per_meal",
+      "original": "no_numbers",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It includes a carb estimate for the meal: about 20–25 g."
+    },
+    {
+      "attribute": "cooking_time",
+      "current": "under_20_min",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It states the meal takes about 15–20 minutes."
+    },
+    {
+      "attribute": "tone",
+      "current": "playful",
+      "changed": false,
+      "fit": "neutral",
+      "votes": [
+        "current",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "The “Oof” and friendly phrasing make it light and playful."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 0.75,
+  "judge_cost_usd": 0.00717,
+  "reply_cost_usd": 0.00414
+}
