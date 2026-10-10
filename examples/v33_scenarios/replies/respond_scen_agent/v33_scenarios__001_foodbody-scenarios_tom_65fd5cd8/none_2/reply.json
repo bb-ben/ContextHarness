@@ -1,0 +1,54 @@
+{
+  "source": "v33_scenarios__001_foodbody-scenarios_tom_65fd5cd8",
+  "memory_kind": "none",
+  "condition": "none",
+  "repeat": 2,
+  "text": "You’re not undoing your recovery. Three pizza nights is a wobble, not a reset.\n\nWhat matters now is the next choice, not the last three. Try to do the very next meal in a steady, boring, normal way—no “making up for it,” skipping, or over-correcting.\n\nA few helpful things for tonight/tomorrow:\n- Eat at your usual times if you can\n- Aim for something balanced and satisfying\n- Drink some water, get a little rest, and don’t punish yourself with extra exercise\n- If you’re spiraling, name it as a setback, not a failure\n\nIf this was part of a bigger pattern, we can look at what made pizza feel like the easiest option and make a plan for the next craving. But right now, the goal is just to get back to stable. You haven’t ruined anything.",
+  "applied": [],
+  "utilization": null,
+  "attributes": [
+    {
+      "attribute": "challenge_level",
+      "current": "gentle_supportive",
+      "original": "push_hard",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "The tone is reassuring and non-confrontational, offering support rather than pushing harder."
+    },
+    {
+      "attribute": "focus",
+      "current": "recovery",
+      "original": "performance",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It centers recovery: next meal, avoiding compensation, and getting back to stable rather than performance."
+    },
+    {
+      "attribute": "format",
+      "current": "tables_metric",
+      "changed": false,
+      "fit": "other",
+      "votes": [
+        "other",
+        "other",
+        "other"
+      ],
+      "reason": "The reply is plain prose with bullets, not tables or metric-based formatting."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 0.667,
+  "judge_cost_usd": 0.00496,
+  "reply_cost_usd": 0.00124
+}

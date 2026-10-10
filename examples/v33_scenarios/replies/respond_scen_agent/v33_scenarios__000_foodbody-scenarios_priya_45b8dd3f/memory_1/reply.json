@@ -1,0 +1,95 @@
+{
+  "source": "v33_scenarios__000_foodbody-scenarios_priya_45b8dd3f",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Ugh, yeah — let’s make dinner easy.\n\nA few quick, low-effort picks with rough carb counts:\n- Rotisserie chicken + bagged salad + microwave brown rice: about 30–40g carbs\n- Veggie omelet + 1–2 slices whole-grain toast: about 20–30g carbs\n- Salmon or tofu + frozen veggies + a small baked potato: about 25–35g carbs\n\nIf you want, I can turn this into a super simple “what’s in the fridge” dinner suggestion and keep the carbs tighter.",
+  "applied": [
+    "P-5.1",
+    "P-6.1",
+    "H-1.1"
+  ],
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "P-5.1",
+      "P-6.1",
+      "H-1.1"
+    ],
+    "live": [
+      "P-5.1",
+      "P-6.1",
+      "H-1.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-5.1",
+      "P-6.1"
+    ],
+    "recently_changed": [
+      "P-5.1",
+      "P-6.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "planning_style",
+      "current": "structured_plan",
+      "original": "loose_ideas",
+      "changed": true,
+      "fit": "original",
+      "votes": [
+        "original",
+        "original",
+        "original"
+      ],
+      "reason": "It gives a handful of dinner options, more like loose ideas than a structured plan."
+    },
+    {
+      "attribute": "nutrition_detail",
+      "current": "carb_counts_per_meal",
+      "original": "no_numbers",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It explicitly includes carb counts for each meal option."
+    },
+    {
+      "attribute": "cooking_time",
+      "current": "under_20_min",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "neutral",
+        "current",
+        "current"
+      ],
+      "reason": "It suggests quick, easy meals, but doesn’t clearly commit to under-20-minute cooking."
+    },
+    {
+      "attribute": "tone",
+      "current": "playful",
+      "changed": false,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "other",
+        "neutral"
+      ],
+      "reason": "The tone is casual and helpful, but not especially playful."
+    }
+  ],
+  "changed_fit_current": 0.5,
+  "changed_fit_original": 0.5,
+  "all_fit_current": 0.5,
+  "judge_cost_usd": 0.02161,
+  "reply_cost_usd": 0.00507
+}

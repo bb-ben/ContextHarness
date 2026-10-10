@@ -1,0 +1,54 @@
+{
+  "source": "v33_scenarios__001_foodbody-scenarios_tom_65fd5cd8",
+  "memory_kind": "full-history",
+  "condition": "full-history",
+  "repeat": 2,
+  "text": "You’re not undoing your recovery. Three pizza nights do not erase the work you’ve done.\n\nWhat now:\n\n| Next 24–48 h | Focus |\n|---|---|\n| Next meal | Eat normally, don’t “make up” for it |\n| Today | Get protein at each meal |\n| Today | Add one calcium-rich food |\n| Today | Have fruit/veg once or twice |\n| Today | Drink water and keep it simple |\n\nRecovery is about the average, not one rough stretch. Pizza is just food. The move now is to get back to boring, solid basics and keep healing.\n\nIf you want, I can give you a no-fuss recovery day menu in metric.",
+  "applied": [],
+  "utilization": null,
+  "attributes": [
+    {
+      "attribute": "challenge_level",
+      "current": "gentle_supportive",
+      "original": "push_hard",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Reassuring and low-pressure, with no pushy or demanding tone."
+    },
+    {
+      "attribute": "focus",
+      "current": "recovery",
+      "original": "performance",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Centers on recovery and getting back to basics rather than performance or punishment."
+    },
+    {
+      "attribute": "format",
+      "current": "tables_metric",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "other",
+        "current"
+      ],
+      "reason": "Uses a clear table to organize the next steps, matching the requested structured format."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 1.0,
+  "judge_cost_usd": 0.01406,
+  "reply_cost_usd": 0.00176
+}

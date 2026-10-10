@@ -66,7 +66,7 @@ read and written. It then runs the checks below. Results go to the item's trace 
 | Question | Check codes |
 |---|---|
 | Does each entry follow the format? | `unparsed_line`, `unparsed_entry`, `wrong_file`, `orphan_observation`, `duplicate_id`, `bad_status`, `bad_kind` |
-| Are preferences disciplined? | `undeclared_dimension` (a topic outside the seed list with no `new_dimension:` reason), `near_duplicate_dimension`, `unsupported_promotion` (a preference resting on non-stated evidence from one event, with no confirmed hypothesis), `unused_stated_observation` (a `stated` observation cited by no state entry, hypothesis or goal note) |
+| Are preferences disciplined? | `undeclared_dimension` (a topic outside the seed list with no `new_dimension:` reason), `near_duplicate_dimension`, `unsupported_promotion` (a preference resting on non-stated evidence from one event, with no confirmed hypothesis), `missing_change_note` (a preference or fact superseding another without `changed:`), `long_value` (a current preference or fact over 240 characters), `unused_stated_observation` (a `stated` observation cited by no state entry, hypothesis or goal note) |
 | Does each entry have a source and date? | `future_id` (ID names an event that hasn't happened), `bad_date`, `date_mismatch` (date differs from its event's real date), `bad_source`, `parent_mismatch`, `missing_basis`, `dangling_ref`, `basis_not_observation`, `missing_topic`, `missing_end_date` (a transient entry with no `expires:`/`review:`, or an active goal with no `due:`/`review:`) |
 | Do current-state files contradict each other? | `topic_conflict` (two `current` entries for one topic), `incomplete_supersession`, `supersession_mismatch`, `unresolved_confirmation`, `overdue_transient`, `overdue_goal` (an active goal past its review or due date), `archived_live`, `context_stale`, `context_uncited`, `context_dangling`, `context_inactive` |
 | Does information survive across events? | `missing_episode` (an event left no `E` line), `entry_deleted`, `history_rewritten` (statement, date or kind changed, or basis lost), `status_reverted`; plus each entry's lifecycle (created, status changes, deleted) |
@@ -353,6 +353,58 @@ lets the old part go, so a change can't be told apart from an addition.
 Bookkeeping slips rose with the extra supersessions: 6 one-sided supersession links
 and 7 entries whose date was edited to the latest update, all left open at the end.
 
+### v3.2 → v3.3: revisions that replace, and checking that memory is used
+
+| Problem | Change |
+|---|---|
+| Revisions merged new clauses into old ones (item 6's output-style value reached 569 characters and kept its pre-change wording) | Contract: a new value describes the person now; keep what still holds, drop what is replaced, about 200 characters. A worked example contrasts an addition with a change |
+| Nothing recorded what changed | `changed:` on every preference or fact that supersedes another; the dimensions view shows each value's last change; check `missing_change_note` |
+| Hand-made revisions left one-sided links and edited dates | A `supersede` tool writes the new entry and closes the old one in one step; it refuses a revision without `changed:` or over 240 characters |
+| No way to tell whether a response used memory | `submit_answer` takes the entry IDs a choice rests on (`applied`); results show which were live, replaced or unknown |
+| A multiple-choice letter is not the reply the person gets | `respond-eval`: the agent writes its reply from memory; the same reply is written from a summary, the full history or nothing; a judge grades each against the new and old values |
+
+**FoodBody-style scenarios.** Two short hand-written histories in
+[`scenarios/foodbody.py`](../scenarios/foodbody.py): meal planning after a type 2
+diabetes diagnosis (loose ideas without numbers → structured plans with carb counts;
+quick and playful stay), and coaching after a stress fracture (brutal and
+performance-focused → gentle and recovery-focused; tables in km stay). About 8
+events each, labels that match the conversations, and the correct option is never
+the shortest. A full run costs cents.
+
+**v3.3 results** (gpt-5.4-mini, $1.13 in all; see
+[`examples/v33_scenarios/`](../examples/v33_scenarios) and
+[`examples/respond_hb/`](../examples/respond_hb)):
+
+| | Diagnosis | Injury |
+|---|---|---|
+| Answer: agent / summary | B / B (both correct) | B / B (both correct) |
+| Memory on changed attributes: agent / summary | 1.0 / 1.0 | 0.5 / 1.0 |
+| Changes recorded: agent / summary | **2 of 2** / 2 of 2 | 1 of 2 / 2 of 2 |
+| Reply follows the new values (two replies): agent memory / none / full history / summary | 0.5, 1.0 / 0, 0 / 0.5, 0.5 / 1.0, 1.0 | 1.0 in every condition |
+| Cost of the run: agent / summary | $0.25 / $0.017 | $0.19 / $0.014 |
+
+- **The first recorded changes.** In the diagnosis scenario the agent replaced the
+  format value ("structured meal plans for the week with carb counts per meal",
+  `changed: now wants structured week plans, not loose ideas`) and the numbers value,
+  instead of merging.
+- **Memory is used.** Replies from the agent's memory rest on live entries only (3–5
+  each, no replaced ones) and give carb counts; replies without memory never do.
+- **Replacing can drop too much.** "Quick" (under 20 minutes) still held but fell out
+  of the new value, and "playful" never left hypothesis status, so no reply was
+  playful.
+- **The injury change was read as temporary.** The person said "go easier on me
+  right now", and the agent kept "blunt" as the standing value with "gentler while
+  recovering" as transient state and an open challenge. Its answer and replies still
+  followed the new state; the label counts it as half tracked.
+- **The rolling summary does as well or better here, at a tenth of the cost.** On short
+  histories with stated changes, a plain summary holds everything. Where the layer
+  differs is that its changes, evidence and use are inspectable, and that is not yet
+  an advantage in outcomes.
+- **Some tests can't separate memory from none.** The injury scenario's last message
+  and HorizonBench item 0's ethics question pull every reply toward the new values.
+  On item 6, replies from v3.2's memory followed the old format, because that memory
+  still held "numbered steps" as current.
+
 ## Known gaps
 
 - **The archive itself has no rollover yet** (200,000 chars). That's enough for
@@ -366,8 +418,11 @@ and 7 entries whose date was edited to the latest update, all left open at the e
   item under v2 and v3. Vetting finds 3 of the 6 sample items with a labeled change
   usable as answer tests; it is one model's judgment per item and hasn't been checked
   against a person's reading.
-- **Values only grow.** Merged refinements keep outdated clauses, and nothing
-  records what changed (see "v3.2 on item 6").
+- **v3.3 is untested on a long history.** The scenarios have about 8 events; whether
+  replacement holds up over 75 (item 6) is open.
+- **Replacement can drop what still holds** (the diagnosis scenario lost "quick").
+- **Lasting or temporary is a judgment call** the agent can make differently from the
+  label (the injury scenario).
 - **Open choices left for later:**
   - per-event review of open hypotheses (v2's accident hypothesis sat untouched for
     14 events);

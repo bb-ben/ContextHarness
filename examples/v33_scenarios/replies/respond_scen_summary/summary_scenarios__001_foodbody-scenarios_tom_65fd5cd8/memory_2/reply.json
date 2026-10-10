@@ -1,0 +1,54 @@
+{
+  "source": "summary_scenarios__001_foodbody-scenarios_tom_65fd5cd8",
+  "memory_kind": "summary",
+  "condition": "memory",
+  "repeat": 2,
+  "text": "You’re not undoing your recovery from three pizza nights. That’s a bump, not a reset.\n\nWhat matters most for healing is what you do consistently over the next couple of weeks: enough total food, protein, calcium, vitamin D, and a decent variety of meals. One imperfect stretch won’t cancel that out.\n\n### What to do now\n1. **Take the guilt out of it.** Guilt doesn’t help bone healing.\n2. **Get back to normal at the next meal.** No “make up for it” restriction.\n3. **Prioritize a few healing basics today:**\n   - protein at each meal\n   - a calcium-rich food\n   - some fruit/veg\n   - enough carbs and calories overall\n4. **Hydrate and sleep well tonight.**\n\n### Easy reset meals\n| Meal | Simple option |\n|---|---|\n| Breakfast | Greek yogurt + oats + fruit |\n| Lunch | Chicken/tuna/tofu rice bowl + veg |\n| Snack | Milk + banana, or yogurt + granola |\n| Dinner | Salmon/eggs/beans + potatoes/rice + veg |\n\nIf you want, I can help you build a very simple 2-day “back on track” meal plan that supports bone healing without being fussy.",
+  "applied": [],
+  "utilization": null,
+  "attributes": [
+    {
+      "attribute": "challenge_level",
+      "current": "gentle_supportive",
+      "original": "push_hard",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Reassuring and low-pressure; it validates the slip rather than pushing harder."
+    },
+    {
+      "attribute": "focus",
+      "current": "recovery",
+      "original": "performance",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Centers recovery and healing basics, not performance or optimization."
+    },
+    {
+      "attribute": "format",
+      "current": "tables_metric",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Uses a clear markdown table for the meal ideas, matching the requested table-based style."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 1.0,
+  "judge_cost_usd": 0.00997,
+  "reply_cost_usd": 0.00212
+}

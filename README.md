@@ -11,8 +11,8 @@ contract. HorizonBench supplies long, dated conversation histories in which
 preferences change after life events. That makes it a sequential testbed for
 whether the layer keeps the user's state current.
 
-**Status:** contract **v3.2**. The layer, instrumentation, and Gemini and OpenAI
-adapters are built and tested offline (161 tests). A model that follows the
+**Status:** contract **v3.3**. The layer, instrumentation, and Gemini and OpenAI
+adapters are built and tested offline (175 tests). A model that follows the
 contract produces zero violations across all 901 events of the HorizonBench sample.
 
 **Real runs so far:**
@@ -45,6 +45,13 @@ contract produces zero violations across all 901 events of the HorizonBench samp
   0.3, and still records no change: each revision of a preference merges new clauses
   into the old ones instead of replacing what changed. See
   [`examples/v32_item6/`](examples/v32_item6).
+- **v3.3 on two FoodBody-style scenarios ($1.13 with the reply tests).** The agent
+  recorded its first changes: it replaced "loose ideas, no numbers" with "structured
+  weekly plans with carb counts" and noted what changed. Replies written from its
+  memory used carb counts, which replies without memory never did. A rolling summary
+  did as well or better on these short histories, at a tenth of the cost. See
+  [`examples/v33_scenarios/`](examples/v33_scenarios) and the
+  [design log](docs/MEMORY_LAYER.md#v32--v33-revisions-that-replace-and-checking-that-memory-is-used).
 - **Memory judge on that item.** Graded against the ground-truth attributes, v3
   holds 0.38 of the person's current preferences, v2 0.0, and the rolling summary
   0.75. The summary's lead comes from role-play content recorded before the change,
@@ -63,7 +70,7 @@ Requires Python ≥ 3.12 and [uv](https://docs.astral.sh/uv/).
 
 ```bash
 uv sync
-uv run pytest -q                     # 161 tests, offline, no credentials
+uv run pytest -q                     # 175 tests, offline, no credentials
 export GEMINI_API_KEY=...            # for real-model runs (default model: gemini-3.7-flash)
 ```
 
@@ -95,6 +102,14 @@ uv run context-harness replay-answer runs/<run>/items/<item> --model gpt-5.4-min
 # Grade a finished item's memory against the ground-truth preference attributes
 # (three judgings, majority grade; evaluator side only)
 uv run context-harness judge-memory runs/<run>/items/<item> --max-cost-usd 0.30
+
+# Short FoodBody-style histories with one known change (cents per run)
+uv run context-harness run --model gpt-5.4-mini --dataset scenarios/foodbody.jsonl --max-cost-usd 0.80
+
+# Write the reply the agent would send, from its saved memory, and compare it with
+# replies from no memory and the full history; a judge grades each against the labels
+uv run context-harness respond-eval runs/<run>/items/<item> --condition memory \
+    --condition none --condition full-history --repeats 2 --max-cost-usd 0.40
 
 # Check that each item's labeled change shows up in the person's own words
 uv run context-harness vet-items --config sample --items 0,2,3,5,6,7 --max-cost-usd 0.40
@@ -201,16 +216,23 @@ v2), so it says nothing about the layer.
 | `test_scoring.py`, `test_end_to_end.py`, `test_anthropic_adapter.py` | Scoring and aggregation; CLI runs; the Anthropic adapter |
 | `test_judge.py` | The judge grades beliefs, not raw episodes; missing grades count as absent; repeats combine by majority |
 | `test_vet.py` | Vetting reads only the person's turns, split at the change; verdicts separate memory grading from answer scoring |
+| `test_supersede.py` | `supersede` links both entries, refuses revisions without `changed:` or over the length limit, and leaves files untouched when it refuses |
+| `test_respond.py` | Replies from memory (no options shown), from text or nothing; the reply judge's majority; answers record the entries they rest on |
+| `test_scenarios.py` | The scenario file matches its generator, and every scenario's labels are coherent |
 | `test_replay.py` | Answer-only replay restores the saved memory, reruns only the answer step, applies the strategy, and leaves the source run untouched |
 
 ## Next steps
 
-1. **Contract v3.3: say what changed.** A revision states the person as they are now
-   and drops clauses the new evidence replaces, and a supersession records what
-   changed (`changed:`), so tracking change can be checked directly.
-2. **Score answers only on `usable` items** (0, 2 and 7 in the sample), and grade
+1. **Run v3.3 on HorizonBench item 6** (about $6) to see whether replacement holds
+   over 75 events, and judge both its memory and its replies.
+2. **Keep what still holds when replacing:** before superseding, check each clause of
+   the old value against the new evidence. Promote long-standing hypotheses such as
+   "playful".
+3. **Add more scenarios**, especially ones where the last message alone doesn't give
+   the answer away, so replies can separate memory from none.
+4. **Score answers only on `usable` items** (0, 2 and 7 in the sample), and grade
    memory on `memory_only` items too.
-3. **Check the judge against a person's reading** of a few memories, and try a
+5. **Check the judge against a person's reading** of a few memories, and try a
    stronger judge model.
-4. **Add a FoodBody event renderer and decision/outcome statuses** once a schema is
+6. **Add a FoodBody event renderer and decision/outcome statuses** once a schema is
    supplied.

@@ -1,0 +1,139 @@
+{
+  "model": "gpt-5.4-mini",
+  "rows": [
+    {
+      "source": "v32_item6__006_gemini-3-flash_user_33_0a43d1cf",
+      "condition": "memory",
+      "memory_kind": "agent",
+      "repeat": 1,
+      "changed_fit_current": 0.333,
+      "changed_fit_original": 0.667,
+      "all_fit_current": 0.4,
+      "utilization": {
+        "applied": [
+          "P-13.1",
+          "P-15.1",
+          "P-26.1",
+          "P-2.1",
+          "P-60.1",
+          "F-67.1",
+          "F-29.1",
+          "F-15.1"
+        ],
+        "live": [
+          "P-13.1",
+          "P-15.1",
+          "P-26.1",
+          "P-2.1",
+          "P-60.1",
+          "F-67.1",
+          "F-29.1",
+          "F-15.1"
+        ],
+        "closed": [],
+        "evidence": [],
+        "unknown": [],
+        "live_preferences": [
+          "P-13.1",
+          "P-15.1",
+          "P-26.1",
+          "P-2.1",
+          "P-60.1"
+        ],
+        "recently_changed": [
+          "P-13.1",
+          "P-26.1",
+          "P-60.1",
+          "F-67.1"
+        ]
+      }
+    },
+    {
+      "source": "v32_item6__006_gemini-3-flash_user_33_0a43d1cf",
+      "condition": "none",
+      "memory_kind": "none",
+      "repeat": 1,
+      "changed_fit_current": 0.333,
+      "changed_fit_original": 0.333,
+      "all_fit_current": 0.4,
+      "utilization": null
+    },
+    {
+      "source": "v32_item6__006_gemini-3-flash_user_33_0a43d1cf",
+      "condition": "full-history",
+      "memory_kind": "full-history",
+      "repeat": 1,
+      "changed_fit_current": 0.0,
+      "changed_fit_original": 0.667,
+      "all_fit_current": 0.2,
+      "utilization": null
+    },
+    {
+      "source": "v31_item0__000_sonnet-4.5_user_73_915a8016",
+      "condition": "memory",
+      "memory_kind": "agent",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 0.75,
+      "utilization": {
+        "applied": [
+          "P-5.1",
+          "P-12.1",
+          "P-13.1",
+          "P-25.1",
+          "P-25.2",
+          "P-27.1",
+          "P-27.2"
+        ],
+        "live": [
+          "P-5.1",
+          "P-12.1",
+          "P-13.1",
+          "P-25.1",
+          "P-25.2",
+          "P-27.1",
+          "P-27.2"
+        ],
+        "closed": [],
+        "evidence": [],
+        "unknown": [],
+        "live_preferences": [
+          "P-5.1",
+          "P-12.1",
+          "P-13.1",
+          "P-25.1",
+          "P-25.2",
+          "P-27.1",
+          "P-27.2"
+        ],
+        "recently_changed": [
+          "P-13.1",
+          "P-25.2",
+          "P-27.2"
+        ]
+      }
+    },
+    {
+      "source": "v31_item0__000_sonnet-4.5_user_73_915a8016",
+      "condition": "none",
+      "memory_kind": "none",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 0.75,
+      "utilization": null
+    },
+    {
+      "source": "v31_item0__000_sonnet-4.5_user_73_915a8016",
+      "condition": "full-history",
+      "memory_kind": "full-history",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 0.75,
+      "utilization": null
+    }
+  ],
+  "estimated_cost_usd": 0.298
+}

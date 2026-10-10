@@ -1,0 +1,66 @@
+{
+  "source": "v33_scenarios__000_foodbody-scenarios_priya_45b8dd3f",
+  "memory_kind": "none",
+  "condition": "none",
+  "repeat": 1,
+  "text": "Ugh, same — let’s make this easy. If you want low-effort dinner, I’d do one of these:\n\n- **Egg fried rice**: rice + eggs + frozen veg + soy sauce\n- **Pasta + jarred sauce** with whatever protein/veg you’ve got\n- **Quesadillas** with cheese, beans, chicken, or just cheese\n- **Breakfast for dinner**: eggs, toast, fruit\n- **Sheet pan meal**: toss chicken/sausage + veggies + oil + seasoning in the oven\n\nIf you want, tell me what you have in the fridge/pantry and I’ll help you pick something fast.",
+  "applied": [],
+  "utilization": null,
+  "attributes": [
+    {
+      "attribute": "planning_style",
+      "current": "structured_plan",
+      "original": "loose_ideas",
+      "changed": true,
+      "fit": "original",
+      "votes": [
+        "original",
+        "original",
+        "original"
+      ],
+      "reason": "It gives a loose list of dinner ideas rather than a structured plan."
+    },
+    {
+      "attribute": "nutrition_detail",
+      "current": "carb_counts_per_meal",
+      "original": "no_numbers",
+      "changed": true,
+      "fit": "original",
+      "votes": [
+        "original",
+        "neutral",
+        "original"
+      ],
+      "reason": "There are no carb counts or other numerical nutrition details."
+    },
+    {
+      "attribute": "cooking_time",
+      "current": "under_20_min",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "neutral"
+      ],
+      "reason": "It steers toward quick, low-effort dinner ideas that fit an under-20-minute approach."
+    },
+    {
+      "attribute": "tone",
+      "current": "playful",
+      "changed": false,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "current",
+        "neutral"
+      ],
+      "reason": "The tone is casual and friendly, but not especially playful."
+    }
+  ],
+  "changed_fit_current": 0.0,
+  "changed_fit_original": 1.0,
+  "all_fit_current": 0.25,
+  "judge_cost_usd": 0.0147,
+  "reply_cost_usd": 0.001
+}

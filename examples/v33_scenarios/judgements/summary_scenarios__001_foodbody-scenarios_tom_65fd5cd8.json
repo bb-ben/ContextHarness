@@ -1,0 +1,211 @@
+{
+  "item_id": "Tom Okafor_foodbody_injury_coaching",
+  "judge_model": "gpt-5.4-mini",
+  "memory_chars": 1637,
+  "attributes": [
+    {
+      "attribute": "challenge_level",
+      "current": "gentle_supportive",
+      "original": "push_hard",
+      "changed": true,
+      "memory_value": "kind, supportive; gentle over drill-sergeant",
+      "current_match": "matches",
+      "original_still_current": false,
+      "change_recorded": true,
+      "evidence": "summary.md: \"As of 2025-09-08, user clearly prefers a kind, supportive coaching style right now...\"; \"Supersedes prior preference ... user wanted direct, tough coaching and accountability\"",
+      "votes": [
+        "matches",
+        "matches",
+        "matches"
+      ]
+    },
+    {
+      "attribute": "focus",
+      "current": "recovery",
+      "original": "performance",
+      "changed": true,
+      "memory_value": "healing, not performance",
+      "current_match": "matches",
+      "original_still_current": false,
+      "change_recorded": true,
+      "evidence": "summary.md: \"as of 2025-08-30 this is temporarily paused because of a stress fracture... Current priority is healing, not performance.\"",
+      "votes": [
+        "matches",
+        "matches",
+        "matches"
+      ]
+    },
+    {
+      "attribute": "format",
+      "current": "tables_metric",
+      "changed": false,
+      "memory_value": "weekly tables; kilometers",
+      "current_match": "matches",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "summary.md: \"User prefers training plans presented as weekly tables.\"; \"User prefers distances in kilometers.\"",
+      "votes": [
+        "matches",
+        "matches",
+        "matches"
+      ]
+    }
+  ],
+  "current_fidelity": 1.0,
+  "changed_fidelity": 1.0,
+  "stale": 0,
+  "changes_recorded": 2,
+  "n_attributes": 3,
+  "n_changed": 2,
+  "ungraded": [],
+  "repeats": 3,
+  "agreement": 1.0,
+  "current_fidelity_range": [
+    1.0,
+    1.0
+  ],
+  "estimated_cost_usd": 0.0169,
+  "runs": [
+    {
+      "item_id": "Tom Okafor_foodbody_injury_coaching",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 1637,
+      "attributes": [
+        {
+          "attribute": "challenge_level",
+          "current": "gentle_supportive",
+          "original": "push_hard",
+          "changed": true,
+          "memory_value": "kind, supportive; gentle over drill-sergeant",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": true,
+          "evidence": "summary.md: \"As of 2025-09-08, user clearly prefers a kind, supportive coaching style right now...\"; \"Supersedes prior preference ... user wanted direct, tough coaching and accountability\""
+        },
+        {
+          "attribute": "focus",
+          "current": "recovery",
+          "original": "performance",
+          "changed": true,
+          "memory_value": "healing, not performance",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": true,
+          "evidence": "summary.md: \"as of 2025-08-30 this is temporarily paused because of a stress fracture... Current priority is healing, not performance.\""
+        },
+        {
+          "attribute": "format",
+          "current": "tables_metric",
+          "changed": false,
+          "memory_value": "weekly tables; kilometers",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "summary.md: \"User prefers training plans presented as weekly tables.\"; \"User prefers distances in kilometers.\""
+        }
+      ],
+      "current_fidelity": 1.0,
+      "changed_fidelity": 1.0,
+      "stale": 0,
+      "changes_recorded": 2,
+      "n_attributes": 3,
+      "n_changed": 2,
+      "ungraded": [],
+      "estimated_cost_usd": 0.00879
+    },
+    {
+      "item_id": "Tom Okafor_foodbody_injury_coaching",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 1637,
+      "attributes": [
+        {
+          "attribute": "challenge_level",
+          "current": "gentle_supportive",
+          "original": "push_hard",
+          "changed": true,
+          "memory_value": "gentle/supportive, not tough",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": true,
+          "evidence": "As of 2025-09-08, user clearly prefers a kind, supportive coaching style right now; ... The tough/blunt accountability style is not preferred during this injury-healing phase. - Supersedes prior preference (current through 2025-09-02): user wanted direct, tough coaching and accountability."
+        },
+        {
+          "attribute": "focus",
+          "current": "recovery",
+          "original": "performance",
+          "changed": true,
+          "memory_value": "healing/recovery over performance",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": true,
+          "evidence": "\"Current priority is healing, not performance.\" and \"as of 2025-08-30 this is temporarily paused because of a stress fracture... 8 weeks no running\""
+        },
+        {
+          "attribute": "format",
+          "current": "tables_metric",
+          "changed": false,
+          "memory_value": "tables for plans/guidance",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\"User prefers training plans presented as weekly tables.\" \"user also prefers fueling guidance for long runs to be presented in table form.\" \"bone-healing meal ideas in table form were helpful\""
+        }
+      ],
+      "current_fidelity": 1.0,
+      "changed_fidelity": 1.0,
+      "stale": 0,
+      "changes_recorded": 2,
+      "n_attributes": 3,
+      "n_changed": 2,
+      "ungraded": [],
+      "estimated_cost_usd": 0.00357
+    },
+    {
+      "item_id": "Tom Okafor_foodbody_injury_coaching",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 1637,
+      "attributes": [
+        {
+          "attribute": "challenge_level",
+          "current": "gentle_supportive",
+          "original": "push_hard",
+          "changed": true,
+          "memory_value": "gentle/supportive coaching; not drill-sergeant/tough accountability",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": true,
+          "evidence": "\"As of 2025-09-08, user clearly prefers a kind, supportive coaching style right now\"; \"The tough/blunt accountability style is not preferred during this injury-healing phase\"; \"Supersedes prior preference ... user wanted direct, tough coaching\""
+        },
+        {
+          "attribute": "focus",
+          "current": "recovery",
+          "original": "performance",
+          "changed": true,
+          "memory_value": "recovery / healing, not performance",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": true,
+          "evidence": "\"Current priority is healing, not performance\"; \"as of 2025-08-30 ... temporarily paused because of a stress fracture ... 8 weeks no running\""
+        },
+        {
+          "attribute": "format",
+          "current": "tables_metric",
+          "changed": false,
+          "memory_value": "weekly tables / table form; kilometers",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\"User prefers training plans presented as weekly tables\"; \"prefers distances in kilometers\"; \"fueling guidance ... presented in table form\""
+        }
+      ],
+      "current_fidelity": 1.0,
+      "changed_fidelity": 1.0,
+      "stale": 0,
+      "changes_recorded": 2,
+      "n_attributes": 3,
+      "n_changed": 2,
+      "ungraded": [],
+      "estimated_cost_usd": 0.00454
+    }
+  ]
+}

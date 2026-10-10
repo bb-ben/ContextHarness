@@ -1,0 +1,23 @@
+# Episodes
+- E-0 | 2025-09-01 | source: S-0 | Quick dinner ideas; wants flexible suggestions and no calorie counts.
+  - O-0.1 | stated | Wants dinner ideas, nothing fancy, and hates rigid meal plans.
+  - O-0.2 | stated | Wants no calorie stuff because numbers stress them out.
+- E-1 | 2025-09-05 | source: S-1 | Short chat about study-night snacks.
+  - O-1.1 | behavior | Asked to make snack ideas fun and playful.
+  - O-1.2 | reaction | Liked the playful vibe and asked to keep it that way.
+- E-2 | 2025-09-10 | source: S-2 | Using leftovers fast.
+  - O-2.1 | behavior | Asked for a quick leftover-rice meal in under 20 minutes.
+- E-3 | 2025-09-14 | source: S-3 | Weekly groceries request with a loose plan.
+  - O-3.1 | stated | Wants a grocery list that stays loose because they'll wing the actual meals.
+- E-4 | 2025-09-20 | source: S-4 | Back from a doctor's appointment about a new type 2 diabetes diagnosis.
+  - O-4.1 | event | Was diagnosed with type 2 diabetes and is freaked out about what food means now.
+  - O-4.2 | stated | Wants to know what the diagnosis means for food.
+- E-5 | 2025-09-24 | source: S-5 | Asked for a structured weekly meal plan with carb counts.
+  - O-5.1 | stated | Wants an actual Monday-to-Sunday meal plan with breakfast, lunch, and dinner.
+  - O-5.2 | stated | Needs carb counts per meal under 45 g because their dietitian set that limit.
+  - O-5.3 | stated | Says structure now works better because winging it is not working anymore.
+- E-6 | 2025-09-29 | source: S-6 | Quick dinner swap; user wants per-meal carb numbers kept.
+  - O-6.1 | stated | Wants per-meal carb numbers in meal advice.
+- E-7 | 2025-10-03 | source: S-7 | Next week's meal plan asked for day-by-day meals and carb counts, with a fun tone.
+  - O-7.1 | behavior | Asked for next week's plan laid out by day with meals and carbs.
+  - O-7.2 | behavior | Asked to keep the plan fun.

@@ -1,0 +1,66 @@
+{
+  "source": "summary_scenarios__000_foodbody-scenarios_priya_45b8dd3f",
+  "memory_kind": "summary",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Ugh, I’m sorry — let’s keep dinner easy tonight.\n\nA really solid tired-day dinner: **rotisserie chicken + microwave steamed veggies + a small carb**.\n\n**Option 1: Quick plate**\n- Rotisserie chicken\n- Steam-in-bag broccoli or green beans\n- 1 small microwave potato or 1/2 cup rice\n- **Carbs:** about **20–35g** depending on the potato/rice portion\n\n**Option 2: Eggs for dinner**\n- 2–3 eggs scrambled with cheese\n- Side of sautéed spinach or a salad\n- 1 slice whole grain toast if you want it\n- **Carbs:** about **5–20g**\n\n**Option 3: Easy taco bowl**\n- Ground turkey or chicken\n- Lettuce, salsa, cheese, avocado\n- A small scoop of beans or rice\n- **Carbs:** about **20–40g**\n\nIf you want the absolute lowest-effort answer: **grab a protein, a veggie, and one small carb**. That’s enough.\n\nIf you tell me what’s in your kitchen, I can turn it into a dinner in one sentence.",
+  "applied": [],
+  "utilization": null,
+  "attributes": [
+    {
+      "attribute": "planning_style",
+      "current": "structured_plan",
+      "original": "loose_ideas",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It’s organized into clear dinner options with labeled sections and bullets, which matches a structured plan."
+    },
+    {
+      "attribute": "nutrition_detail",
+      "current": "carb_counts_per_meal",
+      "original": "no_numbers",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It gives carb counts for each meal option, matching per-meal carb tracking."
+    },
+    {
+      "attribute": "cooking_time",
+      "current": "under_20_min",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "The suggested meals are all quick, low-effort choices that fit an under-20-minute dinner."
+    },
+    {
+      "attribute": "tone",
+      "current": "playful",
+      "changed": false,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "The reply is friendly and supportive, but not especially playful or jokey."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 0.75,
+  "judge_cost_usd": 0.00746,
+  "reply_cost_usd": 0.00197
+}

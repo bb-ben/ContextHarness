@@ -1,0 +1,54 @@
+{
+  "source": "summary_scenarios__001_foodbody-scenarios_tom_65fd5cd8",
+  "memory_kind": "summary",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "You’re not undoing your recovery with three pizza nights.\n\nWhat matters for bone healing is the overall pattern: enough total food, plenty of protein, calcium, vitamin D, and consistency over weeks — not one rough patch.\n\nSo: no penance, no starving, no “make up for it.” Just reset at the next meal.\n\nHere’s the simple plan for today:\n\n| Focus | What to do |\n|---|---|\n| Breakfast / first meal | Protein + calcium: Greek yogurt, milk, skyr, eggs + toast, or a smoothie with दूध/milk and yogurt |\n| Lunch / dinner | A normal balanced meal: protein + carbs + veg + a calcium source if you can |\n| Snacks | Fruit, yogurt, cheese, nuts, protein shake, fortified milk |\n| Fluids | Drink normally; no need to “detox” |\n| Mindset | One blip is not a setback unless you turn it into a spiral |\n\nIf you want, I can help you build a very normal 1-day “back on track” eating plan that supports bone healing without feeling restrictive.",
+  "applied": [],
+  "utilization": null,
+  "attributes": [
+    {
+      "attribute": "challenge_level",
+      "current": "gentle_supportive",
+      "original": "push_hard",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Reassuring and non-judgmental, with no pushy or harsh language."
+    },
+    {
+      "attribute": "focus",
+      "current": "recovery",
+      "original": "performance",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Centers recovery and healing habits, not performance or optimization."
+    },
+    {
+      "attribute": "format",
+      "current": "tables_metric",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Uses a simple table to organize the advice."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 1.0,
+  "judge_cost_usd": 0.00372,
+  "reply_cost_usd": 0.00194
+}

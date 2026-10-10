@@ -1,0 +1,66 @@
+{
+  "source": "v33_scenarios__000_foodbody-scenarios_priya_45b8dd3f",
+  "memory_kind": "full-history",
+  "condition": "full-history",
+  "repeat": 2,
+  "text": "Ugh, same. For tonight, I’d go with one of these easy wins:\n\n- Egg fried rice with frozen veg — about 35g carbs, super fast, very low effort\n- Turkey or bean chili in a bowl — about 38g carbs, cozy and filling\n- Big quesadilla with cheese + chicken or beans — about 30–40g carbs depending on tortilla\n- Pasta with garlic, spinach, and a little protein — about 40g carbs if you keep the portion moderate\n\nIf you want the least-brainpower option: egg fried rice. If you want, I can also turn one of these into a super specific “do this tonight” mini recipe.",
+  "applied": [],
+  "utilization": null,
+  "attributes": [
+    {
+      "attribute": "planning_style",
+      "current": "structured_plan",
+      "original": "loose_ideas",
+      "changed": true,
+      "fit": "original",
+      "votes": [
+        "current",
+        "original",
+        "original"
+      ],
+      "reason": "It gives a clearly organized shortlist of dinner options rather than a loose brainstorm."
+    },
+    {
+      "attribute": "nutrition_detail",
+      "current": "carb_counts_per_meal",
+      "original": "no_numbers",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It includes carb counts for each meal, matching the per-meal numbers style."
+    },
+    {
+      "attribute": "cooking_time",
+      "current": "under_20_min",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "neutral",
+        "current"
+      ],
+      "reason": "The suggestions are framed as easy, quick dinner ideas and one is explicitly called super fast."
+    },
+    {
+      "attribute": "tone",
+      "current": "playful",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "The reply sounds casual and playful with lines like \"Ugh, same\" and \"least-brainpower option.\""
+    }
+  ],
+  "changed_fit_current": 0.5,
+  "changed_fit_original": 0.5,
+  "all_fit_current": 0.75,
+  "judge_cost_usd": 0.00885,
+  "reply_cost_usd": 0.00169
+}

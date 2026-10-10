@@ -1,0 +1,26 @@
+{
+  "model": "gpt-5.4-mini",
+  "rows": [
+    {
+      "source": "baseline_summary_item6__006_gemini-3-flash_user_33_0a43d1cf",
+      "condition": "memory",
+      "memory_kind": "summary",
+      "repeat": 1,
+      "changed_fit_current": 0.0,
+      "changed_fit_original": 1.0,
+      "all_fit_current": 0.2,
+      "utilization": null
+    },
+    {
+      "source": "baseline_summary_item0__000_sonnet-4.5_user_73_915a8016",
+      "condition": "memory",
+      "memory_kind": "summary",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 1.0,
+      "utilization": null
+    }
+  ],
+  "estimated_cost_usd": 0.0354
+}

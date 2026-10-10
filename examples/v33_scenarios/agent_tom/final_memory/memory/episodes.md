@@ -1,0 +1,18 @@
+# Episodes
+- E-0 | 2025-08-04 | source: S-0 | Marathon training request with blunt tone and table/km formatting.
+  - O-0.1 | behavior | Wants brutal, blunt feedback.
+  - O-0.2 | behavior | Wants the weekly plan in a table with km units.
+- E-1 | 2025-08-09 | source: S-1 | Feedback on a missed workout.
+  - O-1.1 | stated | Wants blunt, high-challenge feedback; don't coddle me.
+- E-2 | 2025-08-15 | source: S-2 | Fueling a 32 km long run.
+  - O-2.1 | behavior | Asked for the run-fueling advice in a table.
+- E-3 | 2025-08-22 | source: S-3 | Race-week meal planning focused on performance.
+  - O-3.1 | stated | Wants race-week meal plan optimized for performance over personal preferences.
+- E-4 | 2025-08-30 | source: S-4 | Foot stress fracture and temporary running ban.
+  - O-4.1 | event | Has a stress fracture in a foot and has 8 weeks no running.
+  - O-4.2 | reaction | Is gutted about being unable to run for 8 weeks.
+- E-5 | 2025-09-03 | source: S-5 | How they want to be coached now.
+  - O-5.1 | stated | Wants you to go easier on them right now.
+  - O-5.2 | stated | Wants healing, not performance, as the focus for now.
+- E-6 | 2025-09-08 | source: S-6 | Bone-healing meal ideas.
+  - O-6.1 | reaction | Says the kind, useful tone helped more than the drill-sergeant approach.

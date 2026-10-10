@@ -1,0 +1,102 @@
+S-0 · 2025-09-01
+  working context: 2 bullets (cites +P-0.1 +P-0.2)
+    + Wants a few quick ideas instead of rigid meal plans (P-0.1)
+    + Wants recommendations without calorie counts or other numbers (P-0.2)
+  episodic:
+    + E-0 [episode] Quick dinner ideas; wants flexible suggestions and no calorie counts.
+    + O-0.1 [stated] Wants dinner ideas, nothing fancy, and hates rigid meal plans.
+    + O-0.2 [stated] Wants no calorie stuff because numbers stress them out.
+  state:
+    + P-0.1 [current] Wants a few quick ideas instead of rigid meal plans.
+    + P-0.2 [current] Wants recommendations without calorie counts or other numbers.
+S-1 · 2025-09-05
+  working context: 3 bullets (cites +H-1.1)
+    + May like a playful, upbeat tone for casual requests (H-1.1)
+  episodic:
+    + E-1 [episode] Short chat about study-night snacks.
+    + O-1.1 [behavior] Asked to make snack ideas fun and playful.
+    + O-1.2 [reaction] Liked the playful vibe and asked to keep it that way.
+  state:
+    + H-1.1 [open] They may like a playful, upbeat tone for casual requests.
+S-2 · 2025-09-10
+  working context: 3 bullets (cites +P-2.1 -P-0.1)
+    + Wants a few quick ideas instead of rigid meal plans (P-2.1)
+    - Wants a few quick ideas instead of rigid meal plans (P-0.1)
+  episodic:
+    + E-2 [episode] Using leftovers fast.
+    + O-2.1 [behavior] Asked for a quick leftover-rice meal in under 20 minutes.
+  state:
+    + P-2.1 [current] Wants a few quick ideas instead of rigid meal plans.
+    ~ P-0.1 current -> superseded superseded_by: P-2.1
+S-3 · 2025-09-14
+  working context: 3 bullets (cites +P-3.1 -P-2.1)
+    + Wants quick, loose ideas instead of rigid meal plans (P-3.1)
+    - Wants a few quick ideas instead of rigid meal plans (P-2.1)
+  episodic:
+    + E-3 [episode] Weekly groceries request with a loose plan.
+    + O-3.1 [stated] Wants a grocery list that stays loose because they'll wing the actual meals.
+  state:
+    + P-3.1 [current] Wants quick, loose ideas instead of rigid meal plans.
+    ~ P-2.1 current -> superseded superseded_by: P-3.1
+S-4 · 2025-09-20
+  working context: 4 bullets (cites +F-4.1 +T-4.1)
+    + Has type 2 diabetes and feels freaked out about food right now (F-4.1, T-4.1)
+  episodic:
+    + E-4 [episode] Back from a doctor's appointment about a new type 2 diabetes diagnosis.
+    + O-4.1 [event] Was diagnosed with type 2 diabetes and is freaked out about what food means now.
+    + O-4.2 [stated] Wants to know what the diagnosis means for food.
+  state:
+    + F-4.1 [current] Has type 2 diabetes.
+    + T-4.1 [active] Feels freaked out about food guidance right now.
+S-5 · 2025-09-24
+  working context: 4 bullets (cites +H-5.1 +P-5.1 -H-1.1 -P-3.1)
+    + Meal-plan advice may now need numeric guidance even though they usually avoid numbers (H-5.1)
+    + Usually wants recommendations without calorie counts or other numbers (P-0.2)
+    + Wants structured meal plans for the week with carb counts per meal (P-5.1)
+    - May like a playful, upbeat tone for casual requests (H-1.1)
+    - Wants quick, loose ideas instead of rigid meal plans (P-3.1)
+    - Wants recommendations without calorie counts or other numbers (P-0.2)
+  episodic:
+    + E-5 [episode] Asked for a structured weekly meal plan with carb counts.
+    + O-5.1 [stated] Wants an actual Monday-to-Sunday meal plan with breakfast, lunch, and dinner.
+    + O-5.2 [stated] Needs carb counts per meal under 45 g because their dietitian set that limit.
+    + O-5.3 [stated] Says structure now works better because winging it is not working anymore.
+  state:
+    + P-5.1 [current] Wants structured meal plans for the week with carb counts per meal.
+    + H-5.1 [open] They may now want numeric guidance in meal-plan advice when health guidance matters.
+    ~ P-3.1 current -> superseded superseded_by: P-5.1
+S-6 · 2025-09-29
+  working context: 2 bullets (cites +P-6.1 -H-5.1 -P-0.2 -T-4.1)
+    + Has type 2 diabetes (F-4.1)
+    + Wants structured meal plans for the week with carb counts per meal, and now wants per-meal carb numbers in gu…
+    - Has type 2 diabetes and feels freaked out about food right now (F-4.1, T-4.1)
+    - Meal-plan advice may now need numeric guidance even though they usually avoid numbers (H-5.1)
+    - Usually wants recommendations without calorie counts or other numbers (P-0.2)
+    - Wants structured meal plans for the week with carb counts per meal (P-5.1)
+  episodic:
+    + E-6 [episode] Quick dinner swap; user wants per-meal carb numbers kept.
+    + O-6.1 [stated] Wants per-meal carb numbers in meal advice.
+  state:
+    + P-6.1 [current] Wants recommendations with per-meal carb counts in meal guidance.
+    ~ P-0.2 current -> superseded superseded_by: P-6.1
+    ~ T-4.1 active -> expired ended: 2025-09-29
+    ~ H-5.1 open -> confirmed confidence: medium for: O-5.1, O-5.3, O-6.1 resolved_into: P-6.1
+S-7 · 2025-10-03
+  working context: 3 bullets (cites +H-1.1)
+    + May like a playful, upbeat tone for casual requests (H-1.1)
+    + Wants structured meal plans for the week with carb counts per meal, and per-meal carb numbers in guidance too…
+    - Wants structured meal plans for the week with carb counts per meal, and now wants per-meal carb numbers in gu…
+  episodic:
+    + E-7 [episode] Next week's meal plan asked for day-by-day meals and carb counts, with a fun tone.
+    + O-7.1 [behavior] Asked for next week's plan laid out by day with meals and carbs.
+    + O-7.2 [behavior] Asked to keep the plan fun.
+  state:
+    ~ P-5.1  basis: O-5.1, O-5.3, O-7.1 confirmed: 2025-10-03
+    ~ P-6.1  basis: O-6.1, O-7.1 confirmed: 2025-10-03
+    ~ H-1.1  for: O-1.1, O-1.2, O-7.2
+
+Totals over the run:
+  working_context  added 13  removed 10
+  episodic         added 22  changed 0  moved 0  removed 0
+  state            added 10  changed 9  moved 0  removed 0
+  decisions        added 0  changed 0  moved 0  removed 0

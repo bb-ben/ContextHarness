@@ -1,0 +1,9 @@
+- User has type 2 diabetes (diagnosed **2025-09-20**) and can get anxious about food, so advice should stay **reassuring, practical, and simple** rather than overwhelming.
+- As of **2025-09-24**, user wants **actual structure** for food: a **real Monday–Sunday meal plan** with **breakfast, lunch, and dinner**, not just loose ideas.
+- As of **2025-09-24**, user specifically needs **carb counts per meal** because their dietitian wants them **under 45g carbs per meal**.
+- As of **2025-09-29**, the user confirmed that **per-meal carb numbers are exactly what they need** and wants to **keep getting carb counts** in meal help.
+- As of **2025-10-03**, user asked for **next week’s meal plan the same way**: **days + meals + carb counts**, and said to **keep it fun** too.
+- The older preference for **avoiding numbers / nutrition math** is **superseded as of 2025-09-24**; carb counts are now welcome and useful.
+- The older preference for **winging meals with flexible options** is also **superseded as of 2025-09-24**; user said **“winging it isn’t working anymore”** and the structure is helping.
+- Still aim for food ideas that are **easy, manageable, and not overly complicated or fussy**.
+- If offering groceries or meal help, keep it **clear, practical, and structured** rather than vague.

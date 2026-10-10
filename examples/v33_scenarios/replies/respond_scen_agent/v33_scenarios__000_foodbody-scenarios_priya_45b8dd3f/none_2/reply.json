@@ -1,0 +1,66 @@
+{
+  "source": "v33_scenarios__000_foodbody-scenarios_priya_45b8dd3f",
+  "memory_kind": "none",
+  "condition": "none",
+  "repeat": 2,
+  "text": "Ugh, I feel that. For a tired-long-day dinner, I’d go максимально low-effort:\n\n- **Eggs + toast + whatever veg/fridge bits** — breakfast-for-dinner is undefeated.\n- **Pasta with butter/olive oil, garlic, and cheese** — 10 minutes, feels like real food.\n- **Rotisserie chicken or deli protein + microwave rice + frozen veg** — almost no cooking.\n- **Quesadillas/tacos** — tortillas, cheese, beans, salsa, done.\n- **Soup + grilled cheese** — cozy and minimal.\n\nIf you want, I can give you a **“use what you already have” dinner idea** if you tell me what’s in your fridge/pantry.",
+  "applied": [],
+  "utilization": null,
+  "attributes": [
+    {
+      "attribute": "planning_style",
+      "current": "structured_plan",
+      "original": "loose_ideas",
+      "changed": true,
+      "fit": "original",
+      "votes": [
+        "original",
+        "original",
+        "original"
+      ],
+      "reason": "It gives a loose list of options, not a structured plan."
+    },
+    {
+      "attribute": "nutrition_detail",
+      "current": "carb_counts_per_meal",
+      "original": "no_numbers",
+      "changed": true,
+      "fit": "original",
+      "votes": [
+        "original",
+        "neutral",
+        "original"
+      ],
+      "reason": "There are no carb counts or other meal numbers."
+    },
+    {
+      "attribute": "cooking_time",
+      "current": "under_20_min",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "The suggestions are explicitly very fast, like 10 minutes or almost no cooking."
+    },
+    {
+      "attribute": "tone",
+      "current": "playful",
+      "changed": false,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "current"
+      ],
+      "reason": "Warm and casual, but not especially playful."
+    }
+  ],
+  "changed_fit_current": 0.0,
+  "changed_fit_original": 1.0,
+  "all_fit_current": 0.25,
+  "judge_cost_usd": 0.01289,
+  "reply_cost_usd": 0.00109
+}

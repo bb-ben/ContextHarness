@@ -1,0 +1,66 @@
+{
+  "source": "v33_scenarios__000_foodbody-scenarios_priya_45b8dd3f",
+  "memory_kind": "full-history",
+  "condition": "full-history",
+  "repeat": 1,
+  "text": "Oof, long day dinners call for the easiest thing in reach. A few solid options:\n\n- **Egg fried rice** with frozen veg and soy sauce — about **35–40 g carbs** depending on the rice amount.\n- **Quesadilla + side salad or veggies** — about **30–35 g carbs**.\n- **Turkey or bean taco bowl** with lettuce, salsa, cheese, and a small scoop of rice or beans — about **30–40 g carbs**.\n\nIf you want, I can also turn whatever you’ve got in the fridge into a dinner idea right now.",
+  "applied": [],
+  "utilization": null,
+  "attributes": [
+    {
+      "attribute": "planning_style",
+      "current": "structured_plan",
+      "original": "loose_ideas",
+      "changed": true,
+      "fit": "original",
+      "votes": [
+        "neutral",
+        "original",
+        "original"
+      ],
+      "reason": "It gives a short list of dinner ideas, but not a clearly structured plan."
+    },
+    {
+      "attribute": "nutrition_detail",
+      "current": "carb_counts_per_meal",
+      "original": "no_numbers",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It includes carb counts for each meal option."
+    },
+    {
+      "attribute": "cooking_time",
+      "current": "under_20_min",
+      "changed": false,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "It suggests easy meals, but doesn’t clearly keep everything under 20 minutes."
+    },
+    {
+      "attribute": "tone",
+      "current": "playful",
+      "changed": false,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "The tone is friendly and casual, but not especially playful."
+    }
+  ],
+  "changed_fit_current": 0.5,
+  "changed_fit_original": 0.5,
+  "all_fit_current": 0.25,
+  "judge_cost_usd": 0.0122,
+  "reply_cost_usd": 0.00203
+}

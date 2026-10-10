@@ -1,0 +1,66 @@
+{
+  "source": "summary_scenarios__000_foodbody-scenarios_priya_45b8dd3f",
+  "memory_kind": "summary",
+  "condition": "memory",
+  "repeat": 2,
+  "text": "Ugh, same — let’s make this easy.\n\n**Best low-effort dinner tonight:**\n**Rotisserie chicken + microwave steam-in-bag veggies + a small carb**\n- Rotisserie chicken: **0g carbs**\n- Steam-in-bag broccoli or mixed veggies: **5–10g carbs**\n- 1 small microwave potato: **26g carbs**\n**Total:** about **31–36g carbs**\n\n**If you want even easier:**\n- **Eggs + toast + fruit**\n- 2 eggs: **0g**\n- 1 slice whole wheat toast: **12–15g**\n- 1 small apple or clementine: **15–20g**\n**Total:** about **27–35g carbs**\n\n**If you want takeout-ish vibes at home:**\n- **Frozen meatballs + marinara + zucchini noodles**\n- Add 1/2 cup cooked pasta if you want: **~20g carbs**\n**Total:** usually **15–35g carbs**, depending on the pasta\n\nIf you want, I can pick **one exact dinner** based on what you’ve got in the kitchen.",
+  "applied": [],
+  "utilization": null,
+  "attributes": [
+    {
+      "attribute": "planning_style",
+      "current": "structured_plan",
+      "original": "loose_ideas",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "The reply is neatly organized into labeled dinner options with clear structure."
+    },
+    {
+      "attribute": "nutrition_detail",
+      "current": "carb_counts_per_meal",
+      "original": "no_numbers",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It gives explicit carb counts for each meal and totals per option."
+    },
+    {
+      "attribute": "cooking_time",
+      "current": "under_20_min",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "The suggested meals are framed as very quick, low-effort options using items like rotisserie chicken and microwave veggies."
+    },
+    {
+      "attribute": "tone",
+      "current": "playful",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "neutral",
+        "current"
+      ],
+      "reason": "The opener and phrasing are casual and lightly playful, matching the desired vibe."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 1.0,
+  "judge_cost_usd": 0.00879,
+  "reply_cost_usd": 0.00231
+}

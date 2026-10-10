@@ -1,0 +1,218 @@
+{
+  "model": "gpt-5.4-mini",
+  "rows": [
+    {
+      "source": "v33_scenarios__000_foodbody-scenarios_priya_45b8dd3f",
+      "condition": "memory",
+      "memory_kind": "agent",
+      "repeat": 1,
+      "changed_fit_current": 0.5,
+      "changed_fit_original": 0.5,
+      "all_fit_current": 0.5,
+      "utilization": {
+        "applied": [
+          "P-5.1",
+          "P-6.1",
+          "H-1.1"
+        ],
+        "live": [
+          "P-5.1",
+          "P-6.1",
+          "H-1.1"
+        ],
+        "closed": [],
+        "evidence": [],
+        "unknown": [],
+        "live_preferences": [
+          "P-5.1",
+          "P-6.1"
+        ],
+        "recently_changed": [
+          "P-5.1",
+          "P-6.1"
+        ]
+      }
+    },
+    {
+      "source": "v33_scenarios__000_foodbody-scenarios_priya_45b8dd3f",
+      "condition": "memory",
+      "memory_kind": "agent",
+      "repeat": 2,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 0.75,
+      "utilization": {
+        "applied": [
+          "F-4.1",
+          "P-5.1",
+          "P-6.1",
+          "H-1.1"
+        ],
+        "live": [
+          "F-4.1",
+          "P-5.1",
+          "P-6.1",
+          "H-1.1"
+        ],
+        "closed": [],
+        "evidence": [],
+        "unknown": [],
+        "live_preferences": [
+          "P-5.1",
+          "P-6.1"
+        ],
+        "recently_changed": [
+          "P-5.1",
+          "P-6.1"
+        ]
+      }
+    },
+    {
+      "source": "v33_scenarios__000_foodbody-scenarios_priya_45b8dd3f",
+      "condition": "none",
+      "memory_kind": "none",
+      "repeat": 1,
+      "changed_fit_current": 0.0,
+      "changed_fit_original": 1.0,
+      "all_fit_current": 0.25,
+      "utilization": null
+    },
+    {
+      "source": "v33_scenarios__000_foodbody-scenarios_priya_45b8dd3f",
+      "condition": "none",
+      "memory_kind": "none",
+      "repeat": 2,
+      "changed_fit_current": 0.0,
+      "changed_fit_original": 1.0,
+      "all_fit_current": 0.25,
+      "utilization": null
+    },
+    {
+      "source": "v33_scenarios__000_foodbody-scenarios_priya_45b8dd3f",
+      "condition": "full-history",
+      "memory_kind": "full-history",
+      "repeat": 1,
+      "changed_fit_current": 0.5,
+      "changed_fit_original": 0.5,
+      "all_fit_current": 0.25,
+      "utilization": null
+    },
+    {
+      "source": "v33_scenarios__000_foodbody-scenarios_priya_45b8dd3f",
+      "condition": "full-history",
+      "memory_kind": "full-history",
+      "repeat": 2,
+      "changed_fit_current": 0.5,
+      "changed_fit_original": 0.5,
+      "all_fit_current": 0.75,
+      "utilization": null
+    },
+    {
+      "source": "v33_scenarios__001_foodbody-scenarios_tom_65fd5cd8",
+      "condition": "memory",
+      "memory_kind": "agent",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 1.0,
+      "utilization": {
+        "applied": [
+          "P-2.1",
+          "T-6.1",
+          "T-4.2"
+        ],
+        "live": [
+          "P-2.1",
+          "T-6.1",
+          "T-4.2"
+        ],
+        "closed": [],
+        "evidence": [],
+        "unknown": [],
+        "live_preferences": [
+          "P-2.1"
+        ],
+        "recently_changed": [
+          "T-6.1"
+        ]
+      }
+    },
+    {
+      "source": "v33_scenarios__001_foodbody-scenarios_tom_65fd5cd8",
+      "condition": "memory",
+      "memory_kind": "agent",
+      "repeat": 2,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 1.0,
+      "utilization": {
+        "applied": [
+          "T-6.1",
+          "T-4.2",
+          "P-2.1",
+          "P-1.1",
+          "H-6.1"
+        ],
+        "live": [
+          "T-6.1",
+          "T-4.2",
+          "P-2.1",
+          "P-1.1",
+          "H-6.1"
+        ],
+        "closed": [],
+        "evidence": [],
+        "unknown": [],
+        "live_preferences": [
+          "P-2.1",
+          "P-1.1"
+        ],
+        "recently_changed": [
+          "T-6.1",
+          "H-6.1"
+        ]
+      }
+    },
+    {
+      "source": "v33_scenarios__001_foodbody-scenarios_tom_65fd5cd8",
+      "condition": "none",
+      "memory_kind": "none",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 0.667,
+      "utilization": null
+    },
+    {
+      "source": "v33_scenarios__001_foodbody-scenarios_tom_65fd5cd8",
+      "condition": "none",
+      "memory_kind": "none",
+      "repeat": 2,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 0.667,
+      "utilization": null
+    },
+    {
+      "source": "v33_scenarios__001_foodbody-scenarios_tom_65fd5cd8",
+      "condition": "full-history",
+      "memory_kind": "full-history",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 1.0,
+      "utilization": null
+    },
+    {
+      "source": "v33_scenarios__001_foodbody-scenarios_tom_65fd5cd8",
+      "condition": "full-history",
+      "memory_kind": "full-history",
+      "repeat": 2,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 1.0,
+      "utilization": null
+    }
+  ],
+  "estimated_cost_usd": 0.153
+}

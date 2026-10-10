@@ -1,0 +1,89 @@
+{
+  "source": "v33_scenarios__001_foodbody-scenarios_tom_65fd5cd8",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 2,
+  "text": "Not undone. Three pizza nights is a wobble, not a reset.\n\n| Do this next | Why |\n|---|---|\n| Eat your next meal normally | Don’t compensate; that usually backfires. |\n| Get one solid protein + fiber meal today | Helps you feel back in control. |\n| Drink water and keep your sleep routine steady tonight | Recovery likes consistency more than perfection. |\n| Pick one fallback meal for the next tired day | Prevents the pizza-again loop. |\n\nNo punishment, no “make up for it” workout, and no spiral over it.\n\nIf you want, I can help you turn this into a simple 3-day recovery meal plan.",
+  "applied": [
+    "T-6.1",
+    "T-4.2",
+    "P-2.1",
+    "P-1.1",
+    "H-6.1"
+  ],
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "T-6.1",
+      "T-4.2",
+      "P-2.1",
+      "P-1.1",
+      "H-6.1"
+    ],
+    "live": [
+      "T-6.1",
+      "T-4.2",
+      "P-2.1",
+      "P-1.1",
+      "H-6.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-2.1",
+      "P-1.1"
+    ],
+    "recently_changed": [
+      "T-6.1",
+      "H-6.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "challenge_level",
+      "current": "gentle_supportive",
+      "original": "push_hard",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Warm, reassuring tone; it avoids pushing and uses supportive language like “Not undone” and “No punishment.”"
+    },
+    {
+      "attribute": "focus",
+      "current": "recovery",
+      "original": "performance",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Centers recovery behaviors—next meal, sleep, hydration, consistency—rather than performance or weight-loss framing."
+    },
+    {
+      "attribute": "format",
+      "current": "tables_metric",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Uses a table to organize actions and reasons, matching the requested tables-and-metrics style."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 1.0,
+  "judge_cost_usd": 0.00475,
+  "reply_cost_usd": 0.00574
+}

@@ -1,0 +1,128 @@
+{
+  "source": "v32_item6__006_gemini-3-flash_user_33_0a43d1cf",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Sí. We move fast, but we stay lawful, disciplined, and dignity-first.\n\n**North star:** make the city pause by showing the Bosa vendors as organized neighbors, not isolated targets.\n\n## 7-day mobilization plan\n\n### 1) Tonight: lock the message\nUse one line everywhere:\n**“Bosa vendors are livelihoods, not obstacles.”**\n\nBack it with:\n- 3 vendor testimonies\n- 3 hard facts: jobs, families supported, years in the plaza\n- 1 clear ask: **pause the move and open a real negotiation**\n\n### 2) In the next 24–48 hours: build the crew structure\nSplit into 4 crews:\n1. **Vendor crew** — consent, turnout, stories, discipline\n2. **Neighbor crew** — customers, residents, nearby shops\n3. **Media crew** — photos, video, WhatsApp, press\n4. **Institution crew** — petitions, letters, meeting requests\n\nOne person owns each crew. No committee soup.\n\n### 3) In 48 hours: build the evidence pack\nCollect:\n- 10 short statements from vendors\n- 10 signatures from neighbors or customers\n- 5 photos showing the plaza in daily use\n- 1 simple timeline of the city’s move\n- 1 map of who gets affected\n\n### 4) Next 72 hours: go public, peacefully\nDo one visible action before the move:\n- solidarity breakfast\n- vendor market day\n- human chain\n- press walk-through\n- candle vigil\n\nKeep it orderly, photogenic, and calm.\n\n### 5) Same day: pressure institutions\nSend the same message to the city, oversight bodies, and allies:\n- pause the move\n- request an urgent meeting\n- demand a written explanation\n- ask for a relocation or compensation plan\n- insist vendors be included in the decision\n\n### 6) Day of the move: be ready\nHave ready:\n- legal observers\n- documentation lead\n- media contact list\n- rapid-response WhatsApp group\n- chargers, water, signs, megaphone\n- one de-escalation lead\n\n### 7) After every action: close with momentum\nEvery action should end with:\n- 1 photo\n- 1 quote\n- 1 next step\n- 1 deadline\n\n## If you only have 2 hours\nDo these first:\n1. Choose one spokesperson\n2. Gather 3 vendor quotes\n3. Take 5 photos\n4. Send the pause request\n5. Set the public action date\n\nIf you want, send me the exact move date, how many vendors are involved, and your strongest allies today — and I’ll turn this into a 24-hour execution grid.\n\n**Recap:** one message, one evidence pack, four crews, peaceful visibility, and day-of readiness.",
+  "applied": [
+    "P-13.1",
+    "P-15.1",
+    "P-26.1",
+    "P-2.1",
+    "P-60.1",
+    "F-67.1",
+    "F-29.1",
+    "F-15.1"
+  ],
+  "steps": 2,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "P-13.1",
+      "P-15.1",
+      "P-26.1",
+      "P-2.1",
+      "P-60.1",
+      "F-67.1",
+      "F-29.1",
+      "F-15.1"
+    ],
+    "live": [
+      "P-13.1",
+      "P-15.1",
+      "P-26.1",
+      "P-2.1",
+      "P-60.1",
+      "F-67.1",
+      "F-29.1",
+      "F-15.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-13.1",
+      "P-15.1",
+      "P-26.1",
+      "P-2.1",
+      "P-60.1"
+    ],
+    "recently_changed": [
+      "P-13.1",
+      "P-26.1",
+      "P-60.1",
+      "F-67.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "preferred_response_format",
+      "current": "executive_summary_with_strategic_tradeoffs",
+      "original": "structured_numbered_steps",
+      "changed": true,
+      "fit": "original",
+      "votes": [
+        "original",
+        "original",
+        "original"
+      ],
+      "reason": "It’s organized as a numbered action plan with headings, not an executive summary with tradeoffs."
+    },
+    {
+      "attribute": "emotional_tone",
+      "current": "diplomatic_and_authoritative",
+      "original": "direct_pragmatic",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "The tone is firm, calm, and legitimacy-focused, which reads as diplomatic-authoritative."
+    },
+    {
+      "attribute": "explanation_approach",
+      "current": "impact_assessment_first",
+      "original": "principles_first_then_examples",
+      "changed": true,
+      "fit": "original",
+      "votes": [
+        "original",
+        "original",
+        "original"
+      ],
+      "reason": "It starts with a guiding principle and then unfolds into steps, rather than leading with impact assessment."
+    },
+    {
+      "attribute": "example_preference",
+      "current": "real_world_analogies",
+      "changed": false,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "It uses concrete tactics and steps, but no real-world analogies to anchor the advice."
+    },
+    {
+      "attribute": "boundary_setting_voice",
+      "current": "value_based_reasoning",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "The limits are framed in values like lawfulness, dignity, and inclusion, which is value-based reasoning."
+    }
+  ],
+  "changed_fit_current": 0.333,
+  "changed_fit_original": 0.667,
+  "all_fit_current": 0.4,
+  "judge_cost_usd": 0.01737,
+  "reply_cost_usd": 0.03475
+}

@@ -1,0 +1,79 @@
+{
+  "source": "v32_item6__006_gemini-3-flash_user_33_0a43d1cf",
+  "memory_kind": "none",
+  "condition": "none",
+  "repeat": 1,
+  "text": "I’m with you. Let’s move fast and keep it disciplined, visible, and lawful.\n\n**48-hour rapid plan for Bosa vendors**\n\n**1) Build the core team tonight**\n- 5–8 trusted people: vendors, one lawyer/legal ally, one media person, one logistics lead, one liaison for elders/families.\n- Make one WhatsApp/SMS chain and one backup list on paper.\n- Assign one clear spokesperson so the message stays unified.\n\n**2) Lock the message**\nKeep it simple and repeat it everywhere:\n- “This is not renewal without us.”\n- “Bosa vendors are workers, families, and a public good.”\n- “No displacement without consultation, relocation, and compensation.”\n\n**3) Document the harm immediately**\nCollect:\n- Photos/videos of stalls, daily foot traffic, families working there\n- Receipts, permit copies, tax payments, and any notices from the city\n- Short testimonies from vendors and customers: 30 seconds each, name + how long they’ve worked there + what loss would mean\n\n**4) Trigger public pressure fast**\n- Post a short statement on all channels tonight.\n- Tag local journalists, council members, neighborhood groups, churches, unions, and student orgs.\n- Send a one-page media brief: who vendors are, what the city plans, why it matters, and what you’re demanding.\n\n**5) Demand 3 clear things from the city**\n- Immediate pause on removals\n- Formal meeting with vendor प्रतिनिधatives within 48 hours\n- Written plan for relocation/support if any changes proceed\n\n**6) Prepare a lawful visible action**\nIf there’s a meeting or site visit:\n- Hold a peaceful press presence with signs, matching shirts, and speakers\n- Keep it nonblocking and nonconfrontational\n- Have one person assigned to de-escalate and one to film everything\n\n**7) Get legal backup**\n- Ask a local rights org or lawyer to review the notice and any eviction/removal process\n- Find out whether the city violated notice periods, consultation rules, or vendor protections\n- If there’s a hearing, submit written testimony and get as many vendor signatures as possible\n\n**8) Build allies beyond the plaza**\n- Nearby shop owners who benefit from foot traffic\n- Residents who shop there\n- Faith leaders and community organizations\n- Labor groups and food justice networks\n\n**9) Create a turnout ladder**\n- Tier 1: vendors and families\n- Tier 2: neighbors and customers\n- Tier 3: allies, journalists, solidarity groups\nIf the city announces a move, you want all three visible fast.\n\n**10) Keep a calm discipline**\n- No rumors without confirmation\n- No individual arguments with officials\n- Everything through the spokesperson + written notes\n- Save screenshots of every message and announcement\n\nIf you want, I can turn this into a **one-page action brief**, a **WhatsApp message for vendors**, or a **press statement** you can send tonight.",
+  "applied": [],
+  "utilization": null,
+  "attributes": [
+    {
+      "attribute": "preferred_response_format",
+      "current": "executive_summary_with_strategic_tradeoffs",
+      "original": "structured_numbered_steps",
+      "changed": true,
+      "fit": "original",
+      "votes": [
+        "original",
+        "original",
+        "original"
+      ],
+      "reason": "It uses a numbered step-by-step action plan rather than an executive summary with strategic tradeoffs."
+    },
+    {
+      "attribute": "emotional_tone",
+      "current": "diplomatic_and_authoritative",
+      "original": "direct_pragmatic",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "original",
+        "current"
+      ],
+      "reason": "The tone is supportive, firm, and measured, which reads as diplomatic and authoritative."
+    },
+    {
+      "attribute": "explanation_approach",
+      "current": "impact_assessment_first",
+      "original": "principles_first_then_examples",
+      "changed": true,
+      "fit": "other",
+      "votes": [
+        "neutral",
+        "original",
+        "other"
+      ],
+      "reason": "It jumps straight into tactics and next steps, without leading with an impact assessment or with principles-first reasoning."
+    },
+    {
+      "attribute": "example_preference",
+      "current": "real_world_analogies",
+      "changed": false,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "There are no real-world analogies or illustrative comparisons in the reply."
+    },
+    {
+      "attribute": "boundary_setting_voice",
+      "current": "value_based_reasoning",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It frames the demands in values-based terms like consultation, compensation, and protecting workers and families."
+    }
+  ],
+  "changed_fit_current": 0.333,
+  "changed_fit_original": 0.333,
+  "all_fit_current": 0.4,
+  "judge_cost_usd": 0.02512,
+  "reply_cost_usd": 0.00414
+}

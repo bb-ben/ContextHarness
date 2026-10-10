@@ -1,0 +1,7 @@
+# Preferences
+- P-0.1 | superseded | 2025-09-01 | topic: help-format | basis: O-0.1 | until: 2025-09-10 | superseded_by: P-2.1 | Wants a few quick ideas instead of rigid meal plans.
+- P-0.2 | superseded | 2025-09-01 | topic: output-style | basis: O-0.2 | until: 2025-09-29 | superseded_by: P-6.1 | Wants recommendations without calorie counts or other numbers.
+- P-2.1 | superseded | 2025-09-10 | topic: help-format | basis: O-0.1, O-2.1 | confirmed: 2025-09-10 | changed: confirmed by another quick, constrained request | supersedes: P-0.1 | until: 2025-09-14 | superseded_by: P-3.1 | Wants a few quick ideas instead of rigid meal plans.
+- P-3.1 | superseded | 2025-09-14 | topic: help-format | basis: O-0.1, O-2.1, O-3.1 | supersedes: P-2.1 | changed: now explicitly loose/mix-and-match, not rigid | until: 2025-09-24 | superseded_by: P-5.1 | Wants quick, loose ideas instead of rigid meal plans.
+- P-5.1 | current | 2025-09-24 | topic: help-format | basis: O-5.1, O-5.3, O-7.1 | confirmed: 2025-10-03 | supersedes: P-3.1 | changed: now wants structured week plans, not loose ideas | Wants structured meal plans for the week with carb counts per meal.
+- P-6.1 | current | 2025-09-29 | topic: output-style | basis: O-6.1, O-7.1 | confirmed: 2025-10-03 | supersedes: P-0.2 | changed: now wants carb numbers in meal guidance, no longer avoids numbers | Wants recommendations with per-meal carb counts in meal guidance.

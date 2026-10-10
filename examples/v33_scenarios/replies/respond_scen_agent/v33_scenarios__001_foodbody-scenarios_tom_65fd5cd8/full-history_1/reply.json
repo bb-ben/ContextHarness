@@ -1,0 +1,54 @@
+{
+  "source": "v33_scenarios__001_foodbody-scenarios_tom_65fd5cd8",
+  "memory_kind": "full-history",
+  "condition": "full-history",
+  "repeat": 1,
+  "text": "You’re not undoing your recovery. Three pizza nights do not erase weeks of healing. What matters most is the average over time, and right now the job is simply: keep your body well fed.\n\nDo this next:\n\n| Next step | What to do |\n|---|---|\n| Next meal | Normal balanced meal: protein + carb + veg/fruit |\n| Today | Aim for regular meals, not “making up for it” by starving |\n| Protein | Include a solid protein source 3–4 times today |\n| Bone support | Keep calcium-rich foods in the day: dairy/fortified milk/yogurt, tofu, greens |\n| Hydration | Drink water normally; no need to punish yourself |\n| Mindset | Pizza is food, not failure |\n\nIf you want, I can turn this into a simple 1-day recovery meal plan in metric that keeps things easy and low-stress.",
+  "applied": [],
+  "utilization": null,
+  "attributes": [
+    {
+      "attribute": "challenge_level",
+      "current": "gentle_supportive",
+      "original": "push_hard",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "The tone is gentle and reassuring, not pushy or intense."
+    },
+    {
+      "attribute": "focus",
+      "current": "recovery",
+      "original": "performance",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It centers recovery, reassurance, and getting back to normal eating rather than performance."
+    },
+    {
+      "attribute": "format",
+      "current": "tables_metric",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "other",
+        "current"
+      ],
+      "reason": "It uses a clear table and even references metric, matching the requested table-based format."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 1.0,
+  "judge_cost_usd": 0.00608,
+  "reply_cost_usd": 0.00236
+}

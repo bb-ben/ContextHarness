@@ -1,0 +1,256 @@
+{
+  "item_id": "Priya Raman_foodbody_diagnosis_meal_planning",
+  "judge_model": "gpt-5.4-mini",
+  "memory_chars": 2578,
+  "attributes": [
+    {
+      "attribute": "planning_style",
+      "current": "structured_plan",
+      "original": "loose_ideas",
+      "changed": true,
+      "memory_value": "structured meal plans for the week",
+      "current_match": "matches",
+      "original_still_current": false,
+      "change_recorded": true,
+      "evidence": "P-5.1 current: 'Wants structured meal plans for the week with carb counts per meal'; P-3.1 superseded: 'Wants quick, loose ideas instead of rigid meal plans'.",
+      "votes": [
+        "matches",
+        "matches",
+        "matches"
+      ]
+    },
+    {
+      "attribute": "nutrition_detail",
+      "current": "carb_counts_per_meal",
+      "original": "no_numbers",
+      "changed": true,
+      "memory_value": "carb counts per meal",
+      "current_match": "matches",
+      "original_still_current": false,
+      "change_recorded": true,
+      "evidence": "P-6.1 current: 'Wants recommendations with per-meal carb counts in meal guidance'; P-0.2 superseded: 'Wants recommendations without calorie counts or other numbers'.",
+      "votes": [
+        "matches",
+        "matches",
+        "matches"
+      ]
+    },
+    {
+      "attribute": "cooking_time",
+      "current": "under_20_min",
+      "changed": false,
+      "memory_value": "nothing",
+      "current_match": "absent",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "No entry about cooking time in context.md, preferences, hypotheses, or profile.",
+      "votes": [
+        "absent",
+        "absent",
+        "absent"
+      ]
+    },
+    {
+      "attribute": "tone",
+      "current": "playful",
+      "changed": false,
+      "memory_value": "playful, upbeat tone for casual requests",
+      "current_match": "partial",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "H-1.1 open: 'They may like a playful, upbeat tone for casual requests'.",
+      "votes": [
+        "partial",
+        "partial",
+        "partial"
+      ]
+    }
+  ],
+  "current_fidelity": 0.625,
+  "changed_fidelity": 1.0,
+  "stale": 0,
+  "changes_recorded": 2,
+  "n_attributes": 4,
+  "n_changed": 2,
+  "ungraded": [],
+  "repeats": 3,
+  "agreement": 1.0,
+  "current_fidelity_range": [
+    0.625,
+    0.625
+  ],
+  "estimated_cost_usd": 0.01845,
+  "runs": [
+    {
+      "item_id": "Priya Raman_foodbody_diagnosis_meal_planning",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 2578,
+      "attributes": [
+        {
+          "attribute": "planning_style",
+          "current": "structured_plan",
+          "original": "loose_ideas",
+          "changed": true,
+          "memory_value": "structured meal plans for the week",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": true,
+          "evidence": "P-5.1 current: 'Wants structured meal plans for the week with carb counts per meal'; P-3.1 superseded: 'Wants quick, loose ideas instead of rigid meal plans'."
+        },
+        {
+          "attribute": "nutrition_detail",
+          "current": "carb_counts_per_meal",
+          "original": "no_numbers",
+          "changed": true,
+          "memory_value": "carb counts per meal",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": true,
+          "evidence": "P-6.1 current: 'Wants recommendations with per-meal carb counts in meal guidance'; P-0.2 superseded: 'Wants recommendations without calorie counts or other numbers'."
+        },
+        {
+          "attribute": "cooking_time",
+          "current": "under_20_min",
+          "changed": false,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No entry about cooking time in context.md, preferences, hypotheses, or profile."
+        },
+        {
+          "attribute": "tone",
+          "current": "playful",
+          "changed": false,
+          "memory_value": "playful, upbeat tone for casual requests",
+          "current_match": "partial",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "H-1.1 open: 'They may like a playful, upbeat tone for casual requests'."
+        }
+      ],
+      "current_fidelity": 0.625,
+      "changed_fidelity": 1.0,
+      "stale": 0,
+      "changes_recorded": 2,
+      "n_attributes": 4,
+      "n_changed": 2,
+      "ungraded": [],
+      "estimated_cost_usd": 0.00711
+    },
+    {
+      "item_id": "Priya Raman_foodbody_diagnosis_meal_planning",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 2578,
+      "attributes": [
+        {
+          "attribute": "planning_style",
+          "current": "structured_plan",
+          "original": "loose_ideas",
+          "changed": true,
+          "memory_value": "structured meal plans for the week",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": true,
+          "evidence": "P-5.1 current: \"Wants structured meal plans for the week with carb counts per meal\"; P-3.1 superseded: \"Wants quick, loose ideas instead of rigid meal plans\""
+        },
+        {
+          "attribute": "nutrition_detail",
+          "current": "carb_counts_per_meal",
+          "original": "no_numbers",
+          "changed": true,
+          "memory_value": "per-meal carb counts",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": true,
+          "evidence": "P-6.1 current: \"Wants recommendations with per-meal carb counts in meal guidance\"; P-0.2 superseded: \"Wants recommendations without calorie counts or other numbers\""
+        },
+        {
+          "attribute": "cooking_time",
+          "current": "under_20_min",
+          "changed": false,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No cooking-time preference appears in the memory"
+        },
+        {
+          "attribute": "tone",
+          "current": "playful",
+          "changed": false,
+          "memory_value": "playful, upbeat for casual requests (tentative)",
+          "current_match": "partial",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "H-1.1 open: \"They may like a playful, upbeat tone for casual requests\""
+        }
+      ],
+      "current_fidelity": 0.625,
+      "changed_fidelity": 1.0,
+      "stale": 0,
+      "changes_recorded": 2,
+      "n_attributes": 4,
+      "n_changed": 2,
+      "ungraded": [],
+      "estimated_cost_usd": 0.00588
+    },
+    {
+      "item_id": "Priya Raman_foodbody_diagnosis_meal_planning",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 2578,
+      "attributes": [
+        {
+          "attribute": "planning_style",
+          "current": "structured_plan",
+          "original": "loose_ideas",
+          "changed": true,
+          "memory_value": "structured meal plans for the week",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": true,
+          "evidence": "P-3.1 superseded: \"Wants quick, loose ideas instead of rigid meal plans.\" -> P-5.1 current: \"Wants structured meal plans for the week with carb counts per meal.\""
+        },
+        {
+          "attribute": "nutrition_detail",
+          "current": "carb_counts_per_meal",
+          "original": "no_numbers",
+          "changed": true,
+          "memory_value": "carb counts per meal",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": true,
+          "evidence": "P-0.2 superseded: \"Wants recommendations without calorie counts or other numbers.\" -> P-6.1 current: \"Wants recommendations with per-meal carb counts in meal guidance.\""
+        },
+        {
+          "attribute": "cooking_time",
+          "current": "under_20_min",
+          "changed": false,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No cooking_time entry in current memory"
+        },
+        {
+          "attribute": "tone",
+          "current": "playful",
+          "changed": false,
+          "memory_value": "playful, upbeat tone for casual requests",
+          "current_match": "partial",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "H-1.1 open: \"They may like a playful, upbeat tone for casual requests.\""
+        }
+      ],
+      "current_fidelity": 0.625,
+      "changed_fidelity": 1.0,
+      "stale": 0,
+      "changes_recorded": 2,
+      "n_attributes": 4,
+      "n_changed": 2,
+      "ungraded": [],
+      "estimated_cost_usd": 0.00546
+    }
+  ]
+}

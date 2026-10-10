@@ -1,0 +1,211 @@
+{
+  "item_id": "Tom Okafor_foodbody_injury_coaching",
+  "judge_model": "gpt-5.4-mini",
+  "memory_chars": 2341,
+  "attributes": [
+    {
+      "attribute": "challenge_level",
+      "current": "gentle_supportive",
+      "original": "push_hard",
+      "changed": true,
+      "memory_value": "blunt/high-challenge, with gentler recovery coaching active",
+      "current_match": "contradicts",
+      "original_still_current": true,
+      "change_recorded": true,
+      "evidence": "P-1.1 current: 'Wants blunt, high-challenge feedback; don't coddle them.'; T-6.1 active: 'Wants gentler, healing-focused coaching while recovering.'; H-6.1 open / T-5.1 superseded: softer coaching while recovering",
+      "votes": [
+        "partial",
+        "matches",
+        "contradicts"
+      ]
+    },
+    {
+      "attribute": "focus",
+      "current": "recovery",
+      "original": "performance",
+      "changed": true,
+      "memory_value": "recovery / healing-focused",
+      "current_match": "matches",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "T-6.1 active: \"Wants gentler, healing-focused coaching while recovering\"; T-4.2 active: \"Has a foot stress fracture and cannot run for 8 weeks\"",
+      "votes": [
+        "matches",
+        "matches",
+        "matches"
+      ]
+    },
+    {
+      "attribute": "format",
+      "current": "tables_metric",
+      "changed": false,
+      "memory_value": "tables, km units",
+      "current_match": "matches",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "P-2.1 current: \"Wants help formatted as tables, with km units for run plans\"",
+      "votes": [
+        "matches",
+        "matches",
+        "matches"
+      ]
+    }
+  ],
+  "current_fidelity": 0.667,
+  "changed_fidelity": 0.5,
+  "stale": 1,
+  "changes_recorded": 1,
+  "n_attributes": 3,
+  "n_changed": 2,
+  "ungraded": [],
+  "repeats": 3,
+  "agreement": 0.778,
+  "current_fidelity_range": [
+    0.667,
+    1.0
+  ],
+  "estimated_cost_usd": 0.07766,
+  "runs": [
+    {
+      "item_id": "Tom Okafor_foodbody_injury_coaching",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 2341,
+      "attributes": [
+        {
+          "attribute": "challenge_level",
+          "current": "gentle_supportive",
+          "original": "push_hard",
+          "changed": true,
+          "memory_value": "blunt high-challenge, but gentler while recovering",
+          "current_match": "partial",
+          "original_still_current": true,
+          "change_recorded": true,
+          "evidence": "P-1.1 current: \"Wants blunt, high-challenge feedback\"; T-6.1 active: \"Wants gentler, healing-focused coaching while recovering\"; H-6.1 open: \"They may want a softer coaching style while recovering\""
+        },
+        {
+          "attribute": "focus",
+          "current": "recovery",
+          "original": "performance",
+          "changed": true,
+          "memory_value": "recovery / healing-focused",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "T-6.1 active: \"Wants gentler, healing-focused coaching while recovering\"; T-4.2 active: \"Has a foot stress fracture and cannot run for 8 weeks\""
+        },
+        {
+          "attribute": "format",
+          "current": "tables_metric",
+          "changed": false,
+          "memory_value": "tables, km units",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-2.1 current: \"Wants help formatted as tables, with km units for run plans\""
+        }
+      ],
+      "current_fidelity": 0.833,
+      "changed_fidelity": 0.75,
+      "stale": 1,
+      "changes_recorded": 1,
+      "n_attributes": 3,
+      "n_changed": 2,
+      "ungraded": [],
+      "estimated_cost_usd": 0.03033
+    },
+    {
+      "item_id": "Tom Okafor_foodbody_injury_coaching",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 2341,
+      "attributes": [
+        {
+          "attribute": "challenge_level",
+          "current": "gentle_supportive",
+          "original": "push_hard",
+          "changed": true,
+          "memory_value": "blunt high-challenge, but also gentler while recovering",
+          "current_match": "matches",
+          "original_still_current": true,
+          "change_recorded": true,
+          "evidence": "P-1.1 current: \"Wants blunt, high-challenge feedback; don't coddle them.\"; T-6.1 active: \"Wants gentler, healing-focused coaching while recovering.\"; H-5.1 superseded / H-6.1 open: softer coaching while recovering"
+        },
+        {
+          "attribute": "focus",
+          "current": "recovery",
+          "original": "performance",
+          "changed": true,
+          "memory_value": "recovery / healing-focused",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "T-6.1 active: \"Wants gentler, healing-focused coaching while recovering.\"; T-4.2 active: \"Has a foot stress fracture and cannot run for 8 weeks.\""
+        },
+        {
+          "attribute": "format",
+          "current": "tables_metric",
+          "changed": false,
+          "memory_value": "tables with km units",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-2.1 current: \"Wants help formatted as tables, with km units for run plans.\"; H-0.2 confirmed: \"Wants plans formatted as tables using km units.\""
+        }
+      ],
+      "current_fidelity": 1.0,
+      "changed_fidelity": 1.0,
+      "stale": 1,
+      "changes_recorded": 1,
+      "n_attributes": 3,
+      "n_changed": 2,
+      "ungraded": [],
+      "estimated_cost_usd": 0.01868
+    },
+    {
+      "item_id": "Tom Okafor_foodbody_injury_coaching",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 2341,
+      "attributes": [
+        {
+          "attribute": "challenge_level",
+          "current": "gentle_supportive",
+          "original": "push_hard",
+          "changed": true,
+          "memory_value": "blunt/high-challenge, with gentler recovery coaching active",
+          "current_match": "contradicts",
+          "original_still_current": true,
+          "change_recorded": true,
+          "evidence": "P-1.1 current: 'Wants blunt, high-challenge feedback; don't coddle them.'; T-6.1 active: 'Wants gentler, healing-focused coaching while recovering.'; H-6.1 open / T-5.1 superseded: softer coaching while recovering"
+        },
+        {
+          "attribute": "focus",
+          "current": "recovery",
+          "original": "performance",
+          "changed": true,
+          "memory_value": "recovery/healing-focused while recovering from stress fracture",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "T-6.1 active: 'Wants gentler, healing-focused coaching while recovering.'; T-4.2 active: 'Has a foot stress fracture and cannot run for 8 weeks.'"
+        },
+        {
+          "attribute": "format",
+          "current": "tables_metric",
+          "changed": false,
+          "memory_value": "tables with km units for run plans",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-2.1 current: 'Wants help formatted as tables, with km units for run plans.'"
+        }
+      ],
+      "current_fidelity": 0.667,
+      "changed_fidelity": 0.5,
+      "stale": 1,
+      "changes_recorded": 1,
+      "n_attributes": 3,
+      "n_changed": 2,
+      "ungraded": [],
+      "estimated_cost_usd": 0.02865
+    }
+  ]
+}

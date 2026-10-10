@@ -1,0 +1,10 @@
+- User is training for a marathon and was targeting a sub-3:30 finish, but as of 2025-08-30 this is temporarily paused because of a stress fracture in the foot; doctor said 8 weeks no running, and user was gutted. Current priority is healing, not performance.
+- As of 2025-09-08, user clearly prefers a kind, supportive coaching style right now; they said the gentle approach was “kind and useful” and helped more than the drill-sergeant tone. The tough/blunt accountability style is not preferred during this injury-healing phase.
+  - Supersedes prior preference (current through 2025-09-02): user wanted direct, tough coaching and accountability; they explicitly preferred blunt feedback and “don’t coddle me” style motivation.
+- User prefers training plans presented as weekly tables.
+- User prefers distances in kilometers.
+- As of 2025-08-09, user affirmed that when a workout is skipped because of tiredness, they want to be pushed to make it up rather than excused.
+- As of 2025-08-15, user also prefers fueling guidance for long runs to be presented in table form.
+- As of 2025-08-22, user wants race-week nutrition guidance focused purely on performance; they are willing to eat whatever optimizes results, and low-fiber, high-carb, familiar foods are appropriate for carb-loading guidance.
+- As of 2025-08-30, nutrition is also important for bone healing after the stress fracture; calcium, vitamin D, protein, and enough total energy are relevant priorities.
+- As of 2025-09-08, bone-healing meal ideas in table form were helpful and appreciated, especially when framed gently and practically.

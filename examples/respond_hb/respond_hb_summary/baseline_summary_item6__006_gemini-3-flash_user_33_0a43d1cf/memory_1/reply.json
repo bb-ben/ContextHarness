@@ -1,0 +1,79 @@
+{
+  "source": "baseline_summary_item6__006_gemini-3-flash_user_33_0a43d1cf",
+  "memory_kind": "summary",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "I’m here, Jairo. We move fast and clean.\n\n## Bosa plaza defense plan — next week\n\n### 1) Set the frame tonight\nCall it what it is: **displacement dressed up as renewal**.\n- Public line: **“No renewal without the vendors. No policy over the heads of the people who built the plaza.”**\n- Repeat the same 3 words everywhere: **work, dignity, territory**.\n\n### 2) Lock the facts in 12 hours\nWe need a paper shield.\n- List every affected vendor: name, stall type, years in the plaza, family dependence.\n- Collect photos of stalls, permits, receipts, utility payments, tax/local fee records.\n- Get 3 short testimonies: one elder vendor, one young worker, one customer/resident.\n- Capture any notice from the city: date, agency, exact wording, deadline.\n\n### 3) Build the legal pressure\nWe don’t argue emotionally first; we argue **procedurally**.\n- Demand: formal notice, relocation plan, consultation record, and compensation criteria.\n- Ask whether they completed due process, social impact assessment, and vendor census.\n- If they say “public space recovery,” answer: **“Public space is not made public by ejecting the public who sustain it.”**\n\n### 4) Set the media narrative\nWe need one sharp story, not ten scattered ones.\n- Headline: **“Bosa vendors say renewal means removal.”**\n- Visuals: working hands, empty breakfast tables, family stalls, school uniforms, delivery carts.\n- One spokesperson only for press. Everyone else supports.\n\n### 5) Mobilize visible, lawful presence\n- Organize a **peaceful plaza watch** the day before any move.\n- Put people on three roles: observers, speakers, logistics.\n- Bring signs with short lines:\n  - **We are not debris. We are livelihoods.**\n  - **Renew the plaza, not the eviction.**\n  - **Consultation before bulldozers.**\n- Document everything: video, audio, names, badge numbers.\n\n### 6) Pressure points\nTarget the people who can stop it.\n- City councilors in Bosa\n- Local ombuds office / personería\n- District social inclusion office\n- Press and neighborhood associations\n\n### 7) Timing\n**48 hours before:** release statement + evidence pack.  \n**24 hours before:** community meeting + press call.  \n**Day of:** peaceful presence, legal observers, live updates.  \n**After:** file complaint and demand hearing.\n\n## If they push the “urban renewal” line\nAnswer in one sentence:\n**“Real renewal includes the people who work there; displacement just changes the paint while destroying the neighborhood economy.”**\n\n## What I need from you now\nSend me:\n1. the city notice or rumor details,  \n2. who the vendor leaders are,  \n3. whether there’s a date/time for intervention,  \n4. any photos or proof you already have.\n\nI can turn it into a **one-page action memo**, a **public statement**, or a **vendor meeting script** right now.",
+  "applied": [],
+  "utilization": null,
+  "attributes": [
+    {
+      "attribute": "preferred_response_format",
+      "current": "executive_summary_with_strategic_tradeoffs",
+      "original": "structured_numbered_steps",
+      "changed": true,
+      "fit": "original",
+      "votes": [
+        "original",
+        "original",
+        "original"
+      ],
+      "reason": "It uses a long set of numbered action steps with sub-bullets, rather than an executive-summary style that highlights tradeoffs first."
+    },
+    {
+      "attribute": "emotional_tone",
+      "current": "diplomatic_and_authoritative",
+      "original": "direct_pragmatic",
+      "changed": true,
+      "fit": "original",
+      "votes": [
+        "original",
+        "original",
+        "original"
+      ],
+      "reason": "The tone is direct and urgent, but not especially diplomatic; it sounds more like blunt field guidance than measured, tactful authority."
+    },
+    {
+      "attribute": "explanation_approach",
+      "current": "impact_assessment_first",
+      "original": "principles_first_then_examples",
+      "changed": true,
+      "fit": "original",
+      "votes": [
+        "original",
+        "original",
+        "original"
+      ],
+      "reason": "It leads with tactics and step-by-step instructions instead of starting with impact assessment, and it relies more on procedural guidance than impact-first framing."
+    },
+    {
+      "attribute": "example_preference",
+      "current": "real_world_analogies",
+      "changed": false,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "There are concrete slogans and instructions, but no clear real-world analogies of the kind requested."
+    },
+    {
+      "attribute": "boundary_setting_voice",
+      "current": "value_based_reasoning",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "The limits and demands are framed around values like work, dignity, livelihoods, and consultation, rather than just rules or commands."
+    }
+  ],
+  "changed_fit_current": 0.0,
+  "changed_fit_original": 1.0,
+  "all_fit_current": 0.2,
+  "judge_cost_usd": 0.01617,
+  "reply_cost_usd": 0.00549
+}

@@ -1,0 +1,256 @@
+{
+  "item_id": "Priya Raman_foodbody_diagnosis_meal_planning",
+  "judge_model": "gpt-5.4-mini",
+  "memory_chars": 1330,
+  "attributes": [
+    {
+      "attribute": "planning_style",
+      "current": "structured_plan",
+      "original": "loose_ideas",
+      "changed": true,
+      "memory_value": "structured meal plan",
+      "current_match": "matches",
+      "original_still_current": false,
+      "change_recorded": true,
+      "evidence": "\"wants actual structure... a real Monday\u2013Sunday meal plan... not just loose ideas\"; \"winging it isn't working anymore\" is superseded",
+      "votes": [
+        "matches",
+        "matches",
+        "matches"
+      ]
+    },
+    {
+      "attribute": "nutrition_detail",
+      "current": "carb_counts_per_meal",
+      "original": "no_numbers",
+      "changed": true,
+      "memory_value": "carb counts per meal",
+      "current_match": "matches",
+      "original_still_current": false,
+      "change_recorded": true,
+      "evidence": "\"needs carb counts per meal\"; \"per-meal carb numbers are exactly what they need\"; older \"avoiding numbers / nutrition math\" is superseded",
+      "votes": [
+        "matches",
+        "matches",
+        "matches"
+      ]
+    },
+    {
+      "attribute": "cooking_time",
+      "current": "under_20_min",
+      "changed": false,
+      "memory_value": "nothing",
+      "current_match": "absent",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "No statement about cooking speed or a time limit",
+      "votes": [
+        "absent",
+        "absent",
+        "absent"
+      ]
+    },
+    {
+      "attribute": "tone",
+      "current": "playful",
+      "changed": false,
+      "memory_value": "playful / fun",
+      "current_match": "matches",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "\"keep it fun too\"; also \"reassuring, practical, and simple\"",
+      "votes": [
+        "matches",
+        "matches",
+        "matches"
+      ]
+    }
+  ],
+  "current_fidelity": 0.75,
+  "changed_fidelity": 1.0,
+  "stale": 0,
+  "changes_recorded": 2,
+  "n_attributes": 4,
+  "n_changed": 2,
+  "ungraded": [],
+  "repeats": 3,
+  "agreement": 1.0,
+  "current_fidelity_range": [
+    0.75,
+    0.75
+  ],
+  "estimated_cost_usd": 0.01662,
+  "runs": [
+    {
+      "item_id": "Priya Raman_foodbody_diagnosis_meal_planning",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 1330,
+      "attributes": [
+        {
+          "attribute": "planning_style",
+          "current": "structured_plan",
+          "original": "loose_ideas",
+          "changed": true,
+          "memory_value": "structured meal plan",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": true,
+          "evidence": "\"wants actual structure... a real Monday\u2013Sunday meal plan... not just loose ideas\"; \"winging it isn't working anymore\" is superseded"
+        },
+        {
+          "attribute": "nutrition_detail",
+          "current": "carb_counts_per_meal",
+          "original": "no_numbers",
+          "changed": true,
+          "memory_value": "carb counts per meal",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": true,
+          "evidence": "\"needs carb counts per meal\"; \"per-meal carb numbers are exactly what they need\"; older \"avoiding numbers / nutrition math\" is superseded"
+        },
+        {
+          "attribute": "cooking_time",
+          "current": "under_20_min",
+          "changed": false,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No statement about cooking speed or a time limit"
+        },
+        {
+          "attribute": "tone",
+          "current": "playful",
+          "changed": false,
+          "memory_value": "playful / fun",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\"keep it fun too\"; also \"reassuring, practical, and simple\""
+        }
+      ],
+      "current_fidelity": 0.75,
+      "changed_fidelity": 1.0,
+      "stale": 0,
+      "changes_recorded": 2,
+      "n_attributes": 4,
+      "n_changed": 2,
+      "ungraded": [],
+      "estimated_cost_usd": 0.00557
+    },
+    {
+      "item_id": "Priya Raman_foodbody_diagnosis_meal_planning",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 1330,
+      "attributes": [
+        {
+          "attribute": "planning_style",
+          "current": "structured_plan",
+          "original": "loose_ideas",
+          "changed": true,
+          "memory_value": "structured meal plan with days and meals",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": true,
+          "evidence": "\u201cwants actual structure\u2026 a real Monday\u2013Sunday meal plan with breakfast, lunch, and dinner, not just loose ideas\u201d; \u201cthe older preference for avoiding\u2026 flexible options is also superseded\u201d"
+        },
+        {
+          "attribute": "nutrition_detail",
+          "current": "carb_counts_per_meal",
+          "original": "no_numbers",
+          "changed": true,
+          "memory_value": "carb counts per meal",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": true,
+          "evidence": "\u201cuser specifically needs carb counts per meal\u201d; \u201ckeep getting carb counts in meal help\u201d; \u201cthe older preference for avoiding numbers\u2026 is superseded\u201d"
+        },
+        {
+          "attribute": "cooking_time",
+          "current": "under_20_min",
+          "changed": false,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No current belief about prep/cooking speed; only \u201ceasy, manageable, and not overly complicated or fussy\u201d appears, which is not a time limit"
+        },
+        {
+          "attribute": "tone",
+          "current": "playful",
+          "changed": false,
+          "memory_value": "fun, reassuring, practical, simple",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\u201cadvice should stay reassuring, practical, and simple\u201d; \u201ckeep it fun too\u201d"
+        }
+      ],
+      "current_fidelity": 0.75,
+      "changed_fidelity": 1.0,
+      "stale": 0,
+      "changes_recorded": 2,
+      "n_attributes": 4,
+      "n_changed": 2,
+      "ungraded": [],
+      "estimated_cost_usd": 0.00439
+    },
+    {
+      "item_id": "Priya Raman_foodbody_diagnosis_meal_planning",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 1330,
+      "attributes": [
+        {
+          "attribute": "planning_style",
+          "current": "structured_plan",
+          "original": "loose_ideas",
+          "changed": true,
+          "memory_value": "structured real week-by-week meal plan",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": true,
+          "evidence": "\u201cwants actual structure \u2026 a real Monday\u2013Sunday meal plan \u2026 not just loose ideas\u201d; \u201cthe structure is helping\u201d; \u201cnext week\u2019s meal plan the same way\u201d"
+        },
+        {
+          "attribute": "nutrition_detail",
+          "current": "carb_counts_per_meal",
+          "original": "no_numbers",
+          "changed": true,
+          "memory_value": "per-meal carb counts",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": true,
+          "evidence": "\u201cspecifically needs carb counts per meal\u201d; \u201cper-meal carb numbers are exactly what they need\u201d; superseded: \u201colder preference for avoiding numbers / nutrition math\u201d"
+        },
+        {
+          "attribute": "cooking_time",
+          "current": "under_20_min",
+          "changed": false,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No explicit cooking-time limit is stated; only \u201ceasy, manageable, and not overly complicated or fussy\u201d"
+        },
+        {
+          "attribute": "tone",
+          "current": "playful",
+          "changed": false,
+          "memory_value": "fun / playful",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\u201csaid to keep it fun too\u201d; \u201creassuring, practical, and simple\u201d"
+        }
+      ],
+      "current_fidelity": 0.75,
+      "changed_fidelity": 1.0,
+      "stale": 0,
+      "changes_recorded": 2,
+      "n_attributes": 4,
+      "n_changed": 2,
+      "ungraded": [],
+      "estimated_cost_usd": 0.00666
+    }
+  ]
+}

@@ -1,0 +1,1197 @@
+{
+ "layout": "general",
+ "events": 7,
+ "violations_by_code": {
+  "missing_end_date": 1,
+  "bad_status": 1
+ },
+ "events_with_violations": 3,
+ "events_with_new_violations": 2,
+ "unresolved_at_end": 2,
+ "access_totals": {
+  "context.md": {
+   "writes": 10
+  },
+  "memory/episodes.md": {
+   "writes": 7
+  },
+  "state/hypotheses.md": {
+   "writes": 6
+  },
+  "state/preferences.md": {
+   "writes": 2
+  },
+  "state/transient.md": {
+   "writes": 5
+  }
+ },
+ "final_metrics": {
+  "entries": {
+   "E": 7,
+   "O": 10,
+   "P": 2,
+   "T": 4,
+   "H": 4
+  },
+  "live_entries": {
+   "P": 2,
+   "T": 2,
+   "H": 1
+  },
+  "provenance_share": 1.0,
+  "context_bullets": 6,
+  "context_cited_ids": 4,
+  "context_coverage_of_live_state": 0.8,
+  "episodes_recorded": 7
+ },
+ "per_event": [
+  {
+   "event_id": "S-0",
+   "index": 0,
+   "date": "2025-08-04",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/hypotheses.md": {
+     "writes": 1
+    }
+   },
+   "violations": {},
+   "new_violations": {},
+   "metrics": {
+    "entries": {
+     "E": 1,
+     "O": 2,
+     "H": 2
+    },
+    "live_entries": {
+     "H": 2
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 2,
+    "context_cited_ids": 2,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 1
+   }
+  },
+  {
+   "event_id": "S-1",
+   "index": 1,
+   "date": "2025-08-09",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/hypotheses.md": {
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "writes": 1
+    }
+   },
+   "violations": {},
+   "new_violations": {},
+   "metrics": {
+    "entries": {
+     "E": 2,
+     "O": 3,
+     "P": 1,
+     "H": 2
+    },
+    "live_entries": {
+     "P": 1,
+     "H": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 2,
+    "context_cited_ids": 2,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 2
+   }
+  },
+  {
+   "event_id": "S-2",
+   "index": 2,
+   "date": "2025-08-15",
+   "access": {
+    "context.md": {
+     "writes": 2
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/hypotheses.md": {
+     "writes": 2
+    },
+    "state/preferences.md": {
+     "writes": 1
+    }
+   },
+   "violations": {},
+   "new_violations": {},
+   "metrics": {
+    "entries": {
+     "E": 3,
+     "O": 4,
+     "P": 2,
+     "H": 2
+    },
+    "live_entries": {
+     "P": 2
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 2,
+    "context_cited_ids": 2,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 3
+   }
+  },
+  {
+   "event_id": "S-3",
+   "index": 3,
+   "date": "2025-08-22",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/transient.md": {
+     "writes": 1
+    }
+   },
+   "violations": {},
+   "new_violations": {},
+   "metrics": {
+    "entries": {
+     "E": 4,
+     "O": 5,
+     "P": 2,
+     "T": 1,
+     "H": 2
+    },
+    "live_entries": {
+     "P": 2,
+     "T": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 3,
+    "context_cited_ids": 3,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 4
+   }
+  },
+  {
+   "event_id": "S-4",
+   "index": 4,
+   "date": "2025-08-30",
+   "access": {
+    "context.md": {
+     "writes": 3
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/transient.md": {
+     "writes": 2
+    }
+   },
+   "violations": {
+    "missing_end_date": 1
+   },
+   "new_violations": {
+    "missing_end_date": 1
+   },
+   "metrics": {
+    "entries": {
+     "E": 5,
+     "O": 7,
+     "P": 2,
+     "T": 2,
+     "H": 2
+    },
+    "live_entries": {
+     "P": 2,
+     "T": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 4,
+    "context_cited_ids": 3,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 5
+   }
+  },
+  {
+   "event_id": "S-5",
+   "index": 5,
+   "date": "2025-09-03",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/hypotheses.md": {
+     "writes": 1
+    },
+    "state/transient.md": {
+     "writes": 1
+    }
+   },
+   "violations": {
+    "missing_end_date": 1
+   },
+   "new_violations": {},
+   "metrics": {
+    "entries": {
+     "E": 6,
+     "O": 9,
+     "P": 2,
+     "T": 3,
+     "H": 3
+    },
+    "live_entries": {
+     "P": 2,
+     "T": 2,
+     "H": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 4,
+    "context_cited_ids": 3,
+    "context_coverage_of_live_state": 0.6,
+    "episodes_recorded": 6
+   }
+  },
+  {
+   "event_id": "S-6",
+   "index": 6,
+   "date": "2025-09-08",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/hypotheses.md": {
+     "writes": 1
+    },
+    "state/transient.md": {
+     "writes": 1
+    }
+   },
+   "violations": {
+    "missing_end_date": 1,
+    "bad_status": 1
+   },
+   "new_violations": {
+    "bad_status": 1
+   },
+   "metrics": {
+    "entries": {
+     "E": 7,
+     "O": 10,
+     "P": 2,
+     "T": 4,
+     "H": 4
+    },
+    "live_entries": {
+     "P": 2,
+     "T": 2,
+     "H": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 6,
+    "context_cited_ids": 4,
+    "context_coverage_of_live_state": 0.8,
+    "episodes_recorded": 7
+   }
+  }
+ ],
+ "violations": [
+  {
+   "event_id": "S-4",
+   "code": "missing_end_date",
+   "path": "state/transient.md",
+   "line": 2,
+   "detail": "no expires: or review:",
+   "id": "T-3.1"
+  },
+  {
+   "event_id": "S-6",
+   "code": "bad_status",
+   "path": "state/hypotheses.md",
+   "line": 4,
+   "detail": "status 'superseded' is not one of ['confirmed', 'open', 'refuted', 'retracted', 'withdrawn']",
+   "id": "H-5.1"
+  }
+ ],
+ "lifecycle": {
+  "E-0": {
+   "type": "E",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     null
+    ]
+   ],
+   "last_seen": "S-6"
+  },
+  "O-0.1": {
+   "type": "O",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     null
+    ]
+   ],
+   "last_seen": "S-6"
+  },
+  "O-0.2": {
+   "type": "O",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     null
+    ]
+   ],
+   "last_seen": "S-6"
+  },
+  "H-0.1": {
+   "type": "H",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     "open"
+    ],
+    [
+     "S-1",
+     "confirmed"
+    ]
+   ],
+   "last_seen": "S-6"
+  },
+  "H-0.2": {
+   "type": "H",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     "open"
+    ],
+    [
+     "S-2",
+     "confirmed"
+    ]
+   ],
+   "last_seen": "S-6"
+  },
+  "E-1": {
+   "type": "E",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     null
+    ]
+   ],
+   "last_seen": "S-6"
+  },
+  "O-1.1": {
+   "type": "O",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     null
+    ]
+   ],
+   "last_seen": "S-6"
+  },
+  "P-1.1": {
+   "type": "P",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     "current"
+    ]
+   ],
+   "last_seen": "S-6"
+  },
+  "E-2": {
+   "type": "E",
+   "created": "S-2",
+   "statuses": [
+    [
+     "S-2",
+     null
+    ]
+   ],
+   "last_seen": "S-6"
+  },
+  "O-2.1": {
+   "type": "O",
+   "created": "S-2",
+   "statuses": [
+    [
+     "S-2",
+     null
+    ]
+   ],
+   "last_seen": "S-6"
+  },
+  "P-2.1": {
+   "type": "P",
+   "created": "S-2",
+   "statuses": [
+    [
+     "S-2",
+     "current"
+    ]
+   ],
+   "last_seen": "S-6"
+  },
+  "E-3": {
+   "type": "E",
+   "created": "S-3",
+   "statuses": [
+    [
+     "S-3",
+     null
+    ]
+   ],
+   "last_seen": "S-6"
+  },
+  "O-3.1": {
+   "type": "O",
+   "created": "S-3",
+   "statuses": [
+    [
+     "S-3",
+     null
+    ]
+   ],
+   "last_seen": "S-6"
+  },
+  "T-3.1": {
+   "type": "T",
+   "created": "S-3",
+   "statuses": [
+    [
+     "S-3",
+     "active"
+    ],
+    [
+     "S-4",
+     "expired"
+    ]
+   ],
+   "last_seen": "S-6"
+  },
+  "E-4": {
+   "type": "E",
+   "created": "S-4",
+   "statuses": [
+    [
+     "S-4",
+     null
+    ]
+   ],
+   "last_seen": "S-6"
+  },
+  "O-4.1": {
+   "type": "O",
+   "created": "S-4",
+   "statuses": [
+    [
+     "S-4",
+     null
+    ]
+   ],
+   "last_seen": "S-6"
+  },
+  "O-4.2": {
+   "type": "O",
+   "created": "S-4",
+   "statuses": [
+    [
+     "S-4",
+     null
+    ]
+   ],
+   "last_seen": "S-6"
+  },
+  "T-4.2": {
+   "type": "T",
+   "created": "S-4",
+   "statuses": [
+    [
+     "S-4",
+     "active"
+    ]
+   ],
+   "last_seen": "S-6"
+  },
+  "E-5": {
+   "type": "E",
+   "created": "S-5",
+   "statuses": [
+    [
+     "S-5",
+     null
+    ]
+   ],
+   "last_seen": "S-6"
+  },
+  "O-5.1": {
+   "type": "O",
+   "created": "S-5",
+   "statuses": [
+    [
+     "S-5",
+     null
+    ]
+   ],
+   "last_seen": "S-6"
+  },
+  "O-5.2": {
+   "type": "O",
+   "created": "S-5",
+   "statuses": [
+    [
+     "S-5",
+     null
+    ]
+   ],
+   "last_seen": "S-6"
+  },
+  "T-5.1": {
+   "type": "T",
+   "created": "S-5",
+   "statuses": [
+    [
+     "S-5",
+     "active"
+    ],
+    [
+     "S-6",
+     "superseded"
+    ]
+   ],
+   "last_seen": "S-6"
+  },
+  "H-5.1": {
+   "type": "H",
+   "created": "S-5",
+   "statuses": [
+    [
+     "S-5",
+     "open"
+    ],
+    [
+     "S-6",
+     "superseded"
+    ]
+   ],
+   "last_seen": "S-6"
+  },
+  "E-6": {
+   "type": "E",
+   "created": "S-6",
+   "statuses": [
+    [
+     "S-6",
+     null
+    ]
+   ],
+   "last_seen": "S-6"
+  },
+  "O-6.1": {
+   "type": "O",
+   "created": "S-6",
+   "statuses": [
+    [
+     "S-6",
+     null
+    ]
+   ],
+   "last_seen": "S-6"
+  },
+  "T-6.1": {
+   "type": "T",
+   "created": "S-6",
+   "statuses": [
+    [
+     "S-6",
+     "active"
+    ]
+   ],
+   "last_seen": "S-6"
+  },
+  "H-6.1": {
+   "type": "H",
+   "created": "S-6",
+   "statuses": [
+    [
+     "S-6",
+     "open"
+    ]
+   ],
+   "last_seen": "S-6"
+  }
+ },
+ "timeline": [
+  {
+   "event_id": "S-0",
+   "date": "2025-08-04",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-0",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Marathon training request with blunt tone and table/km formatting."
+     },
+     {
+      "id": "O-0.1",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Wants brutal, blunt feedback."
+     },
+     {
+      "id": "O-0.2",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Wants the weekly plan in a table with km units."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "H-0.1",
+      "status": "open",
+      "path": "state/hypotheses.md",
+      "statement": "Wants blunt, high-challenge feedback."
+     },
+     {
+      "id": "H-0.2",
+      "status": "open",
+      "path": "state/hypotheses.md",
+      "statement": "Wants plans formatted as tables using km units."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Wants blunt, high-challenge feedback for this task (H-0.1, open)",
+     "Wants plans formatted as tables using km units (H-0.2, open)"
+    ],
+    "removed": [],
+    "cited_added": [
+     "H-0.1",
+     "H-0.2"
+    ],
+    "cited_removed": [],
+    "bullets": 2,
+    "as_of": "S-0"
+   }
+  },
+  {
+   "event_id": "S-1",
+   "date": "2025-08-09",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-1",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Feedback on a missed workout."
+     },
+     {
+      "id": "O-1.1",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Wants blunt, high-challenge feedback; don't coddle me."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "P-1.1",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Wants blunt, high-challenge feedback; don't coddle them."
+     }
+    ],
+    "changed": [
+     {
+      "id": "H-0.1",
+      "status": [
+       "open",
+       "confirmed"
+      ],
+      "fields": {
+       "for": [
+        "O-0.1",
+        "O-0.1, O-1.1"
+       ],
+       "resolved_into": [
+        null,
+        "P-1.1"
+       ]
+      },
+      "statement": "Wants blunt, high-challenge feedback."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Wants blunt, high-challenge feedback (P-1.1)"
+    ],
+    "removed": [
+     "Wants blunt, high-challenge feedback for this task (H-0.1, open)"
+    ],
+    "cited_added": [
+     "P-1.1"
+    ],
+    "cited_removed": [
+     "H-0.1"
+    ],
+    "bullets": 2,
+    "as_of": "S-1"
+   }
+  },
+  {
+   "event_id": "S-2",
+   "date": "2025-08-15",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-2",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Fueling a 32 km long run."
+     },
+     {
+      "id": "O-2.1",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Asked for the run-fueling advice in a table."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "P-2.1",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Wants help formatted as tables, with km units for run plans."
+     }
+    ],
+    "changed": [
+     {
+      "id": "H-0.2",
+      "status": [
+       "open",
+       "confirmed"
+      ],
+      "fields": {
+       "for": [
+        "O-0.2",
+        "O-0.2, O-2.1"
+       ],
+       "resolved_into": [
+        null,
+        "P-2.1"
+       ]
+      },
+      "statement": "Wants plans formatted as tables using km units."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Wants help formatted as tables, with km units for run plans (P-2.1)"
+    ],
+    "removed": [
+     "Wants plans formatted as tables using km units (H-0.2, open)"
+    ],
+    "cited_added": [
+     "P-2.1"
+    ],
+    "cited_removed": [
+     "H-0.2"
+    ],
+    "bullets": 2,
+    "as_of": "S-2"
+   }
+  },
+  {
+   "event_id": "S-3",
+   "date": "2025-08-22",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-3",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Race-week meal planning focused on performance."
+     },
+     {
+      "id": "O-3.1",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Wants race-week meal plan optimized for performance over personal preferences."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "T-3.1",
+      "status": "active",
+      "path": "state/transient.md",
+      "statement": "For race week, prioritizes performance over taste in meal plans."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "For race week, prioritizes performance over taste in meal plans; review 2025-08-29 (T-3.1)"
+    ],
+    "removed": [],
+    "cited_added": [
+     "T-3.1"
+    ],
+    "cited_removed": [],
+    "bullets": 3,
+    "as_of": "S-3"
+   }
+  },
+  {
+   "event_id": "S-4",
+   "date": "2025-08-30",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-4",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Foot stress fracture and temporary running ban."
+     },
+     {
+      "id": "O-4.1",
+      "status": "event",
+      "path": "memory/episodes.md",
+      "statement": "Has a stress fracture in a foot and has 8 weeks no running."
+     },
+     {
+      "id": "O-4.2",
+      "status": "reaction",
+      "path": "memory/episodes.md",
+      "statement": "Is gutted about being unable to run for 8 weeks."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "T-4.2",
+      "status": "active",
+      "path": "state/transient.md",
+      "statement": "Has a foot stress fracture and cannot run for 8 weeks."
+     }
+    ],
+    "changed": [
+     {
+      "id": "T-3.1",
+      "status": [
+       "active",
+       "expired"
+      ],
+      "fields": {
+       "ended": [
+        null,
+        "2025-08-30"
+       ]
+      },
+      "statement": "For race week, prioritizes performance over taste in meal plans."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Has a foot stress fracture and cannot run for 8 weeks (T-4.2)",
+     "Recovery from foot stress fracture; review 2025-10-25 (T-4.2)"
+    ],
+    "removed": [
+     "For race week, prioritizes performance over taste in meal plans; review 2025-08-29 (T-3.1)"
+    ],
+    "cited_added": [
+     "T-4.2"
+    ],
+    "cited_removed": [
+     "T-3.1"
+    ],
+    "bullets": 4,
+    "as_of": "S-4"
+   }
+  },
+  {
+   "event_id": "S-5",
+   "date": "2025-09-03",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-5",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "How they want to be coached now."
+     },
+     {
+      "id": "O-5.1",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Wants you to go easier on them right now."
+     },
+     {
+      "id": "O-5.2",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Wants healing, not performance, as the focus for now."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "T-5.1",
+      "status": "active",
+      "path": "state/transient.md",
+      "statement": "Wants gentler, healing-focused coaching while recovering."
+     },
+     {
+      "id": "H-5.1",
+      "status": "open",
+      "path": "state/hypotheses.md",
+      "statement": "They may want a softer coaching style while recovering."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Gentler coaching request review 2025-09-10 (T-5.1, H-5.1)",
+     "Wants gentler, healing-focused coaching while recovering (T-5.1)"
+    ],
+    "removed": [
+     "Wants blunt, high-challenge feedback (P-1.1)",
+     "Wants help formatted as tables, with km units for run plans (P-2.1)"
+    ],
+    "cited_added": [
+     "H-5.1",
+     "T-5.1"
+    ],
+    "cited_removed": [
+     "P-1.1",
+     "P-2.1"
+    ],
+    "bullets": 4,
+    "as_of": "S-5"
+   }
+  },
+  {
+   "event_id": "S-6",
+   "date": "2025-09-08",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-6",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Bone-healing meal ideas."
+     },
+     {
+      "id": "O-6.1",
+      "status": "reaction",
+      "path": "memory/episodes.md",
+      "statement": "Says the kind, useful tone helped more than the drill-sergeant approach."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "T-6.1",
+      "status": "active",
+      "path": "state/transient.md",
+      "statement": "Wants gentler, healing-focused coaching while recovering."
+     },
+     {
+      "id": "H-6.1",
+      "status": "open",
+      "path": "state/hypotheses.md",
+      "statement": "They may want a softer coaching style while recovering."
+     }
+    ],
+    "changed": [
+     {
+      "id": "T-5.1",
+      "status": [
+       "active",
+       "superseded"
+      ],
+      "fields": {
+       "until": [
+        null,
+        "2025-09-08"
+       ],
+       "superseded_by": [
+        null,
+        "T-6.1"
+       ]
+      },
+      "statement": "Wants gentler, healing-focused coaching while recovering."
+     },
+     {
+      "id": "H-5.1",
+      "status": [
+       "open",
+       "superseded"
+      ],
+      "fields": {
+       "until": [
+        null,
+        "2025-09-08"
+       ],
+       "superseded_by": [
+        null,
+        "H-6.1"
+       ]
+      },
+      "statement": "They may want a softer coaching style while recovering."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Gentler coaching request review 2025-09-15 (T-6.1)",
+     "Softer coaching may be replacing the blunt style (H-6.1, open)",
+     "Wants gentler, healing-focused coaching while recovering (T-6.1)",
+     "Wants help formatted as tables, with km units for run plans (P-2.1)"
+    ],
+    "removed": [
+     "Gentler coaching request review 2025-09-10 (T-5.1, H-5.1)",
+     "Wants gentler, healing-focused coaching while recovering (T-5.1)"
+    ],
+    "cited_added": [
+     "H-6.1",
+     "P-2.1",
+     "T-6.1"
+    ],
+    "cited_removed": [
+     "H-5.1",
+     "T-5.1"
+    ],
+    "bullets": 6,
+    "as_of": "S-6"
+   }
+  }
+ ]
+}

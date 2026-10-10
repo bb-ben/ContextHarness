@@ -1,0 +1,54 @@
+{
+  "source": "v33_scenarios__001_foodbody-scenarios_tom_65fd5cd8",
+  "memory_kind": "none",
+  "condition": "none",
+  "repeat": 1,
+  "text": "You’re not undoing your recovery. Three nights of pizza is a blip, not a reset.\n\nWhat now:\n- Don’t “make up for it” by restricting hard today.\n- Go back to your normal next meal.\n- Hydrate, get some protein/fiber in, and move your body a little if that feels good.\n- Check the trigger: convenience, stress, exhaustion, no plan?\n- Make one tiny safeguard for tonight or tomorrow, like deciding dinner before you’re hungry.\n\nThe goal isn’t perfection; it’s returning to your baseline without drama. If you want, I can help you make a simple 2-day reset plan.",
+  "applied": [],
+  "utilization": null,
+  "attributes": [
+    {
+      "attribute": "challenge_level",
+      "current": "gentle_supportive",
+      "original": "push_hard",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Reassuring and non-pushy, it encourages a gentle reset rather than pushing harder."
+    },
+    {
+      "attribute": "focus",
+      "current": "recovery",
+      "original": "performance",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It centers recovery and getting back to baseline instead of performance goals."
+    },
+    {
+      "attribute": "format",
+      "current": "tables_metric",
+      "changed": false,
+      "fit": "other",
+      "votes": [
+        "other",
+        "other",
+        "other"
+      ],
+      "reason": "It uses short bullet points, not a table or metric-based format."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 0.667,
+  "judge_cost_usd": 0.00646,
+  "reply_cost_usd": 0.00111
+}
