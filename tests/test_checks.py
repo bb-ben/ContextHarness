@@ -26,7 +26,7 @@ CLEAN = {
     "state/preferences.md": (
         "# Preferences\n"
         "- P-0.1 | superseded | 2025-10-01 | topic: detail-level | basis: O-0.1 | until: 2025-10-09 | superseded_by: P-2.1 | Likes long, detailed answers.\n"
-        "- P-2.1 | current | 2025-10-09 | topic: detail-level | basis: O-2.1 | supersedes: P-0.1 | Wants short answers.\n"
+        "- P-2.1 | current | 2025-10-09 | topic: detail-level | basis: O-2.1 | supersedes: P-0.1 | changed: now wants short answers, not long ones | Wants short answers.\n"
     ),
     "state/goals.md": "# Goals\n- G-1.1 | active | 2025-10-05 | review: 2025-10-23 | basis: O-1.1 | Pass the exams.\n  - 2025-10-09 (S-2): studying daily.\n",
     "state/transient.md": "# Transient state\n- T-1.1 | active | 2025-10-05 | expires: 2025-10-12 | basis: O-1.1 | Stressed by exams.\n",

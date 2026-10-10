@@ -11,7 +11,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from .entries import Entry, parse_file
+from .entries import CHANGE_FIELD, Entry, parse_file
 from .workspace import Layout
 
 PREFERENCES_FILE = "state/preferences.md"
@@ -65,7 +65,10 @@ def render_dimensions(rows: list[DimensionRow]) -> str:
         for r in group:
             lines.append(f"{r.key}: {r.description or '(no reason given)'}")
             if r.current:
-                lines += [f"  current: {p.id} \"{p.statement}\"" for p in r.current]
+                for p in r.current:
+                    lines.append(f"  current: {p.id} \"{p.statement}\"")
+                    if (replaced := p.refs().get("supersedes")) and p.fields.get(CHANGE_FIELD):
+                        lines.append(f"    last change: {p.date}, replaced {', '.join(replaced)}: {p.fields[CHANGE_FIELD]}")
             else:
                 lines.append("  current: (none yet)")
             lines += [f"  challenged by: {h.id} (open) \"{h.statement}\"" for h in r.challenged_by]

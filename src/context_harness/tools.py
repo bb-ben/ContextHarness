@@ -13,7 +13,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Any, Literal, Protocol
 
-from .entries import CLOSED_STATUSES, ID_RE, parse_file
+from .entries import CHANGE_FIELD, CLOSED_STATUSES, ID_RE, LIVE_STATUSES, VALUE_MAX_CHARS, parse_file
 from .models.base import ToolCall, ToolSpec
 from .tracing import TraceWriter
 from .workspace import ARCHIVE_FILE, Workspace, WorkspaceError
@@ -328,6 +328,85 @@ class Archive(Tool):
         return ToolResult(True, f"Archived {len(found)} entries.", tuple(sorted(moves)) + (ARCHIVE_FILE,))
 
 
+class Supersede(Tool):
+    """Revise a belief in one step: write the new entry and close the old one, linked both ways.
+
+    By hand this takes an edit and an append that must agree, and in the v3.2 runs one
+    revision in six left the links one-sided or edited the old entry's date.
+    """
+
+    kind = "write"
+
+    def __init__(self, ws: Workspace):
+        self.ws = ws
+        self.spec = ToolSpec(
+            "supersede",
+            "Replace a live entry with a new one. Give the old entry's ID and the complete new entry line; "
+            "the new entry is added to the file for its type with supersedes: <old ID>, and the old one is "
+            "marked superseded with until: and superseded_by:. A preference or fact replacing another needs "
+            f"changed: <what is different>, and its statement must stay under {VALUE_MAX_CHARS} characters.",
+            _schema(id={"type": "string", "description": "ID of the live entry being replaced, e.g. P-10.1"},
+                    new_entry={"type": "string", "description": "The complete new entry line, starting with '- '"}),
+        )
+
+    def _state_files(self):
+        return [s for s in self.ws.layout.files
+                if s.path != ARCHIVE_FILE and s.entry_types and set(s.entry_types) - {"E", "O"}]
+
+    def run(self, args: dict[str, Any]) -> ToolResult:
+        old_id, line = args["id"].strip(), args["new_entry"].strip()
+        old = old_spec = None
+        for spec in self._state_files():
+            entries, _ = parse_file(spec.path, self.ws.read(spec.path), spec.entry_types)
+            old = next((e for e in entries if e.id == old_id), None)
+            if old:
+                old_spec = spec
+                break
+        if old is None:
+            raise WorkspaceError(f"{old_id} is not in any state file")
+        if old.status not in LIVE_STATUSES | {"paused"}:
+            raise WorkspaceError(f"{old_id} is {old.status}; only live entries can be superseded")
+        if "\n" in line:
+            raise WorkspaceError("new_entry must be a single entry line")
+        new_type = line.lstrip("- ")[:1]
+        new_spec = next((s for s in self._state_files() if new_type in s.entry_types), None)
+        if new_spec is None:
+            raise WorkspaceError(f"No state file holds {new_type} entries")
+        parsed, problems = parse_file(new_spec.path, line, new_spec.entry_types)
+        if problems or len(parsed) != 1:
+            raise WorkspaceError(f"new_entry did not parse as one entry: {problems[0].detail if problems else line[:80]}")
+        new = parsed[0]
+        if new.status not in LIVE_STATUSES:
+            raise WorkspaceError(f"the new entry must be live (current, active or open), not {new.status}")
+        if new.type in ("P", "F") and new.type == old.type:
+            if not new.fields.get(CHANGE_FIELD):
+                raise WorkspaceError(f"Add {CHANGE_FIELD}: <what is different from {old_id}> to the new entry")
+            if len(new.statement) > VALUE_MAX_CHARS:
+                raise WorkspaceError(
+                    f"The statement is {len(new.statement)} characters; keep it under {VALUE_MAX_CHARS}. Describe "
+                    "the person now: keep what still holds and drop what the new evidence replaces.")
+        segments = [s.strip() for s in line.split("|")]
+        if old_id not in new.refs().get("supersedes", []):
+            segments.insert(len(segments) - 1, f"supersedes: {old_id}")
+        new_line = " | ".join(segments)
+
+        old_text = self.ws.read(old_spec.path)
+        old_lines = old_text.splitlines()
+        head = [s.strip() for s in old_lines[old.line - 1].split("|")]
+        head[1] = "superseded"
+        head = [s for s in head if not s.startswith(("until:", "superseded_by:"))]
+        head[-1:-1] = [f"until: {new.date}", f"superseded_by: {new.id}"]
+        old_lines[old.line - 1] = " | ".join(head)
+        closed = "\n".join(old_lines) + "\n"
+        if new_spec.path == old_spec.path:
+            change = self.ws.write(old_spec.path, closed + new_line + "\n")
+        else:
+            change = self.ws.append(new_spec.path, new_line)  # fails first, before the old entry is touched
+            self.ws.write(old_spec.path, closed, check_ids=False)
+        return ToolResult(True, f"Superseded {old_id} with {new.id} in {new_spec.path}. {_describe(change, 'Wrote')}",
+                          tuple(sorted({old_spec.path, new_spec.path})))
+
+
 class Finish(Tool):
     """Ends the current event after this turn's other tool calls have run."""
 
@@ -349,7 +428,7 @@ class Finish(Tool):
 def workspace_tools(ws: Workspace, writable: bool, read_budget: ReadBudget | None = None) -> list[Tool]:
     tools: list[Tool] = [ListFiles(ws), ReadFile(ws, read_budget), Lookup(ws, read_budget)]
     if writable:
-        tools += [WriteFile(ws), EditFile(ws), AppendFile(ws), Archive(ws)]
+        tools += [WriteFile(ws), EditFile(ws), AppendFile(ws), Supersede(ws), Archive(ws)]
     return tools
 
 

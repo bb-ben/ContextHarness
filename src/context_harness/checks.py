@@ -16,10 +16,12 @@ from dataclasses import asdict, dataclass
 from typing import Any, Iterable
 
 from .entries import (
+    CHANGE_FIELD,
     CLOSED_STATUSES,
     LIVE_STATUSES,
     OBS_KINDS,
     STATUSES,
+    VALUE_MAX_CHARS,
     Entry,
     ParsedWorkspace,
     Problem,
@@ -141,6 +143,12 @@ def check_state(parsed: ParsedWorkspace, events: list[EventInfo], current: int,
                 add("supersession_mismatch", e, f"supersedes {old_id}, which is still {old.status}")
         if e.path == ARCHIVE_FILE and e.status not in CLOSED_STATUSES:
             add("archived_live", e, f"archived while {e.status}")
+        if e.type in ("P", "F"):
+            replaced = [entries[r] for r in e.refs().get("supersedes", []) if r in entries and entries[r].type == e.type]
+            if replaced and not e.fields.get(CHANGE_FIELD):
+                add("missing_change_note", e, f"supersedes {replaced[0].id} without {CHANGE_FIELD}: saying what is different")
+            if e.status == "current" and len(e.statement) > VALUE_MAX_CHARS:
+                add("long_value", e, f"statement is {len(e.statement)} characters (limit {VALUE_MAX_CHARS})")
         if e.type == "H" and e.status == "confirmed" and not e.fields.get("resolved_into"):
             add("unresolved_confirmation", e, "confirmed without resolved_into:")
         if e.type == "T" and e.status == "active":
