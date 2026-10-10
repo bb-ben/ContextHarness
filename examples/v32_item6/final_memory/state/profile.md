@@ -1,0 +1,13 @@
+# Profile
+- F-15.1 | current | 2025-10-15 | topic: organizing-experience | basis: O-15.4 | Has previously mobilized thousands for Petro rallies through market conversations.
+- F-16.1 | superseded | 2025-10-15 | topic: occupation | basis: O-16.1 | until: 2025-10-20 | superseded_by: F-18.1 | Has been appointed Senior Advisor to the National Ministry of Equality.
+- F-18.1 | superseded | 2025-10-20 | topic: occupation | basis: O-18.1 | until: 2025-12-05 | superseded_by: F-67.1 | Has been appointed Special Regional Advisor to the Presidential Office for social integration programs.
+- F-29.1 | current | 2025-11-04 | topic: residence | basis: O-29.5 | Has lived in Bosa their whole life.
+- F-37.1 | superseded | 2025-11-09 | topic: occupation | basis: O-37.1 | until: 2025-12-05 | superseded_by: F-67.1 | Has been appointed National Lead Mediator for the Regional Binding Dialogues by the Presidential Office.
+- F-45.1 | superseded | 2025-11-15 | topic: emergency-logistics-role | basis: O-45.1 | until: 2025-12-05 | superseded_by: F-67.1 | Has been appointed National Director for the Hambre Cero Urban Emergency Task Force in Colombia and is moving into crisis logistics.
+- F-49.1 | superseded | 2025-11-19 | topic: mediation-role | basis: O-30.1 | supersedes: T-30.1 | until: 2025-12-05 | superseded_by: F-67.1 | Is serving as District Mediator for the Bosa land restitution case.
+- F-50.1 | superseded | 2025-11-19 | topic: high-commissioner-role | basis: O-50.1 | until: 2025-12-05 | superseded_by: F-67.1 | Has been appointed High Commissioner for Urban Peace and Restorative Justice for the Bosa-Soacha border.
+- F-52.1 | superseded | 2025-11-20 | topic: occupation | basis: O-52.1 | until: 2025-12-05 | superseded_by: F-67.1 | Has been appointed Lead Presidential Envoy for the Urban Peace Initiative in Bosa.
+- F-54.1 | superseded | 2025-11-21 | topic: political-appointment | basis: O-54.1 | until: 2025-12-05 | superseded_by: F-67.1 | Has been appointed Principal Drafter for the Gran Acuerdo Nacional.
+- F-57.1 | superseded | 2025-11-28 | topic: special-investigative-role | basis: O-57.1 | until: 2025-12-05 | superseded_by: F-67.1 | Has been appointed National Director of the Special Investigative Unit for Land Restitution and Ethics.
+- F-67.1 | current | 2025-12-05 | topic: occupation | basis: O-67.1 | supersedes: F-18.1, F-37.1, F-45.1, F-49.1, F-50.1, F-52.1, F-54.1, F-57.1 | Has resigned from government posts and is leading the street resistance against the Bosa market demolition deal.

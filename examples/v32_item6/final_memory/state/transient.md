@@ -1,0 +1,32 @@
+# Transient state
+- T-0.1 | expired | 2025-09-28 | expires: 2025-09-30 | basis: O-0.1 | ended: 2025-09-30 | Is very anxious about tomorrow night's debate.
+- T-2.1 | expired | 2025-10-01 | review: 2025-10-08 | basis: O-2.2 | ended: 2025-10-10 | Is worried about the rally's noise limits and wants percussion energetic but legal.
+- T-2.2 | expired | 2025-10-01 | review: 2025-10-03 | basis: O-2.4 | ended: 2025-10-04 | Wants four-hour check-ins for the 48-hour rally push.
+- T-3.1 | expired | 2025-10-01 | review: 2025-10-08 | basis: O-3.5 | ended: 2025-10-10 | Feels overwhelmed by the zoning fight and nervous about the developers' lawyers.
+- T-5.1 | expired | 2025-10-02 | review: 2025-10-09 | basis: O-5.3 | ended: 2025-10-10 | Needs a midnight quiet cutoff for sleep to protect work performance.
+- T-10.1 | expired | 2025-10-10 | review: 2025-10-17 | basis: O-10.3 | ended: 2025-10-18 | Feels pressure about the final NGO paper due in a week.
+- T-12.1 | expired | 2025-10-11 | review: 2025-10-18 | basis: O-12.2 | ended: 2025-10-18 | Feels time pressure for the rally tomorrow.
+- T-13.1 | expired | 2025-10-12 | review: 2025-10-19 | basis: O-13.3 | ended: 2025-10-20 | Feels time pressure for the Geneva meeting next week.
+- T-14.1 | expired | 2025-10-14 | review: 2025-10-21 | basis: O-14.1, O-14.3 | ended: 2025-10-26 | Feels stressed and under immediate time pressure for the housing town hall.
+- T-15.1 | expired | 2025-10-15 | expires: 2025-10-17 | basis: O-15.1 | ended: 2025-10-18 | Feels intense time pressure and a zero-budget constraint for the Old Oak rescue.
+- T-16.1 | expired | 2025-10-15 | review: 2025-10-22 | basis: O-16.2 | ended: 2025-10-26 | Is drafting a formal resignation letter to leave the community outreach role in Bosa.
+- T-20.1 | expired | 2025-10-27 | review: 2025-11-03 | basis: O-20.2, O-20.5 | ended: 2025-11-03 | Feels stressed about tomorrow's community speech and wants a bulletproof response.
+- T-21.1 | expired | 2025-10-28 | review: 2025-11-04 | basis: O-21.2 | ended: 2025-11-04 | Is feeling heated and wants this discussion kept chill and fact-focused to stay focused.
+- T-23.1 | expired | 2025-10-30 | review: 2025-11-06 | basis: O-23.4 | ended: 2025-11-06 | Feels anxious about the academic panel in 10 days.
+- T-29.1 | expired | 2025-11-04 | review: 2025-11-11 | basis: O-29.1, O-29.2, O-29.3 | ended: 2025-11-11 | Feels nervous and time-pressured about the hearing and wants the prep crisp and jargon-free.
+- T-30.1 | superseded | 2025-11-04 | review: 2025-11-18 | basis: O-30.1 | until: 2025-11-19 | superseded_by: F-49.1 | Is serving as District Mediator for the Bosa land restitution case.
+- T-30.2 | expired | 2025-11-04 | review: 2025-11-11 | basis: O-30.2 | ended: 2025-11-11 | Wants the mediation opening statement to emphasize respectful dialogue and fair floor-sharing.
+- T-32.1 | expired | 2025-11-05 | expires: 2025-11-06 | basis: O-32.1, O-32.2 | ended: 2025-11-06 | Has a public briefing tomorrow on drainage failures and needs the prep jargon-free.
+- T-36.1 | superseded | 2025-11-09 | review: 2025-11-16 | basis: O-36.4 | until: 2025-11-16 | superseded_by: T-48.1 | Wants this week's mobilization messaging urgent and action-focused.
+- T-48.1 | expired | 2025-11-16 | review: 2025-11-23 | basis: O-48.1, O-48.2, O-48.3, O-48.4 | ended: 2025-11-26 | Is under immediate time pressure to turn the Bosa dialogue notes into a movement plan tonight.
+- T-51.1 | expired | 2025-11-20 | review: 2025-11-27 | basis: O-51.1, O-51.2, O-51.3 | ended: 2025-11-28 | Is under immediate time pressure to turn Bosa land-rights technical notes into rally-ready language for tonight's meeting.
+- T-52.1 | expired | 2025-11-20 | review: 2025-11-27 | basis: O-52.2 | ended: 2025-11-28 | Is under immediate time pressure to draft the ceasefire protocol before the first faction-leader meeting this week.
+- T-54.1 | expired | 2025-11-21 | review: 2025-11-28 | basis: O-54.3 | ended: 2025-11-28 | Is under immediate time pressure to organize the first committee meeting invitation.
+- T-55.1 | expired | 2025-11-26 | review: 2025-12-03 | basis: O-55.1 | ended: 2025-12-05 | Feels wiped out after a shouting-filled community board meeting.
+- T-57.1 | expired | 2025-11-28 | review: 2025-12-05 | basis: O-57.2 | ended: 2025-12-05 | Is under immediate time pressure to draft a forensic-verification checklist for suspicious land claims.
+- T-63.1 | expired | 2025-12-05 | review: 2025-12-12 | basis: O-63.4 | ended: 2025-12-13 | Is lowkey panicking about the Bosa keynote and the crowd reaction.
+- T-64.1 | expired | 2025-12-05 | review: 2025-12-12 | basis: O-64.1, O-69.1 | ended: 2025-12-13 | Is anxious about the land hearing and fears an overreach trap.
+- T-64.2 | expired | 2025-12-05 | review: 2025-12-12 | basis: O-64.5, O-66.2, O-68.2, O-69.2 | ended: 2025-12-13 | Wants a measured, persuasive tone for this prep so they do not get hot-headed.
+- T-70.1 | expired | 2025-12-10 | review: 2025-12-11 | basis: O-70.1 | ended: 2025-12-11 | Is under immediate time pressure to send the Bosa audit report tonight.
+- T-71.1 | superseded | 2025-12-10 | review: 2025-12-11 | basis: O-71.3 | until: 2025-12-11 | superseded_by: T-72.1 | The Bosa hearing prep feels urgent with less than 24 hours to go.
+- T-72.1 | expired | 2025-12-11 | review: 2025-12-12 | basis: O-72.1 | ended: 2025-12-13 | The Bosa hearing prep remains urgent with tomorrow's hearing still imminent.

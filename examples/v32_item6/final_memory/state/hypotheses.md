@@ -1,0 +1,12 @@
+# Hypotheses
+- H-0.1 | confirmed | 2025-09-28 | confidence: low | topic: help-format | for: O-0.2, O-1.1 | resolved_into: P-1.1 | May prefer concise bullet/checklist help when time is tight.
+- H-0.2 | confirmed | 2025-09-28 | confidence: low | topic: challenge-level | for: O-0.3, O-1.3 | resolved_into: P-1.2 | May prefer a more aggressive rebuttal style in debate prep.
+- H-0.3 | confirmed | 2025-09-28 | confidence: low | topic: explanation-style | for: O-0.4, O-1.2 | resolved_into: P-1.3 | May prefer concrete analogies and simpler framing over academic abstraction.
+- H-1.4 | confirmed | 2025-10-01 | confidence: low | topic: output-style | for: O-1.4, O-4.2 | resolved_into: P-4.1 | May prefer debate speech drafts to sound rally-ready and headline-like.
+- H-2.1 | confirmed | 2025-10-01 | confidence: low | topic: values | for: O-2.3 | resolved_into: P-2.1 | May prefer dignity-first campaigning and avoid personal attacks.
+- H-5.1 | confirmed | 2025-10-02 | confidence: low | topic: output-style | for: O-5.4, O-6.4, O-6.5, O-7.1, O-10.1, O-10.2 | resolved_into: P-10.1 | May want drafted scripts to sound professional and firm.
+- H-14.1 | confirmed | 2025-10-15 | confidence: low | topic: collaboration-style | for: O-14.2, O-15.5 | resolved_into: P-15.1 | May prefer partner-like back-and-forth when prep gets urgent.
+- H-20.1 | confirmed | 2025-10-27 | confidence: low | topic: output-style | for: O-20.2, O-21.1, O-22.2 | resolved_into: P-22.1 | The user may prefer public-facing factual explanations framed as a narrative case study.
+- H-25.1 | confirmed | 2025-11-01 | confidence: low | topic: decision-style | for: O-25.2, O-26.1 | challenges: P-3.2 | resolved_into: P-26.1 | May want hard evidence before persuading skeptical people.
+- H-35.1 | confirmed | 2025-11-06 | confidence: low | topic: output-style | for: O-35.1, O-35.2, O-35.3 | resolved_into: P-39.1 | May prefer short one-pagers for grassroots coordination briefs.
+- H-42.1 | confirmed | 2025-11-14 | confidence: low | topic: output-style | for: O-42.1, O-44.2 | resolved_into: P-44.1 | May want campaign and speech drafts to open with the big vision before the steps, in a casual, leaderly, neighbor-friendly way.

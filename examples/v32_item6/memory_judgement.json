@@ -1,0 +1,305 @@
+{
+  "item_id": "Jairo Restrepo_event77_20260326_turn1_communication_medium_preferences_142_counterfactuals.json",
+  "judge_model": "gpt-5.4-mini",
+  "memory_chars": 24148,
+  "attributes": [
+    {
+      "attribute": "preferred_response_format",
+      "current": "executive_summary_with_strategic_tradeoffs",
+      "original": "structured_numbered_steps",
+      "changed": true,
+      "memory_value": "bullet/checklist/numbered-step help when time is tight",
+      "current_match": "contradicts",
+      "original_still_current": true,
+      "change_recorded": false,
+      "evidence": "P-13.1 current: 'Wants concise bullet, checklist, or numbered-step help when time is tight.'",
+      "votes": [
+        "absent",
+        "contradicts",
+        "contradicts"
+      ]
+    },
+    {
+      "attribute": "emotional_tone",
+      "current": "diplomatic_and_authoritative",
+      "original": "direct_pragmatic",
+      "changed": true,
+      "memory_value": "lightly humorous conversational; professional/firm in formal pieces",
+      "current_match": "partial",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "P-3.1 current: 'Likes a real, lightly humorous conversational tone.'; P-10.1/P-60.1: 'professional and firm'; S-69.1: 'diplomatic investigative framing' and 'bridge-building chamber tone'.",
+      "votes": [
+        "contradicts",
+        "partial",
+        "partial"
+      ]
+    },
+    {
+      "attribute": "explanation_approach",
+      "current": "impact_assessment_first",
+      "original": "principles_first_then_examples",
+      "changed": true,
+      "memory_value": "concrete, locally grounded, fact-heavy narratives/analogies",
+      "current_match": "absent",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "P-1.3: \"Prefers concrete, locally grounded framing, hard facts, narrative examples, and story-like investigative prose over technical abstractions\"; H-0.3: \"May prefer concrete analogies and simpler framing over academic abstraction\"; no impact-assessment-first entry",
+      "votes": [
+        "absent",
+        "partial",
+        "absent"
+      ]
+    },
+    {
+      "attribute": "example_preference",
+      "current": "real_world_analogies",
+      "changed": false,
+      "memory_value": "concrete analogies / narrative examples",
+      "current_match": "matches",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "H-0.3 confirmed: 'May prefer concrete analogies and simpler framing over academic abstraction.'; P-1.3 current also mentions 'narrative examples'.",
+      "votes": [
+        "partial",
+        "matches",
+        "matches"
+      ]
+    },
+    {
+      "attribute": "boundary_setting_voice",
+      "current": "value_based_reasoning",
+      "changed": false,
+      "memory_value": "nothing",
+      "current_match": "absent",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "No direct boundary-setting-voice entry; closest is P-2.1: \"Prioritizes dignity-first campaigning and avoids personal attacks\"",
+      "votes": [
+        "absent",
+        "absent",
+        "absent"
+      ]
+    }
+  ],
+  "current_fidelity": 0.3,
+  "changed_fidelity": 0.167,
+  "stale": 1,
+  "changes_recorded": 0,
+  "n_attributes": 5,
+  "n_changed": 3,
+  "ungraded": [],
+  "repeats": 3,
+  "agreement": 0.733,
+  "current_fidelity_range": [
+    0.1,
+    0.4
+  ],
+  "estimated_cost_usd": 0.19996,
+  "runs": [
+    {
+      "item_id": "Jairo Restrepo_event77_20260326_turn1_communication_medium_preferences_142_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 24148,
+      "attributes": [
+        {
+          "attribute": "preferred_response_format",
+          "current": "executive_summary_with_strategic_tradeoffs",
+          "original": "structured_numbered_steps",
+          "changed": true,
+          "memory_value": "concise bullets/checklists/numbered steps; one-pagers; flowing prose",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-13.1: \"concise bullet, checklist, or numbered-step help when time is tight\"; P-60.1: \"technical fact-checks can use tables\" and \"grassroots coordination briefs should be short one-pagers\"; no executive-summary/strategic-tradeoff belief"
+        },
+        {
+          "attribute": "emotional_tone",
+          "current": "diplomatic_and_authoritative",
+          "original": "direct_pragmatic",
+          "changed": true,
+          "memory_value": "lightly humorous conversational, plus professional/firm in formal settings",
+          "current_match": "contradicts",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-3.1: \"Likes a real, lightly humorous conversational tone\"; P-60.1: \"formal reports and outreach should sound professional and firm\"; context.md: \"diplomatic investigative framing, bridge-building chamber tone\""
+        },
+        {
+          "attribute": "explanation_approach",
+          "current": "impact_assessment_first",
+          "original": "principles_first_then_examples",
+          "changed": true,
+          "memory_value": "concrete, locally grounded, fact-heavy narratives/analogies",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-1.3: \"Prefers concrete, locally grounded framing, hard facts, narrative examples, and story-like investigative prose over technical abstractions\"; H-0.3: \"May prefer concrete analogies and simpler framing over academic abstraction\"; no impact-assessment-first entry"
+        },
+        {
+          "attribute": "example_preference",
+          "current": "real_world_analogies",
+          "changed": false,
+          "memory_value": "concrete analogies and narrative examples",
+          "current_match": "partial",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "H-0.3: \"May prefer concrete analogies and simpler framing\"; P-1.3: \"narrative examples\" and \"story-like investigative prose\""
+        },
+        {
+          "attribute": "boundary_setting_voice",
+          "current": "value_based_reasoning",
+          "changed": false,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No direct boundary-setting-voice entry; closest is P-2.1: \"Prioritizes dignity-first campaigning and avoids personal attacks\""
+        }
+      ],
+      "current_fidelity": 0.1,
+      "changed_fidelity": 0.0,
+      "stale": 0,
+      "changes_recorded": 0,
+      "n_attributes": 5,
+      "n_changed": 3,
+      "ungraded": [],
+      "estimated_cost_usd": 0.10079
+    },
+    {
+      "item_id": "Jairo Restrepo_event77_20260326_turn1_communication_medium_preferences_142_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 24148,
+      "attributes": [
+        {
+          "attribute": "preferred_response_format",
+          "current": "executive_summary_with_strategic_tradeoffs",
+          "original": "structured_numbered_steps",
+          "changed": true,
+          "memory_value": "bullet/checklist/numbered-step help when time is tight",
+          "current_match": "contradicts",
+          "original_still_current": true,
+          "change_recorded": false,
+          "evidence": "P-13.1 current: 'Wants concise bullet, checklist, or numbered-step help when time is tight.'"
+        },
+        {
+          "attribute": "emotional_tone",
+          "current": "diplomatic_and_authoritative",
+          "original": "direct_pragmatic",
+          "changed": true,
+          "memory_value": "lightly humorous conversational; professional/firm in formal pieces",
+          "current_match": "partial",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-3.1 current: 'Likes a real, lightly humorous conversational tone.'; P-10.1/P-60.1: 'professional and firm'; S-69.1: 'diplomatic investigative framing' and 'bridge-building chamber tone'."
+        },
+        {
+          "attribute": "explanation_approach",
+          "current": "impact_assessment_first",
+          "original": "principles_first_then_examples",
+          "changed": true,
+          "memory_value": "concrete, locally grounded framing with hard facts and narrative examples",
+          "current_match": "partial",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-1.3 current: 'Prefers concrete, locally grounded framing, hard facts, narrative examples, and story-like investigative prose over technical abstractions.'"
+        },
+        {
+          "attribute": "example_preference",
+          "current": "real_world_analogies",
+          "changed": false,
+          "memory_value": "concrete analogies / narrative examples",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "H-0.3 confirmed: 'May prefer concrete analogies and simpler framing over academic abstraction.'; P-1.3 current also mentions 'narrative examples'."
+        },
+        {
+          "attribute": "boundary_setting_voice",
+          "current": "value_based_reasoning",
+          "changed": false,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No current entry in preferences/context specifically about boundary-setting voice."
+        }
+      ],
+      "current_fidelity": 0.4,
+      "changed_fidelity": 0.333,
+      "stale": 1,
+      "changes_recorded": 0,
+      "n_attributes": 5,
+      "n_changed": 3,
+      "ungraded": [],
+      "estimated_cost_usd": 0.05302
+    },
+    {
+      "item_id": "Jairo Restrepo_event77_20260326_turn1_communication_medium_preferences_142_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 24148,
+      "attributes": [
+        {
+          "attribute": "preferred_response_format",
+          "current": "executive_summary_with_strategic_tradeoffs",
+          "original": "structured_numbered_steps",
+          "changed": true,
+          "memory_value": "concise bullet/checklist/numbered-step help; brief recaps and one-pagers in some contexts",
+          "current_match": "contradicts",
+          "original_still_current": true,
+          "change_recorded": false,
+          "evidence": "context.md: \"Wants concise bullet, checklist, or numbered-step help when time is tight\"; P-13.1 current; P-60.1 current (brief recaps/one-pagers)"
+        },
+        {
+          "attribute": "emotional_tone",
+          "current": "diplomatic_and_authoritative",
+          "original": "direct_pragmatic",
+          "changed": true,
+          "memory_value": "mixed: lightly humorous conversational generally, but professional/firm and bridge-building in formal prep",
+          "current_match": "partial",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-3.1 current: \"Likes a real, lightly humorous conversational tone\"; context.md: \"diplomatic investigative framing, bridge-building chamber tone\"; P-60.1 current: \"professional and firm\""
+        },
+        {
+          "attribute": "explanation_approach",
+          "current": "impact_assessment_first",
+          "original": "principles_first_then_examples",
+          "changed": true,
+          "memory_value": "concrete, locally grounded, hard-fact narrative/case-study style",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-1.3 current: \"Prefers concrete, locally grounded framing, hard facts, narrative examples...\"; P-22.1/P-60.1 current: \"public-facing factual explanations can be framed as narrative case studies or flowing prose\""
+        },
+        {
+          "attribute": "example_preference",
+          "current": "real_world_analogies",
+          "changed": false,
+          "memory_value": "concrete analogies / narrative examples",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "H-0.3 confirmed: \"May prefer concrete analogies and simpler framing over academic abstraction\"; P-1.3 current: \"narrative examples\""
+        },
+        {
+          "attribute": "boundary_setting_voice",
+          "current": "value_based_reasoning",
+          "changed": false,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No direct boundary-setting voice entry; closest is P-2.1 on dignity-first campaigning, which is a values preference rather than boundary-setting voice"
+        }
+      ],
+      "current_fidelity": 0.3,
+      "changed_fidelity": 0.167,
+      "stale": 1,
+      "changes_recorded": 0,
+      "n_attributes": 5,
+      "n_changed": 3,
+      "ungraded": [],
+      "estimated_cost_usd": 0.04615
+    }
+  ]
+}

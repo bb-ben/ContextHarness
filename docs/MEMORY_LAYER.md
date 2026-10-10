@@ -324,6 +324,35 @@ between B and C is not caught.
 | `tone` held "casual, humorous" because the person chats casually, while everything they asked to have written was formal | New seed dimension `output-style` (how the work they ask for should read); `tone` is now how to talk with them |
 | 24 goals were still `active` at the end of item 6, 17 of them past their date and 7 with none | Every active goal needs `due:` or `review:`. Past-due goals appear under `<due>` to close (`achieved`, `abandoned`, or the new `lapsed`) or to push back. Checks: `missing_end_date` now covers goals; `overdue_goal` |
 
+### v3.2 on item 6
+
+$5.85 for the run and $0.20 for the judge; see
+[`examples/v32_item6/`](../examples/v32_item6).
+
+| | v3.1 | v3.2 |
+|---|---|---|
+| Holds the person now (judge) | 0.3 | 0.3 (tone moved from "contradicts" to "partial") |
+| Change recorded | 0 of 3 | 0 of 3 |
+| Goals at the end | 24 active (17 past their date, 7 with none) | 1 active, 15 lapsed, 1 achieved |
+| Cost per event | $0.071 | $0.078 |
+| Answer (unreliable on this item, per vetting) | D, the old-preference trap | D |
+
+**The new mechanisms work.** A hypothesis tagged `output-style` ("may want drafted
+scripts to sound professional and firm") collected six observations from different
+tasks and was promoted; conversational `tone` stayed separate ("real, lightly
+humorous"); goals close.
+
+**What still blocks tracking change is the merge rule.** After the change the
+`output-style` value was superseded five times, and each revision was a merge that
+kept every earlier clause and added new ones: "dramatic yet respectful, high-passion"
+from before the change is still in the final value, now joined by "opening with the
+big vision… casual, leaderly, neighbor-friendly; formal reports professional and
+firm". "Refines it: supersede with one merged statement" lets a value grow but never
+lets the old part go, so a change can't be told apart from an addition.
+
+Bookkeeping slips rose with the extra supersessions: 6 one-sided supersession links
+and 7 entries whose date was edited to the latest update, all left open at the end.
+
 ## Known gaps
 
 - **The archive itself has no rollover yet** (200,000 chars). That's enough for
@@ -337,8 +366,8 @@ between B and C is not caught.
   item under v2 and v3. Vetting finds 3 of the 6 sample items with a labeled change
   usable as answer tests; it is one model's judgment per item and hasn't been checked
   against a person's reading.
-- **v3.2 has not met a real model yet.** Whether tagged hypotheses really collect a
-  wish across tasks, rather than multiplying, is the open question.
+- **Values only grow.** Merged refinements keep outdated clauses, and nothing
+  records what changed (see "v3.2 on item 6").
 - **Open choices left for later:**
   - per-event review of open hypotheses (v2's accident hypothesis sat untouched for
     14 events);

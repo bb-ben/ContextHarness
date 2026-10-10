@@ -1,0 +1,53 @@
+{
+  "harness_version": "0.1.0",
+  "horizonbench_commit": "4b5076b147c952499b7921f20f811dd5aca7ef0b",
+  "method": "agent",
+  "model_settings": {
+    "model": "gpt-5.4-mini",
+    "max_tokens": 16000,
+    "effort": "medium",
+    "thinking": null,
+    "temperature": null,
+    "fallbacks": true,
+    "max_retries": 5,
+    "timeout_s": 240.0,
+    "requests_per_minute": null
+  },
+  "method_config": {
+    "layout": {
+      "name": "general",
+      "files": {
+        "context.md": 6000,
+        "memory/episodes.md": 60000,
+        "state/profile.md": 12000,
+        "state/preferences.md": 12000,
+        "state/goals.md": 12000,
+        "state/transient.md": 8000,
+        "state/hypotheses.md": 12000,
+        "memory/archive.md": 200000
+      }
+    },
+    "contract_path": null,
+    "preload_state": true,
+    "answer_strategy": "dimension-first",
+    "episode_rollover_at": 0.8,
+    "episode_rollover_to": 0.5,
+    "max_update_steps": 8,
+    "max_answer_steps": 6,
+    "answer_budget_chars": 48000,
+    "summary_max_chars": 8000,
+    "action_log_max_chars": 60000
+  },
+  "contract_sha256": "e92152c3eb6e03cd946dbfddb39d07f123819c7cf78deee9eee17e0a1221cec1",
+  "dataset": {
+    "config": "sample",
+    "source": null,
+    "order": "chronological",
+    "show_scenarios": true,
+    "max_sessions": null,
+    "item_indices": [
+      6
+    ]
+  },
+  "log_prompts": false
+}

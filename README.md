@@ -40,6 +40,11 @@ contract produces zero violations across all 901 events of the HorizonBench samp
   a preference repeated across many tasks under each task's goal. No memory recorded
   any change. See [`examples/multi_item_v31/`](examples/multi_item_v31) and the
   [design log](docs/MEMORY_LAYER.md#v31-on-three-items).
+- **v3.2 on item 6 ($5.85).** Preferences repeated across tasks are now collected,
+  and goals close (1 active at the end, against 24). The memory scores the same,
+  0.3, and still records no change: each revision of a preference merges new clauses
+  into the old ones instead of replacing what changed. See
+  [`examples/v32_item6/`](examples/v32_item6).
 - **Memory judge on that item.** Graded against the ground-truth attributes, v3
   holds 0.38 of the person's current preferences, v2 0.0, and the rolling summary
   0.75. The summary's lead comes from role-play content recorded before the change,
@@ -200,7 +205,9 @@ v2), so it says nothing about the layer.
 
 ## Next steps
 
-1. **Run v3.2 on item 6**, the one valid test so far, and judge it.
+1. **Contract v3.3: say what changed.** A revision states the person as they are now
+   and drops clauses the new evidence replaces, and a supersession records what
+   changed (`changed:`), so tracking change can be checked directly.
 2. **Score answers only on `usable` items** (0, 2 and 7 in the sample), and grade
    memory on `memory_only` items too.
 3. **Check the judge against a person's reading** of a few memories, and try a
