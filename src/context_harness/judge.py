@@ -213,5 +213,18 @@ def judge_memory(model: ModelAdapter, gold: GoldLabel, snapshot: Path) -> dict[s
     }
 
 
+def supported_scores(judgement: dict[str, Any], supported: list[str]) -> dict[str, Any]:
+    """Scores on the attributes a memory can fairly be held to: those that didn't change,
+    plus changes the person's own words support (from two-sided vetting). A label the
+    conversations contradict measures the item, not the memory."""
+    rows = [a for a in judgement["attributes"] if not a["changed"] or a["attribute"] in supported]
+    truth = {"attributes": [{k: a[k] for k in ("attribute", "current", "changed") + (("original",) if a["changed"] else ())}
+                            for a in rows]}
+    s = score_grades(truth, rows)
+    return {"supported_attributes": supported, "dropped": [a["attribute"] for a in judgement["attributes"]
+                                                           if a["changed"] and a["attribute"] not in supported],
+            **{k: s[k] for k in ("current_fidelity", "changed_fidelity", "stale", "changes_recorded", "n_changed")}}
+
+
 def write_judgement(out: Path, judgement: dict[str, Any]) -> None:
     out.write_text(json.dumps(judgement, indent=2))

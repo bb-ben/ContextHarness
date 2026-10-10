@@ -185,7 +185,7 @@ def cmd_replay_answer(args: argparse.Namespace) -> int:
 
 def cmd_judge_memory(args: argparse.Namespace) -> int:
     """Grade finished runs' final memories against the ground-truth preference attributes."""
-    from .judge import combine_repeats, judge_memory, write_judgement
+    from .judge import combine_repeats, judge_memory, supported_scores, write_judgement
     from .models.base import PauseRun
     from .replay import find_snapshot, load_source_item
 
@@ -211,6 +211,10 @@ def cmd_judge_memory(args: argparse.Namespace) -> int:
         out = Path(args.out) / f"{name}.json" if args.out else source / "memory_judgement.json"
         out.parent.mkdir(parents=True, exist_ok=True)
         j = combine_repeats(runs)
+        if args.vet:
+            vetted = {r["item_id"]: r for r in json.loads(Path(args.vet).read_text())}.get(item.gold.item_id)
+            if vetted is not None:
+                j["on_supported_changes"] = supported_scores(j, vetted.get("supported_attributes", []))
         write_judgement(out, j)
         print(f"{source}  ({j['memory_chars']} chars of memory) -> {out}")
         spread = (f" (single runs {j['current_fidelity_range'][0]}–{j['current_fidelity_range'][1]}, "
@@ -221,6 +225,10 @@ def cmd_judge_memory(args: argparse.Namespace) -> int:
             expect = f"{a['original']} -> {a['current']}" if a["changed"] else a["current"]
             votes = f" {'/'.join(v[:3] for v in a['votes'])}" if "votes" in a else ""
             print(f"    {a['attribute']:<26} {expect:<24} {a['current_match']:<11}{votes:<14} {_short(a['memory_value'], 60)}")
+        if s := j.get("on_supported_changes"):
+            print(f"  on changes the conversations support (dropped {s['dropped'] or 'none'}): current fidelity "
+                  f"{s['current_fidelity']}, changed {s['changed_fidelity']}, changes recorded "
+                  f"{s['changes_recorded']}/{s['n_changed']}")
     print(f"Estimated judge cost: ${total:.3f}")
     return 0
 
@@ -247,7 +255,9 @@ def cmd_vet_items(args: argparse.Namespace) -> int:
                   f"  ({r['sessions_after_change']} sessions after the change; "
                   f"correct option {'is' if r['correct_is_shortest'] else 'is not'} the shortest)")
             for a in r["attributes"]:
-                print(f"    {a['attribute']:<28} before: {a['before']:<14} after: {a['after']:<14} {_short(a['evidence'], 70)}")
+                mark = "supported" if a.get("change_supported") else "NOT supported"
+                print(f"    {a['attribute']:<28} before old/new {a.get('before_original', 0)}/{a.get('before_current', 0)}"
+                      f"  after old/new {a.get('after_original', 0)}/{a.get('after_current', 0)}  {mark}")
             if r.get("final_turn_conflict"):
                 print(f"    question's final request conflicts with the label: {r['final_turn_conflict']}"
                       f" — {_short(r['final_turn_explanation'], 110)}")
@@ -475,6 +485,7 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--timeout", type=float, default=300.0)
     p.add_argument("--max-cost-usd", type=float)
     p.add_argument("--out", help="Directory for judgements (default: memory_judgement.json in each item)")
+    p.add_argument("--vet", help="A vet-items report: also score only the changes the conversations support")
     p.set_defaults(func=cmd_judge_memory)
 
     p = sub.add_parser("respond-eval", help="Write replies from saved memory under several conditions; judge them")

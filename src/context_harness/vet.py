@@ -20,7 +20,7 @@ from .models.base import ModelAdapter, ModelRequest, TextBlock, ToolSpec
 from .models.pricing import cost_usd
 from .types import BenchmarkItem
 
-PERIOD_VALUES = ("original", "current", "mixed", "not_expressed")
+COUNT_FIELDS = ("before_original", "before_current", "after_original", "after_current")
 TURN_CHARS = 500  # per user turn; almost all turns are shorter
 
 VET_SYSTEM = """\
@@ -30,11 +30,14 @@ themselves wrote before and after that event, and you judge whether their own wo
 show each value. Ignore the content of their tasks unless it reveals how they want to
 be helped.
 
-For each changed attribute, report:
-- before: which value the person's own words show before the change: `original`,
-  `current`, `mixed`, or `not_expressed`.
-- after: the same, after the change.
-- evidence: session IDs and short quotes your answer rests on.
+For each changed attribute, count sessions on BOTH sides. Quotes that support a value
+are easy to find in a long history; what matters is the balance.
+- before_original / before_current: how many sessions before the change contain the
+  person's own words pointing to the original value / to the current value.
+- after_original / after_current: the same, for sessions after the change.
+A session that points both ways counts on both sides; one that says nothing counts on
+neither.
+- evidence: session IDs and short quotes for each side, especially after the change.
 
 Then compare the question's final conversation with the labeled correct response:
 final_turn_conflict is `yes` if the person's last request there asks for something the
@@ -95,11 +98,10 @@ def _submit_spec(attributes: list[str]) -> ToolSpec:
         "type": "object",
         "properties": {
             "attribute": {"type": "string", "enum": attributes},
-            "before": {"type": "string", "enum": list(PERIOD_VALUES)},
-            "after": {"type": "string", "enum": list(PERIOD_VALUES)},
+            **{f: {"type": "integer", "minimum": 0} for f in COUNT_FIELDS},
             "evidence": {"type": "string"},
         },
-        "required": ["attribute", "before", "after", "evidence"],
+        "required": ["attribute", *COUNT_FIELDS, "evidence"],
     }
     return ToolSpec("submit_vetting", "Submit the vetting for this item.", {
         "type": "object",
@@ -112,20 +114,30 @@ def _submit_spec(attributes: list[str]) -> ToolSpec:
     })
 
 
+def change_supported(a: dict[str, Any]) -> bool:
+    """The person's own words favor the new value after the change, and didn't already
+    favor it before. (Item 6: 25 sessions after the change still asked for numbered
+    steps, against 12 for summaries; a one-sided reading had called it a change.)"""
+    n = {f: int(a.get(f) or 0) for f in COUNT_FIELDS}
+    return n["after_current"] > n["after_original"] and n["before_original"] >= n["before_current"]
+
+
 def verdict(attributes: list[dict[str, Any]], final_turn_conflict: str) -> tuple[str, list[str]]:
     """Two uses, two bars. Grading memory against the labels needs a change that shows in
     the person's own words; trusting the multiple-choice answer also needs a question
     whose final request doesn't contradict the labeled answer.
 
     `usable`: both hold. `memory_only`: the change shows, but the answer is unreliable.
-    `suspect`: the change doesn't show."""
-    shown = [a for a in attributes if a["after"] == "current" and a["before"] in ("original", "not_expressed", "mixed")]
+    `suspect`: no labeled change shows."""
+    shown = [a for a in attributes if change_supported(a)]
     reasons = []
     if not shown:
         reasons.append("no changed attribute shows its new value after the change")
-    reversed_ = [a["attribute"] for a in attributes if a["after"] == "original"]
-    if reversed_:
-        reasons.append(f"after the change the person still shows the original value of {', '.join(reversed_)}")
+    for a in attributes:
+        if not change_supported(a):
+            reasons.append(f"{a['attribute']}: after the change, {a.get('after_original', 0)} sessions point to the "
+                           f"original value and {a.get('after_current', 0)} to the new one "
+                           f"(before: {a.get('before_original', 0)} vs {a.get('before_current', 0)})")
     if final_turn_conflict == "yes":
         reasons.append("the question's final request conflicts with the labeled answer")
     if not shown:
@@ -153,8 +165,10 @@ def vet_item(model: ModelAdapter, item: BenchmarkItem) -> dict[str, Any]:
     if args is None:
         raise RuntimeError(f"The vetting model did not submit (stop reason {response.stop_reason})")
     graded = {a.get("attribute"): a for a in args["attributes"]}
-    attributes = [graded.get(k, {"attribute": k, "before": "not_expressed", "after": "not_expressed",
-                                 "evidence": "(not graded)"}) for k in changed]
+    attributes = [graded.get(k, {"attribute": k, **{f: 0 for f in COUNT_FIELDS}, "evidence": "(not graded)"})
+                  for k in changed]
+    for a in attributes:
+        a["change_supported"] = change_supported(a)
     v, reasons = verdict(attributes, args.get("final_turn_conflict", "unclear"))
     costs = [cost_usd(u, model.settings.model) for u in usage]
     return {
@@ -163,6 +177,7 @@ def vet_item(model: ModelAdapter, item: BenchmarkItem) -> dict[str, Any]:
         "verdict": v,
         "reasons": reasons,
         "attributes": attributes,
+        "supported_attributes": [a["attribute"] for a in attributes if a["change_supported"]],
         "final_turn_conflict": args.get("final_turn_conflict"),
         "final_turn_explanation": args.get("final_turn_explanation", ""),
         "vet_model": model.settings.model,

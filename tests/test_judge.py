@@ -113,3 +113,17 @@ def test_cli_names_judgements_by_run_and_item(tmp_path, monkeypatch):
                         lambda settings: ScriptedModel(lambda req: ("", [("submit_grades", {"grades": grades})])))
     assert main(["judge-memory", str(item_dir), "--model", "fake", "--repeats", "1", "--out", str(tmp_path / "j")]) == 0
     assert (tmp_path / "j" / f"src__{item_dir.name}.json").exists()
+
+
+def test_scores_can_be_restricted_to_supported_changes():
+    from context_harness.judge import supported_scores
+
+    truth = {"preference_domain": "d", "life_events": [], "attributes": [
+        {"attribute": "format", "current": "summary", "original": "steps", "changed": True},
+        {"attribute": "tone", "current": "diplomatic", "original": "direct", "changed": True},
+        {"attribute": "examples", "current": "analogies", "changed": False}]}
+    g = lambda a, m: {"attribute": a, "memory_value": "", "current_match": m,  # noqa: E731
+                      "original_still_current": False, "change_recorded": False, "evidence": ""}
+    judgement = score_grades(truth, [g("format", "contradicts"), g("tone", "matches"), g("examples", "matches")])
+    s = supported_scores(judgement, ["tone"])  # the conversations don't support the format change
+    assert s["dropped"] == ["format"] and s["changed_fidelity"] == 1.0 and s["current_fidelity"] == 1.0
