@@ -40,7 +40,8 @@ VALUE_MAX_CHARS = 240
 # Fields that say what a revision changed; required when a preference or fact supersedes one.
 CHANGE_FIELD = "changed"
 
-REF_FIELDS = ("basis", "for", "against", "supersedes", "superseded_by", "resolved_into", "challenges", "decision")
+REF_FIELDS = ("basis", "for", "against", "supersedes", "superseded_by", "resolved_into", "challenges", "decision",
+              "overrides")
 
 
 @dataclass

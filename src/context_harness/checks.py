@@ -171,6 +171,12 @@ def check_state(parsed: ParsedWorkspace, events: list[EventInfo], current: int,
             review = e.fields.get("review")
             if not (review and is_valid_date(review) and review > now.date):
                 add("undecided_hypothesis", e, f"supported by two events since S-{ripe}, still open without a later review:")
+        if e.type == "T" and e.status == "active":
+            for target in e.refs().get("overrides", []):
+                chain = [t for t in entries.values() if t.type == "T" and target in t.refs().get("overrides", [])]
+                if len(chain) >= 3 and target in entries and entries[target].status == "current":
+                    add("renewed_override", e, f"{target} has been overridden {len(chain)} times; the change has "
+                                               "lasted, so supersede it, or let the override expire")
         if e.type == "G" and e.status == "active":
             end = goal_end(e)
             if end and is_valid_date(end) and end < now.date:  # a goal is live through its due day

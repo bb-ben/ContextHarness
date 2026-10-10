@@ -74,7 +74,8 @@ class WorkspaceAgent:
         if state := self.preloaded():
             blocks.append(prompts.render_state(state))
             if PREFERENCES_FILE in state:  # the structured view, derived from pre-loaded state
-                rows = dimension_rows(self.ws.layout, state[PREFERENCES_FILE], state.get(HYPOTHESES_FILE, ""))
+                rows = dimension_rows(self.ws.layout, state[PREFERENCES_FILE], state.get(HYPOTHESES_FILE, ""),
+                                      state.get(TRANSIENT_FILE, ""))
                 blocks.append(render_dimensions(rows))
         return blocks + [prompts.render_workspace(self.ws.list_files())]
 
