@@ -1,0 +1,108 @@
+{
+  "source": "v39_high_r1__003_foodbody-scenarios_lena_a7a829dd",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Absolutely — here’s a simple Mediterranean-style grocery plan for you and your partner, kept low-pressure and without grams/calories:\n\n**Produce:** tomatoes, cucumbers, greens, onions, garlic, bell peppers, lemons, zucchini, fruit\n**Protein:** chicken or fish, eggs, Greek yogurt, chickpeas, lentils, feta\n**Carbs:** rice or couscous, pasta, bread or pita, potatoes\n**Pantry:** olive oil, olives, canned tomatoes, broth, herbs, spices\n\n**Easy week idea**\n- Mon/Tue: sheet-pan chicken or chickpeas with roasted veg\n- Wed: tomato-feta pasta with salad\n- Thu: grain bowls with greens, beans, and olives\n- Fri: fish or lentil bowls\n- Weekend: eggs, soup, or leftovers\n\nIf you want, I can turn this into a full day-by-day grocery list and meal plan for the week.",
+  "applied": [
+    "P-7.1",
+    "P-0.2",
+    "P-3.1",
+    "F-0.1",
+    "T-7.1",
+    "T-7.2"
+  ],
+  "skipped": [],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "P-7.1",
+      "P-0.2",
+      "P-3.1",
+      "F-0.1",
+      "T-7.1",
+      "T-7.2"
+    ],
+    "live": [
+      "P-7.1",
+      "P-0.2",
+      "P-3.1",
+      "F-0.1",
+      "T-7.1",
+      "T-7.2"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-7.1",
+      "P-0.2",
+      "P-3.1"
+    ],
+    "recently_changed": [
+      "P-7.1",
+      "T-7.1",
+      "T-7.2"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "nutrition_numbers",
+      "current": "no_numbers",
+      "original": "exact_macros",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It explicitly avoids grams/calories and gives a non-numeric grocery plan."
+    },
+    {
+      "attribute": "check_in_style",
+      "current": "gentle_check_ins",
+      "original": "weekly_data_reports",
+      "changed": true,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "It doesn’t really do check-ins at all; it just answers the grocery-planning request."
+    },
+    {
+      "attribute": "cuisine",
+      "current": "mediterranean",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It clearly frames the plan as Mediterranean-style and uses Mediterranean ingredients."
+    },
+    {
+      "attribute": "household",
+      "current": "cooking_for_two",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It directly tailors the plan to “you and your partner,” matching cooking for two."
+    }
+  ],
+  "changed_fit_current": 0.5,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 0.75,
+  "judge_cost_usd": 0.00617,
+  "reply_cost_usd": 0.01529
+}

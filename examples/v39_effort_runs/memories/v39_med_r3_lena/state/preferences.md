@@ -1,0 +1,6 @@
+# Preferences
+- P-0.1 | superseded | 2025-03-03 | topic: meal-plan-style | new_dimension: Nutrition plans need a dimension for cuisine style and exact gram-level meal specs; none of the existing dimensions fit. | basis: O-0.2, O-0.3, O-2.1 | confirmed: 2025-03-16 | until: 2025-04-08 | superseded_by: P-5.1 | Wants Mediterranean-style meal plans with exact grams for every meal.
+- P-3.1 | superseded | 2025-03-23 | topic: help-format | basis: O-1.1, O-3.1 | until: 2025-04-22 | superseded_by: P-7.1 | Wants weekly report breakdowns by day.
+- P-5.1 | superseded | 2025-04-08 | topic: meal-plan-style | basis: O-0.2, O-5.1 | supersedes: P-0.1 | changed: no grams or calories now | until: 2025-04-15 | superseded_by: P-6.1 | Wants Mediterranean-style meal plans without grams or calories.
+- P-6.1 | current | 2025-04-15 | topic: meal-plan-style | basis: O-5.1, O-6.1 | supersedes: P-5.1 | changed: no numbers now, not just grams or calories | Wants Mediterranean-style meal plans without numbers.
+- P-7.1 | current | 2025-04-22 | topic: help-format | basis: O-7.1 | supersedes: P-3.1 | changed: weekly report breakdowns replaced by gentle check-ins about eating | Wants gentle check-ins about how eating's going.

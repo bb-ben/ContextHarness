@@ -1,0 +1,326 @@
+{
+  "item_index": 4,
+  "item_id": "Marisol Vega_foodbody_meal_prep_business",
+  "item_key": "183be56c3141",
+  "method": "agent",
+  "model": "gpt-5.4-mini",
+  "predicted_letter": "B",
+  "answer_via": "tool",
+  "correct": true,
+  "invalid": false,
+  "chose_distractor": false,
+  "predicted_value": "professional_macro_table",
+  "error": null,
+  "gold": {
+    "correct_letter": "B",
+    "distractor_letter": "A",
+    "has_evolved": true,
+    "generator": "foodbody-scenarios",
+    "user_id": "foodbody-scenarios/marisol",
+    "preference_domain": "food_writing_style"
+  },
+  "ordering": {
+    "policy": "chronological",
+    "n_history_sessions_in_text": 11,
+    "n_replayed": 11,
+    "text_order_monotonic": true,
+    "n_moved": 0,
+    "dropped_after_probe": [],
+    "truncated_to_last": null
+  },
+  "answer_details": {
+    "stop": "stop_condition",
+    "steps": 1,
+    "applied": [
+      "P-9.1",
+      "F-3.1"
+    ],
+    "read_chars": 0
+  },
+  "utilization": {
+    "applied": [
+      "P-9.1",
+      "F-3.1"
+    ],
+    "live": [
+      "P-9.1",
+      "F-3.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-9.1"
+    ],
+    "recently_changed": [
+      "P-9.1"
+    ]
+  },
+  "reference_heuristics": {
+    "shortest_option": "A",
+    "shortest_option_correct": false
+  },
+  "latency_s": 412.918,
+  "stats": {
+    "model_calls": 29,
+    "usage": {
+      "input_tokens": 64960,
+      "output_tokens": 93596,
+      "cache_read_input_tokens": 195072,
+      "cache_creation_input_tokens": 0
+    },
+    "usage_by_phase": {
+      "memory_update": {
+        "input_tokens": 62593,
+        "output_tokens": 93159,
+        "cache_read_input_tokens": 188416,
+        "cache_creation_input_tokens": 0
+      },
+      "answer": {
+        "input_tokens": 2367,
+        "output_tokens": 437,
+        "cache_read_input_tokens": 6656,
+        "cache_creation_input_tokens": 0
+      }
+    },
+    "calls_by_phase": {
+      "memory_update": 28,
+      "answer": 1
+    },
+    "served_by": {
+      "gpt-5.4-mini-2026-03-17": 29
+    },
+    "tool_calls": 56,
+    "tool_errors": 0,
+    "file_ops": 44,
+    "file_reads": 0,
+    "refusals": 0
+  },
+  "estimated_cost_usd": 0.48453240000000003,
+  "memory_chars": {
+    "context.md": 452,
+    "memory/episodes.md": 2260,
+    "state/profile.md": 206,
+    "state/preferences.md": 1543,
+    "state/goals.md": 8,
+    "state/transient.md": 18,
+    "state/hypotheses.md": 983,
+    "memory/archive.md": 10
+  },
+  "memory": {
+    "events": 11,
+    "violations_by_code": {
+      "history_rewritten": 2,
+      "date_mismatch": 1,
+      "unsupported_promotion": 1
+    },
+    "events_with_violations": 9,
+    "events_with_new_violations": 3,
+    "unresolved_at_end": 1,
+    "access_totals": {
+      "context.md": {
+        "writes": 13
+      },
+      "memory/episodes.md": {
+        "writes": 11
+      },
+      "state/hypotheses.md": {
+        "writes": 9
+      },
+      "state/preferences.md": {
+        "writes": 9
+      },
+      "state/profile.md": {
+        "writes": 2
+      }
+    },
+    "final_metrics": {
+      "entries": {
+        "E": 11,
+        "O": 15,
+        "F": 2,
+        "P": 7,
+        "H": 5
+      },
+      "live_entries": {
+        "F": 2,
+        "P": 5
+      },
+      "provenance_share": 0.9285714285714286,
+      "context_bullets": 4,
+      "context_cited_ids": 6,
+      "context_coverage_of_live_state": 0.8571428571428571,
+      "episodes_recorded": 11
+    }
+  },
+  "evolution_diagnostics": [
+    {
+      "date": "2025-01-26",
+      "event_name": "Started a meal-prep business",
+      "replayed_sessions": [
+        3
+      ],
+      "memory_writes": 4
+    }
+  ],
+  "evidence_chain": [
+    {
+      "date": "2025-01-26",
+      "event_name": "Started a meal-prep business",
+      "events": [
+        "S-3"
+      ],
+      "episodes": [
+        "E-3"
+      ],
+      "observations": [
+        "O-3.1"
+      ],
+      "hypotheses": [
+        "H-3.1"
+      ],
+      "state_entries": [
+        "F-3.1",
+        "P-4.1"
+      ],
+      "live_state_entries": [
+        "F-3.1"
+      ],
+      "stage": "in_state"
+    }
+  ],
+  "sessions": [
+    {
+      "index": 0,
+      "event_id": "S-0",
+      "date": "2025-01-06T09:00:00.000001",
+      "file_ops": 7,
+      "model_calls": 3,
+      "input_tokens": 25398,
+      "output_tokens": 9977,
+      "latency_s": 36.953,
+      "violations": 0,
+      "new_violations": 0
+    },
+    {
+      "index": 1,
+      "event_id": "S-1",
+      "date": "2025-01-12T09:00:00.000001",
+      "file_ops": 3,
+      "model_calls": 2,
+      "input_tokens": 16869,
+      "output_tokens": 3926,
+      "latency_s": 16.213,
+      "violations": 0,
+      "new_violations": 0
+    },
+    {
+      "index": 2,
+      "event_id": "S-2",
+      "date": "2025-01-19T09:00:00.000001",
+      "file_ops": 4,
+      "model_calls": 2,
+      "input_tokens": 17283,
+      "output_tokens": 13195,
+      "latency_s": 49.249,
+      "violations": 2,
+      "new_violations": 2
+    },
+    {
+      "index": 3,
+      "event_id": "S-3",
+      "date": "2025-01-26T09:00:00.000001",
+      "file_ops": 4,
+      "model_calls": 3,
+      "input_tokens": 26365,
+      "output_tokens": 10089,
+      "latency_s": 36.02,
+      "violations": 1,
+      "new_violations": 0
+    },
+    {
+      "index": 4,
+      "event_id": "S-4",
+      "date": "2025-02-03T09:00:00.000001",
+      "file_ops": 4,
+      "model_calls": 2,
+      "input_tokens": 17775,
+      "output_tokens": 5793,
+      "latency_s": 19.955,
+      "violations": 1,
+      "new_violations": 0
+    },
+    {
+      "index": 5,
+      "event_id": "S-5",
+      "date": "2025-02-10T09:00:00.000001",
+      "file_ops": 6,
+      "model_calls": 5,
+      "input_tokens": 45413,
+      "output_tokens": 13308,
+      "latency_s": 53.48,
+      "violations": 1,
+      "new_violations": 0
+    },
+    {
+      "index": 6,
+      "event_id": "S-6",
+      "date": "2025-02-17T09:00:00.000001",
+      "file_ops": 3,
+      "model_calls": 2,
+      "input_tokens": 18023,
+      "output_tokens": 7978,
+      "latency_s": 42.558,
+      "violations": 1,
+      "new_violations": 0
+    },
+    {
+      "index": 7,
+      "event_id": "S-7",
+      "date": "2025-02-24T09:00:00.000001",
+      "file_ops": 4,
+      "model_calls": 2,
+      "input_tokens": 18461,
+      "output_tokens": 8738,
+      "latency_s": 45.727,
+      "violations": 2,
+      "new_violations": 1
+    },
+    {
+      "index": 8,
+      "event_id": "S-8",
+      "date": "2025-03-03T09:00:00.000001",
+      "file_ops": 3,
+      "model_calls": 2,
+      "input_tokens": 18499,
+      "output_tokens": 7403,
+      "latency_s": 40.942,
+      "violations": 1,
+      "new_violations": 0
+    },
+    {
+      "index": 9,
+      "event_id": "S-9",
+      "date": "2025-03-10T09:00:00.000001",
+      "file_ops": 3,
+      "model_calls": 2,
+      "input_tokens": 18686,
+      "output_tokens": 4671,
+      "latency_s": 25.377,
+      "violations": 2,
+      "new_violations": 1
+    },
+    {
+      "index": 10,
+      "event_id": "S-10",
+      "date": "2025-03-17T09:00:00.000001",
+      "file_ops": 3,
+      "model_calls": 3,
+      "input_tokens": 28237,
+      "output_tokens": 8081,
+      "latency_s": 43.577,
+      "violations": 1,
+      "new_violations": 0
+    }
+  ]
+}

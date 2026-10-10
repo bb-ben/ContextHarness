@@ -1,0 +1,6 @@
+# Preferences
+- P-0.1 | superseded | 2025-03-03 | topic: help-format | new_dimension: exact gram-by-meal meal plans requested | basis: O-0.2, O-2.1 | confirmed: 2025-03-16 | until: 2025-03-23 | superseded_by: P-3.1 | Wants meal plans to specify exact grams for every meal.
+- P-0.2 | current | 2025-03-03 | topic: meal-style | new_dimension: cuisine style for meal plans | basis: O-0.3, O-6.1 | confirmed: 2025-04-15 | Wants Mediterranean-style meal plans.
+- P-3.1 | superseded | 2025-03-23 | topic: help-format | basis: O-0.2, O-1.1, O-3.1 | supersedes: P-0.1 | changed: adds weekly numeric reports broken down by day, not just exact-gram meal plans | until: 2025-04-08 | superseded_by: P-5.1 | Wants meal plans to specify exact grams and weekly numeric reports broken down by day.
+- P-5.1 | superseded | 2025-04-08 | topic: help-format | basis: O-5.1, O-6.2 | confirmed: 2025-04-15 | supersedes: P-3.1 | changed: removes grams and calories; numbers now trigger spiralling | until: 2025-04-22 | superseded_by: P-7.1 | Wants food help without grams or calories.
+- P-7.1 | current | 2025-04-22 | topic: help-format | basis: O-5.1, O-6.2, O-7.1 | supersedes: P-5.1 | changed: adds gentle check-ins; no weekly reports, grams, or calories | Wants gentle check-ins about eating, without weekly reports, grams, or calories.

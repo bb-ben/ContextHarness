@@ -1,0 +1,90 @@
+{
+  "source": "v39_med_r2__004_foodbody-scenarios_marisol_183be56c",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Absolutely — here’s a client-ready draft for next Tuesday’s menu, kept professional, emoji-free, and laid out in a clean macro table.\n\n| Menu Item | Description | Calories | Protein |\n|---|---|---:|---:|\n| Lemon Herb Chicken | Grilled chicken breast with roasted baby potatoes and green beans | 520 | 42g |\n| Turkey Meatballs | Herbed turkey meatballs with marinara, zucchini noodles, and parmesan | 460 | 38g |\n| Beef Stir-Fry | Sliced beef with broccoli, bell peppers, and jasmine rice in a savory garlic sauce | 590 | 35g |\n| Salmon Bowl | Oven-roasted salmon with quinoa, cucumber, and roasted asparagus | 540 | 36g |\n| Chicken Taco Bowl | Seasoned chicken with cilantro rice, black beans, corn, salsa, and shredded lettuce | 610 | 40g |\n\nIf you want, I can also make this more upscale, lower-carb, or turn it into a polished client-menu format with pricing.",
+  "applied": [
+    "P-7.1",
+    "P-7.2",
+    "P-10.1"
+  ],
+  "skipped": [
+    "F-3.1",
+    "F-5.1",
+    "P-1.1",
+    "P-5.1"
+  ],
+  "accounted_for_all": true,
+  "steps": 3,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "P-7.1",
+      "P-7.2",
+      "P-10.1"
+    ],
+    "live": [
+      "P-7.1",
+      "P-7.2",
+      "P-10.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-7.1",
+      "P-7.2",
+      "P-10.1"
+    ],
+    "recently_changed": [
+      "P-7.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "client_writing_tone",
+      "current": "professional",
+      "original": "casual_fun",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Uses a polished, client-ready, professional tone throughout."
+    },
+    {
+      "attribute": "client_nutrition_detail",
+      "current": "per_serving_macros_table",
+      "original": "no_numbers",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Includes a per-serving macro table with calories and protein for each menu item."
+    },
+    {
+      "attribute": "family_cooking_style",
+      "current": "casual_fun",
+      "changed": false,
+      "fit": "neutral",
+      "votes": [
+        "other",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "The style is polished and formal rather than casual and fun."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 0.667,
+  "judge_cost_usd": 0.0071,
+  "reply_cost_usd": 0.02445
+}

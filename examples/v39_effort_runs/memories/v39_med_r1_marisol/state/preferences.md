@@ -1,0 +1,5 @@
+# Preferences
+- P-1.1 | current | 2025-01-12 | topic: output-style | basis: O-0.1, O-0.2, O-1.1, O-2.1, O-5.1, O-8.1 | confirmed: 2025-03-03 | Wants fun, emoji-friendly output for kid-focused meal ideas, with nutrition details avoided.
+- P-4.1 | current | 2025-02-03 | topic: output-style | scope: client-menus | basis: O-4.1, O-7.1, O-9.1 | confirmed: 2025-03-10 | Wants client-menu descriptions polished and professional for paying customers.
+- P-7.1 | current | 2025-02-24 | topic: detail-level | scope: client-menus | basis: O-6.1, O-7.2, O-9.2 | confirmed: 2025-03-10 | Wants client menus to show calories and protein per serving.
+- P-10.1 | current | 2025-03-17 | topic: help-format | scope: client-facing | new_dimension: client-facing deliverables need a reusable format rule, not covered by output-style | basis: O-10.1 | Wants client-facing work in macro tables.

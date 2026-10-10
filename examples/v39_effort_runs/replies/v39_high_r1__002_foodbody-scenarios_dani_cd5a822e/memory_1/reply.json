@@ -1,0 +1,114 @@
+{
+  "source": "v39_high_r1__002_foodbody-scenarios_dani_cd5a822e",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "A few vegetarian, spicy, batch-friendly dinners:\n- Chickpea coconut curry\n- Sheet-pan fajita bowls\n- Gochujang tofu stir-fry\n- Lentil bolognese\n- Black bean enchilada skillet",
+  "applied": [
+    "F-1.1",
+    "F-4.1",
+    "P-1.1",
+    "P-6.1",
+    "P-6.2",
+    "T-7.1",
+    "T-7.3"
+  ],
+  "skipped": [
+    "P-0.1",
+    "P-0.2",
+    "T-7.2"
+  ],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "F-1.1",
+      "F-4.1",
+      "P-1.1",
+      "P-6.1",
+      "P-6.2",
+      "T-7.1",
+      "T-7.3"
+    ],
+    "live": [
+      "F-1.1",
+      "F-4.1",
+      "P-1.1",
+      "P-6.1",
+      "P-6.2",
+      "T-7.1",
+      "T-7.3"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-1.1",
+      "P-6.1",
+      "P-6.2"
+    ],
+    "recently_changed": [
+      "T-7.1",
+      "T-7.3"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "answer_length",
+      "current": "very_brief",
+      "original": "detailed_explanations",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Very short, just a quick list of ideas."
+    },
+    {
+      "attribute": "cooking_style",
+      "current": "one_pan_freezer_friendly",
+      "original": "elaborate_weekend_projects",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Focuses on easy batch-friendly, one-pan-ish dinners like sheet-pan and skillet meals, not elaborate projects."
+    },
+    {
+      "attribute": "diet",
+      "current": "vegetarian",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Explicitly suggests vegetarian dinners."
+    },
+    {
+      "attribute": "spice",
+      "current": "loves_spicy",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It explicitly leans spicy with options like gochujang and fajita/enchilada-style dishes."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 1.0,
+  "judge_cost_usd": 0.00721,
+  "reply_cost_usd": 0.01656
+}

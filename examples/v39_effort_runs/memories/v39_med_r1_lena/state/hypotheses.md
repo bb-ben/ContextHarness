@@ -1,0 +1,2 @@
+# Hypotheses
+- H-4.1 | confirmed | 2025-04-02 | confidence: low | for: O-4.2, O-5.1 | challenges: P-0.2 | topic: detail-level | resolved_into: P-5.1 | They may want less detailed tracking while recovering from burnout.

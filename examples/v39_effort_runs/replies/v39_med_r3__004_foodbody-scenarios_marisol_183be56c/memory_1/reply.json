@@ -1,0 +1,85 @@
+{
+  "source": "v39_med_r3__004_foodbody-scenarios_marisol_183be56c",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Absolutely — here’s a clean draft for Tuesday’s client menu.\n\n| Dish | Calories | Protein |\n|---|---:|---:|\n| Lemon Herb Chicken Bowl | 460 | 38g |\n| Turkey Meatballs with Roasted Veg | 430 | 34g |\n| Salmon Rice Box with Green Beans | 510 | 36g |\n| Beef Taco Salad with Salsa Lime Dressing | 445 | 32g |\n| Chicken Pesto Pasta with Broccoli | 495 | 35g |\n\nIf you want, I can also turn this into a full Tuesday-client format with portions, sides, and swap options.",
+  "applied": [
+    "P-1.1",
+    "P-10.1"
+  ],
+  "skipped": [
+    "F-3.1",
+    "F-5.1",
+    "P-8.1"
+  ],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "P-1.1",
+      "P-10.1"
+    ],
+    "live": [
+      "P-1.1",
+      "P-10.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-1.1",
+      "P-10.1"
+    ],
+    "recently_changed": [
+      "P-10.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "client_writing_tone",
+      "current": "professional",
+      "original": "casual_fun",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "The phrasing is polished and straightforward, with a professional presentation."
+    },
+    {
+      "attribute": "client_nutrition_detail",
+      "current": "per_serving_macros_table",
+      "original": "no_numbers",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It uses a table with per-dish nutrition numbers, matching the requested macro-style format."
+    },
+    {
+      "attribute": "family_cooking_style",
+      "current": "casual_fun",
+      "changed": false,
+      "fit": "other",
+      "votes": [
+        "neutral",
+        "other",
+        "other"
+      ],
+      "reason": "The reply doesn’t really emphasize a family cooking vibe or a casual/fun style."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 0.667,
+  "judge_cost_usd": 0.0069,
+  "reply_cost_usd": 0.00574
+}

@@ -1,0 +1,83 @@
+{
+  "source": "v39_high_r2__004_foodbody-scenarios_marisol_183be56c",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Here’s a clean draft for next Tuesday’s client menu:\n\n| Item | Description | Calories | Protein | Carbs | Fat |\n|---|---|---:|---:|---:|---:|\n| Option 1 | Lemon-herb chicken, roasted potatoes, green beans | 520 | 38g | 42g | 20g |\n| Option 2 | Turkey chili with sweet potato and black beans | 480 | 36g | 44g | 14g |\n| Option 3 | Teriyaki salmon, jasmine rice, steamed broccoli | 560 | 34g | 55g | 22g |\n| Option 4 | Greek chickpea quinoa bowl with cucumber, tomato, feta | 430 | 20g | 46g | 16g |\n| Snack | Greek yogurt with mixed berries | 180 | 15g | 20g | 3g |\n\nIf you want, I can turn this into a fuller Tuesday service menu with exact portions, branding, and tighter macro targets.",
+  "applied": [
+    "F-3.1",
+    "P-10.1"
+  ],
+  "skipped": [
+    "F-5.1",
+    "P-1.1"
+  ],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "F-3.1",
+      "P-10.1"
+    ],
+    "live": [
+      "F-3.1",
+      "P-10.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-10.1"
+    ],
+    "recently_changed": [
+      "P-10.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "client_writing_tone",
+      "current": "professional",
+      "original": "casual_fun",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Uses a polished, businesslike tone and presentation."
+    },
+    {
+      "attribute": "client_nutrition_detail",
+      "current": "per_serving_macros_table",
+      "original": "no_numbers",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Includes a per-serving macros table with calories, protein, carbs, and fat."
+    },
+    {
+      "attribute": "family_cooking_style",
+      "current": "casual_fun",
+      "changed": false,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "other"
+      ],
+      "reason": "The reply doesn’t signal a casual, fun cooking style either way."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 0.667,
+  "judge_cost_usd": 0.00876,
+  "reply_cost_usd": 0.0118
+}

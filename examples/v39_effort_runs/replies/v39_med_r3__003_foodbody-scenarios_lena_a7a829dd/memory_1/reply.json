@@ -1,0 +1,101 @@
+{
+  "source": "v39_med_r3__003_foodbody-scenarios_lena_a7a829dd",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Absolutely — here’s a simple Mediterranean-style grocery list for the week, built for you and your partner, with no numbers:\n\n- fresh veg: tomatoes, cucumbers, peppers, onions, greens, zucchini, carrots\n- fruit: lemons, berries, apples, oranges, grapes\n- proteins: chickpeas, lentils, eggs, yogurt, feta, fish, chicken, tofu if you like it\n- grains: bread, rice, couscous, pasta, oats\n- pantry: olive oil, garlic, olives, tahini, canned tomatoes, herbs, capers, vinegar\n- extras: hummus, nuts, seeds, avocados\n\nIf you want, I can turn this into a full meal plan for the week or sort it into a cleaner shopping list by store aisle.",
+  "applied": [
+    "F-0.1",
+    "P-6.1",
+    "P-7.1",
+    "T-7.1"
+  ],
+  "skipped": [],
+  "accounted_for_all": true,
+  "steps": 2,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "F-0.1",
+      "P-6.1",
+      "P-7.1",
+      "T-7.1"
+    ],
+    "live": [
+      "F-0.1",
+      "P-6.1",
+      "P-7.1",
+      "T-7.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-6.1",
+      "P-7.1"
+    ],
+    "recently_changed": [
+      "P-6.1",
+      "P-7.1",
+      "T-7.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "nutrition_numbers",
+      "current": "no_numbers",
+      "original": "exact_macros",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It avoids numeric targets and gives a no-numbers grocery list."
+    },
+    {
+      "attribute": "check_in_style",
+      "current": "gentle_check_ins",
+      "original": "weekly_data_reports",
+      "changed": true,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "This is a grocery-planning reply, not a check-in report, so it doesn’t really signal either check-in style."
+    },
+    {
+      "attribute": "cuisine",
+      "current": "mediterranean",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It explicitly frames the list as Mediterranean-style and uses Mediterranean ingredients."
+    },
+    {
+      "attribute": "household",
+      "current": "cooking_for_two",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It’s written for two people, mentioning you and your partner."
+    }
+  ],
+  "changed_fit_current": 0.5,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 0.75,
+  "judge_cost_usd": 0.00578,
+  "reply_cost_usd": 0.01002
+}

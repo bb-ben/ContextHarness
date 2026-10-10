@@ -1,0 +1,104 @@
+{
+  "source": "v39_med_r2__003_foodbody-scenarios_lena_a7a829dd",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Absolutely — I can help with a simple Mediterranean-leaning grocery list for you and your partner, kept low-pressure and without grams or calories.\n\nHere’s a solid week starter:\n\n**Produce**\n- Salad greens\n- Cucumbers\n- Tomatoes\n- Bell peppers\n- Zucchini\n- Onions\n- Garlic\n- Lemons\n- Fresh herbs if you like them\n- Fruit for breakfasts/snacks\n\n**Proteins**\n- Chicken or fish\n- Eggs\n- Greek yogurt\n- Chickpeas or lentils\n- Hummus\n\n**Carbs / staples**\n- Rice or couscous\n- Pasta or orzo\n- Bread or pita\n- Potatoes\n\n**Dairy / extras**\n- Feta\n- Parmesan or another hard cheese\n- Olive oil\n- Olives\n\n**Pantry**\n- Canned tomatoes\n- Beans\n- Broth\n- Vinegar\n- Spices like oregano, cumin, paprika, black pepper\n\nIf you want, I can turn this into:\n- a 7-day dinner plan,\n- a tighter budget version, or\n- a version built around what you already have.",
+  "applied": [
+    "P-7.1",
+    "P-0.2",
+    "F-0.1",
+    "T-7.1"
+  ],
+  "skipped": [
+    "G-0.1",
+    "H-1.1",
+    "H-4.1"
+  ],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "P-7.1",
+      "P-0.2",
+      "F-0.1",
+      "T-7.1"
+    ],
+    "live": [
+      "P-7.1",
+      "P-0.2",
+      "F-0.1",
+      "T-7.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-7.1",
+      "P-0.2"
+    ],
+    "recently_changed": [
+      "P-7.1",
+      "T-7.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "nutrition_numbers",
+      "current": "no_numbers",
+      "original": "exact_macros",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It explicitly avoids grams or calories, matching the no-numbers preference."
+    },
+    {
+      "attribute": "check_in_style",
+      "current": "gentle_check_ins",
+      "original": "weekly_data_reports",
+      "changed": true,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "current"
+      ],
+      "reason": "It doesn’t really do a check-in or progress report; it just offers help with optional next steps."
+    },
+    {
+      "attribute": "cuisine",
+      "current": "mediterranean",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It frames the list as Mediterranean-leaning and uses Mediterranean staples like olive oil, hummus, and feta."
+    },
+    {
+      "attribute": "household",
+      "current": "cooking_for_two",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It clearly plans for two people by saying it’s for you and your partner."
+    }
+  ],
+  "changed_fit_current": 0.5,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 0.75,
+  "judge_cost_usd": 0.00658,
+  "reply_cost_usd": 0.00621
+}

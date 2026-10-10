@@ -1,0 +1,311 @@
+{
+  "item_index": 3,
+  "item_id": "Lena Fischer_foodbody_burnout",
+  "item_key": "a7a829dd4c2c",
+  "method": "agent",
+  "model": "gpt-5.4-mini",
+  "predicted_letter": "B",
+  "answer_via": "tool",
+  "correct": true,
+  "invalid": false,
+  "chose_distractor": false,
+  "predicted_value": "gentle_no_numbers",
+  "error": null,
+  "gold": {
+    "correct_letter": "B",
+    "distractor_letter": "A",
+    "has_evolved": true,
+    "generator": "foodbody-scenarios",
+    "user_id": "foodbody-scenarios/lena",
+    "preference_domain": "nutrition_tracking_style"
+  },
+  "ordering": {
+    "policy": "chronological",
+    "n_history_sessions_in_text": 8,
+    "n_replayed": 8,
+    "text_order_monotonic": true,
+    "n_moved": 0,
+    "dropped_after_probe": [],
+    "truncated_to_last": null
+  },
+  "answer_details": {
+    "stop": "stop_condition",
+    "steps": 1,
+    "applied": [
+      "P-6.1",
+      "P-7.1",
+      "F-0.1",
+      "T-7.1"
+    ],
+    "read_chars": 0
+  },
+  "utilization": {
+    "applied": [
+      "P-6.1",
+      "P-7.1",
+      "F-0.1",
+      "T-7.1"
+    ],
+    "live": [
+      "P-6.1",
+      "P-7.1",
+      "F-0.1",
+      "T-7.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-6.1",
+      "P-7.1"
+    ],
+    "recently_changed": [
+      "P-6.1",
+      "P-7.1",
+      "T-7.1"
+    ]
+  },
+  "reference_heuristics": {
+    "shortest_option": "D",
+    "shortest_option_correct": false
+  },
+  "latency_s": 264.607,
+  "stats": {
+    "model_calls": 26,
+    "usage": {
+      "input_tokens": 53954,
+      "output_tokens": 47484,
+      "cache_read_input_tokens": 177664,
+      "cache_creation_input_tokens": 0
+    },
+    "usage_by_phase": {
+      "memory_update": {
+        "input_tokens": 51720,
+        "output_tokens": 47340,
+        "cache_read_input_tokens": 171008,
+        "cache_creation_input_tokens": 0
+      },
+      "answer": {
+        "input_tokens": 2234,
+        "output_tokens": 144,
+        "cache_read_input_tokens": 6656,
+        "cache_creation_input_tokens": 0
+      }
+    },
+    "calls_by_phase": {
+      "memory_update": 25,
+      "answer": 1
+    },
+    "served_by": {
+      "gpt-5.4-mini-2026-03-17": 26
+    },
+    "tool_calls": 50,
+    "tool_errors": 0,
+    "file_ops": 37,
+    "file_reads": 4,
+    "refusals": 0
+  },
+  "estimated_cost_usd": 0.2674683,
+  "memory_chars": {
+    "context.md": 292,
+    "memory/episodes.md": 1738,
+    "state/profile.md": 104,
+    "state/preferences.md": 1210,
+    "state/goals.md": 184,
+    "state/transient.md": 925,
+    "state/hypotheses.md": 168,
+    "memory/archive.md": 10
+  },
+  "memory": {
+    "events": 8,
+    "violations_by_code": {
+      "context_uncited": 1,
+      "unsupported_promotion": 1
+    },
+    "events_with_violations": 3,
+    "events_with_new_violations": 2,
+    "unresolved_at_end": 2,
+    "access_totals": {
+      "context.md": {
+        "writes": 9,
+        "reads": 1
+      },
+      "memory/episodes.md": {
+        "writes": 10,
+        "reads": 1
+      },
+      "state/goals.md": {
+        "writes": 4
+      },
+      "state/hypotheses.md": {
+        "writes": 3,
+        "reads": 1
+      },
+      "state/preferences.md": {
+        "writes": 6,
+        "reads": 1
+      },
+      "state/profile.md": {
+        "writes": 1
+      },
+      "state/transient.md": {
+        "writes": 4
+      }
+    },
+    "final_metrics": {
+      "entries": {
+        "E": 8,
+        "O": 11,
+        "F": 1,
+        "P": 5,
+        "G": 1,
+        "T": 4,
+        "H": 1
+      },
+      "live_entries": {
+        "F": 1,
+        "P": 2,
+        "T": 1
+      },
+      "provenance_share": 1.0,
+      "context_bullets": 5,
+      "context_cited_ids": 4,
+      "context_coverage_of_live_state": 1.0,
+      "episodes_recorded": 8
+    }
+  },
+  "evolution_diagnostics": [
+    {
+      "date": "2025-04-02",
+      "event_name": "Signed off work with burnout",
+      "replayed_sessions": [
+        4
+      ],
+      "memory_writes": 3
+    }
+  ],
+  "evidence_chain": [
+    {
+      "date": "2025-04-02",
+      "event_name": "Signed off work with burnout",
+      "events": [
+        "S-4"
+      ],
+      "episodes": [
+        "E-4"
+      ],
+      "observations": [
+        "O-4.1"
+      ],
+      "hypotheses": [],
+      "state_entries": [
+        "T-4.1",
+        "T-5.1",
+        "T-6.1",
+        "T-7.1"
+      ],
+      "live_state_entries": [
+        "T-7.1"
+      ],
+      "stage": "in_state"
+    }
+  ],
+  "sessions": [
+    {
+      "index": 0,
+      "event_id": "S-0",
+      "date": "2025-03-03T09:00:00.000001",
+      "file_ops": 5,
+      "model_calls": 2,
+      "input_tokens": 16482,
+      "output_tokens": 4708,
+      "latency_s": 25.758,
+      "violations": 0,
+      "new_violations": 0
+    },
+    {
+      "index": 1,
+      "event_id": "S-1",
+      "date": "2025-03-09T09:00:00.000001",
+      "file_ops": 3,
+      "model_calls": 3,
+      "input_tokens": 25269,
+      "output_tokens": 2617,
+      "latency_s": 15.6,
+      "violations": 0,
+      "new_violations": 0
+    },
+    {
+      "index": 2,
+      "event_id": "S-2",
+      "date": "2025-03-16T09:00:00.000001",
+      "file_ops": 3,
+      "model_calls": 2,
+      "input_tokens": 16963,
+      "output_tokens": 1374,
+      "latency_s": 8.443,
+      "violations": 0,
+      "new_violations": 0
+    },
+    {
+      "index": 3,
+      "event_id": "S-3",
+      "date": "2025-03-23T09:00:00.000001",
+      "file_ops": 10,
+      "model_calls": 6,
+      "input_tokens": 55414,
+      "output_tokens": 12975,
+      "latency_s": 71.609,
+      "violations": 0,
+      "new_violations": 0
+    },
+    {
+      "index": 4,
+      "event_id": "S-4",
+      "date": "2025-04-02T09:00:00.000001",
+      "file_ops": 3,
+      "model_calls": 2,
+      "input_tokens": 17102,
+      "output_tokens": 4033,
+      "latency_s": 22.458,
+      "violations": 0,
+      "new_violations": 0
+    },
+    {
+      "index": 5,
+      "event_id": "S-5",
+      "date": "2025-04-08T09:00:00.000001",
+      "file_ops": 5,
+      "model_calls": 4,
+      "input_tokens": 35989,
+      "output_tokens": 11573,
+      "latency_s": 62.291,
+      "violations": 1,
+      "new_violations": 1
+    },
+    {
+      "index": 6,
+      "event_id": "S-6",
+      "date": "2025-04-15T09:00:00.000001",
+      "file_ops": 4,
+      "model_calls": 3,
+      "input_tokens": 27443,
+      "output_tokens": 3230,
+      "latency_s": 19.174,
+      "violations": 1,
+      "new_violations": 0
+    },
+    {
+      "index": 7,
+      "event_id": "S-7",
+      "date": "2025-04-22T09:00:00.000001",
+      "file_ops": 4,
+      "model_calls": 3,
+      "input_tokens": 28066,
+      "output_tokens": 6830,
+      "latency_s": 37.717,
+      "violations": 2,
+      "new_violations": 1
+    }
+  ]
+}

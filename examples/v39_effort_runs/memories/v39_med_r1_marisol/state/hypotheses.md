@@ -1,0 +1,3 @@
+# Hypotheses
+- H-0.1 | confirmed | 2025-01-06 | confidence: low | topic: output-style | for: O-0.1, O-0.2, O-1.1 | resolved_into: P-1.1 | Wants family dinner ideas presented fun and emoji-friendly, with nutrition details avoided.
+- H-6.1 | confirmed | 2025-02-17 | confidence: low | topic: detail-level | for: O-6.1, O-7.2 | resolved_into: P-7.1 | Client menus may need calorie and protein counts per meal.

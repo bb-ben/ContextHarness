@@ -1,0 +1,88 @@
+{
+  "source": "v39_high_r3__004_foodbody-scenarios_marisol_183be56c",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Absolutely — here’s a clean Tuesday client menu draft with estimated macros per serving.\n\n| Menu item | Calories | Protein | Carbs | Fat |\n| --- | ---: | ---: | ---: | ---: |\n| Lemon Herb Chicken, Roasted Potatoes, Green Beans | 540 | 45g | 38g | 22g |\n| Turkey Meatballs, Marinara, Zucchini Noodles, Parmesan | 470 | 38g | 24g | 23g |\n| Teriyaki Salmon, Jasmine Rice, Broccoli | 560 | 36g | 44g | 26g |\n| Beef Taco Bowl, Rice, Corn, Salsa, Avocado | 610 | 40g | 52g | 28g |\n| Chickpea Curry, Basmati Rice, Spinach | 520 | 20g | 68g | 18g |\n\nIf you want, I can turn this into a more polished client handout with branding and pricing.",
+  "applied": [
+    "P-10.2",
+    "P-9.1",
+    "F-3.1"
+  ],
+  "skipped": [
+    "P-5.1",
+    "F-0.1"
+  ],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "P-10.2",
+      "P-9.1",
+      "F-3.1"
+    ],
+    "live": [
+      "P-10.2",
+      "P-9.1",
+      "F-3.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-10.2",
+      "P-9.1"
+    ],
+    "recently_changed": [
+      "P-10.2",
+      "P-9.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "client_writing_tone",
+      "current": "professional",
+      "original": "casual_fun",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "The phrasing is polished and businesslike, with a formal table presentation and client-facing language."
+    },
+    {
+      "attribute": "client_nutrition_detail",
+      "current": "per_serving_macros_table",
+      "original": "no_numbers",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It provides a per-serving macros table with calories, protein, carbs, and fat for each menu item."
+    },
+    {
+      "attribute": "family_cooking_style",
+      "current": "casual_fun",
+      "changed": false,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "The reply is framed as a client menu draft and doesn’t really signal a family cooking style, casual or otherwise."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 0.667,
+  "judge_cost_usd": 0.00593,
+  "reply_cost_usd": 0.02287
+}

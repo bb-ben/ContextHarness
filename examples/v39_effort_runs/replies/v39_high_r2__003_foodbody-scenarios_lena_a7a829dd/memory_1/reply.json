@@ -1,0 +1,103 @@
+{
+  "source": "v39_high_r2__003_foodbody-scenarios_lena_a7a829dd",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Absolutely — I can help with that.\n\nHere’s a solid Mediterranean-style starting list for you and your partner:\n\n- Produce: salad greens, cucumbers, tomatoes, peppers, onions, garlic, lemons, berries, bananas, avocados, fresh herbs\n- Protein: chicken, salmon or tuna, eggs, Greek yogurt, chickpeas, lentils, tofu\n- Carbs: rice, quinoa, whole-grain bread or pita, pasta, potatoes\n- Pantry: olive oil, olives, canned tomatoes, tahini, hummus, nuts, beans, spices\n- Extras: feta or other cheese, olives, sparkling water, coffee or tea\n\nIf you want, I can turn this into a simple meal plan too, or make it more budget-friendly, quicker to cook, or higher in protein.",
+  "applied": [
+    "P-5.1",
+    "P-5.2",
+    "F-0.1",
+    "F-0.2",
+    "G-0.1"
+  ],
+  "skipped": [],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "P-5.1",
+      "P-5.2",
+      "F-0.1",
+      "F-0.2",
+      "G-0.1"
+    ],
+    "live": [
+      "P-5.1",
+      "P-5.2",
+      "F-0.1",
+      "F-0.2",
+      "G-0.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-5.1",
+      "P-5.2"
+    ],
+    "recently_changed": [
+      "P-5.1",
+      "P-5.2"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "nutrition_numbers",
+      "current": "no_numbers",
+      "original": "exact_macros",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It avoids macro counts or any numeric nutrition tracking."
+    },
+    {
+      "attribute": "check_in_style",
+      "current": "gentle_check_ins",
+      "original": "weekly_data_reports",
+      "changed": true,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "It’s a one-off grocery suggestion with an optional follow-up, not a weekly check-in style."
+    },
+    {
+      "attribute": "cuisine",
+      "current": "mediterranean",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It explicitly frames the list as Mediterranean-style."
+    },
+    {
+      "attribute": "household",
+      "current": "cooking_for_two",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It plans food for “you and your partner,” matching cooking for two."
+    }
+  ],
+  "changed_fit_current": 0.5,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 0.75,
+  "judge_cost_usd": 0.00806,
+  "reply_cost_usd": 0.01437
+}

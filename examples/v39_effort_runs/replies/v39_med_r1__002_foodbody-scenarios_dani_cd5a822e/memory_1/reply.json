@@ -1,0 +1,109 @@
+{
+  "source": "v39_med_r1__002_foodbody-scenarios_dani_cd5a822e",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Spicy vegetarian one-pan ideas:\n- Chickpea coconut curry with spinach; make once, eat all week, finish with chili crisp.\n- Harissa tofu + sheet-pan broccoli/peppers, served over rice or couscous.\n- Chili-garlic noodles with mushrooms and edamame, all in one pan.",
+  "applied": [
+    "P-6.1",
+    "P-6.2",
+    "P-1.1",
+    "F-1.1",
+    "F-4.1",
+    "T-7.1"
+  ],
+  "skipped": [
+    "P-0.1",
+    "P-0.2"
+  ],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "P-6.1",
+      "P-6.2",
+      "P-1.1",
+      "F-1.1",
+      "F-4.1",
+      "T-7.1"
+    ],
+    "live": [
+      "P-6.1",
+      "P-6.2",
+      "P-1.1",
+      "F-1.1",
+      "F-4.1",
+      "T-7.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-6.1",
+      "P-6.2",
+      "P-1.1"
+    ],
+    "recently_changed": [
+      "T-7.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "answer_length",
+      "current": "very_brief",
+      "original": "detailed_explanations",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Very concise: just a short intro and three terse ideas, no detailed explanation."
+    },
+    {
+      "attribute": "cooking_style",
+      "current": "one_pan_freezer_friendly",
+      "original": "elaborate_weekend_projects",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Uses quick one-pan/sheet-pan style dinners, matching a simple one-pan approach."
+    },
+    {
+      "attribute": "diet",
+      "current": "vegetarian",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "All suggestions are vegetarian (chickpeas, tofu, vegetables, noodles with edamame)."
+    },
+    {
+      "attribute": "spice",
+      "current": "loves_spicy",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "The ideas explicitly emphasize heat with spicy, harissa, chili, and chili crisp."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 1.0,
+  "judge_cost_usd": 0.00564,
+  "reply_cost_usd": 0.00536
+}

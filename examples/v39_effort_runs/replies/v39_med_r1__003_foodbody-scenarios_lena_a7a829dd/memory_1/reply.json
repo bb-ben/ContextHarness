@@ -1,0 +1,106 @@
+{
+  "source": "v39_med_r1__003_foodbody-scenarios_lena_a7a829dd",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Absolutely — I can help with that. I can put together a simple Mediterranean-style grocery list for you and your partner, keep it number-free, and keep it easy on you this week.\n\nIf you want, send me any foods to avoid, or whether you’d like dinners, lunches, or both, and I’ll draft it.",
+  "applied": [
+    "P-0.1",
+    "P-5.1",
+    "P-7.2",
+    "F-0.1",
+    "T-7.1"
+  ],
+  "skipped": [
+    "P-7.1"
+  ],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "P-0.1",
+      "P-5.1",
+      "P-7.2",
+      "F-0.1",
+      "T-7.1"
+    ],
+    "live": [
+      "P-0.1",
+      "P-5.1",
+      "P-7.2",
+      "F-0.1",
+      "T-7.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-0.1",
+      "P-5.1",
+      "P-7.2"
+    ],
+    "recently_changed": [
+      "P-5.1",
+      "T-7.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "nutrition_numbers",
+      "current": "no_numbers",
+      "original": "exact_macros",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It explicitly offers a number-free grocery list, matching the no-numbers preference."
+    },
+    {
+      "attribute": "check_in_style",
+      "current": "gentle_check_ins",
+      "original": "weekly_data_reports",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "The tone is gentle and supportive, with an open-ended follow-up rather than a data-heavy report."
+    },
+    {
+      "attribute": "cuisine",
+      "current": "mediterranean",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It directly proposes a Mediterranean-style grocery list."
+    },
+    {
+      "attribute": "household",
+      "current": "cooking_for_two",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It frames the plan for \"you and your partner,\" which matches cooking for two."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 1.0,
+  "judge_cost_usd": 0.00486,
+  "reply_cost_usd": 0.00984
+}

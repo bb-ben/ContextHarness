@@ -1,0 +1,110 @@
+{
+  "source": "v39_high_r2__002_foodbody-scenarios_dani_cd5a822e",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Here are a few that fit your usual dinner constraints:\n\n1. Spicy black bean quesadillas — handheld, one-pan, and easy to freeze.\n2. Chickpea fajita bowls — vegetarian, spicy, and good for batch cooking.\n3. Red lentil chili — freezer-friendly and low-effort.\n4. Halloumi pepper wraps with chili crisp — good for a one-handed night.\n5. Tofu peanut noodles with frozen veg — fast and makes solid leftovers.\n\nIf you want, I can turn these into a 5-night plan or a shopping list.",
+  "applied": [
+    "P-0.1",
+    "P-1.1",
+    "P-7.1",
+    "P-7.2",
+    "F-4.1",
+    "F-7.1"
+  ],
+  "skipped": [
+    "P-0.2",
+    "P-0.3"
+  ],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "P-0.1",
+      "P-1.1",
+      "P-7.1",
+      "P-7.2",
+      "F-4.1",
+      "F-7.1"
+    ],
+    "live": [
+      "P-0.1",
+      "P-1.1",
+      "P-7.1",
+      "P-7.2",
+      "F-4.1",
+      "F-7.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-0.1",
+      "P-1.1",
+      "P-7.1",
+      "P-7.2"
+    ],
+    "recently_changed": [
+      "P-7.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "answer_length",
+      "current": "very_brief",
+      "original": "detailed_explanations",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "other"
+      ],
+      "reason": "Keeps it concise with a short list instead of a long explanation."
+    },
+    {
+      "attribute": "cooking_style",
+      "current": "one_pan_freezer_friendly",
+      "original": "elaborate_weekend_projects",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Emphasizes one-pan, freezer-friendly, batch-cook, and leftovers-focused meals."
+    },
+    {
+      "attribute": "diet",
+      "current": "vegetarian",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "All the ideas are vegetarian."
+    },
+    {
+      "attribute": "spice",
+      "current": "loves_spicy",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "Several suggestions are explicitly spicy or chili-forward."
+    }
+  ],
+  "changed_fit_current": 1.0,
+  "changed_fit_original": 0.0,
+  "all_fit_current": 1.0,
+  "judge_cost_usd": 0.00577,
+  "reply_cost_usd": 0.01856
+}

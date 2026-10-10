@@ -1,0 +1,103 @@
+{
+  "source": "v39_med_r2__002_foodbody-scenarios_dani_cd5a822e",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Absolutely — here are five vegetarian, spicy dinner ideas that should carry you through the week without getting fussy:\n\n1. **Spicy chickpea coconut curry** with spinach and rice — creamy, fast, and it reheats really well.\n2. **Gochujang tofu bowls** with broccoli, carrots, and sesame rice — big flavor, easy to scale up for leftovers.\n3. **Black bean enchiladas** with salsa verde and plenty of jalapeño — comforting, filling, and very weeknight-friendly.\n4. **Harissa roasted cauliflower + chickpeas** with couscous or flatbread — lots of heat, minimal hands-on time.\n5. **Spicy peanut noodles** with tofu and edamame — good when you want something rich, salty, and quick.\n\nIf you want, I can turn those into a 5-night plan with a shopping list, or make them even quicker/one-pan.",
+  "applied": [
+    "F-7.1",
+    "F-4.1",
+    "P-1.1",
+    "P-1.2",
+    "P-1.3"
+  ],
+  "skipped": [],
+  "accounted_for_all": true,
+  "steps": 1,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "F-7.1",
+      "F-4.1",
+      "P-1.1",
+      "P-1.2",
+      "P-1.3"
+    ],
+    "live": [
+      "F-7.1",
+      "F-4.1",
+      "P-1.1",
+      "P-1.2",
+      "P-1.3"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-1.1",
+      "P-1.2",
+      "P-1.3"
+    ],
+    "recently_changed": [
+      "F-7.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "answer_length",
+      "current": "very_brief",
+      "original": "detailed_explanations",
+      "changed": true,
+      "fit": "original",
+      "votes": [
+        "original",
+        "other",
+        "original"
+      ],
+      "reason": "It gives a fairly detailed list with descriptions and a follow-up offer, matching the old more-explanatory style rather than very brief."
+    },
+    {
+      "attribute": "cooking_style",
+      "current": "one_pan_freezer_friendly",
+      "original": "elaborate_weekend_projects",
+      "changed": true,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "The ideas are simple weeknight meals with some leftovers-friendly notes, but it doesn’t clearly emphasize the one-pan/freezer-friendly style."
+    },
+    {
+      "attribute": "diet",
+      "current": "vegetarian",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It explicitly frames the suggestions as vegetarian and all the dishes fit that diet."
+    },
+    {
+      "attribute": "spice",
+      "current": "loves_spicy",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "current",
+        "current",
+        "current"
+      ],
+      "reason": "It repeatedly highlights spicy ingredients and heat, matching a love of spicy food."
+    }
+  ],
+  "changed_fit_current": 0.0,
+  "changed_fit_original": 0.5,
+  "all_fit_current": 0.5,
+  "judge_cost_usd": 0.01013,
+  "reply_cost_usd": 0.01243
+}

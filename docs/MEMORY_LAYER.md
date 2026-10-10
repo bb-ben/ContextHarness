@@ -513,6 +513,43 @@ items 0 and 6 are supported, though item 6's format only narrowly. `judge-memory
 LLM counts over 50+ sessions are rough; the keyword count and the model's count
 disagreed in direction on item 6.
 
+### v3.9 and the design-or-agent question: 18 runs
+
+v3.9 revises a value from its dimension's recent evidence (shown in the view), refuses
+"now also…" revisions, and allows scoped values. To separate the design from the
+agent, it ran three times at medium and three times at high reasoning effort on the
+three neutral-ending scenarios: new parent, burnout, and a new **meal-prep** scenario
+in which client work turns professional and macro-labeled over several small requests
+while family cooking stays casual. $7.96 for the round, including two-sided vetting;
+see [`examples/v39_effort_runs/`](../examples/v39_effort_runs) and
+[`scenarios/check_memory.py`](../scenarios/check_memory.py).
+
+| | Medium (9 runs) | High (9 runs) |
+|---|---|---|
+| Multiple-choice answers correct | 9 / 9 | 9 / 9 |
+| Replies follow the new values (mean) | 0.72 | 0.78 |
+| Cost | $2.56 | $4.42 |
+
+**Reasoning effort doesn't matter:** the same results at 1.7 times the cost. What
+varies is the run: the same scenario under the same settings produced replies scoring
+0.0, 0.5 and 1.0.
+
+**Where the design failed:**
+- **Overlapping dimensions.** `help-format` and `detail-level` both claimed answer
+  length. In all six new-parent runs the agent recorded "very short, about 3 lines" on
+  one while "detailed, thorough explanations" stayed current on the other; nothing
+  compares values across dimensions, and 2 of 6 replies followed the stale one.
+- **Scopes can dodge a conflict.** One run scoped "short answers" to "cooking help",
+  which is every request this person makes, leaving "detailed" as the default.
+
+**Where the design worked:** scoped values. In the meal-prep scenario the agent kept
+client work (professional, macros per serving) apart from family cooking in most runs,
+and all six replies to the client request followed the new values.
+
+**Where the agent's judgment differs from the label:** burnout replies skipped the
+"gentle check-ins" preference as irrelevant to a grocery request in 5 of 6; and
+recording varies run to run ("one-pan" collected in 4 of 6).
+
 ## Known gaps
 
 - **The archive itself has no rollover yet** (200,000 chars). That's enough for
@@ -528,8 +565,11 @@ disagreed in direction on item 6.
   against a person's reading.
 - **Changes don't hold up over long histories.** On the 75-event item, v3.8's values
   grew by addition ("now also…") and kept the pre-change wording.
-- **Run-to-run variance.** The same scenario under the same contract collects
-  different things on different runs; single runs can't rank versions.
+- **Run-to-run variance, not reasoning effort.** High effort gave the same results as
+  medium at 1.7 times the cost; the same settings still produce different memories on
+  different runs.
+- **Seed dimensions overlap** (`help-format` and `detail-level` both cover length), and
+  nothing checks for contradicting values across dimensions.
 - **A rolling summary still matches or beats the layer on these short scenarios**, at
   a fraction of the cost. The layer's edge so far is that what it believes, why and
   what it used are all inspectable.

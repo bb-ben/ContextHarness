@@ -1,0 +1,305 @@
+{
+  "item_index": 2,
+  "item_id": "Dani Morales_foodbody_new_parent",
+  "item_key": "cd5a822e9b39",
+  "method": "agent",
+  "model": "gpt-5.4-mini",
+  "predicted_letter": "B",
+  "answer_via": "tool",
+  "correct": true,
+  "invalid": false,
+  "chose_distractor": false,
+  "predicted_value": "brief_one_pan",
+  "error": null,
+  "gold": {
+    "correct_letter": "B",
+    "distractor_letter": "A",
+    "has_evolved": true,
+    "generator": "foodbody-scenarios",
+    "user_id": "foodbody-scenarios/dani",
+    "preference_domain": "cooking_help_style"
+  },
+  "ordering": {
+    "policy": "chronological",
+    "n_history_sessions_in_text": 8,
+    "n_replayed": 8,
+    "text_order_monotonic": true,
+    "n_moved": 0,
+    "dropped_after_probe": [],
+    "truncated_to_last": null
+  },
+  "answer_details": {
+    "stop": "stop_condition",
+    "steps": 1,
+    "applied": [
+      "F-7.1",
+      "P-1.3",
+      "P-1.1",
+      "P-1.2",
+      "H-7.1"
+    ],
+    "read_chars": 0
+  },
+  "utilization": {
+    "applied": [
+      "F-7.1",
+      "P-1.3",
+      "P-1.1",
+      "P-1.2",
+      "H-7.1"
+    ],
+    "live": [
+      "F-7.1",
+      "P-1.3",
+      "P-1.1",
+      "P-1.2",
+      "H-7.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-1.3",
+      "P-1.1",
+      "P-1.2"
+    ],
+    "recently_changed": [
+      "F-7.1"
+    ]
+  },
+  "reference_heuristics": {
+    "shortest_option": "C",
+    "shortest_option_correct": false
+  },
+  "latency_s": 386.735,
+  "stats": {
+    "model_calls": 21,
+    "usage": {
+      "input_tokens": 45563,
+      "output_tokens": 72727,
+      "cache_read_input_tokens": 140800,
+      "cache_creation_input_tokens": 0
+    },
+    "usage_by_phase": {
+      "memory_update": {
+        "input_tokens": 43425,
+        "output_tokens": 72353,
+        "cache_read_input_tokens": 134144,
+        "cache_creation_input_tokens": 0
+      },
+      "answer": {
+        "input_tokens": 2138,
+        "output_tokens": 374,
+        "cache_read_input_tokens": 6656,
+        "cache_creation_input_tokens": 0
+      }
+    },
+    "calls_by_phase": {
+      "memory_update": 20,
+      "answer": 1
+    },
+    "served_by": {
+      "gpt-5.4-mini-2026-03-17": 21
+    },
+    "tool_calls": 40,
+    "tool_errors": 0,
+    "file_ops": 32,
+    "file_reads": 0,
+    "refusals": 0
+  },
+  "estimated_cost_usd": 0.37200375,
+  "memory_chars": {
+    "context.md": 384,
+    "memory/episodes.md": 1999,
+    "state/profile.md": 374,
+    "state/preferences.md": 569,
+    "state/goals.md": 8,
+    "state/transient.md": 395,
+    "state/hypotheses.md": 774,
+    "memory/archive.md": 10
+  },
+  "memory": {
+    "events": 8,
+    "violations_by_code": {
+      "missing_episode": 1,
+      "context_stale": 1,
+      "uncollected_signals": 1
+    },
+    "events_with_violations": 2,
+    "events_with_new_violations": 2,
+    "unresolved_at_end": 1,
+    "access_totals": {
+      "context.md": {
+        "writes": 7
+      },
+      "memory/episodes.md": {
+        "writes": 8
+      },
+      "state/hypotheses.md": {
+        "writes": 6
+      },
+      "state/preferences.md": {
+        "writes": 5
+      },
+      "state/profile.md": {
+        "writes": 3
+      },
+      "state/transient.md": {
+        "writes": 3
+      }
+    },
+    "final_metrics": {
+      "entries": {
+        "E": 7,
+        "O": 17,
+        "F": 3,
+        "P": 3,
+        "T": 2,
+        "H": 5
+      },
+      "live_entries": {
+        "F": 2,
+        "P": 3,
+        "H": 3
+      },
+      "provenance_share": 1.0,
+      "context_bullets": 5,
+      "context_cited_ids": 7,
+      "context_coverage_of_live_state": 0.875,
+      "episodes_recorded": 7
+    }
+  },
+  "evolution_diagnostics": [
+    {
+      "date": "2025-07-01",
+      "event_name": "Became a parent",
+      "replayed_sessions": [
+        4
+      ],
+      "memory_writes": 4
+    }
+  ],
+  "evidence_chain": [
+    {
+      "date": "2025-07-01",
+      "event_name": "Became a parent",
+      "events": [
+        "S-4"
+      ],
+      "episodes": [
+        "E-4"
+      ],
+      "observations": [
+        "O-4.1",
+        "O-4.2"
+      ],
+      "hypotheses": [],
+      "state_entries": [
+        "F-4.1",
+        "T-4.1"
+      ],
+      "live_state_entries": [
+        "F-4.1"
+      ],
+      "stage": "in_state"
+    }
+  ],
+  "sessions": [
+    {
+      "index": 0,
+      "event_id": "S-0",
+      "date": "2025-06-02T09:00:00.000001",
+      "file_ops": 3,
+      "model_calls": 2,
+      "input_tokens": 16374,
+      "output_tokens": 2124,
+      "latency_s": 12.717,
+      "violations": 0,
+      "new_violations": 0
+    },
+    {
+      "index": 1,
+      "event_id": "S-1",
+      "date": "2025-06-08T09:00:00.000001",
+      "file_ops": 6,
+      "model_calls": 2,
+      "input_tokens": 17114,
+      "output_tokens": 14806,
+      "latency_s": 75.555,
+      "violations": 0,
+      "new_violations": 0
+    },
+    {
+      "index": 2,
+      "event_id": "S-2",
+      "date": "2025-06-15T09:00:00.000001",
+      "file_ops": 4,
+      "model_calls": 3,
+      "input_tokens": 26178,
+      "output_tokens": 2363,
+      "latency_s": 13.281,
+      "violations": 0,
+      "new_violations": 0
+    },
+    {
+      "index": 3,
+      "event_id": "S-3",
+      "date": "2025-06-22T09:00:00.000001",
+      "file_ops": 4,
+      "model_calls": 3,
+      "input_tokens": 26475,
+      "output_tokens": 5366,
+      "latency_s": 28.958,
+      "violations": 0,
+      "new_violations": 0
+    },
+    {
+      "index": 4,
+      "event_id": "S-4",
+      "date": "2025-07-01T09:00:00.000001",
+      "file_ops": 4,
+      "model_calls": 2,
+      "input_tokens": 17590,
+      "output_tokens": 2313,
+      "latency_s": 12.952,
+      "violations": 0,
+      "new_violations": 0
+    },
+    {
+      "index": 5,
+      "event_id": "S-5",
+      "date": "2025-07-10T09:00:00.000001",
+      "file_ops": 4,
+      "model_calls": 3,
+      "input_tokens": 27149,
+      "output_tokens": 16176,
+      "latency_s": 87.817,
+      "violations": 0,
+      "new_violations": 0
+    },
+    {
+      "index": 6,
+      "event_id": "S-6",
+      "date": "2025-07-16T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 8912,
+      "output_tokens": 16000,
+      "latency_s": 81.705,
+      "violations": 2,
+      "new_violations": 2
+    },
+    {
+      "index": 7,
+      "event_id": "S-7",
+      "date": "2025-07-24T09:00:00.000001",
+      "file_ops": 7,
+      "model_calls": 4,
+      "input_tokens": 37777,
+      "output_tokens": 13205,
+      "latency_s": 71.196,
+      "violations": 1,
+      "new_violations": 1
+    }
+  ]
+}

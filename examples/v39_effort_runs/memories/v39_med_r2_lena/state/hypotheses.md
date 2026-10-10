@@ -1,0 +1,3 @@
+# Hypotheses
+- H-1.1 | confirmed | 2025-03-09 | confidence: low | topic: help-format | for: O-1.1, O-3.1 | resolved_into: P-3.1 | They may prefer weekly numeric reports broken down by day.
+- H-4.1 | confirmed | 2025-04-02 | confidence: low | topic: help-format | for: O-4.1, O-4.2, O-5.1 | challenges: P-3.1 | resolved_into: P-5.1 | They may want food tracking dialed back while burnout/anxiety are active.
