@@ -1,0 +1,260 @@
+{
+  "item_id": "Marcus Trevino_event31_20260327_turn3_facilitation_style_preferences_160_counterfactuals.json",
+  "judge_model": "gpt-5.4-mini",
+  "memory_chars": 7414,
+  "attributes": [
+    {
+      "attribute": "consensus_importance",
+      "current": "medium",
+      "changed": false,
+      "memory_value": "nothing",
+      "current_match": "absent",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "P-27.2: \"Prefers collaborative co-creation when working through questions and creative projects\"; no consensus-specific entry.",
+      "votes": [
+        "absent",
+        "absent",
+        "absent"
+      ]
+    },
+    {
+      "attribute": "decision_speed",
+      "current": "deliberate",
+      "original": "moderate",
+      "changed": true,
+      "memory_value": "nothing",
+      "current_match": "absent",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "No speed-specific belief; closest is P-15.1: \"evidence-backed, threshold-based decisions in uncertain crises\".",
+      "votes": [
+        "absent",
+        "absent",
+        "absent"
+      ]
+    },
+    {
+      "attribute": "data_driven_emphasis",
+      "current": "True",
+      "original": "False",
+      "changed": true,
+      "memory_value": "evidence-backed, threshold-based decisions",
+      "current_match": "matches",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "H-4.1: \"prefers evidence-backed, threshold-based decisions in uncertain crises\"; P-15.1 repeats that belief.",
+      "votes": [
+        "matches",
+        "matches",
+        "matches"
+      ]
+    },
+    {
+      "attribute": "tolerance_for_ambiguity",
+      "current": "low",
+      "original": "high",
+      "changed": true,
+      "memory_value": "cautious in uncertain/risky situations",
+      "current_match": "partial",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "H-4.1: \"threshold-based decisions in uncertain crises\"; H-14.1: \"The accident may have made them more cautious about risky decisions\"; P-15.1: \"cautious about risky options\".",
+      "votes": [
+        "partial",
+        "absent",
+        "partial"
+      ]
+    }
+  ],
+  "current_fidelity": 0.375,
+  "changed_fidelity": 0.5,
+  "stale": 0,
+  "changes_recorded": 0,
+  "n_attributes": 4,
+  "n_changed": 3,
+  "ungraded": [],
+  "repeats": 3,
+  "agreement": 0.917,
+  "current_fidelity_range": [
+    0.25,
+    0.375
+  ],
+  "estimated_cost_usd": 0.09498,
+  "runs": [
+    {
+      "item_id": "Marcus Trevino_event31_20260327_turn3_facilitation_style_preferences_160_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 7414,
+      "attributes": [
+        {
+          "attribute": "consensus_importance",
+          "current": "medium",
+          "changed": false,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-27.2: \"Prefers collaborative co-creation when working through questions and creative projects\"; no consensus-specific entry."
+        },
+        {
+          "attribute": "decision_speed",
+          "current": "deliberate",
+          "original": "moderate",
+          "changed": true,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No speed-specific belief; closest is P-15.1: \"evidence-backed, threshold-based decisions in uncertain crises\"."
+        },
+        {
+          "attribute": "data_driven_emphasis",
+          "current": "True",
+          "original": "False",
+          "changed": true,
+          "memory_value": "evidence-backed, threshold-based decisions",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "H-4.1: \"prefers evidence-backed, threshold-based decisions in uncertain crises\"; P-15.1 repeats that belief."
+        },
+        {
+          "attribute": "tolerance_for_ambiguity",
+          "current": "low",
+          "original": "high",
+          "changed": true,
+          "memory_value": "cautious in uncertain/risky situations",
+          "current_match": "partial",
+          "original_still_current": false,
+          "change_recorded": true,
+          "evidence": "H-4.1: \"threshold-based decisions in uncertain crises\"; H-14.1: \"The accident may have made them more cautious about risky decisions\"; P-15.1: \"cautious about risky options\"."
+        }
+      ],
+      "current_fidelity": 0.375,
+      "changed_fidelity": 0.5,
+      "stale": 0,
+      "changes_recorded": 1,
+      "n_attributes": 4,
+      "n_changed": 3,
+      "ungraded": [],
+      "estimated_cost_usd": 0.05627
+    },
+    {
+      "item_id": "Marcus Trevino_event31_20260327_turn3_facilitation_style_preferences_160_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 7414,
+      "attributes": [
+        {
+          "attribute": "consensus_importance",
+          "current": "medium",
+          "changed": false,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No current belief about consensus importance. Closest entry is P-27.2: 'Prefers collaborative co-creation when working through questions and creative projects.'"
+        },
+        {
+          "attribute": "decision_speed",
+          "current": "deliberate",
+          "original": "moderate",
+          "changed": true,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No direct speed preference recorded. Closest entries are P-15.1/H-4.1: 'Prefers evidence-backed, threshold-based decisions in uncertain crises,' which is decision style, not speed."
+        },
+        {
+          "attribute": "data_driven_emphasis",
+          "current": "True",
+          "original": "False",
+          "changed": true,
+          "memory_value": "prefers evidence-backed, threshold-based decisions",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-15.1 current: 'Prefers evidence-backed, threshold-based decisions in uncertain crises and is cautious about risky options.' Also H-4.1: 'prefers evidence-backed, threshold-based decisions in uncertain crises.'"
+        },
+        {
+          "attribute": "tolerance_for_ambiguity",
+          "current": "low",
+          "original": "high",
+          "changed": true,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No direct ambiguity-tolerance belief. Closest entries are P-15.1/H-4.1 about 'evidence-backed, threshold-based decisions in uncertain crises' and H-14.1 about being 'more cautious about risky decisions,' but neither states low ambiguity tolerance."
+        }
+      ],
+      "current_fidelity": 0.25,
+      "changed_fidelity": 0.333,
+      "stale": 0,
+      "changes_recorded": 0,
+      "n_attributes": 4,
+      "n_changed": 3,
+      "ungraded": [],
+      "estimated_cost_usd": 0.02526
+    },
+    {
+      "item_id": "Marcus Trevino_event31_20260327_turn3_facilitation_style_preferences_160_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 7414,
+      "attributes": [
+        {
+          "attribute": "consensus_importance",
+          "current": "medium",
+          "changed": false,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No current entry about consensus; P-27.2 only says \"collaborative co-creation when working through questions and creative projects\"."
+        },
+        {
+          "attribute": "decision_speed",
+          "current": "deliberate",
+          "original": "moderate",
+          "changed": true,
+          "memory_value": "prefers evidence-backed, threshold-based decisions",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-15.1 \"Prefers evidence-backed, threshold-based decisions in uncertain crises and is cautious about risky options\"; H-4.1 same idea. No statement about speed."
+        },
+        {
+          "attribute": "data_driven_emphasis",
+          "current": "True",
+          "original": "False",
+          "changed": true,
+          "memory_value": "prefers evidence-backed decisions",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-15.1 \"Prefers evidence-backed, threshold-based decisions...\"; H-4.1 \"prefer evidence-backed, threshold-based decisions in uncertain crises\"."
+        },
+        {
+          "attribute": "tolerance_for_ambiguity",
+          "current": "low",
+          "original": "high",
+          "changed": true,
+          "memory_value": "prefers structure and thresholds in uncertain situations",
+          "current_match": "partial",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-15.1 \"threshold-based decisions in uncertain crises\" and \"cautious about risky options\"; H-4.1 same."
+        }
+      ],
+      "current_fidelity": 0.375,
+      "changed_fidelity": 0.5,
+      "stale": 0,
+      "changes_recorded": 0,
+      "n_attributes": 4,
+      "n_changed": 3,
+      "ungraded": [],
+      "estimated_cost_usd": 0.01345
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "item_id": "Marcus Trevino_event31_20260327_turn3_facilitation_style_preferences_160_counterfactuals.json",
+  "judge_model": "gpt-5.4-mini",
+  "memory_chars": 8629,
+  "attributes": [
+    {
+      "attribute": "consensus_importance",
+      "current": "medium",
+      "changed": false,
+      "memory_value": "nothing",
+      "current_match": "absent",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "No current entry about consensus/need for agreement; closest current item is P-27.1: \"Prefers exploring hard topics together in bullet points rather than being handed a one-shot answer.\"",
+      "votes": [
+        "absent",
+        "absent",
+        "absent"
+      ]
+    },
+    {
+      "attribute": "decision_speed",
+      "current": "deliberate",
+      "original": "moderate",
+      "changed": true,
+      "memory_value": "nothing",
+      "current_match": "absent",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "No current entry about how fast they decide; closest current items are P-8.1: \"prep broken down step by step, with what to tackle first and what can wait\" and T-24.2: \"wants to work through the facial-recognition ethics issue iteratively.\"",
+      "votes": [
+        "absent",
+        "absent",
+        "absent"
+      ]
+    },
+    {
+      "attribute": "data_driven_emphasis",
+      "current": "True",
+      "original": "False",
+      "changed": true,
+      "memory_value": "nothing",
+      "current_match": "absent",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "No current entry about evidence/data reliance; closest current item is P-12.1: \"Prefers seeing concrete examples rather than abstract theory.\"",
+      "votes": [
+        "absent",
+        "absent",
+        "absent"
+      ]
+    },
+    {
+      "attribute": "tolerance_for_ambiguity",
+      "current": "low",
+      "original": "high",
+      "changed": true,
+      "memory_value": "nothing",
+      "current_match": "absent",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "No current entry about ambiguity tolerance; closest current items are P-13.1: \"Prefers comparing pros and cons of approaches rather than picking one right answer\" and P-16.1: \"Prefers practical, balanced framing over doom-heavy warnings.\"",
+      "votes": [
+        "absent",
+        "absent",
+        "absent"
+      ]
+    }
+  ],
+  "current_fidelity": 0.0,
+  "changed_fidelity": 0.0,
+  "stale": 0,
+  "changes_recorded": 0,
+  "n_attributes": 4,
+  "n_changed": 3,
+  "ungraded": [],
+  "repeats": 3,
+  "agreement": 1.0,
+  "current_fidelity_range": [
+    0.0,
+    0.0
+  ],
+  "estimated_cost_usd": 0.04536,
+  "runs": [
+    {
+      "item_id": "Marcus Trevino_event31_20260327_turn3_facilitation_style_preferences_160_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 8629,
+      "attributes": [
+        {
+          "attribute": "consensus_importance",
+          "current": "medium",
+          "changed": false,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No current entry about consensus/need for agreement; closest current item is P-27.1: \"Prefers exploring hard topics together in bullet points rather than being handed a one-shot answer.\""
+        },
+        {
+          "attribute": "decision_speed",
+          "current": "deliberate",
+          "original": "moderate",
+          "changed": true,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No current entry about how fast they decide; closest current items are P-8.1: \"prep broken down step by step, with what to tackle first and what can wait\" and T-24.2: \"wants to work through the facial-recognition ethics issue iteratively.\""
+        },
+        {
+          "attribute": "data_driven_emphasis",
+          "current": "True",
+          "original": "False",
+          "changed": true,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No current entry about evidence/data reliance; closest current item is P-12.1: \"Prefers seeing concrete examples rather than abstract theory.\""
+        },
+        {
+          "attribute": "tolerance_for_ambiguity",
+          "current": "low",
+          "original": "high",
+          "changed": true,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No current entry about ambiguity tolerance; closest current items are P-13.1: \"Prefers comparing pros and cons of approaches rather than picking one right answer\" and P-16.1: \"Prefers practical, balanced framing over doom-heavy warnings.\""
+        }
+      ],
+      "current_fidelity": 0.0,
+      "changed_fidelity": 0.0,
+      "stale": 0,
+      "changes_recorded": 0,
+      "n_attributes": 4,
+      "n_changed": 3,
+      "ungraded": [],
+      "estimated_cost_usd": 0.02036
+    },
+    {
+      "item_id": "Marcus Trevino_event31_20260327_turn3_facilitation_style_preferences_160_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 8629,
+      "attributes": [
+        {
+          "attribute": "consensus_importance",
+          "current": "medium",
+          "changed": false,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No current entry about consensus importance; closest are P-27.1 (collaborative-style) and P-13.1 (comparative reasoning), but they don't state consensus preference."
+        },
+        {
+          "attribute": "decision_speed",
+          "current": "deliberate",
+          "original": "moderate",
+          "changed": true,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No current entry about decision speed; closest are P-8.1 (step-by-step planning) and P-25.1 (speed in growth), but not decision speed."
+        },
+        {
+          "attribute": "data_driven_emphasis",
+          "current": "True",
+          "original": "False",
+          "changed": true,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No current entry about wanting data/evidence-based decisions."
+        },
+        {
+          "attribute": "tolerance_for_ambiguity",
+          "current": "low",
+          "original": "high",
+          "changed": true,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No current entry about ambiguity tolerance; related entries like P-16.1 are about framing, not ambiguity."
+        }
+      ],
+      "current_fidelity": 0.0,
+      "changed_fidelity": 0.0,
+      "stale": 0,
+      "changes_recorded": 0,
+      "n_attributes": 4,
+      "n_changed": 3,
+      "ungraded": [],
+      "estimated_cost_usd": 0.01332
+    },
+    {
+      "item_id": "Marcus Trevino_event31_20260327_turn3_facilitation_style_preferences_160_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 8629,
+      "attributes": [
+        {
+          "attribute": "consensus_importance",
+          "current": "medium",
+          "changed": false,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No direct consensus/agreeement preference in memory; closest items are P-27.1 \u201cPrefers exploring hard topics together in bullet points rather than being handed a one-shot answer\u201d and P-13.1 \u201cPrefers comparing pros and cons of approaches,\u201d which are about collaboration/comparison, not consensus importance."
+        },
+        {
+          "attribute": "decision_speed",
+          "current": "deliberate",
+          "original": "moderate",
+          "changed": true,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No direct belief about how fast they decide. Closest are P-8.1 \u201cWants prep broken down step by step, with what to tackle first and what can wait\u201d and P-27.1 about bullet-point collaboration; these describe planning/format, not decision speed."
+        },
+        {
+          "attribute": "data_driven_emphasis",
+          "current": "True",
+          "original": "False",
+          "changed": true,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No direct preference for evidence- or data-grounded decisions. Closest items are P-12.1 \u201cPrefers seeing concrete examples rather than abstract theory\u201d and P-16.1 \u201cPrefers practical, balanced framing,\u201d which do not state data-driven emphasis."
+        },
+        {
+          "attribute": "tolerance_for_ambiguity",
+          "current": "low",
+          "original": "high",
+          "changed": true,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No direct belief about ambiguity tolerance. Nearby preferences like P-13.1 \u201cPrefers comparing pros and cons of approaches,\u201d P-16.1 \u201cPrefers practical, balanced framing,\u201d and P-27.1 \u201cPrefers exploring hard topics together in bullet points\u201d concern style, not comfort with ambiguity."
+        }
+      ],
+      "current_fidelity": 0.0,
+      "changed_fidelity": 0.0,
+      "stale": 0,
+      "changes_recorded": 0,
+      "n_attributes": 4,
+      "n_changed": 3,
+      "ungraded": [],
+      "estimated_cost_usd": 0.01168
+    }
+  ]
+}

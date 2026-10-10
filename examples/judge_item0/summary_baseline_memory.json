@@ -1,0 +1,260 @@
+{
+  "item_id": "Marcus Trevino_event31_20260327_turn3_facilitation_style_preferences_160_counterfactuals.json",
+  "judge_model": "gpt-5.4-mini",
+  "memory_chars": 8033,
+  "attributes": [
+    {
+      "attribute": "consensus_importance",
+      "current": "medium",
+      "changed": false,
+      "memory_value": "nothing",
+      "current_match": "absent",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "No current entry states a preference for consensus or group agreement; the closest items are negotiation tactics ('micro-commitments, preserving the other person\u2019s sense of control') and stakeholder governance, but not consensus importance.",
+      "votes": [
+        "partial",
+        "absent",
+        "absent"
+      ]
+    },
+    {
+      "attribute": "decision_speed",
+      "current": "deliberate",
+      "original": "moderate",
+      "changed": true,
+      "memory_value": "deliberate, step-by-step and threshold-based",
+      "current_match": "matches",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "\"step-by-step plans, explicit priorities, threshold-based decisions\"; \"hard decision triggers over indecision\"; \"default to protective action rather than waiting for certainty\"",
+      "votes": [
+        "matches",
+        "matches",
+        "matches"
+      ]
+    },
+    {
+      "attribute": "data_driven_emphasis",
+      "current": "True",
+      "original": "False",
+      "changed": true,
+      "memory_value": "strongly evidence- and data-driven",
+      "current_match": "matches",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "\"explain timeline, rationale, protocol basis, and outcomes\"; \"use the highest credible reading\"; \"proof the technology genuinely helps wildlife\"; \"threat modeling\"",
+      "votes": [
+        "matches",
+        "matches",
+        "matches"
+      ]
+    },
+    {
+      "attribute": "tolerance_for_ambiguity",
+      "current": "low",
+      "original": "high",
+      "changed": true,
+      "memory_value": "low tolerance; prefers worst-case / protective action under uncertainty",
+      "current_match": "matches",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "\"worst-case approach under uncertainty\"; \"if sensor data conflicts or confidence is incomplete, use the highest credible reading and default to protective action rather than waiting for certainty\"",
+      "votes": [
+        "matches",
+        "matches",
+        "matches"
+      ]
+    }
+  ],
+  "current_fidelity": 0.75,
+  "changed_fidelity": 1.0,
+  "stale": 0,
+  "changes_recorded": 0,
+  "n_attributes": 4,
+  "n_changed": 3,
+  "ungraded": [],
+  "repeats": 3,
+  "agreement": 0.917,
+  "current_fidelity_range": [
+    0.75,
+    0.875
+  ],
+  "estimated_cost_usd": 0.06313,
+  "runs": [
+    {
+      "item_id": "Marcus Trevino_event31_20260327_turn3_facilitation_style_preferences_160_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 8033,
+      "attributes": [
+        {
+          "attribute": "consensus_importance",
+          "current": "medium",
+          "changed": false,
+          "memory_value": "prefers stakeholder participation / outside voices in governance",
+          "current_match": "partial",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\"stakeholder governance built in from day one, with real outside voices involved, not just token review\"; \"structural participation from conservation practitioners, indigenous/community representatives, and ethics advisors\""
+        },
+        {
+          "attribute": "decision_speed",
+          "current": "deliberate",
+          "original": "moderate",
+          "changed": true,
+          "memory_value": "deliberate, step-by-step and threshold-based",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\"step-by-step plans, explicit priorities, threshold-based decisions\"; \"hard decision triggers over indecision\"; \"default to protective action rather than waiting for certainty\""
+        },
+        {
+          "attribute": "data_driven_emphasis",
+          "current": "True",
+          "original": "False",
+          "changed": true,
+          "memory_value": "strongly evidence- and data-driven",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\"explain timeline, rationale, protocol basis, and outcomes\"; \"use the highest credible reading\"; \"proof the technology genuinely helps wildlife\"; \"threat modeling\""
+        },
+        {
+          "attribute": "tolerance_for_ambiguity",
+          "current": "low",
+          "original": "high",
+          "changed": true,
+          "memory_value": "low tolerance; prefers worst-case / protective action under uncertainty",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\"worst-case approach under uncertainty\"; \"if sensor data conflicts or confidence is incomplete, use the highest credible reading and default to protective action rather than waiting for certainty\""
+        }
+      ],
+      "current_fidelity": 0.875,
+      "changed_fidelity": 1.0,
+      "stale": 0,
+      "changes_recorded": 0,
+      "n_attributes": 4,
+      "n_changed": 3,
+      "ungraded": [],
+      "estimated_cost_usd": 0.02179
+    },
+    {
+      "item_id": "Marcus Trevino_event31_20260327_turn3_facilitation_style_preferences_160_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 8033,
+      "attributes": [
+        {
+          "attribute": "consensus_importance",
+          "current": "medium",
+          "changed": false,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No current entry states a preference for consensus or group agreement; the closest items are negotiation tactics ('micro-commitments, preserving the other person\u2019s sense of control') and stakeholder governance, but not consensus importance."
+        },
+        {
+          "attribute": "decision_speed",
+          "current": "deliberate",
+          "original": "moderate",
+          "changed": true,
+          "memory_value": "deliberate, structured, threshold-based",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\"step-by-step plans, explicit priorities, threshold-based decisions\"; \"hard decision triggers over indecision\"; \"ordered action lists\""
+        },
+        {
+          "attribute": "data_driven_emphasis",
+          "current": "True",
+          "original": "False",
+          "changed": true,
+          "memory_value": "strongly data/evidence-focused",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\"practical, tactical guidance over abstract theory\"; \"timeline, rationale, protocol basis, and outcomes\"; \"confirm reactor status and radiation readings first\"; \"factual evidence of disruption\""
+        },
+        {
+          "attribute": "tolerance_for_ambiguity",
+          "current": "low",
+          "original": "high",
+          "changed": true,
+          "memory_value": "low tolerance; worst-case protective action",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\"worst-case approach under uncertainty\"; \"if sensor data conflicts or confidence is incomplete, use the highest credible reading and default to protective action rather than waiting for certainty\""
+        }
+      ],
+      "current_fidelity": 0.75,
+      "changed_fidelity": 1.0,
+      "stale": 0,
+      "changes_recorded": 0,
+      "n_attributes": 4,
+      "n_changed": 3,
+      "ungraded": [],
+      "estimated_cost_usd": 0.02479
+    },
+    {
+      "item_id": "Marcus Trevino_event31_20260327_turn3_facilitation_style_preferences_160_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 8033,
+      "attributes": [
+        {
+          "attribute": "consensus_importance",
+          "current": "medium",
+          "changed": false,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No explicit consensus preference stated in the memory."
+        },
+        {
+          "attribute": "decision_speed",
+          "current": "deliberate",
+          "original": "moderate",
+          "changed": true,
+          "memory_value": "deliberate, step-by-step",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\"step-by-step plans, explicit priorities, threshold-based decisions\"; \"hard decision triggers over indecision\"; \"immediate pauses for critical mistakes\""
+        },
+        {
+          "attribute": "data_driven_emphasis",
+          "current": "True",
+          "original": "False",
+          "changed": true,
+          "memory_value": "evidence- and readings-first",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\"confirm reactor status and radiation readings first\"; \"use the highest credible reading\"; \"plain language... transparency about what is known vs unknown\""
+        },
+        {
+          "attribute": "tolerance_for_ambiguity",
+          "current": "low",
+          "original": "high",
+          "changed": true,
+          "memory_value": "low; prefers worst-case under uncertainty",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\"if sensor data conflicts or confidence is incomplete, use the highest credible reading and default to protective action rather than waiting for certainty\""
+        }
+      ],
+      "current_fidelity": 0.75,
+      "changed_fidelity": 1.0,
+      "stale": 0,
+      "changes_recorded": 0,
+      "n_attributes": 4,
+      "n_changed": 3,
+      "ungraded": [],
+      "estimated_cost_usd": 0.01655
+    }
+  ]
+}

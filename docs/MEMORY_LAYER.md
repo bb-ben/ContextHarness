@@ -225,12 +225,48 @@ several items and grades memory directly.
 
 v3.1 has not met a real model yet.
 
+### Memory judge
+
+A multiple-choice answer is one noisy bit. HorizonBench also records the person's
+preference as a few attributes, with values before and after each life event.
+`context-harness judge-memory` shows an LLM judge the ground truth and a finished
+run's beliefs (state, superseded entries, hypotheses, working context; not raw
+episodes). For each attribute it grades whether memory holds the current value
+(`matches` / `partial` / `absent` / `contradicts`), whether it still asserts the old
+one, and whether it recorded the change. It runs on evaluator-side data only, after
+the item is finished.
+
+At first the judge was inconsistent: one memory scored 0.13, 0.63 and 0.38 on
+three judgings, because it credited off-subject entries (e.g. "likes checklists" as
+low tolerance for ambiguity). A stricter rubric (credit only entries on the
+attribute's own subject), high reasoning effort and a majority vote over three
+judgings brought agreement to 92–100%. On item 0 (gpt-5.4-mini judge, $0.20; see
+[`examples/judge_item0/`](../examples/judge_item0)):
+
+| Memory | Holds the person as they are now | On the 3 changed attributes | Change recorded |
+|---|---|---|---|
+| v2 | 0.0 | 0.0 | 0 of 3 |
+| v3 | 0.38 | 0.5 (evidence-driven: yes; low tolerance for ambiguity: partly; deliberate: no) | 0 of 3 |
+| Rolling summary | 0.75 | 1.0 | 0 of 3 |
+
+**The summary's lead is right for the wrong reason.** All its evidence for
+"data-driven" and "low tolerance for ambiguity" comes from crisis role-plays in
+S-1 to S-4, before the accident, when the ground truth says the person was neither.
+It recorded what happened inside the role-plays as preferences; the contract tells
+the agent to skip task details. No memory recorded the change on any attribute.
+So "holds the current value" rewards ending up right, however it got there, and
+"change recorded" is the measure of tracking change. Item 0 is also a weak test of
+change: its pre-change sessions already contain the language the judge credits.
+
 ## Known gaps
 
 - **The archive itself has no rollover yet** (200,000 chars). That's enough for
   HorizonBench, but not for years of FoodBody data.
 - **Semantic contradictions aren't detected yet.** Two current entries with
   different topics that conflict would need an LLM judge.
+- **The judge is one model grading against a coarse taxonomy.** Its grades are
+  consistent, but they haven't been checked against a person's reading, and it
+  can't tell a value tracked through a change from one that was there all along.
 - **Real-model data is thin.** It covers 3½ events under v1 and one item each
   under v2 and v3, all the same item. v3.1 has not met a real model yet.
 - **Open choices left for later:**

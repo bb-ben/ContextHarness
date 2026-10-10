@@ -183,6 +183,46 @@ def cmd_replay_answer(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_judge_memory(args: argparse.Namespace) -> int:
+    """Grade finished runs' final memories against the ground-truth preference attributes."""
+    from .judge import combine_repeats, judge_memory, write_judgement
+    from .models.base import PauseRun
+    from .replay import find_snapshot, load_source_item
+
+    settings = ModelSettings(model=args.model, max_tokens=args.max_tokens,
+                             effort=None if args.effort == "none" else args.effort, timeout_s=args.timeout)
+    model = make_model(settings)
+    if args.max_cost_usd is not None:
+        model = CostCap(model, args.max_cost_usd)
+    total = 0.0
+    for source in map(Path, args.sources):
+        item, snapshot = load_source_item(source), find_snapshot(source)
+        runs = []
+        try:
+            for _ in range(args.repeats):
+                runs.append(judge_memory(model, item.gold, snapshot))
+        except PauseRun as e:
+            print(f"Stopped: {e}")
+        if not runs:
+            break
+        total += sum(r["estimated_cost_usd"] or 0 for r in runs)
+        out = Path(args.out) / f"{source.name}.json" if args.out else source / "memory_judgement.json"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        j = combine_repeats(runs)
+        write_judgement(out, j)
+        print(f"{source}  ({j['memory_chars']} chars of memory) -> {out}")
+        spread = (f" (single runs {j['current_fidelity_range'][0]}–{j['current_fidelity_range'][1]}, "
+                  f"agreement {j['agreement']:.0%})" if len(runs) > 1 else "")
+        print(f"  current fidelity {j['current_fidelity']}{spread}; changed {j['changed_fidelity']}; "
+              f"stale {j['stale']}/{j['n_changed']}; changes recorded {j['changes_recorded']}/{j['n_changed']}")
+        for a in j["attributes"]:
+            expect = f"{a['original']} -> {a['current']}" if a["changed"] else a["current"]
+            votes = f" {'/'.join(v[:3] for v in a['votes'])}" if "votes" in a else ""
+            print(f"    {a['attribute']:<26} {expect:<24} {a['current_match']:<11}{votes:<14} {_short(a['memory_value'], 60)}")
+    print(f"Estimated judge cost: ${total:.3f}")
+    return 0
+
+
 def _short(text: str, n: int) -> str:
     return text if len(text) <= n else text[: n - 1] + "…"
 
@@ -321,6 +361,17 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--run-name")
     p.add_argument("--log-prompts", action="store_true")
     p.set_defaults(func=cmd_replay_answer)
+
+    p = sub.add_parser("judge-memory", help="Grade final memories against ground-truth preference attributes")
+    p.add_argument("sources", nargs="+", help="Finished items: runs/<run>/items/<item> or examples/<run>")
+    p.add_argument("--model", default="gpt-5.4-mini")
+    p.add_argument("--effort", default="high", choices=["minimal", "low", "medium", "high", "xhigh", "max", "none"])
+    p.add_argument("--repeats", type=int, default=3, help="Judgings per memory; the majority grade is reported")
+    p.add_argument("--max-tokens", type=int, default=16000)
+    p.add_argument("--timeout", type=float, default=300.0)
+    p.add_argument("--max-cost-usd", type=float)
+    p.add_argument("--out", help="Directory for judgements (default: memory_judgement.json in each item)")
+    p.set_defaults(func=cmd_judge_memory)
 
     p = sub.add_parser("memory-timeline", help="Per event: what changed in working context, episodic memory and state")
     p.add_argument("item_dir", help="runs/<run>/items/<item>")

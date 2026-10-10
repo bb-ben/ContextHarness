@@ -12,7 +12,7 @@ preferences change after life events. That makes it a sequential testbed for
 whether the layer keeps the user's state current.
 
 **Status:** contract **v3.1**. The layer, instrumentation, and Gemini and OpenAI
-adapters are built and tested offline (149 tests). A model that follows the
+adapters are built and tested offline (154 tests). A model that follows the
 contract produces zero violations across all 901 events of the HorizonBench sample.
 
 **Real runs so far:**
@@ -33,6 +33,11 @@ contract produces zero violations across all 901 events of the HorizonBench samp
   answered D B B, recent history B B B, and the rolling summary A. The item is hard
   for this model whatever memory it gets; see
   [`examples/baselines_item0/`](examples/baselines_item0).
+- **Memory judge on that item.** Graded against the ground-truth attributes, v3
+  holds 0.38 of the person's current preferences, v2 0.0, and the rolling summary
+  0.75. The summary's lead comes from role-play content recorded before the change,
+  though, and no memory recorded the change itself; see
+  [`docs/MEMORY_LAYER.md`](docs/MEMORY_LAYER.md#memory-judge).
 
 | Read | For |
 |---|---|
@@ -46,7 +51,7 @@ Requires Python ≥ 3.12 and [uv](https://docs.astral.sh/uv/).
 
 ```bash
 uv sync
-uv run pytest -q                     # 149 tests, offline, no credentials
+uv run pytest -q                     # 154 tests, offline, no credentials
 export GEMINI_API_KEY=...            # for real-model runs (default model: gemini-3.7-flash)
 ```
 
@@ -74,6 +79,10 @@ uv run context-harness run --model gemini-3.7-flash --items 0 --max-sessions 16 
 # Rerun only the answer step against a finished item's saved memory (about one call each)
 uv run context-harness replay-answer runs/<run>/items/<item> --model gpt-5.4-mini \
     --strategy default --strategy dimension-first --repeats 5 --max-cost-usd 0.50
+
+# Grade a finished item's memory against the ground-truth preference attributes
+# (three judgings, majority grade; evaluator side only)
+uv run context-harness judge-memory runs/<run>/items/<item> --max-cost-usd 0.30
 
 # Inspect what the agent read and wrote, event by event, and every violation
 uv run context-harness inspect-memory runs/<run>/items/<item>
@@ -175,6 +184,7 @@ v2), so it says nothing about the layer.
 | `test_leakage.py` | Future sessions, the question and every label are kept from the agent, for all methods |
 | `test_dataset.py`, `test_audit.py` | Chronological ordering, the guarded parser, the dataset audit |
 | `test_scoring.py`, `test_end_to_end.py`, `test_anthropic_adapter.py` | Scoring and aggregation; CLI runs; the Anthropic adapter |
+| `test_judge.py` | The judge grades beliefs, not raw episodes; missing grades count as absent; repeats combine by majority |
 | `test_replay.py` | Answer-only replay restores the saved memory, reruns only the answer step, applies the strategy, and leaves the source run untouched |
 
 ## Next steps
