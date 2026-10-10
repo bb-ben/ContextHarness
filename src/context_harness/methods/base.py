@@ -12,7 +12,7 @@ from ..models.base import ModelRequest, ModelResponse, TextBlock, ToolCall
 from ..tools import ToolExecutor, ToolResult
 from ..tracing import TracedModel, TraceWriter
 from ..types import AnswerResult, Event, Probe, Question, Session
-from ..workspace import HORIZONBENCH, Layout
+from ..workspace import GENERAL, Layout
 
 
 @dataclass(frozen=True)
@@ -24,7 +24,7 @@ class MethodConfig:
     the recent-history window, or the rolling summary.
     """
 
-    layout: Layout = HORIZONBENCH
+    layout: Layout = GENERAL
     contract_path: str | None = None  # agent.md by default
     preload_state: bool = True  # contract v2: show the layout's state files in full in every call
     episode_rollover_at: float = 0.8  # roll old episodes into the archive above this share of the limit...

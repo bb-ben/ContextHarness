@@ -190,8 +190,11 @@ def _memory_aggregate(results: list[dict[str, Any]]) -> dict[str, Any] | None:
     return {
         "items": len(reports),
         "events": events,
+        "distinct_violations": sum(codes.values()),
         "violations_per_event": sum(codes.values()) / events if events else None,
-        "share_events_with_violations": sum(m["events_with_violations"] for m in reports) / events if events else None,
+        "share_events_with_new_violations": (
+            sum(m.get("events_with_new_violations", 0) for m in reports) / events if events else None),
+        "unresolved_at_end": sum(m.get("unresolved_at_end", 0) for m in reports),
         "violations_by_code": dict(codes.most_common()),
         "final_provenance_share": avg("provenance_share"),
         "final_context_coverage": avg("context_coverage_of_live_state"),
@@ -232,9 +235,9 @@ def format_summary(agg: dict[str, Any], title: str) -> str:
     if mem:
         top = ", ".join(f"{k} {v}" for k, v in list(mem["violations_by_code"].items())[:5]) or "none"
         lines += [
-            f"  Memory layer: {mem['events']} events, "
-            f"{(mem['violations_per_event'] or 0):.2f} violations/event "
-            f"({_pct(mem['share_events_with_violations'])} of events); top: {top}",
+            f"  Memory layer: {mem['events']} events, {mem['distinct_violations']} distinct violations "
+            f"(new ones in {_pct(mem['share_events_with_new_violations'])} of events, "
+            f"{mem['unresolved_at_end']} unresolved at end); top: {top}",
             f"  Final provenance {_pct(mem['final_provenance_share'])}; context covers "
             f"{_pct(mem['final_context_coverage'])} of live state",
             "  Evolution evidence reached: " + ", ".join(f"{k} {v}" for k, v in mem["evidence_chain_stages"].items() if v),

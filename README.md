@@ -11,15 +11,20 @@ contract. HorizonBench supplies long, dated conversation histories in which
 preferences change after life events. That makes it a sequential testbed for
 whether the layer keeps the user's state current.
 
-**Status:** contract **v2**. The layer, instrumentation and Gemini adapter are built
-and tested offline (123 tests). A model that follows the contract produces zero
-violations across all 901 events of the HorizonBench sample.
+**Status:** contract **v3**. The layer, instrumentation, and Gemini and OpenAI
+adapters are built and tested offline (143 tests). A model that follows the
+contract produces zero violations across all 901 events of the HorizonBench sample.
 
-The first real-model run under v1 got through 3½ events: zero violations and a
-correct hypothesis-to-preference promotion. It also showed three problems that v2
-fixes; see [`examples/real_run_v1_gemini/`](examples/real_run_v1_gemini). A full
-run under v2 is next. On Gemini's free tier (about 20 requests a day) one item takes
-about 1½ days.
+**Real runs so far:**
+- **v1 (Gemini, 3½ events).** It followed the format and promoted a hypothesis
+  correctly. It also showed three problems, which v2 fixed; see
+  [`examples/real_run_v1_gemini/`](examples/real_run_v1_gemini).
+- **v2 (gpt-5.4-mini, one full item, $1.02).** Memory stayed well-formed and
+  bounded, but preferences only accumulated: every signal got a new topic, so none
+  was ever superseded and the change in the person was missed. See
+  [`examples/real_run_v2_openai/`](examples/real_run_v2_openai).
+- **v3** adds preference dimensions to fix this. It hasn't been tested on a real
+  model yet.
 
 | Read | For |
 |---|---|
@@ -33,7 +38,7 @@ Requires Python ≥ 3.12 and [uv](https://docs.astral.sh/uv/).
 
 ```bash
 uv sync
-uv run pytest -q                     # 123 tests, offline, no credentials
+uv run pytest -q                     # 143 tests, offline, no credentials
 export GEMINI_API_KEY=...            # for real-model runs (default model: gemini-3.7-flash)
 ```
 
@@ -77,7 +82,14 @@ Other options:
 - `--no-preload`: contract v1 behavior, where state files must be read explicitly.
 - `--max-requests`: a hard cap per invocation (the run pauses).
 - `--timeout`: seconds per response before a retry.
-- `--layout with-decisions`: adds the decisions file.
+- `--layout general|with-decisions`: the file set and seed preference dimensions
+  (`general` is the default; `with-decisions` adds the decisions file).
+- `--max-cost-usd`: pauses once estimated spend reaches the cap (priced models).
+
+Two commands show how memory evolved:
+- `context-harness memory-timeline <item>`: what each event added, changed,
+  archived or removed in working context, episodic memory and state.
+- `context-harness inspect-memory <item>`: file access and violations.
 - `--order text`: the benchmark's original order (see the dataset notes).
 - `--no-scenarios`, `--log-prompts`.
 

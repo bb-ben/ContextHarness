@@ -39,9 +39,51 @@ class EventInfo:
     date: str  # YYYY-MM-DD
 
 
-def check_state(parsed: ParsedWorkspace, events: list[EventInfo], current: int) -> list[Problem]:
+_GENERIC_TOKENS = {"style", "level", "preference", "preferences", "type", "mode", "pref"}
+
+
+def _stems(key: str) -> set[str]:
+    return {t[:5] for t in key.split("-") if t and t not in _GENERIC_TOKENS}
+
+
+def check_preferences(parsed: ParsedWorkspace, layout: Layout) -> list[Problem]:
+    """Dimension discipline and the evidence rule for preferences."""
+    out: list[Problem] = []
+    entries = parsed.entries
+    prefs = [e for e in entries.values() if e.type == "P"]
+    seed = {d.key for d in layout.dimensions}
+    by_topic: dict[str, list[Entry]] = defaultdict(list)
+    for p in prefs:
+        if p.fields.get("topic"):
+            by_topic[p.fields["topic"]].append(p)
+    for topic, group in by_topic.items():
+        if topic in seed:
+            continue
+        first = min(group, key=lambda e: (e.event, e.n or 0))
+        if not any(e.fields.get("new_dimension") for e in group):
+            out.append(Problem("undeclared_dimension", first.path, first.line,
+                               f"dimension {topic!r} is not a seed dimension and has no new_dimension: reason", first.id))
+        near = sorted(o for o in (seed | set(by_topic)) - {topic} if _stems(o) & _stems(topic))
+        if near:
+            out.append(Problem("near_duplicate_dimension", first.path, first.line,
+                               f"dimension {topic!r} overlaps {', '.join(near)}", first.id))
+    resolved = {h.fields.get("resolved_into") for h in entries.values() if h.type == "H"}
+    for p in prefs:
+        basis = [entries[b] for b in p.refs().get("basis", []) if b in entries and entries[b].type == "O"]
+        if not basis or p.id in resolved:
+            continue
+        if all(b.fields.get("kind") != "stated" for b in basis) and len({b.event for b in basis}) < 2:
+            out.append(Problem("unsupported_promotion", p.path, p.line,
+                               "preference rests on non-stated evidence from one event and no confirmed hypothesis", p.id))
+    return out
+
+
+def check_state(parsed: ParsedWorkspace, events: list[EventInfo], current: int,
+                layout: Layout | None = None) -> list[Problem]:
     """Provenance and consistency checks on one snapshot, as of event `current`."""
     out = list(parsed.problems)
+    if layout is not None:
+        out += check_preferences(parsed, layout)
     entries = parsed.entries
     now = events[current]
 
@@ -231,13 +273,27 @@ class MemoryMonitor:
         self.violations: list[dict[str, Any]] = []
         self.lifecycle: dict[str, dict[str, Any]] = {}
         self.timeline: list[dict[str, Any]] = []
+        self.open: dict[tuple, int] = {}  # violation key -> index in self.violations
+
+    @staticmethod
+    def _key(p: Problem) -> tuple:
+        return (p.code, p.path, p.id) if p.id else (p.code, p.path, p.detail)
 
     def after_event(self, event: EventInfo, snapshot: dict[str, str], access: list[dict[str, Any]]) -> dict[str, Any]:
         self.events.append(event)
         parsed = parse_workspace(snapshot, self.layout)
-        problems = check_state(parsed, self.events, event.index) + check_retention(self.previous, parsed)
+        problems = check_state(parsed, self.events, event.index, self.layout) + check_retention(self.previous, parsed)
+        # Each distinct violation is recorded once, when it first appears, and marked
+        # resolved when it disappears; per-event counts still show what is open.
+        current = {}
         for p in problems:
-            self.violations.append({"event_id": event.event_id, **asdict(p)})
+            current.setdefault(self._key(p), p)
+        new = [k for k in current if k not in self.open]
+        for k in new:
+            self.violations.append({"event_id": event.event_id, **asdict(current[k])})
+            self.open[k] = len(self.violations) - 1
+        for k in [k for k in self.open if k not in current]:
+            self.violations[self.open.pop(k)]["resolved_at"] = event.event_id
         self._track(parsed, event)
         self.timeline.append({"event_id": event.event_id, "date": event.date, **diff_memory(self.previous, parsed)})
         record = {
@@ -245,7 +301,8 @@ class MemoryMonitor:
             "index": event.index,
             "date": event.date,
             "access": access_by_file(access),
-            "violations": dict(Counter(p.code for p in problems)),
+            "violations": dict(Counter(p.code for p in current.values())),
+            "new_violations": dict(Counter(current[k].code for k in new)),
             "metrics": metrics(parsed, self.events, event.index),
         }
         self.per_event.append(record)
@@ -272,8 +329,10 @@ class MemoryMonitor:
         return {
             "layout": self.layout.name,
             "events": len(self.per_event),
-            "violations_by_code": dict(totals.most_common()),
+            "violations_by_code": dict(totals.most_common()),  # distinct violations, by first appearance
             "events_with_violations": sum(1 for r in self.per_event if r["violations"]),
+            "events_with_new_violations": sum(1 for r in self.per_event if r.get("new_violations")),
+            "unresolved_at_end": len(self.open),
             "access_totals": {p: dict(c) for p, c in sorted(access.items())},
             "final_metrics": self.per_event[-1]["metrics"] if self.per_event else {},
             "per_event": self.per_event,
@@ -284,10 +343,12 @@ class MemoryMonitor:
 
     def state(self) -> dict[str, Any]:
         return {"events": [asdict(e) for e in self.events], "per_event": self.per_event,
-                "violations": self.violations, "lifecycle": self.lifecycle, "timeline": self.timeline}
+                "violations": self.violations, "lifecycle": self.lifecycle, "timeline": self.timeline,
+                "open": [[list(k), i] for k, i in self.open.items()]}
 
     def restore(self, state: dict[str, Any], snapshot: dict[str, str]) -> None:
         self.events = [EventInfo(**e) for e in state["events"]]
         self.per_event, self.violations, self.lifecycle = state["per_event"], state["violations"], state["lifecycle"]
         self.timeline = state.get("timeline", [])
+        self.open = {tuple(k): i for k, i in state.get("open", [])}
         self.previous = parse_workspace(snapshot, self.layout) if self.events else None

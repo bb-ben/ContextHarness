@@ -94,7 +94,9 @@ def test_contract_prompt_event_ids_finish_and_due_reminders(evolved_item, tmp_pa
     assert _due_block(reqs[("memory_update", 1, 0)]) == "(none)"  # 2025-10-02: not yet due
     assert "T-0.1 | active" in _due_block(reqs[("memory_update", 2, 0)])  # 2025-10-12: due
     report = json.loads(next((tmp_path / "run" / "items").iterdir()).joinpath("memory_report.json").read_text())
-    assert report["violations_by_code"]["overdue_transient"] == 2  # flagged at S-2 and S-3
+    assert report["violations_by_code"]["overdue_transient"] == 1  # one distinct violation...
+    open_at = [r["event_id"] for r in report["per_event"] if r["violations"].get("overdue_transient")]
+    assert open_at == ["S-2", "S-3"] and report["unresolved_at_end"] >= 1  # ...left open for two events
 
 
 def test_old_episodes_roll_over_into_the_archive_unchanged(evolved_item, tmp_path):
@@ -145,4 +147,8 @@ def test_answer_budget_counts_preloaded_state(evolved_item, tmp_path):
     always = sum(len((item / "snapshots" / "final" / p).read_text()) for p in ("context.md",) + HORIZONBENCH.preloaded)
     answer = next(r for r in model.requests if r.phase == "answer")
     shown = int(re.search(r"at most (\d+) more characters", answer.blocks[1].text).group(1))
-    assert shown == 48000 - always and "g" * 500 in answer.blocks[1].text
+    # Everything shown without a read is charged: the files themselves plus their markup and the
+    # dimensions view, so the remaining budget is a little below 48,000 minus the raw file sizes.
+    overhead = (48000 - always) - shown
+    assert 0 < overhead < 6000 and "g" * 500 in answer.blocks[1].text
+    assert "<preference_dimensions>" in answer.blocks[1].text

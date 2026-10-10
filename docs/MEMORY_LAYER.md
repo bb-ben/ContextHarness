@@ -43,6 +43,7 @@ system   agent.md
 user     <event id="S-14" type="conversation" date="2025-10-15"> … </event>   (cached for the event's loop)
          <working_context> context.md now </working_context>
          <state> the five state files, in full </state>
+         <preference_dimensions> each dimension, its current value, open challenges </preference_dimensions>
          <workspace> every file's size / limit </workspace>
          <due> transient entries now due, verbatim </due>
          <actions_so_far> this event's tool calls and results </actions_so_far>
@@ -65,6 +66,7 @@ read and written. It then runs the checks below. Results go to the item's trace 
 | Question | Check codes |
 |---|---|
 | Does each entry follow the format? | `unparsed_line`, `unparsed_entry`, `wrong_file`, `orphan_observation`, `duplicate_id`, `bad_status`, `bad_kind` |
+| Are preferences disciplined? | `undeclared_dimension` (a topic outside the seed list with no `new_dimension:` reason), `near_duplicate_dimension`, `unsupported_promotion` (a preference resting on non-stated evidence from one event, with no confirmed hypothesis) |
 | Does each entry have a source and date? | `future_id` (ID names an event that hasn't happened), `bad_date`, `date_mismatch` (date differs from its event's real date), `bad_source`, `parent_mismatch`, `missing_basis`, `dangling_ref`, `basis_not_observation`, `missing_topic`, `missing_end_date` |
 | Do current-state files contradict each other? | `topic_conflict` (two `current` entries for one topic), `incomplete_supersession`, `supersession_mismatch`, `unresolved_confirmation`, `overdue_transient`, `archived_live`, `context_stale`, `context_uncited`, `context_dangling`, `context_inactive` |
 | Does information survive across events? | `missing_episode` (an event left no `E` line), `entry_deleted`, `history_rewritten` (statement, date or kind changed, or basis lost), `status_reverted`; plus each entry's lifecycle (created, status changes, deleted) |
@@ -134,11 +136,37 @@ events, exactly as specified. Three problems drove v2:
 | A stated preference became only a hypothesis, while a one-off request was tagged `stated` | Evidence kinds redefined with worked examples, including lasting vs. situational |
 | About 730 chars of observations per event would fill the episode log at around event 80 | A "worth recording" rule (zero to two observations per event, about 150 chars each), plus layer-driven rollover of old episodes into the archive |
 
+**v2 → v3 (2026-10-09).** The first full real run (gpt-5.4-mini, all 29 events and
+the answer, $1.02; see [`examples/real_run_v2_openai/`](../examples/real_run_v2_openai))
+kept memory well-formed and bounded. Its core finding: **preferences only
+accumulated**. The agent coined a new topic for nearly every signal (11 preferences,
+11 topics), so new evidence never met an old value and nothing was superseded. Several
+later "new" preferences were in fact the person's change, filed as unrelated facets.
+The answer was driven by the newest one, which had itself been promoted from a
+single request.
+
+| Observed in v2 | Change in v3 |
+|---|---|
+| A new topic per signal, so supersession never fired | **Preference dimensions.** The layout supplies a seed list; each dimension holds one current value; a `<preference_dimensions>` view in every call shows each value and any open challenge; the contract says how new evidence confirms, refines (supersede) or challenges (hypothesis) the current value. The agent may add a dimension only with a `new_dimension:` reason |
+| The same episode block appended up to four times in one event, because the agent couldn't see its earlier appends | **Writes reject repeated IDs,** and tool results name the entry IDs added or removed (with a warning on removal) |
+| A preference promoted from one request decided the answer | The `unsupported_promotion` check; the evidence rule is restated around dimensions |
+| 174 "violations" were really 12 problems re-reported every event | **Each violation is counted once,** at first appearance, with `resolved_at` when it disappears |
+
+Run against the v2 run's final memory, the new checks flag all 11 invented topics,
+four as near-duplicates of seed dimensions, and the preference that decided the
+answer as an unsupported promotion.
+
 ## Known gaps
 
 - **The archive itself has no rollover yet** (200,000 chars). That's enough for
   HorizonBench, but not for years of FoodBody data.
 - **Semantic contradictions aren't detected yet.** Two current entries with
   different topics that conflict would need an LLM judge.
-- **Real-model data is thin.** It covers 3½ events under v1 and none yet under v2.
-  How the agent handles a life event and a later supersession is still unmeasured.
+- **Real-model data is thin.** It covers 3½ events under v1 and one item under v2.
+  v3 has not met a real model yet.
+- **Open choices left for later:**
+  - per-event review of open hypotheses (v2's accident hypothesis sat untouched for
+    14 events);
+  - review dates for goals (seven stayed active, some weeks stale);
+  - ending an event automatically once its episode and `context.md` are written (v2
+    averaged 3.4 calls per event).

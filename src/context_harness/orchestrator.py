@@ -181,6 +181,7 @@ def run_item(item: BenchmarkItem, model: ModelAdapter, item_dir: Path, cfg: RunC
         report = monitor.report()
         (item_dir / "memory_report.json").write_text(json.dumps(report, indent=1, ensure_ascii=False))
         memory_summary = {k: report[k] for k in ("events", "violations_by_code", "events_with_violations",
+                                                  "events_with_new_violations", "unresolved_at_end",
                                                   "access_totals", "final_metrics")}
         chain = evidence_chain(item.gold, session_log, parse_workspace(snapshot, cfg.method_config.layout))
     scored = score(answer, item.gold)

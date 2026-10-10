@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import difflib
 import hashlib
+from collections import Counter
 from dataclasses import dataclass, replace
 from pathlib import Path
 from typing import Callable
@@ -31,9 +32,37 @@ class FileSpec:
 
 
 @dataclass(frozen=True)
+class Dimension:
+    """An axis a preference sits on. Each dimension holds at most one current value."""
+
+    key: str  # kebab-case; used as the `topic` of preference entries
+    description: str
+
+
+# Domain-neutral seed dimensions for an assistant that helps one person over time.
+# A deployment (e.g. FoodBody) supplies its own list; the agent may add dimensions
+# only with a stated reason (`new_dimension:`), and the checks watch their growth.
+GENERAL_DIMENSIONS: tuple[Dimension, ...] = (
+    Dimension("help-format", "How help should be structured: checklists, numbered steps, bullets, prose, length."),
+    Dimension("detail-level", "How much depth, background and length they want."),
+    Dimension("explanation-style", "What makes ideas land: concrete examples, analogies, data and evidence, theory."),
+    Dimension("tone", "Register and warmth: casual or formal, gentle or blunt, playful or serious."),
+    Dimension("decision-style", "How they like to reach decisions: quick or deliberate, intuitive or evidence-driven, "
+                                "open-ended or decisive."),
+    Dimension("challenge-level", "How much to push, question or challenge them versus support and reassure."),
+    Dimension("collaboration-style", "Whether they want answers handed over or to work things out together."),
+    Dimension("values", "Values and priorities that any recommendation should respect."),
+)
+
+
+@dataclass(frozen=True)
 class Layout:
     name: str
     files: tuple[FileSpec, ...]
+    dimensions: tuple[Dimension, ...] = GENERAL_DIMENSIONS
+
+    def dimension(self, key: str) -> Dimension | None:
+        return next((d for d in self.dimensions if d.key == key), None)
 
     @property
     def paths(self) -> tuple[str, ...]:
@@ -67,11 +96,12 @@ _CORE = (
     FileSpec(ARCHIVE_FILE, "Archive", 200000, ("E", "O", "F", "P", "G", "T", "H", "D", "R")),
 )
 
-# HorizonBench has no agent decisions or outcomes, so the decisions file is absent.
-HORIZONBENCH = Layout("horizonbench", _CORE)
+# The default layout: no decisions file, general preference dimensions.
+GENERAL = Layout("general", _CORE)
 # Reserved for event sources that include the agent's own decisions and their outcomes.
 WITH_DECISIONS = Layout("with-decisions", _CORE + (FileSpec("memory/decisions.md", "Decisions", 20000, ("D", "R")),))
-LAYOUTS = {layout.name: layout for layout in (HORIZONBENCH, WITH_DECISIONS)}
+LAYOUTS = {layout.name: layout for layout in (GENERAL, WITH_DECISIONS)}
+HORIZONBENCH = GENERAL  # earlier name of the default layout
 
 
 class WorkspaceError(Exception):
@@ -87,6 +117,8 @@ class FileChange:
     chars_before: int
     chars_after: int
     diff: str
+    added_ids: tuple[str, ...] = ()
+    removed_ids: tuple[str, ...] = ()
 
 
 def template(spec: FileSpec) -> str:
@@ -135,13 +167,13 @@ class Workspace:
     def read(self, path: str) -> str:
         return self.resolve(path).read_text()
 
-    def write(self, path: str, content: str) -> FileChange:
-        return self._commit(path, "write_file", content)
+    def write(self, path: str, content: str, check_ids: bool = True) -> FileChange:
+        return self._commit(path, "write_file", content, check_ids)
 
-    def append(self, path: str, text: str) -> FileChange:
+    def append(self, path: str, text: str, check_ids: bool = True) -> FileChange:
         current = self.read(path)
         sep = "" if not current or current.endswith("\n") else "\n"
-        return self._commit(path, "append_file", current + sep + text)
+        return self._commit(path, "append_file", current + sep + text, check_ids)
 
     def edit(self, path: str, old_text: str, new_text: str) -> FileChange:
         current = self.read(path)
@@ -168,7 +200,31 @@ class Workspace:
 
     # -------------------------------------------------------------- internals
 
-    def _commit(self, path: str, op: str, new_content: str) -> FileChange:
+    def _ids(self, path: str, text: str) -> list[str]:
+        from .entries import parse_file  # local import: entries imports this module
+
+        spec = self.layout.spec(path)
+        return [e.id for e in parse_file(path, text, spec.entry_types)[0]] if spec and spec.entry_types else []
+
+    def _check_new_ids(self, path: str, before: str, after: str) -> tuple[tuple[str, ...], tuple[str, ...]]:
+        """Reject a write that would give an entry ID a second home; return (added, removed) IDs."""
+        old, new = Counter(self._ids(path, before)), Counter(self._ids(path, after))
+        repeated = sorted(i for i, n in new.items() if n > 1 and n > old.get(i, 0))
+        if repeated:
+            raise WorkspaceError(
+                f"Rejected: {', '.join(repeated)} would appear more than once in {path}. "
+                "Each ID is recorded once; it is already there, so don't write it again."
+            )
+        added = tuple(i for i in new if i not in old)
+        for other in self.layout.paths:
+            if other == path:
+                continue
+            clash = sorted(set(added) & set(self._ids(other, self.read(other))))
+            if clash:
+                raise WorkspaceError(f"Rejected: {', '.join(clash)} already exist in {other}. Use new IDs.")
+        return added, tuple(i for i in old if i not in new)
+
+    def _commit(self, path: str, op: str, new_content: str, check_ids: bool = True) -> FileChange:
         if not isinstance(new_content, str):
             raise WorkspaceError("content must be a string")
         full = self.resolve(path)
@@ -179,8 +235,12 @@ class Workspace:
                 f"{limit}. Condense the content and try again."
             )
         before = full.read_text()
-        full.write_text(new_content)
         clean = path.strip().removeprefix("./")
+        if check_ids:
+            added, removed = self._check_new_ids(clean, before, new_content)
+        else:  # layer-internal moves (archive, rollover) carry IDs across files on purpose
+            added, removed = (), ()
+        full.write_text(new_content)
         change = FileChange(
             path=clean,
             op=op,
@@ -196,6 +256,8 @@ class Workspace:
                     tofile=f"b/{clean}",
                 )
             ),
+            added_ids=added,
+            removed_ids=removed,
         )
         if self.on_change:
             self.on_change(change)

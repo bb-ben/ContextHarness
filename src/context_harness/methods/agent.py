@@ -7,6 +7,7 @@ from dataclasses import asdict
 from typing import Any
 
 from .. import prompts
+from ..dimensions import HYPOTHESES_FILE, PREFERENCES_FILE, dimension_rows, render_dimensions
 from ..entries import Entry, parse_file
 from ..tools import Finish, ReadBudget, SubmitAnswer, ToolExecutor, workspace_tools
 from ..types import AnswerResult, Event, Probe, Question, Session
@@ -60,6 +61,9 @@ class WorkspaceAgent:
         blocks = [prompts.render_working_context(self.ws.read(CONTEXT_FILE), limit)]
         if state := self.preloaded():
             blocks.append(prompts.render_state(state))
+            if PREFERENCES_FILE in state:  # the structured view, derived from pre-loaded state
+                rows = dimension_rows(self.ws.layout, state[PREFERENCES_FILE], state.get(HYPOTHESES_FILE, ""))
+                blocks.append(render_dimensions(rows))
         return blocks + [prompts.render_workspace(self.ws.list_files())]
 
     def _rollover_episodes(self) -> None:
@@ -88,8 +92,8 @@ class WorkspaceAgent:
         kept = [line for seg in segments if seg not in moved for line in seg]
         phase, self._phase = self._phase, "rollover"
         try:
-            self.ws.append(ARCHIVE_FILE, "\n".join(line for seg in moved for line in seg))
-            self.ws.write(EPISODES_FILE, "\n".join(kept) + "\n")
+            self.ws.append(ARCHIVE_FILE, "\n".join(line for seg in moved for line in seg), check_ids=False)
+            self.ws.write(EPISODES_FILE, "\n".join(kept) + "\n", check_ids=False)
             self.ctx.trace.emit("episode_rollover", event_id=self._event_id, episodes=len(moved),
                                 first=moved[0][0].split(" |")[0][2:], last=moved[-1][0].split(" |")[0][2:])
         except WorkspaceError as e:
@@ -130,8 +134,9 @@ class WorkspaceAgent:
     def answer(self, probe: Probe, question: Question, probe_event_id: str) -> AnswerResult:
         self._phase, self._event_id = "answer", probe_event_id
         cfg = self.ctx.config
-        # context.md and any pre-loaded state are always visible; reads draw on what remains.
-        always = len(self.ws.read(CONTEXT_FILE)) + sum(len(c) for c in self.preloaded().values())
+        # Everything shown without a read (context.md, pre-loaded state, the dimensions view)
+        # counts against the shared answer budget; reads draw on what remains.
+        always = sum(len(block) for block in self._render_state(""))
         budget = ReadBudget(max(0, cfg.answer_budget_chars - always))
         submit = SubmitAnswer(question.letters)
         executor = ToolExecutor(workspace_tools(self.ws, writable=False, read_budget=budget) + [submit], self.ctx.trace)

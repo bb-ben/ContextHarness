@@ -219,7 +219,7 @@ def main(argv: list[str] | None = None) -> int:
                    help="Pause once estimated spend reaches this many dollars in this invocation (priced models only)")
     p.add_argument("--max-requests", type=int,
                    help="Stop after this many model requests in this invocation (the run pauses; continue with --resume)")
-    p.add_argument("--layout", choices=sorted(LAYOUTS), default="horizonbench", help="Workspace file layout")
+    p.add_argument("--layout", choices=sorted(LAYOUTS), default="general", help="Workspace file layout")
     p.add_argument("--no-fallbacks", action="store_true", help="Disable server-side refusal fallback")
     p.add_argument("--context-chars", type=int, default=6000, help="context.md limit")
     p.add_argument("--no-preload", action="store_true",

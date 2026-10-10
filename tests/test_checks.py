@@ -25,8 +25,8 @@ CLEAN = {
     "state/profile.md": "# Profile\n",
     "state/preferences.md": (
         "# Preferences\n"
-        "- P-0.1 | superseded | 2025-10-01 | topic: answer-length | basis: O-0.1 | until: 2025-10-09 | superseded_by: P-2.1 | Likes long, detailed answers.\n"
-        "- P-2.1 | current | 2025-10-09 | topic: answer-length | basis: O-2.1 | supersedes: P-0.1 | Wants short answers.\n"
+        "- P-0.1 | superseded | 2025-10-01 | topic: detail-level | basis: O-0.1 | until: 2025-10-09 | superseded_by: P-2.1 | Likes long, detailed answers.\n"
+        "- P-2.1 | current | 2025-10-09 | topic: detail-level | basis: O-2.1 | supersedes: P-0.1 | Wants short answers.\n"
     ),
     "state/goals.md": "# Goals\n- G-1.1 | active | 2025-10-05 | basis: O-1.1 | Pass the exams.\n  - 2025-10-09 (S-2): studying daily.\n",
     "state/transient.md": "# Transient state\n- T-1.1 | active | 2025-10-05 | expires: 2025-10-12 | basis: O-1.1 | Stressed by exams.\n",
@@ -49,6 +49,9 @@ def with_change(path, old, new):
 
 def test_clean_workspace_has_no_violations():
     assert codes(CLEAN) == Counter()
+    from context_harness.checks import check_preferences
+
+    assert check_preferences(parse_workspace(CLEAN, HORIZONBENCH), HORIZONBENCH) == []  # v3 checks too
 
 
 def test_parser_reads_entries_observations_and_progress_notes():
@@ -72,7 +75,7 @@ def test_parser_reads_entries_observations_and_progress_notes():
     ("state/goals.md", "basis: O-1.1 | Pass", "basis: O-9.9 | Pass", "dangling_ref"),
     ("state/goals.md", "basis: O-1.1 | Pass", "basis: H-1.1 | Pass", "basis_not_observation"),
     ("state/transient.md", " | expires: 2025-10-12", "", "missing_end_date"),
-    ("state/preferences.md", "| topic: answer-length | basis: O-2.1", "| basis: O-2.1", "missing_topic"),
+    ("state/preferences.md", "| topic: detail-level | basis: O-2.1", "| basis: O-2.1", "missing_topic"),
     ("state/goals.md", "- G-1.1 | active | 2025-10-05 | basis: O-1.1 | Pass the exams.", "- G-1.1 | active | Pass the exams.", "unparsed_entry"),
     ("state/goals.md", "# Goals\n", "# Goals\n- pass exams eventually\n", "unparsed_line"),
     ("state/goals.md", "- G-1.1 |", "- P-1.1 |", "wrong_file"),
@@ -170,3 +173,82 @@ def test_memory_diff_reports_additions_changes_moves_and_removals():
     assert wc["cited_added"] == ["F-2.1"] and wc["cited_removed"] == ["T-1.1"]
     first = diff_memory(None, before)  # first event: everything is new
     assert len(first["episodic"]["added"]) == 6 and first["working_context"]["removed"] == []
+
+
+# ---------------------------------------------------------------- v3: dimensions and evidence
+
+def _prefs(*lines):
+    snap = dict(CLEAN)
+    snap["state/preferences.md"] = "# Preferences\n" + "".join(l + "\n" for l in lines)
+    snap["context.md"] = CLEAN["context.md"].replace("- Wants short answers (P-2.1)\n", "")
+    return snap
+
+
+def pref_codes(*lines):
+    from context_harness.checks import check_preferences
+
+    return Counter(p.code for p in check_preferences(parse_workspace(_prefs(*lines), HORIZONBENCH), HORIZONBENCH))
+
+
+def test_seed_dimensions_and_declared_custom_dimensions_pass():
+    assert pref_codes(
+        "- P-2.1 | current | 2025-10-09 | topic: detail-level | basis: O-2.1 | Wants short answers.",
+        "- P-2.2 | current | 2025-10-09 | topic: gift-ideas | new_dimension: none covers gifts | basis: O-2.1 | Likes practical gifts.",
+    ) == Counter()
+
+
+def test_undeclared_and_near_duplicate_dimensions_are_flagged():
+    found = pref_codes(
+        "- P-2.1 | current | 2025-10-09 | topic: answer-length | basis: O-2.1 | Wants short answers.",
+        "- P-2.2 | current | 2025-10-09 | topic: collaborative-style | new_dimension: x | basis: O-2.1 | Likes to co-work.",
+    )
+    assert found["undeclared_dimension"] == 1  # answer-length has no reason
+    assert found["near_duplicate_dimension"] >= 1  # collaborative-style vs seed collaboration-style
+
+
+@pytest.mark.parametrize("basis,resolved,flagged", [
+    ("O-1.1", False, True),          # one event, kind `event`, no hypothesis: unsupported
+    ("O-2.1", False, False),         # `stated`: allowed directly
+    ("O-0.1, O-1.1", False, False),  # two events: allowed
+    ("O-1.1", True, False),          # promoted from a confirmed hypothesis: allowed
+])
+def test_unsupported_promotion(basis, resolved, flagged):
+    from context_harness.checks import check_preferences
+
+    snap = _prefs(f"- P-2.1 | current | 2025-10-09 | topic: detail-level | basis: {basis} | Wants short answers.")
+    if not resolved:
+        snap["state/hypotheses.md"] = "# Hypotheses\n"
+    codes_ = Counter(p.code for p in check_preferences(parse_workspace(snap, HORIZONBENCH), HORIZONBENCH))
+    assert (codes_["unsupported_promotion"] == 1) is flagged
+
+
+def test_violations_are_counted_once_and_resolution_is_recorded():
+    monitor = MemoryMonitor(HORIZONBENCH)
+    monitor.events = list(EVENTS[:2])  # S-0 and S-1 already happened; we observe S-2 repeatedly
+    broken = with_change("context.md", "(S-2)", "(S-1)")  # stale context
+    snap0 = {**broken, "context.md": broken["context.md"]}
+    monitor.after_event(EVENTS[2], snap0, [])  # S-2: context says S-1
+    monitor.after_event(EVENTS[2], snap0, [])  # still stale
+    report = monitor.report()
+    assert report["violations_by_code"]["context_stale"] == 1 and report["unresolved_at_end"] == 1
+    assert [r["violations"].get("context_stale") for r in report["per_event"]] == [1, 1]
+    assert [bool(r["new_violations"]) for r in report["per_event"]] == [True, False]
+    monitor.after_event(EVENTS[2], CLEAN, [])  # fixed
+    report = monitor.report()
+    stale = next(v for v in report["violations"] if v["code"] == "context_stale")
+    assert stale["resolved_at"] == "S-2" and report["unresolved_at_end"] == 0
+
+
+def test_dimension_view_shows_values_custom_reasons_and_challenges():
+    from context_harness.dimensions import dimension_rows, render_dimensions
+
+    prefs = ("- P-2.1 | current | 2025-10-09 | topic: decision-style | basis: O-2.1 | Decides quickly.\n"
+             "- P-2.2 | current | 2025-10-09 | topic: gift-ideas | new_dimension: none covers gifts | basis: O-2.1 | Practical gifts.\n"
+             "- P-0.1 | superseded | 2025-10-01 | topic: tone | basis: O-0.1 | until: 2025-10-09 | superseded_by: P-2.3 | Formal.\n")
+    hyps = "- H-2.1 | open | 2025-10-09 | confidence: low | for: O-2.1 | challenges: P-2.1 | May now prefer to deliberate.\n"
+    text = render_dimensions(dimension_rows(HORIZONBENCH, prefs, hyps))
+    assert 'decision-style: How they like to reach decisions' in text
+    assert 'current: P-2.1 "Decides quickly."' in text and 'challenged by: H-2.1 (open)' in text
+    assert "Dimensions you added:" in text and "gift-ideas: none covers gifts" in text
+    assert "tone: Register" in text and "Formal" not in text  # superseded values are not current
+    assert text.count("current: (none yet)") == len(HORIZONBENCH.dimensions) - 1

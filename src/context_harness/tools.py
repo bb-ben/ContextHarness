@@ -222,6 +222,17 @@ class Lookup(Tool):
         return ToolResult(True, body, tuple(sorted(paths)))
 
 
+def _describe(change, verb: str) -> str:
+    """Tool result text: what happened, including which entry IDs appeared or disappeared."""
+    text = f"{verb} {change.path} ({change.chars_after} chars)."
+    if change.added_ids:
+        text += f" New entries: {', '.join(change.added_ids)}."
+    if change.removed_ids:
+        text += (f" Warning: this removed {', '.join(change.removed_ids)}. Entries are never deleted; "
+                 "supersede, retract or archive them instead.")
+    return text
+
+
 class WriteFile(Tool):
     kind = "write"
 
@@ -235,7 +246,7 @@ class WriteFile(Tool):
 
     def run(self, args: dict[str, Any]) -> ToolResult:
         change = self.ws.write(args["path"], args["content"])
-        return ToolResult(True, f"Wrote {change.path} ({change.chars_after} chars).", (change.path,))
+        return ToolResult(True, _describe(change, "Wrote"), (change.path,))
 
 
 class EditFile(Tool):
@@ -251,7 +262,7 @@ class EditFile(Tool):
 
     def run(self, args: dict[str, Any]) -> ToolResult:
         change = self.ws.edit(args["path"], args["old_text"], args["new_text"])
-        return ToolResult(True, f"Edited {change.path} ({change.chars_after} chars).", (change.path,))
+        return ToolResult(True, _describe(change, "Edited"), (change.path,))
 
 
 class AppendFile(Tool):
@@ -267,7 +278,7 @@ class AppendFile(Tool):
 
     def run(self, args: dict[str, Any]) -> ToolResult:
         change = self.ws.append(args["path"], args["text"])
-        return ToolResult(True, f"Appended to {change.path} ({change.chars_after} chars).", (change.path,))
+        return ToolResult(True, _describe(change, "Appended to"), (change.path,))
 
 
 class Archive(Tool):
@@ -312,8 +323,8 @@ class Archive(Tool):
             drop = {i for start, end in spans for i in range(start, end + 1)}
             moved += [lines[i] for start, end in sorted(spans) for i in range(start, end + 1)]
             kept = [line for i, line in enumerate(lines) if i not in drop]
-            self.ws.write(path, "\n".join(kept) + "\n")
-        self.ws.append(ARCHIVE_FILE, "\n".join(moved))
+            self.ws.write(path, "\n".join(kept) + "\n", check_ids=False)
+        self.ws.append(ARCHIVE_FILE, "\n".join(moved), check_ids=False)
         return ToolResult(True, f"Archived {len(found)} entries.", tuple(sorted(moves)) + (ARCHIVE_FILE,))
 
 

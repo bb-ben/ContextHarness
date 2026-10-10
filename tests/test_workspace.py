@@ -167,3 +167,20 @@ def test_archive_moves_closed_entries_with_notes_and_refuses_live_ones(tmp_path)
     assert check_retention(before, after) == []  # moved, not deleted
     with pytest.raises(WorkspaceError, match="Not found"):
         archive.run({"ids": ["G-9.9"]})
+
+
+def test_duplicate_ids_are_rejected_and_results_name_new_entries(tmp_path):
+    from context_harness.tools import AppendFile, WriteFile
+
+    ws = Workspace.create(tmp_path / "ws", HORIZONBENCH)
+    block = "- E-7 | 2025-10-05 | source: S-7 | Chat.\n  - O-7.1 | stated | Likes tea."
+    first = AppendFile(ws).run({"path": "memory/episodes.md", "text": block})
+    assert "New entries: E-7, O-7.1." in first.content
+    with pytest.raises(WorkspaceError, match="E-7, O-7.1 would appear more than once"):
+        ws.append("memory/episodes.md", block)  # the duplicate-episode bug from the OpenAI run
+    with pytest.raises(WorkspaceError, match="already exist in memory/episodes.md"):
+        ws.write("state/profile.md", "# Profile\n- O-7.1 | stated | Likes tea.\n")  # wrong file, same ID
+    ws.write("state/goals.md", "# Goals\n- G-7.1 | active | 2025-10-05 | basis: O-7.1 | Learn tea.\n")
+    removed = WriteFile(ws).run({"path": "state/goals.md", "content": "# Goals\n"})
+    assert "Warning: this removed G-7.1" in removed.content
+    ws.edit("memory/episodes.md", "Likes tea.", "Likes green tea.")  # edits that keep IDs unique are fine
