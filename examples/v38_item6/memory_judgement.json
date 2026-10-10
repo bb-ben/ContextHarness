@@ -1,0 +1,305 @@
+{
+  "item_id": "Jairo Restrepo_event77_20260326_turn1_communication_medium_preferences_142_counterfactuals.json",
+  "judge_model": "gpt-5.4-mini",
+  "memory_chars": 33775,
+  "attributes": [
+    {
+      "attribute": "preferred_response_format",
+      "current": "executive_summary_with_strategic_tradeoffs",
+      "original": "structured_numbered_steps",
+      "changed": true,
+      "memory_value": "step-by-step help with priorities and copyable checklists; bullets and a short prose summary for strategy sharing",
+      "current_match": "contradicts",
+      "original_still_current": true,
+      "change_recorded": false,
+      "evidence": "P-72.1 \"Wants quick, phone-friendly step-by-step help with priorities and copyable checklists; strategy sharing also wants professional bullets and a short prose summary\"",
+      "votes": [
+        "contradicts",
+        "contradicts",
+        "contradicts"
+      ]
+    },
+    {
+      "attribute": "emotional_tone",
+      "current": "diplomatic_and_authoritative",
+      "original": "direct_pragmatic",
+      "changed": true,
+      "memory_value": "measured, persuasive tone with light humor only if it doesn't blunt the edge",
+      "current_match": "partial",
+      "original_still_current": false,
+      "change_recorded": true,
+      "evidence": "P-64.1 \"Wants a measured, persuasive tone in stressful advocacy work, with light humor only when it doesn't blunt the edge\"; P-28.4 \"Wants a real, lightly humorous tone in stressful advocacy work\"",
+      "votes": [
+        "partial",
+        "partial",
+        "partial"
+      ]
+    },
+    {
+      "attribute": "explanation_approach",
+      "current": "impact_assessment_first",
+      "original": "principles_first_then_examples",
+      "changed": true,
+      "memory_value": "concrete analogies, real examples, story-like, simple, non-legalistic phrasing",
+      "current_match": "absent",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "P-44.2 \"Wants concrete analogies, real examples, story-like, simple, non-legalistic phrasing for complex ideas\"",
+      "votes": [
+        "absent",
+        "absent",
+        "absent"
+      ]
+    },
+    {
+      "attribute": "example_preference",
+      "current": "real_world_analogies",
+      "changed": false,
+      "memory_value": "concrete analogies and real examples",
+      "current_match": "matches",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "P-44.2 \"Wants concrete analogies, real examples, story-like, simple, non-legalistic phrasing for complex ideas\"",
+      "votes": [
+        "matches",
+        "matches",
+        "matches"
+      ]
+    },
+    {
+      "attribute": "boundary_setting_voice",
+      "current": "value_based_reasoning",
+      "changed": false,
+      "memory_value": "nothing",
+      "current_match": "absent",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "no current entry on boundary-setting voice",
+      "votes": [
+        "absent",
+        "absent",
+        "absent"
+      ]
+    }
+  ],
+  "current_fidelity": 0.3,
+  "changed_fidelity": 0.167,
+  "stale": 1,
+  "changes_recorded": 1,
+  "n_attributes": 5,
+  "n_changed": 3,
+  "ungraded": [],
+  "repeats": 3,
+  "agreement": 1.0,
+  "current_fidelity_range": [
+    0.3,
+    0.3
+  ],
+  "estimated_cost_usd": 0.13255,
+  "runs": [
+    {
+      "item_id": "Jairo Restrepo_event77_20260326_turn1_communication_medium_preferences_142_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 33775,
+      "attributes": [
+        {
+          "attribute": "preferred_response_format",
+          "current": "executive_summary_with_strategic_tradeoffs",
+          "original": "structured_numbered_steps",
+          "changed": true,
+          "memory_value": "step-by-step help with priorities and copyable checklists; bullets and a short prose summary for strategy sharing",
+          "current_match": "contradicts",
+          "original_still_current": true,
+          "change_recorded": false,
+          "evidence": "P-72.1 \"Wants quick, phone-friendly step-by-step help with priorities and copyable checklists; strategy sharing also wants professional bullets and a short prose summary\""
+        },
+        {
+          "attribute": "emotional_tone",
+          "current": "diplomatic_and_authoritative",
+          "original": "direct_pragmatic",
+          "changed": true,
+          "memory_value": "measured, persuasive tone with light humor only if it doesn't blunt the edge",
+          "current_match": "partial",
+          "original_still_current": false,
+          "change_recorded": true,
+          "evidence": "P-64.1 \"Wants a measured, persuasive tone in stressful advocacy work, with light humor only when it doesn't blunt the edge\"; P-28.4 \"Wants a real, lightly humorous tone in stressful advocacy work\""
+        },
+        {
+          "attribute": "explanation_approach",
+          "current": "impact_assessment_first",
+          "original": "principles_first_then_examples",
+          "changed": true,
+          "memory_value": "concrete analogies, real examples, story-like, simple, non-legalistic phrasing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-44.2 \"Wants concrete analogies, real examples, story-like, simple, non-legalistic phrasing for complex ideas\""
+        },
+        {
+          "attribute": "example_preference",
+          "current": "real_world_analogies",
+          "changed": false,
+          "memory_value": "concrete analogies and real examples",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-44.2 \"Wants concrete analogies, real examples, story-like, simple, non-legalistic phrasing for complex ideas\""
+        },
+        {
+          "attribute": "boundary_setting_voice",
+          "current": "value_based_reasoning",
+          "changed": false,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "no current entry on boundary-setting voice"
+        }
+      ],
+      "current_fidelity": 0.3,
+      "changed_fidelity": 0.167,
+      "stale": 1,
+      "changes_recorded": 1,
+      "n_attributes": 5,
+      "n_changed": 3,
+      "ungraded": [],
+      "estimated_cost_usd": 0.05341
+    },
+    {
+      "item_id": "Jairo Restrepo_event77_20260326_turn1_communication_medium_preferences_142_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 33775,
+      "attributes": [
+        {
+          "attribute": "preferred_response_format",
+          "current": "executive_summary_with_strategic_tradeoffs",
+          "original": "structured_numbered_steps",
+          "changed": true,
+          "memory_value": "step-by-step help with priorities and copyable checklists; strategy sharing also wants professional bullets and a short prose summary; public advocacy opens with big vision; strategy work can use dashboards",
+          "current_match": "contradicts",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-72.1 current: \"Wants quick, phone-friendly step-by-step help with priorities and copyable checklists...\""
+        },
+        {
+          "attribute": "emotional_tone",
+          "current": "diplomatic_and_authoritative",
+          "original": "direct_pragmatic",
+          "changed": true,
+          "memory_value": "measured, persuasive tone; light humor only when it doesn't blunt the edge",
+          "current_match": "partial",
+          "original_still_current": false,
+          "change_recorded": true,
+          "evidence": "P-64.1 current: \"Wants a measured, persuasive tone in stressful advocacy work, with light humor only when it doesn't blunt the edge.\"; P-28.4 superseded: \"Wants a real, lightly humorous tone in stressful advocacy work.\""
+        },
+        {
+          "attribute": "explanation_approach",
+          "current": "impact_assessment_first",
+          "original": "principles_first_then_examples",
+          "changed": true,
+          "memory_value": "concrete analogies, real examples, story-like, simple, non-legalistic phrasing; brief historical references only if relevant",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-44.2 current: \"Wants concrete analogies, real examples, story-like, simple, non-legalistic phrasing for complex ideas...\""
+        },
+        {
+          "attribute": "example_preference",
+          "current": "real_world_analogies",
+          "changed": false,
+          "memory_value": "concrete analogies and real examples",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-44.2 current: \"Wants concrete analogies, real examples, story-like, simple, non-legalistic phrasing for complex ideas...\""
+        },
+        {
+          "attribute": "boundary_setting_voice",
+          "current": "value_based_reasoning",
+          "changed": false,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No current entry in the memory is about boundary-setting voice; the closest current items are P-8.1 (values) and P-44.1 (output style), but neither states a boundary-setting voice preference."
+        }
+      ],
+      "current_fidelity": 0.3,
+      "changed_fidelity": 0.167,
+      "stale": 0,
+      "changes_recorded": 1,
+      "n_attributes": 5,
+      "n_changed": 3,
+      "ungraded": [],
+      "estimated_cost_usd": 0.02422
+    },
+    {
+      "item_id": "Jairo Restrepo_event77_20260326_turn1_communication_medium_preferences_142_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 33775,
+      "attributes": [
+        {
+          "attribute": "preferred_response_format",
+          "current": "executive_summary_with_strategic_tradeoffs",
+          "original": "structured_numbered_steps",
+          "changed": true,
+          "memory_value": "step-by-step help with priorities and copyable checklists; bullets/short summary for strategy sharing",
+          "current_match": "contradicts",
+          "original_still_current": true,
+          "change_recorded": false,
+          "evidence": "P-72.1: \"quick, phone-friendly step-by-step help with priorities and copyable checklists\"; \"strategy sharing also wants professional bullets and a short prose summary\""
+        },
+        {
+          "attribute": "emotional_tone",
+          "current": "diplomatic_and_authoritative",
+          "original": "direct_pragmatic",
+          "changed": true,
+          "memory_value": "measured, persuasive tone with light humor only when it doesn't blunt the edge",
+          "current_match": "partial",
+          "original_still_current": false,
+          "change_recorded": true,
+          "evidence": "P-64.1 current: \"measured, persuasive tone... light humor only when it doesn't blunt the edge\"; supersedes P-28.4's \"real, lightly humorous tone\""
+        },
+        {
+          "attribute": "explanation_approach",
+          "current": "impact_assessment_first",
+          "original": "principles_first_then_examples",
+          "changed": true,
+          "memory_value": "concrete analogies, real examples, story-like phrasing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-44.2 says \"concrete analogies, real examples, story-like, simple, non-legalistic phrasing\"; nothing about impact-first ordering"
+        },
+        {
+          "attribute": "example_preference",
+          "current": "real_world_analogies",
+          "changed": false,
+          "memory_value": "concrete analogies, real examples, story-like phrasing",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-44.2 current: \"concrete analogies, real examples, story-like, simple, non-legalistic phrasing\"; P-31.1 reinforced the same"
+        },
+        {
+          "attribute": "boundary_setting_voice",
+          "current": "value_based_reasoning",
+          "changed": false,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No current entry about boundary-setting voice; P-8.1 is a values preference about labor protections and equity, not voice"
+        }
+      ],
+      "current_fidelity": 0.3,
+      "changed_fidelity": 0.167,
+      "stale": 1,
+      "changes_recorded": 1,
+      "n_attributes": 5,
+      "n_changed": 3,
+      "ungraded": [],
+      "estimated_cost_usd": 0.05492
+    }
+  ]
+}

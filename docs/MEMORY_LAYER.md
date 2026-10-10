@@ -475,6 +475,33 @@ one-pan and lost vegetarian, v3.8 the reverse. The structure makes the right out
 reachable; gpt-5.4-mini reaches it inconsistently, so a version has to be judged on
 repeated runs.
 
+### v3.8 on item 6: the long-history test
+
+$7.11 for the run and $0.33 for its evaluations; see
+[`examples/v38_item6/`](../examples/v38_item6).
+
+| | v3.1 | v3.2 | v3.8 |
+|---|---|---|---|
+| Memory holds the person now (judge) | 0.3 | 0.3 | 0.3 |
+| Changes recorded | 0 of 3 | 0 of 3 | 1 of 3 (tone, partly) |
+| Replies follow the new / the old values | not measured | 0.33 / 0.67 | 0.17 / 0.67 |
+
+**The replies used memory faithfully, and memory was stale.** Both replies accounted
+for every entry and rested on 14–19 live ones, none replaced, but the current values
+still said "step-by-step checklists" and "dramatic, punchy", so the replies came out
+as blunt numbered plans: the person before the change.
+
+**The cause is accretion that passes the rules.** The `output-style` value was
+superseded seven times, each with a `changed:` note reading "now also wants…"; the
+pre-change "dramatic, punchy" survives in the final value beside "measured, formal
+enough for the UN". On the 8-event scenarios a change arrives in one or two clear
+messages and gets replaced. Over 75 events it arrives as dozens of task requests,
+each of which looks like an addition. Requiring a revision to say what changed does
+not stop "what changed" from being "one more thing".
+
+The next design question is re-deriving a value from recent evidence rather than
+patching the previous value, which is what a rolling summary does each event.
+
 ## Known gaps
 
 - **The archive itself has no rollover yet** (200,000 chars). That's enough for
@@ -488,8 +515,8 @@ repeated runs.
   item under v2 and v3. Vetting finds 3 of the 6 sample items with a labeled change
   usable as answer tests; it is one model's judgment per item and hasn't been checked
   against a person's reading.
-- **v3.6 is untested on a long history.** The scenarios have about 8 events; whether
-  it holds up over 75 (item 6) is open.
+- **Changes don't hold up over long histories.** On the 75-event item, v3.8's values
+  grew by addition ("now also…") and kept the pre-change wording.
 - **Run-to-run variance.** The same scenario under the same contract collects
   different things on different runs; single runs can't rank versions.
 - **A rolling summary still matches or beats the layer on these short scenarios**, at

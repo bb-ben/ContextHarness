@@ -67,6 +67,11 @@ contract produces zero violations across all 901 events of the HorizonBench samp
   memory: 0 on the neutral-ending scenarios). A `foodbody` layout keeps diet,
   allergies and household in view. Run-to-run variance is now the main limit. See
   [`examples/scenarios_v37_v38/`](examples/scenarios_v37_v38).
+- **v3.8 on item 6, 75 events ($7.44 with evaluations).** Memory still scores 0.3
+  and replies follow the old style: the replies used memory faithfully, but every
+  revision of the style value added to it ("now also…") instead of replacing it. What
+  works on 8-event scenarios erodes over 75. See
+  [`examples/v38_item6/`](examples/v38_item6).
 - **Memory judge on that item.** Graded against the ground-truth attributes, v3
   holds 0.38 of the person's current preferences, v2 0.0, and the rolling summary
   0.75. The summary's lead comes from role-play content recorded before the change,
@@ -239,8 +244,8 @@ v2), so it says nothing about the layer.
 
 ## Next steps
 
-1. **Run v3.8 on HorizonBench item 6** to see whether it holds up over 75 events,
-   and judge its memory and replies.
+1. **Re-derive values from recent evidence** instead of patching the previous value,
+   so a change that arrives gradually over many events replaces the old value.
 2. **Measure variance:** run each scenario several times per version and compare
    distributions, not single runs.
 3. **Add more neutral-ending scenarios.** They are the only tests so far where replies

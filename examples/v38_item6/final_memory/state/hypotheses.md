@@ -1,0 +1,17 @@
+# Hypotheses
+- H-0.1 | confirmed | 2025-09-28 | confidence: low | topic: help-format | for: O-0.2, O-1.1 | resolved_into: P-1.1 | They may prefer quick, phone-friendly bullet or checklist help when time is tight.
+- H-0.2 | confirmed | 2025-09-28 | confidence: low | topic: detail-level | for: O-0.2, O-0.5, O-1.1, O-1.5 | resolved_into: P-1.2 | They may prefer very short, skimable answers under pressure.
+- H-0.3 | confirmed | 2025-09-28 | confidence: low | topic: explanation-style | for: O-0.3, O-0.6, O-1.2 | resolved_into: P-1.3 | Concrete analogies and simple phrasing seem to help them follow complex ideas.
+- H-0.4 | confirmed | 2025-09-28 | confidence: low | topic: output-style | for: O-0.4, O-0.5, O-1.3, O-1.4, O-1.6 | resolved_into: P-1.4 | They may want debate drafts to be aggressive, punchy and memorable.
+- H-3.1 | confirmed | 2025-10-01 | confidence: low | topic: decision-style | for: O-3.2, O-3.3, O-3.6, O-4.2 | resolved_into: P-4.2 | They may want explicit prioritization and step-by-step decision framing when under pressure.
+- H-3.2 | confirmed | 2025-10-01 | confidence: low | topic: tone | for: O-3.5, O-11.5 | resolved_into: P-11.1 | They may prefer a real, lightly humorous tone in stressful advocacy work.
+- H-5.1 | confirmed | 2025-10-02 | confidence: low | topic: output-style | for: O-5.3, O-5.4, O-8.3 | resolved_into: P-6.1 | They may want conflict scripts to sound professional, firm, and motivational.
+- H-14.1 | confirmed | 2025-10-14 | confidence: low | topic: collaboration-style | for: O-14.2, O-15.2 | resolved_into: P-15.1 | They may want to talk like partners and use stories instead of technical lists.
+- H-22.1 | confirmed | 2025-10-28 | confidence: low | topic: help-format | for: O-22.1, O-22.2, O-25.1 | resolved_into: P-25.1 | They may want strategy help as professional bullets, with prose summaries and links when sharing.
+- H-30.1 | open | 2025-11-04 | confidence: low | topic: output-style | for: O-30.2 | Mediation opening drafts may need to foreground respectful ground rules and clear floor-sharing.
+- H-37.1 | open | 2025-11-09 | confidence: low | topic: output-style | for: O-37.2 | challenges: P-28.5 | Mediation letters may need separate versions tuned to audience, with autonomy-respecting language for councils and procedural framing for developers.
+- H-45.1 | open | 2025-11-15 | confidence: low | topic: report-focus | for: O-45.2 | Emergency food-distribution reports may need to foreground transport delays, warehouse capacity, and city-by-city bottlenecks.
+- H-47.1 | confirmed | 2025-11-15 | confidence: low | topic: help-format | for: O-47.4, O-48.1 | resolved_into: P-48.1 | They may also want rollout dashboards or at-a-glance logistics views for strategy work.
+- H-50.1 | open | 2025-11-19 | confidence: low | topic: output-style | for: O-50.2 | challenges: P-44.1 | Neutral meeting agendas may need de-escalatory framing and restorative justice principles.
+- H-62.1 | confirmed | 2025-12-02 | confidence: low | topic: tone | for: O-62.4, O-63.1, O-63.2 | challenges: P-28.4 | resolved_into: P-63.1 | Under pressure they may want a colder, more analytical tone and less pep talk.
+- H-67.1 | open | 2025-12-05 | confidence: low | topic: output-style | for: O-67.2 | challenges: P-44.1 | Rapid vendor-outreach flyers may need to be concise and CTA-first.

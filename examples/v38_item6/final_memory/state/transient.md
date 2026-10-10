@@ -1,0 +1,31 @@
+# Transient state
+- T-0.1 | expired | 2025-09-28 | review: 2025-10-05 | ended: 2025-10-05 | basis: O-0.1 | Feels anxious and unready about the housing debate tomorrow.
+- T-2.1 | expired | 2025-10-01 | review: 2025-10-08 | ended: 2025-10-10 | basis: O-2.5 | Feels calmer and more confident after planning the response.
+- T-2.2 | expired | 2025-10-01 | review: 2025-10-03 | ended: 2025-10-04 | basis: O-2.3 | Wants four-hour check-ins on rally milestones for the next two days.
+- T-2.3 | expired | 2025-10-01 | review: 2025-10-03 | ended: 2025-10-04 | basis: O-2.4 | Feels worried about noise rules and police shutting the rally down.
+- T-3.1 | expired | 2025-10-01 | review: 2025-10-08 | ended: 2025-10-10 | basis: O-3.1, O-3.2 | Feels overwhelmed by the fast-tracked Bosa zoning fight and JAC meetings.
+- T-4.1 | expired | 2025-10-01 | review: 2025-10-08 | ended: 2025-10-10 | basis: O-4.4 | Feels overwhelmed and nervous about the Eastside Crossing campaign and Tuesday vote.
+- T-5.1 | expired | 2025-10-02 | review: 2025-10-09 | ended: 2025-10-10 | basis: O-5.1 | Feels exhausted and overwhelmed by the roommate's nightly music.
+- T-9.1 | expired | 2025-10-07 | review: 2025-10-14 | ended: 2025-10-14 | basis: O-9.6 | Feels worried about being talked over by panel academics.
+- T-10.1 | superseded | 2025-10-10 | review: 2025-10-17 | basis: O-10.2 | until: 2025-10-18 | superseded_by: T-17.1 | Feels pressure from the final NGO paper deadline next week.
+- T-13.1 | expired | 2025-10-12 | review: 2025-10-19 | ended: 2025-10-20 | basis: O-13.3 | Feels time pressure to move fast before the Geneva meeting next week.
+- T-15.1 | expired | 2025-10-15 | review: 2025-10-22 | ended: 2025-10-26 | basis: O-15.1 | Has zero budget for the Old Oak campaign.
+- T-17.1 | expired | 2025-10-18 | review: 2025-10-25 | ended: 2025-10-26 | basis: O-10.2 | supersedes: T-10.1 | Feels pressure from the final NGO paper deadline next week.
+- T-19.1 | expired | 2025-10-26 | review: 2025-10-28 | ended: 2025-10-28 | basis: O-19.1 | Has 48 hours to prepare the police-budget rebuttal.
+- T-20.1 | expired | 2025-10-27 | review: 2025-11-03 | ended: 2025-11-03 | basis: O-20.1 | Feels stressed about community questions on the vaccine-budget claim.
+- T-23.1 | superseded | 2025-10-30 | review: 2025-11-06 | basis: O-23.1 | until: 2025-10-30 | superseded_by: T-24.1 | Feels stressed about defending the rallies at an academic panel in 10 days.
+- T-24.1 | expired | 2025-10-30 | review: 2025-11-06 | ended: 2025-11-06 | basis: O-24.1, O-24.2, O-24.4 | supersedes: T-23.1 | changed: less stressed after getting a structured legal framework | Feels more ready and less stressed about defending the rallies at the academic panel.
+- T-29.1 | expired | 2025-11-04 | review: 2025-11-11 | ended: 2025-11-11 | basis: O-29.1 | Feels pressure about the police budget hearing in two days.
+- T-32.1 | superseded | 2025-11-05 | review: 2025-11-06 | basis: O-32.4 | until: 2025-11-06 | superseded_by: T-34.1 | Has a public briefing tomorrow on pumping-station failures.
+- T-34.1 | expired | 2025-11-06 | review: 2025-11-07 | ended: 2025-11-09 | basis: O-32.4 | supersedes: T-32.1 | changed: review moved out one day, still pending | Has a public briefing tomorrow on pumping-station failures.
+- T-34.2 | expired | 2025-11-06 | review: 2025-11-08 | ended: 2025-11-09 | basis: O-34.1 | Has a rally tomorrow and a committee vote in two days on autonomous systems.
+- T-52.1 | superseded | 2025-11-20 | review: 2025-11-27 | basis: O-52.3 | until: 2025-11-28 | superseded_by: T-56.1 | Needs neutral, high-security venues for mediation sessions in Bosa.
+- T-54.1 | superseded | 2025-11-21 | review: 2025-11-28 | basis: O-54.1 | until: 2025-11-28 | superseded_by: T-56.2 | Has a busy stretch organizing the first committee meeting for the Gran Acuerdo Nacional.
+- T-56.1 | active | 2025-11-28 | review: 2025-12-20 | basis: O-52.3 | supersedes: T-52.1 | changed: review moved later, still needs secure neutral venues | Needs neutral, high-security venues for mediation sessions in Bosa.
+- T-56.2 | active | 2025-11-28 | review: 2025-12-20 | basis: O-54.1 | supersedes: T-54.1 | changed: review moved later, busy stretch still ongoing | Has a busy stretch organizing the first committee meeting for the Gran Acuerdo Nacional.
+- T-62.1 | expired | 2025-12-02 | review: 2025-12-09 | ended: 2025-12-09 | basis: O-62.5 | Feels nervous as the square crowds up before heading out.
+- T-63.1 | expired | 2025-12-05 | review: 2025-12-12 | ended: 2025-12-13 | basis: O-63.1 | Feels panicked about next week's Bosa keynote and wants to avoid conflict at the plaza.
+- T-64.1 | superseded | 2025-12-05 | review: 2025-12-12 | basis: O-64.5 | until: 2025-12-05 | superseded_by: T-65.1 | Feels panicked about the hearing and worries opponents may frame it as overreach.
+- T-65.1 | expired | 2025-12-05 | review: 2025-12-12 | ended: 2025-12-13 | basis: O-65.6 | supersedes: T-64.1 | changed: now ready and more confident for the hearing, no longer panicked | Feels ready and more confident for the hearing.
+- T-68.1 | active | 2025-12-07 | review: 2025-12-14 | basis: O-68.3, O-69.1 | Feels nervous about facing the UDI opponents and wants to stay firm without a shouting match.
+- T-71.1 | expired | 2025-12-10 | expires: 2025-12-11 | ended: 2025-12-11 | basis: O-71.1 | Has less than 24 hours until the Bosa water rights public hearing.

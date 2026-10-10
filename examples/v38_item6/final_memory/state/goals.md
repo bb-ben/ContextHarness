@@ -1,0 +1,39 @@
+# Goals
+- G-0.1 | lapsed | 2025-09-28 | due: 2025-09-29 | ended: 2025-10-01 | basis: O-0.1, O-0.2, O-0.4, O-0.5 | Prepare for tomorrow night's housing policy debate.
+  - 2025-09-28 (S-1, O-1.1, O-1.2, O-1.3, O-1.4, O-1.5, O-1.6): tightened the framing, rebuttal shape and local-facts angle for the housing debate.
+- G-2.1 | lapsed | 2025-10-01 | due: 2025-10-03 | ended: 2025-10-04 | basis: O-2.2 | Counter the smear campaign and mobilize the school-board rally.
+  - 2025-10-01 (S-2, O-2.1, O-2.3, O-2.4, O-2.5): built a rapid response outline, set four-hour check-ins, and flagged noise constraints.
+- G-3.1 | lapsed | 2025-10-01 | due: 2025-10-15 | ended: 2025-10-18 | basis: O-3.1, O-3.3, O-3.6 | Block the fast-tracked Bosa mega-warehouse zoning.
+  - 2025-10-01 (S-3, O-3.2, O-3.3, O-3.6): set a 14-day sprint, prioritized the council, and asked for a backlog.
+- G-4.1 | lapsed | 2025-10-01 | due: 2025-10-07 | ended: 2025-10-10 | basis: O-4.2, O-4.3 | Prepare the Eastside Crossing safety campaign for Tuesday's vote.
+- G-9.1 | lapsed | 2025-10-07 | due: 2025-10-17 | ended: 2025-10-18 | basis: O-9.1, O-9.2, O-9.3, O-9.4, O-9.5 | Prepare for the free speech panel and prep paper.
+  - 2025-10-07 (S-9, O-9.1, O-9.2, O-9.3, O-9.4, O-9.5): gathered cases, a numbered structure, raw evidence bullets, and APA 7 references for the panel.
+- G-10.1 | lapsed | 2025-10-10 | due: 2025-10-17 | ended: 2025-10-18 | basis: O-10.2 | Prepare the final NGO paper on WTO fisheries subsidies for the board.
+  - 2025-10-10 (S-10, O-10.1, O-10.3): wants the board report in APA 7th and prefers the big picture before technical detail.
+- G-15.1 | lapsed | 2025-10-15 | due: 2025-10-16 | ended: 2025-10-18 | basis: O-15.1 | Stop the Thursday zoning change and keep Old Oak Community Center open.
+- G-19.1 | lapsed | 2025-10-26 | due: 2025-10-28 | ended: 2025-10-28 | basis: O-19.1, O-19.2 | Prepare a hard-hitting rebuttal for the police budget hearing.
+  - 2025-10-26 (S-19, O-19.1, O-19.2): started shaping the rebuttal for the council hearing in 48 hours.
+- G-23.1 | lapsed | 2025-10-30 | due: 2025-11-09 | ended: 2025-11-09 | basis: O-23.1 | Prepare for the academic panel on protest-law defense.
+  - 2025-10-30 (S-24, O-24.1, O-24.2, O-24.3, O-24.4): refined the panel defense into a problem-solution frame, added real cases, and got APA-style citations.
+- G-29.1 | lapsed | 2025-11-04 | due: 2025-11-06 | ended: 2025-11-06 | basis: O-29.1 | Prepare the city council rebuttal for the police budget hearing.
+  - 2025-11-04 (S-29, O-29.2, O-29.3, O-29.4, O-29.5, O-29.6): shaped a map-first, evidence-backed rebuttal with Bosa-specific framing, drone-waste evidence, a sharper opening, and a direct answer to the 'soft on crime' line.
+- G-38.1 | active | 2025-11-11 | review: 2025-12-19 | basis: O-38.1, O-38.2, O-38.4, O-38.5, O-38.6, O-63.2, O-63.3, O-63.4, O-63.5 | Prepare the Bosa outreach workshop and rally slogans for next week.
+  - 2025-12-05 (S-63, O-63.2, O-63.3, O-63.4, O-63.5): sharpened the keynote opening, conciliatory close, and post-speech mobilization plan.
+  - 2025-11-29 (S-59, O-59.1, O-59.2): wants rally framing to lean on local sayings and food talk, and to start with a clear first-steps list.
+  - 2025-11-28 (S-56, O-56.1): asked for crew-by-crew steps to keep Bosa node logistics clear for different teams.
+  - 2025-11-26 (S-55, O-55.1): sharpened the outreach framing with direct, meeting-ready questions and a concrete conflict example.
+  - 2025-11-21 (S-53, O-53.1, O-53.2, O-53.3): shaped a table-first, numbered, plain-language brief for the land-reform talk and rally speech.
+  - 2025-11-19 (S-49, O-49.1, O-49.2): kept sharpening the metaphors into short, local, non-textbook lines for the flyer and rally.
+  - 2025-11-14 (S-42, O-42.1, O-42.2): refined the outreach framing to open with the big vision, then the steps, in rally-ready language.
+  - 2025-11-15 (S-46, O-46.1, O-46.2): pushed Ministry language toward accessible, local, rally-ready phrasing instead of thesis-style jargon.
+  - 2025-11-11 (S-38, O-38.1, O-38.2, O-38.4, O-38.5, O-38.6): shaped local analogies, audience-specific versions, and Caribbean/Bosa energy for the workshop and rally slogans.
+  - 2025-11-20 (S-51, O-51.1, O-51.2, O-51.3, O-51.4): tightened the outreach framing into a quick table, real example, punchy lines, and honest pros and cons for the rally and ministry meeting.
+- G-52.1 | lapsed | 2025-11-20 | review: 2025-11-24 | ended: 2025-11-26 | basis: O-52.2 | Draft a ceasefire protocol before the first faction-leader meeting this week.
+- G-57.1 | active | 2025-11-28 | review: 2025-12-20 | basis: O-57.1, O-57.2 | Establish a protocol for auditing suspicious land claims.
+  - 2025-12-09 (S-69, O-69.3, O-69.5, O-69.6): reinforced the audit protocol with notary records, maps, and table-ready evidence.
+- G-64.1 | active | 2025-12-05 | review: 2025-12-20 | basis: O-64.1, O-64.2, O-64.3 | Prepare the congressional hearing speech and rebuttal pack on urban land restitution ethics.
+  - 2025-12-11 (S-72, O-72.1, O-72.2, O-72.3, O-72.4): tightened the opening into a numbered list, table, and direct fact-first Q&A style while keeping the formal persuasive tone.
+  - 2025-12-09 (S-69, O-69.3, O-69.4, O-69.5, O-69.6, O-69.9): tightened the hearing pack around airtight citations, concrete examples, inline links, and rule-respecting pushback.
+  - 2025-12-05 (S-64, O-64.1, O-64.2, O-64.3): sharpened the hearing opening, rebuttal framing, and pressure-moment top-three list.
+  - 2025-12-05 (S-65, O-65.1, O-65.2, O-65.3, O-65.4, O-65.6): built a top-down brief, kept the hearing frame official and story-like, and sharpened the script for the committee.
+  - 2025-12-05 (S-67, O-67.2, O-67.3): drafted a concise CTA flyer for rapid vendor outreach and made the grassroots-independence framing explicit.

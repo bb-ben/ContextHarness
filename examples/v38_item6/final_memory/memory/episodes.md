@@ -1,0 +1,336 @@
+# Episodes
+- E-0 | 2025-09-28 | source: S-0 | Housing debate prep chat.
+  - O-0.1 | event | Has a housing debate tomorrow and feels unready for the opponents' charts and legal arguments.
+  - O-0.2 | behavior | topic: help-format | Asked for quick bullet points they could check on a phone while moving around.
+  - O-0.3 | stated | topic: explanation-style | Says big, academic ideas make them get lost; the dance-floor analogy helps.
+  - O-0.4 | stated | topic: output-style | Wants the rebuttals really aggressive and punchy this time.
+  - O-0.5 | stated | topic: output-style | Wants the closing statement short and sticky.
+  - O-0.6 | reaction | topic: explanation-style | Says the dance-floor framing is easy to remember.
+- E-1 | 2025-09-28 | source: S-1 | Prep for housing debate; user wants sharper, less technical messaging under pressure.
+  - O-1.1 | behavior | topic: help-format | Wants quick, list-based help on what to say if the economy comes up.
+  - O-1.2 | stated | topic: explanation-style | Says inclusionary zoning is too technical and wants a simpler explanation for neighbors.
+  - O-1.3 | stated | topic: output-style | Likes the "territorial justice" framing and wants debate lines to sound rally-like, not dry.
+  - O-1.4 | stated | topic: output-style | Wants the rebuttal sharp, headline-like and memorable.
+  - O-1.5 | stated | topic: detail-level | Wants hard local facts for Bosa, not broad citywide stats.
+  - O-1.6 | stated | topic: output-style | Wants calm, hard-hitting delivery that channels emotion without losing control.
+- E-2 | 2025-10-01 | source: S-2 | Smear-response planning for a school-board rally.
+  - O-2.1 | behavior | Asked for numbered steps and an executive summary so the team can move fast.
+  - O-2.2 | event | Facing a smear campaign against the school-board platform with the rally in 48 hours.
+  - O-2.3 | stated | Wants four-hour check-ins on milestones over the next two days.
+  - O-2.4 | stated | Worried about noise rules and police shutting the rally down.
+  - O-2.5 | reaction | Felt way better after planning the response and heading out.
+- E-3 | 2025-10-01 | source: S-3 | Talk about the fast-tracked Bosa warehouse zoning and how to organize the response.
+  - O-3.1 | event | City hall is fast-tracking a huge warehouse zoning in Bosa.
+  - O-3.2 | stated | topic: help-format | Wants a step-by-step plan with the most important items first.
+  - O-3.3 | stated | topic: decision-style | Wants to focus on the council first and move today.
+  - O-3.4 | stated | topic: help-format | Wants a quick summary at the end to explain the strategy later.
+  - O-3.5 | stated | topic: tone | Wants it kept real, with some humor, because everyone is stressed.
+  - O-3.6 | stated | topic: help-format | Wants the next two weeks mapped as a 14-day sprint with a backlog.
+- E-4 | 2025-10-01 | source: S-4 | Talk about the Eastside Crossing safety campaign and Tuesday speech.
+  - O-4.1 | stated | topic: output-style | Wants campaign materials and debate drafts dramatic, high-passion, punchy, and respectful.
+  - O-4.2 | behavior | topic: help-format | Wants a list for the 48-hour plan because chaos makes them forget things.
+  - O-4.3 | event | Meeting Marcela now to start door-knocking; Tuesday is the campaign's critical day.
+  - O-4.4 | stated | Feels overwhelmed and nervous about the Eastside Crossing campaign and Tuesday vote.
+- E-5 | 2025-10-02 | source: S-5 | User wanted a firm, numbered script for a noisy-roommate boundary and a professional, motivational tone.
+  - O-5.1 | event | Has a roommate whose music runs until 2 a.m. nightly, leaving him exhausted.
+  - O-5.2 | behavior | topic: help-format | Asked for a top-down overview in numbered steps.
+  - O-5.3 | stated | topic: output-style | Wants the script to sound professional and firm, not like he's asking for a favor.
+  - O-5.4 | stated | topic: output-style | Wants the script motivational and leader-like.
+- E-6 | 2025-10-04 | source: S-6 | Helped shape a Model UN Arctic sovereignty speech with a more forceful, formal debate style.
+  - O-6.1 | stated | topic: output-style | Wants the speech more assertive, movement-like, formal enough for the UN, and cited in APA style.
+  - O-6.2 | behavior | topic: help-format | Wants a numbered breakdown and a structured outline he can print.
+  - O-6.3 | behavior | topic: help-format | Wants exact fixes to the draft, not vague feedback.
+  - O-6.4 | stated | topic: output-style | Wants the rebuttal section in a thesis-antithesis-synthesis arc.
+- E-7 | 2025-10-05 | source: S-7
+  - O-7.1 | stated | topic: output-style | Wants the Model UN speech to sound like a passionate protector of Arctic sovereignty, not a dry manual.
+  - O-7.2 | stated | topic: output-style | Wants legal and UN details kept lively so the crowd does not tune out.
+- E-8 | 2025-10-06 | source: S-8 | Strategy chat about semiconductor shortages and local advocacy in Bosa.
+  - O-8.1 | behavior | topic: detail-level | Wants hard facts and real numbers, focused on local impact, to persuade the board.
+  - O-8.2 | behavior | topic: help-format | Wants bullet points and clear step-by-step lists for board and council prep.
+  - O-8.3 | behavior | topic: output-style | Wants the talk inspirational, not lecture-like, for neighbors at the food stall.
+  - O-8.4 | stated | topic: values | Rejects low-wage factory models and wants labor protections, living wages, and tech transfer.
+- E-9 | 2025-10-07 | source: S-9 | Asked for free-speech case law for a panel and a persuasive, fact-checked, APA-formatted, warm, stepwise argument.
+  - O-9.1 | behavior | topic: explanation-style | Wanted actual cases and real-life examples to ground the argument.
+  - O-9.2 | behavior | topic: help-format | Wanted numbered steps for the speech.
+  - O-9.3 | behavior | topic: detail-level | Wanted raw evidence in bullet points for fact-checking with the team.
+  - O-9.4 | behavior | topic: output-style | Wanted the speech persuasive and a call to action, not dry law-school talk.
+  - O-9.5 | behavior | topic: output-style | Wanted APA 7th references and a structured legal presentation.
+  - O-9.6 | reaction | topic: transient-state | Felt worried about being talked over by panel academics.
+  - O-9.7 | reaction | topic: output-style | Felt more ready and thanked the help warmly.
+- E-10 | 2025-10-10 | source: S-10 | NGO fisheries-subsidy report, board summary, and rally prep.
+  - O-10.1 | stated | topic: output-style | Wants a formal NGO board report and a professional summary for Marcela in APA 7th style.
+  - O-10.2 | event | The final NGO paper is due in a week, and the workload feels pressure-heavy.
+  - O-10.3 | behavior | topic: help-format | Asked for the big picture first in bullets before technical detail.
+- E-11 | 2025-10-11 | source: S-11 | Breaks down a dense defense white paper for a Bosa rally, with strong emphasis on priorities, definitions, and rally-ready framing.
+  - O-11.1 | behavior | topic: detail-level | Wants a moderate-depth breakdown, not a deep dive.
+  - O-11.2 | behavior | topic: help-format | Wants high-priority points first and a quick 3-point recap.
+  - O-11.3 | behavior | topic: explanation-style | Wants abbreviations defined as you go and simple examples.
+  - O-11.4 | behavior | topic: output-style | Wants the summary punchy, rally-ready, and local to Bosa.
+  - O-11.5 | reaction | topic: tone | Reacted warmly to a casual metaphor and light humor.
+- E-12 | 2025-10-11 | source: S-12
+  - O-12.1 | behavior | topic: output-style | Wants a narrative brief with historical context and sharper rally talking points on autonomous weapons.
+  - O-12.2 | behavior | topic: explanation-style | Wants real field reports and street-level scenarios to make the policy's impact land.
+  - O-12.3 | behavior | topic: output-style | Wants proof, money-trail links, and worst-, middle-, best-case framing.
+- E-13 | 2025-10-12 | source: S-13 | Discussion about simplifying WTO fisheries subsidy messaging for rally and campaign outreach.
+  - O-13.1 | stated | topic: help-format | Wants numbered steps so he doesn't get lost in the weeds.
+  - O-13.2 | stated | topic: explanation-style | Wants technical stuff kept simple, not legalistic.
+  - O-13.3 | event | Has a week before the Geneva meeting and feels time pressure to move fast.
+- E-14 | 2025-10-14 | source: S-14 | Prep for televised town hall on housing debate, with emphasis on Bosa framing, evidence, and timing.
+  - O-14.1 | stated | Feels stressed and overloaded before the televised town hall.
+  - O-14.2 | behavior | topic: collaboration-style | Wants to talk like partners and use a story instead of technical lists.
+  - O-14.3 | stated | topic: detail-level | Wants actual links and evidence first so skeptics can see it.
+  - O-14.4 | stated | topic: help-format | Wants a quick big-picture summary of the Bosa-first angle.
+  - O-14.5 | stated | topic: explanation-style | Wants the housing argument kept simple and non-technical.
+- E-15 | 2025-10-15 | source: S-15
+  - O-15.1 | stated | The board meets Thursday morning to finalize the zoning change, and they have zero budget for the Old Oak campaign.
+  - O-15.2 | stated | topic: collaboration-style | Likes stories about different generations teaming up and wants that kind of framing.
+- E-16 | 2025-10-15 | source: S-16 | Appointment update and onboarding request.
+  - O-16.1 | event | Appointed Senior Advisor to the National Ministry of Equality and moving from Bosa grassroots work to national government.
+  - O-16.2 | behavior | topic: help-format | Asked for step-by-step help to upload certifications in SIGEP and a specific login link.
+  - O-16.3 | behavior | topic: output-style | Asked for a formal resignation template that covers hand-over of current projects.
+- E-17 | 2025-10-18 | source: S-17 | Social media regulation debate prep for a university team.
+  - O-17.1 | stated | topic: output-style | Wants the final speech to sound persuasive but measured, not shouty, and to flow smoothly.
+  - O-17.2 | behavior | topic: help-format | Asked for a quick step list to break the argument down for judges.
+  - O-17.3 | stated | topic: explanation-style | Wants real academic proof because the judges are stiff.
+- E-18 | 2025-10-20 | source: S-18 | Appointment and transition-report discussion for new Presidential Office role.
+  - O-18.1 | event | Appointed as Special Regional Advisor to the Presidential Office after moving up from work in Bosa.
+  - O-18.2 | behavior | topic: output-style | Wants a formal transition report outline with a financial oversight section.
+- E-19 | 2025-10-26 | source: S-19 | Police-budget hearing prep with a 48-hour deadline.
+  - O-19.1 | event | The police-budget hearing is in 48 hours.
+  - O-19.2 | stated | Wants a rebuttal that hits hard.
+- E-20 | 2025-10-27 | source: S-20 | Fact-check prep for a public health funding claim ahead of a community talk.
+  - O-20.1 | reaction | Feels stressed because people are already asking about the vaccine-budget claim.
+  - O-20.2 | behavior | topic: explanation-style | Wants the data explained like a story or case study, not as dry numbers.
+  - O-20.3 | behavior | topic: help-format | Wants clear numbered steps and inline links so the speech is phone-friendly.
+  - O-20.4 | behavior | topic: output-style | Wants local clinic impact included and a persuasive but non-accusatory tone toward the journalist.
+- E-21 | 2025-10-28 | source: S-21 | Carbon-offset strategy discussion for Bosa.
+  - O-21.1 | stated | topic: explanation-style | Wants hard evidence first and finds narrative prose easier than technical lists.
+  - O-21.2 | stated | topic: tone | Wants the tone chill, factual, and without extra drama.
+- E-22 | 2025-10-28 | source: S-22 | Strategy chat comparing carbon offset models and asking for a linkable summary.
+  - O-22.1 | stated | topic: help-format | Wants bullet points to compare voluntary versus compliance carbon markets.
+  - O-22.2 | stated | topic: help-format | Wants a prose summary with investigative links they can send on.
+  - O-22.3 | stated | topic: values | Cares about impacts on marginalized groups and the elderly in carbon policy.
+- E-23 | 2025-10-30 | source: S-23 | Prep for an academic panel on protest-law defense.
+  - O-23.1 | event | Has an academic panel in 10 days and feels stressed about defending rallies against hate-speech claims.
+  - O-23.2 | behavior | topic: help-format | Wants numbered steps and big principles first because legal jargon makes it hard to follow.
+  - O-23.3 | behavior | topic: output-style | Wants a persuasive big-stage style with APA citations and legal credibility for scholars.
+  - O-23.4 | behavior | topic: values | Says social justice should outweigh a small commute delay when arguing about the rallies.
+- E-24 | 2025-10-30 | source: S-24 | Legal panel prep on free speech and protest defense.
+  - O-24.1 | stated | topic: help-format | Wants a problem-solution breakdown, step-by-step framing, and a quick recap.
+  - O-24.2 | stated | topic: output-style | Wants the argument strong but measured, not ranting.
+  - O-24.3 | stated | topic: explanation-style | Wants real case studies and simple steps for academics.
+  - O-24.4 | stated | topic: output-style | Wants APA 7 citations so the bibliography looks legit.
+- E-25 | 2025-11-01 | source: S-25 | Strategic-analysis chat about Bosa community messaging for the national development plan.
+  - O-25.1 | behavior | topic: help-format | Wants bullet points and quick step-by-step help for Bosa strategy work.
+  - O-25.2 | behavior | topic: detail-level | Wants direct, no-fluff summaries and talking points that can be handed out.
+- E-26 | 2025-11-02 | source: S-26 | Strategy review on inclusive communication and Bosa mobilization.
+  - O-26.1 | behavior | topic: help-format | Asked for just bullets and no fluff when wanting proof.
+- E-27 | 2025-11-02 | source: S-27 | Strategic review prep for urban land distribution models and a ministry-facing brief.
+  - O-27.1 | stated | topic: help-format | Wants the work organized as a final brief with numbered points.
+  - O-27.2 | stated | topic: output-style | Wants the ministry version professional, visionary, and APA-cited.
+  - O-27.3 | stated | topic: explanation-style | Wants proof and historical precedents to back the argument.
+  - O-27.4 | stated | topic: decision-style | Wants a clear comparison of the models using equity metrics.
+- E-28 | 2025-11-03 | source: S-28 | Forum prep on agrarian reform rhetoric for Bosa.
+  - O-28.1 | stated | topic: help-format | Wants a numbered 1-2-3 argument and a 3-step social post version.
+  - O-28.2 | stated | topic: detail-level | Wants local proof, case studies, food-price examples, and citations over broad theory.
+  - O-28.3 | stated | topic: explanation-style | Wants concrete analogies and simple, non-legalistic phrasing for the forum.
+  - O-28.4 | stated | topic: output-style | Wants Bosa-style language, no pop-culture memes, and 'peasant' over 'rural producer'.
+  - O-28.5 | stated | topic: output-style | Wants sharp slogans and openings with teeth that sound informed but persuasive.
+  - O-28.6 | stated | topic: challenge-level | Likes pointed rebuttals that unsettle opponents when they are wrong.
+  - O-28.7 | reaction | topic: tone | Liked the cumbia analogy as a workable, lightly funny line.
+  - O-28.8 | stated | topic: explanation-style | Wants historical references like the 1936 land law and 1990s strikes only briefly and if relevant.
+- E-29 | 2025-11-04 | source: S-29 | City-council hearing prep about a police budget fight in Bosa.
+  - O-29.1 | event | Has a city council hearing in two days about a police budget jump while Bosa services are crumbling.
+  - O-29.2 | stated | topic: help-format | Wants the main points first, in a top-down map, to brief Marcela fast.
+  - O-29.3 | stated | topic: detail-level | Wants the budget case short and skimable, with local proof instead of jargon.
+  - O-29.4 | stated | topic: output-style | Wants the rebuttal sharp, Bosa-specific, human-centered, respectful, and opening with teeth.
+  - O-29.5 | stated | topic: explanation-style | Wants simple comparisons and metaphors so the budget math is clear.
+  - O-29.6 | stated | topic: challenge-level | Wants a forceful answer to the 'crime is up' attack that doesn't sound naive.
+- E-30 | 2025-11-04 | source: S-30 | Drafting a mediation opening statement for a first land restitution session in Bosa.
+  - O-30.1 | event | Appointed District Mediator for the Bosa land restitution case between residents and developers.
+  - O-30.2 | behavior | topic: output-style | Wants the opening statement to focus on respectful ground rules and clear floor-sharing.
+- E-31 | 2025-11-05 | source: S-31
+  - O-31.1 | stated | topic: explanation-style | Likes story-like explanations with concrete real examples for complex issues.
+  - O-31.2 | stated | topic: help-format | Wants a quick prose summary of the main points for committee notes.
+- E-32 | 2025-11-05 | source: S-32 | Briefing-prep chat about translating drainage-failure reports for a public audience.
+  - O-32.1 | event | Was appointed Lead Crisis Communication Liaison for the Bosa Emergency Task Force after the flash floods.
+  - O-32.2 | stated | topic: help-format | Wants a template to turn technical engineering reports into simple talking points for a public briefing.
+  - O-32.3 | stated | topic: explanation-style | Asked how to explain sediment-induced impeller cavitation as plain-language debris blockage without jargon.
+  - O-32.4 | event | Has a public briefing tomorrow on pumping-station failures.
+- E-33 | 2025-11-05 | source: S-33
+  - O-33.1 | stated | topic: explanation-style | Wants the big picture first and brief historical examples for the investor-chip pitch.
+  - O-33.2 | stated | topic: help-format | Wants the guidance in steps so he doesn't trip over the details.
+  - O-33.3 | stated | topic: output-style | Wants to sound like a leader with a vision who stays grounded in Bosa.
+- E-34 | 2025-11-06 | source: S-34 | Short chat about defense white paper framing for a committee vote and rally.
+  - O-34.1 | event | Has a rally tomorrow and a committee vote in two days on autonomous systems.
+  - O-34.2 | stated | topic: help-format | Wants punchy talking points in a brief, not academic garbage.
+  - O-34.3 | stated | topic: explanation-style | Wants simple, street-level phrasing for the argument.
+  - O-34.4 | stated | topic: challenge-level | Wants the worst-case framed straight and hard against 'national security' and 'efficiency.'
+  - O-34.5 | reaction | topic: tone | Liked the cumbia line as perfect street-friendly framing.
+  - O-34.6 | stated | topic: output-style | Wants the brief to sound simple, punchy, and ready for the streets.
+- E-35 | 2025-11-06 | source: S-35 | Short chat about autonomous weapons white paper and rally framing.
+  - O-35.1 | behavior | topic: explanation-style, output-style | Wants the white paper explained in less robotic, story-like Bosa language.
+  - O-35.2 | behavior | topic: help-format | Wants a short one-pager for Marcela with three quick, punchy points.
+- E-36 | 2025-11-09 | source: S-36 | Short chat about simplifying a WTO fisheries-subsidies report for Bosa and coastal groups before a mobilization.
+  - O-36.1 | behavior | topic: help-format | Wants a step-by-step checklist with the highest priorities first.
+  - O-36.2 | behavior | topic: decision-style | Wants the facts focused on what to do next.
+  - O-36.3 | behavior | topic: help-format | Wants a quick summary for WhatsApp and social media.
+- E-37 | 2025-11-09 | source: S-37 | Formal introductory letter request for a new mediation role.
+  - O-37.1 | event | Was appointed National Lead Mediator for the Regional Binding Dialogues by the Presidential Office.
+  - O-37.2 | stated | topic: output-style | Wants separate letters: councils get autonomy-respectful language; developers get timeline and legal-framework focus.
+- E-38 | 2025-11-11 | source: S-38 | Workshop talk about making Petro slogans land with Bosa audiences.
+  - O-38.1 | stated | topic: explanation-style | Wants abstract slogans turned into local images Bosa people can feel.
+  - O-38.2 | stated | topic: output-style | Wants the rhetoric punchier and more Caribbean-flavored, not dry.
+  - O-38.3 | stated | topic: family-origin | Comes from a coast-rooted family.
+  - O-38.4 | stated | topic: output-style | Wants audience-specific versions, like a professional plan for Marcela.
+  - O-38.5 | stated | topic: output-style | Wants health data used as the why behind the life metaphor.
+  - O-38.6 | stated | topic: output-style | Wants a familiar cumbia song to open and anchor the crowd.
+- E-40 | 2025-11-13 | source: S-40 | Asked for neighborhood-ready rebuttal help on vaccine funding claims.
+  - O-40.1 | stated | topic: help-format | Wants clear talking points they can say out loud without math-heavy detail.
+  - O-40.2 | stated | topic: explanation-style | Wants stories or metaphors that stick when explaining things to neighbors.
+- E-41 | 2025-11-13 | source: S-41 | Rally prep about vaccine-budget fact-checking and simple, punchy messaging.
+  - O-41.1 | behavior | topic: help-format | Wants a simple, phone-friendly table instead of a massive report.
+  - O-41.2 | stated | topic: output-style | Wants the comeback to sound punchy and like leading the charge, not defensive.
+  - O-41.3 | stated | topic: explanation-style | Wants ADRES explained like they are five, with a delivery-truck analogy.
+  - O-41.4 | stated | topic: output-style | Wants the health-budget message framed as a bold rally slogan for the square.
+  - O-41.5 | stated | topic: explanation-style | Wants delays framed as growing pains from replacing the old system, not laziness.
+- E-42 | 2025-11-14 | source: S-42 | Planning for a Bosa health-model talk about the JAC meeting tomorrow.
+  - O-42.1 | stated | topic: help-format | Wants the speech to start with the big vision, then the steps, in casual neighborhood language.
+  - O-42.2 | stated | topic: output-style | Wants the speech to feel high-energy and rally-style, like a classic fire-up speech.
+- E-43 | 2025-11-14 | source: S-43 | Ended with a request for a copyable checklist and high-to-low Cabinet priorities.
+  - O-43.1 | behavior | topic: decision-style | Wanted the Cabinet briefing items prioritized high to low.
+  - O-43.2 | behavior | topic: help-format | Wanted the checklist in one copyable block for their phone.
+- E-44 | 2025-11-15 | source: S-44
+  - O-44.1 | stated | topic: output-style | Wants policy and advocacy writing practical, not textbook-stiff, and rooted in Bosa market speech.
+  - O-44.2 | stated | topic: explanation-style | Likes equality framed as translation or cultural synthesis rather than mere compliance.
+- E-45 | 2025-11-15 | source: S-45 | Appointment and request for an emergency food-distribution report template.
+  - O-45.1 | stated | topic: emergency-task-force-director | Appointed National Director for the Hambre Cero Urban Emergency Task Force in Colombia.
+
+  - O-45.2 | stated | topic: output-style | Wants the emergency food-distribution report to foreground transport delays, warehouse capacity, and city-by-city bottlenecks.
+- E-46 | 2025-11-15 | source: S-46 | Discussed making Ministry equality protocols sound like Bosa street language.
+  - O-46.1 | stated | topic: output-style | Wants Ministry language to sound like a real Bosa conversation, not stiff jargon or robot talk.
+  - O-46.2 | stated | topic: explanation-style | Wants technical policy turned into simple rally speech that still keeps the fire.
+- E-47 | 2025-11-15 | source: S-47 | Asked for direct, local-slang inclusive-language help for Bosa outreach.
+  - O-47.1 | behavior | topic: detail-level | Asked for actual data first and no fluff.
+  - O-47.2 | stated | topic: output-style | Wants informal local slang and barrio references so the message doesn't sound like elite robot talk.
+  - O-47.3 | stated | topic: explanation-style | Wants the message to honor local struggle and history, not just surface-level diversity.
+  - O-47.4 | behavior | topic: help-format | Wants a rollout dashboard view that shows logistics at a glance.
+- E-48 | 2025-11-16 | source: S-48 | Fast synthesis request for Bosa dialogue notes into a movement plan.
+  - O-48.1 | behavior | topic: help-format | Wants the notes shown as a dashboard with the big picture at a glance.
+  - O-48.2 | behavior | topic: decision-style | Wants the first steps and bottom line spelled out fast.
+- E-49 | 2025-11-19 | source: S-49 | Strategic rhetoric workshop on decoding "Potencia Mundial de la Vida" metaphors.
+  - O-49.1 | behavior | topic: explanation-style | Wants the message blended across coastal and mountain styles so different audiences can hear themselves in it.
+  - O-49.2 | reaction | topic: output-style | Says the local-metaphor framing "really hits" and wants the flyer line to stay short and non-textbook.
+- E-50 | 2025-11-19 | source: S-50 | Appointed High Commissioner for Urban Peace and Restorative Justice for the Bosa-Soacha border.
+  - O-50.1 | event | Appointed High Commissioner for Urban Peace and Restorative Justice for the Bosa-Soacha border.
+  - O-50.2 | stated | topic: output-style | Wants a neutral meeting agenda focused on immediate de-escalation and restorative justice principles.
+  - O-50.3 | stated | topic: help-format | Wants a checklist of high-security meeting logistics, including communication protocols and exit strategies.
+- E-51 | 2025-11-20 | source: S-51 | Bosa land-rights rally prep around land trusts, public leasing, clinic benefits, and a quick comparison table.
+  - O-51.1 | behavior | topic: help-format | Asked for a quick table because the rally starts in 20 minutes.
+  - O-51.2 | behavior | topic: explanation-style | Wanted land trusts vs public leasing broken down with a real story for neighbors.
+  - O-51.3 | behavior | topic: output-style | Wanted technical material turned into punchy, cumbia-flavored lines for the plaza crowd.
+  - O-51.4 | behavior | topic: decision-style | Wanted the risks and tradeoffs stated honestly, with pros and cons.
+- E-52 | 2025-11-20 | source: S-52 | Short exchange about urgent ceasefire logistics in Bosa.
+  - O-52.1 | stated | Appointed Lead Presidential Envoy for the Urban Peace Initiative in Bosa.
+  - O-52.2 | stated | Needs a ceasefire protocol draft ready before the first faction-leader meeting this week.
+  - O-52.3 | behavior | Asked for neutral, high-security mediation locations in Bosa.
+- E-53 | 2025-11-21 | source: S-53 | Short chat about explaining urban land reform to neighbors and turning it into a rally speech.
+  - O-53.1 | stated | topic: help-format | Wants the land-reform breakdown in a table first, then numbered steps for the rally speech.
+  - O-53.2 | stated | topic: detail-level | Wants hard facts first, with case studies and briefing links to handle pushback.
+  - O-53.3 | stated | topic: output-style | Wants the message passionate but conciliatory, using plain language for older neighbors.
+- E-54 | 2025-11-21 | source: S-54 | Asked for a formal invitation draft for the first committee meeting of the Gran Acuerdo Nacional.
+  - O-54.1 | event | Was appointed Principal Drafter for the Gran Acuerdo Nacional and is getting very busy.
+  - O-54.2 | stated | topic: output-style | Wants the invitation professional and inviting, centered on national unity, with logistics left as placeholders and a brief agenda item for defining shared objectives.
+- E-55 | 2025-11-26 | source: S-55 | Discussed a Bosa community board mural dispute and how to steer the meeting toward consensus.
+  - O-55.1 | behavior | topic: collaboration-style | Asked for real, deep questions to use at the next meeting and wanted a concrete example of fixing the dispute.
+  - O-55.2 | reaction | Ended the exchange saying they felt excited for the meeting and much better than in the morning.
+- E-56 | 2025-11-28 | source: S-56 | Short chat about Bosa node logistics and crew coordination.
+  - O-56.1 | stated | topic: help-format | Wants step-by-step breakdowns by crew so they can explain plans to different teams.
+- E-57 | 2025-11-28 | source: S-57 | Conversation about drafting a forensic checklist for suspicious land claims.
+  - O-57.1 | behavior | topic: help-format | Asked for a quick checklist to verify documents in suspicious land claims.
+  - O-57.2 | behavior | topic: help-format | Added metadata checks and spatial comparison of old surveys versus satellite imagery.
+- E-58 | 2025-11-29 | source: S-58 | Strategic rhetoric workshop on Bosa rally metaphors and turning technical slogans into local, practical language.
+  - O-58.1 | behavior | topic: help-format | Asked for the rally plan to be broken down step by step.
+  - O-58.2 | reaction | topic: help-format | Said they learn better when things are laid out step by step.
+- E-59 | 2025-11-29 | source: S-59 | Strategic rhetoric workshop on making "World Power of Life" land locally in Bosa.
+  - O-59.1 | stated | topic: explanation-style | Local sayings and food talk help people get the rally message faster.
+  - O-59.2 | behavior | topic: help-format | Asked for a clear first-steps list to keep from getting lost in big ideas.
+- E-60 | 2025-11-30 | source: S-60 | Trauma-survivor empowerment roleplay about Bosa leadership, grounding, and historical parallels.
+  - O-60.1 | behavior | topic: help-format | Asked for the lessons as a list and then a quick pocket-sized list of grounding steps.
+  - O-60.2 | stated | topic: explanation-style | Wanted the roleplay poetic and to see historical patterns across time instead of only procedures.
+  - O-60.3 | stated | topic: explanation-style | Framed dance and graffiti as the same heartbeat, both about being seen.
+- E-61 | 2025-12-02 | source: S-61 | Strategic messaging session for the Bosa land-reform forum.
+  - O-61.1 | behavior | topic: explanation-style | Wanted land-reform framing that stays plain and non-legalistic.
+  - O-61.2 | behavior | topic: help-format | Wanted short rally-ready points and a big-picture recap for the forum.
+  - O-61.3 | behavior | topic: decision-style | Weighed revolution, reform, and transformation to choose the strongest safe label.
+  - O-61.4 | behavior | topic: challenge-level | Wanted opponents uncomfortable with privilege, but still answered professionally.
+- E-62 | 2025-12-02 | source: S-62 | Strategic land-reform prep for the Bosa forum and rally.
+  - O-62.1 | behavior | topic: help-format | Wants bullets for Marcela's strategy briefing.
+  - O-62.2 | behavior | topic: output-style | Wants the Marcela briefing kept formal.
+  - O-62.3 | behavior | topic: help-format | Wants a quick recap of the mural hooks before leaving.
+  - O-62.4 | behavior | topic: tone | Wants a colder, analytical mode and no pep talk right now.
+  - O-62.5 | event | The square is getting crowded and they feel nervous before heading out.
+- E-63 | 2025-12-05 | source: S-63 | Keynote prep for Bosa assembly focused on evidence, de-escalation, and timing.
+  - O-63.1 | stated | Feels panicked about next week's keynote; land redistribution and security are triggers, and they want to avoid sparking a riot at the plaza.
+  - O-63.2 | behavior | Wants hard facts first and formal citations for the 2022 urban-renewal numbers before opening.
+  - O-63.3 | behavior | Wants a step-by-step intro that is direct on Hambre Cero and flips the property-rights script early.
+  - O-63.4 | stated | Wants the finish conciliatory and negotiation-focused so each side walks away feeling heard.
+  - O-63.5 | behavior | Wants a quick stakeholder map and a phased mobilization timeline for after the keynote.
+- E-64 | 2025-12-05 | source: S-64 | Strategic prep for the congressional hearing on urban land restitution ethics.
+  - O-64.1 | stated | topic: output-style | Wants the hearing speech to open in flowing prose and keep the rebuttals sharp, with legal weight but no code-dumping.
+  - O-64.2 | stated | topic: explanation-style | Wants historical precedents and a concrete Bosa case study to answer the overreach charge.
+  - O-64.3 | stated | topic: help-format | Wants a quick top-three list for pressure moments.
+  - O-64.4 | reaction | topic: tone | Said the measured persuasive tone helps him stay calm and less hot-headed.
+  - O-64.5 | event | Feels panicked about the hearing and worries opponents may frame it as a trap or overreach.
+- E-65 | 2025-12-05 | source: S-65 | Forensic Defense Strategy discussion about Bosa land restitution briefing, hearing prep, and community framing.
+  - O-65.1 | behavior | topic: help-format | Wants a quick top-down brief before the details.
+  - O-65.2 | behavior | topic: output-style | Wants the report official, story-like, and grounded in statutes and cadastral data.
+  - O-65.3 | behavior | topic: detail-level | Wants historical case studies, APA citations, and a future timeline.
+  - O-65.4 | behavior | topic: challenge-level | Wants heavy-hitting script lines and evidence-led questioning for the committee.
+  - O-65.5 | behavior | topic: collaboration-style | Wants to work like partners and turn cadastral data into community art.
+  - O-65.6 | stated | Feels ready and more confident for the hearing after the script review.
+- E-66 | 2025-12-05 | source: S-66 | Strategic debate prep on Bosa sovereignty vs. regional integration.
+  - O-66.1 | stated | topic: output-style | Wants the final notes in a formal professional style for records.
+  - O-66.2 | stated | topic: help-format | Wants the speech to start with the big picture, then move into numbered bullets for stage use.
+  - O-66.3 | stated | topic: tone | Wants the delivery composed and analytical so it doesn't sound angry.
+- E-67 | 2025-12-05 | source: S-67 | Quick request to draft a vendor flyer for the Bosa market resistance.
+  - O-67.1 | event | Officially resigned from government posts to lead the Bosa street resistance.
+  - O-67.2 | stated | topic: output-style | Wants a concise call-to-action flyer for fast vendor outreach.
+  - O-67.3 | stated | Grassroots messaging should stress independence from central leadership.
+- E-68 | 2025-12-07 | source: S-68 | Strategic land-review triage for Bosa and the ministry.
+  - O-68.1 | behavior | topic: help-format | Asked for a step-by-step checklist ranked by urgency.
+  - O-68.2 | behavior | topic: help-format | Wanted a live dashboard to show the homework to skeptical opponents.
+  - O-68.3 | stated | topic: tone | Feels nervous about facing the UDI opponents and wants to stay firm without a shouting match.
+- E-69 | 2025-12-09 | source: S-69 | Hearing prep for the Bosa land-restitution ethics committee session next week.
+  - O-69.1 | stated | topic: tone | Wants a calm, firm hearing line and does not want to sound angry or shout.
+  - O-69.2 | stated | topic: help-format | Wants a simple numbered first pass and says they get lost in legal talk.
+  - O-69.3 | stated | topic: detail-level | Wants Law 1448 references airtight and cleanly cited.
+  - O-69.4 | stated | topic: output-style | Wants the speech to bridge a split Bosa, stay professional, and keep the street energy.
+  - O-69.5 | stated | topic: explanation-style | Wants concrete examples, a real case, and old notary records/maps instead of theory.
+  - O-69.6 | stated | topic: help-format | Wants the evidence in a table, links inline, a schedule dashboard, and a final check.
+  - O-69.7 | stated | topic: tone | Wants a diplomatic but firm answer to good-faith-owner claims.
+  - O-69.8 | stated | topic: output-style | Wants the opening investigative and the emotional parts factual, not mushy.
+  - O-69.9 | stated | topic: decision-style | Wants to respect the rules while pushing hard enough to stay in the room.
+- E-70 | 2025-12-10 | source: S-70 | Strategic logistics audit and rally prep for Bosa food emergency.
+  - O-70.1 | stated | topic: output-style | Wants a quick, punchy rally summary for tonight.
+  - O-70.2 | stated | topic: explanation-style | Wants it simple enough not to sound like a lawyer at the food stall.
+  - O-70.3 | behavior | topic: help-format | Wants the 48-hour plan broken down hour by hour and sent right away.
+- E-71 | 2025-12-10 | source: S-71 | Urgent prep for the Bosa water rights public hearing.
+  - O-71.1 | behavior | topic: help-format | Asked for an 8am tactical checklist and phone-ready priorities.
+  - O-71.2 | behavior | topic: detail-level | Wanted actual evidence on council members to cite publicly.
+  - O-71.3 | behavior | topic: help-format | Asked for a logistics dashboard to track volunteer clusters.
+  - O-71.4 | reaction | topic: output-style | Liked a neighborhood-centered water-rights frame and wanted the hearing kept local.
+- E-72 | 2025-12-11 | source: S-72 | Strategic prep for the congressional hearing on urban land restitution ethics.
+  - O-72.1 | stated | topic: help-format | Wants a clear 1-2-3 opening and a copyable checklist for tomorrow morning.
+  - O-72.2 | stated | topic: explanation-style | Wants discrepancies in a table comparing old notarial records and current cadastral records.
+  - O-72.3 | stated | topic: detail-level | Wants direct, no-fluff, fact-first answers when the questions get hostile.
+  - O-72.4 | stated | topic: output-style | Wants the main speech professional and formal, with a measured, persuasive closing.
+- E-73 | 2025-12-13 | source: S-73 | Helped with a Model UN Arctic sovereignty speech for a nephew.
+  - O-73.1 | behavior | topic: help-format | Wants numbered steps and a copyable table for the draft.
+  - O-73.2 | behavior | topic: detail-level | Wants balanced evidence, real examples, and APA 7 citations.
+  - O-73.3 | behavior | topic: tone | Wants the tone measured but strong, persuasive without being too loud.
+  - O-73.4 | behavior | topic: output-style | Wants the speech punchy and authoritative, not dry or textbook-like.
+- E-74 | 2025-12-13 | source: S-74 | Coached a Model UN speech for a shy high schooler on Arctic sovereignty, rhythm, and delivery.
+  - O-74.1 | stated | topic: output-style | Wants advocacy drafts to sound powerful, urgent, rhythmic, and respectful, like a rally speech.
+  - O-74.2 | stated | topic: output-style | Wants the finish to feel like a long-term movement, not a one-night script.
+  - O-74.3 | stated | topic: output-style | Wants delivery coaching to focus on hands, eye contact, and silence.

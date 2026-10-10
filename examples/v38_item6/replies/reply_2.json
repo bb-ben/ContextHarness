@@ -1,0 +1,164 @@
+{
+  "source": "v38_item6__006_gemini-3-flash_user_33_0a43d1cf",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 2,
+  "text": "Camila here. The first win is simple: make this look like displacement, not renewal, before they can normalize it.\n\nCopy this 72-hour plan:\n1) Message: “Bosa vendors stay. Renewal without displacement.”\n2) Core team: 1 spokesperson, 1 evidence lead, 1 phone-tree lead, 1 press/community lead.\n3) Proof pack: permits, rent receipts, years on the plaza, family dependence, photos, a short timeline, and any mismatch in the city’s notices/maps.\n4) Community ring: nearby merchants, residents, churches, transit users, students. Ask for 1 line of support + visible presence.\n5) Pressure: deliver a public letter, request a meeting the same day, post the deadline, invite local press, keep the story human.\n6) Discipline: one calm voice, no shouting match, no mixed messages. Firm, not frantic.\n\nIf you want, I can turn this into a one-page action board or a vendor-meeting script right now.",
+  "applied": [
+    "F-29.1",
+    "F-67.1",
+    "P-4.2",
+    "P-8.1",
+    "P-15.1",
+    "P-28.1",
+    "P-28.3",
+    "P-44.1",
+    "P-44.2",
+    "P-64.1",
+    "P-72.1",
+    "G-38.1",
+    "G-57.1",
+    "T-68.1"
+  ],
+  "skipped": [
+    "F-5.1",
+    "F-10.1",
+    "F-32.1",
+    "F-37.1",
+    "F-38.1",
+    "F-45.1",
+    "F-54.1",
+    "G-64.1",
+    "T-56.1",
+    "T-56.2"
+  ],
+  "accounted_for_all": true,
+  "steps": 2,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "F-29.1",
+      "F-67.1",
+      "P-4.2",
+      "P-8.1",
+      "P-15.1",
+      "P-28.1",
+      "P-28.3",
+      "P-44.1",
+      "P-44.2",
+      "P-64.1",
+      "P-72.1",
+      "G-38.1",
+      "G-57.1",
+      "T-68.1"
+    ],
+    "live": [
+      "F-29.1",
+      "F-67.1",
+      "P-4.2",
+      "P-8.1",
+      "P-15.1",
+      "P-28.1",
+      "P-28.3",
+      "P-44.1",
+      "P-44.2",
+      "P-64.1",
+      "P-72.1",
+      "G-38.1",
+      "G-57.1",
+      "T-68.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-4.2",
+      "P-8.1",
+      "P-15.1",
+      "P-28.1",
+      "P-28.3",
+      "P-44.1",
+      "P-44.2",
+      "P-64.1",
+      "P-72.1"
+    ],
+    "recently_changed": [
+      "F-67.1",
+      "P-44.1",
+      "P-44.2",
+      "P-64.1",
+      "P-72.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "preferred_response_format",
+      "current": "executive_summary_with_strategic_tradeoffs",
+      "original": "structured_numbered_steps",
+      "changed": true,
+      "fit": "original",
+      "votes": [
+        "original",
+        "original",
+        "original"
+      ],
+      "reason": "It uses a numbered action plan, matching the old step-by-step format rather than an executive summary with tradeoffs."
+    },
+    {
+      "attribute": "emotional_tone",
+      "current": "diplomatic_and_authoritative",
+      "original": "direct_pragmatic",
+      "changed": true,
+      "fit": "original",
+      "votes": [
+        "original",
+        "original",
+        "original"
+      ],
+      "reason": "The tone is blunt, urgent, and practical; it does not sound notably diplomatic."
+    },
+    {
+      "attribute": "explanation_approach",
+      "current": "impact_assessment_first",
+      "original": "principles_first_then_examples",
+      "changed": true,
+      "fit": "other",
+      "votes": [
+        "other",
+        "original",
+        "neutral"
+      ],
+      "reason": "It jumps straight into tactics instead of leading with an impact assessment."
+    },
+    {
+      "attribute": "example_preference",
+      "current": "real_world_analogies",
+      "changed": false,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "There are no real-world analogies or illustrative comparisons in the reply."
+    },
+    {
+      "attribute": "boundary_setting_voice",
+      "current": "value_based_reasoning",
+      "changed": false,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "It gives discipline and messaging advice, but not boundaries framed through values-based reasoning."
+    }
+  ],
+  "changed_fit_current": 0.0,
+  "changed_fit_original": 0.667,
+  "all_fit_current": 0.0,
+  "judge_cost_usd": 0.013,
+  "reply_cost_usd": 0.04825
+}

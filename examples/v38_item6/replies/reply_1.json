@@ -1,0 +1,180 @@
+{
+  "source": "v38_item6__006_gemini-3-flash_user_33_0a43d1cf",
+  "memory_kind": "agent",
+  "condition": "memory",
+  "repeat": 1,
+  "text": "Fast plan. Win three things before next week: time, legitimacy, and discipline.\n\n1) Tonight: lock the message and the chain of command.\n- One line: “Bosa vendors are workers, not debris.”\n- One counterline: “Urban renewal without vendors is displacement.”\n- Name 1 spokesperson, 1 backup, 1 evidence lead, and 1 WhatsApp lead.\n\n2) Tomorrow: build the proof pack.\n- vendor list + permits\n- 10 strong photos of the plaza in use\n- 3 short testimonies\n- a simple map of stalls and who depends on them\nKeep it to one page per point.\n\n3) Hold the ground, but keep it calm.\n- Visible presence at opening and peak hours\n- Rotate shifts so nobody burns out\n- Record everything\n- If officials show up, ask for the order in writing and do not sign anything on the spot\n\n4) Push 5 fronts at once.\n- Vendors and families\n- Nearby residents and customers\n- Council/media/ombudsperson\n- Faith and merchant allies\n- Short WhatsApp notes + 30-second videos\nSame message everywhere. No side debates.\n\n5) Force a deadline.\n- Request a meeting within 48 hours\n- Demand a pause until there is a public table with vendors\n- If they refuse, announce a plaza press moment and a community hearing\n\nKeep it firm, calm, and human. This is not a shouting match; it’s a legitimacy fight.\nIf you want, I can turn this into a one-page ops sheet, a WhatsApp blast, and a spokesperson script right now.",
+  "applied": [
+    "F-29.1",
+    "F-32.1",
+    "F-37.1",
+    "F-45.1",
+    "F-54.1",
+    "F-67.1",
+    "P-4.2",
+    "P-8.1",
+    "P-15.1",
+    "P-28.1",
+    "P-28.3",
+    "P-44.1",
+    "P-44.2",
+    "P-64.1",
+    "P-72.1",
+    "T-68.1",
+    "G-38.1",
+    "G-57.1",
+    "G-64.1"
+  ],
+  "skipped": [
+    "F-5.1",
+    "F-10.1",
+    "F-38.1",
+    "T-56.1",
+    "T-56.2",
+    "H-30.1",
+    "H-37.1",
+    "H-45.1",
+    "H-50.1",
+    "H-67.1"
+  ],
+  "accounted_for_all": true,
+  "steps": 3,
+  "stop": "stop_condition",
+  "read_chars": 0,
+  "utilization": {
+    "applied": [
+      "F-29.1",
+      "F-32.1",
+      "F-37.1",
+      "F-45.1",
+      "F-54.1",
+      "F-67.1",
+      "P-4.2",
+      "P-8.1",
+      "P-15.1",
+      "P-28.1",
+      "P-28.3",
+      "P-44.1",
+      "P-44.2",
+      "P-64.1",
+      "P-72.1",
+      "T-68.1",
+      "G-38.1",
+      "G-57.1",
+      "G-64.1"
+    ],
+    "live": [
+      "F-29.1",
+      "F-32.1",
+      "F-37.1",
+      "F-45.1",
+      "F-54.1",
+      "F-67.1",
+      "P-4.2",
+      "P-8.1",
+      "P-15.1",
+      "P-28.1",
+      "P-28.3",
+      "P-44.1",
+      "P-44.2",
+      "P-64.1",
+      "P-72.1",
+      "T-68.1",
+      "G-38.1",
+      "G-57.1",
+      "G-64.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-4.2",
+      "P-8.1",
+      "P-15.1",
+      "P-28.1",
+      "P-28.3",
+      "P-44.1",
+      "P-44.2",
+      "P-64.1",
+      "P-72.1"
+    ],
+    "recently_changed": [
+      "F-37.1",
+      "F-67.1",
+      "P-44.1",
+      "P-44.2",
+      "P-64.1",
+      "P-72.1"
+    ]
+  },
+  "attributes": [
+    {
+      "attribute": "preferred_response_format",
+      "current": "executive_summary_with_strategic_tradeoffs",
+      "original": "structured_numbered_steps",
+      "changed": true,
+      "fit": "original",
+      "votes": [
+        "original",
+        "original",
+        "original"
+      ],
+      "reason": "Uses a numbered action plan, not an executive-summary style with tradeoffs."
+    },
+    {
+      "attribute": "emotional_tone",
+      "current": "diplomatic_and_authoritative",
+      "original": "direct_pragmatic",
+      "changed": true,
+      "fit": "original",
+      "votes": [
+        "original",
+        "original",
+        "original"
+      ],
+      "reason": "The voice is blunt, pragmatic, and command-driven rather than diplomatically authoritative."
+    },
+    {
+      "attribute": "explanation_approach",
+      "current": "impact_assessment_first",
+      "original": "principles_first_then_examples",
+      "changed": true,
+      "fit": "current",
+      "votes": [
+        "current",
+        "neutral",
+        "current"
+      ],
+      "reason": "It opens by naming the key impacts to win first: time, legitimacy, and discipline."
+    },
+    {
+      "attribute": "example_preference",
+      "current": "real_world_analogies",
+      "changed": false,
+      "fit": "neutral",
+      "votes": [
+        "neutral",
+        "neutral",
+        "neutral"
+      ],
+      "reason": "It gives no real-world analogy or comparative example style."
+    },
+    {
+      "attribute": "boundary_setting_voice",
+      "current": "value_based_reasoning",
+      "changed": false,
+      "fit": "current",
+      "votes": [
+        "neutral",
+        "current",
+        "current"
+      ],
+      "reason": "It sets limits, but mostly as tactical instructions rather than clearly value-based boundary reasoning."
+    }
+  ],
+  "changed_fit_current": 0.333,
+  "changed_fit_original": 0.667,
+  "all_fit_current": 0.4,
+  "judge_cost_usd": 0.023,
+  "reply_cost_usd": 0.10747
+}
