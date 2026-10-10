@@ -1,0 +1,23 @@
+# Episodes
+- E-0 | 2025-06-02 | source: S-0 | Weekend cooking project about fresh pasta from scratch.
+  - O-0.1 | stated | Wants the why behind every step and loves the science.
+  - O-0.2 | reaction | Loves the detail and wants more of this always.
+- E-1 | 2025-06-08 | source: S-1 | Long Sunday cook discussion about vegetarian ramen and spice.
+  - O-1.1 | behavior | Wants deep, technique-first cooking help and has all Sunday.
+  - O-1.2 | stated | Likes spicy food and puts chili crisp on everything.
+- E-2 | 2025-06-15 | source: S-2 | Bread troubleshooting question.
+  - O-2.1 | behavior | Asked why sourdough is dense and wanted the full rundown.
+- E-3 | 2025-06-22 | source: S-3 | Cooking for friends and praised the detailed guidance.
+  - O-3.1 | reaction | Said this detailed cooking help was the best part of their week.
+- E-4 | 2025-07-01 | source: S-4 | Big news: early baby arrival and newborn sleep deprivation.
+  - O-4.1 | event | Baby arrived early; they now have a newborn baby.
+  - O-4.2 | event | Newborn sleep is in 90-minute chunks, making life chaotic.
+- E-5 | 2025-07-10 | source: S-5 | Dinner request needed one-handed prep and very short answers.
+  - O-5.1 | behavior | Wants dinner ideas they can make one-handed.
+  - O-5.2 | behavior | Wants the answer kept to about three lines.
+  - O-5.3 | stated | Reads answers at 3am.
+- E-6 | 2025-07-16 | source: S-6 | Batch-cooking chat about freezer meals.
+  - O-6.1 | behavior | Asked for freezer meals, preferably one-pan, in a short list with no explanations.
+  - O-6.2 | stated | Short is all I can handle now.
+- E-7 | 2025-07-24 | source: S-7 | Another quick one-pan vegetarian, spicy meal request.
+  - O-7.1 | behavior | Asked for another vegetarian, spicy one-pan meal.

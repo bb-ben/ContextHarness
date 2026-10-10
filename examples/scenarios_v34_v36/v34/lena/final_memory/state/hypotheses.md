@@ -1,0 +1,3 @@
+# Hypotheses
+- H-1.1 | superseded | 2025-03-09 | confidence: low | for: O-1.1 | topic: help-format | until: 2025-03-23 | superseded_by: P-3.1 | Prefers weekly reports broken down by day.
+- H-4.1 | confirmed | 2025-04-02 | confidence: low | resolved_into: T-5.1 | for: O-4.1, O-5.1 | challenges: P-0.1 | topic: quantity-precision | Burnout seems to make them want lighter tracking rather than exact grams.

@@ -1,0 +1,46 @@
+{
+  "model": "gpt-5.4-mini",
+  "rows": [
+    {
+      "source": "summary_scenarios_b__002_foodbody-scenarios_dani_cd5a822e",
+      "condition": "memory",
+      "memory_kind": "summary",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 1.0,
+      "utilization": null
+    },
+    {
+      "source": "summary_scenarios_b__002_foodbody-scenarios_dani_cd5a822e",
+      "condition": "memory",
+      "memory_kind": "summary",
+      "repeat": 2,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 1.0,
+      "utilization": null
+    },
+    {
+      "source": "summary_scenarios_b__003_foodbody-scenarios_lena_a7a829dd",
+      "condition": "memory",
+      "memory_kind": "summary",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 1.0,
+      "utilization": null
+    },
+    {
+      "source": "summary_scenarios_b__003_foodbody-scenarios_lena_a7a829dd",
+      "condition": "memory",
+      "memory_kind": "summary",
+      "repeat": 2,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 1.0,
+      "utilization": null
+    }
+  ],
+  "estimated_cost_usd": 0.0385
+}

@@ -1,0 +1,46 @@
+{
+  "model": "gpt-5.4-mini",
+  "rows": [
+    {
+      "source": "v34_scenarios__000_foodbody-scenarios_priya_45b8dd3f",
+      "condition": "full-history",
+      "memory_kind": "full-history",
+      "repeat": 1,
+      "changed_fit_current": 0.5,
+      "changed_fit_original": 0.5,
+      "all_fit_current": 0.75,
+      "utilization": null
+    },
+    {
+      "source": "v34_scenarios__001_foodbody-scenarios_tom_65fd5cd8",
+      "condition": "full-history",
+      "memory_kind": "full-history",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 1.0,
+      "utilization": null
+    },
+    {
+      "source": "v34_scenarios__002_foodbody-scenarios_dani_cd5a822e",
+      "condition": "full-history",
+      "memory_kind": "full-history",
+      "repeat": 1,
+      "changed_fit_current": 0.5,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 0.75,
+      "utilization": null
+    },
+    {
+      "source": "v34_scenarios__003_foodbody-scenarios_lena_a7a829dd",
+      "condition": "full-history",
+      "memory_kind": "full-history",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 0.75,
+      "utilization": null
+    }
+  ],
+  "estimated_cost_usd": 0.0442
+}

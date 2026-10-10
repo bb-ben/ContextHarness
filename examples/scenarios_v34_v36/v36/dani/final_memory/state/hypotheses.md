@@ -1,0 +1,2 @@
+# Hypotheses
+- H-4.1 | confirmed | 2025-07-01 | confidence: low | topic: detail-level | for: O-4.2, O-5.1 | challenges: P-0.3 | resolved_into: P-5.1 | The newborn may make shorter answers more useful for now.

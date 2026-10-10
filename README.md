@@ -11,8 +11,8 @@ contract. HorizonBench supplies long, dated conversation histories in which
 preferences change after life events. That makes it a sequential testbed for
 whether the layer keeps the user's state current.
 
-**Status:** contract **v3.3**. The layer, instrumentation, and Gemini and OpenAI
-adapters are built and tested offline (175 tests). A model that follows the
+**Status:** contract **v3.6**. The layer, instrumentation, and Gemini and OpenAI
+adapters are built and tested offline (183 tests). A model that follows the
 contract produces zero violations across all 901 events of the HorizonBench sample.
 
 **Real runs so far:**
@@ -52,6 +52,15 @@ contract produces zero violations across all 901 events of the HorizonBench samp
   did as well or better on these short histories, at a tenth of the cost. See
   [`examples/v33_scenarios/`](examples/v33_scenarios) and the
   [design log](docs/MEMORY_LAYER.md#v32--v33-revisions-that-replace-and-checking-that-memory-is-used).
+- **v3.4–v3.6 on four scenarios ($2.25).** Two new scenarios end on a neutral
+  message, so replies without memory fit 0% of the changes and replies from memory
+  50–100%. v3.4 and v3.5 kept the old preference standing behind temporary entries
+  that expired; v3.6 gives how someone wants help a single home (preferences, with a
+  review date if the change may not last), and both changes landed. Replies now use
+  memory directly ("for you and your partner, Mediterranean-leaning, no grams"). A
+  rolling summary still writes better-fitting replies on these short histories. See
+  [`examples/scenarios_v34_v36/`](examples/scenarios_v34_v36) and the
+  [design log](docs/MEMORY_LAYER.md#v34--v36-one-home-for-how-they-want-help).
 - **Memory judge on that item.** Graded against the ground-truth attributes, v3
   holds 0.38 of the person's current preferences, v2 0.0, and the rolling summary
   0.75. The summary's lead comes from role-play content recorded before the change,
@@ -70,7 +79,7 @@ Requires Python ≥ 3.12 and [uv](https://docs.astral.sh/uv/).
 
 ```bash
 uv sync
-uv run pytest -q                     # 175 tests, offline, no credentials
+uv run pytest -q                     # 183 tests, offline, no credentials
 export GEMINI_API_KEY=...            # for real-model runs (default model: gemini-3.7-flash)
 ```
 
@@ -223,13 +232,13 @@ v2), so it says nothing about the layer.
 
 ## Next steps
 
-1. **Run v3.3 on HorizonBench item 6** (about $6) to see whether replacement holds
-   over 75 events, and judge both its memory and its replies.
-2. **Keep what still holds when replacing:** before superseding, check each clause of
-   the old value against the new evidence. Promote long-standing hypotheses such as
-   "playful".
-3. **Add more scenarios**, especially ones where the last message alone doesn't give
-   the answer away, so replies can separate memory from none.
+1. **Run v3.6 on HorizonBench item 6** (about $6.70 with its evaluations) to see
+   whether it holds up over 75 events, and judge its memory and replies.
+2. **Turn repeated task wishes into preferences reliably** (the new-parent scenario's
+   "one-pan, freezer-friendly"), and have replies apply every preference that bears on
+   the request, not just some.
+3. **Add more neutral-ending scenarios.** They are the only tests so far where replies
+   without memory fail.
 4. **Score answers only on `usable` items** (0, 2 and 7 in the sample), and grade
    memory on `memory_only` items too.
 5. **Check the judge against a person's reading** of a few memories, and try a

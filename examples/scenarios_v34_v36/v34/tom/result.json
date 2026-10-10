@@ -1,0 +1,285 @@
+{
+  "item_index": 1,
+  "item_id": "Tom Okafor_foodbody_injury_coaching",
+  "item_key": "65fd5cd87d8a",
+  "method": "agent",
+  "model": "gpt-5.4-mini",
+  "predicted_letter": "B",
+  "answer_via": "tool",
+  "correct": true,
+  "invalid": false,
+  "chose_distractor": false,
+  "predicted_value": "gentle_recovery",
+  "error": null,
+  "gold": {
+    "correct_letter": "B",
+    "distractor_letter": "A",
+    "has_evolved": true,
+    "generator": "foodbody-scenarios",
+    "user_id": "foodbody-scenarios/tom",
+    "preference_domain": "coaching_style"
+  },
+  "ordering": {
+    "policy": "chronological",
+    "n_history_sessions_in_text": 7,
+    "n_replayed": 7,
+    "text_order_monotonic": true,
+    "n_moved": 0,
+    "dropped_after_probe": [],
+    "truncated_to_last": null
+  },
+  "answer_details": {
+    "stop": "stop_condition",
+    "steps": 1,
+    "applied": [
+      "T-6.1",
+      "P-1.1"
+    ],
+    "read_chars": 0
+  },
+  "utilization": {
+    "applied": [
+      "T-6.1",
+      "P-1.1"
+    ],
+    "live": [
+      "T-6.1",
+      "P-1.1"
+    ],
+    "closed": [],
+    "evidence": [],
+    "unknown": [],
+    "live_preferences": [
+      "P-1.1"
+    ],
+    "recently_changed": [
+      "T-6.1"
+    ]
+  },
+  "reference_heuristics": {
+    "shortest_option": "C",
+    "shortest_option_correct": false
+  },
+  "latency_s": 217.324,
+  "stats": {
+    "model_calls": 24,
+    "usage": {
+      "input_tokens": 37209,
+      "output_tokens": 55196,
+      "cache_read_input_tokens": 141312,
+      "cache_creation_input_tokens": 0
+    },
+    "usage_by_phase": {
+      "memory_update": {
+        "input_tokens": 34628,
+        "output_tokens": 55044,
+        "cache_read_input_tokens": 136704,
+        "cache_creation_input_tokens": 0
+      },
+      "answer": {
+        "input_tokens": 2581,
+        "output_tokens": 152,
+        "cache_read_input_tokens": 4608,
+        "cache_creation_input_tokens": 0
+      }
+    },
+    "calls_by_phase": {
+      "memory_update": 23,
+      "answer": 1
+    },
+    "served_by": {
+      "gpt-5.4-mini-2026-03-17": 24
+    },
+    "tool_calls": 47,
+    "tool_errors": 3,
+    "file_ops": 29,
+    "file_reads": 7,
+    "refusals": 0
+  },
+  "estimated_cost_usd": 0.28688715000000004,
+  "memory_chars": {
+    "context.md": 479,
+    "memory/episodes.md": 1351,
+    "state/profile.md": 10,
+    "state/preferences.md": 125,
+    "state/goals.md": 346,
+    "state/transient.md": 681,
+    "state/hypotheses.md": 589,
+    "memory/archive.md": 10
+  },
+  "memory": {
+    "events": 7,
+    "violations_by_code": {
+      "missing_end_date": 1,
+      "context_uncited": 1
+    },
+    "events_with_violations": 3,
+    "events_with_new_violations": 2,
+    "unresolved_at_end": 2,
+    "access_totals": {
+      "context.md": {
+        "writes": 7,
+        "reads": 2
+      },
+      "memory/episodes.md": {
+        "writes": 7
+      },
+      "state/goals.md": {
+        "writes": 5,
+        "reads": 3
+      },
+      "state/hypotheses.md": {
+        "writes": 4,
+        "reads": 2
+      },
+      "state/preferences.md": {
+        "writes": 1,
+        "reads": 2
+      },
+      "state/transient.md": {
+        "writes": 5,
+        "reads": 1
+      }
+    },
+    "final_metrics": {
+      "entries": {
+        "E": 7,
+        "O": 11,
+        "P": 1,
+        "G": 1,
+        "T": 4,
+        "H": 4
+      },
+      "live_entries": {
+        "P": 1,
+        "T": 2,
+        "H": 3
+      },
+      "provenance_share": 1.0,
+      "context_bullets": 6,
+      "context_cited_ids": 6,
+      "context_coverage_of_live_state": 1.0,
+      "episodes_recorded": 7
+    }
+  },
+  "evolution_diagnostics": [
+    {
+      "date": "2025-08-30",
+      "event_name": "Stress fracture, eight weeks without running",
+      "replayed_sessions": [
+        4
+      ],
+      "memory_writes": 5
+    }
+  ],
+  "evidence_chain": [
+    {
+      "date": "2025-08-30",
+      "event_name": "Stress fracture, eight weeks without running",
+      "events": [
+        "S-4"
+      ],
+      "episodes": [
+        "E-4"
+      ],
+      "observations": [
+        "O-4.1",
+        "O-4.2"
+      ],
+      "hypotheses": [],
+      "state_entries": [
+        "T-4.1"
+      ],
+      "live_state_entries": [
+        "T-4.1"
+      ],
+      "stage": "in_state"
+    }
+  ],
+  "sessions": [
+    {
+      "index": 0,
+      "event_id": "S-0",
+      "date": "2025-08-04T09:00:00.000001",
+      "file_ops": 4,
+      "model_calls": 3,
+      "input_tokens": 21166,
+      "output_tokens": 5727,
+      "latency_s": 22.601,
+      "violations": 0,
+      "new_violations": 0
+    },
+    {
+      "index": 1,
+      "event_id": "S-1",
+      "date": "2025-08-09T09:00:00.000001",
+      "file_ops": 4,
+      "model_calls": 3,
+      "input_tokens": 21978,
+      "output_tokens": 10608,
+      "latency_s": 39.52,
+      "violations": 0,
+      "new_violations": 0
+    },
+    {
+      "index": 2,
+      "event_id": "S-2",
+      "date": "2025-08-15T09:00:00.000001",
+      "file_ops": 3,
+      "model_calls": 3,
+      "input_tokens": 21460,
+      "output_tokens": 5000,
+      "latency_s": 21.245,
+      "violations": 0,
+      "new_violations": 0
+    },
+    {
+      "index": 3,
+      "event_id": "S-3",
+      "date": "2025-08-22T09:00:00.000001",
+      "file_ops": 4,
+      "model_calls": 4,
+      "input_tokens": 29123,
+      "output_tokens": 7044,
+      "latency_s": 27.706,
+      "violations": 0,
+      "new_violations": 0
+    },
+    {
+      "index": 4,
+      "event_id": "S-4",
+      "date": "2025-08-30T09:00:00.000001",
+      "file_ops": 5,
+      "model_calls": 5,
+      "input_tokens": 39353,
+      "output_tokens": 11674,
+      "latency_s": 48.262,
+      "violations": 1,
+      "new_violations": 1
+    },
+    {
+      "index": 5,
+      "event_id": "S-5",
+      "date": "2025-09-03T09:00:00.000001",
+      "file_ops": 4,
+      "model_calls": 2,
+      "input_tokens": 14882,
+      "output_tokens": 3274,
+      "latency_s": 12.558,
+      "violations": 1,
+      "new_violations": 0
+    },
+    {
+      "index": 6,
+      "event_id": "S-6",
+      "date": "2025-09-08T09:00:00.000001",
+      "file_ops": 5,
+      "model_calls": 3,
+      "input_tokens": 23370,
+      "output_tokens": 11717,
+      "latency_s": 44.156,
+      "violations": 2,
+      "new_violations": 1
+    }
+  ]
+}

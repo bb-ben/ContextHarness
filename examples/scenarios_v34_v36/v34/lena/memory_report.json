@@ -1,0 +1,1555 @@
+{
+ "layout": "general",
+ "events": 8,
+ "violations_by_code": {
+  "unsupported_promotion": 2,
+  "bad_status": 1,
+  "context_uncited": 1,
+  "history_rewritten": 1
+ },
+ "events_with_violations": 5,
+ "events_with_new_violations": 3,
+ "unresolved_at_end": 3,
+ "access_totals": {
+  "context.md": {
+   "writes": 10
+  },
+  "memory/episodes.md": {
+   "writes": 8
+  },
+  "state/goals.md": {
+   "writes": 5
+  },
+  "state/hypotheses.md": {
+   "writes": 4
+  },
+  "state/preferences.md": {
+   "writes": 6
+  },
+  "state/transient.md": {
+   "writes": 4
+  }
+ },
+ "final_metrics": {
+  "entries": {
+   "E": 8,
+   "O": 11,
+   "P": 5,
+   "G": 2,
+   "T": 4,
+   "H": 2
+  },
+  "live_entries": {
+   "P": 4,
+   "T": 1
+  },
+  "provenance_share": 1.0,
+  "context_bullets": 4,
+  "context_cited_ids": 3,
+  "context_coverage_of_live_state": 0.6,
+  "episodes_recorded": 8
+ },
+ "per_event": [
+  {
+   "event_id": "S-0",
+   "index": 0,
+   "date": "2025-03-03",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/goals.md": {
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "writes": 1
+    }
+   },
+   "violations": {},
+   "new_violations": {},
+   "metrics": {
+    "entries": {
+     "E": 1,
+     "O": 2,
+     "P": 2,
+     "G": 1
+    },
+    "live_entries": {
+     "P": 2,
+     "G": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 2,
+    "context_cited_ids": 3,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 1
+   }
+  },
+  {
+   "event_id": "S-1",
+   "index": 1,
+   "date": "2025-03-09",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/hypotheses.md": {
+     "writes": 1
+    }
+   },
+   "violations": {},
+   "new_violations": {},
+   "metrics": {
+    "entries": {
+     "E": 2,
+     "O": 3,
+     "P": 2,
+     "G": 1,
+     "H": 1
+    },
+    "live_entries": {
+     "P": 2,
+     "G": 1,
+     "H": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 3,
+    "context_cited_ids": 4,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 2
+   }
+  },
+  {
+   "event_id": "S-2",
+   "index": 2,
+   "date": "2025-03-16",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/goals.md": {
+     "writes": 2
+    },
+    "state/preferences.md": {
+     "writes": 2
+    }
+   },
+   "violations": {},
+   "new_violations": {},
+   "metrics": {
+    "entries": {
+     "E": 3,
+     "O": 5,
+     "P": 2,
+     "G": 1,
+     "H": 1
+    },
+    "live_entries": {
+     "P": 2,
+     "G": 1,
+     "H": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 3,
+    "context_cited_ids": 4,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 3
+   }
+  },
+  {
+   "event_id": "S-3",
+   "index": 3,
+   "date": "2025-03-23",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/hypotheses.md": {
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "writes": 1
+    }
+   },
+   "violations": {
+    "bad_status": 1,
+    "context_uncited": 1
+   },
+   "new_violations": {
+    "bad_status": 1,
+    "context_uncited": 1
+   },
+   "metrics": {
+    "entries": {
+     "E": 4,
+     "O": 6,
+     "P": 3,
+     "G": 1,
+     "H": 1
+    },
+    "live_entries": {
+     "P": 3,
+     "G": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 4,
+    "context_cited_ids": 4,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 4
+   }
+  },
+  {
+   "event_id": "S-4",
+   "index": 4,
+   "date": "2025-04-02",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/goals.md": {
+     "writes": 1
+    },
+    "state/hypotheses.md": {
+     "writes": 1
+    },
+    "state/transient.md": {
+     "writes": 1
+    }
+   },
+   "violations": {
+    "bad_status": 1
+   },
+   "new_violations": {},
+   "metrics": {
+    "entries": {
+     "E": 5,
+     "O": 7,
+     "P": 3,
+     "G": 2,
+     "T": 1,
+     "H": 2
+    },
+    "live_entries": {
+     "P": 3,
+     "G": 1,
+     "T": 1,
+     "H": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 5,
+    "context_cited_ids": 6,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 5
+   }
+  },
+  {
+   "event_id": "S-5",
+   "index": 5,
+   "date": "2025-04-08",
+   "access": {
+    "context.md": {
+     "writes": 3
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/hypotheses.md": {
+     "writes": 1
+    },
+    "state/transient.md": {
+     "writes": 1
+    }
+   },
+   "violations": {
+    "bad_status": 1,
+    "history_rewritten": 1
+   },
+   "new_violations": {
+    "history_rewritten": 1
+   },
+   "metrics": {
+    "entries": {
+     "E": 6,
+     "O": 8,
+     "P": 3,
+     "G": 2,
+     "T": 2,
+     "H": 2
+    },
+    "live_entries": {
+     "P": 3,
+     "G": 1,
+     "T": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 4,
+    "context_cited_ids": 4,
+    "context_coverage_of_live_state": 0.8,
+    "episodes_recorded": 6
+   }
+  },
+  {
+   "event_id": "S-6",
+   "index": 6,
+   "date": "2025-04-15",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/transient.md": {
+     "writes": 1
+    }
+   },
+   "violations": {
+    "bad_status": 1
+   },
+   "new_violations": {},
+   "metrics": {
+    "entries": {
+     "E": 7,
+     "O": 10,
+     "P": 3,
+     "G": 2,
+     "T": 3,
+     "H": 2
+    },
+    "live_entries": {
+     "P": 3,
+     "G": 1,
+     "T": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 5,
+    "context_cited_ids": 5,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 7
+   }
+  },
+  {
+   "event_id": "S-7",
+   "index": 7,
+   "date": "2025-04-22",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/goals.md": {
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "writes": 2
+    },
+    "state/transient.md": {
+     "writes": 1
+    }
+   },
+   "violations": {
+    "unsupported_promotion": 2,
+    "bad_status": 1
+   },
+   "new_violations": {
+    "unsupported_promotion": 2
+   },
+   "metrics": {
+    "entries": {
+     "E": 8,
+     "O": 11,
+     "P": 5,
+     "G": 2,
+     "T": 4,
+     "H": 2
+    },
+    "live_entries": {
+     "P": 4,
+     "T": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 4,
+    "context_cited_ids": 3,
+    "context_coverage_of_live_state": 0.6,
+    "episodes_recorded": 8
+   }
+  }
+ ],
+ "violations": [
+  {
+   "event_id": "S-3",
+   "code": "bad_status",
+   "path": "state/hypotheses.md",
+   "line": 2,
+   "detail": "status 'superseded' is not one of ['confirmed', 'open', 'refuted', 'retracted', 'withdrawn']",
+   "id": "H-1.1"
+  },
+  {
+   "event_id": "S-3",
+   "code": "context_uncited",
+   "path": "context.md",
+   "line": 8,
+   "detail": "none",
+   "id": null,
+   "resolved_at": "S-4"
+  },
+  {
+   "event_id": "S-5",
+   "code": "history_rewritten",
+   "path": "state/hypotheses.md",
+   "line": 3,
+   "detail": "statement",
+   "id": "H-4.1",
+   "resolved_at": "S-6"
+  },
+  {
+   "event_id": "S-7",
+   "code": "unsupported_promotion",
+   "path": "state/preferences.md",
+   "line": 5,
+   "detail": "preference rests on non-stated evidence from one event and no confirmed hypothesis",
+   "id": "P-7.1"
+  },
+  {
+   "event_id": "S-7",
+   "code": "unsupported_promotion",
+   "path": "state/preferences.md",
+   "line": 6,
+   "detail": "preference rests on non-stated evidence from one event and no confirmed hypothesis",
+   "id": "P-7.2"
+  }
+ ],
+ "lifecycle": {
+  "E-0": {
+   "type": "E",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-0.1": {
+   "type": "O",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-0.2": {
+   "type": "O",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "P-0.1": {
+   "type": "P",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     "current"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "P-0.2": {
+   "type": "P",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     "current"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "G-0.1": {
+   "type": "G",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     "active"
+    ],
+    [
+     "S-4",
+     "superseded"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "E-1": {
+   "type": "E",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-1.1": {
+   "type": "O",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "H-1.1": {
+   "type": "H",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     "open"
+    ],
+    [
+     "S-3",
+     "superseded"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "E-2": {
+   "type": "E",
+   "created": "S-2",
+   "statuses": [
+    [
+     "S-2",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-2.1": {
+   "type": "O",
+   "created": "S-2",
+   "statuses": [
+    [
+     "S-2",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-2.2": {
+   "type": "O",
+   "created": "S-2",
+   "statuses": [
+    [
+     "S-2",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "E-3": {
+   "type": "E",
+   "created": "S-3",
+   "statuses": [
+    [
+     "S-3",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-3.1": {
+   "type": "O",
+   "created": "S-3",
+   "statuses": [
+    [
+     "S-3",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "P-3.1": {
+   "type": "P",
+   "created": "S-3",
+   "statuses": [
+    [
+     "S-3",
+     "current"
+    ],
+    [
+     "S-7",
+     "superseded"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "E-4": {
+   "type": "E",
+   "created": "S-4",
+   "statuses": [
+    [
+     "S-4",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-4.1": {
+   "type": "O",
+   "created": "S-4",
+   "statuses": [
+    [
+     "S-4",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "G-4.1": {
+   "type": "G",
+   "created": "S-4",
+   "statuses": [
+    [
+     "S-4",
+     "active"
+    ],
+    [
+     "S-7",
+     "lapsed"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "T-4.1": {
+   "type": "T",
+   "created": "S-4",
+   "statuses": [
+    [
+     "S-4",
+     "active"
+    ],
+    [
+     "S-5",
+     "superseded"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "H-4.1": {
+   "type": "H",
+   "created": "S-4",
+   "statuses": [
+    [
+     "S-4",
+     "open"
+    ],
+    [
+     "S-5",
+     "confirmed"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "E-5": {
+   "type": "E",
+   "created": "S-5",
+   "statuses": [
+    [
+     "S-5",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-5.1": {
+   "type": "O",
+   "created": "S-5",
+   "statuses": [
+    [
+     "S-5",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "T-5.1": {
+   "type": "T",
+   "created": "S-5",
+   "statuses": [
+    [
+     "S-5",
+     "active"
+    ],
+    [
+     "S-6",
+     "superseded"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "E-6": {
+   "type": "E",
+   "created": "S-6",
+   "statuses": [
+    [
+     "S-6",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-6.1": {
+   "type": "O",
+   "created": "S-6",
+   "statuses": [
+    [
+     "S-6",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-6.2": {
+   "type": "O",
+   "created": "S-6",
+   "statuses": [
+    [
+     "S-6",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "T-6.1": {
+   "type": "T",
+   "created": "S-6",
+   "statuses": [
+    [
+     "S-6",
+     "active"
+    ],
+    [
+     "S-7",
+     "superseded"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "E-7": {
+   "type": "E",
+   "created": "S-7",
+   "statuses": [
+    [
+     "S-7",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-7.1": {
+   "type": "O",
+   "created": "S-7",
+   "statuses": [
+    [
+     "S-7",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "P-7.1": {
+   "type": "P",
+   "created": "S-7",
+   "statuses": [
+    [
+     "S-7",
+     "current"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "P-7.2": {
+   "type": "P",
+   "created": "S-7",
+   "statuses": [
+    [
+     "S-7",
+     "current"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "T-7.1": {
+   "type": "T",
+   "created": "S-7",
+   "statuses": [
+    [
+     "S-7",
+     "active"
+    ]
+   ],
+   "last_seen": "S-7"
+  }
+ },
+ "timeline": [
+  {
+   "event_id": "S-0",
+   "date": "2025-03-03",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-0",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Setting up nutrition goals."
+     },
+     {
+      "id": "O-0.1",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Wants a 140 g/day protein target for meals for two."
+     },
+     {
+      "id": "O-0.2",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Wants exact grams per meal and Mediterranean-style meal plans."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "P-0.1",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Wants exact grams per meal in plans."
+     },
+     {
+      "id": "P-0.2",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Wants Mediterranean-style meal plans."
+     },
+     {
+      "id": "G-0.1",
+      "status": "active",
+      "path": "state/goals.md",
+      "statement": "Plan meals for two that hit 140 g protein/day."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Plan meals for two that hit 140 g protein/day (G-0.1)",
+     "Wants exact gram counts in meal plans and Mediterranean-style meals (P-0.1, P-0.2)"
+    ],
+    "removed": [],
+    "cited_added": [
+     "G-0.1",
+     "P-0.1",
+     "P-0.2"
+    ],
+    "cited_removed": [],
+    "bullets": 2,
+    "as_of": "S-0"
+   }
+  },
+  {
+   "event_id": "S-1",
+   "date": "2025-03-09",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-1",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Weekly review chat."
+     },
+     {
+      "id": "O-1.1",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Asked for a weekly report broken down by day."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "H-1.1",
+      "status": "open",
+      "path": "state/hypotheses.md",
+      "statement": "Prefers weekly reports broken down by day."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "May prefer weekly reports broken down by day (H-1.1)"
+    ],
+    "removed": [],
+    "cited_added": [
+     "H-1.1"
+    ],
+    "cited_removed": [],
+    "bullets": 3,
+    "as_of": "S-1"
+   }
+  },
+  {
+   "event_id": "S-2",
+   "date": "2025-03-16",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-2",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Planning dinners with exact per-serving macros."
+     },
+     {
+      "id": "O-2.1",
+      "status": "reaction",
+      "path": "memory/episodes.md",
+      "statement": "Said the per-serving grams were perfect."
+     },
+     {
+      "id": "O-2.2",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Asked for Mediterranean dinners."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [],
+    "changed": [
+     {
+      "id": "P-0.1",
+      "status": [
+       "current",
+       "current"
+      ],
+      "fields": {
+       "confirmed": [
+        null,
+        "2025-03-16"
+       ],
+       "basis": [
+        "O-0.2",
+        "O-0.2, O-2.1"
+       ]
+      },
+      "statement": "Wants exact grams per meal in plans."
+     },
+     {
+      "id": "P-0.2",
+      "status": [
+       "current",
+       "current"
+      ],
+      "fields": {
+       "confirmed": [
+        null,
+        "2025-03-16"
+       ],
+       "basis": [
+        "O-0.2",
+        "O-0.2, O-2.2"
+       ]
+      },
+      "statement": "Wants Mediterranean-style meal plans."
+     },
+     {
+      "id": "G-0.1",
+      "status": [
+       "active",
+       "active"
+      ],
+      "fields": {
+       "review": [
+        "2025-03-17",
+        "2025-03-30"
+       ]
+      },
+      "statement": "Plan meals for two that hit 140 g protein/day."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Wants exact per-serving gram counts in meal plans and Mediterranean-style meal plans (P-0.1, P-0.2)"
+    ],
+    "removed": [
+     "Wants exact gram counts in meal plans and Mediterranean-style meals (P-0.1, P-0.2)"
+    ],
+    "cited_added": [],
+    "cited_removed": [],
+    "bullets": 3,
+    "as_of": "S-2"
+   }
+  },
+  {
+   "event_id": "S-3",
+   "date": "2025-03-23",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-3",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Another report about protein metrics."
+     },
+     {
+      "id": "O-3.1",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Asked for weekly protein average and a day-level low point."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "P-3.1",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Wants weekly reports broken down by day."
+     }
+    ],
+    "changed": [
+     {
+      "id": "H-1.1",
+      "status": [
+       "open",
+       "superseded"
+      ],
+      "fields": {
+       "until": [
+        null,
+        "2025-03-23"
+       ],
+       "superseded_by": [
+        null,
+        "P-3.1"
+       ]
+      },
+      "statement": "Prefers weekly reports broken down by day."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Wants exact gram counts in meal plans and Mediterranean-style meal plans (P-0.1, P-0.2)",
+     "Wants weekly reports broken down by day (P-3.1)",
+     "none"
+    ],
+    "removed": [
+     "May prefer weekly reports broken down by day (H-1.1)",
+     "Wants exact per-serving gram counts in meal plans and Mediterranean-style meal plans (P-0.1, P-0.2)"
+    ],
+    "cited_added": [
+     "P-3.1"
+    ],
+    "cited_removed": [
+     "H-1.1"
+    ],
+    "bullets": 4,
+    "as_of": "S-3"
+   }
+  },
+  {
+   "event_id": "S-4",
+   "date": "2025-04-02",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-4",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Time off work for burnout."
+     },
+     {
+      "id": "O-4.1",
+      "status": "event",
+      "path": "memory/episodes.md",
+      "statement": "Signed off work with burnout; therapist thinks constant tracking is feeding anxiety."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "G-4.1",
+      "status": "active",
+      "path": "state/goals.md",
+      "statement": "Plan meals for two that hit 140 g protein/day."
+     },
+     {
+      "id": "T-4.1",
+      "status": "active",
+      "path": "state/transient.md",
+      "statement": "On burnout leave and tracking is a current anxiety trigger."
+     },
+     {
+      "id": "H-4.1",
+      "status": "open",
+      "path": "state/hypotheses.md",
+      "statement": "Burnout may make them want lighter tracking rather than exact grams."
+     }
+    ],
+    "changed": [
+     {
+      "id": "G-0.1",
+      "status": [
+       "active",
+       "superseded"
+      ],
+      "fields": {
+       "until": [
+        null,
+        "2025-04-02"
+       ],
+       "superseded_by": [
+        null,
+        "G-4.1"
+       ]
+      },
+      "statement": "Plan meals for two that hit 140 g protein/day."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Burnout leave and tracking anxiety are temporary; review 2025-04-09 (T-4.1)",
+     "Burnout may make them want lighter tracking rather than exact grams (H-4.1, open)",
+     "Plan meals for two that hit 140 g protein/day; review 2025-04-16 (G-4.1)"
+    ],
+    "removed": [
+     "Plan meals for two that hit 140 g protein/day (G-0.1)",
+     "none"
+    ],
+    "cited_added": [
+     "G-4.1",
+     "H-4.1",
+     "T-4.1"
+    ],
+    "cited_removed": [
+     "G-0.1"
+    ],
+    "bullets": 5,
+    "as_of": "S-4"
+   }
+  },
+  {
+   "event_id": "S-5",
+   "date": "2025-04-08",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-5",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Scenario about stopping tracking."
+     },
+     {
+      "id": "O-5.1",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Wants no grams or calories shown anymore; seeing them sends them spiralling."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "T-5.1",
+      "status": "active",
+      "path": "state/transient.md",
+      "statement": "Avoids grams or calories for now because seeing them sends them spiralling."
+     }
+    ],
+    "changed": [
+     {
+      "id": "T-4.1",
+      "status": [
+       "active",
+       "superseded"
+      ],
+      "fields": {
+       "until": [
+        null,
+        "2025-04-08"
+       ],
+       "superseded_by": [
+        null,
+        "T-5.1"
+       ]
+      },
+      "statement": "On burnout leave and tracking is a current anxiety trigger."
+     },
+     {
+      "id": "H-4.1",
+      "status": [
+       "open",
+       "confirmed"
+      ],
+      "fields": {
+       "resolved_into": [
+        null,
+        "T-5.1"
+       ],
+       "for": [
+        "O-4.1",
+        "O-4.1, O-5.1"
+       ]
+      },
+      "statement": "Burnout seems to make them want lighter tracking rather than exact grams."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Tracking avoidance review 2025-04-15 (T-5.1)",
+     "Wants exact gram counts in meal plans, but tracking avoidance is active for now (P-0.1, T-5.1)"
+    ],
+    "removed": [
+     "Burnout leave and tracking anxiety are temporary; review 2025-04-09 (T-4.1)",
+     "Burnout may make them want lighter tracking rather than exact grams (H-4.1, open)",
+     "Wants exact gram counts in meal plans and Mediterranean-style meal plans (P-0.1, P-0.2)"
+    ],
+    "cited_added": [
+     "T-5.1"
+    ],
+    "cited_removed": [
+     "H-4.1",
+     "P-0.2",
+     "T-4.1"
+    ],
+    "bullets": 4,
+    "as_of": "S-5"
+   }
+  },
+  {
+   "event_id": "S-6",
+   "date": "2025-04-15",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-6",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Comforting dinner request with calm reaction to no-number formatting."
+     },
+     {
+      "id": "O-6.1",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Asked for a Mediterranean, comforting dinner and no numbers."
+     },
+     {
+      "id": "O-6.2",
+      "status": "reaction",
+      "path": "memory/episodes.md",
+      "statement": "Said the no-number version felt calm and thanked you."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "T-6.1",
+      "status": "active",
+      "path": "state/transient.md",
+      "statement": "Avoids grams or calories for now because seeing them sends them spiralling."
+     }
+    ],
+    "changed": [
+     {
+      "id": "T-5.1",
+      "status": [
+       "active",
+       "superseded"
+      ],
+      "fields": {
+       "until": [
+        null,
+        "2025-04-15"
+       ],
+       "superseded_by": [
+        null,
+        "T-6.1"
+       ]
+      },
+      "statement": "Avoids grams or calories for now because seeing them sends them spiralling."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Tracking avoidance review 2025-04-22 (T-6.1)",
+     "Wants Mediterranean-style meal plans (P-0.2)",
+     "Wants exact gram counts in meal plans, but tracking avoidance is active for now (P-0.1, T-6.1)"
+    ],
+    "removed": [
+     "Tracking avoidance review 2025-04-15 (T-5.1)",
+     "Wants exact gram counts in meal plans, but tracking avoidance is active for now (P-0.1, T-5.1)"
+    ],
+    "cited_added": [
+     "P-0.2",
+     "T-6.1"
+    ],
+    "cited_removed": [
+     "T-5.1"
+    ],
+    "bullets": 5,
+    "as_of": "S-6"
+   }
+  },
+  {
+   "event_id": "S-7",
+   "date": "2025-04-22",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-7",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Check-in about eating."
+     },
+     {
+      "id": "O-7.1",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Asked for gentle check-ins about eating instead of weekly reports."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "P-7.1",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Wants gentle check-ins about how eating's going."
+     },
+     {
+      "id": "P-7.2",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Wants a gentle tone."
+     },
+     {
+      "id": "T-7.1",
+      "status": "active",
+      "path": "state/transient.md",
+      "statement": "Avoids grams or calories for now because seeing them sends them spiralling."
+     }
+    ],
+    "changed": [
+     {
+      "id": "P-3.1",
+      "status": [
+       "current",
+       "superseded"
+      ],
+      "fields": {
+       "until": [
+        null,
+        "2025-04-22"
+       ],
+       "superseded_by": [
+        null,
+        "P-7.1"
+       ]
+      },
+      "statement": "Wants weekly reports broken down by day."
+     },
+     {
+      "id": "G-4.1",
+      "status": [
+       "active",
+       "lapsed"
+      ],
+      "fields": {
+       "ended": [
+        null,
+        "2025-04-22"
+       ]
+      },
+      "statement": "Plan meals for two that hit 140 g protein/day."
+     },
+     {
+      "id": "T-6.1",
+      "status": [
+       "active",
+       "superseded"
+      ],
+      "fields": {
+       "until": [
+        null,
+        "2025-04-22"
+       ],
+       "superseded_by": [
+        null,
+        "T-7.1"
+       ]
+      },
+      "statement": "Avoids grams or calories for now because seeing them sends them spiralling."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Avoids grams or calories for now because seeing them sends them spiralling (T-7.1)",
+     "Tracking avoidance review 2025-04-29 (T-7.1)",
+     "Wants a gentle tone (P-7.2)",
+     "Wants gentle check-ins about how eating's going (P-7.1)"
+    ],
+    "removed": [
+     "Plan meals for two that hit 140 g protein/day; review 2025-04-16 (G-4.1)",
+     "Tracking avoidance review 2025-04-22 (T-6.1)",
+     "Wants Mediterranean-style meal plans (P-0.2)",
+     "Wants exact gram counts in meal plans, but tracking avoidance is active for now (P-0.1, T-6.1)",
+     "Wants weekly reports broken down by day (P-3.1)"
+    ],
+    "cited_added": [
+     "P-7.1",
+     "P-7.2",
+     "T-7.1"
+    ],
+    "cited_removed": [
+     "G-4.1",
+     "P-0.1",
+     "P-0.2",
+     "P-3.1",
+     "T-6.1"
+    ],
+    "bullets": 4,
+    "as_of": "S-7"
+   }
+  }
+ ]
+}

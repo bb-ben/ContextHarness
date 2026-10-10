@@ -1,0 +1,20 @@
+# Episodes
+- E-0 | 2025-03-03 | source: S-0 | Setting up nutrition goals.
+  - O-0.1 | stated | Wants a 140 g/day protein target for meals for two.
+  - O-0.2 | stated | Wants exact grams per meal and Mediterranean-style meal plans.
+- E-1 | 2025-03-09 | source: S-1 | Weekly review chat.
+  - O-1.1 | behavior | Asked for a weekly report broken down by day.
+- E-2 | 2025-03-16 | source: S-2 | Planning dinners with exact per-serving macros.
+  - O-2.1 | reaction | Said the per-serving grams were perfect.
+  - O-2.2 | behavior | Asked for Mediterranean dinners.
+- E-3 | 2025-03-23 | source: S-3 | Another report about protein metrics.
+  - O-3.1 | behavior | Asked for weekly protein average and a day-level low point.
+- E-4 | 2025-04-02 | source: S-4 | Time off work for burnout.
+  - O-4.1 | event | Signed off work with burnout; therapist thinks constant tracking is feeding anxiety.
+- E-5 | 2025-04-08 | source: S-5 | Scenario about stopping tracking.
+  - O-5.1 | stated | Wants no grams or calories shown anymore; seeing them sends them spiralling.
+- E-6 | 2025-04-15 | source: S-6 | Comforting dinner request with calm reaction to no-number formatting.
+  - O-6.1 | behavior | Asked for a Mediterranean, comforting dinner and no numbers.
+  - O-6.2 | reaction | Said the no-number version felt calm and thanked you.
+- E-7 | 2025-04-22 | source: S-7 | Check-in about eating.
+  - O-7.1 | behavior | Asked for gentle check-ins about eating instead of weekly reports.

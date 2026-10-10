@@ -1,0 +1,6 @@
+# Preferences
+- P-0.1 | current | 2025-06-02 | topic: help-format | basis: O-0.1, O-1.1, O-2.1 | confirmed: 2025-06-15 | new_dimension: User asked for step-by-step explanations with reasons behind each step. | Wants step-by-step help that explains why each step matters.
+- P-0.2 | current | 2025-06-02 | topic: explanation-style | basis: O-0.1, O-1.1, O-2.1 | confirmed: 2025-06-15 | new_dimension: User explicitly asked for science behind the steps. | Wants science-backed explanations with the underlying why.
+- P-0.3 | superseded | 2025-06-02 | topic: detail-level | basis: O-0.1, O-0.2, O-1.1, O-2.1 | confirmed: 2025-06-15 | new_dimension: User asked for detail and reinforced wanting more of it. | until: 2025-07-10 | superseded_by: P-5.1 | Wants detailed answers rather than brief ones.
+- P-1.1 | current | 2025-06-08 | topic: spice-level | basis: O-1.2, O-7.1 | confirmed: 2025-07-24 | new_dimension: Food-spice preference is not covered by existing help-style dimensions. | Prefers spicy food and chili crisp.
+- P-5.1 | current | 2025-07-10 | topic: detail-level | basis: O-4.2, O-5.1, O-6.1, O-6.2, O-7.1 | confirmed: 2025-07-24 | review: 2025-08-07 | supersedes: P-0.3 | changed: concise answers now, not detailed ones | Wants concise answers for now.

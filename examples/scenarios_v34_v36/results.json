@@ -1,0 +1,156 @@
+{
+  "dani": {
+    "v34": {
+      "answer": "B",
+      "correct": true,
+      "cost_usd": 0.219,
+      "applied": [
+        "F-7.1",
+        "P-1.1",
+        "T-7.1"
+      ]
+    },
+    "v35": {
+      "answer": "B",
+      "correct": true,
+      "cost_usd": 0.269,
+      "applied": [
+        "P-1.1"
+      ]
+    },
+    "v36": {
+      "answer": "B",
+      "correct": true,
+      "cost_usd": 0.182,
+      "applied": [
+        "F-7.1",
+        "P-1.1",
+        "P-5.1"
+      ]
+    },
+    "reply_fit_now": {
+      "v34:memory": [
+        0.5,
+        0.5
+      ],
+      "v34:none": [
+        0.0,
+        0.0
+      ],
+      "v34:full-history": [
+        0.5
+      ],
+      "summary:memory": [
+        1.0,
+        1.0
+      ],
+      "v36:memory": [
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "lena": {
+    "v34": {
+      "answer": "B",
+      "correct": true,
+      "cost_usd": 0.314,
+      "applied": [
+        "P-7.1",
+        "P-7.2",
+        "T-7.1",
+        "P-0.2"
+      ]
+    },
+    "v35": {
+      "answer": "A",
+      "correct": false,
+      "cost_usd": 0.29,
+      "applied": [
+        "P-3.1",
+        "P-0.2"
+      ]
+    },
+    "v36": {
+      "answer": "B",
+      "correct": true,
+      "cost_usd": 0.174,
+      "applied": [
+        "P-5.1",
+        "P-7.1",
+        "P-7.2",
+        "P-0.2",
+        "F-0.1"
+      ]
+    },
+    "reply_fit_now": {
+      "v34:memory": [
+        0.5,
+        1.0
+      ],
+      "v34:none": [
+        0.0,
+        0.0
+      ],
+      "v34:full-history": [
+        1.0
+      ],
+      "summary:memory": [
+        1.0,
+        1.0
+      ],
+      "v36:memory": [
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "priya": {
+    "v34": {
+      "answer": "B",
+      "correct": true,
+      "cost_usd": 0.129,
+      "applied": [
+        "P-5.1",
+        "P-0.2"
+      ]
+    },
+    "reply_fit_now": {
+      "v34:memory": [
+        0.5,
+        1.0
+      ],
+      "v34:none": [
+        0.0,
+        0.0
+      ],
+      "v34:full-history": [
+        0.5
+      ]
+    }
+  },
+  "tom": {
+    "v34": {
+      "answer": "B",
+      "correct": true,
+      "cost_usd": 0.287,
+      "applied": [
+        "T-6.1",
+        "P-1.1"
+      ]
+    },
+    "reply_fit_now": {
+      "v34:memory": [
+        1.0,
+        1.0
+      ],
+      "v34:none": [
+        1.0,
+        1.0
+      ],
+      "v34:full-history": [
+        1.0
+      ]
+    }
+  }
+}

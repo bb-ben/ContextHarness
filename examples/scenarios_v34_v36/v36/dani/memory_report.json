@@ -1,0 +1,1457 @@
+{
+ "layout": "general",
+ "events": 8,
+ "violations_by_code": {
+  "context_uncited": 1
+ },
+ "events_with_violations": 3,
+ "events_with_new_violations": 1,
+ "unresolved_at_end": 1,
+ "access_totals": {
+  "context.md": {
+   "writes": 8
+  },
+  "memory/episodes.md": {
+   "writes": 8
+  },
+  "state/hypotheses.md": {
+   "writes": 2
+  },
+  "state/preferences.md": {
+   "writes": 12
+  },
+  "state/profile.md": {
+   "writes": 2
+  },
+  "state/transient.md": {
+   "writes": 3
+  }
+ },
+ "final_metrics": {
+  "entries": {
+   "E": 8,
+   "O": 12,
+   "F": 2,
+   "P": 5,
+   "T": 3,
+   "H": 1
+  },
+  "live_entries": {
+   "F": 2,
+   "P": 4,
+   "T": 1
+  },
+  "provenance_share": 1.0,
+  "context_bullets": 8,
+  "context_cited_ids": 7,
+  "context_coverage_of_live_state": 1.0,
+  "episodes_recorded": 8
+ },
+ "per_event": [
+  {
+   "event_id": "S-0",
+   "index": 0,
+   "date": "2025-06-02",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "writes": 1
+    }
+   },
+   "violations": {},
+   "new_violations": {},
+   "metrics": {
+    "entries": {
+     "E": 1,
+     "O": 2,
+     "P": 3
+    },
+    "live_entries": {
+     "P": 3
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 3,
+    "context_cited_ids": 3,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 1
+   }
+  },
+  {
+   "event_id": "S-1",
+   "index": 1,
+   "date": "2025-06-08",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "writes": 4
+    }
+   },
+   "violations": {},
+   "new_violations": {},
+   "metrics": {
+    "entries": {
+     "E": 2,
+     "O": 4,
+     "P": 4
+    },
+    "live_entries": {
+     "P": 4
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 4,
+    "context_cited_ids": 4,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 2
+   }
+  },
+  {
+   "event_id": "S-2",
+   "index": 2,
+   "date": "2025-06-15",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "writes": 3
+    }
+   },
+   "violations": {},
+   "new_violations": {},
+   "metrics": {
+    "entries": {
+     "E": 3,
+     "O": 5,
+     "P": 4
+    },
+    "live_entries": {
+     "P": 4
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 4,
+    "context_cited_ids": 4,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 3
+   }
+  },
+  {
+   "event_id": "S-3",
+   "index": 3,
+   "date": "2025-06-22",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    }
+   },
+   "violations": {},
+   "new_violations": {},
+   "metrics": {
+    "entries": {
+     "E": 4,
+     "O": 6,
+     "P": 4
+    },
+    "live_entries": {
+     "P": 4
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 4,
+    "context_cited_ids": 4,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 4
+   }
+  },
+  {
+   "event_id": "S-4",
+   "index": 4,
+   "date": "2025-07-01",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/hypotheses.md": {
+     "writes": 1
+    },
+    "state/profile.md": {
+     "writes": 1
+    },
+    "state/transient.md": {
+     "writes": 1
+    }
+   },
+   "violations": {},
+   "new_violations": {},
+   "metrics": {
+    "entries": {
+     "E": 5,
+     "O": 8,
+     "F": 1,
+     "P": 4,
+     "T": 1,
+     "H": 1
+    },
+    "live_entries": {
+     "F": 1,
+     "P": 4,
+     "T": 1,
+     "H": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 6,
+    "context_cited_ids": 7,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 5
+   }
+  },
+  {
+   "event_id": "S-5",
+   "index": 5,
+   "date": "2025-07-10",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/hypotheses.md": {
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "writes": 1
+    },
+    "state/transient.md": {
+     "writes": 1
+    }
+   },
+   "violations": {
+    "context_uncited": 1
+   },
+   "new_violations": {
+    "context_uncited": 1
+   },
+   "metrics": {
+    "entries": {
+     "E": 6,
+     "O": 9,
+     "F": 1,
+     "P": 5,
+     "T": 2,
+     "H": 1
+    },
+    "live_entries": {
+     "F": 1,
+     "P": 4,
+     "T": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 7,
+    "context_cited_ids": 6,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 6
+   }
+  },
+  {
+   "event_id": "S-6",
+   "index": 6,
+   "date": "2025-07-16",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "writes": 1
+    }
+   },
+   "violations": {
+    "context_uncited": 1
+   },
+   "new_violations": {},
+   "metrics": {
+    "entries": {
+     "E": 7,
+     "O": 11,
+     "F": 1,
+     "P": 5,
+     "T": 2,
+     "H": 1
+    },
+    "live_entries": {
+     "F": 1,
+     "P": 4,
+     "T": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 7,
+    "context_cited_ids": 6,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 7
+   }
+  },
+  {
+   "event_id": "S-7",
+   "index": 7,
+   "date": "2025-07-24",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "writes": 2
+    },
+    "state/profile.md": {
+     "writes": 1
+    },
+    "state/transient.md": {
+     "writes": 1
+    }
+   },
+   "violations": {
+    "context_uncited": 1
+   },
+   "new_violations": {},
+   "metrics": {
+    "entries": {
+     "E": 8,
+     "O": 12,
+     "F": 2,
+     "P": 5,
+     "T": 3,
+     "H": 1
+    },
+    "live_entries": {
+     "F": 2,
+     "P": 4,
+     "T": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 8,
+    "context_cited_ids": 7,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 8
+   }
+  }
+ ],
+ "violations": [
+  {
+   "event_id": "S-5",
+   "code": "context_uncited",
+   "path": "context.md",
+   "line": 11,
+   "detail": "None",
+   "id": null
+  }
+ ],
+ "lifecycle": {
+  "E-0": {
+   "type": "E",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-0.1": {
+   "type": "O",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-0.2": {
+   "type": "O",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "P-0.1": {
+   "type": "P",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     "current"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "P-0.2": {
+   "type": "P",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     "current"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "P-0.3": {
+   "type": "P",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     "current"
+    ],
+    [
+     "S-5",
+     "superseded"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "E-1": {
+   "type": "E",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-1.1": {
+   "type": "O",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-1.2": {
+   "type": "O",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "P-1.1": {
+   "type": "P",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     "current"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "E-2": {
+   "type": "E",
+   "created": "S-2",
+   "statuses": [
+    [
+     "S-2",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-2.1": {
+   "type": "O",
+   "created": "S-2",
+   "statuses": [
+    [
+     "S-2",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "E-3": {
+   "type": "E",
+   "created": "S-3",
+   "statuses": [
+    [
+     "S-3",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-3.1": {
+   "type": "O",
+   "created": "S-3",
+   "statuses": [
+    [
+     "S-3",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "E-4": {
+   "type": "E",
+   "created": "S-4",
+   "statuses": [
+    [
+     "S-4",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-4.1": {
+   "type": "O",
+   "created": "S-4",
+   "statuses": [
+    [
+     "S-4",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-4.2": {
+   "type": "O",
+   "created": "S-4",
+   "statuses": [
+    [
+     "S-4",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "F-4.1": {
+   "type": "F",
+   "created": "S-4",
+   "statuses": [
+    [
+     "S-4",
+     "current"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "T-4.1": {
+   "type": "T",
+   "created": "S-4",
+   "statuses": [
+    [
+     "S-4",
+     "active"
+    ],
+    [
+     "S-5",
+     "superseded"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "H-4.1": {
+   "type": "H",
+   "created": "S-4",
+   "statuses": [
+    [
+     "S-4",
+     "open"
+    ],
+    [
+     "S-5",
+     "confirmed"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "E-5": {
+   "type": "E",
+   "created": "S-5",
+   "statuses": [
+    [
+     "S-5",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-5.1": {
+   "type": "O",
+   "created": "S-5",
+   "statuses": [
+    [
+     "S-5",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "P-5.1": {
+   "type": "P",
+   "created": "S-5",
+   "statuses": [
+    [
+     "S-5",
+     "current"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "T-5.1": {
+   "type": "T",
+   "created": "S-5",
+   "statuses": [
+    [
+     "S-5",
+     "active"
+    ],
+    [
+     "S-7",
+     "superseded"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "E-6": {
+   "type": "E",
+   "created": "S-6",
+   "statuses": [
+    [
+     "S-6",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-6.1": {
+   "type": "O",
+   "created": "S-6",
+   "statuses": [
+    [
+     "S-6",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-6.2": {
+   "type": "O",
+   "created": "S-6",
+   "statuses": [
+    [
+     "S-6",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "E-7": {
+   "type": "E",
+   "created": "S-7",
+   "statuses": [
+    [
+     "S-7",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "O-7.1": {
+   "type": "O",
+   "created": "S-7",
+   "statuses": [
+    [
+     "S-7",
+     null
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "F-7.1": {
+   "type": "F",
+   "created": "S-7",
+   "statuses": [
+    [
+     "S-7",
+     "current"
+    ]
+   ],
+   "last_seen": "S-7"
+  },
+  "T-7.1": {
+   "type": "T",
+   "created": "S-7",
+   "statuses": [
+    [
+     "S-7",
+     "active"
+    ]
+   ],
+   "last_seen": "S-7"
+  }
+ },
+ "timeline": [
+  {
+   "event_id": "S-0",
+   "date": "2025-06-02",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-0",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Weekend cooking project about fresh pasta from scratch."
+     },
+     {
+      "id": "O-0.1",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Wants explanations for the why behind each step and likes the science."
+     },
+     {
+      "id": "O-0.2",
+      "status": "reaction",
+      "path": "memory/episodes.md",
+      "statement": "Liked the detail and wants more of that in future help."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "P-0.1",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Wants step-by-step help that explains why each step matters."
+     },
+     {
+      "id": "P-0.2",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Wants science-backed explanations with the underlying why."
+     },
+     {
+      "id": "P-0.3",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Wants detailed answers rather than brief ones."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Wants detailed answers rather than brief ones (P-0.3)",
+     "Wants science-backed explanations with the underlying why (P-0.2)",
+     "Wants step-by-step help that explains why each step matters (P-0.1)"
+    ],
+    "removed": [],
+    "cited_added": [
+     "P-0.1",
+     "P-0.2",
+     "P-0.3"
+    ],
+    "cited_removed": [],
+    "bullets": 3,
+    "as_of": "S-0"
+   }
+  },
+  {
+   "event_id": "S-1",
+   "date": "2025-06-08",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-1",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Long Sunday cook about vegetarian ramen broth."
+     },
+     {
+      "id": "O-1.1",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Wants deep, technique-focused help and has all Sunday to cook."
+     },
+     {
+      "id": "O-1.2",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Likes spicy food and puts chili crisp on everything."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "P-1.1",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Prefers spicy food and chili crisp."
+     }
+    ],
+    "changed": [
+     {
+      "id": "P-0.1",
+      "status": [
+       "current",
+       "current"
+      ],
+      "fields": {
+       "basis": [
+        "O-0.1",
+        "O-0.1, O-1.1"
+       ],
+       "confirmed": [
+        null,
+        "2025-06-08"
+       ]
+      },
+      "statement": "Wants step-by-step help that explains why each step matters."
+     },
+     {
+      "id": "P-0.2",
+      "status": [
+       "current",
+       "current"
+      ],
+      "fields": {
+       "basis": [
+        "O-0.1",
+        "O-0.1, O-1.1"
+       ],
+       "confirmed": [
+        null,
+        "2025-06-08"
+       ]
+      },
+      "statement": "Wants science-backed explanations with the underlying why."
+     },
+     {
+      "id": "P-0.3",
+      "status": [
+       "current",
+       "current"
+      ],
+      "fields": {
+       "basis": [
+        "O-0.1, O-0.2",
+        "O-0.1, O-0.2, O-1.1"
+       ],
+       "confirmed": [
+        null,
+        "2025-06-08"
+       ]
+      },
+      "statement": "Wants detailed answers rather than brief ones."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Prefers spicy food and chili crisp (P-1.1)"
+    ],
+    "removed": [],
+    "cited_added": [
+     "P-1.1"
+    ],
+    "cited_removed": [],
+    "bullets": 4,
+    "as_of": "S-1"
+   }
+  },
+  {
+   "event_id": "S-2",
+   "date": "2025-06-15",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-2",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Troubleshooting dense sourdough and asked for a full rundown."
+     },
+     {
+      "id": "O-2.1",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Asked for a full rundown on why sourdough is dense, with detail and reasoning."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [],
+    "changed": [
+     {
+      "id": "P-0.1",
+      "status": [
+       "current",
+       "current"
+      ],
+      "fields": {
+       "basis": [
+        "O-0.1, O-1.1",
+        "O-0.1, O-1.1, O-2.1"
+       ],
+       "confirmed": [
+        "2025-06-08",
+        "2025-06-15"
+       ]
+      },
+      "statement": "Wants step-by-step help that explains why each step matters."
+     },
+     {
+      "id": "P-0.2",
+      "status": [
+       "current",
+       "current"
+      ],
+      "fields": {
+       "basis": [
+        "O-0.1, O-1.1",
+        "O-0.1, O-1.1, O-2.1"
+       ],
+       "confirmed": [
+        "2025-06-08",
+        "2025-06-15"
+       ]
+      },
+      "statement": "Wants science-backed explanations with the underlying why."
+     },
+     {
+      "id": "P-0.3",
+      "status": [
+       "current",
+       "current"
+      ],
+      "fields": {
+       "basis": [
+        "O-0.1, O-0.2, O-1.1",
+        "O-0.1, O-0.2, O-1.1, O-2.1"
+       ],
+       "confirmed": [
+        "2025-06-08",
+        "2025-06-15"
+       ]
+      },
+      "statement": "Wants detailed answers rather than brief ones."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [],
+    "removed": [],
+    "cited_added": [],
+    "cited_removed": [],
+    "bullets": 4,
+    "as_of": "S-2"
+   }
+  },
+  {
+   "event_id": "S-3",
+   "date": "2025-06-22",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-3",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Cooking for friends."
+     },
+     {
+      "id": "O-3.1",
+      "status": "reaction",
+      "path": "memory/episodes.md",
+      "statement": "Said this was the best part of the week after the cooking walkthrough."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [],
+    "removed": [],
+    "cited_added": [],
+    "cited_removed": [],
+    "bullets": 4,
+    "as_of": "S-3"
+   }
+  },
+  {
+   "event_id": "S-4",
+   "date": "2025-07-01",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-4",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Baby arrived early and sleep is now fragmented."
+     },
+     {
+      "id": "O-4.1",
+      "status": "event",
+      "path": "memory/episodes.md",
+      "statement": "Baby arrived early."
+     },
+     {
+      "id": "O-4.2",
+      "status": "event",
+      "path": "memory/episodes.md",
+      "statement": "Sleeping in 90-minute chunks; total chaos."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "F-4.1",
+      "status": "current",
+      "path": "state/profile.md",
+      "statement": "Has a newborn who arrived early."
+     },
+     {
+      "id": "T-4.1",
+      "status": "active",
+      "path": "state/transient.md",
+      "statement": "Sleep is fragmented in 90-minute chunks right now."
+     },
+     {
+      "id": "H-4.1",
+      "status": "open",
+      "path": "state/hypotheses.md",
+      "statement": "The newborn may make shorter answers more useful for now."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Has a newborn who arrived early; sleep is fragmented (F-4.1, T-4.1)",
+     "Newborn sleep disruption may make shorter answers more useful (H-4.1, open)"
+    ],
+    "removed": [],
+    "cited_added": [
+     "F-4.1",
+     "H-4.1",
+     "T-4.1"
+    ],
+    "cited_removed": [],
+    "bullets": 6,
+    "as_of": "S-4"
+   }
+  },
+  {
+   "event_id": "S-5",
+   "date": "2025-07-10",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-5",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Dinner help while holding something with one hand."
+     },
+     {
+      "id": "O-5.1",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Asked for a one-handed dinner and a 3-line reply because they read at 3am."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "P-5.1",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Wants concise answers for now."
+     },
+     {
+      "id": "T-5.1",
+      "status": "active",
+      "path": "state/transient.md",
+      "statement": "Sleep is still fragmented at night."
+     }
+    ],
+    "changed": [
+     {
+      "id": "P-0.3",
+      "status": [
+       "current",
+       "superseded"
+      ],
+      "fields": {
+       "until": [
+        null,
+        "2025-07-10"
+       ],
+       "superseded_by": [
+        null,
+        "P-5.1"
+       ]
+      },
+      "statement": "Wants detailed answers rather than brief ones."
+     },
+     {
+      "id": "T-4.1",
+      "status": [
+       "active",
+       "superseded"
+      ],
+      "fields": {
+       "until": [
+        null,
+        "2025-07-10"
+       ],
+       "superseded_by": [
+        null,
+        "T-5.1"
+       ]
+      },
+      "statement": "Sleep is fragmented in 90-minute chunks right now."
+     },
+     {
+      "id": "H-4.1",
+      "status": [
+       "open",
+       "confirmed"
+      ],
+      "fields": {
+       "for": [
+        "O-4.2",
+        "O-4.2, O-5.1"
+       ],
+       "resolved_into": [
+        null,
+        "P-5.1"
+       ]
+      },
+      "statement": "The newborn may make shorter answers more useful for now."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Has a newborn who arrived early; sleep is fragmented (F-4.1, T-5.1)",
+     "None",
+     "Wants concise answers for now (P-5.1)"
+    ],
+    "removed": [
+     "Has a newborn who arrived early; sleep is fragmented (F-4.1, T-4.1)",
+     "Newborn sleep disruption may make shorter answers more useful (H-4.1, open)",
+     "Wants detailed answers rather than brief ones (P-0.3)"
+    ],
+    "cited_added": [
+     "P-5.1",
+     "T-5.1"
+    ],
+    "cited_removed": [
+     "H-4.1",
+     "P-0.3",
+     "T-4.1"
+    ],
+    "bullets": 6,
+    "as_of": "S-5"
+   }
+  },
+  {
+   "event_id": "S-6",
+   "date": "2025-07-16",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-6",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Batch-cooking chat about freezer meals."
+     },
+     {
+      "id": "O-6.1",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Asked for a short, no-explanations list of freezer meals."
+     },
+     {
+      "id": "O-6.2",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Said short is all they can handle now."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [],
+    "changed": [
+     {
+      "id": "P-5.1",
+      "status": [
+       "current",
+       "current"
+      ],
+      "fields": {
+       "basis": [
+        "O-4.2, O-5.1",
+        "O-4.2, O-5.1, O-6.1, O-6.2"
+       ],
+       "confirmed": [
+        null,
+        "2025-07-16"
+       ]
+      },
+      "statement": "Wants concise answers for now."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [],
+    "removed": [],
+    "cited_added": [],
+    "cited_removed": [],
+    "bullets": 6,
+    "as_of": "S-6"
+   }
+  },
+  {
+   "event_id": "S-7",
+   "date": "2025-07-24",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-7",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Quick request for another one-pan vegetarian spicy recipe while sounding exhausted."
+     },
+     {
+      "id": "O-7.1",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Asked for another one-pan vegetarian spicy recipe and sounded exhausted."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "F-7.1",
+      "status": "current",
+      "path": "state/profile.md",
+      "statement": "Is vegetarian."
+     },
+     {
+      "id": "T-7.1",
+      "status": "active",
+      "path": "state/transient.md",
+      "statement": "Sleep is still fragmented at night."
+     }
+    ],
+    "changed": [
+     {
+      "id": "P-1.1",
+      "status": [
+       "current",
+       "current"
+      ],
+      "fields": {
+       "basis": [
+        "O-1.2",
+        "O-1.2, O-7.1"
+       ],
+       "confirmed": [
+        null,
+        "2025-07-24"
+       ]
+      },
+      "statement": "Prefers spicy food and chili crisp."
+     },
+     {
+      "id": "P-5.1",
+      "status": [
+       "current",
+       "current"
+      ],
+      "fields": {
+       "basis": [
+        "O-4.2, O-5.1, O-6.1, O-6.2",
+        "O-4.2, O-5.1, O-6.1, O-6.2, O-7.1"
+       ],
+       "confirmed": [
+        "2025-07-16",
+        "2025-07-24"
+       ],
+       "review": [
+        "2025-07-24",
+        "2025-08-07"
+       ]
+      },
+      "statement": "Wants concise answers for now."
+     },
+     {
+      "id": "T-5.1",
+      "status": [
+       "active",
+       "superseded"
+      ],
+      "fields": {
+       "until": [
+        null,
+        "2025-07-24"
+       ],
+       "superseded_by": [
+        null,
+        "T-7.1"
+       ]
+      },
+      "statement": "Sleep is still fragmented at night."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Has a newborn who arrived early; sleep is fragmented (F-4.1, T-7.1)",
+     "Is vegetarian (F-7.1)"
+    ],
+    "removed": [
+     "Has a newborn who arrived early; sleep is fragmented (F-4.1, T-5.1)"
+    ],
+    "cited_added": [
+     "F-7.1",
+     "T-7.1"
+    ],
+    "cited_removed": [
+     "T-5.1"
+    ],
+    "bullets": 7,
+    "as_of": "S-7"
+   }
+  }
+ ]
+}

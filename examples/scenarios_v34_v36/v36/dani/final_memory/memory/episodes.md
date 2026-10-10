@@ -1,0 +1,21 @@
+# Episodes
+- E-0 | 2025-06-02 | source: S-0 | Weekend cooking project about fresh pasta from scratch.
+  - O-0.1 | stated | Wants explanations for the why behind each step and likes the science.
+  - O-0.2 | reaction | Liked the detail and wants more of that in future help.
+- E-1 | 2025-06-08 | source: S-1 | Long Sunday cook about vegetarian ramen broth.
+  - O-1.1 | stated | Wants deep, technique-focused help and has all Sunday to cook.
+  - O-1.2 | stated | Likes spicy food and puts chili crisp on everything.
+- E-2 | 2025-06-15 | source: S-2 | Troubleshooting dense sourdough and asked for a full rundown.
+  - O-2.1 | behavior | Asked for a full rundown on why sourdough is dense, with detail and reasoning.
+- E-3 | 2025-06-22 | source: S-3 | Cooking for friends.
+  - O-3.1 | reaction | Said this was the best part of the week after the cooking walkthrough.
+- E-4 | 2025-07-01 | source: S-4 | Baby arrived early and sleep is now fragmented.
+  - O-4.1 | event | Baby arrived early.
+  - O-4.2 | event | Sleeping in 90-minute chunks; total chaos.
+- E-5 | 2025-07-10 | source: S-5 | Dinner help while holding something with one hand.
+  - O-5.1 | behavior | Asked for a one-handed dinner and a 3-line reply because they read at 3am.
+- E-6 | 2025-07-16 | source: S-6 | Batch-cooking chat about freezer meals.
+  - O-6.1 | behavior | Asked for a short, no-explanations list of freezer meals.
+  - O-6.2 | stated | Said short is all they can handle now.
+- E-7 | 2025-07-24 | source: S-7 | Quick request for another one-pan vegetarian spicy recipe while sounding exhausted.
+  - O-7.1 | stated | Asked for another one-pan vegetarian spicy recipe and sounded exhausted.

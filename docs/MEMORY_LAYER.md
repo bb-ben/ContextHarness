@@ -66,7 +66,7 @@ read and written. It then runs the checks below. Results go to the item's trace 
 | Question | Check codes |
 |---|---|
 | Does each entry follow the format? | `unparsed_line`, `unparsed_entry`, `wrong_file`, `orphan_observation`, `duplicate_id`, `bad_status`, `bad_kind` |
-| Are preferences disciplined? | `undeclared_dimension` (a topic outside the seed list with no `new_dimension:` reason), `near_duplicate_dimension`, `unsupported_promotion` (a preference resting on non-stated evidence from one event, with no confirmed hypothesis), `missing_change_note` (a preference or fact superseding another without `changed:`), `long_value` (a current preference or fact over 240 characters), `unused_stated_observation` (a `stated` observation cited by no state entry, hypothesis or goal note) |
+| Are preferences disciplined? | `undeclared_dimension` (a topic outside the seed list with no `new_dimension:` reason), `near_duplicate_dimension`, `unsupported_promotion` (a preference resting on non-stated evidence from one event, with no confirmed hypothesis), `missing_change_note` (a preference or fact superseding another without `changed:`), `long_value` (a current preference or fact over 240 characters), `undecided_hypothesis` (supported by two events and still open), `overdue_preference_review`, `preference_into_transient` (a hypothesis about how they want help resolved into a transient entry), `unused_stated_observation` (a `stated` observation cited by no state entry, hypothesis or goal note) |
 | Does each entry have a source and date? | `future_id` (ID names an event that hasn't happened), `bad_date`, `date_mismatch` (date differs from its event's real date), `bad_source`, `parent_mismatch`, `missing_basis`, `dangling_ref`, `basis_not_observation`, `missing_topic`, `missing_end_date` (a transient entry with no `expires:`/`review:`, or an active goal with no `due:`/`review:`) |
 | Do current-state files contradict each other? | `topic_conflict` (two `current` entries for one topic), `incomplete_supersession`, `supersession_mismatch`, `unresolved_confirmation`, `overdue_transient`, `overdue_goal` (an active goal past its review or due date), `archived_live`, `context_stale`, `context_uncited`, `context_dangling`, `context_inactive` |
 | Does information survive across events? | `missing_episode` (an event left no `E` line), `entry_deleted`, `history_rewritten` (statement, date or kind changed, or basis lost), `status_reverted`; plus each entry's lifecycle (created, status changes, deleted) |
@@ -405,6 +405,42 @@ the shortest. A full run costs cents.
   On item 6, replies from v3.2's memory followed the old format, because that memory
   still held "numbered steps" as current.
 
+### v3.4 → v3.6: one home for how they want help
+
+Two more scenarios end on a neutral message ("Any ideas for dinner this week?",
+"Planning groceries for the week, can you help?"), so a reply without memory has
+nothing to go on. They are the ones that separate memory from none. Results are in
+[`examples/scenarios_v34_v36/`](../examples/scenarios_v34_v36); $2.25 for all three
+rounds.
+
+| Version | Change | What happened on the neutral-ending scenarios |
+|---|---|---|
+| v3.4 | Carry over what still holds when replacing; decide a hypothesis once two events support it | Both answered correctly, but in 3 of 4 scenarios the change went into a transient entry ("needs very short help in the newborn phase") with the old preference left standing; "cooks for two" lived only in a goal that closed; the burnout reply asked for cuisine and household |
+| v3.5 | Decisions change preferences; temporary overrides name the preference they override | Worse: both changes went into transient entries that expired a week later ("three-line answers tonight"), the old preference returned, and the burnout answer chose the old-preference trap. Given the same event twice (a resume replayed it), the model once superseded and once wrote a transient override |
+| v3.6 | How they want help lives only in preferences; a change that may not last still supersedes, with `review:`; transient entries hold facts and circumstances | Both correct. "Concise answers for now" (review in four weeks) and "no grams, calories or tracking" superseded the old values with `changed:` notes; "vegetarian" and "cooks for self and partner" are profile facts; the transient entries are circumstances ("signed off work with burnout") |
+
+**Replies** (share of changed attributes the reply follows now):
+
+| | New parent | Burnout |
+|---|---|---|
+| No memory | 0, 0 | 0, 0 |
+| v3.4 memory | 0.5, 0.5 | 0.5, 1.0 |
+| v3.6 memory | 0.5, 0.5 | 0.5, 0.5 |
+| Full history | 0.5 | 1.0 |
+| Rolling summary | 1.0, 1.0 | 1.0, 1.0 |
+
+The v3.6 replies use memory directly: "for you and your partner,
+Mediterranean-leaning, skipping grams, calories and tracking" (v3.4's asked for the
+household and cuisine). What they miss: "one-pan, freezer-friendly", asked for in
+three different tasks, never became a preference; and the burnout reply holds "gentle
+check-ins instead of reports" in memory but doesn't check in. The summary still writes
+replies that fit better.
+
+**Two places for one kind of belief is a design flaw, not a wording problem.** With a
+transient path for how someone wants help, the model's choice between "change" and
+"for now" was close to a coin flip, and the "for now" branch expired quietly. Removing
+the path fixed both scenarios where rewording v3.4 → v3.5 had made them worse.
+
 ## Known gaps
 
 - **The archive itself has no rollover yet** (200,000 chars). That's enough for
@@ -418,11 +454,15 @@ the shortest. A full run costs cents.
   item under v2 and v3. Vetting finds 3 of the 6 sample items with a labeled change
   usable as answer tests; it is one model's judgment per item and hasn't been checked
   against a person's reading.
-- **v3.3 is untested on a long history.** The scenarios have about 8 events; whether
-  replacement holds up over 75 (item 6) is open.
-- **Replacement can drop what still holds** (the diagnosis scenario lost "quick").
-- **Lasting or temporary is a judgment call** the agent can make differently from the
-  label (the injury scenario).
+- **v3.6 is untested on a long history.** The scenarios have about 8 events; whether
+  it holds up over 75 (item 6) is open.
+- **Wishes repeated across tasks still don't reliably become preferences**
+  ("one-pan, freezer-friendly" in the new-parent scenario).
+- **Replies apply some of what memory holds, not all** (no check-in, though memory
+  says they want one), and a rolling summary still writes better-fitting replies on
+  short histories.
+- **Replacement can drop what still holds** (the diagnosis scenario lost "quick" in
+  v3.3 and v3.4).
 - **Open choices left for later:**
   - per-event review of open hypotheses (v2's accident hypothesis sat untouched for
     14 events);

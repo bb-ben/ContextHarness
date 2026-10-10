@@ -1,0 +1,23 @@
+# Episodes
+- E-0 | 2025-06-02 | source: S-0 | Weekend cooking project about fresh pasta.
+  - O-0.1 | stated | Wants step-by-step explanations of the science and why behind each step.
+  - O-0.2 | stated | Wants detailed help and wants more of this in future.
+- E-1 | 2025-06-08 | source: S-1 | Asked for a deep, technical vegetarian ramen broth and said they like chili crisp.
+  - O-1.1 | stated | Wants detailed, step-by-step explanations with the why and science behind each step.
+  - O-1.2 | stated | Likes spicy food and puts chili crisp on everything.
+- E-2 | 2025-06-15 | source: S-2 | Troubleshooting dense sourdough and asking for the full rundown.
+  - O-2.1 | behavior | Asked for the full rundown on dense sourdough, signaling a detailed step-by-step answer.
+- E-3 | 2025-06-22 | source: S-3 | Short chat about a six-hour vegetarian mole for friends.
+  - O-3.1 | reaction | Said this cooking walkthrough was the best part of their week.
+- E-4 | 2025-07-01 | source: S-4 | Big news about an early-arriving baby and severe sleep fragmentation.
+  - O-4.1 | event | Baby arrived early; now has a newborn.
+  - O-4.2 | event | Is in total chaos and sleeping in 90-minute chunks.
+- E-5 | 2025-07-10 | source: S-5 | Dinner with one free hand.
+  - O-5.1 | behavior | Asked for a one-handed dinner and requested the answer be only 3 lines.
+  - O-5.2 | stated | Reads replies at 3am.
+- E-6 | 2025-07-16 | source: S-6 | Batch cooking and brevity preferences.
+  - O-6.1 | behavior | Asked for freezer meals to batch on one day, one pan if possible, a short list, and no explanations.
+  - O-6.2 | stated | Said short is all they can handle now.
+- E-7 | 2025-07-24 | source: S-7 | Brief food request about a one-pan vegetarian, spicy meal.
+  - O-7.1 | behavior | Requested a one-pan vegetarian, spicy meal idea.
+  - O-7.2 | stated | Joked that only their taste buds are awake.

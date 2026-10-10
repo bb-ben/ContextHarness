@@ -1,0 +1,151 @@
+{
+  "model": "gpt-5.4-mini",
+  "rows": [
+    {
+      "source": "v36_scenarios__002_foodbody-scenarios_dani_cd5a822e",
+      "condition": "memory",
+      "memory_kind": "agent",
+      "repeat": 1,
+      "changed_fit_current": 0.5,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 0.75,
+      "utilization": {
+        "applied": [
+          "F-7.1",
+          "T-7.1",
+          "P-5.1",
+          "P-1.1"
+        ],
+        "live": [
+          "F-7.1",
+          "T-7.1",
+          "P-5.1",
+          "P-1.1"
+        ],
+        "closed": [],
+        "evidence": [],
+        "unknown": [],
+        "live_preferences": [
+          "P-5.1",
+          "P-1.1"
+        ],
+        "recently_changed": [
+          "T-7.1",
+          "P-5.1"
+        ]
+      }
+    },
+    {
+      "source": "v36_scenarios__002_foodbody-scenarios_dani_cd5a822e",
+      "condition": "memory",
+      "memory_kind": "agent",
+      "repeat": 2,
+      "changed_fit_current": 0.5,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 0.75,
+      "utilization": {
+        "applied": [
+          "F-7.1",
+          "P-1.1",
+          "P-5.1",
+          "T-7.1"
+        ],
+        "live": [
+          "F-7.1",
+          "P-1.1",
+          "P-5.1",
+          "T-7.1"
+        ],
+        "closed": [],
+        "evidence": [],
+        "unknown": [],
+        "live_preferences": [
+          "P-1.1",
+          "P-5.1"
+        ],
+        "recently_changed": [
+          "P-5.1",
+          "T-7.1"
+        ]
+      }
+    },
+    {
+      "source": "v36_scenarios__003_foodbody-scenarios_lena_a7a829dd",
+      "condition": "memory",
+      "memory_kind": "agent",
+      "repeat": 1,
+      "changed_fit_current": 0.5,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 0.75,
+      "utilization": {
+        "applied": [
+          "F-0.1",
+          "P-0.2",
+          "P-5.1",
+          "P-7.1",
+          "P-7.2"
+        ],
+        "live": [
+          "F-0.1",
+          "P-0.2",
+          "P-5.1",
+          "P-7.1",
+          "P-7.2"
+        ],
+        "closed": [],
+        "evidence": [],
+        "unknown": [],
+        "live_preferences": [
+          "P-0.2",
+          "P-5.1",
+          "P-7.1",
+          "P-7.2"
+        ],
+        "recently_changed": [
+          "P-5.1"
+        ]
+      }
+    },
+    {
+      "source": "v36_scenarios__003_foodbody-scenarios_lena_a7a829dd",
+      "condition": "memory",
+      "memory_kind": "agent",
+      "repeat": 2,
+      "changed_fit_current": 0.5,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 0.75,
+      "utilization": {
+        "applied": [
+          "F-0.1",
+          "P-0.2",
+          "P-5.1",
+          "P-7.1",
+          "P-7.2",
+          "T-7.1"
+        ],
+        "live": [
+          "F-0.1",
+          "P-0.2",
+          "P-5.1",
+          "P-7.1",
+          "P-7.2",
+          "T-7.1"
+        ],
+        "closed": [],
+        "evidence": [],
+        "unknown": [],
+        "live_preferences": [
+          "P-0.2",
+          "P-5.1",
+          "P-7.1",
+          "P-7.2"
+        ],
+        "recently_changed": [
+          "P-5.1",
+          "T-7.1"
+        ]
+      }
+    }
+  ],
+  "estimated_cost_usd": 0.0503
+}

@@ -1,0 +1,5 @@
+# Transient state
+- T-4.1 | superseded | 2025-07-01 | review: 2025-07-08 | basis: O-4.2 | until: 2025-07-10 | superseded_by: T-5.1 | Is in a chaotic newborn phase and sleeping in 90-minute chunks.
+- T-5.1 | superseded | 2025-07-10 | review: 2025-07-17 | basis: O-5.1, O-5.2 | supersedes: T-4.1 | until: 2025-07-16 | superseded_by: T-6.1 | Is still sleep-deprived and needs one-handed, very short help at 3am.
+- T-6.1 | superseded | 2025-07-16 | review: 2025-07-23 | basis: O-5.1, O-5.2, O-6.1, O-6.2 | supersedes: T-5.1 | until: 2025-07-24 | superseded_by: T-7.1 | Is still sleep-deprived in the newborn phase and needs very short help, with short lists and no explanations. Changed: now asks for brevity even outside 3am.
+- T-7.1 | active | 2025-07-24 | review: 2025-07-31 | basis: O-5.1, O-5.2, O-6.1, O-6.2, O-7.2 | supersedes: T-6.1 | Is still sleep-deprived in the newborn phase and needs very short help, with short lists and no explanations. Changed: review extended; still in the newborn phase.

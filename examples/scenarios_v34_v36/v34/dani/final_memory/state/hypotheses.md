@@ -1,0 +1,2 @@
+# Hypotheses
+- H-5.1 | confirmed | 2025-07-10 | confidence: low | for: O-5.1, O-6.2 | challenges: P-0.2 | topic: detail-level | resolved_into: T-6.1 | They may prefer very short answers when sleep-deprived at 3am.
