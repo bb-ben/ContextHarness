@@ -171,12 +171,13 @@ def check_state(parsed: ParsedWorkspace, events: list[EventInfo], current: int,
             review = e.fields.get("review")
             if not (review and is_valid_date(review) and review > now.date):
                 add("undecided_hypothesis", e, f"supported by two events since S-{ripe}, still open without a later review:")
-        if e.type == "T" and e.status == "active":
-            for target in e.refs().get("overrides", []):
-                chain = [t for t in entries.values() if t.type == "T" and target in t.refs().get("overrides", [])]
-                if len(chain) >= 3 and target in entries and entries[target].status == "current":
-                    add("renewed_override", e, f"{target} has been overridden {len(chain)} times; the change has "
-                                               "lasted, so supersede it, or let the override expire")
+        if e.type == "P" and e.status == "current" and (review := e.fields.get("review")):
+            if is_valid_date(review) and review <= now.date:
+                add("overdue_preference_review", e, f"review {review} reached, not decided on {now.date}")
+        if e.type == "H" and e.fields.get("topic") and e.refs().get("resolved_into"):
+            if any(r in entries and entries[r].type == "T" for r in e.refs()["resolved_into"]):
+                add("preference_into_transient", e, "a hypothesis about how they want help resolved into a transient "
+                                                    "entry; it belongs in a preference (with review: if it may not last)")
         if e.type == "G" and e.status == "active":
             end = goal_end(e)
             if end and is_valid_date(end) and end < now.date:  # a goal is live through its due day

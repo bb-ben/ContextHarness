@@ -46,7 +46,7 @@ def respond_instruction(read_budget_left: int) -> str:
         "You are now replying to the person's last message in <current_conversation>. Memory is read-only. "
         f"You can read at most {read_budget_left} more characters with read_file and lookup. "
         "Before writing, find the preference dimensions that matter for this reply and their current values, "
-        "last changes and overrides in <preference_dimensions>, any active transient state, and the facts in "
+        "last changes and review dates in <preference_dimensions>, any active transient state, and the facts in "
         "<state> that bear on it (who they cook for, their diet, their constraints). Use what memory already "
         "knows instead of asking for it. Then write the reply you would actually send, shaped by who they are "
         "now, and call respond with it and the IDs of the entries it rests on."

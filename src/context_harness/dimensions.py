@@ -16,7 +16,6 @@ from .workspace import Layout
 
 PREFERENCES_FILE = "state/preferences.md"
 HYPOTHESES_FILE = "state/hypotheses.md"
-TRANSIENT_FILE = "state/transient.md"
 
 
 @dataclass
@@ -27,15 +26,11 @@ class DimensionRow:
     current: list[Entry] = field(default_factory=list)
     challenged_by: list[Entry] = field(default_factory=list)
     hypotheses: list[Entry] = field(default_factory=list)  # open hypotheses tagged with this dimension
-    overridden_by: list[Entry] = field(default_factory=list)  # active transient entries overriding the value
 
 
-def dimension_rows(layout: Layout, preferences_text: str, hypotheses_text: str,
-                   transient_text: str = "") -> list[DimensionRow]:
+def dimension_rows(layout: Layout, preferences_text: str, hypotheses_text: str) -> list[DimensionRow]:
     prefs, _ = parse_file(PREFERENCES_FILE, preferences_text, ("P",))
     hyps, _ = parse_file(HYPOTHESES_FILE, hypotheses_text, ("H",))
-    overrides = [t for t in parse_file(TRANSIENT_FILE, transient_text, ("T",))[0]
-                 if t.status == "active" and t.refs().get("overrides")]
     rows = {d.key: DimensionRow(d.key, d.description, custom=False) for d in layout.dimensions}
     for p in prefs:
         key = p.fields.get("topic")
@@ -53,7 +48,6 @@ def dimension_rows(layout: Layout, preferences_text: str, hypotheses_text: str,
         ids = {p.id for p in row.current}
         row.challenged_by = [h for h in open_hyps if ids & set(h.refs().get("challenges", []))]
         row.hypotheses = [h for h in open_hyps if h.fields.get("topic") == row.key and h not in row.challenged_by]
-        row.overridden_by = [t for t in overrides if ids & set(t.refs()["overrides"])]
     return list(rows.values())
 
 
@@ -72,12 +66,10 @@ def render_dimensions(rows: list[DimensionRow]) -> str:
             lines.append(f"{r.key}: {r.description or '(no reason given)'}")
             if r.current:
                 for p in r.current:
-                    lines.append(f"  current: {p.id} \"{p.statement}\"")
+                    review = f" (review {p.fields['review']})" if p.fields.get("review") else ""
+                    lines.append(f"  current: {p.id} \"{p.statement}\"{review}")
                     if (replaced := p.refs().get("supersedes")) and p.fields.get(CHANGE_FIELD):
                         lines.append(f"    last change: {p.date}, replaced {', '.join(replaced)}: {p.fields[CHANGE_FIELD]}")
-                for t in r.overridden_by:
-                    until = t.fields.get("expires") or t.fields.get("review") or "?"
-                    lines.append(f"  for now, overridden by: {t.id} (until {until}) \"{t.statement}\"")
             else:
                 lines.append("  current: (none yet)")
             lines += [f"  challenged by: {h.id} (open) \"{h.statement}\"" for h in r.challenged_by]

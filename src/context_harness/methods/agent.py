@@ -41,16 +41,22 @@ class WorkspaceAgent:
 
     def due(self, date: str) -> list[tuple[Entry, str]]:
         """The layer's reminders: active transient entries whose expires/review date has
-        arrived, active goals whose review or due date has passed, and open hypotheses
-        that two events support (unless deferred with a later review date)."""
+        arrived, current preferences whose review date has arrived, active goals whose
+        review or due date has passed, and open hypotheses that two events support
+        (unless deferred with a later review date)."""
         out = []
-        for path, kind in ((TRANSIENT_FILE, "T"), (GOALS_FILE, "G"), (HYPOTHESES_FILE, "H")):
+        for path, kind in ((TRANSIENT_FILE, "T"), (PREFERENCES_FILE, "P"), (GOALS_FILE, "G"), (HYPOTHESES_FILE, "H")):
             if self.ws.layout.spec(path) is None:
                 continue
             text = self.ws.read(path)
             lines = text.splitlines()
             entries, _ = parse_file(path, text, (kind,))
             for e in entries:
+                if kind == "P":
+                    review = e.fields.get("review")
+                    if e.status == "current" and review and review <= date:
+                        out.append((e, lines[e.line - 1]))
+                    continue
                 if kind == "H":
                     review = e.fields.get("review")
                     if e.status == "open" and hypothesis_ripe_at(e) is not None and not (review and review > date):
@@ -74,8 +80,7 @@ class WorkspaceAgent:
         if state := self.preloaded():
             blocks.append(prompts.render_state(state))
             if PREFERENCES_FILE in state:  # the structured view, derived from pre-loaded state
-                rows = dimension_rows(self.ws.layout, state[PREFERENCES_FILE], state.get(HYPOTHESES_FILE, ""),
-                                      state.get(TRANSIENT_FILE, ""))
+                rows = dimension_rows(self.ws.layout, state[PREFERENCES_FILE], state.get(HYPOTHESES_FILE, ""))
                 blocks.append(render_dimensions(rows))
         return blocks + [prompts.render_workspace(self.ws.list_files())]
 

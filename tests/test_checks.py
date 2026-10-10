@@ -303,21 +303,18 @@ def test_dimension_view_shows_values_custom_reasons_and_challenges():
     assert text.count("current: (none yet)") == len(HORIZONBENCH.dimensions) - 1
 
 
-def test_overrides_show_under_the_value_and_repeated_renewals_are_flagged():
+def test_preferences_that_may_not_last_carry_a_review_date():
     from context_harness.dimensions import dimension_rows, render_dimensions
 
-    prefs = "- P-0.1 | current | 2025-10-01 | topic: detail-level | basis: O-0.1 | Wants detailed answers.\n"
-    transient = "- T-2.1 | active | 2025-10-09 | review: 2025-10-16 | basis: O-2.1 | overrides: P-0.1 | Wants three-line answers for now.\n"
-    text = render_dimensions(dimension_rows(HORIZONBENCH, prefs, "", transient))
-    block = text.split("detail-level:")[1].split("\n")[1:3]
-    assert '  for now, overridden by: T-2.1 (until 2025-10-16) "Wants three-line answers for now."' in block
+    prefs = "- P-2.1 | current | 2025-10-09 | topic: detail-level | basis: O-2.1 | review: 2025-10-16 | Wants three-line answers.\n"
+    assert 'current: P-2.1 "Wants three-line answers." (review 2025-10-16)' in render_dimensions(
+        dimension_rows(HORIZONBENCH, prefs, ""))
+    snap = with_change("state/preferences.md", "| supersedes: P-0.1 |", "| supersedes: P-0.1 | review: 2025-10-15 |")
+    assert codes(snap, current=2)["overdue_preference_review"] == 0
+    assert codes(snap, current=3)["overdue_preference_review"] == 1  # 2025-10-20: review reached, undecided
 
-    chain = ("# Transient state\n"
-             "- T-0.2 | superseded | 2025-10-01 | review: 2025-10-05 | basis: O-0.1 | overrides: P-0.1 | until: 2025-10-05 | superseded_by: T-1.2 | Short for now.\n"
-             "- T-1.2 | superseded | 2025-10-05 | review: 2025-10-09 | basis: O-1.1 | overrides: P-0.1 | supersedes: T-0.2 | until: 2025-10-09 | superseded_by: T-2.2 | Short for now.\n"
-             "- T-2.2 | active | 2025-10-09 | review: 2025-10-16 | basis: O-2.1 | overrides: P-0.1 | supersedes: T-1.2 | Short for now.\n")
-    snap = dict(CLEAN, **{"state/transient.md": chain,
-                          "state/preferences.md": "# Preferences\n- P-0.1 | current | 2025-10-01 | topic: detail-level | basis: O-0.1 | Long.\n"})
-    assert codes(snap)["renewed_override"] == 1
-    once = dict(snap, **{"state/transient.md": chain.split("- T-1.2")[0] + "- T-2.2 | active | 2025-10-09 | review: 2025-10-16 | basis: O-2.1 | overrides: P-0.1 | Short for now.\n"})
-    assert codes(once)["renewed_override"] == 0
+
+def test_preference_hypotheses_must_not_resolve_into_transient_entries():
+    snap = with_change("state/hypotheses.md", "| resolved_into: P-2.1 |", "| topic: detail-level | resolved_into: T-1.1 |")
+    assert codes(snap)["preference_into_transient"] == 1
+    assert codes(CLEAN)["preference_into_transient"] == 0

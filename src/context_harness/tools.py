@@ -341,10 +341,12 @@ class Supersede(Tool):
         self.ws = ws
         self.spec = ToolSpec(
             "supersede",
-            "Replace a live entry with a new one. Give the old entry's ID and the complete new entry line; "
+            "Replace a live belief with a new current one. Give the old entry's ID and the complete new entry line; "
             "the new entry is added to the file for its type with supersedes: <old ID>, and the old one is "
             "marked superseded with until: and superseded_by:. A preference or fact replacing another needs "
-            f"changed: <what is different>, and its statement must stay under {VALUE_MAX_CHARS} characters.",
+            f"changed: <what is different>, and its statement must stay under {VALUE_MAX_CHARS} characters. "
+            "Not for closing anything: to close a goal, decide a hypothesis or expire a transient entry, "
+            "edit its status with edit_file.",
             _schema(id={"type": "string", "description": "ID of the live entry being replaced, e.g. P-10.1"},
                     new_entry={"type": "string", "description": "The complete new entry line, starting with '- '"}),
         )
@@ -377,7 +379,8 @@ class Supersede(Tool):
             raise WorkspaceError(f"new_entry did not parse as one entry: {problems[0].detail if problems else line[:80]}")
         new = parsed[0]
         if new.status not in LIVE_STATUSES:
-            raise WorkspaceError(f"the new entry must be live (current, active or open), not {new.status}")
+            raise WorkspaceError(f"the new entry must be live (current, active or open), not {new.status}. "
+                                 "To close or decide an entry, edit its status with edit_file instead.")
         if new.type in ("P", "F") and new.type == old.type:
             if not new.fields.get(CHANGE_FIELD):
                 raise WorkspaceError(f"Add {CHANGE_FIELD}: <what is different from {old_id}> to the new entry")
