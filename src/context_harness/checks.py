@@ -69,6 +69,8 @@ def check_preferences(parsed: ParsedWorkspace, layout: Layout) -> list[Problem]:
                                f"dimension {topic!r} overlaps {', '.join(near)}", first.id))
     resolved = {h.fields.get("resolved_into") for h in entries.values() if h.type == "H"}
     for p in prefs:
+        if p.status != "current":  # judged while it is in force; superseding it resolves the flag
+            continue
         basis = [entries[b] for b in p.refs().get("basis", []) if b in entries and entries[b].type == "O"]
         if not basis or p.id in resolved:
             continue

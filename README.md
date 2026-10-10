@@ -23,8 +23,12 @@ contract produces zero violations across all 901 events of the HorizonBench samp
   bounded, but preferences only accumulated: every signal got a new topic, so none
   was ever superseded and the change in the person was missed. See
   [`examples/real_run_v2_openai/`](examples/real_run_v2_openai).
-- **v3** adds preference dimensions to fix this. It hasn't been tested on a real
-  model yet.
+- **v3 (same item, $1.33).** Preference dimensions fixed the accumulation: all
+  preferences sat on 7 seed dimensions, 4 were superseded, and the life event was
+  linked to the decision-style value and revised it. The answer was still wrong,
+  because the answering step leaned on the top of `context.md` rather than the
+  revised value; see
+  [`examples/real_run_v3_openai/`](examples/real_run_v3_openai).
 
 | Read | For |
 |---|---|

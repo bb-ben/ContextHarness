@@ -1,0 +1,12 @@
+# Preferences
+- P-1.1 | superseded | 2025-09-30 | topic: help-format | basis: O-1.1 | until: 2025-09-30 | superseded_by: P-2.1 | Prefers step-by-step checklists.
+- P-2.1 | superseded | 2025-09-30 | topic: help-format | basis: O-1.1, O-2.1, O-3.1, O-4.1, O-5.3, O-6.2, O-8.2, O-9.1, O-9.2, O-11.2, O-17.1, O-24.2 | until: 2025-11-01 | superseded_by: P-27.1 | Prefers step-by-step checklists with clear priority order.
+- P-27.1 | current | 2025-11-01 | topic: help-format | basis: O-1.1, O-2.1, O-3.1, O-4.1, O-5.3, O-6.2, O-8.2, O-9.1, O-9.2, O-11.2, O-17.1, O-24.2, O-27.2, O-28.1 | supersedes: P-2.1 | Prefers step-by-step checklists and bullet points with clear priority order.
+- P-5.1 | current | 2025-10-04 | topic: tone | basis: O-5.2, O-8.3, O-9.2, O-17.1, O-26.3 | confirmed: 2025-10-29 | Prefers blunt, straight talk over sugarcoating.
+- P-7.1 | current | 2025-10-05 | topic: challenge-level | basis: O-7.1, O-9.3, O-20.4 | confirmed: 2025-10-21 | Prefers to be pushed with challenging training scenarios.
+- P-10.1 | superseded | 2025-10-10 | topic: decision-style | basis: O-4.2, O-10.2, O-11.2 | until: 2025-10-18 | superseded_by: P-15.1 | Prefers evidence-backed, threshold-based decisions in uncertain crises.
+- P-15.1 | current | 2025-10-18 | topic: decision-style | basis: O-4.2, O-10.2, O-11.2, O-14.1, O-15.1, O-17.2, O-19.2, O-24.1, O-24.2 | confirmed: 2025-10-27 | supersedes: P-10.1 | Prefers evidence-backed, threshold-based decisions in uncertain crises and is cautious about risky options.
+- P-12.1 | current | 2025-10-13 | topic: explanation-style | basis: O-12.2, O-13.2, O-18.1, O-25.2, O-28.1 | confirmed: 2025-11-01 | Prefers concrete examples over abstract theory.
+- P-12.2 | current | 2025-10-13 | topic: values | basis: O-12.3, O-24.1, O-24.2 | confirmed: 2025-10-27 | Values transparency, fairness, and helpfulness in AI systems.
+- P-23.1 | superseded | 2025-10-24 | topic: collaboration-style | basis: O-22.1, O-22.2, O-23.1 | until: 2025-11-01 | superseded_by: P-27.2 | Prefers collaborative co-creation on creative projects.
+- P-27.2 | current | 2025-11-01 | topic: collaboration-style | basis: O-22.1, O-22.2, O-23.1, O-27.1 | supersedes: P-23.1 | Prefers collaborative co-creation when working through questions and creative projects.

@@ -1,0 +1,16 @@
+# Goals
+- G-0.1 | active | 2025-09-29 | basis: O-0.1 | Improve high-pressure communication skills through negotiation drills.
+- G-1.1 | active | 2025-09-30 | due: 2025-10-01 | basis: O-1.2 | File a police report about the cyberstalking.
+  - 2025-09-30 (S-1): plans to file the report tomorrow and keep collecting evidence.
+  - 2025-10-05 (S-7): practiced rapport-building, deliberate pacing, and rights-aware questioning in a high-pressure roleplay.
+- G-8.1 | active | 2025-10-06 | due: 2025-11-17 | basis: O-8.1 | Prepare for the solo Trans-Labrador Highway ride.
+- G-12.1 | active | 2025-10-13 | basis: O-12.1 | Draft a code of ethics for the AI startup before scaling.
+  - 2025-10-13 (S-13): mapped stakeholder obligations, principles, red lines, bias testing, governance, review cadence, and external review for the ethics code.
+  - 2025-10-27 (S-24): stress-tested consent, retention, law-enforcement access, breach, and bias safeguards for launch.
+  - 2025-10-28 (S-25): wants the first version to center stakeholder governance, dual-use safeguards, privacy, security, accountability, and review cadence.
+- G-15.1 | active | 2025-10-18 | basis: O-15.1, O-15.2 | Build a cult-awareness art project with ethical, safety-first methods.
+  - 2025-10-18 (S-16): wants the imagery to stay clearly critical rather than romanticized.
+  - 2025-10-18 (S-15): pivoted from covert footage to transparent outreach with Priya, Ryan, and awareness groups.
+- G-17.1 | active | 2025-10-19 | due: 2025-11-30 | basis: O-17.1, O-17.2 | Rescue and finish the botched CB750 cafe racer build before wedding season.
+- G-20.1 | active | 2025-10-21 | basis: O-20.2, O-20.3 | Build financial stability without compromising environmental values.
+- G-26.1 | active | 2025-10-29 | basis: O-26.2, O-26.3 | Wants to sleep normally again by reducing recurring nightmares.

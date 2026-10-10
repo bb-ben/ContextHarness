@@ -1,0 +1,409 @@
+S-0 · 2025-09-29
+  working context: 3 bullets (cites +G-0.1 +T-0.1)
+    + Improve high-pressure communication skills through negotiation drills (G-0.1)
+    + Wants a more complex drill with mistakes-and-recovery practice; review 2025-10-06 (T-0.1)
+    + Working on high-pressure communication skills through negotiation drills (G-0.1)
+  episodic:
+    + E-0 [episode] Introductory hostage-negotiation drill about high-pressure communication practice.
+    + O-0.1 [behavior] Wants to practice high-pressure communication through hostage-negotiation roleplay.
+    + O-0.2 [behavior] Wants a more complex drill with mistakes-and-recovery practice.
+  state:
+    + G-0.1 [active] Improve high-pressure communication skills through negotiation drills.
+    + T-0.1 [active] Wants a more complex drill with mistakes-and-recovery practice.
+S-1 · 2025-09-30
+  working context: 5 bullets (cites +F-1.1 +F-1.2 +G-1.1 +P-1.1 +T-1.1 -T-0.1)
+    + File a police report about the cyberstalking by 2025-10-01 (G-1.1)
+    + Has a gallery and rides a motorcycle (F-1.1, F-1.2)
+    + Prefers step-by-step checklists (P-1.1)
+    + Wants step-by-step checklist help for urgent safety problems; review 2025-10-07 (T-1.1)
+    - Wants a more complex drill with mistakes-and-recovery practice; review 2025-10-06 (T-0.1)
+    - Working on high-pressure communication skills through negotiation drills (G-0.1)
+  episodic:
+    + E-1 [episode] Discussed cyberstalking safety planning and evidence handling.
+    + O-1.1 [behavior] Wants step-by-step checklist help for urgent safety problems.
+    + O-1.2 [stated] Plans to file a police report tomorrow and keep documenting incidents.
+    + O-1.3 [event] Has a gallery and rides a motorcycle, which matter for the safety plan.
+  state:
+    + F-1.1 [current] Has a gallery.
+    + F-1.2 [current] Rides a motorcycle.
+    + P-1.1 [current] Prefers step-by-step checklists.
+    + G-1.1 [active] File a police report about the cyberstalking.
+    + T-1.1 [active] Wants step-by-step checklist help for urgent safety problems.
+S-2 · 2025-09-30
+  working context: 5 bullets (cites +P-2.1 +T-2.1 -G-0.1 -P-1.1)
+    + Prefers step-by-step checklists with clear priority order (P-2.1)
+    + Wants casual, non-formal language while stressed about the cyberstalking; review 2025-10-07 (T-2.1)
+    - Improve high-pressure communication skills through negotiation drills (G-0.1)
+    - Prefers step-by-step checklists (P-1.1)
+  episodic:
+    + E-2 [episode] Cyberstalking talk led to a request for prioritized, casual guidance.
+    + O-2.1 [behavior] Asked for concrete, prioritized steps because feeling overwhelmed.
+    + O-2.2 [behavior] Asked to keep it casual and non-formal because feeling stressed.
+  state:
+    + P-2.1 [current] Prefers step-by-step checklists with clear priority order.
+    + T-2.1 [active] Wants casual, non-formal language while stressed about the cyberstalking.
+    ~ P-1.1 current -> superseded superseded_by: P-2.1
+S-3 · 2025-10-01
+  working context: 7 bullets (cites +G-0.1 +T-3.1)
+    + Improve high-pressure communication skills through negotiation drills (G-0.1)
+    + Wants casual, non-formal language while stressed about the cyberstalking (T-2.1)
+    + Wants visual command boards when overwhelmed by too much information in urgent crises; review 2025-10-08 (T-3…
+    - Wants casual, non-formal language while stressed about the cyberstalking; review 2025-10-07 (T-2.1)
+  episodic:
+    + E-3 [episode] Urgent crisis-tracking and debrief discussion.
+    + O-3.1 [behavior] Asked for a visual command board to separate completed, in-progress, and pending crisis work.
+  state:
+    + T-3.1 [active] Wants visual command boards when overwhelmed by too much information in urgent crises.
+    ~ P-2.1  basis: O-1.1, O-2.1, O-3.1 confirmed: 2025-10-01
+S-4 · 2025-10-01
+  working context: 8 bullets (cites +H-4.1)
+    + May prefer evidence-backed, threshold-based decisions in uncertain crises (H-4.1)
+  episodic:
+    + E-4 [episode] Conversation about nuclear crisis simulation priorities, evacuation timing, and communications structure.
+    + O-4.1 [behavior] Asked for a step-by-step checklist and clear sequence for an urgent safety simulation.
+    + O-4.2 [reaction] Framed the response as prioritizing safety over precision under uncertainty.
+  state:
+    + H-4.1 [open] The user seems to prefer evidence-backed, threshold-based decisions in uncertain crises.
+    ~ P-2.1  basis: O-1.1, O-2.1, O-3.1, O-4.1
+S-5 · 2025-10-04
+  working context: 10 bullets (cites +P-5.1 +T-5.1)
+    + A recent breakup is leaving them low and prone to rumination (T-5.1)
+    + File a police report about the cyberstalking (G-1.1)
+    + Prefers blunt, straight talk over sugarcoating (P-5.1)
+    + Wants casual, non-formal language while stressed about the cyberstalking; review 2025-10-07 (T-2.1)
+    - File a police report about the cyberstalking by 2025-10-01 (G-1.1)
+    - Wants casual, non-formal language while stressed about the cyberstalking (T-2.1)
+  episodic:
+    + E-5 [episode] Breakup sadness and coping discussion; user asked for straight advice.
+    + O-5.1 [event] Broke up about a week ago and feels low, especially in quiet moments.
+    + O-5.2 [stated] Wants straight, unsugarcoated advice instead of sugarcoating.
+    + O-5.3 [behavior] Likes having actual steps to follow.
+    + O-5.4 [stated] Quiet times alone at the gallery or riding trigger rumination.
+  state:
+    + P-5.1 [current] Prefers blunt, straight talk over sugarcoating.
+    + T-5.1 [active] A recent breakup is leaving them low and prone to rumination.
+    ~ P-2.1  basis: O-1.1, O-2.1, O-3.1, O-4.1, O-5.3 confirmed: 2025-10-04
+S-6 · 2025-10-04
+  episodic:
+    + E-6 [episode] Conversation about breakup sadness and coping with it.
+    + O-6.1 [event] Said the breakup still hits hardest at home and in the evenings.
+    + O-6.2 [stated] Said concrete things to do help and having a plan makes it easier.
+  state:
+    ~ P-2.1  basis: O-1.1, O-2.1, O-3.1, O-4.1, O-5.3, O-6.2
+    ~ T-5.1  basis: O-5.1, O-5.4, O-6.1
+S-7 · 2025-10-05
+  working context: 11 bullets (cites +P-7.1)
+    + A recent breakup is leaving them low and prone to rumination; review 2025-10-11 (T-5.1)
+    + Prefers to be pushed with challenging training scenarios (P-7.1)
+    - A recent breakup is leaving them low and prone to rumination (T-5.1)
+  episodic:
+    + E-7 [episode] High-pressure interrogation-training roleplay.
+    + O-7.1 [stated] Wants challenging training and says they learn better when pushed.
+    + O-7.2 [behavior] Asked for interactive, real-time roleplay with coaching pauses.
+    + O-7.3 [behavior] Checked legal boundaries and voluntariness before continuing the interview.
+  state:
+    + P-7.1 [current] Prefers to be pushed with challenging training scenarios.
+S-8 · 2025-10-06
+  working context: 5 bullets (cites +G-8.1 -G-1.1 -P-7.1 -T-1.1 -T-2.1 -T-3.1 -T-5.1)
+    + Prefers step-by-step checklists with clear priority order; wants blunt, straight talk (P-2.1, P-5.1)
+    + Prepare for the solo Trans-Labrador Highway ride (G-8.1)
+    - A recent breakup is leaving them low and prone to rumination; review 2025-10-11 (T-5.1)
+    - File a police report about the cyberstalking (G-1.1)
+    - Prefers blunt, straight talk over sugarcoating (P-5.1)
+    - Prefers step-by-step checklists with clear priority order (P-2.1)
+    - Prefers to be pushed with challenging training scenarios (P-7.1)
+    - Wants casual, non-formal language while stressed about the cyberstalking; review 2025-10-07 (T-2.1)
+    - Wants step-by-step checklist help for urgent safety problems; review 2025-10-07 (T-1.1)
+    - Wants visual command boards when overwhelmed by too much information in urgent crises; review 2025-10-08 (T-3…
+  episodic:
+    + E-8 [episode] Planning a solo Trans-Labrador Highway ride in about six weeks on a 2009 KLR 650.
+    + O-8.1 [event] Is planning a solo Trans-Labrador Highway ride in about six weeks.
+    + O-8.2 [behavior] Wants the prep broken down step by step with clear priorities.
+    + O-8.3 [stated] Wants blunt, straight talk that doesn't sugarcoat the challenges.
+  state:
+    + G-8.1 [active] Prepare for the solo Trans-Labrador Highway ride.
+    ~ P-2.1  basis: O-1.1, O-2.1, O-3.1, O-4.1, O-5.3, O-6.2, O-8.2 confirmed: 2025-10-06
+    ~ P-5.1  basis: O-5.2, O-8.3 confirmed: 2025-10-06
+    ~ T-0.1 active -> expired ended: 2025-10-06
+S-9 · 2025-10-07
+  working context: 5 bullets (cites +P-7.1 -F-1.1 -F-1.2)
+    + Prefers to be pushed with challenging training scenarios (P-7.1)
+    - Has a gallery and rides a motorcycle (F-1.1, F-1.2)
+  episodic:
+    + E-9 [episode] Hostage-negotiation drill with escalating scenarios and debrief.
+    + O-9.1 [stated] Wants the key principles and a framework before diving in.
+    + O-9.2 [stated] Wants full step-by-step analysis and blunt, straight talk.
+    + O-9.3 [stated] Wants harder scenarios and likes being pushed to level up.
+  state:
+    ~ P-2.1  basis: O-1.1, O-2.1, O-3.1, O-4.1, O-5.3, O-6.2, O-8.2, O-9.1, O-9.2 confirmed: 2025-10-07
+    ~ P-5.1  basis: O-5.2, O-8.3, O-9.2 confirmed: 2025-10-07
+    ~ P-7.1  basis: O-7.1, O-9.3 confirmed: 2025-10-07
+    ~ T-1.1 active -> expired ended: 2025-10-07
+    ~ T-2.1 active -> expired ended: 2025-10-07
+S-10 · 2025-10-10
+  working context: 6 bullets (cites +F-1.1 +F-1.2 +P-10.1 +T-5.1 -H-4.1)
+    + Has a gallery and rides a motorcycle (F-1.1, F-1.2)
+    + Prefers evidence-backed, threshold-based decisions in uncertain crises (P-10.1)
+    + Prefers step-by-step checklists with clear priority order; blunt, straight talk; challenging training scenari…
+    + Recent breakup is leaving them low and prone to rumination (T-5.1)
+    - May prefer evidence-backed, threshold-based decisions in uncertain crises (H-4.1)
+    - Prefers step-by-step checklists with clear priority order; wants blunt, straight talk (P-2.1, P-5.1)
+    - Prefers to be pushed with challenging training scenarios (P-7.1)
+  episodic:
+    + E-10 [episode] Long discussion about coup diplomacy, stakeholder mapping, time pressure, civilian harm, and transition desig…
+    + O-10.1 [behavior] Asked for a realistic framework to map stakeholders, pressure points, and time pressure in coup simulations.
+    + O-10.2 [reaction] Said the framework clarified how crises unfold and where the key pressure points are.
+  state:
+    + P-10.1 [current] Prefers evidence-backed, threshold-based decisions in uncertain crises.
+    ~ T-3.1 active -> expired ended: 2025-10-10
+    ~ H-4.1 open -> confirmed for: O-4.2, O-10.2 resolved_into: P-10.1
+S-11 · 2025-10-12
+  working context: 5 bullets (cites +F-11.1 -T-5.1)
+    + Has a gallery, rides a motorcycle, and has wilderness experience from photography trips and climbing (F-1.1, …
+    + None
+    + Prefers step-by-step checklists with clear priority order; blunt, straight talk; challenging training scenari…
+    - Has a gallery and rides a motorcycle (F-1.1, F-1.2)
+    - Prefers evidence-backed, threshold-based decisions in uncertain crises (P-10.1)
+    - Prefers step-by-step checklists with clear priority order; blunt, straight talk; challenging training scenari…
+    - Recent breakup is leaving them low and prone to rumination (T-5.1)
+  episodic:
+    + E-11 [episode] Post-apocalyptic survival planning chat about nuclear winter priorities and cache setup.
+    + O-11.1 [stated] Has wilderness experience from photography trips and climbing.
+    + O-11.2 [behavior] Wants survival guidance organized by priority and practical, not doomsday.
+  state:
+    + F-11.1 [current] Has wilderness experience from photography trips and climbing.
+    ~ P-2.1  basis: O-1.1, O-2.1, O-3.1, O-4.1, O-5.3, O-6.2, O-8.2, O-9.1, O-9.2, O-11.2 confirmed: 2025-10-12
+    ~ P-10.1  basis: O-4.2, O-10.2, O-11.2 confirmed: 2025-10-12
+    ~ T-5.1 active -> expired ended: 2025-10-12
+S-12 · 2025-10-13
+  working context: 6 bullets (cites +G-12.1 +P-12.1 +P-12.2)
+    + Draft a code of ethics for the AI startup before scaling (G-12.1)
+    + Prefers step-by-step checklists with clear priority order; blunt, straight talk; challenging training scenari…
+    - Prefers step-by-step checklists with clear priority order; blunt, straight talk; challenging training scenari…
+  episodic:
+    + E-12 [episode] User is working on an AI startup recommendation system and wants a code of ethics before scaling.
+    + O-12.1 [event] Is building an AI startup's recommendation system for small businesses and needs a code of ethics before scal…
+    + O-12.2 [stated] Prefers concrete examples over abstract theory.
+    + O-12.3 [stated] Wants AI systems to be transparent, fair, and helpful rather than engagement-maximizing.
+  state:
+    + P-12.1 [current] Prefers concrete examples over abstract theory.
+    + P-12.2 [current] Values transparency, fairness, and helpfulness in AI systems.
+    + G-12.1 [active] Draft a code of ethics for the AI startup before scaling.
+S-13 · 2025-10-13
+  working context: 6 bullets
+    + Prefers step-by-step checklists with clear priority order; blunt, straight talk; being pushed with challengin…
+    - Prefers step-by-step checklists with clear priority order; blunt, straight talk; challenging training scenari…
+  episodic:
+    + E-13 [episode] Discussed a code-of-ethics framework for an AI startup.
+    + O-13.1 [stated] Prefers comparing tradeoffs and pros and cons rather than a single right answer.
+    + O-13.2 [behavior] Asked for practical implementation details and concrete examples rather than abstract theory.
+  state:
+    ~ P-12.1  basis: O-12.2, O-13.2 confirmed: 2025-10-13
+S-14 · 2025-10-15
+  working context: 6 bullets (cites +F-14.1 +H-14.1 +T-14.1 -F-11.1 -P-12.2 -P-7.1)
+    + Accident may have made risk decisions more cautious (H-14.1, open)
+    + Has a gallery, rides a motorcycle, had a serious motorcycle accident a few months ago, and is returning to wo…
+    + Prefers step-by-step checklists with clear priority order; blunt, straight talk; evidence-backed, threshold-b…
+    - Has a gallery, rides a motorcycle, and has wilderness experience from photography trips and climbing (F-1.1, …
+    - None
+    - Prefers step-by-step checklists with clear priority order; blunt, straight talk; being pushed with challengin…
+  episodic:
+    + E-14 [episode] Short chat about emailing artists after a motorcycle accident.
+    + O-14.1 [event] Had a serious motorcycle accident a few months ago and is returning to work at the gallery.
+    + O-14.2 [behavior] Asked for professional wording for an email that avoids too much detail about the accident.
+  state:
+    + F-14.1 [current] Had a serious motorcycle accident a few months ago.
+    + T-14.1 [active] Is returning to work at the gallery after a motorcycle accident.
+    + H-14.1 [open] The accident may have made them more cautious about risky decisions.
+S-15 · 2025-10-18
+  working context: 7 bullets (cites +F-11.1 +G-15.1 +P-15.1 -H-14.1 -P-10.1 -T-14.1)
+    + Build a cult-awareness art project with ethical, safety-first methods (G-15.1)
+    + Has a gallery, rides a motorcycle, has wilderness/photography experience, and is recovering from a motorcycle…
+    + Wants step-by-step checklists with clear priority order, blunt straight talk, concrete examples, and evidence…
+    + none
+    - Accident may have made risk decisions more cautious (H-14.1, open)
+    - Has a gallery, rides a motorcycle, had a serious motorcycle accident a few months ago, and is returning to wo…
+    - Prefers step-by-step checklists with clear priority order; blunt, straight talk; evidence-backed, threshold-b…
+  episodic:
+    + E-15 [episode] Shifted from covert cult photography toward a transparent, safety-first awareness project.
+    + O-15.1 [behavior] Pivoted from undercover footage to a cult-awareness art project.
+    + O-15.2 [behavior] Plans to contact Priya, Ryan, and cult-awareness groups to develop it.
+  state:
+    + P-15.1 [current] Prefers evidence-backed, threshold-based decisions in uncertain crises and is cautious about risky options.
+    + G-15.1 [active] Build a cult-awareness art project with ethical, safety-first methods.
+    ~ P-10.1 current -> superseded superseded_by: P-15.1
+    ~ H-14.1 open -> confirmed resolved_into: P-15.1
+S-16 · 2025-10-18
+  working context: 4 bullets (cites -G-0.1 -G-12.1 -G-8.1)
+    - Draft a code of ethics for the AI startup before scaling (G-12.1)
+    - Improve high-pressure communication skills through negotiation drills (G-0.1)
+    - Prepare for the solo Trans-Labrador Highway ride (G-8.1)
+  episodic:
+    + E-16 [episode] Discussed a gothic cult-inspired photo project and how to keep it ethically critical.
+    + O-16.1 [behavior] Wants the cult-inspired photo project to stay ethically critical, not romanticized.
+S-17 · 2025-10-19
+  working context: 4 bullets (cites +G-17.1)
+    + Rescue and finish the botched CB750 cafe racer build before wedding season (G-17.1)
+    - none
+  episodic:
+    + E-17 [episode] Helped rescue a botched CB750 build under a six-week wedding-season deadline.
+    + O-17.1 [behavior] Requested a priority-ordered, step-by-step rescue plan and straight answers.
+    + O-17.2 [behavior] Wanted clear go/no-go checkpoints before moving on with wiring, brakes, and test rides.
+  state:
+    + G-17.1 [active] Rescue and finish the botched CB750 cafe racer build before wedding season.
+    ~ P-2.1  basis: O-1.1, O-2.1, O-3.1, O-4.1, O-5.3, O-6.2, O-8.2, O-9.1, O-9.2, O-11.2, O-17.1 confirmed: 2025-10-19
+    ~ P-5.1  basis: O-5.2, O-8.3, O-9.2, O-17.1 confirmed: 2025-10-19
+    ~ P-15.1  basis: O-4.2, O-10.2, O-11.2, O-14.1, O-15.1, O-17.2 confirmed: 2025-10-19
+S-18 · 2025-10-19
+  episodic:
+    + E-18 [episode] Wildlife photography advice about osprey dive shots.
+    + O-18.1 [stated] Prefers really specific examples that help visualize what to look for.
+  state:
+    ~ P-12.1  basis: O-12.2, O-13.2, O-18.1 confirmed: 2025-10-19
+S-19 · 2025-10-19
+  working context: 5 bullets (cites +F-19.1 +T-14.1)
+    + Has a gallery, rides a motorcycle, has wilderness/photography experience, and is back at gallery work after a…
+    + Recovering from motorcycle accident/TBI; review 2025-11-15 (T-14.1)
+    - Has a gallery, rides a motorcycle, has wilderness/photography experience, and is recovering from a motorcycle…
+  episodic:
+    + E-19 [episode] Short chat about easing back into gallery management after a motorcycle accident.
+    + O-19.1 [event] Had a serious motorcycle accident a few months ago with a TBI and is cleared to return to gallery work.
+    + O-19.2 [behavior] Asked for advice on easing back into managing the gallery after six months away.
+  state:
+    + F-19.1 [current] Had a TBI in the motorcycle accident.
+    ~ P-15.1  basis: O-4.2, O-10.2, O-11.2, O-14.1, O-15.1, O-17.2, O-19.2
+    ~ T-14.1  basis: O-14.1, O-19.1
+S-20 · 2025-10-21
+  working context: 7 bullets (cites +G-20.1 +P-7.1 +T-20.1)
+    + Anxious about money after turning down the oil job; review 2025-10-28 (T-20.1)
+    + Build financial stability without compromising environmental values (G-20.1)
+    + Wants step-by-step checklists with clear priority order, blunt straight talk, concrete examples, evidence-bac…
+    - Wants step-by-step checklists with clear priority order, blunt straight talk, concrete examples, and evidence…
+  episodic:
+    + E-20 [episode] Long moral talk about an oil-company job offer.
+    + O-20.1 [event] Got a job offer from an oil company that would double salary.
+    + O-20.2 [stated] Feels torn between financial security and staying aligned with conservation values.
+    + O-20.3 [stated] Decided to turn down the oil job and build stability another way.
+    + O-20.4 [reaction] Felt relieved but still anxious about money after deciding.
+  state:
+    + G-20.1 [active] Build financial stability without compromising environmental values.
+    + T-20.1 [active] Is anxious about money after turning down the oil job.
+    ~ P-7.1  basis: O-7.1, O-9.3, O-20.4 confirmed: 2025-10-21
+S-21 · 2025-10-21
+  working context: 7 bullets (cites -F-1.2 -F-11.1 -P-7.1)
+    + Has a gallery and is returning to work after a motorcycle accident/TBI (F-1.1, F-14.1, F-19.1, T-14.1)
+    + Prefers step-by-step checklists with clear priority order, blunt straight talk, concrete examples, and eviden…
+    - Has a gallery, rides a motorcycle, has wilderness/photography experience, and is back at gallery work after a…
+    - Wants step-by-step checklists with clear priority order, blunt straight talk, concrete examples, evidence-bac…
+  episodic:
+    + E-21 [episode] Asked for a professional email to artists about exhibition delays and whether to send individual or group mes…
+    + O-21.1 [behavior] Wanted wording that is professional and avoids oversharing about a medical delay.
+    + O-21.2 [behavior] Asked whether to email affected artists individually or as a group.
+S-22 · 2025-10-24
+  working context: 8 bullets (cites +H-22.1)
+    + Has a gallery and is recovering from a motorcycle accident/TBI (F-1.1, F-14.1, F-19.1, T-14.1)
+    + May prefer collaborative co-creation on creative projects; watch for confirmation (H-22.1)
+    + Prefers step-by-step checklists with clear priority order, blunt straight talk, concrete examples, and eviden…
+    - Has a gallery and is returning to work after a motorcycle accident/TBI (F-1.1, F-14.1, F-19.1, T-14.1)
+    - Prefers step-by-step checklists with clear priority order, blunt straight talk, concrete examples, and eviden…
+  episodic:
+    + E-22 [episode] Built a mountain-lodge murder mystery with the user, centered on interactive clues and pacing.
+    + O-22.1 [behavior] Asked for an adventure-vibe murder mystery instead of a mansion and kept iterating on scene, suspects, clues,…
+    + O-22.2 [behavior] Wanted the host to facilitate clues, private confessions, and pacing so guests keep interacting.
+  state:
+    + H-22.1 [open] The user seems to prefer collaborative co-creation on creative projects.
+S-23 · 2025-10-24
+  working context: 7 bullets (cites +P-23.1 -H-22.1)
+    + Wants collaborative co-creation on creative projects, plus step-by-step, blunt, concrete, evidence-backed hel…
+    - May prefer collaborative co-creation on creative projects; watch for confirmation (H-22.1)
+    - Prefers step-by-step checklists with clear priority order, blunt straight talk, concrete examples, and eviden…
+  episodic:
+    + E-23 [episode] Collaborative brainstorm about a 1920s speakeasy murder mystery for 10 people.
+    + O-23.1 [behavior] Wants to co-develop the creative project interactively rather than receive a finished script.
+    + O-23.2 [stated] Wants clues woven naturally into the story, not as obvious hint cards.
+    + O-23.3 [stated] Wants tension to build gradually instead of dumping everything at once.
+  state:
+    + P-23.1 [current] Prefers collaborative co-creation on creative projects.
+    ~ H-22.1 open -> confirmed for: O-22.1, O-22.2, O-23.1 resolved_into: P-23.1
+S-24 · 2025-10-27
+  working context: 7 bullets (cites +G-12.1 +P-12.2 -G-15.1 -G-17.1 -P-23.1)
+    + Draft a code of ethics for the AI startup before scaling (G-12.1)
+    + Has a gallery; recovering from a motorcycle accident and TBI (F-1.1, F-14.1, F-19.1)
+    + Prefers step-by-step checklists, blunt straight talk, concrete examples, and evidence-backed cautious decisio…
+    + Values transparency, fairness, and helpfulness in AI systems (P-12.2)
+    - Build a cult-awareness art project with ethical, safety-first methods (G-15.1)
+    - Has a gallery and is recovering from a motorcycle accident/TBI (F-1.1, F-14.1, F-19.1, T-14.1)
+    - Rescue and finish the botched CB750 cafe racer build before wedding season (G-17.1)
+    - Wants collaborative co-creation on creative projects, plus step-by-step, blunt, concrete, evidence-backed hel…
+  episodic:
+    + E-24 [episode] Short chat about evaluating ethical risks before a facial-recognition launch.
+    + O-24.1 [event] Is launching a facial-recognition app in 5 days and worries about misuse, law enforcement access, breaches, a…
+    + O-24.2 [behavior] Asked for a structured framework and iterative discussion on launch ethics.
+  state:
+    ~ P-2.1  basis: O-1.1, O-2.1, O-3.1, O-4.1, O-5.3, O-6.2, O-8.2, O-9.1, O-9.2, O-11.2, O-17.1, O-24.2 confirmed: 2025-10-27
+    ~ P-15.1  basis: O-4.2, O-10.2, O-11.2, O-14.1, O-15.1, O-17.2, O-19.2, O-24.1, O-24.2 confirmed: 2025-10-27
+    ~ P-12.2  basis: O-12.3, O-24.1, O-24.2 confirmed: 2025-10-27
+S-25 · 2025-10-28
+  working context: 6 bullets (cites +P-23.1 -T-20.1)
+    + Prefers step-by-step checklists with clear priority order, concrete examples, blunt straight talk, and eviden…
+    + Values transparency, fairness, and helpfulness in AI systems, and collaborative co-creation on creative proje…
+    - Anxious about money after turning down the oil job; review 2025-10-28 (T-20.1)
+    - Prefers step-by-step checklists, blunt straight talk, concrete examples, and evidence-backed cautious decisio…
+    - Values transparency, fairness, and helpfulness in AI systems (P-12.2)
+  episodic:
+    + E-25 [episode] Discussed drafting an ethics code for an AI startup building wildlife-monitoring computer vision tools.
+    + O-25.1 [stated] Is drafting an ethics code for an AI startup building computer vision tools for wildlife monitoring.
+    + O-25.2 [behavior] Asked for concrete cases and practical structure rather than abstract theory.
+  state:
+    ~ P-12.1  basis: O-12.2, O-13.2, O-18.1, O-25.2 confirmed: 2025-10-28
+    ~ T-20.1 active -> expired ended: 2025-10-28
+S-26 · 2025-10-29
+  working context: 7 bullets (cites +G-26.1 +T-26.1 -T-14.1)
+    + Has a gallery; recovering from a motorcycle accident and TBI; dealing with recurring nightmares (F-1.1, F-14.…
+    + Recurring nightmares from climbing and motorcycle close calls; review 2025-11-05 (T-26.1)
+    + Reduce recurring nightmares and sleep normally again (G-26.1)
+    - Has a gallery; recovering from a motorcycle accident and TBI (F-1.1, F-14.1, F-19.1)
+    - Recovering from motorcycle accident/TBI; review 2025-11-15 (T-14.1)
+  episodic:
+    + E-26 [episode] Nightmare exposure therapy roleplay about recurring climbing and motorcycle nightmares.
+    + O-26.1 [stated] Has recurring nightmares from climbing and motorcycle close calls and dreads sleep.
+    + O-26.2 [stated] The nightmares are bleeding into gallery work and making it hard to focus.
+    + O-26.3 [behavior] Asked for blunt, no-sugar-coating help about what the therapy involves.
+  state:
+    + G-26.1 [active] Wants to sleep normally again by reducing recurring nightmares.
+    + T-26.1 [active] Is dealing with recurring nightmares from climbing and motorcycle close calls.
+    ~ P-5.1  basis: O-5.2, O-8.3, O-9.2, O-17.1, O-26.3 confirmed: 2025-10-29
+S-27 · 2025-11-01
+  working context: 7 bullets (cites +P-27.1 +P-27.2 -P-12.1 -P-15.1 -P-2.1 -P-23.1 -P-5.1)
+    + Values transparency, fairness, and helpfulness in AI systems (P-12.2)
+    + Wants collaborative co-creation and bullet-pointed, step-by-step structure when working through questions (P-…
+    - Prefers step-by-step checklists with clear priority order, concrete examples, blunt straight talk, and eviden…
+    - Values transparency, fairness, and helpfulness in AI systems, and collaborative co-creation on creative proje…
+  episodic:
+    + E-27 [episode] Debate prep on voluntary euthanasia; wants help arguing either side.
+    + O-27.1 [stated] Wants to work through hard questions collaboratively instead of just getting the answer.
+    + O-27.2 [stated] Says bullet points work better for organizing thoughts than long prose.
+  state:
+    + P-27.1 [current] Prefers step-by-step checklists and bullet points with clear priority order.
+    + P-27.2 [current] Prefers collaborative co-creation when working through questions and creative projects.
+    ~ P-2.1 current -> superseded superseded_by: P-27.1
+    ~ P-23.1 current -> superseded superseded_by: P-27.2
+S-28 · 2025-11-01
+  working context: 8 bullets (cites +P-12.1 +P-5.1 +T-14.1 -P-12.2)
+    + Has a gallery; had a motorcycle accident and TBI; is returning to work (F-1.1, F-14.1, F-19.1, T-14.1)
+    + Prefers blunt, straight talk over sugarcoating (P-5.1)
+    + Prefers concrete examples over abstract theory (P-12.1)
+    - Has a gallery; recovering from a motorcycle accident and TBI; dealing with recurring nightmares (F-1.1, F-14.…
+    - Values transparency, fairness, and helpfulness in AI systems (P-12.2)
+  episodic:
+    + E-28 [episode] Debate prep on euthanasia in a heavy moral topic.
+    + O-28.1 [reaction] Said structured framing and real-world examples made the arguments click.
+  state:
+    ~ P-27.1  basis: O-1.1, O-2.1, O-3.1, O-4.1, O-5.3, O-6.2, O-8.2, O-9.1, O-9.2, O-11.2, O-17.1, O-24.2, O-27.2, O-28.1
+    ~ P-12.1  basis: O-12.2, O-13.2, O-18.1, O-25.2, O-28.1 confirmed: 2025-11-01
+
+Totals over the run:
+  working_context  added 65  removed 57
+  episodic         added 94  changed 0  moved 0  removed 0
+  state            added 35  changed 40  moved 0  removed 0
+  decisions        added 0  changed 0  moved 0  removed 0

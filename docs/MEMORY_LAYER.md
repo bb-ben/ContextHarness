@@ -156,6 +156,28 @@ Run against the v2 run's final memory, the new checks flag all 11 invented topic
 four as near-duplicates of seed dimensions, and the preference that decided the
 answer as an unsupported promotion.
 
+**v3 on the same item** (gpt-5.4-mini, $1.33; see
+[`examples/real_run_v3_openai/`](../examples/real_run_v3_openai)):
+
+| | v2 | v3 |
+|---|---|---|
+| Preference dimensions used | 11 invented | 7, all seed |
+| Preferences superseded | 0 of 11 | 4 of 11 |
+| State entries added / changed | 43 / 17 | 35 / 40 |
+| Accident hypothesis | "cautious about motorcycle risk", open, linked to nothing | "cautious about risky decisions", `challenges` the decision-style value, confirmed one event later |
+| Decision-style value at the end | none | evidence-backed, threshold-based, cautious about risky options (supersedes the pre-accident value) |
+| Distinct violations | 12 | 4 |
+| Calls per event | 3.5 | 3.1 |
+| Answer | B (wrong) | B (wrong) |
+
+The memory now tracks the change, but the answer did not follow. At answer time the
+model made one quick call (185 reasoning tokens, no reads). It went with the top
+bullet of `context.md` (collaboration and step-by-step format), which omitted decision
+style. The options differ only in their final sentence. B ("explore step by step,
+start by investigating his methods") fits the stored memory about as well as the
+correct C ("weigh it through a few ethical lenses"). The remaining gap is in how
+memory is *used* and in how finely it is worded, not in whether it is kept.
+
 ## Known gaps
 
 - **The archive itself has no rollover yet** (200,000 chars). That's enough for
