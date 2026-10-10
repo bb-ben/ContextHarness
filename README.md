@@ -11,8 +11,8 @@ contract. HorizonBench supplies long, dated conversation histories in which
 preferences change after life events. That makes it a sequential testbed for
 whether the layer keeps the user's state current.
 
-**Status:** contract **v3**. The layer, instrumentation, and Gemini and OpenAI
-adapters are built and tested offline (143 tests). A model that follows the
+**Status:** contract **v3.1**. The layer, instrumentation, and Gemini and OpenAI
+adapters are built and tested offline (149 tests). A model that follows the
 contract produces zero violations across all 901 events of the HorizonBench sample.
 
 **Real runs so far:**
@@ -42,7 +42,7 @@ Requires Python ≥ 3.12 and [uv](https://docs.astral.sh/uv/).
 
 ```bash
 uv sync
-uv run pytest -q                     # 143 tests, offline, no credentials
+uv run pytest -q                     # 149 tests, offline, no credentials
 export GEMINI_API_KEY=...            # for real-model runs (default model: gemini-3.7-flash)
 ```
 
@@ -67,6 +67,10 @@ uv run context-harness run --model gemini-3.7-flash --items 0 --rpm 5 --timeout 
 # Quicker smoke test: only the 16 most recent events (still includes item 0's life event)
 uv run context-harness run --model gemini-3.7-flash --items 0 --max-sessions 16 --rpm 5
 
+# Rerun only the answer step against a finished item's saved memory (about one call each)
+uv run context-harness replay-answer runs/<run>/items/<item> --model gpt-5.4-mini \
+    --strategy default --strategy dimension-first --repeats 5 --max-cost-usd 0.50
+
 # Inspect what the agent read and wrote, event by event, and every violation
 uv run context-harness inspect-memory runs/<run>/items/<item>
 
@@ -89,6 +93,9 @@ Other options:
 - `--layout general|with-decisions`: the file set and seed preference dimensions
   (`general` is the default; `with-decisions` adds the decisions file).
 - `--max-cost-usd`: pauses once estimated spend reaches the cap (priced models).
+- `--answer-strategy dimension-first|default`: how the agent uses memory when it
+  answers. `dimension-first` (the default) finds the dimension the candidate
+  responses differ on and reads its current value first.
 
 Two commands show how memory evolved:
 - `context-harness memory-timeline <item>`: what each event added, changed,
@@ -142,12 +149,15 @@ model results**. The fake follows the contract perfectly and answers by word
 overlap. Files are in [`examples/results_example/`](examples/results_example).
 
 ```
-  Overall           10.0%  [0.0, 30.0]    (n=10)
+  Overall            0.0%  [0.0, 0.0]     (n=10)
   Shortest-option   80.0%  (label-free reference heuristic)
-  Memory layer: 901 events, 0.00 violations/event (  0.0% of events); top: none
+  Memory layer: 901 events, 0 distinct violations (new ones in   0.0% of events, 0 unresolved at end); top: none
   Final provenance 100.0%; context covers  17.4% of live state
   Evolution evidence reached: in_state 10
 ```
+
+The fake's accuracy moves whenever the prompt's wording does (it was 10% before
+v2), so it says nothing about the layer.
 
 ## Tests
 
@@ -161,6 +171,7 @@ overlap. Files are in [`examples/results_example/`](examples/results_example).
 | `test_leakage.py` | Future sessions, the question and every label are kept from the agent, for all methods |
 | `test_dataset.py`, `test_audit.py` | Chronological ordering, the guarded parser, the dataset audit |
 | `test_scoring.py`, `test_end_to_end.py`, `test_anthropic_adapter.py` | Scoring and aggregation; CLI runs; the Anthropic adapter |
+| `test_replay.py` | Answer-only replay restores the saved memory, reruns only the answer step, applies the strategy, and leaves the source run untouched |
 
 ## Next steps
 

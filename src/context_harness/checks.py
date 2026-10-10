@@ -10,6 +10,7 @@ Each check answers one of the instrumentation questions:
 
 from __future__ import annotations
 
+import re
 from collections import Counter, defaultdict
 from dataclasses import asdict, dataclass
 from typing import Any, Iterable
@@ -38,6 +39,8 @@ class EventInfo:
     event_id: str  # e.g. "S-14"
     date: str  # YYYY-MM-DD
 
+
+_OBS_ID = re.compile(r"\bO-\d+\.\d+\b")
 
 _GENERIC_TOKENS = {"style", "level", "preference", "preferences", "type", "mode", "pref"}
 
@@ -146,6 +149,14 @@ def check_state(parsed: ParsedWorkspace, events: list[EventInfo], current: int,
         if len(ids) > 1:
             first = entries[ids[0]]
             out.append(Problem("topic_conflict", path, first.line, f"{len(ids)} current entries for topic {topic!r}: {', '.join(ids)}", ids[0]))
+
+    # A stated observation is the strongest evidence there is; one that no state entry,
+    # hypothesis or goal note cites has been recorded but not applied.
+    cited = {ref for e in entries.values() if e.type != "O" for ids in e.refs().values() for ref in ids}
+    cited |= {m for e in entries.values() for note in e.notes for m in _OBS_ID.findall(note)}
+    for e in entries.values():
+        if e.type == "O" and e.fields.get("kind") == "stated" and e.id not in cited:
+            add("unused_stated_observation", e, "stated observation cited by no state entry, hypothesis or goal note")
 
     if f"E-{current}" not in entries:
         out.append(Problem("missing_episode", "memory/episodes.md", 0, f"no E-{current} line for {now.event_id}"))

@@ -37,24 +37,24 @@
     "shortest_option": "C",
     "shortest_option_correct": true
   },
-  "latency_s": 0.101,
+  "latency_s": 0.129,
   "stats": {
     "model_calls": 31,
     "usage": {
-      "input_tokens": 237969,
+      "input_tokens": 262395,
       "output_tokens": 8822,
       "cache_read_input_tokens": 0,
       "cache_creation_input_tokens": 0
     },
     "usage_by_phase": {
       "memory_update": {
-        "input_tokens": 225164,
+        "input_tokens": 247803,
         "output_tokens": 8812,
         "cache_read_input_tokens": 0,
         "cache_creation_input_tokens": 0
       },
       "answer": {
-        "input_tokens": 12805,
+        "input_tokens": 14592,
         "output_tokens": 10,
         "cache_read_input_tokens": 0,
         "cache_creation_input_tokens": 0
@@ -73,6 +73,7 @@
     "file_reads": 1,
     "refusals": 0
   },
+  "estimated_cost_usd": null,
   "memory_chars": {
     "context.md": 199,
     "memory/episodes.md": 9338,
@@ -87,6 +88,8 @@
     "events": 29,
     "violations_by_code": {},
     "events_with_violations": 0,
+    "events_with_new_violations": 0,
+    "unresolved_at_end": 0,
     "access_totals": {
       "context.md": {
         "writes": 29
@@ -155,10 +158,11 @@
       "date": "2025-09-29T18:25:36.408972",
       "file_ops": 3,
       "model_calls": 1,
-      "input_tokens": 7963,
+      "input_tokens": 8744,
       "output_tokens": 212,
-      "latency_s": 0.002,
-      "violations": 0
+      "latency_s": 0.003,
+      "violations": 0,
+      "new_violations": 0
     },
     {
       "index": 1,
@@ -166,10 +170,11 @@
       "date": "2025-09-30T18:25:36.408972",
       "file_ops": 3,
       "model_calls": 1,
-      "input_tokens": 11397,
+      "input_tokens": 12177,
       "output_tokens": 212,
-      "latency_s": 0.001,
-      "violations": 0
+      "latency_s": 0.003,
+      "violations": 0,
+      "new_violations": 0
     },
     {
       "index": 2,
@@ -177,10 +182,11 @@
       "date": "2025-09-30T18:25:36.408972",
       "file_ops": 3,
       "model_calls": 1,
-      "input_tokens": 8134,
+      "input_tokens": 8914,
       "output_tokens": 212,
-      "latency_s": 0.001,
-      "violations": 0
+      "latency_s": 0.002,
+      "violations": 0,
+      "new_violations": 0
     },
     {
       "index": 3,
@@ -188,10 +194,11 @@
       "date": "2025-10-01T18:25:36.408972",
       "file_ops": 3,
       "model_calls": 1,
-      "input_tokens": 6226,
+      "input_tokens": 7007,
       "output_tokens": 212,
-      "latency_s": 0.001,
-      "violations": 0
+      "latency_s": 0.002,
+      "violations": 0,
+      "new_violations": 0
     },
     {
       "index": 4,
@@ -199,10 +206,11 @@
       "date": "2025-10-01T18:25:36.408972",
       "file_ops": 3,
       "model_calls": 1,
-      "input_tokens": 7834,
+      "input_tokens": 8615,
       "output_tokens": 212,
-      "latency_s": 0.001,
-      "violations": 0
+      "latency_s": 0.002,
+      "violations": 0,
+      "new_violations": 0
     },
     {
       "index": 5,
@@ -210,10 +218,11 @@
       "date": "2025-10-04T18:25:36.408972",
       "file_ops": 3,
       "model_calls": 1,
-      "input_tokens": 5197,
+      "input_tokens": 5977,
       "output_tokens": 210,
-      "latency_s": 0.001,
-      "violations": 0
+      "latency_s": 0.002,
+      "violations": 0,
+      "new_violations": 0
     },
     {
       "index": 6,
@@ -221,10 +230,11 @@
       "date": "2025-10-04T18:25:36.408972",
       "file_ops": 3,
       "model_calls": 1,
-      "input_tokens": 5905,
+      "input_tokens": 6685,
       "output_tokens": 212,
-      "latency_s": 0.001,
-      "violations": 0
+      "latency_s": 0.002,
+      "violations": 0,
+      "new_violations": 0
     },
     {
       "index": 7,
@@ -232,10 +242,11 @@
       "date": "2025-10-05T18:25:36.408972",
       "file_ops": 3,
       "model_calls": 1,
-      "input_tokens": 7112,
+      "input_tokens": 7893,
       "output_tokens": 212,
-      "latency_s": 0.001,
-      "violations": 0
+      "latency_s": 0.002,
+      "violations": 0,
+      "new_violations": 0
     },
     {
       "index": 8,
@@ -243,10 +254,11 @@
       "date": "2025-10-06T18:25:36.408972",
       "file_ops": 5,
       "model_calls": 1,
-      "input_tokens": 7950,
+      "input_tokens": 8731,
       "output_tokens": 322,
-      "latency_s": 0.002,
-      "violations": 0
+      "latency_s": 0.003,
+      "violations": 0,
+      "new_violations": 0
     },
     {
       "index": 9,
@@ -254,10 +266,11 @@
       "date": "2025-10-07T18:25:36.408972",
       "file_ops": 6,
       "model_calls": 1,
-      "input_tokens": 7238,
+      "input_tokens": 8019,
       "output_tokens": 423,
-      "latency_s": 0.002,
-      "violations": 0
+      "latency_s": 0.004,
+      "violations": 0,
+      "new_violations": 0
     },
     {
       "index": 10,
@@ -265,10 +278,11 @@
       "date": "2025-10-10T18:25:36.408972",
       "file_ops": 6,
       "model_calls": 1,
-      "input_tokens": 16315,
+      "input_tokens": 17096,
       "output_tokens": 432,
-      "latency_s": 0.003,
-      "violations": 0
+      "latency_s": 0.004,
+      "violations": 0,
+      "new_violations": 0
     },
     {
       "index": 11,
@@ -276,10 +290,11 @@
       "date": "2025-10-12T18:25:36.408972",
       "file_ops": 7,
       "model_calls": 1,
-      "input_tokens": 9578,
+      "input_tokens": 10359,
       "output_tokens": 540,
-      "latency_s": 0.003,
-      "violations": 0
+      "latency_s": 0.004,
+      "violations": 0,
+      "new_violations": 0
     },
     {
       "index": 12,
@@ -287,10 +302,11 @@
       "date": "2025-10-13T18:25:36.408972",
       "file_ops": 5,
       "model_calls": 1,
-      "input_tokens": 6897,
+      "input_tokens": 7677,
       "output_tokens": 324,
-      "latency_s": 0.002,
-      "violations": 0
+      "latency_s": 0.004,
+      "violations": 0,
+      "new_violations": 0
     },
     {
       "index": 13,
@@ -298,10 +314,11 @@
       "date": "2025-10-13T18:25:36.408972",
       "file_ops": 3,
       "model_calls": 1,
-      "input_tokens": 12923,
+      "input_tokens": 13704,
       "output_tokens": 214,
-      "latency_s": 0.001,
-      "violations": 0
+      "latency_s": 0.002,
+      "violations": 0,
+      "new_violations": 0
     },
     {
       "index": 14,
@@ -309,10 +326,11 @@
       "date": "2025-10-15T18:25:36.408972",
       "file_ops": 5,
       "model_calls": 1,
-      "input_tokens": 4482,
+      "input_tokens": 5262,
       "output_tokens": 324,
-      "latency_s": 0.002,
-      "violations": 0
+      "latency_s": 0.003,
+      "violations": 0,
+      "new_violations": 0
     },
     {
       "index": 15,
@@ -320,10 +338,11 @@
       "date": "2025-10-18T18:25:36.408972",
       "file_ops": 5,
       "model_calls": 1,
-      "input_tokens": 7039,
+      "input_tokens": 7820,
       "output_tokens": 325,
-      "latency_s": 0.002,
-      "violations": 0
+      "latency_s": 0.003,
+      "violations": 0,
+      "new_violations": 0
     },
     {
       "index": 16,
@@ -331,10 +350,11 @@
       "date": "2025-10-18T18:25:36.408972",
       "file_ops": 3,
       "model_calls": 1,
-      "input_tokens": 7562,
+      "input_tokens": 8343,
       "output_tokens": 214,
-      "latency_s": 0.001,
-      "violations": 0
+      "latency_s": 0.003,
+      "violations": 0,
+      "new_violations": 0
     },
     {
       "index": 17,
@@ -342,10 +362,11 @@
       "date": "2025-10-19T18:25:36.408972",
       "file_ops": 5,
       "model_calls": 1,
-      "input_tokens": 7927,
+      "input_tokens": 8708,
       "output_tokens": 325,
-      "latency_s": 0.002,
-      "violations": 0
+      "latency_s": 0.004,
+      "violations": 0,
+      "new_violations": 0
     },
     {
       "index": 18,
@@ -353,10 +374,11 @@
       "date": "2025-10-19T18:25:36.408972",
       "file_ops": 3,
       "model_calls": 1,
-      "input_tokens": 7848,
+      "input_tokens": 8629,
       "output_tokens": 214,
-      "latency_s": 0.001,
-      "violations": 0
+      "latency_s": 0.002,
+      "violations": 0,
+      "new_violations": 0
     },
     {
       "index": 19,
@@ -364,10 +386,11 @@
       "date": "2025-10-19T18:25:36.408972",
       "file_ops": 3,
       "model_calls": 1,
-      "input_tokens": 4507,
+      "input_tokens": 5288,
       "output_tokens": 214,
-      "latency_s": 0.001,
-      "violations": 0
+      "latency_s": 0.002,
+      "violations": 0,
+      "new_violations": 0
     },
     {
       "index": 20,
@@ -375,10 +398,11 @@
       "date": "2025-10-21T18:25:36.408972",
       "file_ops": 6,
       "model_calls": 1,
-      "input_tokens": 7307,
+      "input_tokens": 8088,
       "output_tokens": 435,
-      "latency_s": 0.003,
-      "violations": 0
+      "latency_s": 0.004,
+      "violations": 0,
+      "new_violations": 0
     },
     {
       "index": 21,
@@ -386,10 +410,11 @@
       "date": "2025-10-21T18:25:36.408972",
       "file_ops": 3,
       "model_calls": 1,
-      "input_tokens": 4541,
+      "input_tokens": 5321,
       "output_tokens": 214,
-      "latency_s": 0.001,
-      "violations": 0
+      "latency_s": 0.002,
+      "violations": 0,
+      "new_violations": 0
     },
     {
       "index": 22,
@@ -397,10 +422,11 @@
       "date": "2025-10-24T18:25:36.408972",
       "file_ops": 5,
       "model_calls": 1,
-      "input_tokens": 8777,
+      "input_tokens": 9558,
       "output_tokens": 325,
-      "latency_s": 0.004,
-      "violations": 0
+      "latency_s": 0.003,
+      "violations": 0,
+      "new_violations": 0
     },
     {
       "index": 23,
@@ -408,10 +434,11 @@
       "date": "2025-10-24T18:25:36.408972",
       "file_ops": 3,
       "model_calls": 1,
-      "input_tokens": 5835,
+      "input_tokens": 6615,
       "output_tokens": 214,
       "latency_s": 0.002,
-      "violations": 0
+      "violations": 0,
+      "new_violations": 0
     },
     {
       "index": 24,
@@ -419,10 +446,11 @@
       "date": "2025-10-27T18:25:36.408972",
       "file_ops": 9,
       "model_calls": 1,
-      "input_tokens": 6246,
+      "input_tokens": 7026,
       "output_tokens": 762,
-      "latency_s": 0.003,
-      "violations": 0
+      "latency_s": 0.006,
+      "violations": 0,
+      "new_violations": 0
     },
     {
       "index": 25,
@@ -430,10 +458,11 @@
       "date": "2025-10-28T18:25:36.408972",
       "file_ops": 6,
       "model_calls": 1,
-      "input_tokens": 11365,
+      "input_tokens": 12146,
       "output_tokens": 435,
-      "latency_s": 0.002,
-      "violations": 0
+      "latency_s": 0.005,
+      "violations": 0,
+      "new_violations": 0
     },
     {
       "index": 26,
@@ -441,10 +470,11 @@
       "date": "2025-10-29T18:25:36.408972",
       "file_ops": 3,
       "model_calls": 1,
-      "input_tokens": 6497,
+      "input_tokens": 7278,
       "output_tokens": 214,
-      "latency_s": 0.001,
-      "violations": 0
+      "latency_s": 0.003,
+      "violations": 0,
+      "new_violations": 0
     },
     {
       "index": 27,
@@ -452,10 +482,11 @@
       "date": "2025-11-01T18:25:36.408972",
       "file_ops": 6,
       "model_calls": 1,
-      "input_tokens": 7189,
+      "input_tokens": 7969,
       "output_tokens": 434,
-      "latency_s": 0.003,
-      "violations": 0
+      "latency_s": 0.004,
+      "violations": 0,
+      "new_violations": 0
     },
     {
       "index": 28,
@@ -463,10 +494,11 @@
       "date": "2025-11-01T18:25:36.408972",
       "file_ops": 3,
       "model_calls": 1,
-      "input_tokens": 7373,
+      "input_tokens": 8154,
       "output_tokens": 214,
       "latency_s": 0.002,
-      "violations": 0
+      "violations": 0,
+      "new_violations": 0
     }
   ]
 }

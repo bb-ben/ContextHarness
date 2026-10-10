@@ -66,7 +66,7 @@ read and written. It then runs the checks below. Results go to the item's trace 
 | Question | Check codes |
 |---|---|
 | Does each entry follow the format? | `unparsed_line`, `unparsed_entry`, `wrong_file`, `orphan_observation`, `duplicate_id`, `bad_status`, `bad_kind` |
-| Are preferences disciplined? | `undeclared_dimension` (a topic outside the seed list with no `new_dimension:` reason), `near_duplicate_dimension`, `unsupported_promotion` (a preference resting on non-stated evidence from one event, with no confirmed hypothesis) |
+| Are preferences disciplined? | `undeclared_dimension` (a topic outside the seed list with no `new_dimension:` reason), `near_duplicate_dimension`, `unsupported_promotion` (a preference resting on non-stated evidence from one event, with no confirmed hypothesis), `unused_stated_observation` (a `stated` observation cited by no state entry, hypothesis or goal note) |
 | Does each entry have a source and date? | `future_id` (ID names an event that hasn't happened), `bad_date`, `date_mismatch` (date differs from its event's real date), `bad_source`, `parent_mismatch`, `missing_basis`, `dangling_ref`, `basis_not_observation`, `missing_topic`, `missing_end_date` |
 | Do current-state files contradict each other? | `topic_conflict` (two `current` entries for one topic), `incomplete_supersession`, `supersession_mismatch`, `unresolved_confirmation`, `overdue_transient`, `archived_live`, `context_stale`, `context_uncited`, `context_dangling`, `context_inactive` |
 | Does information survive across events? | `missing_episode` (an event left no `E` line), `entry_deleted`, `history_rewritten` (statement, date or kind changed, or basis lost), `status_reverted`; plus each entry's lifecycle (created, status changes, deleted) |
@@ -198,14 +198,25 @@ on each saved memory, about $0.002 each; see
   runs, 3 of 26 (v2) and 4 of 23 (v3) stated observations never reached any state
   entry or hypothesis.
 
+### v3 → v3.1: apply what the person says
+
+| Problem in the v3 run | Change |
+|---|---|
+| 4 of 23 stated observations were recorded and never applied, including the one that decided the question | Contract: apply every `stated` observation in the same event (a `basis:`, a hypothesis's `for:`/`against:`, or a goal progress note). Check: `unused_stated_observation`, which flags exactly those four on the v3 memory and the three on v2's |
+| A statement that fit two dimensions fit neither | Contract: one observation can bear on two dimensions; apply it to each |
+| Wishes about one project had nowhere to go | Goal progress notes cite the observations they apply |
+| The answering step leaned on the top of `context.md` | `dimension-first` is the default answer strategy (`--answer-strategy default` restores the old step) |
+
+v3.1 has not met a real model yet.
+
 ## Known gaps
 
 - **The archive itself has no rollover yet** (200,000 chars). That's enough for
   HorizonBench, but not for years of FoodBody data.
 - **Semantic contradictions aren't detected yet.** Two current entries with
   different topics that conflict would need an LLM judge.
-- **Real-model data is thin.** It covers 3½ events under v1 and one item under v2.
-  v3 has not met a real model yet.
+- **Real-model data is thin.** It covers 3½ events under v1 and one item each
+  under v2 and v3, all the same item. v3.1 has not met a real model yet.
 - **Open choices left for later:**
   - per-event review of open hypotheses (v2's accident hypothesis sat untouched for
     14 events);

@@ -15,7 +15,7 @@
   },
   "method_config": {
     "layout": {
-      "name": "horizonbench",
+      "name": "general",
       "files": {
         "context.md": 6000,
         "memory/episodes.md": 60000,
@@ -29,6 +29,7 @@
     },
     "contract_path": null,
     "preload_state": true,
+    "answer_strategy": "dimension-first",
     "episode_rollover_at": 0.8,
     "episode_rollover_to": 0.5,
     "max_update_steps": 8,
@@ -37,7 +38,7 @@
     "summary_max_chars": 8000,
     "action_log_max_chars": 60000
   },
-  "contract_sha256": "c66de581f7eae37fc3a0d93471a00aaca06017e65430731b0aa8bafca6040070",
+  "contract_sha256": "dc2d5a5d089a7e69d607380d8896ba7282c3b112325db8d346208d35004771c3",
   "dataset": {
     "config": "sample",
     "source": null,

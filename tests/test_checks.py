@@ -128,7 +128,7 @@ def test_allowed_changes_are_not_retention_violations():
 def test_monitor_tracks_access_lifecycle_and_report():
     monitor = MemoryMonitor(HORIZONBENCH)
     early = {k: (v if k in ("state/profile.md",) else "") for k, v in CLEAN.items()}
-    early["memory/episodes.md"] = "- E-0 | 2025-10-01 | source: S-0 | Planning chat.\n  - O-0.1 | stated | Likes long, detailed answers.\n"
+    early["memory/episodes.md"] = "- E-0 | 2025-10-01 | source: S-0 | Planning chat.\n  - O-0.1 | behavior | Asked for a long, detailed answer.\n"
     early["context.md"] = "# Working context · as of 2025-10-01 (S-0)\n"
     access = [{"tool": "append_file", "kind": "write", "paths": ["memory/episodes.md"], "ok": True},
               {"tool": "read_file", "kind": "read", "paths": ["state/goals.md"], "ok": False}]
@@ -141,6 +141,21 @@ def test_monitor_tracks_access_lifecycle_and_report():
     assert report["violations_by_code"]["entry_deleted"] == 2 and report["violations_by_code"]["missing_episode"] == 1
     assert report["lifecycle"]["O-0.1"]["deleted"] == "S-1"
     assert report["access_totals"]["memory/episodes.md"] == {"writes": 1}
+
+
+@pytest.mark.parametrize("where,flagged", [
+    (None, True),                                         # recorded, applied nowhere
+    ("state/goals.md", False),                            # cited in a goal progress note
+    ("state/hypotheses.md", False),                       # cited as hypothesis evidence
+])
+def test_stated_observations_must_be_applied(where, flagged):
+    snap = with_change("memory/episodes.md", "  - O-1.1 | event | Has exams all week.\n",
+                       "  - O-1.1 | event | Has exams all week.\n  - O-1.2 | stated | Prefers weighing pros and cons.\n")
+    if where == "state/goals.md":
+        snap = {**snap, where: snap[where].replace("(S-2): studying daily.", "(S-2, O-1.2): studying daily.")}
+    elif where == "state/hypotheses.md":
+        snap = {**snap, where: snap[where].replace("for: O-1.1, O-2.1", "for: O-1.1, O-1.2, O-2.1")}
+    assert (codes(snap)["unused_stated_observation"] == 1) is flagged
 
 
 def test_archiving_a_live_entry_is_flagged():

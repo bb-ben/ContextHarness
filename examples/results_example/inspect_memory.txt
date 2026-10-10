@@ -1,4 +1,4 @@
-29 events · layout horizonbench · 0 events with violations
+29 events · layout general · 0 events with violations
 Access per event (r = reads, w = writes, ! = errors):
   event       context     archive    episodes   transient  violations
   S-0              1w           .          1w          1w  

@@ -4,18 +4,18 @@
   "n_invalid": 0,
   "overall": {
     "n": 10,
-    "accuracy": 0.1,
+    "accuracy": 0,
     "ci95": [
       0,
-      0.3
+      0
     ]
   },
   "evolved": {
     "n": 6,
-    "accuracy": 0.16666666666666666,
+    "accuracy": 0,
     "ci95": [
       0,
-      0.5
+      0
     ]
   },
   "static": {
@@ -26,21 +26,21 @@
       0
     ]
   },
-  "evolved_minus_static": 0.16666666666666666,
+  "evolved_minus_static": 0,
   "distractor": {
     "n_evolved_with_distractor": 6,
     "chose_distractor_rate": 0.16666666666666666,
-    "n_wrong": 5,
-    "distractor_share_of_errors": 0.2,
+    "n_wrong": 6,
+    "distractor_share_of_errors": 0.16666666666666666,
     "chance_share_of_errors": 0.25
   },
   "by_generator": {
     "gemini-3-flash": {
       "n": 4,
-      "accuracy": 0.25,
+      "accuracy": 0,
       "ci95": [
         0,
-        0.75
+        0
       ]
     },
     "o3": {
@@ -63,26 +63,28 @@
   "memory": {
     "evolved_items_with_write_on_evolution_date": 1,
     "mean_file_ops": 390.4,
-    "mean_file_reads": 1
+    "mean_file_reads": 0.9
   },
   "cost": {
     "tokens_total": {
-      "input_tokens": 5373868,
+      "input_tokens": 6083755,
       "output_tokens": 284137,
       "cache_read_input_tokens": 0,
       "cache_creation_input_tokens": 0
     },
     "model_calls_total": 921,
-    "mean_latency_s": 0.3483,
-    "tool_errors_total": 0,
+    "mean_latency_s": 0.6003,
+    "tool_errors_total": 1,
     "refusals_total": 0
   },
   "chance": 0.2,
   "memory_layer": {
     "items": 10,
     "events": 901,
+    "distinct_violations": 0,
     "violations_per_event": 0.0,
-    "share_events_with_violations": 0.0,
+    "share_events_with_new_violations": 0.0,
+    "unresolved_at_end": 0,
     "violations_by_code": {},
     "final_provenance_share": 1.0,
     "final_context_coverage": 0.17396825396825397,

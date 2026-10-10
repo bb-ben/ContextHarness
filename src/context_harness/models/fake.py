@@ -129,7 +129,9 @@ class FakeModel:
             return "", [self._call("read_file", path="memory/episodes.md")]
         prompt = _body(request)
         question = _QUESTION.search(prompt).group(0)
-        memory_words = set(_WORD.findall(_QUESTION.sub("", prompt).lower()))
+        # Overlap with memory only: the answer instruction (and any strategy) is harness text.
+        memory = _QUESTION.sub("", prompt).split("You are now responding to the person")[0]
+        memory_words = set(_WORD.findall(memory.lower()))
         options = _OPTION.findall(question)
         best = max(options, key=lambda o: (len(set(_WORD.findall(o[1].lower())) & memory_words), -ord(o[0])))
         return "", [self._call("submit_answer", letter=best[0])]
