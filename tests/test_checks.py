@@ -342,3 +342,14 @@ def test_tagged_signals_surface_until_a_belief_takes_them_up():
     assert codes(taken_up)["uncollected_signals"] == 0
     hyps = "- H-2.2 | open | 2025-10-09 | topic: constraints | for: O-5.1 | May want one-pan meals.\n"
     assert "signals not yet in any belief (1 event): O-6.1" in render_dimensions(dimension_rows(HORIZONBENCH, "", hyps, episodes))
+
+
+def test_profile_topics_show_current_facts_or_none_yet():
+    from context_harness.dimensions import render_fact_topics
+    from context_harness.workspace import FOODBODY, GENERAL
+
+    profile = "# Profile\n- F-7.1 | current | 2025-07-24 | topic: diet | basis: O-7.1 | Is vegetarian.\n"
+    text = render_fact_topics(FOODBODY, profile)
+    assert 'diet: Dietary pattern' in text and 'current: F-7.1 "Is vegetarian."' in text
+    assert text.split("allergies:")[1].split("\n")[1] == "  current: (none yet)"
+    assert GENERAL.fact_topics == ()  # only domain layouts carry them

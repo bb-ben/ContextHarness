@@ -7,7 +7,8 @@ from dataclasses import asdict
 from typing import Any
 
 from .. import prompts
-from ..dimensions import HYPOTHESES_FILE, PREFERENCES_FILE, dimension_rows, render_dimensions
+from ..dimensions import (HYPOTHESES_FILE, PREFERENCES_FILE, PROFILE_FILE, dimension_rows, render_dimensions,
+                          render_fact_topics)
 from ..entries import Entry, parse_file, parse_workspace
 from ..tools import Finish, ReadBudget, Respond, SubmitAnswer, ToolExecutor, workspace_tools
 from ..types import AnswerResult, Event, Probe, Question, Session
@@ -83,6 +84,8 @@ class WorkspaceAgent:
                 rows = dimension_rows(self.ws.layout, state[PREFERENCES_FILE], state.get(HYPOTHESES_FILE, ""),
                                       self.ws.read(EPISODES_FILE) if self.ws.layout.spec(EPISODES_FILE) else "")
                 blocks.append(render_dimensions(rows))
+            if self.ws.layout.fact_topics and PROFILE_FILE in state:
+                blocks.append(render_fact_topics(self.ws.layout, state[PROFILE_FILE]))
         return blocks + [prompts.render_workspace(self.ws.list_files())]
 
     def _rollover_episodes(self) -> None:

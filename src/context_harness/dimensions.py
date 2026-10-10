@@ -16,6 +16,7 @@ from .workspace import Layout
 
 EPISODES_FILE = "memory/episodes.md"
 PREFERENCES_FILE = "state/preferences.md"
+PROFILE_FILE = "state/profile.md"
 HYPOTHESES_FILE = "state/hypotheses.md"
 
 
@@ -67,6 +68,19 @@ def dimension_rows(layout: Layout, preferences_text: str, hypotheses_text: str,
         row.hypotheses = [h for h in open_hyps if h.fields.get("topic") == row.key and h not in row.challenged_by]
         row.signals = signals.get(row.key, [])[-6:]
     return list(rows.values())
+
+
+def render_fact_topics(layout: Layout, profile_text: str) -> str:
+    """The layout's key profile facts, each with its current entries or "(none yet)"."""
+    facts, _ = parse_file(PROFILE_FILE, profile_text, ("F",))
+    lines = ["<profile_topics>",
+             "Facts every reply must respect. Record one as soon as the person mentions it, even in passing."]
+    for topic in layout.fact_topics:
+        current = [f for f in facts if f.status == "current" and f.fields.get("topic") == topic.key]
+        lines.append(f"{topic.key}: {topic.description}")
+        lines += [f"  current: {f.id} \"{f.statement}\"" for f in current] or ["  current: (none yet)"]
+    lines.append("</profile_topics>")
+    return "\n".join(lines)
 
 
 def render_dimensions(rows: list[DimensionRow]) -> str:

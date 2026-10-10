@@ -65,6 +65,9 @@ class Layout:
     name: str
     files: tuple[FileSpec, ...]
     dimensions: tuple[Dimension, ...] = GENERAL_DIMENSIONS
+    # Profile facts a domain can't do without, shown with their current value in every
+    # call so that one mentioned in passing has an obvious place to go. Empty by default.
+    fact_topics: tuple[Dimension, ...] = ()
 
     def dimension(self, key: str) -> Dimension | None:
         return next((d for d in self.dimensions if d.key == key), None)
@@ -105,7 +108,18 @@ _CORE = (
 GENERAL = Layout("general", _CORE)
 # Reserved for event sources that include the agent's own decisions and their outcomes.
 WITH_DECISIONS = Layout("with-decisions", _CORE + (FileSpec("memory/decisions.md", "Decisions", 20000, ("D", "R")),))
-LAYOUTS = {layout.name: layout for layout in (GENERAL, WITH_DECISIONS)}
+# A food and health domain: the general layout plus the profile facts every reply has to
+# respect. In the new-parent scenario, "still vegetarian obviously", said in passing, was
+# never recorded, and the replies suggested chicken.
+FOOD_FACT_TOPICS: tuple[Dimension, ...] = (
+    Dimension("diet", "Dietary pattern and restrictions: vegetarian, halal, low-carb, ..."),
+    Dimension("allergies", "Allergies and intolerances."),
+    Dimension("health-conditions", "Conditions that shape what they should eat or do."),
+    Dimension("household", "Who they cook or eat with."),
+    Dimension("kitchen", "Equipment, skills and time they usually have."),
+)
+FOODBODY = Layout("foodbody", _CORE, fact_topics=FOOD_FACT_TOPICS)
+LAYOUTS = {layout.name: layout for layout in (GENERAL, WITH_DECISIONS, FOODBODY)}
 HORIZONBENCH = GENERAL  # earlier name of the default layout
 
 
