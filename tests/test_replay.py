@@ -42,7 +42,7 @@ def test_default_strategy_adds_no_instruction(tmp_path):
     seen = []
     replay_answer(load_source_item(source), find_snapshot(source),
                   ScriptedModel(lambda r: (seen.append(r) or "", [("submit_answer", {"letter": "A"})])),
-                  run_config("agent"), tmp_path / "replay" / "d1")
+                  run_config("agent", answer_strategy="default"), tmp_path / "replay" / "d1")
     assert "Work in this order" not in seen[0].blocks[1].text
 
 

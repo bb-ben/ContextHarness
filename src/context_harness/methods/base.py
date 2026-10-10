@@ -27,7 +27,9 @@ class MethodConfig:
     layout: Layout = GENERAL
     contract_path: str | None = None  # agent.md by default
     preload_state: bool = True  # contract v2: show the layout's state files in full in every call
-    answer_strategy: str = "default"  # a key of prompts.ANSWER_STRATEGIES
+    # A key of prompts.ANSWER_STRATEGIES. dimension-first gave 10/10 consistent answers and
+    # avoided the old-preference trap in replays where "default" fell for it 2 times in 5.
+    answer_strategy: str = "dimension-first"
     episode_rollover_at: float = 0.8  # roll old episodes into the archive above this share of the limit...
     episode_rollover_to: float = 0.5  # ...until the episode log is back under this share
     max_update_steps: int = 8

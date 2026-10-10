@@ -57,6 +57,7 @@ def cmd_run(args: argparse.Namespace) -> int:
     method_config = MethodConfig(
         layout=LAYOUTS[args.layout].with_limit(CONTEXT_FILE, args.context_chars),
         preload_state=not args.no_preload,
+        answer_strategy=args.answer_strategy,
         max_update_steps=args.max_update_steps,
         max_answer_steps=args.max_answer_steps,
         answer_budget_chars=args.answer_budget_chars,
@@ -278,6 +279,8 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--layout", choices=sorted(LAYOUTS), default="general", help="Workspace file layout")
     p.add_argument("--no-fallbacks", action="store_true", help="Disable server-side refusal fallback")
     p.add_argument("--context-chars", type=int, default=6000, help="context.md limit")
+    p.add_argument("--answer-strategy", default="dimension-first", choices=["default", "dimension-first"],
+                   help="How the agent uses memory when answering (default: dimension-first)")
     p.add_argument("--no-preload", action="store_true",
                    help="Contract v1 behavior: show only context.md automatically, not the state files")
     p.add_argument("--answer-budget-chars", type=int, default=48000,
