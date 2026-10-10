@@ -1,0 +1,1350 @@
+S-0 · 2025-09-26
+  working context: 3 bullets (cites +H-0.1 +H-0.2 +H-0.3 +H-0.4 +H-0.5 +H-0.6)
+    + Likely prefers a casual, playful tone with fun and heart over cheese (H-0.5, H-0.6)
+    + Likely prefers collaborative brainstorming in bullets and quick recaps (H-0.1, H-0.2)
+    + Likely prefers practical, step-by-step help that stays snappy (H-0.3, H-0.4)
+  episodic:
+    + E-0 [episode] Short chat about a football-fandom short film and response style.
+    + O-0.1 [behavior] Asked to bounce ideas collaboratively and keep them in bullets.
+    + O-0.2 [behavior] Asked for step-by-step, idiot-proof guidance on workflow and blocking.
+    + O-0.3 [stated] Wants a fun, heartfelt tone and no cheesy or syrupy stuff.
+  state:
+    + H-0.1 [open] The user prefers collaborative back-and-forth brainstorming.
+    + H-0.2 [open] The user prefers bullets and quick recaps for ideas.
+    + H-0.3 [open] The user prefers step-by-step, practical guidance.
+    + H-0.4 [open] The user prefers concise help that stays snappy.
+    + H-0.5 [open] The user prefers a casual, playful tone with little cheese.
+    + H-0.6 [open] The user values fun with heart over syrupy sentimentality.
+S-1 · 2025-09-27
+  working context: 3 bullets (cites +P-1.1 +P-1.2 +P-1.3 -H-0.1 -H-0.2 -H-0.3 -H-0.4 -H-0.5 -H-0.6)
+    + Prefers a casual, playful tone with football banter and little cheese (P-1.3)
+    + Wants concise, practical bullet-point help with no fluff (P-1.1)
+    + Wants iterative back-and-forth and quick check-ins (P-1.2)
+    - Likely prefers a casual, playful tone with fun and heart over cheese (H-0.5, H-0.6)
+    - Likely prefers collaborative brainstorming in bullets and quick recaps (H-0.1, H-0.2)
+    - Likely prefers practical, step-by-step help that stays snappy (H-0.3, H-0.4)
+  episodic:
+    + E-1 [episode] Pre-speech anxiety was eased by terse, football-flavoured coaching and the talk ended with applause.
+    + O-1.1 [behavior] Asked for bullets, no fluff, and short lines only.
+    + O-1.2 [behavior] Asked for footy banter or ref jokes to calm nerves.
+    + O-1.3 [behavior] Asked for mini drills, stats, a speech example, and a brutal check.
+    + O-1.4 [reaction] Reported breathing helped, then finished to big applause and felt buzzing.
+  state:
+    + P-1.1 [current] Wants concise, practical bullet-point help with no fluff.
+    + P-1.2 [current] Wants iterative back-and-forth and quick check-ins.
+    + P-1.3 [current] Prefers a casual, playful tone with football banter and little cheese.
+    ~ H-0.1 open -> confirmed for: O-0.1, O-1.3 resolved_into: P-1.2
+    ~ H-0.2 open -> confirmed for: O-0.1, O-1.1 resolved_into: P-1.1
+    ~ H-0.3 open -> confirmed for: O-0.2, O-1.3 resolved_into: P-1.1
+    ~ H-0.4 open -> confirmed for: O-0.2, O-0.3, O-1.1 resolved_into: P-1.1
+    ~ H-0.5 open -> confirmed for: O-0.3, O-1.2 resolved_into: P-1.3
+    ~ H-0.6 open -> confirmed for: O-0.3, O-1.2 resolved_into: P-1.3
+S-2 · 2025-09-29
+  working context: 3 bullets (cites +P-2.1 +P-2.2 +P-2.3 -P-1.1)
+    + Wants concise answers under 200 words, with tight depth and concrete examples (P-2.1, P-2.2, P-2.3)
+    - Wants concise, practical bullet-point help with no fluff (P-1.1)
+  episodic:
+    + E-2 [episode] Focused on coup-sim diplomacy and wanted tighter response limits.
+    + O-2.1 [stated] Wants future answers under 200 words.
+    + O-2.2 [stated] Says real examples help ideas stick.
+  state:
+    + P-2.1 [current] Wants concise answers under 200 words.
+    + P-2.2 [current] Wants tight, compact answers rather than long deep dives.
+    + P-2.3 [current] Prefers concrete examples to help ideas stick.
+    ~ P-1.1 current -> superseded superseded_by: P-2.1
+S-3 · 2025-09-29
+  working context: 3 bullets (cites -P-2.3)
+    + Wants concise answers under 200 words and tight, compact depth (P-2.1, P-2.2)
+    - Wants concise answers under 200 words, with tight depth and concrete examples (P-2.1, P-2.2, P-2.3)
+  episodic:
+    + E-3 [episode] Short back-and-forth on coup-simulation roleplay and crisis talking points.
+    + O-3.1 [behavior] Repeatedly asked for bullets, a tight table, and a no-fluff checklist.
+    + O-3.2 [behavior] Asked for blunt critique of a line and a rewrite, favoring iterative feedback.
+  state:
+    ~ P-1.2  basis: O-0.1, O-1.3, O-3.2 confirmed: 2025-09-29
+    ~ P-2.1  basis: O-2.1, O-3.1 confirmed: 2025-09-29
+    ~ P-2.2  basis: O-2.1, O-3.1 confirmed: 2025-09-29
+S-4 · 2025-10-02
+  working context: 5 bullets (cites +P-2.3 +P-4.1 -P-2.1)
+    + Prefers concrete examples to make ideas stick (P-2.3)
+    + Wants a casual, playful tone with football banter and little cheese (P-1.3)
+    + Wants concise bullet-point help under 200 words, ideally as numbered outlines (P-4.1)
+    + Wants tight, compact depth rather than long deep dives (P-2.2)
+    - Prefers a casual, playful tone with football banter and little cheese (P-1.3)
+    - Wants concise answers under 200 words and tight, compact depth (P-2.1, P-2.2)
+  episodic:
+    + E-4 [episode] Fantasy world-building brainstorm about football-runs-everything setting.
+    + O-4.1 [behavior] Wants replies as chill bullet points or numbered outlines, with cheeky football-history easter eggs.
+    + O-4.2 [behavior] Wants big-picture first, then zoom-in collaboration on the same idea.
+  state:
+    + P-4.1 [current] Wants concise bullet-point answers under 200 words, ideally as numbered outlines.
+    ~ P-1.2  basis: O-0.1, O-1.3, O-3.2, O-4.2 confirmed: 2025-10-02
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1 confirmed: 2025-10-02
+    ~ P-2.1 current -> superseded superseded_by: P-4.1
+    ~ P-2.2  basis: O-2.1, O-3.1, O-4.1 confirmed: 2025-10-02
+    ~ P-2.3  basis: O-2.2, O-4.1 confirmed: 2025-10-02
+S-5 · 2025-10-03
+  working context: 6 bullets (cites +G-5.1 +P-5.1 +T-5.1 -P-2.2 -P-2.3)
+    + Is struggling with breakup sadness and poor sleep this week (T-5.1)
+    + Prefers concrete examples and hard data to help ideas stick (P-5.1)
+    + Will test the coping drill over the weekend (G-5.1)
+    - Prefers concrete examples to make ideas stick (P-2.3)
+    - Wants tight, compact depth rather than long deep dives (P-2.2)
+  episodic:
+    + E-5 [episode] Breakup sadness and coping-plan chat before tomorrow's shift.
+    + O-5.1 [event] Broke up with Lauren last week and has barely slept since.
+    + O-5.2 [stated] Wants step-by-step help in concise bullets with football banter.
+    + O-5.3 [stated] Wants hard data, not woo-woo, when judging coping methods.
+    + O-5.4 [behavior] Plans to test the coping drill over the weekend.
+  state:
+    + P-5.1 [current] Prefers concrete examples and hard data to help ideas stick.
+    + G-5.1 [active] Will test the coping drill over the weekend.
+    + T-5.1 [active] Is struggling with breakup sadness and poor sleep this week.
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1, O-5.2 confirmed: 2025-10-03
+    ~ P-2.2  basis: O-2.1, O-3.1, O-4.1, O-5.2 confirmed: 2025-10-03
+    ~ P-2.3 current -> superseded superseded_by: P-5.1
+    ~ P-4.1  basis: O-2.1, O-3.1, O-4.1, O-5.2 confirmed: 2025-10-03
+S-6 · 2025-10-05
+  working context: 7 bullets (cites +T-6.1)
+    + Wants this starship horror RP kept PG-13 with a timeout safe word until review 2025-10-12 (T-6.1)
+  episodic:
+    + E-6 [episode] Quick starship-horror RP with recap beats and a timeout safety word.
+    + O-6.1 [behavior] Asked for quick bullet beats and a quick recap when lost.
+    + O-6.2 [stated] Wanted the RP kept PG-13, with safe word "timeout" and less gore.
+    + O-6.3 [stated] Wanted a football-meltdown mirror for flavour.
+  state:
+    + T-6.1 [active] Wants this starship horror RP kept PG-13 with a timeout safe word.
+    ~ P-1.2  basis: O-0.1, O-1.3, O-3.2, O-4.2, O-6.1 confirmed: 2025-10-05
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1, O-5.2, O-6.3 confirmed: 2025-10-05
+    ~ P-2.2  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1 confirmed: 2025-10-05
+    ~ P-4.1  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1 confirmed: 2025-10-05
+    ~ P-5.1  basis: O-2.2, O-4.1, O-5.3, O-6.3 confirmed: 2025-10-05
+S-7 · 2025-10-06
+  working context: 8 bullets (cites +P-2.2 +P-7.1 -P-5.1)
+    + Wants a small set of options before choosing (P-7.1)
+    + Wants a tight, compact level of detail rather than long deep dives (P-2.2)
+    + Wants concise bullet-point answers under 200 words, ideally as numbered outlines (P-4.1)
+    - Prefers concrete examples and hard data to help ideas stick (P-5.1)
+    - Wants concise bullet-point help under 200 words, ideally as numbered outlines (P-4.1)
+  episodic:
+    + E-7 [episode] Alternate-history brainstorming about Apollo 11 and a British journalist lens.
+    + O-7.1 [stated] Wants top-down bullet outlines first for the story.
+    + O-7.2 [behavior] Wants three quick questions each round.
+    + O-7.3 [stated] Wants smaller chunks; big lists are overwhelming.
+    + O-7.4 [stated] Wants a small set of options before choosing.
+  state:
+    + P-7.1 [current] Wants a small set of options before choosing.
+    ~ P-1.2  basis: O-0.1, O-1.3, O-3.2, O-4.2, O-6.1, O-7.2 confirmed: 2025-10-06
+    ~ P-2.2  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.3 confirmed: 2025-10-06
+    ~ P-4.1  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.1, O-7.3 confirmed: 2025-10-06
+S-8 · 2025-10-07
+  working context: 8 bullets (cites +T-8.1 -G-5.1)
+    + Is feeling anxious about the swap and wants quick calming support until review 2025-10-14 (T-8.1)
+    + Is struggling with breakup sadness and poor sleep this week until review 2025-10-10 (T-5.1)
+    + Wants tight, compact answers rather than long deep dives (P-2.2)
+    - Is struggling with breakup sadness and poor sleep this week (T-5.1)
+    - Wants a tight, compact level of detail rather than long deep dives (P-2.2)
+    - Will test the coping drill over the weekend (G-5.1)
+  episodic:
+    + E-8 [episode] Last-minute swap prep for a signed-ball trade at the Houston expo.
+    + O-8.1 [stated] Wants replies under 200 words.
+    + O-8.2 [behavior] Asked for a quick chill trick when anxiety crept in.
+  state:
+    + T-8.1 [active] Is feeling anxious about the swap and wants quick calming support.
+    ~ P-4.1  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.1, O-7.3, O-8.1 confirmed: 2025-10-07
+    ~ G-5.1 active -> paused
+S-9 · 2025-10-10
+  working context: 11 bullets (cites +G-9.1 +T-9.1 +T-9.2 +T-9.3 -T-5.1)
+    + Is doom-scrolling an ex's accounts and skipping pub quiz or staying home when low (T-9.3)
+    + Is struggling with breakup sadness, poor sleep, appetite loss, and vivid breakup dreams this week (T-9.1)
+    + Wants sleep support to stay drug-free right now (T-9.2)
+    + Will message two mates, cook one proper dinner, and spend 10 minutes on what they want in the next relationsh…
+    - Is struggling with breakup sadness and poor sleep this week until review 2025-10-10 (T-5.1)
+  episodic:
+    + E-9 [episode] Breakup slump, sleep trouble, and a request for practical, numbered support.
+    + O-9.1 [stated] Breakup last week has them barely sleeping, not eating much, and worst in the mornings.
+    + O-9.2 [stated] Wants straight step-by-step help, numbered lists, and three tiny goals with a Sunday check-in.
+    + O-9.3 [stated] Wants natural sleep fixes only right now, and the shower plus banana helped a bit.
+    + O-9.4 [stated] Dreams about the breakup still hit hard, and doom-scrolling the ex's accounts feels compulsive.
+    + O-9.5 [stated] Likes football analogies, numbered lists, and skipping woo-woo.
+  state:
+    + G-9.1 [active] Will message two mates, cook one proper dinner, and spend 10 minutes on what they want in the next relationsh…
+    + T-9.1 [active] Is still struggling with breakup sadness, poor sleep, appetite loss, and vivid breakup dreams this week.
+    + T-9.2 [active] Wants sleep support to stay drug-free right now.
+    + T-9.3 [active] Is doom-scrolling an ex's accounts and skipping pub quiz or staying home when low.
+    ~ P-1.2  basis: O-0.1, O-1.3, O-3.2, O-4.2, O-6.1, O-7.2, O-9.2 confirmed: 2025-10-10
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1, O-5.2, O-6.3, O-9.5 confirmed: 2025-10-10
+    ~ P-2.2  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.3, O-9.2 confirmed: 2025-10-10
+    ~ P-4.1  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.1, O-7.3, O-8.1, O-9.2 confirmed: 2025-10-10
+    ~ P-7.1  basis: O-7.4, O-9.2 confirmed: 2025-10-10
+    ~ T-5.1 active -> superseded superseded_by: T-9.1
+S-10 · 2025-10-11
+  working context: 12 bullets (cites +T-10.1)
+    + Is having a panic spike and wants simple grounding, short logic, and physical moves right now (T-10.1)
+    + Is still struggling with breakup sadness, poor sleep, appetite loss, and vivid breakup dreams this week (T-9.…
+    - Is struggling with breakup sadness, poor sleep, appetite loss, and vivid breakup dreams this week (T-9.1)
+  episodic:
+    + E-10 [episode] Panic spike eased by simple grounding and short logic.
+    + O-10.1 [event] Had an acute panic spike with chest tightness and racing heart.
+    + O-10.2 [stated] Wants super simple, step-by-step grounding, plus short logic and physical moves during panic.
+    + O-10.3 [reaction] Said the grounding worked, anxiety dropped to 2, and they saved the quick go-to moves.
+  state:
+    + T-10.1 [active] Is having a panic spike and wants simple grounding, short logic, and physical moves right now.
+    ~ P-1.2  basis: O-0.1, O-1.3, O-3.2, O-4.2, O-6.1, O-7.2, O-9.2, O-10.2 confirmed: 2025-10-11
+    ~ P-2.2  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.3, O-9.2, O-10.2 confirmed: 2025-10-11
+    ~ P-4.1  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.1, O-7.3, O-8.1, O-9.2, O-10.2 confirmed: 2025-10-11
+S-11 · 2025-10-11
+  working context: 7 bullets (cites +T-11.1 -T-10.1 -T-6.1 -T-8.1)
+    + Is in a short-term panic-spike state and wants plain speech plus physical grounding right now (T-11.1)
+    + Wants a small set of options before choosing when decisions matter (P-7.1)
+    + Wants concise bullet-point answers under 200 words, tight and compact, with a casual football-banter tone and…
+    - Is feeling anxious about the swap and wants quick calming support until review 2025-10-14 (T-8.1)
+    - Is having a panic spike and wants simple grounding, short logic, and physical moves right now (T-10.1)
+    - Wants a casual, playful tone with football banter and little cheese (P-1.3)
+    - Wants a small set of options before choosing (P-7.1)
+    - Wants concise bullet-point answers under 200 words, ideally as numbered outlines (P-4.1)
+    - Wants iterative back-and-forth and quick check-ins (P-1.2)
+    - Wants this starship horror RP kept PG-13 with a timeout safe word until review 2025-10-12 (T-6.1)
+    - Wants tight, compact answers rather than long deep dives (P-2.2)
+  episodic:
+    + E-11 [episode] Panic spike at the desk; wanted short, normal, discreet grounding.
+    + O-11.1 [stated] Wanted no therapy talk, clear steps, and a tiny joke while others were nearby.
+    + O-11.2 [stated] Said the quick check-ins really help and asked for a tiny checklist to stick on the monitor.
+  state:
+    + T-11.1 [active] Is having a panic spike and wants simple grounding, plain speech, and physical moves right now.
+    ~ P-1.2  basis: O-0.1, O-1.3, O-3.2, O-4.2, O-6.1, O-7.2, O-9.2, O-10.2, O-11.2
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1, O-5.2, O-6.3, O-9.5, O-11.1 confirmed: 2025-10-11
+    ~ P-4.1  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.1, O-7.3, O-8.1, O-9.2, O-10.2, O-11.2
+    ~ T-10.1 active -> superseded superseded_by: T-11.1
+S-12 · 2025-10-11
+  working context: 7 bullets (cites +T-12.1 -T-11.1)
+    + Is coming down from a panic spike and wants quiet sleep support tonight (T-12.1)
+    - Is in a short-term panic-spike state and wants plain speech plus physical grounding right now (T-11.1)
+  episodic:
+    + E-12 [episode] Panic spike later shifted to bedtime cooldown.
+    + O-12.1 [behavior] Wants super clear steps, tiny bullets, and no waffle.
+    + O-12.2 [behavior] Said football talk helps when grounding panic.
+    + O-12.3 [stated] Is not suicidal, is buzzing, and cannot sleep tonight.
+  state:
+    + T-12.1 [active] Is coming down from a panic spike, is not suicidal, and cannot sleep tonight.
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1, O-5.2, O-6.3, O-9.5, O-11.1, O-12.2
+    ~ P-2.2  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.3, O-9.2, O-10.2, O-12.1
+    ~ P-4.1  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.1, O-7.3, O-8.1, O-9.2, O-10.2, O-11.2, O-12.1
+    ~ T-11.1 active -> superseded superseded_by: T-12.1
+S-13 · 2025-10-12
+  working context: 11 bullets (cites +P-5.1)
+    + Is coming down from a panic spike, is not suicidal, and cannot sleep tonight (T-12.1)
+    + Prefers concrete examples and hard data to help ideas stick (P-5.1)
+    + Wants a casual, playful tone with football banter and little cheese (P-1.3)
+    + Wants a small set of options before choosing (P-7.1)
+    + Wants concise bullet-point answers under 200 words, ideally as numbered outlines (P-4.1)
+    + Wants iterative back-and-forth and quick check-ins (P-1.2)
+    + Wants tight, compact answers rather than long deep dives (P-2.2)
+    - Is coming down from a panic spike and wants quiet sleep support tonight (T-12.1)
+    - Wants a small set of options before choosing when decisions matter (P-7.1)
+    - Wants concise bullet-point answers under 200 words, tight and compact, with a casual football-banter tone and…
+  episodic:
+    + E-13 [episode] Policy brief planning on the self-driving car trolley problem.
+    + O-13.1 [stated] Wants step-by-step, citation-backed help with sections capped at about 200 words.
+  state:
+    ~ P-2.2  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.3, O-9.2, O-10.2, O-12.1, O-13.1 confirmed: 2025-10-12
+    ~ P-4.1  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.1, O-7.3, O-8.1, O-9.2, O-10.2, O-11.2, O-12.1, O-13.1 confirmed: 2025-10-12
+    ~ T-6.1 active -> expired ended: 2025-10-12
+S-14 · 2025-10-12
+  working context: 7 bullets (cites +F-14.1 -P-1.2 -P-5.1 -P-7.1 -T-9.2 -T-9.3)
+    + Was promoted to Global Logistics Project Manager and coordinates teams in the UK, US, and Singapore (F-14.1)
+    - Is doom-scrolling an ex's accounts and skipping pub quiz or staying home when low (T-9.3)
+    - Prefers concrete examples and hard data to help ideas stick (P-5.1)
+    - Wants a small set of options before choosing (P-7.1)
+    - Wants iterative back-and-forth and quick check-ins (P-1.2)
+    - Wants sleep support to stay drug-free right now (T-9.2)
+  episodic:
+    + E-14 [episode] Asked for a clean status-report template for distributed teams and time-zone auto-fill help.
+    + O-14.1 [behavior] Asked for a quick, clean status-report template and an auto-fill trick for local times across time zones.
+    + O-14.2 [stated] Got promoted to Global Logistics Project Manager and now coordinates teams in the UK, US, and Singapore.
+  state:
+    + F-14.1 [current] Was promoted to Global Logistics Project Manager and coordinates teams in the UK, US, and Singapore.
+    ~ P-2.2  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.3, O-9.2, O-10.2, O-12.1, O-13.1, O-14.1
+    ~ P-4.1  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.1, O-7.3, O-8.1, O-9.2, O-10.2, O-11.2, O-12.1, O-13.1, O-14.1
+S-15 · 2025-10-13
+  working context: 7 bullets (cites +P-1.2 +P-7.1 +T-15.1 +T-15.2 -F-14.1 -T-12.1 -T-9.1)
+    + Feels lighter after the roommate boundary chat went well (T-15.2)
+    + Prefers text for awkward boundary-setting because it feels safer right now (T-15.1)
+    + Wants iterative back-and-forth and quick check-ins, plus a small set of options before choosing (P-1.2, P-7.1)
+    - Is coming down from a panic spike, is not suicidal, and cannot sleep tonight (T-12.1)
+    - Is still struggling with breakup sadness, poor sleep, appetite loss, and vivid breakup dreams this week (T-9.…
+    - Was promoted to Global Logistics Project Manager and coordinates teams in the UK, US, and Singapore (F-14.1)
+  episodic:
+    + E-15 [episode] Boundary-setting script for noisy flatmate.
+    + O-15.1 [stated] Wants step-by-step help, kept tight.
+    + O-15.2 [behavior] Prefers to handle the boundary by text because it feels safer.
+    + O-15.3 [reaction] Said the roommate was sound about it and feels lighter after the chat.
+  state:
+    + T-15.1 [active] Prefers text for awkward boundary-setting because it feels safer right now.
+    + T-15.2 [active] Feels lighter after the roommate boundary chat went well.
+    ~ P-2.2  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.3, O-9.2, O-10.2, O-12.1, O-13.1, O-14.1, O-15.1 confirmed: 2025-10-13
+    ~ P-4.1  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.1, O-7.3, O-8.1, O-9.2, O-10.2, O-11.2, O-12.1, O-13.1, O-14.1, O-15.1 confirmed: 2025-10-13
+S-16 · 2025-10-13
+  episodic:
+    + E-16 [episode] Boundary-setting practice for a noisy housemate ended with a successful resolution.
+    + O-16.1 [behavior] Wants dead-straight but polite help, preferably as step-by-step checklists.
+    + O-16.2 [behavior] Likes role-play practice and skim-friendly recaps for awkward chats.
+    + O-16.3 [event] Said the roommate chat went smoothly and the housemate agreed to keep it down.
+  state:
+    ~ P-1.2  basis: O-0.1, O-1.3, O-3.2, O-4.2, O-6.1, O-7.2, O-9.2, O-10.2, O-11.2, O-16.2 confirmed: 2025-10-13
+    ~ P-2.2  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.3, O-9.2, O-10.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2
+    ~ P-4.1  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.1, O-7.3, O-8.1, O-9.2, O-10.2, O-11.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2
+    ~ T-15.2  basis: O-15.3, O-16.3
+S-17 · 2025-10-14
+  working context: 7 bullets (cites +T-17.1 -T-15.1)
+    + Pre-speech anxiety spike right now; review 2025-10-21 (T-17.1)
+    - Prefers text for awkward boundary-setting because it feels safer right now (T-15.1)
+  episodic:
+    + E-17 [episode] Pre-speech anxiety support and a checklist-heavy, football-bantery coaching style.
+    + O-17.1 [stated] Is backstage before speaking and feeling a strong anxiety spike.
+    + O-17.2 [behavior] Kept asking for numbered checklists and cheat-sheet bullets to stay oriented.
+  state:
+    + T-17.1 [active] Is having a pre-speech anxiety spike and wants quick calming support right now.
+    ~ P-4.1  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.1, O-7.3, O-8.1, O-9.2, O-10.2, O-11.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-17.2 confirmed: 2025-10-14
+    ~ T-8.1 active -> superseded superseded_by: T-17.1
+S-18 · 2025-10-16
+  working context: 6 bullets (cites +T-18.1 -T-15.2 -T-17.1)
+    + Had a panic spike tonight and is now exhausted, wanting to sleep; review 2025-10-23 (T-18.1)
+    - Feels lighter after the roommate boundary chat went well (T-15.2)
+    - Pre-speech anxiety spike right now; review 2025-10-21 (T-17.1)
+  episodic:
+    + E-18 [episode] Panic spike, grounding, and a saveable cheat sheet.
+    + O-18.1 [stated] Had a panic spike with breathlessness, racing heart, dizziness, and chest tightness.
+    + O-18.2 [behavior] Wanted super-clear, ultra-brief grounding steps right now.
+    + O-18.3 [behavior] Asked for a 3-line lock-screen cheat sheet, short emergency lines, and a couple app names.
+    + O-18.4 [reaction] Said the slower pacing helped.
+    + O-18.5 [stated] Panic later dropped to 2 and they felt knackered.
+  state:
+    + T-18.1 [active] Had a panic spike tonight and is now exhausted, wanting to sleep.
+    ~ P-1.2  basis: O-0.1, O-1.3, O-3.2, O-4.2, O-6.1, O-7.2, O-9.2, O-10.2, O-11.2, O-16.2, O-18.2, O-18.4 confirmed: 2025-10-16
+    ~ P-2.2  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.3, O-9.2, O-10.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-18.2, O-18.3, O-18.4 confirmed: 2025-10-16
+    ~ P-4.1  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.1, O-7.3, O-8.1, O-9.2, O-10.2, O-11.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-17.2, O-18.2, O-18.3, O-18.4 confirmed: 2025-10-16
+    ~ P-7.1  basis: O-7.4, O-9.2, O-18.3 confirmed: 2025-10-16
+S-19 · 2025-10-20
+  working context: 6 bullets (cites +T-19.1 -G-9.1)
+    + Is acting as Crisis Logistics Manager during the truckers' strike and may need fast comms support (T-19.1)
+    - Will message two mates, cook one proper dinner, and spend 10 minutes on what they want in the next relationsh…
+  episodic:
+    + E-19 [episode] Short chat about strike communications and exec updates.
+    + O-19.1 [event] Was bumped up to Crisis Logistics Manager because of the national truckers’ strike.
+    + O-19.2 [behavior] Asked for concise talking points and a fill-in-fast daily status template for the exec team.
+  state:
+    + T-19.1 [active] Is acting as Crisis Logistics Manager during the truckers' strike.
+    ~ P-2.2  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.3, O-9.2, O-10.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-18.2, O-18.3, O-18.4, O-19.2 confirmed: 2025-10-20
+    ~ P-4.1  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.1, O-7.3, O-8.1, O-9.2, O-10.2, O-11.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-17.2, O-18.2, O-18.3, O-18.4, O-19.2 confirmed: 2025-10-20
+    ~ T-9.1 active -> expired ended: 2025-10-20
+    ~ T-9.2 active -> expired ended: 2025-10-20
+    ~ T-9.3 active -> expired ended: 2025-10-20
+    ~ T-12.1 active -> expired ended: 2025-10-20
+    ~ T-15.1 active -> expired ended: 2025-10-20
+    ~ T-15.2 active -> expired ended: 2025-10-20
+S-20 · 2025-10-22
+  working context: 8 bullets (cites +P-20.1 +P-5.1 -T-18.1)
+    + Is acting as Crisis Logistics Manager during the truckers' strike (T-19.1)
+    + Wants a secular frame for forgiveness and philosophy chats (P-20.1)
+    + Wants concrete examples and hard data to help ideas stick (P-5.1)
+    + none
+    - Had a panic spike tonight and is now exhausted, wanting to sleep; review 2025-10-23 (T-18.1)
+    - Is acting as Crisis Logistics Manager during the truckers' strike and may need fast comms support (T-19.1)
+  episodic:
+    + E-20 [episode] Forgiveness chat about a work slight and self-forgiveness.
+    + O-20.1 [behavior] Wants bite-size, step-by-step bullet prompts and quick recaps.
+    + O-20.2 [stated] Wants football analogies and no religious framing.
+    + O-20.3 [behavior] Wants side-by-side comparisons and a small set of options before choosing.
+  state:
+    + P-20.1 [current] Wants a secular frame for forgiveness and philosophy chats.
+    ~ P-1.2  basis: O-0.1, O-1.3, O-3.2, O-4.2, O-6.1, O-7.2, O-9.2, O-10.2, O-11.2, O-16.2, O-18.2, O-18.4, O-20.1 confirmed: 2025-10-22
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1, O-5.2, O-6.3, O-9.5, O-11.1, O-12.2, O-20.2 confirmed: 2025-10-22
+    ~ P-2.2  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.3, O-9.2, O-10.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-18.2, O-18.3, O-18.4, O-19.2, O-20.1, O-20.3 confirmed: 2025-10-22
+    ~ P-4.1  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.1, O-7.3, O-8.1, O-9.2, O-10.2, O-11.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-17.2, O-18.2, O-18.3, O-18.4, O-19.2, O-20.1 confirmed: 2025-10-22
+    ~ P-5.1  basis: O-2.2, O-4.1, O-5.3, O-6.3, O-20.2 confirmed: 2025-10-22
+    ~ P-7.1  basis: O-7.4, O-9.2, O-18.3, O-20.3 new_dimension: The existing dimensions cover format, tone, depth, and collaboration, but not preferring a small menu of choices. confirmed: 2025-10-22
+    ~ T-17.1 active -> expired ended: 2025-10-22
+S-21 · 2025-10-25
+  working context: 6 bullets (cites +T-21.1 -P-2.2 -P-20.1)
+    + Is acting as Crisis Logistics Manager during the truckers' strike and wants tiny, checklist-style coping supp…
+    - Is acting as Crisis Logistics Manager during the truckers' strike (T-19.1)
+    - Wants a secular frame for forgiveness and philosophy chats (P-20.1)
+    - Wants tight, compact answers rather than long deep dives (P-2.2)
+  episodic:
+    + E-21 [episode] Rebuilding self-esteem after a workplace shipping mistake.
+    + O-21.1 [event] Botched Friday's shipping run by swapping postcodes, leaving drivers idle and the team late.
+    + O-21.2 [stated] Feels like a total liability and wants a straight step-by-step; lists and tiny tasks are easier tonight.
+    + O-21.3 [stated] The football angle weirdly sticks for them, and they want a pocket checklist for bad-thought days.
+  state:
+    + T-21.1 [active] Is feeling self-critical after a shipping mistake and wants tiny, checklist-style coping support tonight.
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1, O-5.2, O-6.3, O-9.5, O-11.1, O-12.2, O-20.2, O-21.3 confirmed: 2025-10-25
+    ~ P-4.1  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.1, O-7.3, O-8.1, O-9.2, O-10.2, O-11.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-17.2, O-18.2, O-18.3, O-18.4, O-19.2, O-20.1, O-21.2, O-21.3 confirmed: 2025-10-25
+    ~ T-18.1 active -> expired ended: 2025-10-25
+S-22 · 2025-10-25
+  working context: 6 bullets (cites +P-2.2 +T-22.1 -P-7.1 -T-19.1)
+    + Is feeling self-critical after a shipping mistake and wants tiny, checklist-style coping support tonight (T-2…
+    + Wants a chill Friday debrief next week; review 2025-11-01 (T-22.1)
+    + Wants concise bullet-point answers under 200 words, ideally as numbered outlines, and quick check-ins (P-4.1,…
+    + Wants tight, compact answers with concrete examples when useful (P-2.2, P-5.1)
+    - Is acting as Crisis Logistics Manager during the truckers' strike and wants tiny, checklist-style coping supp…
+    - Wants concise bullet-point answers under 200 words, ideally as numbered outlines (P-4.1)
+    - Wants concrete examples and hard data to help ideas stick (P-5.1)
+    - Wants iterative back-and-forth and quick check-ins, plus a small set of options before choosing (P-1.2, P-7.1)
+  episodic:
+    + E-22 [episode] Self-esteem wobble after a workplace mistake; user wants footbally, compact coping support.
+    + O-22.1 [stated] Wants football metaphors and a casual tone instead of office lingo.
+    + O-22.2 [stated] Wants quick, no-fluff bullet recaps at the end of chats.
+    + O-22.3 [behavior] Wants a weekly Friday debrief/check-in next.
+  state:
+    + T-22.1 [active] Wants a chill Friday debrief next week.
+    ~ P-1.2  basis: O-0.1, O-1.3, O-3.2, O-4.2, O-6.1, O-7.2, O-9.2, O-10.2, O-11.2, O-16.2, O-18.2, O-18.4, O-20.1, O-22.3 confirmed: 2025-10-25
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1, O-5.2, O-6.3, O-9.5, O-11.1, O-12.2, O-20.2, O-21.3, O-22.1
+    ~ P-2.2  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.3, O-9.2, O-10.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-18.2, O-18.3, O-18.4, O-19.2, O-20.1, O-20.3, O-22.2 confirmed: 2025-10-25
+    ~ P-4.1  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.1, O-7.3, O-8.1, O-9.2, O-10.2, O-11.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-17.2, O-18.2, O-18.3, O-18.4, O-19.2, O-20.1, O-21.2, O-21.3, O-22.2
+S-23 · 2025-10-27
+  working context: 6 bullets (cites +F-14.1 +G-23.1 +T-23.1 -T-21.1 -T-22.1)
+    + Is anxious about a charity auction speech and wants direct step-by-step support right now; review 2025-11-03 …
+    + Runs an art gallery and coordinates teams in the UK, US, and Singapore (F-14.1)
+    + Will prepare for the charity auction speech (G-23.1)
+    - Is feeling self-critical after a shipping mistake and wants tiny, checklist-style coping support tonight (T-2…
+    - Wants a chill Friday debrief next week; review 2025-11-01 (T-22.1)
+    - none
+  episodic:
+    + E-23 [episode] Pre-charity-auction speech jitters and coaching preferences.
+    + O-23.1 [event] Is anxious about a charity auction speech in three days.
+    + O-23.2 [behavior] Asked for step-by-step help with the opener, pacing, item pitch, Q&A, and the morning-of ritual.
+    + O-23.3 [behavior] Asked to ditch fluffy pep talk and give straight orders.
+  state:
+    + G-23.1 [active] Will prepare for the charity auction speech.
+    + T-23.1 [active] Is anxious about a charity auction speech and wants direct step-by-step support right now.
+    ~ P-1.2  basis: O-0.1, O-1.3, O-3.2, O-4.2, O-6.1, O-7.2, O-9.2, O-10.2, O-11.2, O-16.2, O-18.2, O-18.4, O-20.1, O-22.3, O-23.2 confirmed: 2025-10-27
+    ~ P-4.1  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.1, O-7.3, O-8.1, O-9.2, O-10.2, O-11.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-17.2, O-18.2, O-18.3, O-18.4, O-19.2, O-20.1, O-21.2, O-21.3, O-22.2, O-23.2 confirmed: 2025-10-27
+    ~ T-19.1 active -> expired ended: 2025-10-27
+S-24 · 2025-10-28
+  working context: 6 bullets (cites +T-24.1 -T-23.1)
+    + Is having a pre-speech anxiety spike and wants quick calming support right now; review 2025-11-04 (T-24.1)
+    - Is anxious about a charity auction speech and wants direct step-by-step support right now; review 2025-11-03 …
+  episodic:
+    + E-24 [episode] Pre-speech nerves before addressing the team; wanted quick calming support.
+    + O-24.1 [behavior] Asked for even snappier help and immediate calming support before speaking.
+    + O-24.2 [stated] Likes football banter in the support.
+    + O-24.3 [behavior] Asked for a famous speech example to help visualise pacing.
+  state:
+    + T-24.1 [active] Is having a pre-speech anxiety spike and wants quick calming support right now.
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1, O-5.2, O-6.3, O-9.5, O-11.1, O-12.2, O-20.2, O-21.3, O-22.1, O-24.2 confirmed: 2025-10-28
+    ~ P-4.1  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.1, O-7.3, O-8.1, O-9.2, O-10.2, O-11.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-17.2, O-18.2, O-18.3, O-18.4, O-19.2, O-20.1, O-21.2, O-21.3, O-22.2, O-23.2, O-24.1 confirmed: 2025-10-28
+    ~ P-5.1  basis: O-2.2, O-4.1, O-5.3, O-6.3, O-20.2, O-24.3 confirmed: 2025-10-28
+S-25 · 2025-10-29
+  working context: 8 bullets (cites +T-23.1 -F-14.1)
+    + Is anxious about a charity auction speech and wants direct step-by-step support right now; review 2025-11-03 …
+    + Prefers concrete examples and hard data to help ideas stick (P-5.1)
+    + Prepare for the charity auction speech (G-23.1)
+    + Wants concise bullet-point answers under 200 words, ideally as numbered outlines (P-4.1)
+    + Wants iterative back-and-forth and quick check-ins (P-1.2)
+    + Wants tight, compact answers rather than long deep dives (P-2.2)
+    - Runs an art gallery and coordinates teams in the UK, US, and Singapore (F-14.1)
+    - Wants concise bullet-point answers under 200 words, ideally as numbered outlines, and quick check-ins (P-4.1,…
+    - Wants tight, compact answers with concrete examples when useful (P-2.2, P-5.1)
+    - Will prepare for the charity auction speech (G-23.1)
+  episodic:
+    + E-25 [episode] Helped draft a short first-date invite and follow-up text for Leila.
+    + O-25.1 [behavior] Asked for concise bullet-point help and a brief, punchy text.
+    + O-25.2 [behavior] Wanted the invite low-pressure, casual, and zero-cringe with no cheesy wording.
+  state:
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1, O-5.2, O-6.3, O-9.5, O-11.1, O-12.2, O-20.2, O-21.3, O-22.1, O-24.2, O-25.2 confirmed: 2025-10-29
+    ~ P-4.1  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.1, O-7.3, O-8.1, O-9.2, O-10.2, O-11.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-17.2, O-18.2, O-18.3, O-18.4, O-19.2, O-20.1, O-21.2, O-21.3, O-22.2, O-23.2, O-24.1, O-25.1 confirmed: 2025-10-29
+S-26 · 2025-10-29
+  working context: 9 bullets (cites +F-26.1 +T-26.1 -P-1.2)
+    + Recently completed a three-month mindfulness retreat after burnout (F-26.1)
+    + Wants a daily mindfulness routine fitted around 6 a.m.–2 p.m. logistics shifts and low-clutter reminders righ…
+    - Wants iterative back-and-forth and quick check-ins (P-1.2)
+  episodic:
+    + E-26 [episode] Returned from a mindfulness retreat and asked for a practical routine around shift work.
+    + O-26.1 [event] Completed a three-month mindfulness retreat after burning out during the fuel-crisis nightmare.
+    + O-26.2 [stated] Wants a daily mindfulness routine fitted around 6 a.m.–2 p.m. logistics shifts and low-clutter reminders righ…
+  state:
+    + F-26.1 [current] Completed a three-month mindfulness retreat after burning out during the fuel-crisis nightmare.
+    + T-26.1 [active] Wants a daily mindfulness routine fitted around 6 a.m.–2 p.m. logistics shifts and low-clutter reminders righ…
+S-27 · 2025-10-30
+  working context: 7 bullets (cites +T-27.1 +T-27.2 -F-26.1 -P-5.1 -T-23.1 -T-24.1)
+    + Prefers a later Friday departure and a decent hotel for this away-day (T-27.2)
+    + Wants little text nudges for each matchday checkpoint (T-27.1)
+    - Is anxious about a charity auction speech and wants direct step-by-step support right now; review 2025-11-03 …
+    - Is having a pre-speech anxiety spike and wants quick calming support right now; review 2025-11-04 (T-24.1)
+    - Prefers concrete examples and hard data to help ideas stick (P-5.1)
+    - Recently completed a three-month mindfulness retreat after burnout (F-26.1)
+  episodic:
+    + E-27 [episode] Planning a Preston away-day logistics schedule with hotel, van, tickets, and reminders.
+    + O-27.1 [behavior] Wants little text nudges for each checkpoint on matchday.
+    + O-27.2 [stated] Prefers a later Friday departure and a decent hotel over an early motorway start.
+  state:
+    + T-27.1 [active] Wants little text nudges for each matchday checkpoint.
+    + T-27.2 [active] Prefers a later Friday departure and a decent hotel for this away-day.
+S-28 · 2025-10-30
+  working context: 8 bullets (cites +T-28.1 +T-28.2 -T-27.2)
+    + Reminder due tomorrow at noon to chase coach deposits (T-28.2)
+    + Wants rapid replies while overloaded at work today (T-28.1)
+    - Prefers a later Friday departure and a decent hotel for this away-day (T-27.2)
+  episodic:
+    + E-28 [episode] Coach trip planning and reminder setup.
+    + O-28.1 [stated] Wants checklist-style, rapid replies while drowning in work today.
+    + O-28.2 [behavior] Wants a reminder tomorrow at noon to chase coach deposits.
+  state:
+    + T-28.1 [active] Wants rapid replies while overloaded at work today.
+    + T-28.2 [active] Needs a reminder tomorrow at noon to chase coach deposits.
+    ~ P-2.2  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.3, O-9.2, O-10.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-18.2, O-18.3, O-18.4, O-19.2, O-20.1, O-20.3, O-22.2, O-28.1 confirmed: 2025-10-30
+    ~ P-4.1  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.1, O-7.3, O-8.1, O-9.2, O-10.2, O-11.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-17.2, O-18.2, O-18.3, O-18.4, O-19.2, O-20.1, O-21.2, O-21.3, O-22.2, O-23.2, O-24.1, O-25.1, O-28.1 confirmed: 2025-10-30
+S-29 · 2025-10-31
+  working context: 8 bullets (cites +T-29.1 -T-28.2)
+    + Is stressed about a fantasy league scoring dispute and wants to sort it before lineup lock tomorrow (T-29.1)
+    - Reminder due tomorrow at noon to chase coach deposits (T-28.2)
+  episodic:
+    + E-29 [episode] Fantasy league scoring dispute with Alice after an app glitch.
+    + O-29.1 [behavior] Wants a quick, bullet-point copy-paste plan with no fluff.
+    + O-29.2 [event] Sarr's assist was counted twice, giving them +3 and triggering Alice's cheating accusation.
+  state:
+    + T-29.1 [active] Is stressed about a fantasy league scoring dispute and wants to sort it before lineup lock tomorrow.
+    ~ P-2.2  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.3, O-9.2, O-10.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-18.2, O-18.3, O-18.4, O-19.2, O-20.1, O-20.3, O-22.2, O-28.1, O-29.1 confirmed: 2025-10-31
+    ~ P-4.1  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.1, O-7.3, O-8.1, O-9.2, O-10.2, O-11.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-17.2, O-18.2, O-18.3, O-18.4, O-19.2, O-20.1, O-21.2, O-21.3, O-22.2, O-23.2, O-24.1, O-25.1, O-28.1, O-29.1 confirmed: 2025-10-31
+    ~ T-28.2 active -> expired ended: 2025-10-31
+S-30 · 2025-11-02
+  working context: 7 bullets (cites +P-1.2 +T-30.1 -P-2.2 -T-28.1 -T-29.1)
+    + Is spiraling after a workplace mistake and wants step-by-step coping support with a tomorrow-morning nudge (T…
+    + Wants iterative back-and-forth and quick check-ins (P-1.2)
+    - Is stressed about a fantasy league scoring dispute and wants to sort it before lineup lock tomorrow (T-29.1)
+    - Wants rapid replies while overloaded at work today (T-28.1)
+    - Wants tight, compact answers rather than long deep dives (P-2.2)
+  episodic:
+    + E-30 [episode] Rebuilding self-esteem after a workplace mistake.
+    + O-30.1 [event] Swapped two shipment dates, causing rush fees and boss anger, and feels like dead weight but wants to win the…
+    + O-30.2 [stated] Wants the problem broken into solid steps and clear checkpoints.
+    + O-30.3 [stated] Felt better after spotting the mistake quickly and alerting finance.
+    + O-30.4 [stated] Wants a checklist later and a morning nudge to follow the steps.
+  state:
+    + T-30.1 [active] Is spiraling after a workplace mistake and wants step-by-step coping support with a tomorrow-morning nudge.
+    ~ P-1.2  basis: O-0.1, O-1.3, O-3.2, O-4.2, O-6.1, O-7.2, O-9.2, O-10.2, O-11.2, O-16.2, O-18.2, O-18.4, O-20.1, O-22.3, O-23.2, O-30.4 confirmed: 2025-11-02
+    ~ P-4.1  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.1, O-7.3, O-8.1, O-9.2, O-10.2, O-11.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-17.2, O-18.2, O-18.3, O-18.4, O-19.2, O-20.1, O-21.2, O-21.3, O-22.2, O-23.2, O-24.1, O-25.1, O-28.1, O-29.1, O-30.2 confirmed: 2025-11-02
+    ~ T-21.1 active -> superseded superseded_by: T-30.1
+    ~ T-22.1 active -> expired ended: 2025-11-02
+S-31 · 2025-11-03
+  working context: 6 bullets (cites +T-31.1 -T-27.1 -T-30.1)
+    + Is anxious about the charity app revamp, sleep-deprived, and wants short, concrete coping support tonight (T-…
+    - Is spiraling after a workplace mistake and wants step-by-step coping support with a tomorrow-morning nudge (T…
+    - Wants little text nudges for each matchday checkpoint (T-27.1)
+  episodic:
+    + E-31 [episode] Chat about anxiety over the charity app revamp and getting through the night.
+    + O-31.1 [event] The charity app revamp is crawling and they barely slept worrying about launch risk.
+    + O-31.2 [behavior] Wants bullet-point, short-step help and says long meditations lose them.
+    + O-31.3 [reaction] A 4-7-8 breath dropped anxiety from 8 to 5.
+    + O-31.4 [behavior] Wants a quick-win story, a football analogy, and a day timeline.
+  state:
+    + T-31.1 [active] Is anxious about the charity app revamp, sleep-deprived, and wants short, concrete coping support tonight.
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1, O-5.2, O-6.3, O-9.5, O-11.1, O-12.2, O-20.2, O-21.3, O-22.1, O-24.2, O-25.2, O-31.4 confirmed: 2025-11-03
+    ~ P-2.2  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.3, O-9.2, O-10.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-18.2, O-18.3, O-18.4, O-19.2, O-20.1, O-20.3, O-22.2, O-28.1, O-29.1, O-31.2 confirmed: 2025-11-03
+    ~ P-4.1  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.1, O-7.3, O-8.1, O-9.2, O-10.2, O-11.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-17.2, O-18.2, O-18.3, O-18.4, O-19.2, O-20.1, O-21.2, O-21.3, O-22.2, O-23.2, O-24.1, O-25.1, O-28.1, O-29.1, O-30.2, O-31.2 confirmed: 2025-11-03
+    ~ P-5.1  basis: O-2.2, O-4.1, O-5.3, O-6.3, O-20.2, O-24.3, O-31.4 confirmed: 2025-11-03
+    ~ T-23.1 active -> expired ended: 2025-11-03
+    ~ T-27.1 active -> expired ended: 2025-11-03
+    ~ T-27.2 active -> expired ended: 2025-11-03
+S-32 · 2025-11-03
+  working context: 8 bullets (cites +P-32.1 +T-32.1)
+    + Prefers a smaller, private feedback circle for the cover because public posts stress them out (T-32.1)
+    + Wants blunt, no-sugar-coating critique when asking for feedback (P-32.1)
+  episodic:
+    + E-32 [episode] Talked through sparse feedback on fan podcast artwork and how to ask for critique.
+    + O-32.1 [stated] Wants blunt, no-sugar-coating critique on the artwork.
+    + O-32.2 [stated] Public posts stress them out and they prefer a smaller crowd for feedback.
+  state:
+    + P-32.1 [current] Wants blunt, no-sugar-coating critique when asking for feedback.
+    + T-32.1 [active] Prefers a smaller, private feedback circle for the cover because public posts stress them out.
+S-33 · 2025-11-03
+  working context: 9 bullets (cites +T-28.1)
+    + Is anxious about the charity app revamp, sleep-deprived, and wants short, concrete coping support tonight; re…
+    + Prefers a smaller, private feedback circle for the cover because public posts stress them out; review 2025-11…
+    + Wants rapid replies while overloaded at work today; review 2025-11-06 (T-28.1)
+    - Is anxious about the charity app revamp, sleep-deprived, and wants short, concrete coping support tonight (T-…
+    - Prefers a smaller, private feedback circle for the cover because public posts stress them out (T-32.1)
+  episodic:
+    + E-33 [episode] Helped draft a short pep text after a derby defeat.
+    + O-33.1 [behavior] Wants it tight, upbeat, and free of motivational-poster cheese.
+  state:
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1, O-5.2, O-6.3, O-9.5, O-11.1, O-12.2, O-20.2, O-21.3, O-22.1, O-24.2, O-25.2, O-31.4, O-33.1
+    ~ P-2.2  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.3, O-9.2, O-10.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-18.2, O-18.3, O-18.4, O-19.2, O-20.1, O-20.3, O-22.2, O-28.1, O-29.1, O-31.2, O-33.1
+S-34 · 2025-11-03
+  working context: 10 bullets (cites +F-34.1)
+    + Co-hosts a national football analytics podcast after a viral pub-quiz stream (F-34.1)
+  episodic:
+    + E-34 [episode] Planning first episode for a new national football analytics podcast.
+    + O-34.1 [event] Landed a co-hosting gig on a national football analytics podcast after a pub-quiz stream went viral.
+    + O-34.2 [behavior] Wants a simple 30-minute episode structure that stays clear but engaging.
+    + O-34.3 [behavior] Wants a quick timing trick so each segment lands on schedule.
+  state:
+    + F-34.1 [current] Co-hosts a national football analytics podcast after a viral pub-quiz stream.
+S-35 · 2025-11-04
+  working context: 4 bullets (cites +G-35.1 +P-35.1 +P-7.1 -F-34.1 -G-23.1 -P-32.1 -P-4.1 -T-26.1 -T-28.1 -T-31.1 -T-32.1)
+    + Coordinate the rooftop wedding with bilingual ceremony logistics, vendors, and schedule (G-35.1).
+    + Wants a small set of options before choosing when decisions are needed (P-7.1).
+    + Wants concise bullet-point answers under 200 words, ideally as numbered outlines or visual timelines for plan…
+    + Wants iterative back-and-forth and quick check-ins in a casual football-banter tone (P-1.2, P-1.3).
+    - Co-hosts a national football analytics podcast after a viral pub-quiz stream (F-34.1)
+    - Is anxious about the charity app revamp, sleep-deprived, and wants short, concrete coping support tonight; re…
+    - Prefers a smaller, private feedback circle for the cover because public posts stress them out; review 2025-11…
+    - Prepare for the charity auction speech (G-23.1)
+    - Wants a casual, playful tone with football banter and little cheese (P-1.3)
+    - Wants a daily mindfulness routine fitted around 6 a.m.–2 p.m. logistics shifts and low-clutter reminders righ…
+    - Wants blunt, no-sugar-coating critique when asking for feedback (P-32.1)
+    - Wants concise bullet-point answers under 200 words, ideally as numbered outlines (P-4.1)
+    - Wants iterative back-and-forth and quick check-ins (P-1.2)
+    - Wants rapid replies while overloaded at work today; review 2025-11-06 (T-28.1)
+  episodic:
+    + E-35 [episode] Last-minute rooftop wedding coordination with bilingual ceremony logistics.
+    + O-35.1 [behavior] Wants step-by-step checklist help and a visual timeline because walls of text melt their brain.
+    + O-35.2 [event] Has a rooftop wedding in three weeks with 120 guests, a 15k budget cap, and no vendors booked yet.
+    + O-35.3 [event] Needs the ceremony bilingual in English and Spanish and lift access for Gran.
+  state:
+    + P-35.1 [current] Wants concise bullet-point answers under 200 words, ideally as numbered outlines or visual timelines for plan…
+    + G-35.1 [active] Will coordinate the rooftop wedding with bilingual ceremony logistics, vendors, and schedule.
+    ~ P-4.1 current -> superseded basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.1, O-7.3, O-8.1, O-9.2, O-10.2, O-11.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-17.2, O-18.2, O-18.3, O-18.4, O-19.2, O-20.1, O-21.2, O-21.3, O-22.2, O-23.2, O-24.1, O-25.1, O-28.1, O-29.1, O-30.2, O-31.2, O-35.1 superseded_by: P-35.1 confirmed: 2025-11-04
+    ~ T-24.1 active -> expired ended: 2025-11-04
+S-36 · 2025-11-04
+  working context: 5 bullets (cites +T-36.1)
+    + Coordinate the rooftop wedding with bilingual ceremony logistics, vendors, and schedule (G-35.1)
+    + Is cramming for pub quiz finals in 3 days, review 2025-11-07 (T-36.1)
+    + Wants a small set of options before choosing when decisions are needed (P-7.1)
+    + Wants concise bullet-point answers under 200 words, ideally as numbered outlines or visual timelines for plan…
+    + Wants iterative back-and-forth and quick check-ins in a casual football-banter tone (P-1.2, P-1.3)
+    - Coordinate the rooftop wedding with bilingual ceremony logistics, vendors, and schedule (G-35.1).
+    - Wants a small set of options before choosing when decisions are needed (P-7.1).
+    - Wants concise bullet-point answers under 200 words, ideally as numbered outlines or visual timelines for plan…
+    - Wants iterative back-and-forth and quick check-ins in a casual football-banter tone (P-1.2, P-1.3).
+  episodic:
+    + E-36 [episode] Last-minute pub quiz finals sprint with Alice rivalry.
+    + O-36.1 [stated] Wants snappy bullet-only quiz help and a cram plan.
+    + O-36.2 [event] Finals are in 3 days and Alice is part of the rivalry push.
+  state:
+    + T-36.1 [active] Is cramming for pub quiz finals in 3 days.
+    ~ P-35.1  basis: O-35.1, O-36.1 confirmed: 2025-11-04
+S-37 · 2025-11-04
+  working context: 5 bullets (cites +T-37.1 -P-7.1 -T-36.1)
+    + Pub quiz final cramming ends 2025-11-06 (T-37.1)
+    + Wants rapid drill-based pub-quiz help with live scoring while cramming for the final, through 2025-11-06 (T-3…
+    - Is cramming for pub quiz finals in 3 days, review 2025-11-07 (T-36.1)
+    - Wants a small set of options before choosing when decisions are needed (P-7.1)
+  episodic:
+    + E-37 [episode] Last-minute pub-quiz final prep focused on fast drills and score-tracking.
+    + O-37.1 [stated] Is cramming for the pub quiz final in 48h and wants punchy bullet-point help ASAP.
+    + O-37.2 [behavior] Wants quickfire drills with live scoring after each round.
+  state:
+    + T-37.1 [active] Wants rapid drill-based pub-quiz help with live scoring while cramming for the final.
+    ~ P-1.2  basis: O-0.1, O-1.3, O-3.2, O-4.2, O-6.1, O-7.2, O-9.2, O-10.2, O-11.2, O-16.2, O-18.2, O-18.4, O-20.1, O-22.3, O-23.2, O-30.4, O-37.2
+    ~ P-35.1  basis: O-35.1, O-36.1, O-37.1
+    ~ T-36.1 active -> superseded superseded_by: T-37.1
+S-38 · 2025-11-04
+  working context: 6 bullets (cites +F-38.1 +G-38.1 +T-38.1)
+    + Is project lead for the Preston North End Digital Heritage Archive; wants a simple copyable Trello template f…
+    + Will map out a four-week sprint plan to keep historians, designers, and volunteers aligned (G-38.1)
+    - Pub quiz final cramming ends 2025-11-06 (T-37.1)
+  episodic:
+    + E-38 [episode] Short chat about sprint planning for a heritage archive project.
+    + O-38.1 [stated] Was appointed project lead for the Preston North End Digital Heritage Archive and asked for a four-week sprin…
+    + O-38.2 [stated] Wants a simple copyable Trello template for aligning historians, designers, and volunteers.
+  state:
+    + F-38.1 [current] Is project lead for the Preston North End Digital Heritage Archive.
+    + G-38.1 [active] Will map out a four-week sprint plan to keep historians, designers, and volunteers aligned.
+    + T-38.1 [active] Wants a simple copyable Trello template for the archive sprint planning conversation.
+S-39 · 2025-11-04
+  episodic:
+    + E-39 [episode] Chat about checking a risky vintage football programme trade.
+    + O-39.1 [behavior] Asked for step-by-step, punchy help and a quick recap.
+    + O-39.2 [behavior] Used a casual football-banter tone while asking for help.
+  state:
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1, O-5.2, O-6.3, O-9.5, O-11.1, O-12.2, O-20.2, O-21.3, O-22.1, O-24.2, O-25.2, O-31.4, O-33.1, O-39.2 confirmed: 2025-11-04
+    ~ P-35.1  basis: O-35.1, O-36.1, O-37.1, O-39.1
+S-40 · 2025-11-04
+  working context: 7 bullets (cites +F-40.1 -T-38.1)
+    + Co-hosts a national football analytics podcast and has been commissioned to host and produce a weekly Preston…
+    + Is project lead for the Preston North End Digital Heritage Archive (F-38.1)
+    - Is project lead for the Preston North End Digital Heritage Archive; wants a simple copyable Trello template f…
+  episodic:
+    + E-40 [episode] Short chat about podcast production planning and budget gear.
+    + O-40.1 [stated] Has been commissioned to host and produce a weekly Preston North End history podcast.
+    + O-40.2 [behavior] Asked for a simple production timeline and lean broadcast gear on a tight budget.
+  state:
+    + F-40.1 [current] Co-hosts a national football analytics podcast and has been commissioned to host and produce a weekly Preston…
+    ~ F-34.1 current -> superseded superseded_by: F-40.1
+S-41 · 2025-11-05
+  working context: 9 bullets (cites +G-23.1 +P-32.1 +P-5.1 +T-28.1 -F-38.1 -F-40.1)
+    + Prefers concrete examples and hard data to help ideas stick (P-5.1)
+    + Wants blunt, no-sugar-coating critique when asking for feedback (P-32.1)
+    + Wants rapid replies while overloaded at work today (T-28.1)
+    + Will prepare for the charity auction speech (G-23.1)
+    - Co-hosts a national football analytics podcast and has been commissioned to host and produce a weekly Preston…
+    - Is project lead for the Preston North End Digital Heritage Archive (F-38.1)
+  episodic:
+    + E-41 [episode] Prep chat about a charity auction speech and a successful run-through.
+    + O-41.1 [stated] Wants play-by-play help with jokes and footy refs because they stick in their head.
+    + O-41.2 [reaction] Said the run-through timing was spot on and the nerves are basically gone.
+  state:
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1, O-5.2, O-6.3, O-9.5, O-11.1, O-12.2, O-20.2, O-21.3, O-22.1, O-24.2, O-25.2, O-31.4, O-33.1, O-39.2, O-41.1 confirmed: 2025-11-05
+    ~ P-5.1  basis: O-2.2, O-4.1, O-5.3, O-6.3, O-20.2, O-24.3, O-31.4, O-41.1 confirmed: 2025-11-05
+    ~ P-35.1  basis: O-35.1, O-36.1, O-37.1, O-39.1, O-41.1 confirmed: 2025-11-05
+    ~ T-26.1 active -> expired ended: 2025-11-05
+S-42 · 2025-11-06
+  working context: 6 bullets (cites +F-38.1 +P-42.1 +T-38.1 -G-23.1 -G-35.1 -P-35.1 -T-28.1 -T-37.1)
+    + Is project lead for the Preston North End Digital Heritage Archive and is mapping a four-week sprint plan (F-…
+    + Wants a simple copyable Trello template for the archive sprint planning conversation (T-38.1)
+    + Wants concise bullet-point help under 200 words, with numbered outlines or visual timelines, plus end-of-sess…
+    - Coordinate the rooftop wedding with bilingual ceremony logistics, vendors, and schedule (G-35.1)
+    - Wants concise bullet-point answers under 200 words, ideally as numbered outlines or visual timelines for plan…
+    - Wants rapid drill-based pub-quiz help with live scoring while cramming for the final, through 2025-11-06 (T-3…
+    - Wants rapid replies while overloaded at work today (T-28.1)
+    - Will map out a four-week sprint plan to keep historians, designers, and volunteers aligned (G-38.1)
+    - Will prepare for the charity auction speech (G-23.1)
+  episodic:
+    + E-42 [episode] Co-writing Preston North End script notes, leaning into leaner dialogue and sourced citations.
+    + O-42.1 [stated] Wants a quick recap at the end of each session.
+    + O-42.2 [stated] Wants citations placed directly under the note in script drafts.
+  state:
+    ~ P-35.1 current -> superseded superseded_by: P-42.1
+    ~ T-28.1 active -> expired ended: 2025-11-06
+    ~ T-37.1 active -> expired ended: 2025-11-06
+S-43 · 2025-11-07
+  working context: 7 bullets (cites +G-35.1 +P-2.2 +T-31.1 +T-43.1 -F-38.1 -P-42.1)
+    + Is anxious about the charity app revamp, sleep-deprived, and wants short, concrete coping support tonight (T-…
+    + Is rattled by a costly workplace mistake and wants step-by-step, positive support tonight (T-43.1)
+    + Wants tight, compact, concrete help in a casual football-banter tone, with iterative check-ins (P-2.2, P-5.1,…
+    + Will coordinate the rooftop wedding with bilingual ceremony logistics, vendors, and schedule (G-35.1)
+    + Will map out a four-week sprint plan to keep historians, designers, and volunteers aligned (G-38.1)
+    - Is project lead for the Preston North End Digital Heritage Archive and is mapping a four-week sprint plan (F-…
+    - Prefers concrete examples and hard data to help ideas stick (P-5.1)
+    - Wants concise bullet-point help under 200 words, with numbered outlines or visual timelines, plus end-of-sess…
+    - Wants iterative back-and-forth and quick check-ins in a casual football-banter tone (P-1.2, P-1.3)
+  episodic:
+    + E-43 [episode] Rebuilding confidence after a workplace mistake with step-by-step support.
+    + O-43.1 [behavior] Asked for step-by-step, chill, positive support after a costly work mistake.
+    + O-43.2 [behavior] Asked to keep the tone in football lingo and wanted a printable checklist.
+  state:
+    + T-43.1 [active] Is rattled by a costly workplace mistake and wants step-by-step, positive support in a football-banter tone t…
+    ~ T-29.1 active -> expired ended: 2025-11-07
+    ~ T-30.1 active -> superseded superseded_by: T-43.1
+S-44 · 2025-11-08
+  working context: 8 bullets (cites +F-40.1 +G-44.1 +P-44.1 +T-44.1 -G-35.1 -G-38.1 -P-2.2 -P-5.1 -T-31.1 -T-38.1 -T-43.1)
+    + Co-hosts a national football analytics podcast and has been commissioned to host and produce a weekly Preston…
+    + Feels intense imposter syndrome about the podcast episode this week (T-44.1)
+    + Wants a casual, playful tone with football banter and little cheese (P-1.3)
+    + Wants iterative back-and-forth and quick check-ins (P-1.2)
+    + Wants numbered checklists and bullet-point summaries (P-44.1)
+    + Will prepare for the upcoming national Championship analytics podcast episode (G-44.1)
+    + none
+    - Is anxious about the charity app revamp, sleep-deprived, and wants short, concrete coping support tonight (T-…
+    - Is rattled by a costly workplace mistake and wants step-by-step, positive support tonight (T-43.1)
+    - Wants a simple copyable Trello template for the archive sprint planning conversation (T-38.1)
+    - Wants tight, compact, concrete help in a casual football-banter tone, with iterative check-ins (P-2.2, P-5.1,…
+    - Will coordinate the rooftop wedding with bilingual ceremony logistics, vendors, and schedule (G-35.1)
+    - Will map out a four-week sprint plan to keep historians, designers, and volunteers aligned (G-38.1)
+  episodic:
+    + E-44 [episode] Prepping for a national Championship analytics podcast episode and wants compact, light support.
+    + O-44.1 [behavior] Asked for numbered prep steps and a quick breathing drill for a podcast in six days.
+    + O-44.2 [stated] Wants a light, joke-friendly football-banter tone to keep calm.
+    + O-44.3 [stated] Wants blunt, straight feedback when reviewing work.
+    + O-44.4 [event] Has a national Championship analytics podcast episode in six days and feels intense imposter syndrome.
+  state:
+    + P-44.1 [current] Wants numbered checklists and bullet-point summaries.
+    + G-44.1 [active] Will prepare for the upcoming national Championship analytics podcast episode.
+    + T-44.1 [active] Feels intense imposter syndrome about the podcast episode this week.
+    ~ P-1.2  basis: O-0.1, O-1.3, O-3.2, O-4.2, O-6.1, O-7.2, O-9.2, O-10.2, O-11.2, O-16.2, O-18.2, O-18.4, O-20.1, O-22.3, O-23.2, O-30.4, O-37.2, O-44.2, O-44.4 confirmed: 2025-11-08
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1, O-5.2, O-6.3, O-9.5, O-11.1, O-12.2, O-20.2, O-21.3, O-22.1, O-24.2, O-25.2, O-31.4, O-33.1, O-39.2, O-41.1, O-44.1, O-44.3 confirmed: 2025-11-08
+    ~ P-32.1  basis: O-32.1, O-44.2 confirmed: 2025-11-08
+S-45 · 2025-11-10
+  working context: 9 bullets (cites +F-38.1 +P-2.2 +P-5.1 +P-7.1 -P-32.1)
+    + Is project lead for the Preston North End Digital Heritage Archive (F-38.1)
+    + Wants a small set of options before choosing (P-7.1)
+    + Wants compact, evidence-backed help with concrete examples and hard data (P-2.2, P-5.1)
+    - Wants blunt, no-sugar-coating critique when asking for feedback (P-32.1)
+    - none
+  episodic:
+    + E-45 [episode] Brainstormed an alt-history football novel and asked for step-by-step, source-backed help.
+    + O-45.1 [behavior] Asked for step-by-step, source-backed brainstorming with tight pacing.
+  state:
+    ~ P-1.2  basis: O-0.1, O-1.3, O-3.2, O-4.2, O-6.1, O-7.2, O-9.2, O-10.2, O-11.2, O-16.2, O-18.2, O-18.4, O-20.1, O-22.3, O-23.2, O-30.4, O-37.2, O-44.2, O-44.4, O-45.1 confirmed: 2025-11-10
+    ~ P-5.1  basis: O-2.2, O-4.1, O-5.3, O-6.3, O-20.2, O-24.3, O-31.4, O-41.1, O-45.1 confirmed: 2025-11-10
+    ~ P-44.1  basis: O-44.1, O-44.3, O-44.4, O-45.1 confirmed: 2025-11-10
+    ~ T-31.1 active -> expired ended: 2025-11-10
+    ~ T-32.1 active -> expired ended: 2025-11-10
+S-46 · 2025-11-11
+  working context: 11 bullets (cites +T-46.1 +T-46.2)
+    + Is nervous about the boundary conversation and wants a quick breathing trick first (T-46.1)
+    + Prefers face-to-face for the roommate boundary chat (T-46.2)
+    + Wants tight, compact answers with concrete examples and hard data (P-2.2, P-5.1)
+    - Wants compact, evidence-backed help with concrete examples and hard data (P-2.2, P-5.1)
+  episodic:
+    + E-46 [episode] Boundary-setting help for a noisy flatmate.
+    + O-46.1 [stated] Wants a dead-simple, crystal-clear playbook with bullet points and footy analogies.
+    + O-46.2 [stated] Wants no waffle and no hidden meanings in the wording.
+    + O-46.3 [stated] Feels nervous and wants a quick breathing trick first.
+    + O-46.4 [behavior] Wants iterative role-play and a script checklist they can tweak.
+    + O-46.5 [reaction] Thinks face-to-face beats texting for this boundary chat.
+  state:
+    + T-46.1 [active] Is nervous about the boundary conversation and wants a quick breathing trick first.
+    + T-46.2 [active] Prefers face-to-face for the roommate boundary chat.
+    ~ P-1.2  basis: O-0.1, O-1.3, O-3.2, O-4.2, O-6.1, O-7.2, O-9.2, O-10.2, O-11.2, O-16.2, O-18.2, O-18.4, O-20.1, O-22.3, O-23.2, O-30.4, O-37.2, O-44.2, O-44.4, O-45.1, O-46.4 confirmed: 2025-11-11
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1, O-5.2, O-6.3, O-9.5, O-11.1, O-12.2, O-20.2, O-21.3, O-22.1, O-24.2, O-25.2, O-31.4, O-33.1, O-39.2, O-41.1, O-44.1, O-44.3, O-46.1 confirmed: 2025-11-11
+    ~ P-2.2  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.3, O-9.2, O-10.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-18.2, O-18.3, O-18.4, O-19.2, O-20.1, O-20.3, O-22.2, O-28.1, O-29.1, O-31.2, O-33.1, O-46.1, O-46.2 confirmed: 2025-11-11
+    ~ P-44.1  basis: O-44.1, O-44.3, O-44.4, O-45.1, O-46.1, O-46.4 confirmed: 2025-11-11
+    ~ T-38.1 active -> expired ended: 2025-11-11
+S-47 · 2025-11-13
+  working context: 12 bullets (cites +T-47.1 -P-5.1)
+    + Is feeling overloaded by the podcast sprint and wants a high-level overview first, then step-by-step tasks ri…
+    + Wants tight, compact answers rather than long deep dives (P-2.2)
+    - Wants tight, compact answers with concrete examples and hard data (P-2.2, P-5.1)
+  episodic:
+    + E-47 [episode] Planning a Port Ellis podcast sprint and audio cleanup.
+    + O-47.1 [behavior] Wants bullets and scan-friendly checklists.
+    + O-47.2 [behavior] Wants a casual football-banter tone and keeps the footy refs coming.
+    + O-47.3 [reaction] Feels overloaded by the sprint and wants a high-level overview first, then step-by-step tasks.
+  state:
+    + T-47.1 [active] Is feeling overloaded by the podcast sprint and wants a high-level overview first, then step-by-step tasks ri…
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1, O-5.2, O-6.3, O-9.5, O-11.1, O-12.2, O-20.2, O-21.3, O-22.1, O-24.2, O-25.2, O-31.4, O-33.1, O-39.2, O-41.1, O-44.1, O-44.3, O-46.1, O-47.2 confirmed: 2025-11-13
+    ~ P-44.1  basis: O-44.1, O-44.3, O-44.4, O-45.1, O-46.1, O-46.4, O-47.1 confirmed: 2025-11-13
+S-48 · 2025-11-13
+  working context: 11 bullets (cites +T-48.1 -P-7.1 -T-47.1)
+    + Is overwhelmed by the cup-final media blitz and wants checklist-style help right now (T-48.1)
+    - Is feeling overloaded by the podcast sprint and wants a high-level overview first, then step-by-step tasks ri…
+    - Wants a small set of options before choosing (P-7.1)
+  episodic:
+    + E-48 [episode] Last-minute cup-final media blitz planning with a stressed, checklist-first tone.
+    + O-48.1 [stated] Wants hour-by-hour help in numbered checklists and bullet-point summaries.
+    + O-48.2 [stated] Feels overwhelmed and says a checklist will keep them from melting.
+  state:
+    + T-48.1 [active] Is overwhelmed by the cup-final media blitz and wants checklist-style help right now.
+    ~ P-44.1  basis: O-44.1, O-44.3, O-44.4, O-45.1, O-46.1, O-46.4, O-47.1, O-48.1, O-48.2
+S-49 · 2025-11-14
+  working context: 10 bullets (cites +T-49.1 -P-44.1 -T-48.1)
+    + Wants tight two-line stanzas for the current poetry chain right now (T-49.1)
+    - Is overwhelmed by the cup-final media blitz and wants checklist-style help right now (T-48.1)
+    - Wants numbered checklists and bullet-point summaries (P-44.1)
+  episodic:
+    + E-49 [episode] Collaborative poetry chain about Preston, travel, and terrace chants.
+    + O-49.1 [behavior] Asked to keep the poetry chain to tight two-line stanzas.
+    + O-49.2 [behavior] Asked for a quick bullet recap of the steps because memory feels unreliable.
+  state:
+    + T-49.1 [active] Wants tight two-line stanzas for the current poetry chain right now.
+    ~ P-44.1  basis: O-44.1, O-44.3, O-44.4, O-45.1, O-46.1, O-46.4, O-47.1, O-48.1, O-48.2, O-49.2 confirmed: 2025-11-14
+    ~ T-43.1 active -> expired ended: 2025-11-14
+S-50 · 2025-11-16
+  working context: 6 bullets (cites +G-23.1 +P-44.1 +T-50.1 -F-38.1 -F-40.1 -G-44.1 -T-44.1 -T-46.1 -T-46.2 -T-49.1)
+    + Is feeling pre-speech jitters about a charity auction in 3 days and wants quick calming support right now (T-…
+    + Wants numbered checklists and bullet-point summaries (P-44.1)
+    + Will prepare for the charity auction speech (G-23.1)
+    - Co-hosts a national football analytics podcast and has been commissioned to host and produce a weekly Preston…
+    - Feels intense imposter syndrome about the podcast episode this week (T-44.1)
+    - Is nervous about the boundary conversation and wants a quick breathing trick first (T-46.1)
+    - Is project lead for the Preston North End Digital Heritage Archive (F-38.1)
+    - Prefers face-to-face for the roommate boundary chat (T-46.2)
+    - Wants tight two-line stanzas for the current poetry chain right now (T-49.1)
+    - Will prepare for the upcoming national Championship analytics podcast episode (G-44.1)
+  episodic:
+    + E-50 [episode] Charity-auction speech jitters and a rehearsal plan.
+    + O-50.1 [event] Is feeling pre-speech jitters about a charity auction in 3 days.
+    + O-50.2 [stated] Wants a casual, playful football-banter tone with a dash of sarcasm.
+    + O-50.3 [stated] Wants step-by-step rehearsal drills and a clear 3-day plan for the speech.
+  state:
+    + T-50.1 [active] Is feeling pre-speech jitters about a charity auction in 3 days and wants quick calming support right now.
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1, O-5.2, O-6.3, O-9.5, O-11.1, O-12.2, O-20.2, O-21.3, O-22.1, O-24.2, O-25.2, O-31.4, O-33.1, O-39.2, O-41.1, O-44.1, O-44.3, O-46.1, O-47.2, O-50.2 confirmed: 2025-11-16
+    ~ P-44.1  basis: O-44.1, O-44.3, O-44.4, O-45.1, O-46.1, O-46.4, O-47.1, O-48.1, O-48.2, O-49.2, O-50.3 confirmed: 2025-11-16
+    ~ T-44.1 active -> expired ended: 2025-11-16
+S-51 · 2025-11-17
+  working context: 6 bullets (cites +T-51.1 -T-50.1)
+    + Wants to lock one piece at a time today and leave the rest for later; review 2025-11-24 (T-51.1)
+    - Is feeling pre-speech jitters about a charity auction in 3 days and wants quick calming support right now (T-…
+  episodic:
+    + E-51 [episode] Brainstormed Northreach as a dragon football setting and narrowed the world-building scope.
+    + O-51.1 [behavior] Asked for starter ideas in bullets because skimming helps.
+    + O-51.2 [behavior] Wanted a step-through approach so the world-building stays easy to follow.
+    + O-51.3 [behavior] Asked to lock one piece at a time today and leave the rest for later.
+  state:
+    + T-51.1 [active] Wants to lock one piece at a time today and leave the rest for later.
+    ~ P-1.2  basis: O-0.1, O-1.3, O-3.2, O-4.2, O-6.1, O-7.2, O-9.2, O-10.2, O-11.2, O-16.2, O-18.2, O-18.4, O-20.1, O-22.3, O-23.2, O-30.4, O-37.2, O-44.2, O-44.4, O-45.1, O-46.4, O-51.2 confirmed: 2025-11-17
+    ~ P-44.1  basis: O-44.1, O-44.3, O-44.4, O-45.1, O-46.1, O-46.4, O-47.1, O-48.1, O-48.2, O-49.2, O-50.3, O-51.1 confirmed: 2025-11-17
+S-52 · 2025-11-18
+  working context: 10 bullets (cites +G-35.1 +G-38.1 +G-44.1 +T-52.1)
+    + In Valencia for a year-long logistics project and running a bilingual youth football outreach on the side; ex…
+    + Will coordinate the rooftop wedding with bilingual ceremony logistics, vendors, and schedule (G-35.1)
+    + Will map out a four-week sprint plan to keep historians, designers, and volunteers aligned (G-38.1)
+    + Will prepare for the upcoming national Championship analytics podcast episode (G-44.1)
+  episodic:
+    + E-52 [episode] Short chat about a welcome speech for a youth football outreach in Valencia.
+    + O-52.1 [event] Landed in Valencia for a year-long logistics project and runs a bilingual youth football outreach on the side.
+    + O-52.2 [behavior] Asked for a quick 2-minute welcome speech in Spanish covering safety, schedule, and fun.
+    + O-52.3 [behavior] Asked to add a line asking parents to volunteer for transport to away matches.
+  state:
+    + T-52.1 [active] Is in Valencia for a year-long logistics project and is running a bilingual youth football outreach on the si…
+    ~ T-46.1 active -> expired ended: 2025-11-18
+    ~ T-46.2 active -> expired ended: 2025-11-18
+    > T-5.1 moved state/transient.md -> memory/archive.md
+    > T-6.1 moved state/transient.md -> memory/archive.md
+    > T-8.1 moved state/transient.md -> memory/archive.md
+    > T-9.1 moved state/transient.md -> memory/archive.md
+    > T-9.2 moved state/transient.md -> memory/archive.md
+    > T-9.3 moved state/transient.md -> memory/archive.md
+    > T-10.1 moved state/transient.md -> memory/archive.md
+    > T-11.1 moved state/transient.md -> memory/archive.md
+    > T-12.1 moved state/transient.md -> memory/archive.md
+    > T-15.1 moved state/transient.md -> memory/archive.md
+    > T-15.2 moved state/transient.md -> memory/archive.md
+    > T-17.1 moved state/transient.md -> memory/archive.md
+    > T-18.1 moved state/transient.md -> memory/archive.md
+    > T-19.1 moved state/transient.md -> memory/archive.md
+    > T-21.1 moved state/transient.md -> memory/archive.md
+    > T-22.1 moved state/transient.md -> memory/archive.md
+    > T-23.1 moved state/transient.md -> memory/archive.md
+    > T-24.1 moved state/transient.md -> memory/archive.md
+    > T-26.1 moved state/transient.md -> memory/archive.md
+    > T-27.1 moved state/transient.md -> memory/archive.md
+    > T-27.2 moved state/transient.md -> memory/archive.md
+    > T-28.1 moved state/transient.md -> memory/archive.md
+    > T-28.2 moved state/transient.md -> memory/archive.md
+    > T-29.1 moved state/transient.md -> memory/archive.md
+    > T-30.1 moved state/transient.md -> memory/archive.md
+    > T-31.1 moved state/transient.md -> memory/archive.md
+    > T-32.1 moved state/transient.md -> memory/archive.md
+    > T-36.1 moved state/transient.md -> memory/archive.md
+    > T-37.1 moved state/transient.md -> memory/archive.md
+    > T-38.1 moved state/transient.md -> memory/archive.md
+    > T-43.1 moved state/transient.md -> memory/archive.md
+    > T-44.1 moved state/transient.md -> memory/archive.md
+    > T-46.1 moved state/transient.md -> memory/archive.md
+    > T-46.2 moved state/transient.md -> memory/archive.md
+S-53 · 2025-11-19
+  working context: 8 bullets (cites +P-5.1 +T-53.1 -G-23.1 -P-2.2 -T-51.1 -T-52.1)
+    + Is feeling rattled by a workplace mistake and wants practical support right now; review 2025-11-26 (T-53.1)
+    + Wants concrete examples and hard data to help ideas stick (P-5.1)
+    - In Valencia for a year-long logistics project and running a bilingual youth football outreach on the side; ex…
+    - Wants tight, compact answers rather than long deep dives (P-2.2)
+    - Wants to lock one piece at a time today and leave the rest for later; review 2025-11-24 (T-51.1)
+    - Will prepare for the charity auction speech (G-23.1)
+  episodic:
+    + E-53 [episode] Support chat about recovering from a workplace mistake and rebuilding confidence.
+    + O-53.1 [behavior] Asked for a clear step-by-step comeback plan after a workplace mistake.
+    + O-53.2 [behavior] Asked for a football example for the grounding drill.
+    + O-53.3 [behavior] Wants a weekly checklist to keep by the monitor.
+    + O-53.4 [behavior] Wants a quick check-in next week to stay on track.
+    + O-53.5 [reaction] Reacted casually, said "class" and "cheers", and felt lighter after the recap.
+  state:
+    + T-53.1 [active] Is feeling rattled by a workplace mistake and wants practical support right now.
+    ~ P-1.2  basis: O-0.1, O-1.3, O-3.2, O-4.2, O-6.1, O-7.2, O-9.2, O-10.2, O-11.2, O-16.2, O-18.2, O-18.4, O-20.1, O-22.3, O-23.2, O-30.4, O-37.2, O-44.2, O-44.4, O-45.1, O-46.4, O-51.2, O-53.4 confirmed: 2025-11-19
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1, O-5.2, O-6.3, O-9.5, O-11.1, O-12.2, O-20.2, O-21.3, O-22.1, O-24.2, O-25.2, O-31.4, O-33.1, O-39.2, O-41.1, O-44.1, O-44.3, O-46.1, O-47.2, O-50.2, O-53.5 confirmed: 2025-11-19
+    ~ P-5.1  basis: O-2.2, O-4.1, O-5.3, O-6.3, O-20.2, O-24.3, O-31.4, O-41.1, O-45.1, O-53.2 confirmed: 2025-11-19
+    ~ P-44.1  basis: O-44.1, O-44.3, O-44.4, O-45.1, O-46.1, O-46.4, O-47.1, O-48.1, O-48.2, O-49.2, O-50.3, O-51.1, O-53.1, O-53.3 confirmed: 2025-11-19
+S-54 · 2025-11-20
+  working context: 8 bullets (cites +P-2.2 +T-54.1 -P-1.2)
+    + Is seconded to Bangladesh for six months to run NorthWest Freight Solutions' flood-relief logistics (T-54.1)
+    + Wants tight, compact answers rather than long deep dives, with concrete examples and hard data (P-2.2, P-5.1)
+    - Wants concrete examples and hard data to help ideas stick (P-5.1)
+    - Wants iterative back-and-forth and quick check-ins (P-1.2)
+  episodic:
+    + E-54 [episode] User has a six-month secondment to Bangladesh to run flood-relief logistics.
+    + O-54.1 [stated] Is seconded to Bangladesh for six months to run NorthWest Freight Solutions' flood-relief logistics.
+    + O-54.2 [behavior] Asked for a short Bengali phrase to ask truck drivers if the road ahead is passable.
+  state:
+    + T-54.1 [active] Is seconded to Bangladesh for six months to run NorthWest Freight Solutions' flood-relief logistics.
+    ~ T-47.1 active -> expired ended: 2025-11-20
+    ~ T-48.1 active -> expired ended: 2025-11-20
+    ~ T-52.1 active -> superseded superseded_by: T-54.1
+S-55 · 2025-11-20
+  working context: 6 bullets (cites +T-55.1 -P-5.1 -T-53.1 -T-54.1)
+    + Is homesick in Toronto and wants chill, practical support right now (T-55.1)
+    + Wants numbered checklists and bullet-point summaries, kept tight and compact (P-44.1, P-2.2)
+    - Is feeling rattled by a workplace mistake and wants practical support right now; review 2025-11-26 (T-53.1)
+    - Is seconded to Bangladesh for six months to run NorthWest Freight Solutions' flood-relief logistics (T-54.1)
+    - Wants numbered checklists and bullet-point summaries (P-44.1)
+    - Wants tight, compact answers rather than long deep dives, with concrete examples and hard data (P-2.2, P-5.1)
+  episodic:
+    + E-55 [episode] Homesick chat about Toronto and family routines.
+    + O-55.1 [stated] Misses Preston and family match rituals; feels head all over the place and wants to talk.
+    + O-55.2 [stated] Wants things kept chill and says therapy jargon makes them twitchy.
+    + O-55.3 [stated] Is big on checklists and wants a day-by-day plan.
+    + O-55.4 [stated] Wants real talk, not cheerleading.
+  state:
+    + T-55.1 [active] Is homesick in Toronto and wants chill, practical support right now.
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1, O-5.2, O-6.3, O-9.5, O-11.1, O-12.2, O-20.2, O-21.3, O-22.1, O-24.2, O-25.2, O-31.4, O-33.1, O-39.2, O-41.1, O-44.1, O-44.3, O-46.1, O-47.2, O-50.2, O-53.5, O-55.2 confirmed: 2025-11-20
+    ~ P-44.1  basis: O-44.1, O-44.3, O-44.4, O-45.1, O-46.1, O-46.4, O-47.1, O-48.1, O-48.2, O-49.2, O-50.3, O-51.1, O-53.1, O-53.3, O-55.3 confirmed: 2025-11-20
+S-56 · 2025-11-23
+  working context: 8 bullets (cites +F-14.1 +F-38.1 +F-40.1 +P-1.2 +P-32.1 +P-5.1 +P-7.1)
+    + Likes a casual, playful tone with football banter and little cheese; also wants a small set of options before…
+    + Uses blunt, no-sugar-coating critique for feedback, and concrete examples/hard data to make ideas stick (P-32…
+    + Wants numbered checklists and bullet-point summaries, kept tight and compact, with iterative back-and-forth a…
+    + Works as Global Logistics Project Manager, leads the Preston North End Digital Heritage Archive, and co-hosts…
+    - Wants a casual, playful tone with football banter and little cheese (P-1.3)
+    - Wants numbered checklists and bullet-point summaries, kept tight and compact (P-44.1, P-2.2)
+  episodic:
+    + E-56 [episode] Story-sprint chat about a Preston North End ethics premise.
+    + O-56.1 [behavior] Wants fast bullet lists, tiny chunks, and a timeline for brainstorming help.
+    + O-56.2 [behavior] Wants step-by-step skeletons and Q&A turns to think faster.
+    + O-56.3 [behavior] Wants a casual football-banter tone with dry humor and no puns in creative riffing.
+    + O-56.4 [behavior] Wants a Discord-ready bullet doc when sharing the outline.
+  state:
+    ~ P-1.2  basis: O-0.1, O-1.3, O-3.2, O-4.2, O-6.1, O-7.2, O-9.2, O-10.2, O-11.2, O-16.2, O-18.2, O-18.4, O-20.1, O-22.3, O-23.2, O-30.4, O-37.2, O-44.2, O-44.4, O-45.1, O-46.4, O-51.2, O-53.4, O-56.2, O-56.4 confirmed: 2025-11-23
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1, O-5.2, O-6.3, O-9.5, O-11.1, O-12.2, O-20.2, O-21.3, O-22.1, O-24.2, O-25.2, O-31.4, O-33.1, O-39.2, O-41.1, O-44.1, O-44.3, O-46.1, O-47.2, O-50.2, O-53.5, O-55.2, O-56.3 confirmed: 2025-11-23
+    ~ P-2.2  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.3, O-9.2, O-10.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-18.2, O-18.3, O-18.4, O-19.2, O-20.1, O-20.3, O-22.2, O-28.1, O-29.1, O-31.2, O-33.1, O-46.1, O-46.2, O-56.1, O-56.2, O-56.4 confirmed: 2025-11-23
+    ~ P-44.1  basis: O-44.1, O-44.3, O-44.4, O-45.1, O-46.1, O-46.4, O-47.1, O-48.1, O-48.2, O-49.2, O-50.3, O-51.1, O-53.1, O-53.3, O-55.3, O-56.1, O-56.2, O-56.4 confirmed: 2025-11-23
+    ~ T-49.1 active -> expired ended: 2025-11-23
+    ~ T-50.1 active -> expired ended: 2025-11-23
+S-57 · 2025-11-24
+  working context: 7 bullets (cites +T-57.1 -T-55.1)
+    + Feels discouraged after 25 job rejections and wants hard tactics with weekly checkpoints right now (T-57.1)
+    + Prefers concrete examples and hard data, plus a small set of options before choosing, and blunt critique when…
+    + Wants numbered checklists and bullet-point summaries, kept tight and compact, with iterative back-and-forth a…
+    - Is homesick in Toronto and wants chill, practical support right now (T-55.1)
+    - Likes a casual, playful tone with football banter and little cheese; also wants a small set of options before…
+    - Uses blunt, no-sugar-coating critique for feedback, and concrete examples/hard data to make ideas stick (P-32…
+    - Wants numbered checklists and bullet-point summaries, kept tight and compact, with iterative back-and-forth a…
+  episodic:
+    + E-57 [episode] Job-search setback and interview-coaching chat.
+    + O-57.1 [stated] Has had 25 job rejections in three months and feels knackered.
+    + O-57.2 [stated] Wants hard tactics and weekly checkpoints to keep the job search on track.
+  state:
+    + T-57.1 [active] Is feeling discouraged after 25 job rejections and wants hard tactics with weekly checkpoints right now.
+    ~ T-51.1 active -> expired ended: 2025-11-24
+S-58 · 2025-11-24
+  working context: 7 bullets (cites +T-58.1 -F-14.1 -F-38.1 -F-40.1 -T-57.1)
+    + Is feeling discouraged after job rejections and wants hard tactics with weekly Monday-night check-ins right n…
+    + None
+    - Feels discouraged after 25 job rejections and wants hard tactics with weekly checkpoints right now (T-57.1)
+    - Works as Global Logistics Project Manager, leads the Preston North End Digital Heritage Archive, and co-hosts…
+  episodic:
+    + E-58 [episode] Supportive job-search chat about rejections, interview prep, salary nerves, and a weekly check-in.
+    + O-58.1 [behavior] Asked to skip pep talk and go straight to a step-by-step fix.
+    + O-58.2 [behavior] Wants a weekly Monday-night check-in for the job-search sprint.
+  state:
+    + T-58.1 [active] Is feeling discouraged after job rejections and wants hard tactics with weekly Monday-night check-ins right n…
+    ~ P-1.2  basis: O-0.1, O-1.3, O-3.2, O-4.2, O-6.1, O-7.2, O-9.2, O-10.2, O-11.2, O-16.2, O-18.2, O-18.4, O-20.1, O-22.3, O-23.2, O-30.4, O-37.2, O-44.2, O-44.4, O-45.1, O-46.4, O-51.2, O-53.4, O-56.2, O-56.4, O-58.2 confirmed: 2025-11-24
+    ~ P-44.1  basis: O-44.1, O-44.3, O-44.4, O-45.1, O-46.1, O-46.4, O-47.1, O-48.1, O-48.2, O-49.2, O-50.3, O-51.1, O-53.1, O-53.3, O-55.3, O-56.1, O-56.2, O-56.4, O-58.1 confirmed: 2025-11-24
+S-59 · 2025-11-24
+  working context: 7 bullets (cites -P-1.2)
+    + Wants numbered checklists and bullet-point summaries, kept tight and compact, with iterative back-and-forth a…
+    - Wants numbered checklists and bullet-point summaries, kept tight and compact, with iterative back-and-forth a…
+  episodic:
+    + E-59 [episode] Short chat about a concise weekly status report template and polite Japanese openings/closings.
+    + O-59.1 [event] Relocated to Tokyo to head the new Asia-Pacific logistics hub.
+    + O-59.2 [behavior] Asked for a concise weekly status-report template and polite Japanese opening and closing phrases.
+  state:
+    + F-59.1 [current] Is now based in Tokyo while heading the new Asia-Pacific logistics hub.
+    ~ P-2.2  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.3, O-9.2, O-10.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-18.2, O-18.3, O-18.4, O-19.2, O-20.1, O-20.3, O-22.2, O-28.1, O-29.1, O-31.2, O-33.1, O-46.1, O-46.2, O-56.1, O-56.2, O-56.4, O-59.2
+    ~ P-44.1  basis: O-44.1, O-44.3, O-44.4, O-45.1, O-46.1, O-46.4, O-47.1, O-48.1, O-48.2, O-49.2, O-50.3, O-51.1, O-53.1, O-53.3, O-55.3, O-56.1, O-56.2, O-56.4, O-58.1, O-59.2
+S-60 · 2025-11-25
+  working context: 4 bullets (cites +P-1.2 +T-60.1 -G-35.1 -G-38.1 -P-2.2 -P-32.1 -P-5.1 -P-7.1 -T-58.1)
+    + Is feeling imposter-syndrome panic before the podcast and wants calm, step-by-step support right now (T-60.1)
+    + Wants numbered checklists, bullet-point summaries, and quick check-ins, with a casual football-banter tone (P…
+    - Is feeling discouraged after job rejections and wants hard tactics with weekly Monday-night check-ins right n…
+    - Prefers concrete examples and hard data, plus a small set of options before choosing, and blunt critique when…
+    - Wants numbered checklists and bullet-point summaries, kept tight and compact, with iterative back-and-forth a…
+    - Will coordinate the rooftop wedding with bilingual ceremony logistics, vendors, and schedule (G-35.1)
+    - Will map out a four-week sprint plan to keep historians, designers, and volunteers aligned (G-38.1)
+  episodic:
+    + E-60 [episode] Podcast-prep anxiety and a request for chill, checklist-driven guidance.
+    + O-60.1 [stated] Feels proper imposter-syndrome panic with the podcast six days away.
+    + O-60.2 [behavior] Wants step-by-step, chill help with tick-box lists after each bit.
+    + O-60.3 [behavior] Wants a quick challenge each time so they do not just scroll passively.
+  state:
+    + T-60.1 [active] Is feeling imposter-syndrome panic before the podcast in six days and wants calm, step-by-step, checklist-bas…
+    ~ P-44.1  basis: O-44.1, O-44.3, O-44.4, O-45.1, O-46.1, O-46.4, O-47.1, O-48.1, O-48.2, O-49.2, O-50.3, O-51.1, O-53.1, O-53.3, O-55.3, O-56.1, O-56.2, O-56.4, O-58.1, O-59.2, O-60.2 confirmed: 2025-11-25
+S-61 · 2025-11-26
+  working context: 4 bullets (cites +T-61.1 -T-60.1)
+    + Is feeling rattled by a courier-cutoff mistake and wants quick check-ins right now (T-61.1)
+    + Wants numbered checklists and bullet-point summaries, with quick check-ins in a casual football-banter tone (…
+    - Is feeling imposter-syndrome panic before the podcast and wants calm, step-by-step support right now (T-60.1)
+    - Wants numbered checklists, bullet-point summaries, and quick check-ins, with a casual football-banter tone (P…
+  episodic:
+    + E-61 [episode] Missed courier cutoff for Carlos's camera gear and felt very stressed, then resolved it before kickoff.
+    + O-61.1 [stated] Wants bullet-point help, no waffle, and a daft joke right now.
+    + O-61.2 [stated] Asked for a later check-in because they spiral when left alone with thoughts.
+  state:
+    + T-61.1 [expired] Is feeling rattled by a courier-cutoff mistake and wants quick check-ins right now.
+    ~ P-1.2  basis: O-0.1, O-1.3, O-3.2, O-4.2, O-6.1, O-7.2, O-9.2, O-10.2, O-11.2, O-16.2, O-18.2, O-18.4, O-20.1, O-22.3, O-23.2, O-30.4, O-37.2, O-44.2, O-44.4, O-45.1, O-46.4, O-51.2, O-53.4, O-56.2, O-56.4, O-58.2, O-61.2 confirmed: 2025-11-26
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1, O-5.2, O-6.3, O-9.5, O-11.1, O-12.2, O-20.2, O-21.3, O-22.1, O-24.2, O-25.2, O-31.4, O-33.1, O-39.2, O-41.1, O-44.1, O-44.3, O-46.1, O-47.2, O-50.2, O-53.5, O-55.2, O-56.3, O-61.1 confirmed: 2025-11-26
+    ~ P-2.2  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.3, O-9.2, O-10.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-18.2, O-18.3, O-18.4, O-19.2, O-20.1, O-20.3, O-22.2, O-28.1, O-29.1, O-31.2, O-33.1, O-46.1, O-46.2, O-56.1, O-56.2, O-56.4, O-59.2, O-61.1 confirmed: 2025-11-26
+    ~ P-44.1  basis: O-44.1, O-44.3, O-44.4, O-45.1, O-46.1, O-46.4, O-47.1, O-48.1, O-48.2, O-49.2, O-50.3, O-51.1, O-53.1, O-53.3, O-55.3, O-56.1, O-56.2, O-56.4, O-58.1, O-59.2, O-60.2, O-61.1 confirmed: 2025-11-26
+    ~ T-53.1 active -> expired ended: 2025-11-26
+S-62 · 2025-11-26
+  working context: 4 bullets (cites +P-2.2 +P-5.1 -T-61.1)
+    + Wants tight, compact answers and concrete examples when useful (P-2.2, P-5.1)
+    - Is feeling rattled by a courier-cutoff mistake and wants quick check-ins right now (T-61.1)
+  episodic:
+    + E-62 [episode] Drafted a diplomatic apology after a fantasy-football dispute and later saved a recap.
+    + O-62.1 [behavior] Asked for a quick back-and-forth mock chat in case Alice got cheeky.
+    + O-62.2 [behavior] Asked for shorter replies so they would not overthink.
+    + O-62.3 [behavior] Asked for a super quick email-style summary to stash the takeaway.
+    + O-62.4 [behavior] Asked for a quick breathing hack when anxiety spiked.
+    + O-62.5 [behavior] Asked for a random Preston North End stat as distraction.
+    + O-62.6 [reaction] Said they felt loads better after saving the summary.
+  state:
+    ~ P-1.2  basis: O-0.1, O-1.3, O-3.2, O-4.2, O-6.1, O-7.2, O-9.2, O-10.2, O-11.2, O-16.2, O-18.2, O-18.4, O-20.1, O-22.3, O-23.2, O-30.4, O-37.2, O-44.2, O-44.4, O-45.1, O-46.4, O-51.2, O-53.4, O-56.2, O-56.4, O-58.2, O-61.2, O-62.1
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1, O-5.2, O-6.3, O-9.5, O-11.1, O-12.2, O-20.2, O-21.3, O-22.1, O-24.2, O-25.2, O-31.4, O-33.1, O-39.2, O-41.1, O-44.1, O-44.3, O-46.1, O-47.2, O-50.2, O-53.5, O-55.2, O-56.3, O-61.1, O-62.5
+    ~ P-2.2  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.3, O-9.2, O-10.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-18.2, O-18.3, O-18.4, O-19.2, O-20.1, O-20.3, O-22.2, O-28.1, O-29.1, O-31.2, O-33.1, O-46.1, O-46.2, O-56.1, O-56.2, O-56.4, O-59.2, O-61.1, O-62.2, O-62.3
+    ~ P-44.1  basis: O-44.1, O-44.3, O-44.4, O-45.1, O-46.1, O-46.4, O-47.1, O-48.1, O-48.2, O-49.2, O-50.3, O-51.1, O-53.1, O-53.3, O-55.3, O-56.1, O-56.2, O-56.4, O-58.1, O-59.2, O-60.2, O-61.1, O-62.3
+S-63 · 2025-11-27
+  working context: 6 bullets (cites +P-32.1 +P-63.1 +T-63.1 +T-63.2)
+    + Wants a brief Wednesday written check-in while the logo situation is active (T-63.2)
+    + Wants blunt critique when asking for feedback, and prefers it in writing over calls (P-32.1, P-63.1)
+    + Wants low-key jokes and gentler support today while feeling fragile (T-63.1)
+    + Wants tight, compact answers with concrete examples and hard data when useful (P-2.2, P-5.1)
+    - None
+    - Wants tight, compact answers and concrete examples when useful (P-2.2, P-5.1)
+  episodic:
+    + E-63 [episode] Short chat about logo feedback, check-ins, and response style.
+    + O-63.1 [behavior] Wanted blunt, no-fluff critique and said they could take it if the logo was bad.
+    + O-63.2 [behavior] Wanted feedback in writing and said they hate calls.
+    + O-63.3 [behavior] Wanted next steps as a checklist with boxes to tick.
+    + O-63.5 [behavior] Said they need replies within a couple hours while swamped at work.
+    + O-63.6 [behavior] Wanted a brief written Wednesday-night check-in so they do not spiral again.
+    + O-63.7 [behavior] Said football analogies help them get it faster.
+  state:
+    + P-63.1 [current] Prefers written feedback over calls.
+    + T-63.1 [active] Wants low-key jokes and gentler support today while feeling fragile.
+    + T-63.2 [active] Wants a brief Wednesday written check-in while the logo situation is active.
+    ~ P-1.2  basis: O-0.1, O-1.3, O-3.2, O-4.2, O-6.1, O-7.2, O-9.2, O-10.2, O-11.2, O-16.2, O-18.2, O-18.4, O-20.1, O-22.3, O-23.2, O-30.4, O-37.2, O-44.2, O-44.4, O-45.1, O-46.4, O-51.2, O-53.4, O-56.2, O-56.4, O-58.2, O-61.2, O-62.1, O-63.6 confirmed: 2025-11-27
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1, O-5.2, O-6.3, O-9.5, O-11.1, O-12.2, O-20.2, O-21.3, O-22.1, O-24.2, O-25.2, O-31.4, O-33.1, O-39.2, O-41.1, O-44.1, O-44.3, O-46.1, O-47.2, O-50.2, O-53.5, O-55.2, O-56.3, O-61.1, O-62.5, O-63.7 confirmed: 2025-11-27
+    ~ P-5.1  basis: O-2.2, O-4.1, O-5.3, O-6.3, O-20.2, O-24.3, O-31.4, O-41.1, O-45.1, O-53.2, O-63.7 confirmed: 2025-11-27
+    ~ P-32.1  basis: O-32.1, O-44.2, O-63.1 confirmed: 2025-11-27
+    ~ P-44.1  basis: O-44.1, O-44.3, O-44.4, O-45.1, O-46.1, O-46.4, O-47.1, O-48.1, O-48.2, O-49.2, O-50.3, O-51.1, O-53.1, O-53.3, O-55.3, O-56.1, O-56.2, O-56.4, O-58.1, O-59.2, O-60.2, O-61.1, O-62.3, O-63.3 confirmed: 2025-11-27
+    ~ T-55.1 active -> expired ended: 2025-11-27
+S-64 · 2025-11-28
+  working context: 5 bullets (cites +P-64.1 +T-64.1 -P-44.1 -T-63.1 -T-63.2)
+    + Feels overwhelmed by the fan-zine deadline and wants super-clear baby-step help right now (T-64.1)
+    + Wants iterative back-and-forth with quick check-ins, plus numbered checklists and bullet-point summaries in b…
+    + Wants tight, compact answers with concrete examples and hard data when useful, in a casual football-banter to…
+    - Wants a brief Wednesday written check-in while the logo situation is active (T-63.2)
+    - Wants low-key jokes and gentler support today while feeling fragile (T-63.1)
+    - Wants numbered checklists and bullet-point summaries, with quick check-ins in a casual football-banter tone (…
+    - Wants tight, compact answers with concrete examples and hard data when useful (P-2.2, P-5.1)
+  episodic:
+    + E-64 [episode] Tight-deadline zine planning chat with clear-task and blunt-feedback preferences.
+    + O-64.1 [stated] Wants baby-step tasks and future lists capped at five while overwhelmed by the zine deadline.
+    + O-64.2 [stated] Wants blockers called out plainly with no sugarcoating.
+  state:
+    + P-64.1 [current] Wants numbered checklists and bullet-point summaries in baby steps, capped at five items.
+    + T-64.1 [active] Is overwhelmed by the remote fan-zine deadline and wants super-clear baby-step help right now.
+    ~ P-32.1  basis: O-32.1, O-44.2, O-63.1, O-64.2 confirmed: 2025-11-28
+    ~ P-44.1 current -> superseded superseded_by: P-64.1
+S-65 · 2025-11-29
+  working context: 5 bullets
+    + Prefers written feedback over calls and blunt critique when asking for feedback (P-63.1, P-32.1)
+    + Wants iterative back-and-forth and quick check-ins, with numbered baby-step checklists capped at five items (…
+    + Wants tight, compact answers with concrete examples when useful, in a casual football-banter tone (P-1.3, P-2…
+    - Wants blunt critique when asking for feedback, and prefers it in writing over calls (P-32.1, P-63.1)
+    - Wants iterative back-and-forth with quick check-ins, plus numbered checklists and bullet-point summaries in b…
+    - Wants tight, compact answers with concrete examples and hard data when useful, in a casual football-banter to…
+  episodic:
+    + E-65 [episode] Talked through a boundary-setting script with a flatmate.
+    + O-65.1 [stated] Wants laid-back, step-by-step help and dislikes formal chats.
+    + O-65.2 [stated] Wants short answers because big blocks fry their brain.
+    + O-65.3 [stated] Wants to keep doing step-by-step chats when stuff crops up.
+  state:
+    ~ P-1.2  basis: O-0.1, O-1.3, O-3.2, O-4.2, O-6.1, O-7.2, O-9.2, O-10.2, O-11.2, O-16.2, O-18.2, O-18.4, O-20.1, O-22.3, O-23.2, O-30.4, O-37.2, O-44.2, O-44.4, O-45.1, O-46.4, O-51.2, O-53.4, O-56.2, O-56.4, O-58.2, O-61.2, O-62.1, O-63.6, O-65.1, O-65.3 confirmed: 2025-11-29
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1, O-5.2, O-6.3, O-9.5, O-11.1, O-12.2, O-20.2, O-21.3, O-22.1, O-24.2, O-25.2, O-31.4, O-33.1, O-39.2, O-41.1, O-44.1, O-44.3, O-46.1, O-47.2, O-50.2, O-53.5, O-55.2, O-56.3, O-61.1, O-62.5, O-63.7, O-65.1 confirmed: 2025-11-29
+    ~ P-2.2  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.3, O-9.2, O-10.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-18.2, O-18.3, O-18.4, O-19.2, O-20.1, O-20.3, O-22.2, O-28.1, O-29.1, O-31.2, O-33.1, O-46.1, O-46.2, O-56.1, O-56.2, O-56.4, O-59.2, O-61.1, O-62.2, O-62.3, O-65.2 confirmed: 2025-11-29
+    ~ P-64.1  basis: O-64.1, O-65.1, O-65.2 confirmed: 2025-11-29
+S-66 · 2025-11-30
+  working context: 7 bullets (cites +T-66.1 +T-66.2 -P-2.2 -P-32.1 -P-63.1 -T-64.1)
+    + Caffeine level is high enough to keep the jitters in play for now (T-66.2)
+    + Is drinking about five coffees before lunch, which may keep the jitters in play (T-66.2)
+    + Is recovering from a panic attack and woke up calmer after using the mantra (T-66.1)
+    + Panic aftercare may still need gentle check-ins today (T-66.1)
+    + Wants a casual, playful tone with football banter and little cheese, plus concrete examples when useful (P-1.…
+    + Wants numbered checklists and bullet-point summaries in baby steps, capped at five items, with iterative chec…
+    - Feels overwhelmed by the fan-zine deadline and wants super-clear baby-step help right now (T-64.1)
+    - Prefers written feedback over calls and blunt critique when asking for feedback (P-63.1, P-32.1)
+    - Wants iterative back-and-forth and quick check-ins, with numbered baby-step checklists capped at five items (…
+    - Wants tight, compact answers with concrete examples when useful, in a casual football-banter tone (P-1.3, P-2…
+  episodic:
+    + E-66 [episode] Panic grounding and recovery chat.
+    + O-66.1 [stated] Had a panic attack with a racing heart and tingling fingers.
+    + O-66.2 [behavior] Wants bullet-point help and screenshot-ready steps in one go.
+    + O-66.3 [behavior] Wants football-flavoured reassurance and a super-short mantra.
+    + O-66.4 [stated] Is drinking about five coffees before lunch.
+    + O-66.5 [stated] Woke up calmer and kept repeating the mantra.
+  state:
+    + T-66.1 [active] Is recovering from a panic attack and woke up calmer after using the mantra.
+    + T-66.2 [active] Is drinking about five coffees before lunch.
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1, O-5.2, O-6.3, O-9.5, O-11.1, O-12.2, O-20.2, O-21.3, O-22.1, O-24.2, O-25.2, O-31.4, O-33.1, O-39.2, O-41.1, O-44.1, O-44.3, O-46.1, O-47.2, O-50.2, O-53.5, O-55.2, O-56.3, O-61.1, O-62.5, O-63.7, O-65.1, O-66.3 confirmed: 2025-11-30
+    ~ P-2.2  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.3, O-9.2, O-10.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-18.2, O-18.3, O-18.4, O-19.2, O-20.1, O-20.3, O-22.2, O-28.1, O-29.1, O-31.2, O-33.1, O-46.1, O-46.2, O-56.1, O-56.2, O-56.4, O-59.2, O-61.1, O-62.2, O-62.3, O-65.2, O-66.2, O-66.3 confirmed: 2025-11-30
+    ~ P-64.1  basis: O-64.1, O-65.1, O-65.2, O-66.2 confirmed: 2025-11-30
+    ~ T-64.1 active -> expired ended: 2025-11-30
+S-67 · 2025-11-30
+  working context: 7 bullets (cites -P-1.2 -P-5.1)
+    + Is recovering from a panic attack and still in gentle aftercare mode today (T-66.1)
+    + Wants a casual, playful tone with football banter and little cheese (P-1.3)
+    + Wants numbered checklists and bullet-point summaries in baby steps, capped at five items (P-64.1)
+    - Is recovering from a panic attack and woke up calmer after using the mantra (T-66.1)
+    - Wants a casual, playful tone with football banter and little cheese, plus concrete examples when useful (P-1.…
+    - Wants numbered checklists and bullet-point summaries in baby steps, capped at five items, with iterative chec…
+  episodic:
+    + E-67 [episode] Panic attack grounding and a screenshot-friendly checklist.
+    + O-67.1 [behavior] Asked for tiny steps, no big paragraphs, and screenshot-friendly bullets.
+    + O-67.2 [reaction] Said the grounding worked, felt steadier, and is winding down with tea and highlights.
+  state:
+    ~ P-64.1  basis: O-64.1, O-65.1, O-65.2, O-66.2, O-67.1
+    ~ T-66.1  basis: O-66.1, O-66.5, O-67.2
+S-68 · 2025-12-04
+  working context: 6 bullets (cites +P-2.2 +T-68.1 +T-68.2)
+    + Estate paperwork is due in three weeks, and a braces bill is looming (T-68.1, T-68.2)
+    + Panic aftercare and high caffeine are still active if the mood dips again (T-66.1, T-66.2)
+    + Wants tight, compact answers rather than long deep dives (P-2.2)
+    - Caffeine level is high enough to keep the jitters in play for now (T-66.2)
+    - Is drinking about five coffees before lunch, which may keep the jitters in play (T-66.2)
+    - Is recovering from a panic attack and still in gentle aftercare mode today (T-66.1)
+    - Panic aftercare may still need gentle check-ins today (T-66.1)
+  episodic:
+    + E-68 [episode] Card-shoebox rescue and valuation starting point.
+    + O-68.1 [event] Found about 200 1960s Japanese baseball cards, including rookie Sadaharu Oh and Nagashima with faded sigs.
+    + O-68.2 [stated] Estate paperwork is due in 3 weeks and a braces bill is looming, so step-by-step bullets would be ace.
+  state:
+    + T-68.1 [active] Has estate paperwork due in three weeks.
+    + T-68.2 [active] Is feeling financial pressure from a looming braces bill.
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1, O-5.2, O-6.3, O-9.5, O-11.1, O-12.2, O-20.2, O-21.3, O-22.1, O-24.2, O-25.2, O-31.4, O-33.1, O-39.2, O-41.1, O-44.1, O-44.3, O-46.1, O-47.2, O-50.2, O-53.5, O-55.2, O-56.3, O-61.1, O-62.5, O-63.7, O-65.1, O-66.3, O-68.2 confirmed: 2025-12-04
+    ~ P-2.2  basis: O-2.1, O-3.1, O-4.1, O-5.2, O-6.1, O-7.3, O-9.2, O-10.2, O-12.1, O-13.1, O-14.1, O-15.1, O-16.1, O-16.2, O-18.2, O-18.3, O-18.4, O-19.2, O-20.1, O-20.3, O-22.2, O-28.1, O-29.1, O-31.2, O-33.1, O-46.1, O-46.2, O-56.1, O-56.2, O-56.4, O-59.2, O-61.1, O-62.2, O-62.3, O-65.2, O-66.2, O-66.3, O-68.2 confirmed: 2025-12-04
+    ~ P-64.1  basis: O-64.1, O-65.1, O-65.2, O-66.2, O-67.1, O-68.2 confirmed: 2025-12-04
+    ~ T-57.1 active -> expired ended: 2025-12-04
+    ~ T-58.1 active -> expired ended: 2025-12-04
+    ~ T-60.1 active -> expired ended: 2025-12-04
+    ~ T-63.1 active -> expired ended: 2025-12-04
+    ~ T-63.2 active -> expired ended: 2025-12-04
+S-69 · 2025-12-07
+  working context: 6 bullets (cites +T-69.1)
+    + Panic aftercare and high caffeine are no longer active (T-66.1, T-66.2)
+    + Wants numbered checklists and bullet-point summaries in baby steps, capped at five items; wants indirect word…
+    - Panic aftercare and high caffeine are still active if the mood dips again (T-66.1, T-66.2)
+    - Wants numbered checklists and bullet-point summaries in baby steps, capped at five items (P-64.1)
+  episodic:
+    + E-69 [episode] Long chat about setting polite boundaries with a noisy flatmate and finding a low-drama script.
+    + O-69.1 [stated] Wants step-by-step help and to keep the roommate talk indirect for now.
+    + O-69.2 [reaction] Feels loads better after the prep and will report back.
+  state:
+    + T-69.1 [active] Wants indirect wording for the roommate boundary talk for now.
+    ~ P-64.1  basis: O-64.1, O-65.1, O-65.2, O-66.2, O-67.1, O-68.2, O-69.1 confirmed: 2025-12-07
+    ~ T-66.1 active -> expired ended: 2025-12-07
+    ~ T-66.2 active -> expired ended: 2025-12-07
+S-70 · 2025-12-07
+  working context: 5 bullets (cites -T-66.1 -T-66.2)
+    - Panic aftercare and high caffeine are no longer active (T-66.1, T-66.2)
+  episodic:
+    + E-70 [episode] Boundary-talk practice with roommate noise and a calm script.
+    + O-70.1 [behavior] Wants step-by-step phrasing and exact lines for a roommate boundary talk.
+    + O-70.2 [stated] Wants it to sound like normal chat, not an HR memo, with a football reference.
+    + O-70.3 [reaction] Said the draft felt sound and left them feeling loads better.
+  state:
+    ~ P-1.3  basis: O-0.3, O-1.2, O-4.1, O-5.2, O-6.3, O-9.5, O-11.1, O-12.2, O-20.2, O-21.3, O-22.1, O-24.2, O-25.2, O-31.4, O-33.1, O-39.2, O-41.1, O-44.1, O-44.3, O-46.1, O-47.2, O-50.2, O-53.5, O-55.2, O-56.3, O-61.1, O-62.5, O-63.7, O-65.1, O-66.3, O-68.2, O-70.2, O-70.3 confirmed: 2025-12-07
+S-71 · 2025-12-09
+  working context: 5 bullets (cites +P-1.2 +P-5.1 +P-7.1 -T-69.1)
+    + Wants a small set of options before choosing, and iterative back-and-forth with quick check-ins (P-7.1, P-1.2)
+    + Wants numbered checklists and bullet-point summaries in baby steps, capped at five items; likes a casual, pla…
+    + Wants tight, compact answers rather than long deep dives, with concrete examples and hard data when ideas nee…
+    - Wants a casual, playful tone with football banter and little cheese (P-1.3)
+    - Wants numbered checklists and bullet-point summaries in baby steps, capped at five items; wants indirect word…
+    - Wants tight, compact answers rather than long deep dives (P-2.2)
+  episodic:
+    + E-71 [episode] Helped digest a national defence white paper with a relaxed, bullet-pointed style.
+    + O-71.1 [behavior] Asked for a zoomed-out bullet-point summary first.
+    + O-71.2 [behavior] Asked to keep it chill, jargon-free, and emoji-free while keeping the relaxed vibe.
+  state:
+    + P-71.1 [current] Wants a casual, playful tone with football banter, little cheese, and no emojis.
+    ~ P-1.3 current -> superseded superseded_by: P-71.1
+    ~ P-64.1  basis: O-64.1, O-65.1, O-65.2, O-66.2, O-67.1, O-68.2, O-69.1, O-71.1 confirmed: 2025-12-09
+S-72 · 2025-12-09
+  working context: 6 bullets (cites +P-71.1 +T-72.1 -P-1.3)
+    + Wants numbered checklists and bullet-point summaries in baby steps, capped at five items; likes a casual, pla…
+    + Wants this comic dialogue kept super PG because a little cousin will read it (T-72.1)
+    - Wants numbered checklists and bullet-point summaries in baby steps, capped at five items; likes a casual, pla…
+  episodic:
+    + E-72 [episode] Chat about polishing comic dialogue on page 4.
+    + O-72.1 [behavior] Asked for several alternate dialogue lines in bullet style.
+    + O-72.2 [stated] Wanted the dialogue cheeky, medium-snarky, and PG.
+    + O-72.3 [stated] Wanted it super PG because a little cousin will read it.
+    + O-72.4 [stated] Wanted the sidekick extra hopeful with no snark.
+  state:
+    + T-72.1 [active] Wants this comic dialogue kept super PG because a little cousin will read it.
+    ~ P-64.1  basis: O-64.1, O-65.1, O-65.2, O-66.2, O-67.1, O-68.2, O-69.1, O-71.1, O-72.1
+    ~ P-71.1  basis: O-71.2, O-72.2 confirmed: 2025-12-09
+S-73 · 2025-12-10
+  working context: 6 bullets (cites +T-73.1 +T-73.2 -P-2.2 -P-5.1 -P-7.1 -T-72.1)
+    + Charity app overhaul is stressing them out and they want straight step-by-step support right now; daily 2 pm …
+    + Wants a casual, playful tone with football banter, little cheese, and no emojis (P-71.1)
+    + Wants iterative back-and-forth and quick check-ins (P-1.2)
+    + Wants numbered checklists and bullet-point summaries in baby steps, capped at five items (P-64.1)
+    - Wants a small set of options before choosing, and iterative back-and-forth with quick check-ins (P-7.1, P-1.2)
+    - Wants numbered checklists and bullet-point summaries in baby steps, capped at five items; likes a casual, pla…
+    - Wants this comic dialogue kept super PG because a little cousin will read it (T-72.1)
+    - Wants tight, compact answers rather than long deep dives, with concrete examples and hard data when ideas nee…
+  episodic:
+    + E-73 [episode] Charity app overhaul stress and a few coping tactics.
+    + O-73.1 [stated] Wants step-by-step bullet help and a simple checklist.
+    + O-73.2 [stated] Wants footy lingo and a casual tone.
+    + O-73.3 [event] Is stressed by a charity app overhaul with three weeks left and a slow team.
+    + O-73.4 [stated] Has a daily 2 pm slump and wants a gentle midday reminder.
+    + O-73.5 [reaction] Sophie replied "sounds good," and that eased the worry.
+  state:
+    + T-73.1 [active] Is stressed by the charity app overhaul with three weeks left and wants straight step-by-step support right n…
+    + T-73.2 [active] Has a daily 2 pm slump and wants a gentle midday reminder while the charity app work is active.
+    ~ P-64.1  basis: O-64.1, O-65.1, O-65.2, O-66.2, O-67.1, O-68.2, O-69.1, O-71.1, O-72.1, O-73.1 confirmed: 2025-12-10
+    ~ P-71.1  basis: O-71.2, O-72.2, O-73.2 confirmed: 2025-12-10
+S-74 · 2025-12-10
+  working context: 7 bullets (cites +T-74.1)
+    + Crisis briefing tomorrow morning after a warehouse incident; ends 2025-12-11 (T-74.1)
+  episodic:
+    + E-74 [episode] Crisis briefing prep after a warehouse incident.
+    + O-74.1 [event] Was bumped up to crisis spokesperson and has a first press briefing tomorrow morning.
+    + O-74.2 [behavior] Asked for a concise four-point checklist and a brief neutral line for fault questions.
+  state:
+    + T-74.1 [active] Is preparing for a first crisis press briefing tomorrow morning after being bumped up to spokesperson for a w…
+    ~ P-64.1  basis: O-64.1, O-65.1, O-65.2, O-66.2, O-67.1, O-68.2, O-69.1, O-71.1, O-72.1, O-73.1, O-74.2
+S-75 · 2025-12-11
+  working context: 9 bullets (cites +P-7.1 +T-69.1 +T-75.1 +T-75.2 -T-68.2 -T-73.1 -T-73.2 -T-74.1)
+    + Estate paperwork is due in three weeks (T-68.1)
+    + Financial pressure from a looming braces bill is still active (T-75.1)
+    + Preparing for a first crisis press briefing tomorrow morning after being bumped up to spokesperson for a ware…
+    + Wants a small set of options before choosing (P-7.1)
+    + Wants indirect wording for the roommate boundary talk for now (T-69.1)
+    - Charity app overhaul is stressing them out and they want straight step-by-step support right now; daily 2 pm …
+    - Crisis briefing tomorrow morning after a warehouse incident; ends 2025-12-11 (T-74.1)
+    - Estate paperwork is due in three weeks, and a braces bill is looming (T-68.1, T-68.2)
+  episodic:
+    + E-75 [episode] Collaborative mystery-planning for a 1920s speakeasy murder party.
+    + O-75.1 [behavior] Wants tidy bullet beats with slow-drip clues, bone-dry jokes, and no bonkers twists.
+    + O-75.2 [behavior] Wants a small set of numbered options when choosing the big reveal.
+  state:
+    + T-75.1 [active] Is still feeling financial pressure from a looming braces bill.
+    + T-75.2 [active] Is still preparing for a first crisis press briefing tomorrow morning after being bumped up to spokesperson f…
+    ~ P-7.1  basis: O-7.4, O-9.2, O-18.3, O-20.3, O-75.2 confirmed: 2025-12-11
+    ~ P-64.1  basis: O-64.1, O-65.1, O-65.2, O-66.2, O-67.1, O-68.2, O-69.1, O-71.1, O-72.1, O-73.1, O-74.2, O-75.1 confirmed: 2025-12-11
+    ~ T-68.2 active -> superseded superseded_by: T-75.1
+    ~ T-74.1 active -> superseded superseded_by: T-75.2
+S-76 · 2025-12-11
+  working context: 9 bullets (cites +P-5.1)
+    + Wants numbered checklists and bullet-point summaries in baby steps, capped at five items; examples help (P-64…
+    - Wants numbered checklists and bullet-point summaries in baby steps, capped at five items (P-64.1)
+  episodic:
+    + E-76 [episode] Planning a 1920s speakeasy murder-mystery night with a Preston North End touch.
+    + O-76.1 [behavior] Wants bullet beats, drip-fed clues, dry jokes, one final twist, and a few Preston nods.
+    + O-76.2 [stated] Examples help and step-by-step walkthroughs make scene planning easier.
+  state:
+    ~ P-5.1  basis: O-2.2, O-4.1, O-5.3, O-6.3, O-20.2, O-24.3, O-31.4, O-41.1, O-45.1, O-53.2, O-63.7, O-76.2 confirmed: 2025-12-11
+    ~ P-64.1  basis: O-64.1, O-65.1, O-65.2, O-66.2, O-67.1, O-68.2, O-69.1, O-71.1, O-72.1, O-73.1, O-74.2, O-75.1, O-76.2
+S-77 · 2025-12-11
+  working context: 9 bullets
+    + Wants a casual, playful tone with football banter, little cheese, dry humour, and no emojis (P-71.1)
+    - Wants a casual, playful tone with football banter, little cheese, and no emojis (P-71.1)
+  episodic:
+    + E-77 [episode] Collaborative murder-mystery brainstorming for a pub-night speakeasy whodunnit.
+    + O-77.1 [stated] Wants bullet lists kept.
+    + O-77.2 [stated] Wants the humour dry, with no cheesy gags.
+  state:
+    ~ P-64.1  basis: O-64.1, O-65.1, O-65.2, O-66.2, O-67.1, O-68.2, O-69.1, O-71.1, O-72.1, O-73.1, O-74.2, O-75.1, O-76.2, O-77.1
+    ~ P-71.1  basis: O-71.2, O-72.2, O-73.2, O-77.2 confirmed: 2025-12-11
+
+Totals over the run:
+  working_context  added 195  removed 186
+  episodic         added 295  changed 0  moved 0  removed 0
+  state            added 95  changed 229  moved 34  removed 0
+  decisions        added 0  changed 0  moved 0  removed 0

@@ -1,0 +1,123 @@
+Current summary as of 2025-12-11:
+
+- User likes rapid, practical, collaborative brainstorming and prefers bulleted, usable, production-minded advice over long essays.
+- User often asks for concise, tactical fixes, step-by-step plans, and clear structure that is easy to act on in the moment.
+- User strongly prefers replies that are:
+  - short
+  - bullet-led
+  - no fluff
+  - often numbered outlines
+  - sometimes with cheeky football/terrace metaphors
+  - especially when stressed or time-pressed.
+- User has explicitly requested replies under 200 words in some contexts because they are scrolling on their phone.
+- User likes it when the assistant keeps numbered lists because it helps prevent spiralling.
+- User now clearly prefers football metaphors over office lingo; they work best when casual, tight, and non-cringey.
+- User often explicitly asks for “short stuff only” when stressed, and big blocks “fry my brain,” so brevity is especially important.
+- User likes straight, blunt feedback when asking for critique, especially on creative work; they do not want sugar-coating.
+- Updated 2025-11-16: User also likes a drizzle of sarcasm/banter in supportive coaching, as long as it stays warm and grounding.
+- Updated 2025-11-20: User likes calm, no-therapy-jargon support for homesickness and overwhelm; “real talk,” not cheerleading.
+- Updated 2025-11-24: User is now in Tokyo, having relocated to head a new Asia-Pacific logistics hub. Logistics/supply-chain work is again a live part of their world and they want lean, practical support for HQ communication.
+  - They asked for and liked a simple weekly status report template for sending back to HQ in the UK:
+    - header with week ending / author / hub
+    - snapshot KPIs
+    - highlights
+    - issues & mitigations
+    - upcoming priorities
+    - support needed
+    - sign-off
+  - They want reports concise but complete, ideally under a page.
+  - They also asked for polite Japanese phrases for opening/closing reports and liked:
+    - “いつもお世話になっております (Itsumo osewa ni natte orimasu)” for opening
+    - “何卒よろしくお願いいたします (Nani tozo yoroshiku onegai itashimasu)” for closing
+- Updated 2025-11-24: User had been in active job-search mode after multiple rejections and wanted hard tactics over pep talk.
+  - They had 25 “thanks but no” emails in about 3 months and were exhausted.
+  - They wanted practical fixes focused on:
+    - CV/ATS first: stronger headline, mirror keywords from ads, quantify bullets, fewer fluffy summaries
+    - reviewing the first six lines of the CV because that’s what recruiters/ATS see
+    - using ad keywords verbatim where possible, e.g. “route optimisation”, “ERP”
+    - aiming for at least three numbers per role on the CV
+    - interviews: tight STAR answers, one-sentence context, two punchy action verbs, then the result number
+    - a 3-line or very short drill to stop rambling under pressure
+    - weekly checkpoints so they don’t drift
+    - a fallback plan if the search drags on
+    - supportive proof/examples that tactics can work
+    - football analogies to keep them fired up
+  - They like scoreboard-style tracking for the job hunt:
+    - apps sent
+    - interviews booked
+    - follow-ups done
+    - skills upgraded
+  - They liked a 2-week sprint approach:
+    - Week 1: revamp CV, send targeted apps, hit one meetup
+    - Week 2: mock interview, follow-ups, start a bite-size data analytics course
+  - They want a Monday-night check-in and liked being pinged Monday mornings.
+  - They especially want hard evidence and comeback stories when morale dips; examples of people landing good roles after lots of knockbacks help.
+  - They like networking framed as “short passes, not a glory shot”; asking for advice, not jobs.
+  - They prefer face-to-face networking if possible and find it less grim than LinkedIn-style outreach.
+  - They respond well to family-update templates that sound like a post-match presser.
+  - They also liked simple salary scripts, including market-based anchors and a light football/pies joke.
+  - They want a calm but blunt review style:
+    - what scored
+    - what needs a transfer window
+- Updated 2025-11-25: User was six days out from their first Championship analytics podcast episode and was feeling strong imposter syndrome.
+  - They wanted empathetic, grounded guidance with no fluff.
+  - They liked a step-by-step breakdown that stayed chill.
+  - They specifically liked:
+    - a “three-play strategy”
+    - tick-box lists after each bit
+    - a quick challenge every time
+    - a mock intro Q&A format
+    - concise, practical episode mapping so they don’t ramble
+    - football-style reassurance grounded in real prep
+  - They were reassured by:
+    - breathing cues
+    - a simple pre-show ritual
+    - a reset method if panic hits mid-record
+    - a tiny on-the-spot follow-up bridge phrase
+  - Helpful specifics they liked:
+    - 4 in / hold 4 / out 6 breathing, or 4-4-8
+    - 90-second tunnel-walk ritual: breathe, mic bump, whisper tagline
+    - mid-record reset: pinch fingers, picture the Town End, smile
+    - mic distance: roughly one closed fist from lips
+    - sign-off lines can be witty but should avoid being too corny
+  - They liked a tough-love but supportive review style:
+    - what scored
+    - what needs a transfer window
+  - They want help handling a co-host dropping an unknown stat by:
+    1. clarifying the stat
+    2. pivoting back to their point
+- Updated 2025-11-25: User responds very well to interactive coaching, not passive advice.
+  - They like a quick challenge every time so they’re not just scrolling.
+  - They like tick-box/checklist prompts after each step.
+  - They like “three-play strategy” / step-by-step framing that calms imposter syndrome.
+  - They like small grounding drills, reset rituals, and practical in-the-moment prompts.
+- Updated 2025-11-26: In a stress crisis (missed courier cutoff for match-day equipment), user wanted ultra-rapid triage in bullet form, a mini checklist, a daft joke, and proactive check-ins because they can spiral if left alone with their thoughts.
+  - They responded best to:
+    - exact next actions
+    - “no waffle” formatting
+    - practical contingency planning
+    - short breathing drills
+    - reassurance framed as “salvageable / back on the front foot”
+  - They also liked a simple progress meter check-in when stressed.
+- Updated 2025-11-26: User wants help drafting short, sincere-but-not-grovelling apology messages in Slack/chat when they’ve snapped at someone.
+  - In a fantasy football dispute, they wanted:
+    - a 4–5 line apology
+    - casual tone, not corporate
+    - a light joke
+    - a brief mention of work stress/courier chaos as context without sounding excusatory
+    - wording that clearly separates the behaviour from their actual opinion of the person
+  - They liked a structure that:
+    - owns the outburst directly
+    - validates the other person’s fairness
+    - keeps the vibe warm and repair-focused
+  - They also like quick mock back-and-forth practice for possible cheeky replies, but only with very short lines so they don’t overthink.
+  - They appreciated advice on timing an apology soon if the other person is active, or waiting until morning if not.
+  - They liked a very short breathing reset before sending messages.
+  - They also enjoy a random football stat as a distraction.
+- Updated 2025-11-28: User had a remote fan-zine deadline crisis and wanted extreme simplicity under pressure.
+  - They asked for baby steps, then wanted every task splatted into bullets first, with zero essays.
+  - They wanted priority triage: what is actually burning, not just a full task dump.
+  - They responded well to a max of five bullets in a list, and they want future lists capped at five when they’re overwhelmed.
+  - They want blockers called out plainly and the next action attached to each blocker.
+- Updated 2025-11-30: User had a panic attack and now strongly prefers real-time grounding support when anxious or spiralling.
+- Updated

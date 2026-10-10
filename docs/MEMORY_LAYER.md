@@ -223,8 +223,6 @@ several items and grades memory directly.
 | Wishes about one project had nowhere to go | Goal progress notes cite the observations they apply |
 | The answering step leaned on the top of `context.md` | `dimension-first` is the default answer strategy (`--answer-strategy default` restores the old step) |
 
-v3.1 has not met a real model yet.
-
 ### Memory judge
 
 A multiple-choice answer is one noisy bit. HorizonBench also records the person's
@@ -258,6 +256,44 @@ So "holds the current value" rewards ending up right, however it got there, and
 "change recorded" is the measure of tracking change. Item 0 is also a weak test of
 change: its pre-change sessions already contain the language the judge credits.
 
+### v3.1 on three items
+
+Contract v3.1 on sample items 0, 5 and 6 (29, 78 and 75 events), against the
+rolling summary and the full history in one call. Model gpt-5.4-mini, $14.79 in all;
+see [`examples/multi_item_v31/`](../examples/multi_item_v31).
+
+| Item (change) | Answer: agent / summary / full history ×3 | Holds the person now: agent / summary | Change recorded |
+|---|---|---|---|
+| 0 (accident → deliberate, data-driven) | B / A / D B B (correct C) | 0.38 / 0.75 | 0 everywhere |
+| 5 (relocation → longer answers) | E / E / E E E (correct D) | 0.0 / 0.0 | 0 everywhere |
+| 6 (advisor role → diplomatic, authoritative) | D / D / D D D (correct A; D is the old-preference trap) | 0.3 / 0.6 | 0 everywhere |
+
+**No method answers any of the three correctly, and two of the items are poor tests:**
+- **Item 0's options are ambiguous.** v3.1 now applies the pros-and-cons statement:
+  its decision-style value reads "likes to decide deliberately… weighing pros and
+  cons", and it appears in `context.md`. The answer is still B, in all 10 replays.
+  B ("investigate his actual methods versus the rumors, then industry standards") is
+  the most evidence-driven option, and the person became evidence-driven too.
+- **Item 5's label contradicts its conversations.** The ground truth says the person
+  came to want longer answers. In the 21 sessions after the change they ask for
+  "shorter replies", "bullet beats", "can't do chunky paragraphs", and the final turn
+  is "strip it to pure bullets." Every method picks "bullet points only"; the labeled
+  answer is also the shortest option. A faithful memory must score 0 here.
+- **Item 6 is a valid test, and the summary beats the agent.** After the change the
+  person asks, task after task, for formal, measured, persuasive, diplomatic writing.
+  The agent recorded this about 15 times, but v3.1 says a wish about one task belongs
+  in that goal's notes, so each went under its own goal and nothing looked across
+  them. Its tone value stayed "casual, humorous", from before the change, because
+  the person's own chat register stayed casual. The summary generalized to "measured,
+  persuasive, authoritative".
+
+**No memory, ours or the summary's, recorded a change on any of the 10 changed
+attributes.**
+
+**Cost and time.** The agent costs $0.046–0.068 per event (rising as memory grows),
+4–6 times the rolling summary, and took about 65 minutes for a 75-event item. Item 6
+ended with dozens of `active` goals, many past their due date.
+
 ## Known gaps
 
 - **The archive itself has no rollover yet** (200,000 chars). That's enough for
@@ -267,8 +303,14 @@ change: its pre-change sessions already contain the language the judge credits.
 - **The judge is one model grading against a coarse taxonomy.** Its grades are
   consistent, but they haven't been checked against a person's reading, and it
   can't tell a value tracked through a change from one that was there all along.
-- **Real-model data is thin.** It covers 3½ events under v1 and one item each
-  under v2 and v3, all the same item. v3.1 has not met a real model yet.
+- **Real-model data is thin, and the items are noisy.** Three items under v3.1, one
+  item under v2 and v3. Of the three, item 5's label contradicts its own
+  conversations and item 0's options are ambiguous, so items need vetting before
+  their answers count.
+- **Repeated wishes across tasks never become preferences** (item 6), and the seed
+  `tone` dimension mixes how to talk to the person with how the work they ask for
+  should sound.
+- **Goals don't close.** Without review dates, past-due goals stay `active`.
 - **Open choices left for later:**
   - per-event review of open hypotheses (v2's accident hypothesis sat untouched for
     14 events);

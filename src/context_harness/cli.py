@@ -206,7 +206,9 @@ def cmd_judge_memory(args: argparse.Namespace) -> int:
         if not runs:
             break
         total += sum(r["estimated_cost_usd"] or 0 for r in runs)
-        out = Path(args.out) / f"{source.name}.json" if args.out else source / "memory_judgement.json"
+        # runs/<run>/items/<item> is named by run and item, so two runs of one item don't collide
+        name = f"{source.parent.parent.name}__{source.name}" if source.parent.name == "items" else source.name
+        out = Path(args.out) / f"{name}.json" if args.out else source / "memory_judgement.json"
         out.parent.mkdir(parents=True, exist_ok=True)
         j = combine_repeats(runs)
         write_judgement(out, j)

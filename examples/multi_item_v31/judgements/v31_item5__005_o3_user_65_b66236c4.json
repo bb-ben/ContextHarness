@@ -1,0 +1,264 @@
+{
+  "item_id": "Jason Taylor_event79_20260326_turn3_content_length_preferences_170_counterfactuals.json",
+  "judge_model": "gpt-5.4-mini",
+  "memory_chars": 20482,
+  "attributes": [
+    {
+      "attribute": "preferred_max_words",
+      "current": "600",
+      "original": "250",
+      "changed": true,
+      "memory_value": "short, compact answers",
+      "current_match": "contradicts",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "P-2.2: \"Wants tight, compact answers rather than long deep dives.\"; P-64.1: \"Wants numbered checklists and bullet-point summaries in baby steps, capped at five items.\"",
+      "votes": [
+        "contradicts",
+        "contradicts",
+        "contradicts"
+      ]
+    },
+    {
+      "attribute": "ideal_sentence_count",
+      "current": "15",
+      "original": "8",
+      "changed": true,
+      "memory_value": "nothing",
+      "current_match": "absent",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "No current preference mentions sentence count; current format prefs are about bullets/checklists (P-2.2, P-64.1).",
+      "votes": [
+        "absent",
+        "absent",
+        "absent"
+      ]
+    },
+    {
+      "attribute": "tolerance_for_long_form",
+      "current": "0.8",
+      "original": "0.4",
+      "changed": true,
+      "memory_value": "low tolerance; compact answers",
+      "current_match": "contradicts",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "P-2.2: \"Wants tight, compact answers rather than long deep dives.\"; P-64.1: \"... capped at five items.\"",
+      "votes": [
+        "contradicts",
+        "contradicts",
+        "contradicts"
+      ]
+    },
+    {
+      "attribute": "summary_mandatory",
+      "current": "False",
+      "original": "True",
+      "changed": true,
+      "memory_value": "wants bullet-point summaries",
+      "current_match": "contradicts",
+      "original_still_current": true,
+      "change_recorded": false,
+      "evidence": "P-64.1: \"Wants numbered checklists and bullet-point summaries in baby steps, capped at five items.\"; P-44.1: \"Wants numbered checklists and bullet-point summaries.\"",
+      "votes": [
+        "contradicts",
+        "contradicts",
+        "contradicts"
+      ]
+    }
+  ],
+  "current_fidelity": 0.0,
+  "changed_fidelity": 0.0,
+  "stale": 1,
+  "changes_recorded": 0,
+  "n_attributes": 4,
+  "n_changed": 4,
+  "ungraded": [],
+  "repeats": 3,
+  "agreement": 1.0,
+  "current_fidelity_range": [
+    0.0,
+    0.0
+  ],
+  "estimated_cost_usd": 0.17138,
+  "runs": [
+    {
+      "item_id": "Jason Taylor_event79_20260326_turn3_content_length_preferences_170_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 20482,
+      "attributes": [
+        {
+          "attribute": "preferred_max_words",
+          "current": "600",
+          "original": "250",
+          "changed": true,
+          "memory_value": "short, compact answers",
+          "current_match": "contradicts",
+          "original_still_current": true,
+          "change_recorded": false,
+          "evidence": "P-2.2: \"Wants tight, compact answers rather than long deep dives.\"; P-64.1: \"Wants numbered checklists and bullet-point summaries in baby steps, capped at five items.\""
+        },
+        {
+          "attribute": "ideal_sentence_count",
+          "current": "15",
+          "original": "8",
+          "changed": true,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No current preference mentions sentence count; current format prefs are about bullets/checklists (P-2.2, P-64.1)."
+        },
+        {
+          "attribute": "tolerance_for_long_form",
+          "current": "0.8",
+          "original": "0.4",
+          "changed": true,
+          "memory_value": "low tolerance; compact answers",
+          "current_match": "contradicts",
+          "original_still_current": true,
+          "change_recorded": false,
+          "evidence": "P-2.2: \"Wants tight, compact answers rather than long deep dives.\"; P-64.1: \"... capped at five items.\""
+        },
+        {
+          "attribute": "summary_mandatory",
+          "current": "False",
+          "original": "True",
+          "changed": true,
+          "memory_value": "wants bullet-point summaries",
+          "current_match": "contradicts",
+          "original_still_current": true,
+          "change_recorded": false,
+          "evidence": "P-64.1: \"Wants numbered checklists and bullet-point summaries in baby steps, capped at five items.\"; P-44.1: \"Wants numbered checklists and bullet-point summaries.\""
+        }
+      ],
+      "current_fidelity": 0.0,
+      "changed_fidelity": 0.0,
+      "stale": 3,
+      "changes_recorded": 0,
+      "n_attributes": 4,
+      "n_changed": 4,
+      "ungraded": [],
+      "estimated_cost_usd": 0.0332
+    },
+    {
+      "item_id": "Jason Taylor_event79_20260326_turn3_content_length_preferences_170_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 20482,
+      "attributes": [
+        {
+          "attribute": "preferred_max_words",
+          "current": "600",
+          "original": "250",
+          "changed": true,
+          "memory_value": "tight, compact answers; baby steps, capped at five items",
+          "current_match": "contradicts",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-2.2: 'Wants tight, compact answers rather than long deep dives'; P-64.1: 'in baby steps, capped at five items'"
+        },
+        {
+          "attribute": "ideal_sentence_count",
+          "current": "15",
+          "original": "8",
+          "changed": true,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No current entry mentions sentence count; P-64.1 is about items and bullet points, not sentences"
+        },
+        {
+          "attribute": "tolerance_for_long_form",
+          "current": "0.8",
+          "original": "0.4",
+          "changed": true,
+          "memory_value": "prefers compact answers; low tolerance for long deep dives",
+          "current_match": "contradicts",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-2.2: 'Wants tight, compact answers rather than long deep dives'; P-64.1: 'in baby steps, capped at five items'"
+        },
+        {
+          "attribute": "summary_mandatory",
+          "current": "False",
+          "original": "True",
+          "changed": true,
+          "memory_value": "wants bullet-point summaries",
+          "current_match": "contradicts",
+          "original_still_current": true,
+          "change_recorded": false,
+          "evidence": "P-64.1: 'Wants numbered checklists and bullet-point summaries in baby steps, capped at five items'"
+        }
+      ],
+      "current_fidelity": 0.0,
+      "changed_fidelity": 0.0,
+      "stale": 1,
+      "changes_recorded": 0,
+      "n_attributes": 4,
+      "n_changed": 4,
+      "ungraded": [],
+      "estimated_cost_usd": 0.1127
+    },
+    {
+      "item_id": "Jason Taylor_event79_20260326_turn3_content_length_preferences_170_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 20482,
+      "attributes": [
+        {
+          "attribute": "preferred_max_words",
+          "current": "600",
+          "original": "250",
+          "changed": true,
+          "memory_value": "wants tight, compact answers rather than long deep dives",
+          "current_match": "contradicts",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-2.2: \"Wants tight, compact answers rather than long deep dives.\"; P-64.1: \"baby steps, capped at five items\""
+        },
+        {
+          "attribute": "ideal_sentence_count",
+          "current": "15",
+          "original": "8",
+          "changed": true,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No current entry mentions sentence count; P-64.1 only says \"numbered checklists and bullet-point summaries in baby steps, capped at five items\""
+        },
+        {
+          "attribute": "tolerance_for_long_form",
+          "current": "0.8",
+          "original": "0.4",
+          "changed": true,
+          "memory_value": "wants tight, compact answers rather than long deep dives",
+          "current_match": "contradicts",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-2.2: \"Wants tight, compact answers rather than long deep dives.\""
+        },
+        {
+          "attribute": "summary_mandatory",
+          "current": "False",
+          "original": "True",
+          "changed": true,
+          "memory_value": "wants bullet-point summaries",
+          "current_match": "contradicts",
+          "original_still_current": true,
+          "change_recorded": false,
+          "evidence": "P-64.1: \"Wants numbered checklists and bullet-point summaries in baby steps, capped at five items\"; P-44.1 likewise wants \"bullet-point summaries\""
+        }
+      ],
+      "current_fidelity": 0.0,
+      "changed_fidelity": 0.0,
+      "stale": 1,
+      "changes_recorded": 0,
+      "n_attributes": 4,
+      "n_changed": 4,
+      "ungraded": [],
+      "estimated_cost_usd": 0.02548
+    }
+  ]
+}

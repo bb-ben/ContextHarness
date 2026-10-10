@@ -1,0 +1,305 @@
+{
+  "item_id": "Jairo Restrepo_event77_20260326_turn1_communication_medium_preferences_142_counterfactuals.json",
+  "judge_model": "gpt-5.4-mini",
+  "memory_chars": 27806,
+  "attributes": [
+    {
+      "attribute": "preferred_response_format",
+      "current": "executive_summary_with_strategic_tradeoffs",
+      "original": "structured_numbered_steps",
+      "changed": true,
+      "memory_value": "numbered steps / checklists / executive summaries",
+      "current_match": "partial",
+      "original_still_current": true,
+      "change_recorded": false,
+      "evidence": "P-40.1 current: \"Wants numbered steps, checklists, executive summaries, and speech-ready talking points...\"; P-2.1 superseded: similar help-format preference",
+      "votes": [
+        "partial",
+        "partial",
+        "contradicts"
+      ]
+    },
+    {
+      "attribute": "emotional_tone",
+      "current": "diplomatic_and_authoritative",
+      "original": "direct_pragmatic",
+      "changed": true,
+      "memory_value": "casual, real, humorous; blunt/gritty",
+      "current_match": "contradicts",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "P-3.1 current: \"Wants a casual, real, humorous tone.\"; P-44.1 current: \"Wants blunt, gritty strategic help instead of polite reassurance.\"",
+      "votes": [
+        "contradicts",
+        "contradicts",
+        "contradicts"
+      ]
+    },
+    {
+      "attribute": "explanation_approach",
+      "current": "impact_assessment_first",
+      "original": "principles_first_then_examples",
+      "changed": true,
+      "memory_value": "Bosa-local analogies / narrative examples",
+      "current_match": "absent",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "P-59.1 current: \"Prefers Bosa-local analogies, sayings, and food-talk examples that land fast.\"; P-21.1 superseded: analogies/narrative examples (not current)",
+      "votes": [
+        "absent",
+        "absent",
+        "contradicts"
+      ]
+    },
+    {
+      "attribute": "example_preference",
+      "current": "real_world_analogies",
+      "changed": false,
+      "memory_value": "Bosa-local analogies, sayings, and food-talk examples",
+      "current_match": "matches",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "P-59.1 current: \"Prefers Bosa-local analogies, sayings, and food-talk examples that land fast.\"",
+      "votes": [
+        "matches",
+        "matches",
+        "matches"
+      ]
+    },
+    {
+      "attribute": "boundary_setting_voice",
+      "current": "value_based_reasoning",
+      "changed": false,
+      "memory_value": "nothing",
+      "current_match": "absent",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "No current entry in preferences/profile/context states a boundary-setting voice; closest entries are tone/help-format, not boundary-setting",
+      "votes": [
+        "absent",
+        "absent",
+        "absent"
+      ]
+    }
+  ],
+  "current_fidelity": 0.3,
+  "changed_fidelity": 0.167,
+  "stale": 1,
+  "changes_recorded": 0,
+  "n_attributes": 5,
+  "n_changed": 3,
+  "ungraded": [],
+  "repeats": 3,
+  "agreement": 0.867,
+  "current_fidelity_range": [
+    0.2,
+    0.3
+  ],
+  "estimated_cost_usd": 0.1056,
+  "runs": [
+    {
+      "item_id": "Jairo Restrepo_event77_20260326_turn1_communication_medium_preferences_142_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 27806,
+      "attributes": [
+        {
+          "attribute": "preferred_response_format",
+          "current": "executive_summary_with_strategic_tradeoffs",
+          "original": "structured_numbered_steps",
+          "changed": true,
+          "memory_value": "numbered steps / checklists / executive summaries",
+          "current_match": "partial",
+          "original_still_current": true,
+          "change_recorded": false,
+          "evidence": "P-40.1 current: \"Wants numbered steps, checklists, executive summaries, and speech-ready talking points...\"; P-2.1 superseded: similar help-format preference"
+        },
+        {
+          "attribute": "emotional_tone",
+          "current": "diplomatic_and_authoritative",
+          "original": "direct_pragmatic",
+          "changed": true,
+          "memory_value": "casual, real, humorous; blunt/gritty",
+          "current_match": "contradicts",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-3.1 current: \"Wants a casual, real, humorous tone.\"; P-44.1 current: \"Wants blunt, gritty strategic help instead of polite reassurance.\""
+        },
+        {
+          "attribute": "explanation_approach",
+          "current": "impact_assessment_first",
+          "original": "principles_first_then_examples",
+          "changed": true,
+          "memory_value": "Bosa-local analogies / narrative examples",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-59.1 current: \"Prefers Bosa-local analogies, sayings, and food-talk examples that land fast.\"; P-21.1 superseded: analogies/narrative examples (not current)"
+        },
+        {
+          "attribute": "example_preference",
+          "current": "real_world_analogies",
+          "changed": false,
+          "memory_value": "Bosa-local analogies, sayings, and food-talk examples",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-59.1 current: \"Prefers Bosa-local analogies, sayings, and food-talk examples that land fast.\""
+        },
+        {
+          "attribute": "boundary_setting_voice",
+          "current": "value_based_reasoning",
+          "changed": false,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No current entry in preferences/profile/context states a boundary-setting voice; closest entries are tone/help-format, not boundary-setting"
+        }
+      ],
+      "current_fidelity": 0.3,
+      "changed_fidelity": 0.167,
+      "stale": 1,
+      "changes_recorded": 0,
+      "n_attributes": 5,
+      "n_changed": 3,
+      "ungraded": [],
+      "estimated_cost_usd": 0.02311
+    },
+    {
+      "item_id": "Jairo Restrepo_event77_20260326_turn1_communication_medium_preferences_142_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 27806,
+      "attributes": [
+        {
+          "attribute": "preferred_response_format",
+          "current": "executive_summary_with_strategic_tradeoffs",
+          "original": "structured_numbered_steps",
+          "changed": true,
+          "memory_value": "numbered steps/checklists with executive summaries and talking points",
+          "current_match": "partial",
+          "original_still_current": true,
+          "change_recorded": false,
+          "evidence": "P-40.1 current: 'Wants numbered steps, checklists, executive summaries, and speech-ready talking points they can skim quickly on a phone.'; P-2.1 \u2192 P-40.1 same wording"
+        },
+        {
+          "attribute": "emotional_tone",
+          "current": "diplomatic_and_authoritative",
+          "original": "direct_pragmatic",
+          "changed": true,
+          "memory_value": "casual, real, humorous",
+          "current_match": "contradicts",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-3.1 current: 'Wants a casual, real, humorous tone.'"
+        },
+        {
+          "attribute": "explanation_approach",
+          "current": "impact_assessment_first",
+          "original": "principles_first_then_examples",
+          "changed": true,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-59.1 current is about Bosa-local analogies/examples ('Prefers Bosa-local analogies, sayings, and food-talk examples that land fast.'); no current belief about impact-first ordering"
+        },
+        {
+          "attribute": "example_preference",
+          "current": "real_world_analogies",
+          "changed": false,
+          "memory_value": "Bosa-local analogies, sayings, and food-talk examples",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-59.1 current: 'Prefers Bosa-local analogies, sayings, and food-talk examples that land fast.'"
+        },
+        {
+          "attribute": "boundary_setting_voice",
+          "current": "value_based_reasoning",
+          "changed": false,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No current entry on boundary-setting voice"
+        }
+      ],
+      "current_fidelity": 0.3,
+      "changed_fidelity": 0.167,
+      "stale": 1,
+      "changes_recorded": 0,
+      "n_attributes": 5,
+      "n_changed": 3,
+      "ungraded": [],
+      "estimated_cost_usd": 0.02996
+    },
+    {
+      "item_id": "Jairo Restrepo_event77_20260326_turn1_communication_medium_preferences_142_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 27806,
+      "attributes": [
+        {
+          "attribute": "preferred_response_format",
+          "current": "executive_summary_with_strategic_tradeoffs",
+          "original": "structured_numbered_steps",
+          "changed": true,
+          "memory_value": "numbered steps, checklists, executive summaries",
+          "current_match": "contradicts",
+          "original_still_current": true,
+          "change_recorded": false,
+          "evidence": "P-40.1: \"Wants numbered steps, checklists, executive summaries, and speech-ready talking points they can skim quickly on a phone.\""
+        },
+        {
+          "attribute": "emotional_tone",
+          "current": "diplomatic_and_authoritative",
+          "original": "direct_pragmatic",
+          "changed": true,
+          "memory_value": "casual, real, humorous; blunt, gritty",
+          "current_match": "contradicts",
+          "original_still_current": true,
+          "change_recorded": false,
+          "evidence": "P-3.1: \"Wants a casual, real, humorous tone.\"; P-44.1: \"Wants blunt, gritty strategic help instead of polite reassurance.\""
+        },
+        {
+          "attribute": "explanation_approach",
+          "current": "impact_assessment_first",
+          "original": "principles_first_then_examples",
+          "changed": true,
+          "memory_value": "Bosa-local analogies, sayings, and food-talk examples",
+          "current_match": "contradicts",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-59.1: \"Prefers Bosa-local analogies, sayings, and food-talk examples that land fast.\""
+        },
+        {
+          "attribute": "example_preference",
+          "current": "real_world_analogies",
+          "changed": false,
+          "memory_value": "Bosa-local analogies, sayings, and food-talk examples",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-59.1: \"Prefers Bosa-local analogies, sayings, and food-talk examples that land fast.\""
+        },
+        {
+          "attribute": "boundary_setting_voice",
+          "current": "value_based_reasoning",
+          "changed": false,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No current entry in the memory states a boundary-setting voice preference."
+        }
+      ],
+      "current_fidelity": 0.2,
+      "changed_fidelity": 0.0,
+      "stale": 2,
+      "changes_recorded": 0,
+      "n_attributes": 5,
+      "n_changed": 3,
+      "ungraded": [],
+      "estimated_cost_usd": 0.05253
+    }
+  ]
+}

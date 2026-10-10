@@ -1,0 +1,864 @@
+{
+  "item_index": 5,
+  "item_id": "Jason Taylor_event79_20260326_turn3_content_length_preferences_170_counterfactuals.json",
+  "item_key": "b66236c407bb",
+  "method": "summary",
+  "model": "gpt-5.4-mini",
+  "predicted_letter": "E",
+  "answer_via": "tool",
+  "correct": false,
+  "invalid": false,
+  "chose_distractor": false,
+  "predicted_value": "0 (bullet-points only)",
+  "error": null,
+  "gold": {
+    "correct_letter": "D",
+    "distractor_letter": "B",
+    "has_evolved": true,
+    "generator": "o3",
+    "user_id": "o3/user_65",
+    "preference_domain": "content_length_preferences"
+  },
+  "ordering": {
+    "policy": "chronological",
+    "n_history_sessions_in_text": 78,
+    "n_replayed": 78,
+    "text_order_monotonic": true,
+    "n_moved": 0,
+    "dropped_after_probe": [],
+    "truncated_to_last": null
+  },
+  "answer_details": {
+    "stop": "stop_condition",
+    "steps": 1
+  },
+  "reference_heuristics": {
+    "shortest_option": "D",
+    "shortest_option_correct": true
+  },
+  "latency_s": 911.236,
+  "stats": {
+    "model_calls": 79,
+    "usage": {
+      "input_tokens": 239534,
+      "output_tokens": 202435,
+      "cache_read_input_tokens": 17920,
+      "cache_creation_input_tokens": 0
+    },
+    "usage_by_phase": {
+      "summary_update": {
+        "input_tokens": 237034,
+        "output_tokens": 202346,
+        "cache_read_input_tokens": 17920,
+        "cache_creation_input_tokens": 0
+      },
+      "answer": {
+        "input_tokens": 2500,
+        "output_tokens": 89,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      }
+    },
+    "calls_by_phase": {
+      "summary_update": 78,
+      "answer": 1
+    },
+    "served_by": {
+      "gpt-5.4-mini-2026-03-17": 79
+    },
+    "tool_calls": 1,
+    "tool_errors": 0,
+    "file_ops": 0,
+    "file_reads": 0,
+    "refusals": 0
+  },
+  "estimated_cost_usd": 1.091952,
+  "memory_chars": {
+    "summary.md": 8000
+  },
+  "memory": null,
+  "evolution_diagnostics": null,
+  "evidence_chain": null,
+  "sessions": [
+    {
+      "index": 0,
+      "event_id": "S-0",
+      "date": "2025-09-26T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2468,
+      "output_tokens": 1367,
+      "latency_s": 9.668
+    },
+    {
+      "index": 1,
+      "event_id": "S-1",
+      "date": "2025-09-27T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2812,
+      "output_tokens": 1617,
+      "latency_s": 9.885
+    },
+    {
+      "index": 2,
+      "event_id": "S-2",
+      "date": "2025-09-29T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3873,
+      "output_tokens": 2153,
+      "latency_s": 11.967
+    },
+    {
+      "index": 3,
+      "event_id": "S-3",
+      "date": "2025-09-29T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2973,
+      "output_tokens": 2176,
+      "latency_s": 11.409
+    },
+    {
+      "index": 4,
+      "event_id": "S-4",
+      "date": "2025-10-02T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3243,
+      "output_tokens": 2912,
+      "latency_s": 16.338
+    },
+    {
+      "index": 5,
+      "event_id": "S-5",
+      "date": "2025-10-03T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3073,
+      "output_tokens": 2768,
+      "latency_s": 16.089
+    },
+    {
+      "index": 6,
+      "event_id": "S-6",
+      "date": "2025-10-05T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3358,
+      "output_tokens": 2677,
+      "latency_s": 13.911
+    },
+    {
+      "index": 7,
+      "event_id": "S-7",
+      "date": "2025-10-06T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3343,
+      "output_tokens": 2415,
+      "latency_s": 12.826
+    },
+    {
+      "index": 8,
+      "event_id": "S-8",
+      "date": "2025-10-07T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3669,
+      "output_tokens": 2543,
+      "latency_s": 13.629
+    },
+    {
+      "index": 9,
+      "event_id": "S-9",
+      "date": "2025-10-10T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3829,
+      "output_tokens": 2779,
+      "latency_s": 14.758
+    },
+    {
+      "index": 10,
+      "event_id": "S-10",
+      "date": "2025-10-11T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3408,
+      "output_tokens": 2720,
+      "latency_s": 13.695
+    },
+    {
+      "index": 11,
+      "event_id": "S-11",
+      "date": "2025-10-11T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3492,
+      "output_tokens": 3376,
+      "latency_s": 18.113
+    },
+    {
+      "index": 12,
+      "event_id": "S-12",
+      "date": "2025-10-11T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3324,
+      "output_tokens": 2665,
+      "latency_s": 13.721
+    },
+    {
+      "index": 13,
+      "event_id": "S-13",
+      "date": "2025-10-12T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3792,
+      "output_tokens": 2779,
+      "latency_s": 14.954
+    },
+    {
+      "index": 14,
+      "event_id": "S-14",
+      "date": "2025-10-12T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2451,
+      "output_tokens": 2411,
+      "latency_s": 10.935
+    },
+    {
+      "index": 15,
+      "event_id": "S-15",
+      "date": "2025-10-13T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3466,
+      "output_tokens": 2455,
+      "latency_s": 11.38
+    },
+    {
+      "index": 16,
+      "event_id": "S-16",
+      "date": "2025-10-13T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3398,
+      "output_tokens": 2352,
+      "latency_s": 11.364
+    },
+    {
+      "index": 17,
+      "event_id": "S-17",
+      "date": "2025-10-14T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3584,
+      "output_tokens": 3101,
+      "latency_s": 16.376
+    },
+    {
+      "index": 18,
+      "event_id": "S-18",
+      "date": "2025-10-16T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3523,
+      "output_tokens": 2267,
+      "latency_s": 11.337
+    },
+    {
+      "index": 19,
+      "event_id": "S-19",
+      "date": "2025-10-20T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2411,
+      "output_tokens": 2179,
+      "latency_s": 10.31
+    },
+    {
+      "index": 20,
+      "event_id": "S-20",
+      "date": "2025-10-22T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3556,
+      "output_tokens": 2730,
+      "latency_s": 12.965
+    },
+    {
+      "index": 21,
+      "event_id": "S-21",
+      "date": "2025-10-25T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2719,
+      "output_tokens": 2432,
+      "latency_s": 11.715
+    },
+    {
+      "index": 22,
+      "event_id": "S-22",
+      "date": "2025-10-25T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2961,
+      "output_tokens": 2813,
+      "latency_s": 15.015
+    },
+    {
+      "index": 23,
+      "event_id": "S-23",
+      "date": "2025-10-27T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3190,
+      "output_tokens": 2879,
+      "latency_s": 15.029
+    },
+    {
+      "index": 24,
+      "event_id": "S-24",
+      "date": "2025-10-28T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2789,
+      "output_tokens": 2937,
+      "latency_s": 16.126
+    },
+    {
+      "index": 25,
+      "event_id": "S-25",
+      "date": "2025-10-29T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3136,
+      "output_tokens": 2586,
+      "latency_s": 12.75
+    },
+    {
+      "index": 26,
+      "event_id": "S-26",
+      "date": "2025-10-29T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2394,
+      "output_tokens": 2500,
+      "latency_s": 12.313
+    },
+    {
+      "index": 27,
+      "event_id": "S-27",
+      "date": "2025-10-30T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3224,
+      "output_tokens": 2576,
+      "latency_s": 12.976
+    },
+    {
+      "index": 28,
+      "event_id": "S-28",
+      "date": "2025-10-30T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2917,
+      "output_tokens": 2569,
+      "latency_s": 12.279
+    },
+    {
+      "index": 29,
+      "event_id": "S-29",
+      "date": "2025-10-31T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3296,
+      "output_tokens": 2643,
+      "latency_s": 12.416
+    },
+    {
+      "index": 30,
+      "event_id": "S-30",
+      "date": "2025-11-02T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2810,
+      "output_tokens": 2878,
+      "latency_s": 14.104
+    },
+    {
+      "index": 31,
+      "event_id": "S-31",
+      "date": "2025-11-03T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3347,
+      "output_tokens": 2680,
+      "latency_s": 14.868
+    },
+    {
+      "index": 32,
+      "event_id": "S-32",
+      "date": "2025-11-03T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2984,
+      "output_tokens": 2552,
+      "latency_s": 12.754
+    },
+    {
+      "index": 33,
+      "event_id": "S-33",
+      "date": "2025-11-03T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2519,
+      "output_tokens": 2149,
+      "latency_s": 10.643
+    },
+    {
+      "index": 34,
+      "event_id": "S-34",
+      "date": "2025-11-03T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2405,
+      "output_tokens": 2456,
+      "latency_s": 11.739
+    },
+    {
+      "index": 35,
+      "event_id": "S-35",
+      "date": "2025-11-04T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3173,
+      "output_tokens": 2896,
+      "latency_s": 14.506
+    },
+    {
+      "index": 36,
+      "event_id": "S-36",
+      "date": "2025-11-04T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3728,
+      "output_tokens": 2588,
+      "latency_s": 13.165
+    },
+    {
+      "index": 37,
+      "event_id": "S-37",
+      "date": "2025-11-04T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4352,
+      "output_tokens": 2838,
+      "latency_s": 14.085
+    },
+    {
+      "index": 38,
+      "event_id": "S-38",
+      "date": "2025-11-04T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2361,
+      "output_tokens": 2291,
+      "latency_s": 12.181
+    },
+    {
+      "index": 39,
+      "event_id": "S-39",
+      "date": "2025-11-04T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3559,
+      "output_tokens": 2453,
+      "latency_s": 12.166
+    },
+    {
+      "index": 40,
+      "event_id": "S-40",
+      "date": "2025-11-04T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2500,
+      "output_tokens": 2209,
+      "latency_s": 10.232
+    },
+    {
+      "index": 41,
+      "event_id": "S-41",
+      "date": "2025-11-05T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3242,
+      "output_tokens": 2710,
+      "latency_s": 12.929
+    },
+    {
+      "index": 42,
+      "event_id": "S-42",
+      "date": "2025-11-06T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2854,
+      "output_tokens": 2290,
+      "latency_s": 11.411
+    },
+    {
+      "index": 43,
+      "event_id": "S-43",
+      "date": "2025-11-07T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4069,
+      "output_tokens": 2899,
+      "latency_s": 14.722
+    },
+    {
+      "index": 44,
+      "event_id": "S-44",
+      "date": "2025-11-08T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3682,
+      "output_tokens": 2497,
+      "latency_s": 12.38
+    },
+    {
+      "index": 45,
+      "event_id": "S-45",
+      "date": "2025-11-10T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4113,
+      "output_tokens": 2773,
+      "latency_s": 21.956
+    },
+    {
+      "index": 46,
+      "event_id": "S-46",
+      "date": "2025-11-11T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3400,
+      "output_tokens": 2612,
+      "latency_s": 12.463
+    },
+    {
+      "index": 47,
+      "event_id": "S-47",
+      "date": "2025-11-13T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3638,
+      "output_tokens": 3210,
+      "latency_s": 13.648
+    },
+    {
+      "index": 48,
+      "event_id": "S-48",
+      "date": "2025-11-13T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3562,
+      "output_tokens": 2599,
+      "latency_s": 10.636
+    },
+    {
+      "index": 49,
+      "event_id": "S-49",
+      "date": "2025-11-14T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3537,
+      "output_tokens": 2453,
+      "latency_s": 9.081
+    },
+    {
+      "index": 50,
+      "event_id": "S-50",
+      "date": "2025-11-16T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3346,
+      "output_tokens": 2719,
+      "latency_s": 9.521
+    },
+    {
+      "index": 51,
+      "event_id": "S-51",
+      "date": "2025-11-17T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4743,
+      "output_tokens": 3227,
+      "latency_s": 11.262
+    },
+    {
+      "index": 52,
+      "event_id": "S-52",
+      "date": "2025-11-18T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2442,
+      "output_tokens": 2702,
+      "latency_s": 8.562
+    },
+    {
+      "index": 53,
+      "event_id": "S-53",
+      "date": "2025-11-19T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3361,
+      "output_tokens": 3258,
+      "latency_s": 11.545
+    },
+    {
+      "index": 54,
+      "event_id": "S-54",
+      "date": "2025-11-20T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2414,
+      "output_tokens": 2631,
+      "latency_s": 8.556
+    },
+    {
+      "index": 55,
+      "event_id": "S-55",
+      "date": "2025-11-20T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3303,
+      "output_tokens": 3105,
+      "latency_s": 11.347
+    },
+    {
+      "index": 56,
+      "event_id": "S-56",
+      "date": "2025-11-23T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3468,
+      "output_tokens": 2636,
+      "latency_s": 8.965
+    },
+    {
+      "index": 57,
+      "event_id": "S-57",
+      "date": "2025-11-24T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3064,
+      "output_tokens": 3417,
+      "latency_s": 12.334
+    },
+    {
+      "index": 58,
+      "event_id": "S-58",
+      "date": "2025-11-24T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4109,
+      "output_tokens": 3128,
+      "latency_s": 10.877
+    },
+    {
+      "index": 59,
+      "event_id": "S-59",
+      "date": "2025-11-24T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2377,
+      "output_tokens": 2425,
+      "latency_s": 8.202
+    },
+    {
+      "index": 60,
+      "event_id": "S-60",
+      "date": "2025-11-25T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3788,
+      "output_tokens": 3399,
+      "latency_s": 11.844
+    },
+    {
+      "index": 61,
+      "event_id": "S-61",
+      "date": "2025-11-26T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3008,
+      "output_tokens": 2352,
+      "latency_s": 7.742
+    },
+    {
+      "index": 62,
+      "event_id": "S-62",
+      "date": "2025-11-26T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3325,
+      "output_tokens": 2369,
+      "latency_s": 7.673
+    },
+    {
+      "index": 63,
+      "event_id": "S-63",
+      "date": "2025-11-27T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3546,
+      "output_tokens": 2395,
+      "latency_s": 7.859
+    },
+    {
+      "index": 64,
+      "event_id": "S-64",
+      "date": "2025-11-28T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2979,
+      "output_tokens": 2160,
+      "latency_s": 6.857
+    },
+    {
+      "index": 65,
+      "event_id": "S-65",
+      "date": "2025-11-29T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3269,
+      "output_tokens": 2486,
+      "latency_s": 9.079
+    },
+    {
+      "index": 66,
+      "event_id": "S-66",
+      "date": "2025-11-30T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3746,
+      "output_tokens": 2702,
+      "latency_s": 9.36
+    },
+    {
+      "index": 67,
+      "event_id": "S-67",
+      "date": "2025-11-30T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3276,
+      "output_tokens": 2369,
+      "latency_s": 8.314
+    },
+    {
+      "index": 68,
+      "event_id": "S-68",
+      "date": "2025-12-04T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3579,
+      "output_tokens": 2435,
+      "latency_s": 8.463
+    },
+    {
+      "index": 69,
+      "event_id": "S-69",
+      "date": "2025-12-07T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4182,
+      "output_tokens": 2671,
+      "latency_s": 9.736
+    },
+    {
+      "index": 70,
+      "event_id": "S-70",
+      "date": "2025-12-07T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3603,
+      "output_tokens": 2465,
+      "latency_s": 8.455
+    },
+    {
+      "index": 71,
+      "event_id": "S-71",
+      "date": "2025-12-09T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3525,
+      "output_tokens": 2519,
+      "latency_s": 8.91
+    },
+    {
+      "index": 72,
+      "event_id": "S-72",
+      "date": "2025-12-09T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2932,
+      "output_tokens": 2417,
+      "latency_s": 8.202
+    },
+    {
+      "index": 73,
+      "event_id": "S-73",
+      "date": "2025-12-10T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3841,
+      "output_tokens": 2688,
+      "latency_s": 10.005
+    },
+    {
+      "index": 74,
+      "event_id": "S-74",
+      "date": "2025-12-10T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2225,
+      "output_tokens": 2235,
+      "latency_s": 7.318
+    },
+    {
+      "index": 75,
+      "event_id": "S-75",
+      "date": "2025-12-11T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3358,
+      "output_tokens": 2383,
+      "latency_s": 8.185
+    },
+    {
+      "index": 76,
+      "event_id": "S-76",
+      "date": "2025-12-11T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3370,
+      "output_tokens": 2334,
+      "latency_s": 7.678
+    },
+    {
+      "index": 77,
+      "event_id": "S-77",
+      "date": "2025-12-11T23:23:21.259589",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3268,
+      "output_tokens": 2309,
+      "latency_s": 7.557
+    }
+  ]
+}

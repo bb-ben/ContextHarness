@@ -1,0 +1,11 @@
+# Goals
+- G-5.1 | paused | 2025-10-03 | due: 2025-10-06 | basis: O-5.4 | Will test the coping drill over the weekend.
+  - 2025-10-07 (S-8, O-8.2): asked for a quick chill trick during an anxiety spike.
+- G-9.1 | active | 2025-10-10 | due: 2025-10-12 | basis: O-9.2 | Will message two mates, cook one proper dinner, and spend 10 minutes on what they want in the next relationship by Sunday night.
+- G-23.1 | active | 2025-10-27 | due: 2025-10-30 | basis: O-23.1, O-23.2 | Will prepare for the charity auction speech.
+  - 2025-11-05 (S-41, O-41.2): ran a timed practice and felt basically ready.
+- G-35.1 | active | 2025-11-04 | due: 2025-11-25 | basis: O-35.1, O-35.2, O-35.3 | Will coordinate the rooftop wedding with bilingual ceremony logistics, vendors, and schedule.
+  - 2025-11-04 (S-35, O-35.1, O-35.2, O-35.3): scoped the wedding as 120 guests, 15k cap, bilingual ceremony, and lift access needs.
+- G-38.1 | active | 2025-11-04 | due: 2025-12-02 | basis: O-38.1 | Will map out a four-week sprint plan to keep historians, designers, and volunteers aligned.
+- G-44.1 | active | 2025-11-08 | due: 2025-11-14 | basis: O-44.4 | Will prepare for the upcoming national Championship analytics podcast episode.
+  - 2025-11-16 (S-50, O-50.3): asked for a 3-day game plan and daily drills for the charity auction speech.

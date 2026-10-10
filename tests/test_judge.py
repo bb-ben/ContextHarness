@@ -102,3 +102,14 @@ def test_repeats_combine_by_majority_with_ties_going_low():
     assert by["speed"]["current_match"] == "matches" and by["speed"]["change_recorded"] is True
     assert by["consensus"]["current_match"] == "absent"  # three-way tie: the lowest score wins
     assert j["agreement"] == round((2 / 3 + 1 / 3) / 2, 3) and j["current_fidelity_range"] == [0.5, 0.75]
+
+
+def test_cli_names_judgements_by_run_and_item(tmp_path, monkeypatch):
+    item_dir = _finished_item(tmp_path)
+    truth = ground_truth(load_source_item(item_dir).gold)
+    grades = [{"attribute": a["attribute"], "memory_value": "x", "current_match": "absent",
+               "original_still_current": False, "change_recorded": False, "evidence": ""} for a in truth["attributes"]]
+    monkeypatch.setattr("context_harness.cli.make_model",
+                        lambda settings: ScriptedModel(lambda req: ("", [("submit_grades", {"grades": grades})])))
+    assert main(["judge-memory", str(item_dir), "--model", "fake", "--repeats", "1", "--out", str(tmp_path / "j")]) == 0
+    assert (tmp_path / "j" / f"src__{item_dir.name}.json").exists()

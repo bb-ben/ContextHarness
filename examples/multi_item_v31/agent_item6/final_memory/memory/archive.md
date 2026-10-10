@@ -1,0 +1,44 @@
+# Archive
+- T-46.1 | expired | 2025-11-15 | review: 2025-11-22 | basis: O-44.1, O-44.2, O-46.1, O-46.2, O-47.1, O-47.2, O-47.3 | supersedes: T-44.1 | ended: 2025-11-26 | Wants the Ministry review to stay practical, local, and accessible without losing rally energy or sounding bureaucratic.
+- T-49.1 | expired | 2025-11-19 | review: 2025-11-26 | basis: O-49.1, O-49.2 | supersedes: T-38.1 | ended: 2025-11-26 | Wants the workshop rhetoric to stay grounded in Bosa problems and deliver short, punchy, flyer-ready lines.
+- T-0.1 | superseded | 2025-09-28 | expires: 2025-09-29 | basis: O-0.3, O-0.5 | until: 2025-09-28 | superseded_by: T-1.1 | Feels anxious and keyed up about tomorrow night's housing debate.
+- T-0.2 | superseded | 2025-09-28 | expires: 2025-09-29 | basis: O-0.3 | until: 2025-09-28 | superseded_by: T-1.2 | Wants a more aggressive rebuttal style for tomorrow night's debate.
+- T-1.1 | expired | 2025-09-28 | expires: 2025-09-29 | basis: O-1.1 | ended: 2025-10-01 | Feels anxious and keyed up about tomorrow morning's housing debate.
+- T-1.2 | expired | 2025-09-28 | expires: 2025-09-29 | basis: O-1.2, O-1.3 | ended: 2025-10-01 | Wants a more aggressive rebuttal style for tomorrow morning's debate.
+- T-2.1 | expired | 2025-10-01 | review: 2025-10-08 | basis: O-2.3 | ended: 2025-10-10 | Feels stressed about noise rules and police shutdown risk for the rally.
+- T-2.2 | expired | 2025-10-01 | expires: 2025-10-03 | basis: O-2.2 | ended: 2025-10-04 | Wants four-hour check-ins and milestones for the next two days.
+- T-3.1 | expired | 2025-10-01 | review: 2025-10-08 | basis: O-3.4 | ended: 2025-10-10 | Feels stressed about the warehouse zoning fight and developer lawyers.
+- T-4.1 | expired | 2025-10-01 | review: 2025-10-08 | basis: O-4.1, O-4.2 | ended: 2025-10-10 | Feels nervous about Tuesday and wants the speech to be zero fluff, high passion, and courteous.
+- T-5.1 | expired | 2025-10-02 | review: 2025-10-09 | basis: O-5.2, O-5.3, O-5.4 | ended: 2025-10-10 | Feels exhausted by the roommate's late-night music and wants a direct, professional sit-down tonight.
+- T-8.1 | expired | 2025-10-06 | review: 2025-10-13 | basis: O-8.1 | ended: 2025-10-15 | Wants hard facts, real reports, and practical bullets for the semiconductor-supply-chain pitch.
+- T-9.1 | expired | 2025-10-07 | review: 2025-10-14 | basis: O-9.1, O-9.3 | ended: 2025-10-15 | Feels under pressure about the free-speech panel and wants a warm, persuasive delivery for it.
+- T-10.1 | expired | 2025-10-10 | expires: 2025-10-17 | basis: O-10.2, O-13.3 | ended: 2025-10-18 | Feels pressure about the final NGO paper deadline.
+- T-11.1 | expired | 2025-10-11 | review: 2025-10-18 | basis: O-11.1, O-11.3 | ended: 2025-10-18 | Wants moderate detail and acronym definitions for the defense white paper briefing.
+- T-13.2 | expired | 2025-10-12 | review: 2025-10-19 | basis: O-13.5 | ended: 2025-10-20 | Wants to use Dr. Silvia's health data to link the rally to children's health.
+- T-15.1 | superseded | 2025-10-15 | review: 2025-10-22 | basis: O-15.2 | until: 2025-10-26 | superseded_by: T-19.1 | Feels stressed about the 48-hour deadline to get everyone together.
+- T-17.1 | superseded | 2025-10-18 | review: 2025-10-25 | basis: O-17.2 | until: 2025-10-26 | superseded_by: T-19.2 | Wants a formal, professional register for the debate speech.
+- T-17.2 | superseded | 2025-10-18 | review: 2025-10-25 | basis: O-17.3 | until: 2025-10-26 | superseded_by: T-19.3 | Wants academic proof and a historical precedent for the debate.
+- T-19.1 | expired | 2025-10-26 | review: 2025-10-28 | basis: O-19.1 | ended: 2025-10-28 | Feels stressed about the police-budget hearing deadline.
+- T-19.2 | expired | 2025-10-26 | expires: 2025-10-28 | basis: O-19.2 | ended: 2025-10-28 | Wants the rebuttal to stay local, practical, and nonpartisan.
+- T-19.3 | expired | 2025-10-26 | expires: 2025-10-28 | basis: O-19.1, O-19.3 | ended: 2025-10-28 | Wants hard numbers, exact comparisons, and a polished 3-minute opening.
+- T-20.1 | expired | 2025-10-27 | expires: 2025-10-28 | basis: O-20.1 | ended: 2025-10-28 | Feels stressed about tomorrow's community talk on vaccine budget claims.
+- T-20.2 | expired | 2025-10-27 | expires: 2025-10-28 | basis: O-20.1, O-20.2, O-20.3 | ended: 2025-10-28 | Wants the vaccine-budget explanation framed as a story or case study with local clinic impacts.
+- T-21.1 | expired | 2025-10-28 | review: 2025-11-04 | basis: O-21.1 | ended: 2025-11-04 | Feels heated about the carbon-offset discussion and wants a chill, fact-only tone.
+- T-23.1 | superseded | 2025-10-30 | review: 2025-11-06 | basis: O-23.1, O-23.2, O-23.4 | until: 2025-10-30 | superseded_by: T-24.1 | Feels nervous about the free-speech panel and wants a persuasive, big-stage style for it.
+- T-24.1 | expired | 2025-10-30 | review: 2025-11-06 | basis: O-23.1, O-24.1 | ended: 2025-11-06 | Feels nervous about the free-speech panel and wants a persuasive, strong-but-measured style for it.
+- T-27.1 | expired | 2025-11-02 | review: 2025-11-09 | basis: O-27.2 | ended: 2025-11-09 | Wants the ministry draft professional while staying persuasive for activists.
+- T-28.1 | expired | 2025-11-03 | review: 2025-11-10 | basis: O-28.1, O-28.2 | ended: 2025-11-11 | Wants the forum materials to stay Bosa-local, avoid pop-culture memes, and use "peasant" over "rural producer" for this agrarian-reform forum.
+- T-29.1 | expired | 2025-11-04 | review: 2025-11-11 | basis: O-29.2, O-29.4 | ended: 2025-11-11 | Feels nervous about the police-budget hearing and wants a balanced, evidence-backed rebuttal.
+- T-30.1 | expired | 2025-11-04 | review: 2025-11-11 | basis: O-30.1 | ended: 2025-11-11 | Was appointed District Mediator for the Bosa land restitution case.
+- T-30.2 | expired | 2025-11-04 | review: 2025-11-11 | basis: O-30.1 | ended: 2025-11-11 | Wants the first mediation opening to stress respectful turn-taking.
+- T-32.1 | expired | 2025-11-05 | review: 2025-11-12 | basis: O-32.1 | ended: 2025-11-13 | Is serving as Lead Crisis Communication Liaison for the Bosa Emergency Task Force after the flash floods.
+- T-35.1 | expired | 2025-11-06 | review: 2025-11-13 | basis: O-35.1, O-35.2 | ended: 2025-11-13 | Wants the autonomous-systems brief to sound human, Bosa-local, and less robotic for the rally.
+- T-36.1 | expired | 2025-11-09 | review: 2025-11-16 | basis: O-36.1 | ended: 2025-11-16 | Wants the fisheries-subsidy brief to stay urgent and action-oriented for the mobilization.
+- T-37.1 | expired | 2025-11-09 | review: 2025-11-16 | basis: O-37.2 | ended: 2025-11-16 | Wants separate introductory letter versions, with autonomy-respectful language for indigenous councils and timeline/legal focus for developers.
+- T-38.1 | superseded | 2025-11-11 | review: 2025-11-18 | basis: O-38.1 | until: 2025-11-19 | superseded_by: T-49.1 | Wants the workshop rhetoric to stay Bosa-local, rhythmic, and audience-specific.
+- T-38.2 | expired | 2025-11-11 | review: 2025-11-18 | basis: O-38.2 | ended: 2025-11-19 | Wants a professional version that ties the message to clinic health data and family solidarity.
+- T-42.1 | expired | 2025-11-14 | review: 2025-11-21 | basis: O-42.1, O-42.2, O-42.3, O-42.4, O-42.5 | ended: 2025-11-21 | Wants the Bosa rally speech to open with the big vision, then steps, using vivid local analogies and keeping the mural budget general unless asked.
+- T-44.1 | superseded | 2025-11-15 | review: 2025-11-22 | basis: O-44.1, O-44.2 | until: 2025-11-15 | superseded_by: T-46.1 | Wants the Ministry review to stay practical, local, and non-bureaucratic.
+- T-51.1 | expired | 2025-11-20 | review: 2025-11-27 | basis: O-51.3 | ended: 2025-11-28 | Wants the Bosa land-rights explanation to connect land tenure to clinic goals and health outcomes.
+- T-53.1 | expired | 2025-11-21 | review: 2025-11-28 | basis: O-53.2, O-53.3 | ended: 2025-11-28 | Wants the land-reform rally speech to stay calm, conciliatory, and tightly sourced.
+- T-61.1 | superseded | 2025-12-02 | review: 2025-12-09 | basis: O-61.2 | until: 2025-12-02 | superseded_by: T-62.1 | Feels overwhelmed by the forum prep and wants a big-picture summary now.

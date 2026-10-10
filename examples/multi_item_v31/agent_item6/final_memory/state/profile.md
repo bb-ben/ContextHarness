@@ -1,0 +1,10 @@
+# Profile
+- F-16.1 | superseded | 2025-10-15 | topic: occupation | basis: O-16.1 | until: 2025-10-20 | superseded_by: F-18.1 | Was appointed Senior Advisor to the National Ministry of Equality and is moving from grassroots work in Bosa to national government.
+- F-18.1 | superseded | 2025-10-20 | topic: occupation | basis: O-18.1 | until: 2025-11-09 | superseded_by: F-37.1 | Was appointed Special Regional Advisor to the Presidential Office for social integration programs and is moving up from work in Bosa.
+- F-37.1 | superseded | 2025-11-09 | topic: occupation | basis: O-37.1 | until: 2025-11-15 | superseded_by: F-45.1 | Was appointed National Lead Mediator for the Regional Binding Dialogues by the Presidential office.
+- F-45.1 | superseded | 2025-11-15 | topic: occupation | basis: O-45.1 | until: 2025-11-19 | supersedes: F-37.1 | Was appointed National Director for the Hambre Cero Urban Emergency Task Force in Colombia and is moving into crisis logistics.
+- F-50.1 | superseded | 2025-11-19 | topic: occupation | basis: O-50.1 | until: 2025-11-20 | superseded_by: F-52.1 | supersedes: F-45.1 | Was appointed High Commissioner for Urban Peace and Restorative Justice for the Bosa-Soacha border.
+- F-52.1 | superseded | 2025-11-20 | topic: occupation | basis: O-52.1 | until: 2025-11-21 | superseded_by: F-54.1 | supersedes: F-50.1 | Was appointed Lead Presidential Envoy for the Urban Peace Initiative in Bosa.
+- F-54.1 | superseded | 2025-11-21 | topic: occupation | basis: O-52.1, O-54.1 | supersedes: F-52.1 | until: 2025-11-28 | superseded_by: F-57.1 | Was appointed Lead Presidential Envoy for the Urban Peace Initiative in Bosa and Principal Drafter for the Gran Acuerdo Nacional.
+- F-57.1 | superseded | 2025-11-28 | topic: occupation | basis: O-57.1 | supersedes: F-54.1 | until: 2025-12-05 | superseded_by: F-67.1 | Was appointed National Director of the Special Investigative Unit for Land Restitution and Ethics.
+- F-67.1 | current | 2025-12-05 | topic: occupation | basis: O-67.1 | supersedes: F-57.1 | Resigned from government posts and is leading the Bosa street resistance against the market demolition deal.

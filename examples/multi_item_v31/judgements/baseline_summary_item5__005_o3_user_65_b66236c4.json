@@ -1,0 +1,264 @@
+{
+  "item_id": "Jason Taylor_event79_20260326_turn3_content_length_preferences_170_counterfactuals.json",
+  "judge_model": "gpt-5.4-mini",
+  "memory_chars": 8033,
+  "attributes": [
+    {
+      "attribute": "preferred_max_words",
+      "current": "600",
+      "original": "250",
+      "changed": true,
+      "memory_value": "short replies, often under 200 words",
+      "current_match": "contradicts",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "\"short\"; \"User has explicitly requested replies under 200 words in some contexts because they are scrolling on their phone.\"",
+      "votes": [
+        "contradicts",
+        "contradicts",
+        "contradicts"
+      ]
+    },
+    {
+      "attribute": "ideal_sentence_count",
+      "current": "15",
+      "original": "8",
+      "changed": true,
+      "memory_value": "nothing",
+      "current_match": "absent",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "No sentence-count preference is stated; the memory only mentions format preferences like \"bulleted\" and \"numbered outlines\".",
+      "votes": [
+        "absent",
+        "absent",
+        "absent"
+      ]
+    },
+    {
+      "attribute": "tolerance_for_long_form",
+      "current": "0.8",
+      "original": "0.4",
+      "changed": true,
+      "memory_value": "very low; long blocks \"fry my brain\"",
+      "current_match": "contradicts",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "\"big blocks 'fry my brain'\"; \"short stuff only\"; \"no fluff\"",
+      "votes": [
+        "contradicts",
+        "contradicts",
+        "contradicts"
+      ]
+    },
+    {
+      "attribute": "summary_mandatory",
+      "current": "False",
+      "original": "True",
+      "changed": true,
+      "memory_value": "nothing",
+      "current_match": "absent",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "The memory lists a concise report template (header, KPIs, highlights, issues, priorities, support needed, sign-off) but does not say a summary section is required.",
+      "votes": [
+        "absent",
+        "absent",
+        "absent"
+      ]
+    }
+  ],
+  "current_fidelity": 0.0,
+  "changed_fidelity": 0.0,
+  "stale": 0,
+  "changes_recorded": 0,
+  "n_attributes": 4,
+  "n_changed": 4,
+  "ungraded": [],
+  "repeats": 3,
+  "agreement": 1.0,
+  "current_fidelity_range": [
+    0.0,
+    0.0
+  ],
+  "estimated_cost_usd": 0.03412,
+  "runs": [
+    {
+      "item_id": "Jason Taylor_event79_20260326_turn3_content_length_preferences_170_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 8033,
+      "attributes": [
+        {
+          "attribute": "preferred_max_words",
+          "current": "600",
+          "original": "250",
+          "changed": true,
+          "memory_value": "short replies, often under 200 words",
+          "current_match": "contradicts",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\"short\"; \"User has explicitly requested replies under 200 words in some contexts because they are scrolling on their phone.\""
+        },
+        {
+          "attribute": "ideal_sentence_count",
+          "current": "15",
+          "original": "8",
+          "changed": true,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No sentence-count preference is stated; the memory only mentions format preferences like \"bulleted\" and \"numbered outlines\"."
+        },
+        {
+          "attribute": "tolerance_for_long_form",
+          "current": "0.8",
+          "original": "0.4",
+          "changed": true,
+          "memory_value": "very low; long blocks \"fry my brain\"",
+          "current_match": "contradicts",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\"big blocks 'fry my brain'\"; \"short stuff only\"; \"no fluff\""
+        },
+        {
+          "attribute": "summary_mandatory",
+          "current": "False",
+          "original": "True",
+          "changed": true,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "The memory lists a concise report template (header, KPIs, highlights, issues, priorities, support needed, sign-off) but does not say a summary section is required."
+        }
+      ],
+      "current_fidelity": 0.0,
+      "changed_fidelity": 0.0,
+      "stale": 0,
+      "changes_recorded": 0,
+      "n_attributes": 4,
+      "n_changed": 4,
+      "ungraded": [],
+      "estimated_cost_usd": 0.00938
+    },
+    {
+      "item_id": "Jason Taylor_event79_20260326_turn3_content_length_preferences_170_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 8033,
+      "attributes": [
+        {
+          "attribute": "preferred_max_words",
+          "current": "600",
+          "original": "250",
+          "changed": true,
+          "memory_value": "very short; often under 200 words",
+          "current_match": "contradicts",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\"under 200 words\"; \"big blocks fry my brain\"; \"short stuff only\""
+        },
+        {
+          "attribute": "ideal_sentence_count",
+          "current": "15",
+          "original": "8",
+          "changed": true,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "The memory talks about bullets and numbered outlines, but gives no sentence-count preference"
+        },
+        {
+          "attribute": "tolerance_for_long_form",
+          "current": "0.8",
+          "original": "0.4",
+          "changed": true,
+          "memory_value": "very low tolerance for long-form",
+          "current_match": "contradicts",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\"no fluff\"; \"short stuff only\"; \"zero essays\"; \"big blocks fry my brain\""
+        },
+        {
+          "attribute": "summary_mandatory",
+          "current": "False",
+          "original": "True",
+          "changed": true,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No current belief says a summary is required; the closest mentions are report sections like \"highlights\" and \"support needed\", not mandatory summaries"
+        }
+      ],
+      "current_fidelity": 0.0,
+      "changed_fidelity": 0.0,
+      "stale": 0,
+      "changes_recorded": 0,
+      "n_attributes": 4,
+      "n_changed": 4,
+      "ungraded": [],
+      "estimated_cost_usd": 0.0135
+    },
+    {
+      "item_id": "Jason Taylor_event79_20260326_turn3_content_length_preferences_170_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 8033,
+      "attributes": [
+        {
+          "attribute": "preferred_max_words",
+          "current": "600",
+          "original": "250",
+          "changed": true,
+          "memory_value": "short; under 200 words in some contexts",
+          "current_match": "contradicts",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\"short\"; \"explicitly requested replies under 200 words\"; \"big blocks 'fry my brain'\""
+        },
+        {
+          "attribute": "ideal_sentence_count",
+          "current": "15",
+          "original": "8",
+          "changed": true,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "The memory says \"short, bullet-led, no fluff\" and \"under 200 words,\" but never states a sentence-count preference."
+        },
+        {
+          "attribute": "tolerance_for_long_form",
+          "current": "0.8",
+          "original": "0.4",
+          "changed": true,
+          "memory_value": "low; long blocks are disliked",
+          "current_match": "contradicts",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\"big blocks 'fry my brain'\"; \"max of five bullets when overwhelmed\"; \"prefers replies ... short\""
+        },
+        {
+          "attribute": "summary_mandatory",
+          "current": "False",
+          "original": "True",
+          "changed": true,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No belief that summaries are mandatory; the closest entries only say \"short, bullet-led, no fluff\" and \"concise but complete\"."
+        }
+      ],
+      "current_fidelity": 0.0,
+      "changed_fidelity": 0.0,
+      "stale": 0,
+      "changes_recorded": 0,
+      "n_attributes": 4,
+      "n_changed": 4,
+      "ungraded": [],
+      "estimated_cost_usd": 0.01124
+    }
+  ]
+}

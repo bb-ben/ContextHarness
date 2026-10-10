@@ -1,0 +1,298 @@
+# Episodes
+- E-0 | 2025-09-26 | source: S-0 | Short chat about a football-fandom short film and response style.
+  - O-0.1 | behavior | Asked to bounce ideas collaboratively and keep them in bullets.
+  - O-0.2 | behavior | Asked for step-by-step, idiot-proof guidance on workflow and blocking.
+  - O-0.3 | stated | Wants a fun, heartfelt tone and no cheesy or syrupy stuff.
+- E-1 | 2025-09-27 | source: S-1 | Pre-speech anxiety was eased by terse, football-flavoured coaching and the talk ended with applause.
+  - O-1.1 | behavior | Asked for bullets, no fluff, and short lines only.
+  - O-1.2 | behavior | Asked for footy banter or ref jokes to calm nerves.
+  - O-1.3 | behavior | Asked for mini drills, stats, a speech example, and a brutal check.
+  - O-1.4 | reaction | Reported breathing helped, then finished to big applause and felt buzzing.
+- E-2 | 2025-09-29 | source: S-2 | Focused on coup-sim diplomacy and wanted tighter response limits.
+  - O-2.1 | stated | Wants future answers under 200 words.
+  - O-2.2 | stated | Says real examples help ideas stick.
+- E-3 | 2025-09-29 | source: S-3 | Short back-and-forth on coup-simulation roleplay and crisis talking points.
+  - O-3.1 | behavior | Repeatedly asked for bullets, a tight table, and a no-fluff checklist.
+  - O-3.2 | behavior | Asked for blunt critique of a line and a rewrite, favoring iterative feedback.
+- E-4 | 2025-10-02 | source: S-4 | Fantasy world-building brainstorm about football-runs-everything setting.
+  - O-4.1 | behavior | Wants replies as chill bullet points or numbered outlines, with cheeky football-history easter eggs.
+  - O-4.2 | behavior | Wants big-picture first, then zoom-in collaboration on the same idea.
+- E-5 | 2025-10-03 | source: S-5 | Breakup sadness and coping-plan chat before tomorrow's shift.
+  - O-5.1 | event | Broke up with Lauren last week and has barely slept since.
+  - O-5.2 | stated | Wants step-by-step help in concise bullets with football banter.
+  - O-5.3 | stated | Wants hard data, not woo-woo, when judging coping methods.
+  - O-5.4 | behavior | Plans to test the coping drill over the weekend.
+- E-6 | 2025-10-05 | source: S-6 | Quick starship-horror RP with recap beats and a timeout safety word.
+  - O-6.1 | behavior | Asked for quick bullet beats and a quick recap when lost.
+  - O-6.2 | stated | Wanted the RP kept PG-13, with safe word "timeout" and less gore.
+  - O-6.3 | stated | Wanted a football-meltdown mirror for flavour.
+- E-7 | 2025-10-06 | source: S-7 | Alternate-history brainstorming about Apollo 11 and a British journalist lens.
+  - O-7.1 | stated | Wants top-down bullet outlines first for the story.
+  - O-7.2 | behavior | Wants three quick questions each round.
+  - O-7.3 | stated | Wants smaller chunks; big lists are overwhelming.
+  - O-7.4 | stated | Wants a small set of options before choosing.
+- E-8 | 2025-10-07 | source: S-8 | Last-minute swap prep for a signed-ball trade at the Houston expo.
+  - O-8.1 | stated | Wants replies under 200 words.
+  - O-8.2 | behavior | Asked for a quick chill trick when anxiety crept in.
+- E-9 | 2025-10-10 | source: S-9 | Breakup slump, sleep trouble, and a request for practical, numbered support.
+  - O-9.1 | stated | Breakup last week has them barely sleeping, not eating much, and worst in the mornings.
+  - O-9.2 | stated | Wants straight step-by-step help, numbered lists, and three tiny goals with a Sunday check-in.
+  - O-9.3 | stated | Wants natural sleep fixes only right now, and the shower plus banana helped a bit.
+  - O-9.4 | stated | Dreams about the breakup still hit hard, and doom-scrolling the ex's accounts feels compulsive.
+  - O-9.5 | stated | Likes football analogies, numbered lists, and skipping woo-woo.
+- E-10 | 2025-10-11 | source: S-10 | Panic spike eased by simple grounding and short logic.
+  - O-10.1 | event | Had an acute panic spike with chest tightness and racing heart.
+  - O-10.2 | stated | Wants super simple, step-by-step grounding, plus short logic and physical moves during panic.
+  - O-10.3 | reaction | Said the grounding worked, anxiety dropped to 2, and they saved the quick go-to moves.
+- E-11 | 2025-10-11 | source: S-11 | Panic spike at the desk; wanted short, normal, discreet grounding.
+  - O-11.1 | stated | Wanted no therapy talk, clear steps, and a tiny joke while others were nearby.
+  - O-11.2 | stated | Said the quick check-ins really help and asked for a tiny checklist to stick on the monitor.
+- E-12 | 2025-10-11 | source: S-12 | Panic spike later shifted to bedtime cooldown.
+  - O-12.1 | behavior | Wants super clear steps, tiny bullets, and no waffle.
+  - O-12.2 | behavior | Said football talk helps when grounding panic.
+  - O-12.3 | stated | Is not suicidal, is buzzing, and cannot sleep tonight.
+- E-13 | 2025-10-12 | source: S-13 | Policy brief planning on the self-driving car trolley problem.
+  - O-13.1 | stated | Wants step-by-step, citation-backed help with sections capped at about 200 words.
+- E-14 | 2025-10-12 | source: S-14 | Asked for a clean status-report template for distributed teams and time-zone auto-fill help.
+
+  - O-14.1 | behavior | Asked for a quick, clean status-report template and an auto-fill trick for local times across time zones.
+
+  - O-14.2 | stated | Got promoted to Global Logistics Project Manager and now coordinates teams in the UK, US, and Singapore.
+- E-15 | 2025-10-13 | source: S-15 | Boundary-setting script for noisy flatmate.
+  - O-15.1 | stated | Wants step-by-step help, kept tight.
+  - O-15.2 | behavior | Prefers to handle the boundary by text because it feels safer.
+  - O-15.3 | reaction | Said the roommate was sound about it and feels lighter after the chat.
+- E-16 | 2025-10-13 | source: S-16 | Boundary-setting practice for a noisy housemate ended with a successful resolution.
+  - O-16.1 | behavior | Wants dead-straight but polite help, preferably as step-by-step checklists.
+  - O-16.2 | behavior | Likes role-play practice and skim-friendly recaps for awkward chats.
+  - O-16.3 | event | Said the roommate chat went smoothly and the housemate agreed to keep it down.
+- E-17 | 2025-10-14 | source: S-17 | Pre-speech anxiety support and a checklist-heavy, football-bantery coaching style.
+  - O-17.1 | stated | Is backstage before speaking and feeling a strong anxiety spike.
+  - O-17.2 | behavior | Kept asking for numbered checklists and cheat-sheet bullets to stay oriented.
+- E-18 | 2025-10-16 | source: S-18 | Panic spike, grounding, and a saveable cheat sheet.
+  - O-18.1 | stated | Had a panic spike with breathlessness, racing heart, dizziness, and chest tightness.
+  - O-18.2 | behavior | Wanted super-clear, ultra-brief grounding steps right now.
+  - O-18.3 | behavior | Asked for a 3-line lock-screen cheat sheet, short emergency lines, and a couple app names.
+  - O-18.4 | reaction | Said the slower pacing helped.
+  - O-18.5 | stated | Panic later dropped to 2 and they felt knackered.
+- E-19 | 2025-10-20 | source: S-19 | Short chat about strike communications and exec updates.
+  - O-19.1 | event | Was bumped up to Crisis Logistics Manager because of the national truckers’ strike.
+  - O-19.2 | behavior | Asked for concise talking points and a fill-in-fast daily status template for the exec team.
+- E-20 | 2025-10-22 | source: S-20 | Forgiveness chat about a work slight and self-forgiveness.
+  - O-20.1 | behavior | Wants bite-size, step-by-step bullet prompts and quick recaps.
+  - O-20.2 | stated | Wants football analogies and no religious framing.
+  - O-20.3 | behavior | Wants side-by-side comparisons and a small set of options before choosing.
+- E-21 | 2025-10-25 | source: S-21 | Rebuilding self-esteem after a workplace shipping mistake.
+  - O-21.1 | event | Botched Friday's shipping run by swapping postcodes, leaving drivers idle and the team late.
+  - O-21.2 | stated | Feels like a total liability and wants a straight step-by-step; lists and tiny tasks are easier tonight.
+  - O-21.3 | stated | The football angle weirdly sticks for them, and they want a pocket checklist for bad-thought days.
+- E-22 | 2025-10-25 | source: S-22 | Self-esteem wobble after a workplace mistake; user wants footbally, compact coping support.
+  - O-22.1 | stated | Wants football metaphors and a casual tone instead of office lingo.
+  - O-22.2 | stated | Wants quick, no-fluff bullet recaps at the end of chats.
+  - O-22.3 | behavior | Wants a weekly Friday debrief/check-in next.
+- E-23 | 2025-10-27 | source: S-23 | Pre-charity-auction speech jitters and coaching preferences.
+  - O-23.1 | event | Is anxious about a charity auction speech in three days.
+  - O-23.2 | behavior | Asked for step-by-step help with the opener, pacing, item pitch, Q&A, and the morning-of ritual.
+  - O-23.3 | behavior | Asked to ditch fluffy pep talk and give straight orders.
+- E-24 | 2025-10-28 | source: S-24 | Pre-speech nerves before addressing the team; wanted quick calming support.
+  - O-24.1 | behavior | Asked for even snappier help and immediate calming support before speaking.
+  - O-24.2 | stated | Likes football banter in the support.
+  - O-24.3 | behavior | Asked for a famous speech example to help visualise pacing.
+- E-25 | 2025-10-29 | source: S-25 | Helped draft a short first-date invite and follow-up text for Leila.
+  - O-25.1 | behavior | Asked for concise bullet-point help and a brief, punchy text.
+  - O-25.2 | behavior | Wanted the invite low-pressure, casual, and zero-cringe with no cheesy wording.
+- E-26 | 2025-10-29 | source: S-26 | Returned from a mindfulness retreat and asked for a practical routine around shift work.
+  - O-26.1 | event | Completed a three-month mindfulness retreat after burning out during the fuel-crisis nightmare.
+  - O-26.2 | stated | Wants a daily mindfulness routine fitted around 6 a.m.–2 p.m. logistics shifts and low-clutter reminders right now.
+- E-27 | 2025-10-30 | source: S-27 | Planning a Preston away-day logistics schedule with hotel, van, tickets, and reminders.
+  - O-27.1 | behavior | Wants little text nudges for each checkpoint on matchday.
+  - O-27.2 | stated | Prefers a later Friday departure and a decent hotel over an early motorway start.
+- E-28 | 2025-10-30 | source: S-28 | Coach trip planning and reminder setup.
+  - O-28.1 | stated | Wants checklist-style, rapid replies while drowning in work today.
+  - O-28.2 | behavior | Wants a reminder tomorrow at noon to chase coach deposits.
+- E-29 | 2025-10-31 | source: S-29 | Fantasy league scoring dispute with Alice after an app glitch.
+  - O-29.1 | behavior | Wants a quick, bullet-point copy-paste plan with no fluff.
+  - O-29.2 | event | Sarr's assist was counted twice, giving them +3 and triggering Alice's cheating accusation.
+- E-30 | 2025-11-02 | source: S-30 | Rebuilding self-esteem after a workplace mistake.
+  - O-30.1 | event | Swapped two shipment dates, causing rush fees and boss anger, and feels like dead weight but wants to win the team back.
+  - O-30.2 | stated | Wants the problem broken into solid steps and clear checkpoints.
+  - O-30.3 | stated | Felt better after spotting the mistake quickly and alerting finance.
+  - O-30.4 | stated | Wants a checklist later and a morning nudge to follow the steps.
+- E-31 | 2025-11-03 | source: S-31 | Chat about anxiety over the charity app revamp and getting through the night.
+  - O-31.1 | event | The charity app revamp is crawling and they barely slept worrying about launch risk.
+  - O-31.2 | behavior | Wants bullet-point, short-step help and says long meditations lose them.
+  - O-31.3 | reaction | A 4-7-8 breath dropped anxiety from 8 to 5.
+  - O-31.4 | behavior | Wants a quick-win story, a football analogy, and a day timeline.
+- E-32 | 2025-11-03 | source: S-32 | Talked through sparse feedback on fan podcast artwork and how to ask for critique.
+  - O-32.1 | stated | Wants blunt, no-sugar-coating critique on the artwork.
+  - O-32.2 | stated | Public posts stress them out and they prefer a smaller crowd for feedback.
+- E-33 | 2025-11-03 | source: S-33 | Helped draft a short pep text after a derby defeat.
+  - O-33.1 | behavior | Wants it tight, upbeat, and free of motivational-poster cheese.
+- E-34 | 2025-11-03 | source: S-34 | Planning first episode for a new national football analytics podcast.
+  - O-34.1 | event | Landed a co-hosting gig on a national football analytics podcast after a pub-quiz stream went viral.
+  - O-34.2 | behavior | Wants a simple 30-minute episode structure that stays clear but engaging.
+  - O-34.3 | behavior | Wants a quick timing trick so each segment lands on schedule.
+- E-35 | 2025-11-04 | source: S-35 | Last-minute rooftop wedding coordination with bilingual ceremony logistics.
+  - O-35.1 | behavior | Wants step-by-step checklist help and a visual timeline because walls of text melt their brain.
+  - O-35.2 | event | Has a rooftop wedding in three weeks with 120 guests, a 15k budget cap, and no vendors booked yet.
+  - O-35.3 | event | Needs the ceremony bilingual in English and Spanish and lift access for Gran.
+- E-36 | 2025-11-04 | source: S-36 | Last-minute pub quiz finals sprint with Alice rivalry.
+  - O-36.1 | stated | Wants snappy bullet-only quiz help and a cram plan.
+  - O-36.2 | event | Finals are in 3 days and Alice is part of the rivalry push.
+- E-37 | 2025-11-04 | source: S-37 | Last-minute pub-quiz final prep focused on fast drills and score-tracking.
+  - O-37.1 | stated | Is cramming for the pub quiz final in 48h and wants punchy bullet-point help ASAP.
+  - O-37.2 | behavior | Wants quickfire drills with live scoring after each round.
+- E-38 | 2025-11-04 | source: S-38 | Short chat about sprint planning for a heritage archive project.
+  - O-38.1 | stated | Was appointed project lead for the Preston North End Digital Heritage Archive and asked for a four-week sprint plan.
+  - O-38.2 | stated | Wants a simple copyable Trello template for aligning historians, designers, and volunteers.
+- E-39 | 2025-11-04 | source: S-39 | Chat about checking a risky vintage football programme trade.
+  - O-39.1 | behavior | Asked for step-by-step, punchy help and a quick recap.
+  - O-39.2 | behavior | Used a casual football-banter tone while asking for help.
+- E-40 | 2025-11-04 | source: S-40 | Short chat about podcast production planning and budget gear.
+  - O-40.1 | stated | Has been commissioned to host and produce a weekly Preston North End history podcast.
+  - O-40.2 | behavior | Asked for a simple production timeline and lean broadcast gear on a tight budget.
+- E-41 | 2025-11-05 | source: S-41 | Prep chat about a charity auction speech and a successful run-through.
+  - O-41.1 | stated | Wants play-by-play help with jokes and footy refs because they stick in their head.
+  - O-41.2 | reaction | Said the run-through timing was spot on and the nerves are basically gone.
+- E-42 | 2025-11-06 | source: S-42 | Co-writing Preston North End script notes, leaning into leaner dialogue and sourced citations.
+  - O-42.1 | stated | Wants a quick recap at the end of each session.
+  - O-42.2 | stated | Wants citations placed directly under the note in script drafts.
+- E-43 | 2025-11-07 | source: S-43 | Rebuilding confidence after a workplace mistake with step-by-step support.
+  - O-43.1 | behavior | Asked for step-by-step, chill, positive support after a costly work mistake.
+  - O-43.2 | behavior | Asked to keep the tone in football lingo and wanted a printable checklist.
+- E-44 | 2025-11-08 | source: S-44 | Prepping for a national Championship analytics podcast episode and wants compact, light support.
+  - O-44.1 | behavior | Asked for numbered prep steps and a quick breathing drill for a podcast in six days.
+  - O-44.2 | stated | Wants a light, joke-friendly football-banter tone to keep calm.
+  - O-44.3 | stated | Wants blunt, straight feedback when reviewing work.
+  - O-44.4 | event | Has a national Championship analytics podcast episode in six days and feels intense imposter syndrome.
+- E-45 | 2025-11-10 | source: S-45 | Brainstormed an alt-history football novel and asked for step-by-step, source-backed help.
+  - O-45.1 | behavior | Asked for step-by-step, source-backed brainstorming with tight pacing.
+- E-46 | 2025-11-11 | source: S-46 | Boundary-setting help for a noisy flatmate.
+  - O-46.1 | stated | Wants a dead-simple, crystal-clear playbook with bullet points and footy analogies.
+  - O-46.2 | stated | Wants no waffle and no hidden meanings in the wording.
+  - O-46.3 | stated | Feels nervous and wants a quick breathing trick first.
+  - O-46.4 | behavior | Wants iterative role-play and a script checklist they can tweak.
+  - O-46.5 | reaction | Thinks face-to-face beats texting for this boundary chat.
+- E-47 | 2025-11-13 | source: S-47 | Planning a Port Ellis podcast sprint and audio cleanup.
+  - O-47.1 | behavior | Wants bullets and scan-friendly checklists.
+  - O-47.2 | behavior | Wants a casual football-banter tone and keeps the footy refs coming.
+  - O-47.3 | reaction | Feels overloaded by the sprint and wants a high-level overview first, then step-by-step tasks.
+- E-48 | 2025-11-13 | source: S-48 | Last-minute cup-final media blitz planning with a stressed, checklist-first tone.
+  - O-48.1 | stated | Wants hour-by-hour help in numbered checklists and bullet-point summaries.
+  - O-48.2 | stated | Feels overwhelmed and says a checklist will keep them from melting.
+- E-49 | 2025-11-14 | source: S-49 | Collaborative poetry chain about Preston, travel, and terrace chants.
+  - O-49.1 | behavior | Asked to keep the poetry chain to tight two-line stanzas.
+  - O-49.2 | behavior | Asked for a quick bullet recap of the steps because memory feels unreliable.
+- E-50 | 2025-11-16 | source: S-50 | Charity-auction speech jitters and a rehearsal plan.
+  - O-50.1 | event | Is feeling pre-speech jitters about a charity auction in 3 days.
+  - O-50.2 | stated | Wants a casual, playful football-banter tone with a dash of sarcasm.
+  - O-50.3 | stated | Wants step-by-step rehearsal drills and a clear 3-day plan for the speech.
+- E-51 | 2025-11-17 | source: S-51 | Brainstormed Northreach as a dragon football setting and narrowed the world-building scope.
+  - O-51.1 | behavior | Asked for starter ideas in bullets because skimming helps.
+  - O-51.2 | behavior | Wanted a step-through approach so the world-building stays easy to follow.
+  - O-51.3 | behavior | Asked to lock one piece at a time today and leave the rest for later.
+- E-52 | 2025-11-18 | source: S-52 | Short chat about a welcome speech for a youth football outreach in Valencia.
+  - O-52.1 | event | Landed in Valencia for a year-long logistics project and runs a bilingual youth football outreach on the side.
+  - O-52.2 | behavior | Asked for a quick 2-minute welcome speech in Spanish covering safety, schedule, and fun.
+  - O-52.3 | behavior | Asked to add a line asking parents to volunteer for transport to away matches.
+- E-53 | 2025-11-19 | source: S-53 | Support chat about recovering from a workplace mistake and rebuilding confidence.
+  - O-53.1 | behavior | Asked for a clear step-by-step comeback plan after a workplace mistake.
+  - O-53.2 | behavior | Asked for a football example for the grounding drill.
+  - O-53.3 | behavior | Wants a weekly checklist to keep by the monitor.
+  - O-53.4 | behavior | Wants a quick check-in next week to stay on track.
+  - O-53.5 | reaction | Reacted casually, said "class" and "cheers", and felt lighter after the recap.
+- E-54 | 2025-11-20 | source: S-54 | User has a six-month secondment to Bangladesh to run flood-relief logistics.
+  - O-54.1 | stated | Is seconded to Bangladesh for six months to run NorthWest Freight Solutions' flood-relief logistics.
+  - O-54.2 | behavior | Asked for a short Bengali phrase to ask truck drivers if the road ahead is passable.
+- E-55 | 2025-11-20 | source: S-55 | Homesick chat about Toronto and family routines.
+  - O-55.1 | stated | Misses Preston and family match rituals; feels head all over the place and wants to talk.
+  - O-55.2 | stated | Wants things kept chill and says therapy jargon makes them twitchy.
+  - O-55.3 | stated | Is big on checklists and wants a day-by-day plan.
+  - O-55.4 | stated | Wants real talk, not cheerleading.
+- E-56 | 2025-11-23 | source: S-56 | Story-sprint chat about a Preston North End ethics premise.
+  - O-56.1 | behavior | Wants fast bullet lists, tiny chunks, and a timeline for brainstorming help.
+  - O-56.2 | behavior | Wants step-by-step skeletons and Q&A turns to think faster.
+  - O-56.3 | behavior | Wants a casual football-banter tone with dry humor and no puns in creative riffing.
+  - O-56.4 | behavior | Wants a Discord-ready bullet doc when sharing the outline.
+- E-57 | 2025-11-24 | source: S-57 | Job-search setback and interview-coaching chat.
+  - O-57.1 | stated | Has had 25 job rejections in three months and feels knackered.
+  - O-57.2 | stated | Wants hard tactics and weekly checkpoints to keep the job search on track.
+- E-58 | 2025-11-24 | source: S-58 | Supportive job-search chat about rejections, interview prep, salary nerves, and a weekly check-in.
+  - O-58.1 | behavior | Asked to skip pep talk and go straight to a step-by-step fix.
+  - O-58.2 | behavior | Wants a weekly Monday-night check-in for the job-search sprint.
+- E-59 | 2025-11-24 | source: S-59 | Short chat about a concise weekly status report template and polite Japanese openings/closings.
+  - O-59.1 | event | Relocated to Tokyo to head the new Asia-Pacific logistics hub.
+  - O-59.2 | behavior | Asked for a concise weekly status-report template and polite Japanese opening and closing phrases.
+- E-60 | 2025-11-25 | source: S-60 | Podcast-prep anxiety and a request for chill, checklist-driven guidance.
+  - O-60.1 | stated | Feels proper imposter-syndrome panic with the podcast six days away.
+  - O-60.2 | behavior | Wants step-by-step, chill help with tick-box lists after each bit.
+  - O-60.3 | behavior | Wants a quick challenge each time so they do not just scroll passively.
+- E-61 | 2025-11-26 | source: S-61 | Missed courier cutoff for Carlos's camera gear and felt very stressed, then resolved it before kickoff.
+  - O-61.1 | stated | Wants bullet-point help, no waffle, and a daft joke right now.
+  - O-61.2 | stated | Asked for a later check-in because they spiral when left alone with thoughts.
+- E-62 | 2025-11-26 | source: S-62 | Drafted a diplomatic apology after a fantasy-football dispute and later saved a recap.
+  - O-62.1 | behavior | Asked for a quick back-and-forth mock chat in case Alice got cheeky.
+  - O-62.2 | behavior | Asked for shorter replies so they would not overthink.
+  - O-62.3 | behavior | Asked for a super quick email-style summary to stash the takeaway.
+  - O-62.4 | behavior | Asked for a quick breathing hack when anxiety spiked.
+  - O-62.5 | behavior | Asked for a random Preston North End stat as distraction.
+  - O-62.6 | reaction | Said they felt loads better after saving the summary.
+- E-63 | 2025-11-27 | source: S-63 | Short chat about logo feedback, check-ins, and response style.
+  - O-63.1 | behavior | Wanted blunt, no-fluff critique and said they could take it if the logo was bad.
+  - O-63.2 | behavior | Wanted feedback in writing and said they hate calls.
+  - O-63.3 | behavior | Wanted next steps as a checklist with boxes to tick.
+  - O-63.5 | behavior | Said they need replies within a couple hours while swamped at work.
+  - O-63.6 | behavior | Wanted a brief written Wednesday-night check-in so they do not spiral again.
+  - O-63.7 | behavior | Said football analogies help them get it faster.
+- E-64 | 2025-11-28 | source: S-64 | Tight-deadline zine planning chat with clear-task and blunt-feedback preferences.
+  - O-64.1 | stated | Wants baby-step tasks and future lists capped at five while overwhelmed by the zine deadline.
+  - O-64.2 | stated | Wants blockers called out plainly with no sugarcoating.
+- E-65 | 2025-11-29 | source: S-65 | Talked through a boundary-setting script with a flatmate.
+  - O-65.1 | stated | Wants laid-back, step-by-step help and dislikes formal chats.
+  - O-65.2 | stated | Wants short answers because big blocks fry their brain.
+  - O-65.3 | stated | Wants to keep doing step-by-step chats when stuff crops up.
+- E-66 | 2025-11-30 | source: S-66 | Panic grounding and recovery chat.
+  - O-66.1 | stated | Had a panic attack with a racing heart and tingling fingers.
+  - O-66.2 | behavior | Wants bullet-point help and screenshot-ready steps in one go.
+  - O-66.3 | behavior | Wants football-flavoured reassurance and a super-short mantra.
+  - O-66.4 | stated | Is drinking about five coffees before lunch.
+  - O-66.5 | stated | Woke up calmer and kept repeating the mantra.
+- E-67 | 2025-11-30 | source: S-67 | Panic attack grounding and a screenshot-friendly checklist.
+  - O-67.1 | behavior | Asked for tiny steps, no big paragraphs, and screenshot-friendly bullets.
+  - O-67.2 | reaction | Said the grounding worked, felt steadier, and is winding down with tea and highlights.
+- E-68 | 2025-12-04 | source: S-68 | Card-shoebox rescue and valuation starting point.
+  - O-68.1 | event | Found about 200 1960s Japanese baseball cards, including rookie Sadaharu Oh and Nagashima with faded sigs.
+  - O-68.2 | stated | Estate paperwork is due in 3 weeks and a braces bill is looming, so step-by-step bullets would be ace.
+- E-69 | 2025-12-07 | source: S-69 | Long chat about setting polite boundaries with a noisy flatmate and finding a low-drama script.
+  - O-69.1 | stated | Wants step-by-step help and to keep the roommate talk indirect for now.
+  - O-69.2 | reaction | Feels loads better after the prep and will report back.
+- E-70 | 2025-12-07 | source: S-70 | Boundary-talk practice with roommate noise and a calm script.
+  - O-70.1 | behavior | Wants step-by-step phrasing and exact lines for a roommate boundary talk.
+  - O-70.2 | stated | Wants it to sound like normal chat, not an HR memo, with a football reference.
+  - O-70.3 | reaction | Said the draft felt sound and left them feeling loads better.
+- E-71 | 2025-12-09 | source: S-71 | Helped digest a national defence white paper with a relaxed, bullet-pointed style.
+  - O-71.1 | behavior | Asked for a zoomed-out bullet-point summary first.
+  - O-71.2 | behavior | Asked to keep it chill, jargon-free, and emoji-free while keeping the relaxed vibe.
+- E-72 | 2025-12-09 | source: S-72 | Chat about polishing comic dialogue on page 4.
+  - O-72.1 | behavior | Asked for several alternate dialogue lines in bullet style.
+  - O-72.2 | stated | Wanted the dialogue cheeky, medium-snarky, and PG.
+  - O-72.3 | stated | Wanted it super PG because a little cousin will read it.
+  - O-72.4 | stated | Wanted the sidekick extra hopeful with no snark.
+- E-73 | 2025-12-10 | source: S-73 | Charity app overhaul stress and a few coping tactics.
+  - O-73.1 | stated | Wants step-by-step bullet help and a simple checklist.
+  - O-73.2 | stated | Wants footy lingo and a casual tone.
+  - O-73.3 | event | Is stressed by a charity app overhaul with three weeks left and a slow team.
+  - O-73.4 | stated | Has a daily 2 pm slump and wants a gentle midday reminder.
+  - O-73.5 | reaction | Sophie replied "sounds good," and that eased the worry.
+- E-74 | 2025-12-10 | source: S-74 | Crisis briefing prep after a warehouse incident.
+  - O-74.1 | event | Was bumped up to crisis spokesperson and has a first press briefing tomorrow morning.
+  - O-74.2 | behavior | Asked for a concise four-point checklist and a brief neutral line for fault questions.
+- E-75 | 2025-12-11 | source: S-75 | Collaborative mystery-planning for a 1920s speakeasy murder party.
+  - O-75.1 | behavior | Wants tidy bullet beats with slow-drip clues, bone-dry jokes, and no bonkers twists.
+  - O-75.2 | behavior | Wants a small set of numbered options when choosing the big reveal.
+- E-76 | 2025-12-11 | source: S-76 | Planning a 1920s speakeasy murder-mystery night with a Preston North End touch.
+  - O-76.1 | behavior | Wants bullet beats, drip-fed clues, dry jokes, one final twist, and a few Preston nods.
+  - O-76.2 | stated | Examples help and step-by-step walkthroughs make scene planning easier.
+- E-77 | 2025-12-11 | source: S-77 | Collaborative murder-mystery brainstorming for a pub-night speakeasy whodunnit.
+  - O-77.1 | stated | Wants bullet lists kept.
+  - O-77.2 | stated | Wants the humour dry, with no cheesy gags.

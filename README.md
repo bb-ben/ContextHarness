@@ -12,7 +12,7 @@ preferences change after life events. That makes it a sequential testbed for
 whether the layer keeps the user's state current.
 
 **Status:** contract **v3.1**. The layer, instrumentation, and Gemini and OpenAI
-adapters are built and tested offline (154 tests). A model that follows the
+adapters are built and tested offline (155 tests). A model that follows the
 contract produces zero violations across all 901 events of the HorizonBench sample.
 
 **Real runs so far:**
@@ -33,6 +33,13 @@ contract produces zero violations across all 901 events of the HorizonBench samp
   answered D B B, recent history B B B, and the rolling summary A. The item is hard
   for this model whatever memory it gets; see
   [`examples/baselines_item0/`](examples/baselines_item0).
+- **v3.1 on three items ($14.79).** No method, ours or a baseline, answers any of
+  the three correctly. One item's label contradicts its own conversations, and
+  another's options are ambiguous. On the valid one (item 6), the rolling summary
+  holds the person's changed preferences better than our agent, because v3.1 filed
+  a preference repeated across many tasks under each task's goal. No memory recorded
+  any change. See [`examples/multi_item_v31/`](examples/multi_item_v31) and the
+  [design log](docs/MEMORY_LAYER.md#v31-on-three-items).
 - **Memory judge on that item.** Graded against the ground-truth attributes, v3
   holds 0.38 of the person's current preferences, v2 0.0, and the rolling summary
   0.75. The summary's lead comes from role-play content recorded before the change,
@@ -51,7 +58,7 @@ Requires Python ≥ 3.12 and [uv](https://docs.astral.sh/uv/).
 
 ```bash
 uv sync
-uv run pytest -q                     # 154 tests, offline, no credentials
+uv run pytest -q                     # 155 tests, offline, no credentials
 export GEMINI_API_KEY=...            # for real-model runs (default model: gemini-3.7-flash)
 ```
 
@@ -189,12 +196,13 @@ v2), so it says nothing about the layer.
 
 ## Next steps
 
-1. **Run item 0 under v2** with Gemini. Read its `inspect-memory` output and trace,
-   especially the life event at S-14 and whether the old preference is superseded.
-   Then adjust `agent.md`.
-2. **Build a length-balanced evaluation subset** before comparing accuracy (see the
-   dataset notes).
-3. **Add an LLM judge** for meaning-level contradictions and for whether the final
-   state matches the true preference.
+1. **Contract v3.2:** turn a wish repeated across different tasks into a hypothesis
+   on a dimension; separate how to talk to the person from how the work they ask
+   for should sound; give goals review dates so past-due goals close.
+2. **Vet items before trusting their answers.** Check, offline, that a changed
+   attribute actually shows up in the sessions after the change, and that the options
+   separate it. Items 0 and 5 would fail this.
+3. **Check the judge against a person's reading** of a few memories, and try a
+   stronger judge model.
 4. **Add a FoodBody event renderer and decision/outcome statuses** once a schema is
    supplied.

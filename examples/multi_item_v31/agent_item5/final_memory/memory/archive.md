@@ -1,0 +1,35 @@
+# Archive
+- T-5.1 | superseded | 2025-10-03 | review: 2025-10-10 | basis: O-5.1 | until: 2025-10-10 | superseded_by: T-9.1 | Is struggling with breakup sadness and poor sleep this week.
+- T-6.1 | expired | 2025-10-05 | review: 2025-10-12 | basis: O-6.2 | ended: 2025-10-12 | Wants this starship horror RP kept PG-13 with a timeout safe word.
+- T-8.1 | superseded | 2025-10-07 | review: 2025-10-14 | basis: O-8.2 | until: 2025-10-14 | superseded_by: T-17.1 | Is feeling anxious about the swap and wants quick calming support.
+- T-9.1 | expired | 2025-10-10 | review: 2025-10-17 | basis: O-9.1 | ended: 2025-10-20 | Is still struggling with breakup sadness, poor sleep, appetite loss, and vivid breakup dreams this week.
+- T-9.2 | expired | 2025-10-10 | review: 2025-10-17 | basis: O-9.3 | ended: 2025-10-20 | Wants sleep support to stay drug-free right now.
+- T-9.3 | expired | 2025-10-10 | review: 2025-10-17 | basis: O-9.4 | ended: 2025-10-20 | Is doom-scrolling an ex's accounts and skipping pub quiz or staying home when low.
+- T-10.1 | superseded | 2025-10-11 | review: 2025-10-18 | basis: O-10.1, O-10.2 | until: 2025-10-11 | superseded_by: T-11.1 | Is having a panic spike and wants simple grounding, short logic, and physical moves right now.
+- T-11.1 | superseded | 2025-10-11 | review: 2025-10-18 | basis: O-11.1, O-11.2 | until: 2025-10-11 | superseded_by: T-12.1 | Is having a panic spike and wants simple grounding, plain speech, and physical moves right now.
+- T-12.1 | expired | 2025-10-11 | review: 2025-10-18 | basis: O-12.3 | ended: 2025-10-20 | Is coming down from a panic spike, is not suicidal, and cannot sleep tonight.
+- T-15.1 | expired | 2025-10-13 | review: 2025-10-20 | basis: O-15.2 | ended: 2025-10-20 | Prefers text for awkward boundary-setting because it feels safer right now.
+- T-15.2 | expired | 2025-10-13 | review: 2025-10-20 | basis: O-15.3, O-16.3 | ended: 2025-10-20 | Feels lighter after the roommate boundary chat went well.
+- T-17.1 | expired | 2025-10-14 | review: 2025-10-21 | basis: O-17.1 | ended: 2025-10-22 | supersedes: T-8.1 | Is having a pre-speech anxiety spike and wants quick calming support right now.
+- T-18.1 | expired | 2025-10-16 | review: 2025-10-23 | basis: O-18.1, O-18.5 | ended: 2025-10-25 | Had a panic spike tonight and is now exhausted, wanting to sleep.
+- T-19.1 | expired | 2025-10-20 | review: 2025-10-27 | basis: O-19.1 | ended: 2025-10-27 | Is acting as Crisis Logistics Manager during the truckers' strike.
+- T-21.1 | superseded | 2025-10-25 | review: 2025-11-01 | basis: O-21.1, O-21.2, O-21.3 | until: 2025-11-02 | superseded_by: T-30.1 | Is feeling self-critical after a shipping mistake and wants tiny, checklist-style coping support tonight.
+- T-22.1 | expired | 2025-10-25 | review: 2025-11-01 | basis: O-22.3 | ended: 2025-11-02 | Wants a chill Friday debrief next week.
+- T-23.1 | expired | 2025-10-27 | review: 2025-11-03 | basis: O-23.1, O-23.2, O-23.3 | ended: 2025-11-03 | Is anxious about a charity auction speech and wants direct step-by-step support right now.
+- T-24.1 | expired | 2025-10-28 | review: 2025-11-04 | basis: O-24.1 | ended: 2025-11-04 | Is having a pre-speech anxiety spike and wants quick calming support right now.
+- T-26.1 | expired | 2025-10-29 | review: 2025-11-05 | basis: O-26.2 | ended: 2025-11-05 | Wants a daily mindfulness routine fitted around 6 a.m.–2 p.m. logistics shifts and low-clutter reminders right now.
+- T-27.1 | expired | 2025-10-30 | review: 2025-11-03 | basis: O-27.1 | ended: 2025-11-03 | Wants little text nudges for each matchday checkpoint.
+- T-27.2 | expired | 2025-10-30 | review: 2025-11-03 | basis: O-27.2 | ended: 2025-11-03 | Prefers a later Friday departure and a decent hotel for this away-day.
+- T-28.1 | expired | 2025-10-30 | review: 2025-11-06 | basis: O-28.1 | ended: 2025-11-06 | Wants rapid replies while overloaded at work today.
+- T-28.2 | expired | 2025-10-30 | review: 2025-10-31 | basis: O-28.2 | ended: 2025-10-31 | Needs a reminder tomorrow at noon to chase coach deposits.
+- T-29.1 | expired | 2025-10-31 | review: 2025-11-07 | basis: O-29.1, O-29.2 | ended: 2025-11-07 | Is stressed about a fantasy league scoring dispute and wants to sort it before lineup lock tomorrow.
+- T-30.1 | superseded | 2025-11-02 | review: 2025-11-09 | basis: O-30.1, O-30.2, O-30.4 | until: 2025-11-07 | superseded_by: T-43.1 | Is spiraling after a workplace mistake and wants step-by-step coping support with a tomorrow-morning nudge.
+- T-31.1 | expired | 2025-11-03 | review: 2025-11-10 | basis: O-31.1, O-31.2, O-31.4 | ended: 2025-11-10 | Is anxious about the charity app revamp, sleep-deprived, and wants short, concrete coping support tonight.
+- T-32.1 | expired | 2025-11-03 | review: 2025-11-10 | basis: O-32.2 | ended: 2025-11-10 | Prefers a smaller, private feedback circle for the cover because public posts stress them out.
+- T-36.1 | superseded | 2025-11-04 | review: 2025-11-07 | basis: O-36.2 | until: 2025-11-04 | superseded_by: T-37.1 | Is cramming for pub quiz finals in 3 days.
+- T-37.1 | expired | 2025-11-04 | expires: 2025-11-06 | basis: O-37.1, O-37.2 | ended: 2025-11-06 | Wants rapid drill-based pub-quiz help with live scoring while cramming for the final.
+- T-38.1 | expired | 2025-11-04 | review: 2025-11-11 | basis: O-38.2 | ended: 2025-11-11 | Wants a simple copyable Trello template for the archive sprint planning conversation.
+- T-43.1 | expired | 2025-11-07 | review: 2025-11-14 | basis: O-43.1, O-43.2 | ended: 2025-11-14 | supersedes: T-30.1 | Is rattled by a costly workplace mistake and wants step-by-step, positive support in a football-banter tone tonight.
+- T-44.1 | expired | 2025-11-08 | review: 2025-11-15 | basis: O-44.4 | ended: 2025-11-16 | Feels intense imposter syndrome about the podcast episode this week.
+- T-46.1 | expired | 2025-11-11 | review: 2025-11-18 | basis: O-46.3 | ended: 2025-11-18 | Is nervous about the boundary conversation and wants a quick breathing trick first.
+- T-46.2 | expired | 2025-11-11 | review: 2025-11-18 | basis: O-46.5 | ended: 2025-11-18 | Prefers face-to-face for the roommate boundary chat.

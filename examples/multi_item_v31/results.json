@@ -1,0 +1,82 @@
+{
+  "model": "gpt-5.4-mini",
+  "effort": "medium",
+  "contract": "v3.1",
+  "answer_strategy": "dimension-first",
+  "judge": "gpt-5.4-mini, high effort, majority of 3",
+  "total_cost_usd": 14.79,
+  "items": {
+    "item0": {
+      "correct_letter": "C",
+      "old_preference_trap": "D",
+      "agent": {
+        "answer": "B",
+        "cost_usd": 1.36,
+        "model_calls": 96,
+        "current_fidelity": 0.375,
+        "changed_fidelity": 0.5,
+        "changes_recorded": "0/3"
+      },
+      "summary": {
+        "answer": "A",
+        "cost_usd": 0.35,
+        "current_fidelity": 0.75,
+        "changed_fidelity": 1.0,
+        "changes_recorded": "0/3"
+      },
+      "full_history_answers": [
+        "D",
+        "B",
+        "B"
+      ]
+    },
+    "item5": {
+      "correct_letter": "D",
+      "old_preference_trap": "B",
+      "agent": {
+        "answer": "E",
+        "cost_usd": 4.96,
+        "model_calls": 317,
+        "current_fidelity": 0.0,
+        "changed_fidelity": 0.0,
+        "changes_recorded": "0/4"
+      },
+      "summary": {
+        "answer": "E",
+        "cost_usd": 1.09,
+        "current_fidelity": 0.0,
+        "changed_fidelity": 0.0,
+        "changes_recorded": "0/4"
+      },
+      "full_history_answers": [
+        "E",
+        "E",
+        "E"
+      ]
+    },
+    "item6": {
+      "correct_letter": "A",
+      "old_preference_trap": "D",
+      "agent": {
+        "answer": "D",
+        "cost_usd": 5.34,
+        "model_calls": 296,
+        "current_fidelity": 0.3,
+        "changed_fidelity": 0.167,
+        "changes_recorded": "0/3"
+      },
+      "summary": {
+        "answer": "D",
+        "cost_usd": 0.93,
+        "current_fidelity": 0.6,
+        "changed_fidelity": 0.333,
+        "changes_recorded": "0/3"
+      },
+      "full_history_answers": [
+        "D",
+        "D",
+        "D"
+      ]
+    }
+  }
+}

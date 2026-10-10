@@ -1,0 +1,260 @@
+{
+  "item_id": "Marcus Trevino_event31_20260327_turn3_facilitation_style_preferences_160_counterfactuals.json",
+  "judge_model": "gpt-5.4-mini",
+  "memory_chars": 10852,
+  "attributes": [
+    {
+      "attribute": "consensus_importance",
+      "current": "medium",
+      "changed": false,
+      "memory_value": "nothing",
+      "current_match": "absent",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "No current belief about needing consensus; closest entries are P-27.1 'work through ideas together' and P-25.1 'outside stakeholder voices involved from the start'.",
+      "votes": [
+        "partial",
+        "absent",
+        "absent"
+      ]
+    },
+    {
+      "attribute": "decision_speed",
+      "current": "deliberate",
+      "original": "moderate",
+      "changed": true,
+      "memory_value": "decides deliberately with a framework",
+      "current_match": "matches",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "P-13.1 'likes to decide deliberately' and 'wants a framework before diving in'; context.md 'Likes to decide deliberately with a framework and weigh pros and cons'.",
+      "votes": [
+        "matches",
+        "matches",
+        "matches"
+      ]
+    },
+    {
+      "attribute": "data_driven_emphasis",
+      "current": "True",
+      "original": "False",
+      "changed": true,
+      "memory_value": "nothing",
+      "current_match": "absent",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "No current belief that decisions should be grounded in data/evidence; closest items are G-23.1 'bias testing' and 'grounded in concrete cases,' which are about ethics drafting rather than a general decision style.",
+      "votes": [
+        "partial",
+        "absent",
+        "absent"
+      ]
+    },
+    {
+      "attribute": "tolerance_for_ambiguity",
+      "current": "low",
+      "original": "high",
+      "changed": true,
+      "memory_value": "prefers structured, iterative handling of open-ended issues",
+      "current_match": "partial",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "P-13.1 'wants a framework before diving in'; T-24.1 'structured, iterative way to work through the facial-recognition launch and not solve everything today'.",
+      "votes": [
+        "partial",
+        "absent",
+        "partial"
+      ]
+    }
+  ],
+  "current_fidelity": 0.375,
+  "changed_fidelity": 0.5,
+  "stale": 0,
+  "changes_recorded": 0,
+  "n_attributes": 4,
+  "n_changed": 3,
+  "ungraded": [],
+  "repeats": 3,
+  "agreement": 0.75,
+  "current_fidelity_range": [
+    0.25,
+    0.625
+  ],
+  "estimated_cost_usd": 0.1214,
+  "runs": [
+    {
+      "item_id": "Marcus Trevino_event31_20260327_turn3_facilitation_style_preferences_160_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 10852,
+      "attributes": [
+        {
+          "attribute": "consensus_importance",
+          "current": "medium",
+          "changed": false,
+          "memory_value": "collaborative / stakeholder-involved",
+          "current_match": "partial",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-27.1 'Wants to work through ideas together rather than be handed the answer'; P-25.1 'Wants outside stakeholder voices involved from the start'; T-28.1 'balanced, respectful full-picture treatment'."
+        },
+        {
+          "attribute": "decision_speed",
+          "current": "deliberate",
+          "original": "moderate",
+          "changed": true,
+          "memory_value": "decides deliberately with a framework",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-13.1 'likes to decide deliberately' and 'wants a framework before diving in'; context.md 'Likes to decide deliberately with a framework and weigh pros and cons'."
+        },
+        {
+          "attribute": "data_driven_emphasis",
+          "current": "True",
+          "original": "False",
+          "changed": true,
+          "memory_value": "prefers concrete examples / concrete cases",
+          "current_match": "partial",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-12.1 'Prefers concrete examples over abstract theory'; G-23.1 'wants the draft grounded in concrete cases'."
+        },
+        {
+          "attribute": "tolerance_for_ambiguity",
+          "current": "low",
+          "original": "high",
+          "changed": true,
+          "memory_value": "prefers structured, iterative handling of open-ended issues",
+          "current_match": "partial",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-13.1 'wants a framework before diving in'; T-24.1 'structured, iterative way to work through the facial-recognition launch and not solve everything today'."
+        }
+      ],
+      "current_fidelity": 0.625,
+      "changed_fidelity": 0.667,
+      "stale": 0,
+      "changes_recorded": 0,
+      "n_attributes": 4,
+      "n_changed": 3,
+      "ungraded": [],
+      "estimated_cost_usd": 0.0612
+    },
+    {
+      "item_id": "Marcus Trevino_event31_20260327_turn3_facilitation_style_preferences_160_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 10852,
+      "attributes": [
+        {
+          "attribute": "consensus_importance",
+          "current": "medium",
+          "changed": false,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No current belief about needing consensus; closest entries are P-27.1 'work through ideas together' and P-25.1 'outside stakeholder voices involved from the start'."
+        },
+        {
+          "attribute": "decision_speed",
+          "current": "deliberate",
+          "original": "moderate",
+          "changed": true,
+          "memory_value": "deliberate",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-13.1 current: 'likes to decide deliberately' / 'wants a framework before diving in'; P-9.1 superseded says the same."
+        },
+        {
+          "attribute": "data_driven_emphasis",
+          "current": "True",
+          "original": "False",
+          "changed": true,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No current belief that decisions should be grounded in data/evidence; closest items are G-23.1 'bias testing' and 'grounded in concrete cases,' which are about ethics drafting rather than a general decision style."
+        },
+        {
+          "attribute": "tolerance_for_ambiguity",
+          "current": "low",
+          "original": "high",
+          "changed": true,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No explicit ambiguity-tolerance belief; closest are P-13.1 'wants a framework before diving in' and T-24.1 'structured, iterative way,' but neither states comfort with ambiguity."
+        }
+      ],
+      "current_fidelity": 0.25,
+      "changed_fidelity": 0.333,
+      "stale": 0,
+      "changes_recorded": 0,
+      "n_attributes": 4,
+      "n_changed": 3,
+      "ungraded": [],
+      "estimated_cost_usd": 0.03167
+    },
+    {
+      "item_id": "Marcus Trevino_event31_20260327_turn3_facilitation_style_preferences_160_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 10852,
+      "attributes": [
+        {
+          "attribute": "consensus_importance",
+          "current": "medium",
+          "changed": false,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No direct belief about seeking consensus; closest is P-27.1: \"wants to work through ideas together rather than be handed the answer,\" which is collaboration, not consensus."
+        },
+        {
+          "attribute": "decision_speed",
+          "current": "deliberate",
+          "original": "moderate",
+          "changed": true,
+          "memory_value": "deliberate",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "P-13.1 current: \"likes to decide deliberately\" and \"prefers weighing pros and cons across alternatives.\""
+        },
+        {
+          "attribute": "data_driven_emphasis",
+          "current": "True",
+          "original": "False",
+          "changed": true,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No current belief about grounding decisions in data/evidence; closest is P-12.1: \"prefers concrete examples over abstract theory,\" which is explanation style, not data-driven decision-making."
+        },
+        {
+          "attribute": "tolerance_for_ambiguity",
+          "current": "low",
+          "original": "high",
+          "changed": true,
+          "memory_value": "prefers structured, iterative handling of open-ended problems",
+          "current_match": "partial",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "T-24.1: \"wants a structured, iterative way to work through the facial-recognition launch and not solve everything today\"; P-13.1: \"likes to decide deliberately with a framework and weigh pros and cons.\""
+        }
+      ],
+      "current_fidelity": 0.375,
+      "changed_fidelity": 0.5,
+      "stale": 0,
+      "changes_recorded": 0,
+      "n_attributes": 4,
+      "n_changed": 3,
+      "ungraded": [],
+      "estimated_cost_usd": 0.02853
+    }
+  ]
+}

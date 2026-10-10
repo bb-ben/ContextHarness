@@ -1,0 +1,70 @@
+# Goals
+- G-0.1 | active | 2025-09-28 | due: 2025-09-29 | basis: O-0.5, O-0.4 | Prepare for and win the housing debate for the neighborhood.
+  - 2025-09-28 (S-1, O-1.2, O-1.5): asked for quick rebuttal lines and is gathering neighborhood input before the debate.
+- G-2.1 | active | 2025-10-01 | due: 2025-10-03 | basis: O-2.1, O-2.2 | Counter the smear and mobilize support for the school board rally.
+- G-3.1 | active | 2025-10-01 | basis: O-3.1, O-3.2 | Mobilize against the mega-warehouse zoning in Bosa.
+- G-4.1 | active | 2025-10-01 | due: 2025-10-07 | basis: O-4.1, O-4.3 | Mobilize support for the Eastside Crossing safety campaign before Tuesday's vote.
+  - 2025-10-01 (S-4, O-4.3): is heading out with Marcela to start door-knocking and treating Tuesday as decisive.
+- G-8.1 | active | 2025-10-06 | basis: O-8.2 | Push a semiconductor-sovereignty pitch into the next local mobilization.
+  - 2025-11-05 (S-33, O-33.1, O-33.2): shaped the chip-risk pitch around investors, Bosa impacts, and the green plan.
+- G-9.1 | active | 2025-10-07 | due: 2025-10-17 | basis: O-9.1 | Prepare for the free-speech panel.
+  - 2025-10-07 (S-9, O-9.1, O-9.2, O-9.3): wants the panel prep to use case law, bullets, APA 7 references, and a warm persuasive frame.
+- G-10.1 | active | 2025-10-10 | due: 2025-10-17 | basis: O-10.2 | Finish the final NGO paper on fisheries subsidies.
+  - 2025-10-10 (S-10, O-10.1, O-10.2, O-10.3, O-10.4): asked for APA 7th citations, a professional summary for Marcela, and a final checklist.
+- G-11.1 | active | 2025-10-11 | due: 2025-10-13 | basis: O-11.2, O-11.3 | Prepare the Marcela briefing and rally talking points on the defense white paper.
+  - 2025-10-11 (S-11, O-11.1, O-11.2, O-11.3): asked for moderate detail, checklist ordering, and acronym definitions for Marcela's briefing.
+  - 2025-10-11 (S-12, O-12.1, O-12.2): sharpened the brief into history, scenario, and audience-specific rally framing.
+  - 2025-10-12 (S-13, O-13.1, O-13.3, O-13.4): wants the fisheries message simplified into numbered steps and analogies, and is racing the one-week Geneva window.
+- G-15.1 | active | 2025-10-15 | due: 2025-10-17 | basis: O-15.1 | Stop the zoning change and keep Old Oak Community Center open.
+- G-18.1 | active | 2025-10-20 | basis: O-18.2 | Draft a formal transition report for current community projects, including financial oversight.
+- G-19.1 | active | 2025-10-26 | due: 2025-10-28 | basis: O-19.1, O-19.3 | Prepare the rebuttal for the police budget hearing.
+  - 2025-10-26 (S-19, O-19.1, O-19.3): wants a hard-hitting, local rebuttal with a polished 3-minute opening and a Q&A cheat sheet.
+- G-20.1 | active | 2025-10-27 | due: 2025-10-28 | basis: O-20.1, O-20.2, O-20.3 | Verify the vaccine budget claims before tomorrow's community talk.
+  - 2025-11-13 (S-39, O-39.1, O-39.2): asked for a transfers table, executive memo, three hard-hitting bullets, a local metaphor, decisive answers, and direct links for the vaccine-budget fact-check.
+  - 2025-11-13 (S-40, O-40.1, O-40.2): wants speech-ready talking points and a memorable metaphor to explain the funding answer clearly.
+  - 2025-11-13 (S-41, O-41.1, O-41.2, O-41.3): wants a punchy table, a kid-simple analogy, and a charge-leading comeback for the rally.
+- G-23.1 | active | 2025-10-30 | due: 2025-11-09 | basis: O-23.1 | Prepare for the free-speech panel on rally defense.
+  - 2025-10-30 (S-24, O-24.1, O-24.2): narrowed the panel prep to a strong, measured legal defense with case law, a framework, and APA citations.
+- G-25.1 | active | 2025-11-01 | basis: O-25.1, O-25.3 | Build the Bosa National Development Plan rally strategy and volunteer talking points.
+  - 2025-11-21 (S-53, O-53.1, O-53.2, O-53.3, O-53.4): sharpened the land-reform rally brief with a comparison table, numbered steps, Zero Hunger logistics, and plain-language case studies.
+  - 2025-11-03 (S-28, O-28.1, O-28.2, O-28.3): sharpened the Bosa agrarian-reform pitch around food prices, anti-speculation framing, and local register.
+  - 2025-11-14 (S-42, O-42.1, O-42.2, O-42.3, O-42.4, O-42.5): shaped the rally speech into a vision-first, stepwise outline with maps, murals, and neighborhood-level examples.
+  - 2025-11-19 (S-49, O-49.1, O-49.2): turned the Potencia Mundial de la Vida frame into Bosa-grounded analogies and flyer-ready lines.
+  - 2025-11-28 (S-56, O-56.1, O-56.2, O-56.3): refined the node logistics into crew-by-crew steps, foolproof rally-day packing, and backup comms if the hub gets blocked.
+  - 2025-11-29 (S-59, O-59.1): sharpened the rally frame with Bosa-local food-talk metaphors and a simple pocket cheat sheet.
+  - 2025-11-30 (S-60, O-60.4, O-60.6, O-60.7, O-60.8): tied the rally to cumbia, joy as resistance, youth art, and spirit-language for Marcela and the kids.
+  - 2025-12-05 (S-63, O-63.1, O-63.2, O-63.3): narrowed the keynote to a conciliatory opening, hard facts, APA citations, and paced mobilization.
+  - 2025-12-05 (S-66, O-66.1, O-66.2): sharpened the Bosa-versus-integration argument into stage-ready bullets, a composed delivery, and formal record notes.
+- G-26.1 | active | 2025-11-02 | due: 2025-11-02 | basis: O-26.1 | Prepare the Ministry of Equality strategic review on inclusive communication protocols.
+  - 2025-11-02 (S-26, O-26.1): asked for bullet-only, proof-backed talking points with local cultural framing.
+  - 2025-11-02 (S-27, O-27.1, O-27.2): asked for APA 7 citations and a professional, persuasive ministry brief.
+  - 2025-11-15 (S-44, O-44.1, O-44.2, O-44.3): wants the review practical, local, direct, and not textbook-stiff.
+- G-29.1 | active | 2025-11-04 | due: 2025-11-06 | basis: O-29.1, O-29.2, O-29.3, O-29.4 | Prepare the rebuttal for the police budget hearing.
+  - 2025-11-05 (S-31, O-31.1, O-31.2): refined the semiconductor pitch into flowing local framing and wants proof before repeating claims.
+- G-32.1 | active | 2025-11-05 | due: 2025-11-06 | basis: O-32.2 | Prepare the public briefing on pumping-station failures.
+- G-34.1 | active | 2025-11-06 | due: 2025-11-08 | basis: O-34.1, O-34.2 | Prepare concise talking points and a brief on autonomous systems for the committee vote.
+  - 2025-11-06 (S-35, O-35.1, O-35.2): wants the brief translated into Bosa-neighbor language and a Marcela-ready one-pager before the rally.
+  - 2025-11-09 (S-36, O-36.1): asked for a step-by-step checklist, urgent framing, and a WhatsApp-ready summary for the fisheries-subsidy brief.
+  - 2025-11-15 (S-44, O-44.1, O-44.2, O-44.3): wants the review practical, local, and direct rather than textbook-stiff.
+  - 2025-11-15 (S-46, O-46.1, O-46.2): framed the review as accessible Bosa-language that keeps the movement's energy high.
+- G-45.1 | active | 2025-11-15 | due: 2025-11-17 | basis: O-45.2, O-45.3 | Prepare the 48-hour emergency food distribution report for the ministry.
+  - 2025-11-15 (S-45, O-45.2, O-45.3): wants the report to center on logistical bottlenecks, especially transport delays and warehouse capacity across Bogotá, Medellín, and Cali.
+  - 2025-12-10 (S-70, O-70.1, O-70.2, O-70.3): tightened the report into a 48-hour logistics plan, a plain-language evidence table, and a community-leadership section.
+
+  - 2025-11-15 (S-45, O-45.2, O-45.3): wants the report to center on logistical bottlenecks, especially transport delays and warehouse capacity across Bogotá, Medellín, and Cali.
+  - 2025-11-15 (S-47, O-47.1, O-47.2, O-47.3): wants the review argued in hard facts, informal Bosa language, and struggle-history framing.
+  - 2025-11-16 (S-48, O-48.1, O-48.2): turned the Bosa dialogue mess into a top-down numbered action plan and speech-ready bottom line for the organizers.
+- G-50.1 | active | 2025-11-19 | basis: O-50.2, O-50.3 | Organize the first neutral meeting between the national government and local splinter groups to de-escalate tensions.
+- G-52.1 | active | 2025-11-20 | due: 2025-11-23 | basis: O-52.2 | Draft a ceasefire protocol before the first faction-leader meeting.
+- G-57.1 | active | 2025-11-28 | basis: O-57.2 | Draft a protocol for auditing suspicious land claims.
+
+- G-64.1 | active | 2025-12-05 | basis: O-64.1, O-64.2, O-64.3, O-64.5 | Prepare for the Congressional Hearing on Urban Land Restitution Ethics.
+  - 2025-12-05 (S-64, O-64.1, O-64.2, O-64.3, O-64.5): wants a principled Bosa defense, a flowing opening, sharp rebuttals, and a pressure-test drill.
+  - 2025-12-05 (S-64, O-64.5): rehearsed a high-pressure answer framing the process as court-vetted justice, not political favors.
+  - 2025-12-05 (S-65, O-65.1, O-65.2, O-65.3, O-65.4, O-65.5): asked for a narrative report, grounded legal/cadastral framing, a top-down brief, a ten-year win scenario, and speech-ready pressure-test lines.
+  - 2025-12-09 (S-69, O-69.1, O-69.2, O-69.3, O-69.4): wants the hearing prep basic, diplomatic, and easy to skim, with inline links and a final check before tomorrow.
+  - 2025-12-11 (S-72, O-72.1, O-72.2): sharpened the hearing prep into a consensus-building opening, evidence table, direct Q&A, and measured closing.
+
+- G-71.1 | active | 2025-12-10 | due: 2025-12-11 | basis: O-71.1, O-71.2 | Prepare for the Bosa Water Rights Public Hearing.
+
+  - 2025-12-10 (S-71, O-71.2): wants the hearing prep centered on evidence, legal citation, logistics, and an early-morning checklist.

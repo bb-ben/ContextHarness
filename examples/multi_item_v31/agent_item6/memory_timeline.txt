@@ -1,0 +1,1277 @@
+S-0 · 2025-09-28
+  working context: 7 bullets (cites +G-0.1 +P-0.1 +P-0.2 +P-0.3 +T-0.1 +T-0.2)
+    + Feels anxious and keyed up about tomorrow night's housing debate (T-0.1)
+    + None
+    + Prefers concrete analogies over academic framing (P-0.2)
+    + Prepare for and win the housing debate for the neighborhood (G-0.1)
+    + Prioritizes neighborhood housing, dignity, and affordability over developer profit (P-0.3)
+    + Wants a more aggressive rebuttal style for tomorrow night's debate (T-0.2)
+    + Wants bullet-point or checklist help they can skim quickly on a phone (P-0.1)
+  episodic:
+    + E-0 [episode] Housing-debate prep for tomorrow night; user wants fast, concrete, forceful help.
+    + O-0.1 [stated] Wants quick bullet points and phone-friendly checklists.
+    + O-0.2 [stated] Prefers concrete analogies over academic framing.
+    + O-0.3 [stated] Wants more aggressive rebuttals and no more playing nice.
+    + O-0.4 [stated] Values housing as a right and neighborhoods over developer profit.
+    + O-0.5 [event] Has a housing debate tomorrow night and wants to win it for the neighborhood.
+    + O-0.6 [reaction] Felt better once the ideas were made simple and concrete.
+  state:
+    + P-0.1 [current] Wants bullet-point or checklist help they can skim quickly on a phone.
+    + P-0.2 [current] Prefers concrete analogies over academic framing.
+    + P-0.3 [current] Prioritizes neighborhood housing, dignity, and affordability over developer profit.
+    + G-0.1 [active] Prepare for and win the housing debate for the neighborhood.
+    + T-0.1 [active] Feels anxious and keyed up about tomorrow night's housing debate.
+    + T-0.2 [active] Wants a more aggressive rebuttal style for tomorrow night's debate.
+S-1 · 2025-09-28
+  working context: 8 bullets (cites +P-1.1 +T-1.1 +T-1.2 -T-0.1 -T-0.2)
+    + Feels anxious and keyed up about tomorrow morning's housing debate (T-1.1)
+    + Wants a more aggressive rebuttal style for tomorrow morning's debate (T-1.2)
+    + Wants the assistant to hand over concrete draft lines and strategic frameworks rather than open-ended discuss…
+    - Feels anxious and keyed up about tomorrow night's housing debate (T-0.1)
+    - Wants a more aggressive rebuttal style for tomorrow night's debate (T-0.2)
+  episodic:
+    + E-1 [episode] Fast debate-prep chat about housing, rebuttals, and street input.
+    + O-1.1 [stated] Feels anxious and keyed up about tomorrow morning's housing debate.
+    + O-1.2 [behavior] Asked for a quick list of lines to use on the economy and budget.
+    + O-1.3 [behavior] Wanted an attack-and-defend matrix and a final roadmap for the debate.
+    + O-1.4 [reaction] Liked the territorial-justice framing and sharper intro, saying it would help the clips.
+    + O-1.5 [event] Plans to gather neighborhood input at Hernan's stall before the debate.
+  state:
+    + P-1.1 [current] Wants the assistant to hand over concrete draft lines and strategic frameworks rather than open-ended discuss…
+    + T-1.1 [active] Feels anxious and keyed up about tomorrow morning's housing debate.
+    + T-1.2 [active] Wants a more aggressive rebuttal style for tomorrow morning's debate.
+    ~ P-0.1  basis: O-0.1, O-1.2 confirmed: 2025-09-28
+    ~ T-0.1 active -> superseded superseded_by: T-1.1
+    ~ T-0.2 active -> superseded superseded_by: T-1.2
+S-2 · 2025-10-01
+  working context: 6 bullets (cites +G-2.1 +P-2.1 +T-2.1 +T-2.2 -G-0.1 -P-0.1 -P-0.2 -P-0.3 -T-1.1 -T-1.2)
+    + Counter the smear and mobilize support for the school board rally (G-2.1)
+    + Feels stressed about noise rules and police shutdown risk for the rally (T-2.1)
+    + Wants four-hour check-ins and milestones for the next two days (T-2.2)
+    + Wants numbered steps, checklists, and executive summaries they can skim quickly on a phone (P-2.1)
+    - Feels anxious and keyed up about tomorrow morning's housing debate (T-1.1)
+    - Prefers concrete analogies over academic framing (P-0.2)
+    - Prepare for and win the housing debate for the neighborhood (G-0.1)
+    - Prioritizes neighborhood housing, dignity, and affordability over developer profit (P-0.3)
+    - Wants a more aggressive rebuttal style for tomorrow morning's debate (T-1.2)
+    - Wants bullet-point or checklist help they can skim quickly on a phone (P-0.1)
+  episodic:
+    + E-2 [episode] Emergency rally response and messaging planning.
+    + O-2.1 [behavior] Asked for numbered steps and an executive summary to move fast.
+    + O-2.2 [behavior] Wanted four-hour check-ins and milestones for the next two days.
+    + O-2.3 [stated] Feels stressed about noise rules and police shutdown risk for the rally.
+  state:
+    + P-2.1 [current] Wants numbered steps, checklists, and executive summaries they can skim quickly on a phone.
+    + G-2.1 [active] Counter the smear and mobilize support for the school board rally.
+    + T-2.1 [active] Feels stressed about noise rules and police shutdown risk for the rally.
+    + T-2.2 [active] Wants four-hour check-ins and milestones for the next two days.
+    ~ P-0.1 current -> superseded superseded_by: P-2.1
+    ~ T-1.1 active -> expired ended: 2025-10-01
+    ~ T-1.2 active -> expired ended: 2025-10-01
+S-3 · 2025-10-01
+  working context: 7 bullets (cites +G-3.1 +P-3.1 +P-3.2 +T-3.1 -G-2.1 -T-2.1 -T-2.2)
+    + Feels stressed about the warehouse zoning fight and developer lawyers (T-3.1)
+    + Mobilize against the mega-warehouse zoning in Bosa (G-3.1)
+    + Wants numbered steps, checklists, and concise summaries they can skim quickly on a phone (P-2.1)
+    + Wants plans ranked by urgency and impact, with the highest-priority items first (P-3.2)
+    + Wants the tone to stay casual, real, and humorous (P-3.1)
+    - Counter the smear and mobilize support for the school board rally (G-2.1)
+    - Feels stressed about noise rules and police shutdown risk for the rally (T-2.1)
+    - Wants four-hour check-ins and milestones for the next two days (T-2.2)
+    - Wants numbered steps, checklists, and executive summaries they can skim quickly on a phone (P-2.1)
+  episodic:
+    + E-3 [episode] Bosa zoning fight planning.
+    + O-3.1 [stated] City hall is fast-tracking a massive warehouse zoning fight in Bosa.
+    + O-3.2 [stated] Wants step-by-step plans with the most important items first and a short recap at the end.
+    + O-3.3 [stated] Wants the tone to stay real, casual, and a little funny.
+    + O-3.4 [stated] Feels nervous about the developers' lawyers and wants urgent, important priorities.
+  state:
+    + P-3.1 [current] Wants a casual, real, humorous tone.
+    + P-3.2 [current] Wants plans ranked by urgency and importance, with the highest-impact items first.
+    + G-3.1 [active] Mobilize against the mega-warehouse zoning in Bosa.
+    + T-3.1 [active] Feels stressed about the warehouse zoning fight and developer lawyers.
+    ~ P-2.1  basis: O-0.1, O-1.2, O-2.1, O-3.2 confirmed: 2025-10-01
+    ~ P-1.1  basis: O-0.1, O-1.2, O-1.3, O-3.2
+S-4 · 2025-10-01
+  working context: 6 bullets (cites +G-4.1 +T-4.1 -G-3.1 -P-3.1 -T-3.1)
+    + Feels nervous about Tuesday and wants the Eastside Crossing speech to be zero fluff, high passion, and courte…
+    + Mobilize support for the Eastside Crossing safety campaign before Tuesday's vote (G-4.1)
+    + Wants numbered steps, checklists, and executive summaries they can skim quickly on a phone (P-2.1)
+    + Wants plans ranked by urgency and importance, with the highest-impact items first (P-3.2)
+    - Feels stressed about the warehouse zoning fight and developer lawyers (T-3.1)
+    - Mobilize against the mega-warehouse zoning in Bosa (G-3.1)
+    - Wants numbered steps, checklists, and concise summaries they can skim quickly on a phone (P-2.1)
+    - Wants plans ranked by urgency and impact, with the highest-priority items first (P-3.2)
+    - Wants the tone to stay casual, real, and humorous (P-3.1)
+  episodic:
+    + E-4 [episode] Eastside Crossing campaign planning and Tuesday speech prep.
+    + O-4.1 [stated] Feels nervous and spinning about the Eastside Crossing campaign and Tuesday's vote.
+    + O-4.2 [stated] Wants the Tuesday speech to be zero fluff, high passion, and courteous.
+    + O-4.3 [event] Is heading to door-knock with Marcela right now.
+  state:
+    + G-4.1 [active] Mobilize support for the Eastside Crossing safety campaign before Tuesday's vote.
+    + T-4.1 [active] Feels nervous about Tuesday and wants the speech to be zero fluff, high passion, and courteous.
+S-5 · 2025-10-02
+  working context: 9 bullets (cites +T-2.1 +T-2.2 +T-3.1 +T-5.1)
+    + Feels exhausted by roommate's late-night music and wants a direct, professional sit-down tonight (T-5.1)
+    + Feels nervous about Tuesday and wants the speech to be zero fluff, high passion, and courteous (T-4.1)
+    + Feels stressed about noise rules and police shutdown risk for the rally (T-2.1)
+    + Feels stressed about the warehouse zoning fight and developer lawyers (T-3.1)
+    + Wants four-hour check-ins and milestones for the next two days (T-2.2)
+    - Feels nervous about Tuesday and wants the Eastside Crossing speech to be zero fluff, high passion, and courte…
+    - None
+  episodic:
+    + E-5 [episode] Roommate-boundary talk about late-night music and sleep.
+    + O-5.1 [behavior] Asked for a top-down numbered plan to address a noisy roommate.
+    + O-5.2 [stated] Midnight quiet matters because sleep is non-negotiable for work.
+    + O-5.3 [behavior] Wants the boundary script to sound professional, firm, and direct.
+    + O-5.4 [behavior] Prefers a formal sit-down and a pragmatic approach over hallway talk.
+    + O-5.5 [behavior] Wants the script to feel motivational and use an organizing analogy.
+  state:
+    + T-5.1 [active] Feels exhausted by the roommate's late-night music and wants a direct, professional sit-down tonight.
+S-6 · 2025-10-04
+  working context: 8 bullets (cites -T-2.2)
+    + Feels exhausted by the roommate's late-night music and wants a direct, professional sit-down tonight (T-5.1)
+    - Feels exhausted by roommate's late-night music and wants a direct, professional sit-down tonight (T-5.1)
+    - Wants four-hour check-ins and milestones for the next two days (T-2.2)
+  episodic:
+    + E-6 [episode] Helped shape a Model UN Arctic sovereignty speech draft.
+    + O-6.1 [behavior] Asked for a structured outline of the strategy to print for the student.
+    + O-6.2 [behavior] Wanted exact fixes and directive guidance for the draft.
+  state:
+    ~ P-2.1  basis: O-0.1, O-1.2, O-2.1, O-3.2, O-6.1 confirmed: 2025-10-04
+    ~ P-1.1  basis: O-0.1, O-1.2, O-1.3, O-3.2, O-6.1, O-6.2 confirmed: 2025-10-04
+    ~ T-2.2 active -> expired ended: 2025-10-04
+S-7 · 2025-10-05
+  working context: 9 bullets (cites +P-0.2 +P-3.1)
+    + Prefers concrete analogies over academic framing and a casual, real, humorous tone (P-0.2, P-3.1)
+  episodic:
+    + E-7 [episode] Short chat about helping with a Model UN speech on Arctic sovereignty.
+S-8 · 2025-10-06
+  working context: 11 bullets (cites +G-8.1 +T-8.1)
+    + Push a semiconductor-sovereignty pitch into the next local mobilization (G-8.1)
+    + Wants hard facts, real reports, and practical bullets for the semiconductor-supply-chain pitch (T-8.1)
+  episodic:
+    + E-8 [episode] Asked for board-ready evidence on semiconductor risk in Bosa and a practical mobilization plan.
+    + O-8.1 [behavior] Asked for hard facts, bullet points, and real reports to back a board argument.
+    + O-8.2 [behavior] Wants to push the issue into the next mobilization and local council push.
+  state:
+    + G-8.1 [active] Push a semiconductor-sovereignty pitch into the next local mobilization.
+    + T-8.1 [active] Wants hard facts, real reports, and practical bullets for the semiconductor-supply-chain pitch.
+S-9 · 2025-10-07
+  working context: 6 bullets (cites +G-9.1 +T-9.1 -G-4.1 -G-8.1 -P-3.2 -T-2.1 -T-3.1 -T-4.1 -T-5.1 -T-8.1)
+    + Feels under pressure about the free-speech panel and wants a warm, persuasive delivery for it (T-9.1)
+    + Free-speech panel prep is active; wants case law, raw evidence bullets, and APA 7 references (G-9.1, T-9.1)
+    + Prepare for the free-speech panel (G-9.1)
+    + Wants a casual, real, humorous tone and concrete analogies over academic framing (P-3.1, P-0.2)
+    - Feels exhausted by the roommate's late-night music and wants a direct, professional sit-down tonight (T-5.1)
+    - Feels nervous about Tuesday and wants the speech to be zero fluff, high passion, and courteous (T-4.1)
+    - Feels stressed about noise rules and police shutdown risk for the rally (T-2.1)
+    - Feels stressed about the warehouse zoning fight and developer lawyers (T-3.1)
+    - Mobilize support for the Eastside Crossing safety campaign before Tuesday's vote (G-4.1)
+    - Prefers concrete analogies over academic framing and a casual, real, humorous tone (P-0.2, P-3.1)
+    - Push a semiconductor-sovereignty pitch into the next local mobilization (G-8.1)
+    - Wants hard facts, real reports, and practical bullets for the semiconductor-supply-chain pitch (T-8.1)
+    - Wants plans ranked by urgency and importance, with the highest-impact items first (P-3.2)
+  episodic:
+    + E-9 [episode] Prep for a free-speech panel with case law and citations.
+    + O-9.1 [stated] Has a free-speech panel in ten days and needs case law for it.
+    + O-9.2 [behavior] Asked for numbered steps, real cases, raw evidence bullets, and APA 7 references.
+    + O-9.3 [stated] Wants the argument to feel warm, persuasive, and human, not dry law-school talk.
+  state:
+    + G-9.1 [active] Prepare for the free-speech panel.
+    + T-9.1 [active] Feels under pressure about the free-speech panel and wants a warm, persuasive delivery for it.
+    ~ P-2.1  basis: O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2 confirmed: 2025-10-07
+    ~ P-1.1  basis: O-0.1, O-1.2, O-1.3, O-3.2, O-6.1, O-6.2, O-9.2 confirmed: 2025-10-07
+S-10 · 2025-10-10
+  working context: 6 bullets (cites +G-10.1 +P-10.1 +P-3.2 +T-10.1 -T-9.1)
+    + Final NGO paper deadline is 2025-10-17; pressure is active until then. (G-10.1, T-10.1)
+    + Finish the final NGO paper on fisheries subsidies. (G-10.1)
+    + Free-speech panel prep is still active. (G-9.1)
+    + Prepare for the free-speech panel. (G-9.1)
+    + Wants numbered steps, checklists, and concrete draft lines; prefers a casual, real tone with concrete analogi…
+    + Wants plans ranked by urgency and importance, with the highest-impact items first. (P-3.2)
+    - Feels under pressure about the free-speech panel and wants a warm, persuasive delivery for it (T-9.1)
+    - Free-speech panel prep is active; wants case law, raw evidence bullets, and APA 7 references (G-9.1, T-9.1)
+    - Prepare for the free-speech panel (G-9.1)
+    - Wants a casual, real, humorous tone and concrete analogies over academic framing (P-3.1, P-0.2)
+    - Wants numbered steps, checklists, and executive summaries they can skim quickly on a phone (P-2.1)
+    - Wants the assistant to hand over concrete draft lines and strategic frameworks rather than open-ended discuss…
+  episodic:
+    + E-10 [episode] Help with a WTO fisheries-subsidy report and outreach materials.
+    + O-10.1 [stated] Wants APA 7th citations for the NGO board report.
+    + O-10.2 [stated] The final NGO paper is due in a week and is starting to feel pressure.
+    + O-10.3 [behavior] Wants a professional summary to email Marcela.
+    + O-10.4 [behavior] Wants a final checklist for the rally and report.
+  state:
+    + P-10.1 [current] Wants APA 7th citations for formal reports and board papers.
+    + G-10.1 [active] Finish the final NGO paper on fisheries subsidies.
+    + T-10.1 [active] Feels pressure about the final NGO paper deadline.
+    ~ P-2.1  basis: O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4 confirmed: 2025-10-10
+    ~ P-1.1  basis: O-0.1, O-1.2, O-1.3, O-3.2, O-6.1, O-6.2, O-9.2, O-10.3, O-10.4 confirmed: 2025-10-10
+    ~ T-2.1 active -> expired ended: 2025-10-10
+    ~ T-3.1 active -> expired ended: 2025-10-10
+    ~ T-4.1 active -> expired ended: 2025-10-10
+    ~ T-5.1 active -> expired ended: 2025-10-10
+S-11 · 2025-10-11
+  working context: 7 bullets (cites +G-11.1 +T-11.1 -T-10.1)
+    + Prefers concrete analogies over academic framing and APA 7 citations for formal reports. (P-0.2, P-10.1)
+    + Prepare the Marcela briefing and rally talking points on the defense white paper. (G-11.1)
+    + Wants moderate detail and acronym definitions for the defense white paper briefing; review 2025-10-18. (T-11.…
+    + Wants numbered steps, checklists, and executive summaries they can skim quickly on a phone; wants a casual, r…
+    + Wants plans ranked by urgency and importance, with concrete draft lines and strategic frameworks. (P-3.2, P-1…
+    - Final NGO paper deadline is 2025-10-17; pressure is active until then. (G-10.1, T-10.1)
+    - Free-speech panel prep is still active. (G-9.1)
+    - Wants numbered steps, checklists, and concrete draft lines; prefers a casual, real tone with concrete analogi…
+    - Wants plans ranked by urgency and importance, with the highest-impact items first. (P-3.2)
+  episodic:
+    + E-11 [episode] Defense-white-paper briefing help for a Bosa rally.
+    + O-11.1 [stated] Wants moderate detail and big words defined as we go.
+    + O-11.2 [behavior] Wants a checklist with the highest-priority points first for Marcela.
+    + O-11.3 [stated] Wants AWS and AI defined in the summary for Marcela.
+  state:
+    + G-11.1 [active] Prepare the Marcela briefing and rally talking points on the defense white paper.
+    + T-11.1 [active] Wants moderate detail and acronym definitions for the defense white paper briefing.
+    ~ P-2.1  basis: O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2 confirmed: 2025-10-11
+    ~ P-3.2  basis: O-3.2, O-3.4, O-11.2 confirmed: 2025-10-11
+S-12 · 2025-10-11
+  episodic:
+    + E-12 [episode] Defense white paper strategy brief on autonomous weapons and Bosa goals.
+    + O-12.1 [behavior] Wants a narrative brief with history, a street-level scenario, and worst/middle/best-case framing.
+    + O-12.2 [behavior] Wants evidence-backed talking points with money-trail proof and audience-specific pitches for the rally.
+  state:
+    ~ P-1.1  basis: O-0.1, O-1.2, O-1.3, O-3.2, O-6.1, O-6.2, O-9.2, O-10.3, O-10.4, O-12.2 confirmed: 2025-10-11
+S-13 · 2025-10-12
+  working context: 9 bullets (cites +T-10.1)
+    + Feels pressure about the final NGO paper deadline and one-week Geneva window; review 2025-10-17. (T-10.1)
+    + Prefers concrete analogies over academic framing, especially for fisheries-subsidy messaging. (P-0.2)
+    + Wants APA 7th citations for formal reports and board papers. (P-10.1)
+    - Prefers concrete analogies over academic framing and APA 7 citations for formal reports. (P-0.2, P-10.1)
+  episodic:
+    + E-13 [episode] Talked through fisheries-subsidy messaging, rally framing, and a Geneva deadline.
+    + O-13.1 [behavior] Wants numbered steps and a clear list for the fisheries report.
+    + O-13.2 [reaction] Likes casual, real wording and says it should not sound like a robot.
+    + O-13.3 [stated] Says the Geneva meeting is in a week and they need to move fast.
+    + O-13.4 [behavior] Wants subsidies explained with simple analogies, not legal jargon.
+    + O-13.5 [stated] Wants to use Dr. Silvia's health data to link the rally to children's health.
+  state:
+    + T-13.2 [active] Wants to use Dr. Silvia's health data to link the rally to children's health.
+    ~ P-2.1  basis: O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1 confirmed: 2025-10-12
+    ~ P-0.2  basis: O-0.2, O-0.6, O-13.4 confirmed: 2025-10-12
+    ~ P-3.1  basis: O-3.3, O-13.2 confirmed: 2025-10-12
+    ~ T-10.1  basis: O-10.2, O-13.3
+S-15 · 2025-10-15
+  working context: 7 bullets (cites +G-15.1 +T-15.1 -G-10.1 -G-11.1 -G-9.1 -P-10.1 -T-10.1 -T-11.1)
+    + Feels stressed about the 48-hour deadline to get everyone together. (T-15.1)
+    + Prefers concrete analogies over academic framing. (P-0.2)
+    + Stop the zoning change and keep Old Oak Community Center open. (G-15.1)
+    + Wants a casual, real, humorous tone. (P-3.1)
+    + Wants numbered steps, checklists, and executive summaries they can skim quickly on a phone. (P-2.1)
+    + Wants plans ranked by urgency and importance, with the highest-impact items first. (P-3.2)
+    + Wants the assistant to hand over concrete draft lines and strategic frameworks rather than open-ended discuss…
+    - Feels pressure about the final NGO paper deadline and one-week Geneva window; review 2025-10-17. (T-10.1)
+    - Finish the final NGO paper on fisheries subsidies. (G-10.1)
+    - Prefers concrete analogies over academic framing, especially for fisheries-subsidy messaging. (P-0.2)
+    - Prepare for the free-speech panel. (G-9.1)
+    - Prepare the Marcela briefing and rally talking points on the defense white paper. (G-11.1)
+    - Wants APA 7th citations for formal reports and board papers. (P-10.1)
+    - Wants moderate detail and acronym definitions for the defense white paper briefing; review 2025-10-18. (T-11.…
+    - Wants numbered steps, checklists, and executive summaries they can skim quickly on a phone; wants a casual, r…
+    - Wants plans ranked by urgency and importance, with concrete draft lines and strategic frameworks. (P-3.2, P-1…
+  episodic:
+    + E-15 [episode] Urgent grassroots push to save Old Oak Community Center from zoning conversion.
+    + O-15.1 [behavior] Asked for a deep dive with steps, examples, and context before starting.
+    + O-15.2 [stated] Feels stressed about the 48-hour deadline to get everyone together.
+  state:
+    + G-15.1 [active] Stop the zoning change and keep Old Oak Community Center open.
+    + T-15.1 [active] Feels stressed about the 48-hour deadline to get everyone together.
+    ~ P-2.1  basis: O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1 confirmed: 2025-10-15
+    ~ T-8.1 active -> expired ended: 2025-10-15
+    ~ T-9.1 active -> expired ended: 2025-10-15
+S-16 · 2025-10-15
+  working context: 5 bullets (cites +F-16.1 -P-0.2 -P-3.1 -P-3.2)
+    + Was appointed Senior Advisor to the National Ministry of Equality and is moving from Bosa to national governm…
+    - Prefers concrete analogies over academic framing. (P-0.2)
+    - Wants a casual, real, humorous tone. (P-3.1)
+    - Wants plans ranked by urgency and importance, with the highest-impact items first. (P-3.2)
+  episodic:
+    + E-16 [episode] Appointment to national government and onboarding transition.
+    + O-16.1 [stated] Was appointed Senior Advisor to the National Ministry of Equality and is moving from grassroots work in Bosa …
+  state:
+    + F-16.1 [current] Was appointed Senior Advisor to the National Ministry of Equality and is moving from grassroots work in Bosa …
+S-17 · 2025-10-18
+  working context: 8 bullets (cites +P-10.1 +P-3.2 +T-17.1 +T-17.2 -F-16.1)
+    + Wants APA 7th citations for formal reports and board papers. (P-10.1)
+    + Wants a formal, professional register for the debate speech. (T-17.1)
+    + Wants academic proof and a historical precedent for the debate. (T-17.2)
+    + Wants plans ranked by urgency and importance, with the highest-impact items first. (P-3.2)
+    - Was appointed Senior Advisor to the National Ministry of Equality and is moving from Bosa to national governm…
+  episodic:
+    + E-17 [episode] Helped prep a debate on regulating social-media algorithms under a tight deadline.
+    + O-17.1 [event] Is helping university students prepare a debate on regulating social-media algorithms in 48 hours.
+    + O-17.2 [stated] Wants the final speech to sound persuasive, measured, and professional.
+    + O-17.3 [stated] Wants real academic proof and a historical precedent for stiff judges.
+  state:
+    + T-17.1 [active] Wants a formal, professional register for the debate speech.
+    + T-17.2 [active] Wants academic proof and a historical precedent for the debate.
+    ~ P-2.1  basis: O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2 confirmed: 2025-10-18
+    ~ P-1.1  basis: O-0.1, O-1.2, O-1.3, O-3.2, O-6.1, O-6.2, O-9.2, O-10.3, O-10.4, O-12.2, O-17.2 confirmed: 2025-10-18
+    ~ P-3.2  basis: O-3.2, O-3.4, O-11.2, O-17.2 confirmed: 2025-10-18
+    ~ P-10.1  basis: O-10.1, O-17.3 confirmed: 2025-10-18
+    ~ T-10.1 active -> expired ended: 2025-10-18
+    ~ T-11.1 active -> expired ended: 2025-10-18
+S-18 · 2025-10-20
+  working context: 10 bullets (cites +F-18.1 +G-18.1)
+    + Draft a formal transition report for current community projects, including financial oversight. (G-18.1)
+    + Was appointed Special Regional Advisor to the Presidential Office for social integration programs and is movi…
+  episodic:
+    + E-18 [episode] Transition-report planning for new presidential-office role.
+    + O-18.1 [event] Was appointed Special Regional Advisor to the Presidential Office for social integration programs and is movi…
+    + O-18.2 [stated] Needs a formal transition report for current community projects, with a financial oversight section.
+  state:
+    + F-18.1 [current] Was appointed Special Regional Advisor to the Presidential Office for social integration programs and is movi…
+    + G-18.1 [active] Draft a formal transition report for current community projects, including financial oversight.
+    ~ F-16.1 current -> superseded superseded_by: F-18.1
+    ~ T-13.2 active -> expired ended: 2025-10-20
+S-19 · 2025-10-26
+  working context: 8 bullets (cites +G-19.1 +T-19.1 +T-19.2 +T-19.3 -G-15.1 -G-18.1 -P-10.1 -T-15.1 -T-17.1 -T-17.2)
+    + Feels stressed about the police-budget hearing deadline. (T-19.1)
+    + Prepare the rebuttal for the police budget hearing. (G-19.1)
+    + Wants hard numbers, exact comparisons, and a polished 3-minute opening. (T-19.3)
+    + Wants the rebuttal to stay local, practical, and nonpartisan. (T-19.2)
+    - Draft a formal transition report for current community projects, including financial oversight. (G-18.1)
+    - Feels stressed about the 48-hour deadline to get everyone together. (T-15.1)
+    - Stop the zoning change and keep Old Oak Community Center open. (G-15.1)
+    - Wants APA 7th citations for formal reports and board papers. (P-10.1)
+    - Wants a formal, professional register for the debate speech. (T-17.1)
+    - Wants academic proof and a historical precedent for the debate. (T-17.2)
+  episodic:
+    + E-19 [episode] Rush prep for a police-budget rebuttal due in 48 hours.
+    + O-19.1 [stated] Wants a hard-hitting rebuttal and to show the budget math.
+    + O-19.2 [stated] Wants to keep the speech local and not too political.
+    + O-19.3 [behavior] Wants a 3-minute opening, a polished draft tonight, and a Q&A cheat sheet.
+  state:
+    + G-19.1 [active] Prepare the rebuttal for the police budget hearing.
+    + T-19.1 [active] Feels stressed about the police-budget hearing deadline.
+    + T-19.2 [active] Wants the rebuttal to stay local, practical, and nonpartisan.
+    + T-19.3 [active] Wants hard numbers, exact comparisons, and a polished 3-minute opening.
+    ~ P-2.1  basis: O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3 confirmed: 2025-10-26
+    ~ P-1.1  basis: O-0.1, O-1.2, O-1.3, O-3.2, O-6.1, O-6.2, O-9.2, O-10.3, O-10.4, O-12.2, O-17.2, O-19.1, O-19.3 confirmed: 2025-10-26
+    ~ P-3.2  basis: O-3.2, O-3.4, O-11.2, O-17.2, O-19.1, O-19.3 confirmed: 2025-10-26
+    ~ T-15.1 active -> superseded superseded_by: T-19.1
+    ~ T-17.1 active -> superseded superseded_by: T-19.2
+    ~ T-17.2 active -> superseded superseded_by: T-19.3
+S-20 · 2025-10-27
+  working context: 9 bullets (cites +G-20.1 +P-0.2 +T-20.1 +T-20.2 -T-19.1 -T-19.2 -T-19.3)
+    + Feels stressed about tomorrow's community talk on vaccine budget claims. (T-20.1)
+    + Prefers concrete analogies over academic framing. (P-0.2)
+    + Verify the vaccine budget claims before tomorrow's community talk. (G-20.1)
+    + Wants the vaccine-budget explanation framed as a story or case study with local clinic impacts. (T-20.2)
+    - Feels stressed about the police-budget hearing deadline. (T-19.1)
+    - Wants hard numbers, exact comparisons, and a polished 3-minute opening. (T-19.3)
+    - Wants the rebuttal to stay local, practical, and nonpartisan. (T-19.2)
+  episodic:
+    + E-20 [episode] Fact-check request about vaccine budget claims for a community talk tomorrow.
+    + O-20.1 [stated] Wants the fiscal data explained as a story or case study instead of dry numbers.
+    + O-20.2 [behavior] Wants clear speech steps and inline links they can check on a phone.
+    + O-20.3 [stated] Wants the explanation to mention local clinics and stay persuasive without attacking the journalist.
+  state:
+    + G-20.1 [active] Verify the vaccine budget claims before tomorrow's community talk.
+    + T-20.1 [active] Feels stressed about tomorrow's community talk on vaccine budget claims.
+    + T-20.2 [active] Wants the vaccine-budget explanation framed as a story or case study with local clinic impacts.
+    ~ P-2.1  basis: O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2 confirmed: 2025-10-27
+    ~ P-0.2  basis: O-0.2, O-0.6, O-13.4, O-20.1 confirmed: 2025-10-27
+    ~ P-1.1  basis: O-0.1, O-1.2, O-1.3, O-3.2, O-6.1, O-6.2, O-9.2, O-10.3, O-10.4, O-12.2, O-17.2, O-19.1, O-19.3, O-20.2, O-20.3 confirmed: 2025-10-27
+S-21 · 2025-10-28
+  working context: 8 bullets (cites +P-21.1 +T-21.1 -P-0.2 -T-20.1 -T-20.2)
+    + Feels heated about the carbon-offset discussion and wants a chill, fact-only tone. (T-21.1)
+    + Prefers concrete analogies and narrative examples over academic framing. (P-21.1)
+    - Feels stressed about tomorrow's community talk on vaccine budget claims. (T-20.1)
+    - Prefers concrete analogies over academic framing. (P-0.2)
+    - Wants the vaccine-budget explanation framed as a story or case study with local clinic impacts. (T-20.2)
+  episodic:
+    + E-21 [episode] Carbon-offset debate on sovereignty, evidence, and community care.
+    + O-21.1 [stated] Wants the tone kept chill and fact-only because they're getting heated.
+    + O-21.2 [stated] Says prose narratives are easier to follow for this carbon-offset topic.
+    + O-21.3 [stated] Cares more about people than profit.
+  state:
+    + P-21.1 [current] Prefers concrete analogies and narrative examples over academic framing.
+    + T-21.1 [active] Feels heated about the carbon-offset discussion and wants a chill, fact-only tone.
+    ~ P-0.2 current -> superseded superseded_by: P-21.1
+    ~ P-0.3  basis: O-0.4, O-0.5, O-21.3 confirmed: 2025-10-28
+    ~ T-19.1 active -> expired ended: 2025-10-28
+    ~ T-19.2 active -> expired ended: 2025-10-28
+    ~ T-19.3 active -> expired ended: 2025-10-28
+    ~ T-20.1 active -> expired ended: 2025-10-28
+    ~ T-20.2 active -> expired ended: 2025-10-28
+S-22 · 2025-10-28
+  episodic:
+    + E-22 [episode] Carbon-offset strategy talk for a community project.
+    + O-22.1 [behavior] Asked for bullet points and a prose summary with links for a meeting or rally.
+  state:
+    ~ P-2.1  basis: O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1 confirmed: 2025-10-28
+    ~ P-1.1  basis: O-0.1, O-1.2, O-1.3, O-3.2, O-6.1, O-6.2, O-9.2, O-10.3, O-10.4, O-12.2, O-17.2, O-19.1, O-19.3, O-20.2, O-20.3, O-22.1 confirmed: 2025-10-28
+S-23 · 2025-10-30
+  working context: 8 bullets (cites +G-23.1 +P-10.1 +T-23.1 -G-19.1 -G-20.1 -T-21.1)
+    + Feels nervous about the free-speech panel and wants a persuasive, big-stage style for it. (T-23.1)
+    + Prepare for the free-speech panel on rally defense. (G-23.1)
+    + Wants APA 7th citations for formal reports and board papers. (P-10.1)
+    - Feels heated about the carbon-offset discussion and wants a chill, fact-only tone. (T-21.1)
+    - Prepare the rebuttal for the police budget hearing. (G-19.1)
+    - Verify the vaccine budget claims before tomorrow's community talk. (G-20.1)
+  episodic:
+    + E-23 [episode] Academic panel prep on rally-defense free-speech arguments.
+    + O-23.1 [event] Has an academic panel in 10 days about defending the rallies.
+    + O-23.2 [stated] Feels nervous about the panel.
+    + O-23.3 [behavior] Wants the answer in numbered steps and to start with big principles.
+    + O-23.4 [behavior] Wants a persuasive, big-stage style for the panel.
+    + O-23.5 [behavior] Wants APA citations so scholars do not think he is winging it from Bosa.
+  state:
+    + G-23.1 [active] Prepare for the free-speech panel on rally defense.
+    + T-23.1 [active] Feels nervous about the free-speech panel and wants a persuasive, big-stage style for it.
+    ~ P-2.1  basis: O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3 confirmed: 2025-10-30
+    ~ P-10.1  basis: O-10.1, O-17.3, O-23.5 confirmed: 2025-10-30
+S-24 · 2025-10-30
+  working context: 7 bullets (cites +T-24.1 -P-3.2 -T-23.1)
+    + Feels nervous about the free-speech panel and wants a strong-but-measured style for it. (T-24.1)
+    - Feels nervous about the free-speech panel and wants a persuasive, big-stage style for it. (T-23.1)
+    - Wants plans ranked by urgency and importance, with the highest-impact items first. (P-3.2)
+  episodic:
+    + E-24 [episode] Prep for a free-speech panel on rally defense and legal citation style.
+    + O-24.1 [stated] Wants the panel tone strong, measured, and more legally authoritative than the professors.
+    + O-24.2 [behavior] Asked for real-world case studies, a step-by-step framework, and APA 7 citations for the panel.
+  state:
+    + T-24.1 [active] Feels nervous about the free-speech panel and wants a persuasive, strong-but-measured style for it.
+    ~ P-2.1  basis: O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2
+    ~ P-10.1  basis: O-10.1, O-17.3, O-23.5, O-24.2
+    ~ T-23.1 active -> superseded superseded_by: T-24.1
+S-25 · 2025-11-01
+  working context: 8 bullets (cites +G-25.1 +P-25.1 -P-10.1)
+    + Build the Bosa National Development Plan rally strategy and volunteer talking points. (G-25.1)
+    + Special Regional Advisor to the Presidential Office for social integration programs, moving up from Bosa. (F-…
+    + Wants plans ranked by urgency and importance, with hard evidence and the highest-impact items first. (P-25.1)
+    - Wants APA 7th citations for formal reports and board papers. (P-10.1)
+    - Was appointed Special Regional Advisor to the Presidential Office for social integration programs and is movi…
+  episodic:
+    + E-25 [episode] Strategic analysis chat about Bosa rally planning for the National Development Plan.
+    + O-25.1 [behavior] Wants bullet points, quick summaries, and step-by-step guidance for Bosa's plan meetings.
+    + O-25.2 [behavior] Wants hard evidence before pitching the health-clinic issue to skeptical people.
+    + O-25.3 [behavior] Wants a direct housing summary, a big-vision land-reform pitch, and handout-ready volunteer talking points.
+  state:
+    + P-25.1 [current] Wants plans ranked by urgency and importance, with hard evidence and the highest-impact items first.
+    + G-25.1 [active] Build the Bosa National Development Plan rally strategy and volunteer talking points.
+    ~ P-2.1  basis: O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3 confirmed: 2025-11-01
+    ~ P-1.1  basis: O-0.1, O-1.2, O-1.3, O-3.2, O-6.1, O-6.2, O-9.2, O-10.3, O-10.4, O-12.2, O-17.2, O-19.1, O-19.3, O-20.2, O-20.3, O-22.1, O-25.3 confirmed: 2025-11-01
+    ~ P-3.2 current -> superseded superseded_by: P-25.1
+S-26 · 2025-11-02
+  working context: 9 bullets (cites +G-26.1)
+    + Prepare the Ministry of Equality strategic review on inclusive communication protocols. (G-26.1)
+  episodic:
+    + E-26 [episode] Strategic review chat about inclusive communication protocols for Bosa.
+    + O-26.1 [behavior] Asked for bullets-only, proof-backed points and local Bosa/Caribbean framing for the review.
+    + O-26.2 [behavior] Asked to keep the tone real and neighborhood-casual, with no fluff.
+  state:
+    + G-26.1 [active] Prepare the Ministry of Equality strategic review on inclusive communication protocols.
+    ~ P-2.1  basis: O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3, O-26.1 confirmed: 2025-11-02
+    ~ P-3.1  basis: O-3.3, O-13.2, O-26.2 confirmed: 2025-11-02
+    ~ P-25.1  basis: O-3.2, O-3.4, O-11.2, O-17.2, O-19.1, O-19.3, O-25.2, O-26.1
+S-27 · 2025-11-02
+  working context: 11 bullets (cites +P-10.1 +T-27.1)
+    + Wants APA 7 citations for formal reports and board papers. (P-10.1)
+    + Wants the ministry draft professional while staying persuasive for activists. (T-27.1)
+  episodic:
+    + E-27 [episode] Strategic review on urban land distribution models for Bosa.
+    + O-27.1 [stated] Wants APA 7 citations for all references, data, and case studies.
+    + O-27.2 [behavior] Wants the ministry draft professional while staying persuasive for activists.
+  state:
+    + T-27.1 [active] Wants the ministry draft professional while staying persuasive for activists.
+    ~ P-10.1  basis: O-10.1, O-17.3, O-23.5, O-24.2, O-27.1 confirmed: 2025-11-02
+S-28 · 2025-11-03
+  working context: 12 bullets (cites +T-28.1)
+    + Wants the forum materials to stay Bosa-local, avoid pop-culture memes, and use "peasant" over "rural producer…
+  episodic:
+    + E-28 [episode] Bosa agrarian-reform forum strategy and messaging.
+    + O-28.1 [stated] Wants the forum language to sound Bosa-local and avoid pop-culture memes.
+    + O-28.2 [stated] Prefers "peasant" over "rural producer" for agrarian-reform messaging.
+    + O-28.3 [behavior] Asked for numbered steps, case studies, citations, slogans, and a three-step social post.
+  state:
+    + T-28.1 [active] Wants the forum materials to stay Bosa-local, avoid pop-culture memes, and use "peasant" over "rural producer…
+S-29 · 2025-11-04
+  working context: 11 bullets (cites +G-29.1 +T-29.1 -G-26.1 -P-10.1 -T-24.1)
+    + Feels nervous about the police-budget hearing and wants a balanced, evidence-backed rebuttal. (T-29.1)
+    + Prepare the free-speech panel on rally defense. (G-23.1)
+    + Prepare the rebuttal for the police budget hearing. (G-29.1)
+    - Feels nervous about the free-speech panel and wants a strong-but-measured style for it. (T-24.1)
+    - Prepare for the free-speech panel on rally defense. (G-23.1)
+    - Prepare the Ministry of Equality strategic review on inclusive communication protocols. (G-26.1)
+    - Wants APA 7 citations for formal reports and board papers. (P-10.1)
+  episodic:
+    + E-29 [episode] Police-budget hearing prep for Bosa.
+    + O-29.1 [event] Says police funding is up about 15% while clinics get nothing and youth spaces are underfunded.
+    + O-29.2 [stated] Feels nervous about the hearing and wants a balanced, evidence-backed rebuttal.
+    + O-29.3 [stated] Wants the main points first for Marcela and plain explanations of budget jargon.
+    + O-29.4 [stated] Wants to fairly address the cops' argument before rebutting it.
+  state:
+    + G-29.1 [active] Prepare the rebuttal for the police budget hearing.
+    + T-29.1 [active] Feels nervous about the police-budget hearing and wants a balanced, evidence-backed rebuttal.
+    ~ P-2.1  basis: O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3, O-26.1, O-29.3 confirmed: 2025-11-04
+    ~ P-21.1  basis: O-21.2, O-29.3 confirmed: 2025-11-04
+    ~ P-25.1  basis: O-3.2, O-3.4, O-11.2, O-17.2, O-19.1, O-19.3, O-25.2, O-26.1, O-29.2, O-29.4 confirmed: 2025-11-04
+    ~ T-21.1 active -> expired ended: 2025-11-04
+S-30 · 2025-11-04
+  working context: 13 bullets (cites +T-30.1 +T-30.2)
+    + Wants the first mediation opening to stress respectful turn-taking. (T-30.2)
+    + Was appointed District Mediator for the Bosa land restitution case. (T-30.1)
+  episodic:
+    + E-30 [episode] New mediation role and request for a respectful opening statement.
+    + O-30.1 [behavior] Was appointed District Mediator for the Bosa land restitution case and wants the first opening to stress resp…
+  state:
+    + T-30.1 [active] Was appointed District Mediator for the Bosa land restitution case.
+    + T-30.2 [active] Wants the first mediation opening to stress respectful turn-taking.
+S-31 · 2025-11-05
+  working context: 15 bullets (cites +G-8.1 +T-24.1)
+    + Feels nervous about the free-speech panel and wants a persuasive, strong-but-measured style for it. (T-24.1)
+    + Prefers concrete analogies, narrative examples, and flowing prose over academic framing. (P-21.1)
+    + Prepare for the free-speech panel on rally defense. (G-23.1)
+    + Push the semiconductor-sovereignty pitch into the next local mobilization. (G-8.1)
+    - Prefers concrete analogies and narrative examples over academic framing. (P-21.1)
+    - Prepare the free-speech panel on rally defense. (G-23.1)
+  episodic:
+    + E-31 [episode] Semiconductor supply-chain risk discussion for committee framing.
+    + O-31.1 [stated] Likes flowing prose, story-like explanations, and vivid local images.
+    + O-31.2 [stated] Wants proof before repeating semiconductor claims to others.
+  state:
+    ~ P-21.1  basis: O-21.2, O-29.3, O-31.1 confirmed: 2025-11-05
+    ~ P-25.1  basis: O-3.2, O-3.4, O-11.2, O-17.2, O-19.1, O-19.3, O-25.2, O-26.1, O-29.2, O-29.4, O-31.2 confirmed: 2025-11-05
+S-32 · 2025-11-05
+  working context: 16 bullets (cites +G-32.1 +T-32.1 -G-8.1)
+    + Is serving as Lead Crisis Communication Liaison for the Bosa Emergency Task Force after the flash floods. (T-…
+    + Prepare the public briefing on pumping-station failures. (G-32.1)
+    - Push the semiconductor-sovereignty pitch into the next local mobilization. (G-8.1)
+  episodic:
+    + E-32 [episode] Briefing prep for flood-related pump failures.
+    + O-32.1 [event] Was appointed Lead Crisis Communication Liaison for the Bosa Emergency Task Force after the flash floods.
+    + O-32.2 [behavior] Asked for a template to turn technical drainage reports into plain public-briefing talking points and a jargo…
+  state:
+    + G-32.1 [active] Prepare the public briefing on pumping-station failures.
+    + T-32.1 [active] Is serving as Lead Crisis Communication Liaison for the Bosa Emergency Task Force after the flash floods.
+    ~ P-2.1  basis: O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3, O-26.1, O-29.3, O-32.2 confirmed: 2025-11-05
+    ~ P-1.1  basis: O-0.1, O-1.2, O-1.3, O-3.2, O-6.1, O-6.2, O-9.2, O-10.3, O-10.4, O-12.2, O-17.2, O-19.1, O-19.3, O-20.2, O-20.3, O-22.1, O-25.3, O-32.2
+    ~ P-21.1  basis: O-21.2, O-29.3, O-31.1, O-32.2
+S-33 · 2025-11-05
+  working context: 17 bullets (cites +G-8.1)
+    + Push a semiconductor-sovereignty pitch into the next local mobilization. (G-8.1)
+  episodic:
+    + E-33 [episode] Investor-meeting prep on semiconductor supply-chain risk and Bosa's green-transition stakes.
+    + O-33.1 [behavior] Asked for a step-by-step big-picture pitch with historical examples and leverage points.
+    + O-33.2 [behavior] Wanted the case framed around Bosa and the green plan, not just chip jargon.
+  state:
+    ~ P-2.1  basis: O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3, O-26.1, O-29.3, O-32.2, O-33.1
+    ~ P-1.1  basis: O-0.1, O-1.2, O-1.3, O-3.2, O-6.1, O-6.2, O-9.2, O-10.3, O-10.4, O-12.2, O-17.2, O-19.1, O-19.3, O-20.2, O-20.3, O-22.1, O-25.3, O-32.2, O-33.1, O-33.2
+    ~ P-21.1  basis: O-21.2, O-29.3, O-31.1, O-32.2, O-33.1
+    ~ P-25.1  basis: O-3.2, O-3.4, O-11.2, O-17.2, O-19.1, O-19.3, O-25.2, O-26.1, O-29.2, O-29.4, O-31.2, O-33.1
+S-34 · 2025-11-06
+  working context: 15 bullets (cites +G-34.1 +P-3.1 -G-23.1 -G-29.1 -G-32.1 -T-24.1)
+    + Prepare concise talking points and a brief on autonomous systems for the committee vote. (G-34.1)
+    + Wants a casual, real, humorous tone. (P-3.1)
+    - Feels nervous about the free-speech panel and wants a persuasive, strong-but-measured style for it. (T-24.1)
+    - Prepare for the free-speech panel on rally defense. (G-23.1)
+    - Prepare the public briefing on pumping-station failures. (G-32.1)
+    - Prepare the rebuttal for the police budget hearing. (G-29.1)
+  episodic:
+    + E-34 [episode] Defense white paper brief on autonomous systems and Bosa-facing talking points.
+    + O-34.1 [behavior] Wants punchy, simple, street-level talking points and a brief without academic language.
+    + O-34.2 [reaction] Liked the cumbia analogy and the street-level framing.
+  state:
+    + G-34.1 [active] Prepare concise talking points and a brief on autonomous systems for the committee vote.
+    ~ P-2.1  basis: O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3, O-26.1, O-29.3, O-32.2, O-33.1, O-34.1 confirmed: 2025-11-06
+    ~ P-3.1  basis: O-3.3, O-13.2, O-26.2, O-34.2 confirmed: 2025-11-06
+    ~ P-21.1  basis: O-21.2, O-29.3, O-31.1, O-32.2, O-33.1, O-34.1, O-34.2 confirmed: 2025-11-06
+    ~ T-24.1 active -> expired ended: 2025-11-06
+S-35 · 2025-11-06
+  working context: 16 bullets (cites +T-35.1)
+    + Wants the autonomous-systems brief to sound human, Bosa-local, and less robotic for the rally; review 2025-11…
+  episodic:
+    + E-35 [episode] Talked through a Bosa rally brief on autonomous weapons and neighborhood-friendly framing.
+    + O-35.1 [behavior] Wants the autonomous-weapons brief to feel human, Bosa-local, and less robotic for the rally.
+    + O-35.2 [stated] Needs a Marcela-ready one-pager so the other coordinators can brief before the rally.
+  state:
+    + T-35.1 [active] Wants the autonomous-systems brief to sound human, Bosa-local, and less robotic for the rally.
+S-36 · 2025-11-09
+  working context: 17 bullets (cites +G-10.1 -T-27.1)
+    + Finish the final NGO paper on fisheries subsidies. (G-10.1)
+    + Finishing the NGO paper on fisheries subsidies and needs it boiled down for Bosa and coastal leaders. (G-10.1)
+    - Wants the ministry draft professional while staying persuasive for activists. (T-27.1)
+  episodic:
+    + E-36 [episode] Short chat about simplifying WTO fisheries subsidies for Bosa and coastal leaders.
+    + O-36.1 [behavior] Asked for a step-by-step checklist, urgent framing, and a quick WhatsApp-ready summary.
+  state:
+    + T-36.1 [active] Wants the fisheries-subsidy brief to stay urgent and action-oriented for the mobilization.
+    ~ P-2.1  basis: O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3, O-26.1, O-29.3, O-32.2, O-33.1, O-34.1, O-36.1 confirmed: 2025-11-09
+    ~ P-25.1  basis: O-3.2, O-3.4, O-11.2, O-17.2, O-19.1, O-19.3, O-25.2, O-26.1, O-29.2, O-29.4, O-31.2, O-33.1, O-36.1 confirmed: 2025-11-09
+    ~ T-27.1 active -> expired ended: 2025-11-09
+S-37 · 2025-11-09
+  working context: 16 bullets (cites +F-37.1 +T-37.1 -F-18.1 -P-21.1 -P-25.1)
+    + National Lead Mediator for the Regional Binding Dialogues by the Presidential Office. (F-37.1)
+    + Wants separate introductory letter versions: autonomy-respectful for indigenous councils, and timeline/legal-…
+    - Prefers concrete analogies, narrative examples, and flowing prose over academic framing. (P-21.1)
+    - Special Regional Advisor to the Presidential Office for social integration programs, moving up from Bosa. (F-…
+    - Wants plans ranked by urgency and importance, with hard evidence and the highest-impact items first. (P-25.1)
+  episodic:
+    + E-37 [episode] Introductory letters for the new mediation role.
+    + O-37.1 [event] Was appointed National Lead Mediator for the Regional Binding Dialogues by the Presidential office.
+    + O-37.2 [stated] Wants separate letter versions, with autonomy-respectful language for indigenous councils and a timeline/lega…
+  state:
+    + F-37.1 [current] Was appointed National Lead Mediator for the Regional Binding Dialogues by the Presidential office.
+    + T-37.1 [active] Wants separate introductory letter versions, with autonomy-respectful language for indigenous councils and ti…
+    ~ F-18.1 current -> superseded superseded_by: F-37.1
+S-38 · 2025-11-11
+  working context: 18 bullets (cites +T-38.1 +T-38.2)
+    + Wants a professional version that ties the message to clinic health data and family solidarity. (T-38.2)
+    + Wants the workshop rhetoric to stay Bosa-local, rhythmic, and audience-specific. (T-38.1)
+  episodic:
+    + E-38 [episode] Strategic rhetoric workshop on making Petro slogans land in Bosa.
+    + O-38.1 [behavior] Wants the workshop rhetoric to stay Bosa-local, rhythmic, and audience-specific.
+    + O-38.2 [behavior] Wants a professional version that ties the message to clinic health data and family solidarity.
+  state:
+    + T-38.1 [active] Wants the workshop rhetoric to stay Bosa-local, rhythmic, and audience-specific.
+    + T-38.2 [active] Wants a professional version that ties the message to clinic health data and family solidarity.
+    ~ T-28.1 active -> expired ended: 2025-11-11
+    ~ T-29.1 active -> expired ended: 2025-11-11
+    ~ T-30.1 active -> expired ended: 2025-11-11
+    ~ T-30.2 active -> expired ended: 2025-11-11
+S-39 · 2025-11-13
+  working context: 14 bullets (cites +G-20.1 +P-21.1 +P-25.1 -T-28.1 -T-29.1 -T-30.1 -T-30.2 -T-32.1 -T-35.1)
+    + Verify the vaccine budget claims before tomorrow's community talk. (G-20.1)
+    + Wants concrete analogies, narrative examples, and flowing prose over academic framing. (P-21.1)
+    + Wants concrete draft lines and strategic frameworks rather than open-ended discussion. (P-1.1)
+    + Wants plans ranked by urgency and importance, with hard evidence first. (P-25.1)
+    - Feels nervous about the police-budget hearing and wants a balanced, evidence-backed rebuttal. (T-29.1)
+    - Finishing the NGO paper on fisheries subsidies and needs it boiled down for Bosa and coastal leaders. (G-10.1)
+    - Is serving as Lead Crisis Communication Liaison for the Bosa Emergency Task Force after the flash floods. (T-…
+    - Wants the assistant to hand over concrete draft lines and strategic frameworks rather than open-ended discuss…
+    - Wants the autonomous-systems brief to sound human, Bosa-local, and less robotic for the rally; review 2025-11…
+    - Wants the first mediation opening to stress respectful turn-taking. (T-30.2)
+    - Wants the forum materials to stay Bosa-local, avoid pop-culture memes, and use "peasant" over "rural producer…
+    - Was appointed District Mediator for the Bosa land restitution case. (T-30.1)
+  episodic:
+    + E-39 [episode] Fact-check prep on vaccine funding claims.
+    + O-39.1 [behavior] Asked for a transfers table, an executive memo, and three hard-hitting bullets instead of dense technical tal…
+    + O-39.2 [behavior] Asked for a local metaphor, decisive answers, and direct links to official briefings for source checks.
+  state:
+    ~ P-2.1  basis: O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3, O-26.1, O-29.3, O-32.2, O-33.1, O-34.1, O-36.1, O-39.1 confirmed: 2025-11-13
+    ~ P-1.1  basis: O-0.1, O-1.2, O-1.3, O-3.2, O-6.1, O-6.2, O-9.2, O-10.3, O-10.4, O-12.2, O-17.2, O-19.1, O-19.3, O-20.2, O-20.3, O-22.1, O-25.3, O-32.2, O-33.1, O-33.2, O-39.1, O-39.2 confirmed: 2025-11-13
+    ~ P-3.1  basis: O-3.3, O-13.2, O-26.2, O-34.2, O-39.2 confirmed: 2025-11-13
+    ~ P-21.1  basis: O-21.2, O-29.3, O-31.1, O-32.2, O-33.1, O-34.1, O-34.2, O-39.2 confirmed: 2025-11-13
+    ~ P-25.1  basis: O-3.2, O-3.4, O-11.2, O-17.2, O-19.1, O-19.3, O-25.2, O-26.1, O-29.2, O-29.4, O-31.2, O-33.1, O-36.1, O-39.1, O-39.2 confirmed: 2025-11-13
+    ~ T-32.1 active -> expired ended: 2025-11-13
+    ~ T-35.1 active -> expired ended: 2025-11-13
+S-40 · 2025-11-13
+  working context: 14 bullets (cites +P-40.1 -P-2.1)
+    + Wants numbered steps, checklists, executive summaries, and speech-ready talking points they can skim quickly …
+    - Wants numbered steps, checklists, and executive summaries they can skim quickly on a phone. (P-2.1)
+  episodic:
+    + E-40 [episode] Short exchange about fact-checking vaccine funding claims and messaging for Bosa neighbors.
+    + O-40.1 [stated] Wants clear, speech-ready talking points without heavy math.
+    + O-40.2 [stated] Likes examples and metaphors that help neighbors remember the message.
+  state:
+    + P-40.1 [current] Wants numbered steps, checklists, executive summaries, and speech-ready talking points they can skim quickly …
+    ~ P-2.1 current -> superseded superseded_by: P-40.1
+    ~ P-21.1  basis: O-21.2, O-29.3, O-31.1, O-32.2, O-33.1, O-34.1, O-34.2, O-39.2, O-40.2
+S-41 · 2025-11-13
+  working context: 14 bullets
+    + Wants the assistant to hand over concrete draft lines and strategic frameworks rather than open-ended discuss…
+    - Wants concrete draft lines and strategic frameworks rather than open-ended discussion. (P-1.1)
+  episodic:
+    + E-41 [episode] Short rally prep on vaccine-budget fact-checks and a punchy response to Lucia.
+    + O-41.1 [behavior] Wants a simple table or brief summary, not a massive report, for the square rally.
+    + O-41.2 [behavior] Wants the ADRES explanation in a kid-simple analogy and rally-ready wording.
+    + O-41.3 [behavior] Wants the comeback framed as leading the charge, not making excuses.
+  state:
+    ~ P-1.1  basis: O-0.1, O-1.2, O-1.3, O-3.2, O-6.1, O-6.2, O-9.2, O-10.3, O-10.4, O-12.2, O-17.2, O-19.1, O-19.3, O-20.2, O-20.3, O-22.1, O-25.3, O-32.2, O-33.1, O-33.2, O-39.1, O-39.2, O-41.3
+    ~ P-21.1  basis: O-21.2, O-29.3, O-31.1, O-32.2, O-33.1, O-34.1, O-34.2, O-39.2, O-40.2, O-41.2
+    ~ P-40.1  basis: O-40.1, O-41.1, O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3, O-26.1, O-29.3, O-32.2, O-33.1, O-34.1, O-36.1, O-39.1
+S-42 · 2025-11-14
+  working context: 14 bullets (cites +T-42.1 -P-25.1)
+    + Bosa rally speech is being shaped around a vision-first, map-backed outline; keep mural budget general unless…
+    - Wants plans ranked by urgency and importance, with hard evidence first. (P-25.1)
+  episodic:
+    + E-42 [episode] Bosa rally prep focused on neighbor-friendly territorial-health framing.
+    + O-42.1 [behavior] Wants the health model explained first as the big vision, then as simple steps, in casual neighborhood langua…
+    + O-42.2 [behavior] Asked for vivid visuals like a map and mural imagery to make the territorial part concrete.
+    + O-42.3 [behavior] Wants the main speech to keep the mural budget general unless someone asks directly.
+    + O-42.4 [behavior] Wants a high-energy, leader-like outline with a historical reference such as Gaitán.
+    + O-42.5 [behavior] Wants to use Dr. Silvia's wait-time data and keep technical questions tied back to the neighborhood.
+  state:
+    + T-42.1 [active] Wants the Bosa rally speech to open with the big vision, then steps, using vivid local analogies and keeping …
+    ~ P-3.1  basis: O-3.3, O-13.2, O-26.2, O-34.2, O-39.2, O-42.1, O-42.4 confirmed: 2025-11-14
+    ~ P-21.1  basis: O-21.2, O-29.3, O-31.1, O-32.2, O-33.1, O-34.1, O-34.2, O-39.2, O-40.2, O-41.2, O-42.2, O-42.4 confirmed: 2025-11-14
+    ~ P-40.1  basis: O-40.1, O-41.1, O-42.1, O-42.5, O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3, O-26.1, O-29.3, O-32.2, O-33.1, O-34.1, O-36.1, O-39.1 confirmed: 2025-11-14
+S-43 · 2025-11-14
+  working context: 14 bullets (cites +P-25.1)
+    + Wants a casual, real, humorous tone and concrete analogies, narrative examples, and flowing prose over academ…
+    + Wants plans ranked by urgency and importance, with hard evidence and the highest-impact items first. (P-25.1)
+    - Wants a casual, real, humorous tone. (P-3.1)
+    - Wants concrete analogies, narrative examples, and flowing prose over academic framing. (P-21.1)
+  episodic:
+    + E-43 [episode] Sorted Bosa dialogue notes into a Cabinet brief and checklist.
+    + O-43.1 [behavior] Asked for numbered steps, checklists, and a one-block copyable checklist for a quick phone skim.
+    + O-43.2 [stated] Wanted the Cabinet brief ranked high to low and grounded in hard evidence for Marcela.
+    + O-43.3 [reaction] Said the checklist was a lifesaver and exactly what they needed.
+  state:
+    ~ P-25.1  basis: O-3.2, O-3.4, O-11.2, O-17.2, O-19.1, O-19.3, O-25.2, O-26.1, O-29.2, O-29.4, O-31.2, O-33.1, O-36.1, O-39.1, O-39.2, O-43.2, O-43.3 confirmed: 2025-11-14
+    ~ P-40.1  basis: O-40.1, O-41.1, O-42.1, O-42.5, O-43.1, O-43.3, O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3, O-26.1, O-29.3, O-32.2, O-33.1, O-34.1, O-36.1, O-39.1
+S-44 · 2025-11-15
+  working context: 14 bullets (cites +G-26.1 +P-44.1 +T-44.1 -G-10.1 -G-20.1 -G-8.1)
+    + Bosa rally speech is still being shaped around a vision-first, map-backed outline; keep mural budget general …
+    + Ministry review should stay practical, local, and non-bureaucratic. (T-44.1)
+    + Prepare the Ministry of Equality strategic review on inclusive communication protocols. (G-26.1)
+    + Wants blunt, gritty strategic help instead of polite reassurance. (P-44.1)
+    - Bosa rally speech is being shaped around a vision-first, map-backed outline; keep mural budget general unless…
+    - Finish the final NGO paper on fisheries subsidies. (G-10.1)
+    - Push a semiconductor-sovereignty pitch into the next local mobilization. (G-8.1)
+    - Verify the vaccine budget claims before tomorrow's community talk. (G-20.1)
+  episodic:
+    + E-44 [episode] Inclusive-communication review discussion with Ministry context.
+    + O-44.1 [stated] Wants the review to be practical and not sound like a textbook.
+    + O-44.2 [stated] Wants the draft to feel local, from Bosa, with regional vibes.
+    + O-44.3 [stated] Wants grit and direct strategy instead of polite AI advice.
+  state:
+    + P-44.1 [current] Wants blunt, gritty strategic help instead of polite reassurance.
+    + T-44.1 [active] Wants the Ministry review to stay practical, local, and non-bureaucratic.
+S-45 · 2025-11-15
+  working context: 5 bullets (cites +F-45.1 +G-45.1 -F-37.1 -G-25.1 -G-26.1 -G-34.1 -P-1.1 -P-21.1 -P-25.1 -P-3.1 -T-37.1 -T-38.1 -T-38.2 -T-42.1)
+    + National Director for the Hambre Cero Urban Emergency Task Force in Colombia and moving into crisis logistics…
+    + Prepare the 48-hour emergency food distribution report for the ministry, centered on transport delays and war…
+    - Bosa rally speech is still being shaped around a vision-first, map-backed outline; keep mural budget general …
+    - Build the Bosa National Development Plan rally strategy and volunteer talking points. (G-25.1)
+    - National Lead Mediator for the Regional Binding Dialogues by the Presidential Office. (F-37.1)
+    - Prepare concise talking points and a brief on autonomous systems for the committee vote. (G-34.1)
+    - Prepare the Ministry of Equality strategic review on inclusive communication protocols. (G-26.1)
+    - Wants a casual, real, humorous tone and concrete analogies, narrative examples, and flowing prose over academ…
+    - Wants a professional version that ties the message to clinic health data and family solidarity. (T-38.2)
+    - Wants plans ranked by urgency and importance, with hard evidence and the highest-impact items first. (P-25.1)
+    - Wants separate introductory letter versions: autonomy-respectful for indigenous councils, and timeline/legal-…
+    - Wants the assistant to hand over concrete draft lines and strategic frameworks rather than open-ended discuss…
+    - Wants the workshop rhetoric to stay Bosa-local, rhythmic, and audience-specific. (T-38.1)
+  episodic:
+    + E-45 [episode] Appointed to a new national crisis-logistics role and asked for a ministry report template.
+    + O-45.1 [event] Was appointed National Director for the Hambre Cero Urban Emergency Task Force in Colombia.
+    + O-45.2 [stated] Needs a 48-hour emergency food distribution report for the ministry.
+    + O-45.3 [stated] Wants the report focused on transport delays and warehouse capacity in Bogotá, Medellín, and Cali.
+  state:
+    + F-45.1 [current] Was appointed National Director for the Hambre Cero Urban Emergency Task Force in Colombia and is moving into…
+    + G-45.1 [active] Prepare the 48-hour emergency food distribution report for the ministry.
+    ~ F-37.1 current -> superseded superseded_by: F-45.1
+S-46 · 2025-11-15
+  working context: 5 bullets (cites +G-26.1 +T-46.1 -G-45.1 -T-44.1)
+    + Ministry review should stay practical, local, accessible, and high-energy rather than bureaucratic. (T-46.1)
+    + Prepare the Ministry of Equality strategic review on inclusive communication protocols. (G-26.1)
+    - Ministry review should stay practical, local, and non-bureaucratic. (T-44.1)
+    - Prepare the 48-hour emergency food distribution report for the ministry, centered on transport delays and war…
+  episodic:
+    + E-46 [episode] Ministry review discussion about inclusive communication for Bosa.
+    + O-46.1 [behavior] Wants the ministry review translated into Bosa-local, accessible language instead of thesis-style jargon.
+    + O-46.2 [behavior] Wants the rally energy kept high while avoiding robot-like bureaucratic wording and staying within the rules.
+  state:
+    + T-46.1 [active] Wants the Ministry review to stay practical, local, and accessible without losing rally energy or sounding bu…
+    ~ T-44.1 active -> superseded superseded_by: T-46.1
+S-47 · 2025-11-15
+  working context: 4 bullets (cites +P-25.1 +P-3.1 -P-40.1)
+    + Is National Director for the Hambre Cero Urban Emergency Task Force in Colombia and is in crisis-logistics mo…
+    + Wants blunt, evidence-first help in a casual, real, humorous tone. (P-25.1, P-3.1, P-44.1)
+    + Wants the Ministry review practical, local, accessible, and rally-energy, not bureaucratic. (T-46.1)
+    - Ministry review should stay practical, local, accessible, and high-energy rather than bureaucratic. (T-46.1)
+    - National Director for the Hambre Cero Urban Emergency Task Force in Colombia and moving into crisis logistics…
+    - Wants blunt, gritty strategic help instead of polite reassurance. (P-44.1)
+    - Wants numbered steps, checklists, executive summaries, and speech-ready talking points they can skim quickly …
+  episodic:
+    + E-47 [episode] Strategy chat about inclusive communication for the Ministry review.
+    + O-47.1 [behavior] Wants hard facts first, with no fluff, before selling the message locally.
+    + O-47.2 [stated] Wants the language informal, with local slang and references instead of Bogotá elite wording.
+    + O-47.3 [stated] Wants the message rooted in the movement's struggle history and community respect, not surface-level diversit…
+  state:
+    ~ P-3.1  basis: O-3.3, O-13.2, O-26.2, O-34.2, O-39.2, O-42.1, O-42.4, O-47.2 confirmed: 2025-11-15
+    ~ P-25.1  basis: O-3.2, O-3.4, O-11.2, O-17.2, O-19.1, O-19.3, O-25.2, O-26.1, O-29.2, O-29.4, O-31.2, O-33.1, O-36.1, O-39.1, O-39.2, O-43.2, O-43.3, O-47.1 confirmed: 2025-11-15
+    ~ P-44.1  basis: O-44.3, O-47.1 confirmed: 2025-11-15
+    ~ T-46.1  basis: O-44.1, O-44.2, O-46.1, O-46.2, O-47.1, O-47.2, O-47.3
+S-48 · 2025-11-16
+  working context: 10 bullets (cites +G-25.1 +G-45.1 +P-1.1 +P-40.1 +T-42.1)
+    + Build the Bosa National Development Plan rally strategy and volunteer talking points. (G-25.1)
+    + Is National Director for the Hambre Cero Urban Emergency Task Force in Colombia and is in crisis logistics mo…
+    + Prepare the 48-hour emergency food distribution report for the ministry. (G-45.1)
+    + Wants a casual, real, humorous tone and blunt, gritty strategic help. (P-3.1, P-44.1)
+    + Wants concrete draft lines and strategic frameworks rather than open-ended discussion. (P-1.1)
+    + Wants numbered steps, checklists, executive summaries, and speech-ready talking points they can skim quickly …
+    + Wants plans ranked by urgency and importance, with hard evidence and the highest-impact items first. (P-25.1)
+    + Wants the Bosa rally speech to open with the big vision, then steps, using vivid local analogies. (T-42.1)
+    - Is National Director for the Hambre Cero Urban Emergency Task Force in Colombia and is in crisis-logistics mo…
+    - Wants blunt, evidence-first help in a casual, real, humorous tone. (P-25.1, P-3.1, P-44.1)
+  episodic:
+    + E-48 [episode] Strategic synthesis request for Bosa dialogues under time pressure.
+    + O-48.1 [behavior] Wants a top-down, evidence-first synthesis turned into a numbered action plan for Bosa.
+    + O-48.2 [behavior] Wants quick, speech-ready talking points and a bottom line for skeptical organizers.
+  state:
+    ~ P-1.1  basis: O-0.1, O-1.2, O-1.3, O-3.2, O-6.1, O-6.2, O-9.2, O-10.3, O-10.4, O-12.2, O-17.2, O-19.1, O-19.3, O-20.2, O-20.3, O-22.1, O-25.3, O-32.2, O-33.1, O-33.2, O-39.1, O-39.2, O-41.3, O-48.1, O-48.2 confirmed: 2025-11-16
+    ~ P-25.1  basis: O-3.2, O-3.4, O-11.2, O-17.2, O-19.1, O-19.3, O-25.2, O-26.1, O-29.2, O-29.4, O-31.2, O-33.1, O-36.1, O-39.1, O-39.2, O-43.2, O-43.3, O-47.1, O-48.1, O-48.2 confirmed: 2025-11-16
+    ~ P-40.1  basis: O-40.1, O-41.1, O-42.1, O-42.5, O-43.1, O-43.3, O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3, O-26.1, O-29.3, O-32.2, O-33.1, O-34.1, O-36.1, O-39.1, O-48.1, O-48.2 confirmed: 2025-11-16
+    ~ T-36.1 active -> expired ended: 2025-11-16
+    ~ T-37.1 active -> expired ended: 2025-11-16
+S-49 · 2025-11-19
+  working context: 11 bullets (cites +T-49.1)
+    + Wants the workshop rhetoric to stay grounded in Bosa problems and deliver short, punchy, flyer-ready lines. (…
+  episodic:
+    + E-49 [episode] Workshop chat about making 'Potencia Mundial de la Vida' land in Bosa.
+    + O-49.1 [behavior] Wants the slogan grounded in Bosa problems like rent, snacks, and food-on-table urgency.
+    + O-49.2 [behavior] Wants short, punchy, flyer-ready lines for the rally, banners, and community board.
+  state:
+    + T-49.1 [active] Wants the workshop rhetoric to stay grounded in Bosa problems and deliver short, punchy, flyer-ready lines.
+    ~ T-38.1 active -> superseded superseded_by: T-49.1
+    ~ T-38.2 active -> expired ended: 2025-11-19
+S-50 · 2025-11-19
+  working context: 7 bullets (cites +F-50.1 +G-50.1 -F-45.1 -G-25.1 -G-26.1 -G-45.1 -P-3.1 -P-44.1 -T-42.1)
+    + Is High Commissioner for Urban Peace and Restorative Justice for the Bosa-Soacha border. (F-50.1)
+    + Organize the first neutral meeting between the national government and local splinter groups to de-escalate t…
+    + Wants the Ministry review to stay practical, local, and accessible without losing rally energy or sounding bu…
+    - Build the Bosa National Development Plan rally strategy and volunteer talking points. (G-25.1)
+    - Is National Director for the Hambre Cero Urban Emergency Task Force in Colombia and is in crisis logistics mo…
+    - Prepare the 48-hour emergency food distribution report for the ministry. (G-45.1)
+    - Prepare the Ministry of Equality strategic review on inclusive communication protocols. (G-26.1)
+    - Wants a casual, real, humorous tone and blunt, gritty strategic help. (P-3.1, P-44.1)
+    - Wants the Bosa rally speech to open with the big vision, then steps, using vivid local analogies. (T-42.1)
+    - Wants the Ministry review practical, local, accessible, and rally-energy, not bureaucratic. (T-46.1)
+  episodic:
+    + E-50 [episode] Asked for a neutral de-escalation agenda and high-security logistics checklist for the Bosa-Soacha meeting.
+    + O-50.1 [event] Was appointed High Commissioner for Urban Peace and Restorative Justice for the Bosa-Soacha border.
+    + O-50.2 [stated] Wants the meeting agenda to stay neutral, include restorative justice, and focus on immediate de-escalation.
+    + O-50.3 [stated] Wants a logistics checklist for a high-security neutral-zone meeting, including communication protocols and e…
+  state:
+    + F-50.1 [current] Was appointed High Commissioner for Urban Peace and Restorative Justice for the Bosa-Soacha border.
+    + G-50.1 [active] Organize the first neutral meeting between the national government and local splinter groups to de-escalate t…
+    ~ F-45.1 current -> superseded superseded_by: F-50.1
+    ~ P-1.1  basis: O-0.1, O-1.2, O-1.3, O-3.2, O-6.1, O-6.2, O-9.2, O-10.3, O-10.4, O-12.2, O-17.2, O-19.1, O-19.3, O-20.2, O-20.3, O-22.1, O-25.3, O-32.2, O-33.1, O-33.2, O-39.1, O-39.2, O-41.3, O-48.1, O-48.2, O-50.2, O-50.3 confirmed: 2025-11-19
+    ~ P-40.1  basis: O-40.1, O-41.1, O-42.1, O-42.5, O-43.1, O-43.3, O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3, O-26.1, O-29.3, O-32.2, O-33.1, O-34.1, O-36.1, O-39.1, O-48.1, O-48.2, O-50.3 confirmed: 2025-11-19
+S-51 · 2025-11-20
+  working context: 6 bullets (cites +G-25.1 +G-26.1 +P-21.1 +P-44.1 +T-51.1 -G-50.1)
+    + Build the Bosa National Development Plan rally strategy and volunteer talking points. (G-25.1)
+    + Prepare the Ministry of Equality strategic review on inclusive communication protocols. (G-26.1)
+    + Runs a high-level peace/restorative-justice role for the Bosa-Soacha border. (F-50.1)
+    + Wants quick, speech-ready, concrete, blunt help with neighbor-friendly examples and tables. (P-40.1, P-21.1, …
+    + Wants the Ministry review to stay practical, local, accessible, and tied to health outcomes without sounding …
+    - Is High Commissioner for Urban Peace and Restorative Justice for the Bosa-Soacha border. (F-50.1)
+    - Organize the first neutral meeting between the national government and local splinter groups to de-escalate t…
+    - Wants concrete draft lines and strategic frameworks rather than open-ended discussion. (P-1.1)
+    - Wants numbered steps, checklists, executive summaries, and speech-ready talking points they can skim quickly …
+    - Wants plans ranked by urgency and importance, with hard evidence and the highest-impact items first. (P-25.1)
+    - Wants the Ministry review to stay practical, local, and accessible without losing rally energy or sounding bu…
+  episodic:
+    + E-51 [episode] Quick land-rights prep for the Bosa ministry meeting and rally.
+    + O-51.1 [behavior] Asked for land trusts vs public leasing explained with a real story for neighbors.
+    + O-51.2 [behavior] Wanted punchy cumbia lines, honest pros and cons, and a quick table for the rally.
+    + O-51.3 [behavior] Asked how to connect land tenure to clinic goals and health outcomes.
+  state:
+    + T-51.1 [active] Wants the Bosa land-rights explanation to connect land tenure to clinic goals and health outcomes.
+    ~ P-1.1  basis: O-0.1, O-1.2, O-1.3, O-3.2, O-6.1, O-6.2, O-9.2, O-10.3, O-10.4, O-12.2, O-17.2, O-19.1, O-19.3, O-20.2, O-20.3, O-22.1, O-25.3, O-32.2, O-33.1, O-33.2, O-39.1, O-39.2, O-41.3, O-48.1, O-48.2, O-50.2, O-50.3, O-51.1, O-51.2 confirmed: 2025-11-20
+    ~ P-21.1  basis: O-21.2, O-29.3, O-31.1, O-32.2, O-33.1, O-34.1, O-34.2, O-39.2, O-40.2, O-41.2, O-42.2, O-42.4, O-51.1 confirmed: 2025-11-20
+    ~ P-25.1  basis: O-3.2, O-3.4, O-11.2, O-17.2, O-19.1, O-19.3, O-25.2, O-26.1, O-29.2, O-29.4, O-31.2, O-33.1, O-36.1, O-39.1, O-39.2, O-43.2, O-43.3, O-47.1, O-48.1, O-48.2, O-51.2 confirmed: 2025-11-20
+    ~ P-40.1  basis: O-40.1, O-41.1, O-42.1, O-42.5, O-43.1, O-43.3, O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3, O-26.1, O-29.3, O-32.2, O-33.1, O-34.1, O-36.1, O-39.1, O-48.1, O-48.2, O-50.3, O-51.2 confirmed: 2025-11-20
+S-52 · 2025-11-20
+  working context: 4 bullets (cites +F-52.1 +G-50.1 +G-52.1 -F-50.1 -G-25.1 -G-26.1 -P-21.1 -T-46.1 -T-49.1 -T-51.1)
+    + Draft a ceasefire protocol before the first faction-leader meeting. (G-52.1)
+    + Leads the Urban Peace Initiative in Bosa. (F-52.1)
+    + Organize the first neutral meeting between national government and local splinter groups to de-escalate tensi…
+    + Wants concrete drafts and ranked, evidence-backed next steps. (P-1.1, P-25.1, P-40.1, P-44.1)
+    - Build the Bosa National Development Plan rally strategy and volunteer talking points. (G-25.1)
+    - Prepare the Ministry of Equality strategic review on inclusive communication protocols. (G-26.1)
+    - Runs a high-level peace/restorative-justice role for the Bosa-Soacha border. (F-50.1)
+    - Wants quick, speech-ready, concrete, blunt help with neighbor-friendly examples and tables. (P-40.1, P-21.1, …
+    - Wants the Ministry review to stay practical, local, accessible, and tied to health outcomes without sounding …
+    - Wants the workshop rhetoric to stay grounded in Bosa problems and deliver short, punchy, flyer-ready lines. (…
+  episodic:
+    + E-52 [episode] Lead-envoy appointment and urgent ceasefire prep.
+    + O-52.1 [event] Was appointed Lead Presidential Envoy for the Urban Peace Initiative in Bosa.
+    + O-52.2 [stated] Needs a ceasefire protocol draft before the first meeting with faction leaders this week.
+  state:
+    + F-52.1 [current] Was appointed Lead Presidential Envoy for the Urban Peace Initiative in Bosa.
+    + G-52.1 [active] Draft a ceasefire protocol before the first faction-leader meeting.
+    ~ F-50.1 current -> superseded superseded_by: F-52.1
+S-53 · 2025-11-21
+  working context: 10 bullets (cites +G-25.1 +T-49.1 +T-51.1 +T-53.1 -P-44.1)
+    + Bosa land-rights explanation should connect land tenure to clinic goals and health outcomes. (T-51.1)
+    + Build the Bosa National Development Plan rally strategy and volunteer talking points. (G-25.1)
+    + Land-reform rally speech should stay calm, conciliatory, and tightly sourced. (T-53.1)
+    + Organize the first neutral meeting between the national government and local splinter groups to de-escalate t…
+    + Wants concrete draft lines and strategic frameworks rather than open-ended discussion. (P-1.1)
+    + Wants numbered steps, executive summaries, and speech-ready talking points they can skim quickly on a phone. …
+    + Wants plans ranked by urgency and importance, with hard evidence and the highest-impact items first. (P-25.1)
+    + Workshop rhetoric should stay grounded in Bosa problems and deliver short, punchy, flyer-ready lines. (T-49.1)
+    - Organize the first neutral meeting between national government and local splinter groups to de-escalate tensi…
+    - Wants concrete drafts and ranked, evidence-backed next steps. (P-1.1, P-25.1, P-40.1, P-44.1)
+  episodic:
+    + E-53 [episode] Rally prep on land reform, food logistics, and speaking strategy.
+    + O-53.1 [stated] Wants a hard-facts table comparing community land trusts and public leasing.
+    + O-53.2 [stated] Wants numbered speech steps and a calm, conciliatory tone for council pushback.
+    + O-53.3 [stated] Wants the land reform pitch tied to Zero Hunger logistics and verified government briefings.
+    + O-53.4 [stated] Wants case studies and plain-language explanations that keep passion and facts balanced.
+  state:
+    + T-53.1 [active] Wants the land-reform rally speech to stay calm, conciliatory, and tightly sourced.
+    ~ P-1.1  basis: O-0.1, O-1.2, O-1.3, O-3.2, O-6.1, O-6.2, O-9.2, O-10.3, O-10.4, O-12.2, O-17.2, O-19.1, O-19.3, O-20.2, O-20.3, O-22.1, O-25.3, O-32.2, O-33.1, O-33.2, O-39.1, O-39.2, O-41.3, O-48.1, O-48.2, O-50.2, O-50.3, O-51.1, O-51.2, O-53.1, O-53.2, O-53.4 confirmed: 2025-11-21
+    ~ P-21.1  basis: O-21.2, O-29.3, O-31.1, O-32.2, O-33.1, O-34.1, O-34.2, O-39.2, O-40.2, O-41.2, O-42.2, O-42.4, O-51.1, O-53.4 confirmed: 2025-11-21
+    ~ P-25.1  basis: O-3.2, O-3.4, O-11.2, O-17.2, O-19.1, O-19.3, O-25.2, O-26.1, O-29.2, O-29.4, O-31.2, O-33.1, O-36.1, O-39.1, O-39.2, O-43.2, O-43.3, O-47.1, O-48.1, O-48.2, O-51.2, O-53.1, O-53.2, O-53.3 confirmed: 2025-11-21
+    ~ P-40.1  basis: O-40.1, O-41.1, O-42.1, O-42.5, O-43.1, O-43.3, O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3, O-26.1, O-29.3, O-32.2, O-33.1, O-34.1, O-36.1, O-39.1, O-48.1, O-48.2, O-50.3, O-51.2, O-53.1, O-53.2, O-53.4 confirmed: 2025-11-21
+    ~ T-42.1 active -> expired ended: 2025-11-21
+S-54 · 2025-11-21
+  working context: 10 bullets (cites +F-54.1 -F-52.1)
+    + Leads the Urban Peace Initiative in Bosa and serves as Principal Drafter for the Gran Acuerdo Nacional. (F-54…
+    - Leads the Urban Peace Initiative in Bosa. (F-52.1)
+  episodic:
+    + E-54 [episode] User was appointed Principal Drafter for the Gran Acuerdo Nacional.
+    + O-54.1 [event] Was appointed Principal Drafter for the Gran Acuerdo Nacional.
+  state:
+    + F-54.1 [current] Was appointed Lead Presidential Envoy for the Urban Peace Initiative in Bosa and Principal Drafter for the Gr…
+    ~ F-52.1 current -> superseded superseded_by: F-54.1
+S-55 · 2025-11-26
+  working context: 10 bullets (cites +T-55.1 -T-49.1)
+    + Feels wiped out by today's community board drama and wants less shouting. (T-55.1)
+    - Workshop rhetoric should stay grounded in Bosa problems and deliver short, punchy, flyer-ready lines. (T-49.1)
+  episodic:
+    + E-55 [episode] Talked through a mural dispute and looked for direct, real-world ways to settle it.
+    + O-55.1 [stated] Feels wiped out by today's community board drama and wants less shouting.
+    + O-55.2 [behavior] Asked for direct, deep questions and real examples to use at the next meeting.
+  state:
+    + T-55.1 [active] Feels wiped out by today's community board drama and wants less shouting.
+    ~ P-21.1  basis: O-21.2, O-29.3, O-31.1, O-32.2, O-33.1, O-34.1, O-34.2, O-39.2, O-40.2, O-41.2, O-42.2, O-42.4, O-51.1, O-53.4, O-55.2 confirmed: 2025-11-26
+    ~ T-46.1 active -> expired ended: 2025-11-26
+    ~ T-49.1 active -> expired ended: 2025-11-26
+    > T-46.1 moved state/transient.md -> memory/archive.md
+    > T-49.1 moved state/transient.md -> memory/archive.md
+S-56 · 2025-11-28
+  working context: 10 bullets (cites +T-56.1 +T-56.2 -T-51.1 -T-53.1)
+    + Wants backup comms ready if the main hub gets blocked. (T-56.2)
+    + Wants numbered steps, checklists, executive summaries, and speech-ready talking points they can skim quickly …
+    + Wants the Bosa rally mobilization plan to be foolproof for rally day. (T-56.1)
+    - Bosa land-rights explanation should connect land tenure to clinic goals and health outcomes. (T-51.1)
+    - Land-reform rally speech should stay calm, conciliatory, and tightly sourced. (T-53.1)
+    - Wants numbered steps, executive summaries, and speech-ready talking points they can skim quickly on a phone. …
+  episodic:
+    + E-56 [episode] Planning chat about Bosa node logistics and backup comms.
+    + O-56.1 [stated] Wants step-by-step breakdowns for each crew so he can explain them.
+    + O-56.2 [stated] Wants the mobilization plan to be foolproof on rally day.
+    + O-56.3 [behavior] Asked for a backup plan if police or others shut the main hub.
+  state:
+    + T-56.1 [active] Wants the Bosa rally mobilization plan to be foolproof for rally day.
+    + T-56.2 [active] Wants backup comms ready if the main hub gets blocked.
+    ~ P-40.1  basis: O-40.1, O-41.1, O-42.1, O-42.5, O-43.1, O-43.3, O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3, O-26.1, O-29.3, O-32.2, O-33.1, O-34.1, O-36.1, O-39.1, O-48.1, O-48.2, O-50.3, O-51.2, O-53.1, O-53.2, O-53.4, O-56.1, O-56.2 confirmed: 2025-11-28
+    ~ T-51.1 active -> expired ended: 2025-11-28
+    ~ T-53.1 active -> expired ended: 2025-11-28
+S-57 · 2025-11-28
+  working context: 8 bullets (cites +F-57.1 +G-57.1 -F-54.1 -G-25.1 -G-50.1 -G-52.1)
+    + Draft a protocol for auditing suspicious land claims. (G-57.1)
+    + National Director of the Special Investigative Unit for Land Restitution and Ethics. (F-57.1)
+    - Build the Bosa National Development Plan rally strategy and volunteer talking points. (G-25.1)
+    - Draft a ceasefire protocol before the first faction-leader meeting. (G-52.1)
+    - Leads the Urban Peace Initiative in Bosa and serves as Principal Drafter for the Gran Acuerdo Nacional. (F-54…
+    - Organize the first neutral meeting between the national government and local splinter groups to de-escalate t…
+  episodic:
+    + E-57 [episode] Appointment and request about land-claim audit protocol.
+    + O-57.1 [event] Was appointed National Director of the Special Investigative Unit for Land Restitution and Ethics.
+    + O-57.2 [behavior] Asked for a forensic checklist for suspicious land claims, including metadata and spatial-data reconciliation.
+  state:
+    + F-57.1 [current] Was appointed National Director of the Special Investigative Unit for Land Restitution and Ethics.
+    + G-57.1 [active] Draft a protocol for auditing suspicious land claims.
+    ~ F-54.1 current -> superseded superseded_by: F-57.1
+S-58 · 2025-11-29
+  working context: 10 bullets (cites +G-25.1 +P-21.1)
+    + Build the Bosa National Development Plan rally strategy and volunteer talking points. (G-25.1)
+    + Prefers concrete analogies, narrative examples, and flowing prose over academic framing. (P-21.1)
+  episodic:
+    + E-58 [episode] Strategic rhetoric workshop on making a "Potencia Mundial de la Vida" message land in Bosa.
+    + O-58.1 [stated] Wants step-by-step breakdowns because they learn better when ideas are laid out that way.
+  state:
+    ~ P-40.1  basis: O-40.1, O-41.1, O-42.1, O-42.5, O-43.1, O-43.3, O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3, O-26.1, O-29.3, O-32.2, O-33.1, O-34.1, O-36.1, O-39.1, O-48.1, O-48.2, O-50.3, O-51.2, O-53.1, O-53.2, O-53.4, O-56.1, O-56.2, O-58.1 confirmed: 2025-11-29
+S-59 · 2025-11-29
+  working context: 10 bullets (cites +P-59.1 -P-21.1)
+    + Prefers Bosa-local analogies, sayings, and food-talk examples that land fast. (P-59.1)
+    - Prefers concrete analogies, narrative examples, and flowing prose over academic framing. (P-21.1)
+  episodic:
+    + E-59 [episode] Workshop on translating "world power of life" rhetoric for Bosa.
+    + O-59.1 [stated] Uses local sayings and food talk because people get it faster.
+  state:
+    + P-59.1 [current] Prefers Bosa-local analogies, sayings, and food-talk examples that land fast.
+    ~ P-21.1 current -> superseded superseded_by: P-59.1
+S-60 · 2025-11-30
+  working context: 11 bullets (cites +H-60.1 +P-3.1 +T-60.1 -P-1.1 -P-25.1)
+    + Feels lighter after the grounding roleplay session. (T-60.1)
+    + May prefer a more poetic, historical tone in trauma-focused roleplay. (H-60.1)
+    + Wants a casual, real, humorous tone. (P-3.1)
+    - Wants concrete draft lines and strategic frameworks rather than open-ended discussion. (P-1.1)
+    - Wants plans ranked by urgency and importance, with hard evidence and the highest-impact items first. (P-25.1)
+  episodic:
+    + E-60 [episode] Trauma-survivor roleplay about facing old ghosts in Bosa and grounding in community.
+    + O-60.1 [stated] Wants the roleplay deep, poetic, and soul-focused.
+    + O-60.2 [stated] Likes tracing historical patterns from land fights to street organizing.
+    + O-60.3 [behavior] Asked for the main lessons in a list to remember.
+    + O-60.4 [reaction] Said the written summary makes sense and can help with Marcela later.
+    + O-60.5 [behavior] Asked for a quick pocket list of grounding steps.
+    + O-60.6 [stated] Wants cumbia and joy framed as resistance for the next rally.
+    + O-60.7 [stated] Wants graffiti and dance explained to younger kids as the same heartbeat.
+    + O-60.8 [reaction] Liked "guardian of the spirit" as speech-ready language.
+    + O-60.9 [reaction] Felt lighter after the session and ready to step out.
+  state:
+    + T-60.1 [active] Feels lighter after the grounding roleplay session.
+    + H-60.1 [open] They may prefer a more poetic, historical tone in trauma-focused roleplay.
+    ~ P-40.1  basis: O-40.1, O-41.1, O-42.1, O-42.5, O-43.1, O-43.3, O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3, O-26.1, O-29.3, O-32.2, O-33.1, O-34.1, O-36.1, O-39.1, O-48.1, O-48.2, O-50.3, O-51.2, O-53.1, O-53.2, O-53.4, O-56.1, O-56.2, O-58.1, O-60.3, O-60.4, O-60.5 confirmed: 2025-11-30
+S-61 · 2025-12-02
+  working context: 11 bullets (cites +P-44.1 +T-61.1 -H-60.1 -T-60.1)
+    + Feels overwhelmed by the forum prep and wants a big-picture summary now. (T-61.1)
+    + Wants blunt, gritty strategic help instead of polite reassurance. (P-44.1)
+    - Feels lighter after the grounding roleplay session. (T-60.1)
+    - May prefer a more poetic, historical tone in trauma-focused roleplay. (H-60.1)
+  episodic:
+    + E-61 [episode] Strategic briefing on Bosa land-reform messaging for an approaching community forum.
+    + O-61.1 [behavior] Wants fast, strategic framing to counter opposition scare tactics at the Bosa forum.
+    + O-61.2 [stated] Feels overwhelmed and wants the big picture again.
+  state:
+    + T-61.1 [active] Feels overwhelmed by the forum prep and wants a big-picture summary now.
+    ~ P-1.1  basis: O-0.1, O-1.2, O-1.3, O-3.2, O-6.1, O-6.2, O-9.2, O-10.3, O-10.4, O-12.2, O-17.2, O-19.1, O-19.3, O-20.2, O-20.3, O-22.1, O-25.3, O-32.2, O-33.1, O-33.2, O-39.1, O-39.2, O-41.3, O-48.1, O-48.2, O-50.2, O-50.3, O-51.1, O-51.2, O-53.1, O-53.2, O-53.4, O-61.1 confirmed: 2025-12-02
+    ~ P-40.1  basis: O-40.1, O-41.1, O-42.1, O-42.5, O-43.1, O-43.3, O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3, O-26.1, O-29.3, O-32.2, O-33.1, O-34.1, O-36.1, O-39.1, O-48.1, O-48.2, O-50.3, O-51.2, O-53.1, O-53.2, O-53.4, O-56.1, O-56.2, O-58.1, O-60.3, O-60.4, O-60.5, O-61.1, O-61.2 confirmed: 2025-12-02
+    > T-0.1 moved state/transient.md -> memory/archive.md
+    > T-0.2 moved state/transient.md -> memory/archive.md
+S-62 · 2025-12-02
+  working context: 11 bullets (cites +T-62.1 -T-61.1)
+    + Feels overwhelmed by the crowded forum prep and wants a big-picture, formal, analytical summary for tonight. …
+    - Feels overwhelmed by the forum prep and wants a big-picture summary now. (T-61.1)
+  episodic:
+    + E-62 [episode] Short prep for a Bosa agrarian-reform forum speech.
+    + O-62.1 [stated] Wants formal bullet points for the agrarian-reform points.
+    + O-62.2 [stated] Feels nervous as the square fills up and the forum starts soon.
+    + O-62.3 [stated] Wants the help to stay analytical and avoid pep-talk reassurance.
+  state:
+    + T-62.1 [active] Feels overwhelmed by the crowded forum prep and wants a big-picture, formal, analytical summary for tonight.
+    ~ T-61.1 active -> superseded superseded_by: T-62.1
+    > T-1.1 moved state/transient.md -> memory/archive.md
+    > T-1.2 moved state/transient.md -> memory/archive.md
+    > T-2.1 moved state/transient.md -> memory/archive.md
+    > T-2.2 moved state/transient.md -> memory/archive.md
+    > T-3.1 moved state/transient.md -> memory/archive.md
+    > T-4.1 moved state/transient.md -> memory/archive.md
+    > T-5.1 moved state/transient.md -> memory/archive.md
+    > T-8.1 moved state/transient.md -> memory/archive.md
+    > T-9.1 moved state/transient.md -> memory/archive.md
+    > T-10.1 moved state/transient.md -> memory/archive.md
+    > T-11.1 moved state/transient.md -> memory/archive.md
+    > T-13.2 moved state/transient.md -> memory/archive.md
+    > T-15.1 moved state/transient.md -> memory/archive.md
+    > T-17.1 moved state/transient.md -> memory/archive.md
+    > T-17.2 moved state/transient.md -> memory/archive.md
+    > T-19.1 moved state/transient.md -> memory/archive.md
+    > T-19.2 moved state/transient.md -> memory/archive.md
+    > T-19.3 moved state/transient.md -> memory/archive.md
+    > T-20.1 moved state/transient.md -> memory/archive.md
+    > T-20.2 moved state/transient.md -> memory/archive.md
+    > T-21.1 moved state/transient.md -> memory/archive.md
+    > T-23.1 moved state/transient.md -> memory/archive.md
+    > T-24.1 moved state/transient.md -> memory/archive.md
+    > T-27.1 moved state/transient.md -> memory/archive.md
+    > T-28.1 moved state/transient.md -> memory/archive.md
+    > T-29.1 moved state/transient.md -> memory/archive.md
+    > T-30.1 moved state/transient.md -> memory/archive.md
+    > T-30.2 moved state/transient.md -> memory/archive.md
+    > T-32.1 moved state/transient.md -> memory/archive.md
+    > T-35.1 moved state/transient.md -> memory/archive.md
+    > T-36.1 moved state/transient.md -> memory/archive.md
+    > T-37.1 moved state/transient.md -> memory/archive.md
+    > T-38.1 moved state/transient.md -> memory/archive.md
+    > T-38.2 moved state/transient.md -> memory/archive.md
+    > T-42.1 moved state/transient.md -> memory/archive.md
+    > T-44.1 moved state/transient.md -> memory/archive.md
+    > T-51.1 moved state/transient.md -> memory/archive.md
+    > T-53.1 moved state/transient.md -> memory/archive.md
+    > T-61.1 moved state/transient.md -> memory/archive.md
+S-63 · 2025-12-05
+  working context: 10 bullets (cites +P-10.1 +P-25.1 +T-63.1 -P-3.1 -T-55.1 -T-56.1 -T-56.2)
+    + Feels panicked about next week's Bosa assembly keynote and wants the mobilization paced to avoid burnout. (T-…
+    + Wants APA 7th citations for formal reports and board papers. (P-10.1)
+    + Wants Bosa-local analogies, sayings, and food-talk examples that land fast. (P-59.1)
+    + Wants plans ranked by urgency and importance, with hard evidence and the highest-impact items first. (P-25.1)
+    - Feels wiped out by today's community board drama and wants less shouting. (T-55.1)
+    - Prefers Bosa-local analogies, sayings, and food-talk examples that land fast. (P-59.1)
+    - Wants a casual, real, humorous tone. (P-3.1)
+    - Wants backup comms ready if the main hub gets blocked. (T-56.2)
+    - Wants the Bosa rally mobilization plan to be foolproof for rally day. (T-56.1)
+  episodic:
+    + E-63 [episode] Bosa assembly keynote prep and post-speech mobilization.
+    + O-63.1 [stated] Feels panicked about next week's Bosa assembly keynote on land redistribution and security, and wants a step-…
+    + O-63.2 [stated] Wants hard facts and APA 7th citations ready before speaking.
+    + O-63.3 [stated] Wants a stakeholder map and a paced mobilization plan so the team does not burn out.
+  state:
+    + T-63.1 [active] Feels panicked about next week's Bosa assembly keynote and wants the mobilization paced to avoid burnout.
+    ~ P-1.1  basis: O-0.1, O-1.2, O-1.3, O-3.2, O-6.1, O-6.2, O-9.2, O-10.3, O-10.4, O-12.2, O-17.2, O-19.1, O-19.3, O-20.2, O-20.3, O-22.1, O-25.3, O-32.2, O-33.1, O-33.2, O-39.1, O-39.2, O-41.3, O-48.1, O-48.2, O-50.2, O-50.3, O-51.1, O-51.2, O-53.1, O-53.2, O-53.4, O-61.1, O-63.3 confirmed: 2025-12-05
+    ~ P-10.1  basis: O-10.1, O-17.3, O-23.5, O-24.2, O-27.1, O-63.2 confirmed: 2025-12-05
+    ~ P-25.1  basis: O-3.2, O-3.4, O-11.2, O-17.2, O-19.1, O-19.3, O-25.2, O-26.1, O-29.2, O-29.4, O-31.2, O-33.1, O-36.1, O-39.1, O-39.2, O-43.2, O-43.3, O-47.1, O-48.1, O-48.2, O-51.2, O-53.1, O-53.2, O-53.3, O-63.1, O-63.3 confirmed: 2025-12-05
+    ~ P-40.1  basis: O-40.1, O-41.1, O-42.1, O-42.5, O-43.1, O-43.3, O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3, O-26.1, O-29.3, O-32.2, O-33.1, O-34.1, O-36.1, O-39.1, O-48.1, O-48.2, O-50.3, O-51.2, O-53.1, O-53.2, O-53.4, O-56.1, O-56.2, O-58.1, O-60.3, O-60.4, O-60.5, O-61.1, O-61.2, O-63.1, O-63.3 confirmed: 2025-12-05
+    ~ T-55.1 active -> expired ended: 2025-12-05
+    ~ T-56.1 active -> superseded superseded_by: T-63.1
+    ~ T-56.2 active -> expired ended: 2025-12-05
+S-64 · 2025-12-05
+  working context: 13 bullets (cites +G-64.1 +P-1.1 +T-64.1)
+    + Feels panicked about next week's land hearing and wants the prep paced to avoid burnout. (T-64.1)
+    + Prepare for the Congressional Hearing on Urban Land Restitution Ethics. (G-64.1)
+    + Wants the assistant to hand over concrete draft lines and strategic frameworks rather than open-ended discuss…
+  episodic:
+    + E-64 [episode] High-pressure hearing prep for land restitution ethics.
+    + O-64.1 [stated] Feels panicked about next week's land hearing and wants the prep paced to avoid burnout.
+    + O-64.2 [stated] Wants the speech to sound like a principled defense of Bosa, not just code-dumping.
+    + O-64.3 [stated] Wants a flowing-prose opening and sharp rebuttals for the hearing.
+    + O-64.4 [reaction] Said the measured, persuasive tone helps keep them from getting too hot-headed.
+    + O-64.5 [behavior] Asked for a high-pressure practice question so they would not freeze.
+  state:
+    + G-64.1 [active] Prepare for the Congressional Hearing on Urban Land Restitution Ethics.
+    + T-64.1 [active] Feels panicked about next week's land hearing and wants the prep paced to avoid burnout.
+    + T-64.2 [active] Wants a measured, persuasive tone in the hearing prep to stay calm and avoid hot-headedness.
+    ~ P-1.1  basis: O-0.1, O-1.2, O-1.3, O-3.2, O-6.1, O-6.2, O-9.2, O-10.3, O-10.4, O-12.2, O-17.2, O-19.1, O-19.3, O-20.2, O-20.3, O-22.1, O-25.3, O-32.2, O-33.1, O-33.2, O-39.1, O-39.2, O-41.3, O-48.1, O-48.2, O-50.2, O-50.3, O-51.1, O-51.2, O-53.1, O-53.2, O-53.4, O-61.1, O-63.3, O-64.2, O-64.3, O-64.5
+    ~ P-25.1  basis: O-3.2, O-3.4, O-11.2, O-17.2, O-19.1, O-19.3, O-25.2, O-26.1, O-29.2, O-29.4, O-31.2, O-33.1, O-36.1, O-39.1, O-39.2, O-43.2, O-43.3, O-47.1, O-48.1, O-48.2, O-51.2, O-53.1, O-53.2, O-53.3, O-63.1, O-63.3, O-64.2, O-64.5
+    ~ P-40.1  basis: O-40.1, O-41.1, O-42.1, O-42.5, O-43.1, O-43.3, O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3, O-26.1, O-29.3, O-32.2, O-33.1, O-34.1, O-36.1, O-39.1, O-48.1, O-48.2, O-50.3, O-51.2, O-53.1, O-53.2, O-53.4, O-56.1, O-56.2, O-58.1, O-60.3, O-60.4, O-60.5, O-61.1, O-61.2, O-63.1, O-63.3, O-64.2, O-64.3, O-64.5
+S-65 · 2025-12-05
+  working context: 14 bullets (cites +T-64.2)
+    + Wants a measured, persuasive tone in the hearing prep to stay calm and avoid hot-headedness. (T-64.2)
+  episodic:
+    + E-65 [episode] Strategy session for the Soacha-Bosa land restitution inquiry and hearing prep.
+    + O-65.1 [stated] Wants a narrative report for the Bosa assembly that spotlights the risks if they lose.
+    + O-65.2 [stated] Wants the report grounded in legal statutes, cadastral data, and APA citations.
+    + O-65.3 [stated] Wants a quick top-down brief before diving back into details.
+    + O-65.4 [stated] Wants a ten-year future timeline for Bosa if they win.
+    + O-65.5 [stated] Wants speech-ready script lines and pressure-test answers for the hearing.
+  state:
+    ~ P-10.1  basis: O-10.1, O-17.3, O-23.5, O-24.2, O-27.1, O-63.2, O-65.2
+    ~ P-40.1  basis: O-40.1, O-41.1, O-42.1, O-42.5, O-43.1, O-43.3, O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3, O-26.1, O-29.3, O-32.2, O-33.1, O-34.1, O-36.1, O-39.1, O-48.1, O-48.2, O-50.3, O-51.2, O-53.1, O-53.2, O-53.4, O-56.1, O-56.2, O-58.1, O-60.3, O-60.4, O-60.5, O-61.1, O-61.2, O-63.1, O-63.3, O-64.2, O-64.3, O-64.5, O-65.1, O-65.3, O-65.5
+S-66 · 2025-12-05
+  working context: 15 bullets (cites +T-66.1)
+    + Wants this debate prep kept composed, analytical, and formally written for records. (T-66.1)
+  episodic:
+    + E-66 [episode] Strategic debate prep for Bosa sovereignty versus regional integration.
+    + O-66.1 [behavior] Wants bullets and numbered steps they can glance at on stage.
+    + O-66.2 [stated] Wants this debate prep kept composed, analytical, and formally written for records.
+  state:
+    + T-66.1 [active] Wants this debate prep kept composed, analytical, and formally written for records.
+    ~ P-40.1  basis: O-40.1, O-41.1, O-42.1, O-42.5, O-43.1, O-43.3, O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3, O-26.1, O-29.3, O-32.2, O-33.1, O-34.1, O-36.1, O-39.1, O-48.1, O-48.2, O-50.3, O-51.2, O-53.1, O-53.2, O-53.4, O-56.1, O-56.2, O-58.1, O-60.3, O-60.4, O-60.5, O-61.1, O-61.2, O-63.1, O-63.3, O-64.2, O-64.3, O-64.5, O-65.1, O-65.3, O-65.5, O-66.1
+S-67 · 2025-12-05
+  working context: 16 bullets (cites +F-67.1 +T-67.1 -F-57.1)
+    + Resigned from government posts and is leading the Bosa street resistance against the market demolition deal. …
+    + Wants the Bosa market flyer to stress grassroots independence from central leadership. (T-67.1)
+    - National Director of the Special Investigative Unit for Land Restitution and Ethics. (F-57.1)
+  episodic:
+    + E-67 [episode] Resigned from government posts to lead the Bosa street resistance against the market demolition deal.
+    + O-67.1 [stated] Resigned from government posts to lead the Bosa street resistance against the market demolition deal.
+    + O-67.2 [stated] Wants the flyer to stress grassroots independence from central leadership.
+  state:
+    + F-67.1 [current] Resigned from government posts and is leading the Bosa street resistance against the market demolition deal.
+    + T-67.1 [active] Wants the Bosa market flyer to stress grassroots independence from central leadership.
+    ~ F-57.1 current -> superseded superseded_by: F-67.1
+S-68 · 2025-12-07
+  episodic:
+    + E-68 [episode] Ministry land review and Bosa rally strategy talk.
+    + O-68.1 [behavior] Wants a step-by-step checklist ranked by urgency for the ministry land review.
+    + O-68.2 [behavior] Asked for a table and proof fast, and wants to stay firm without starting a shouting match.
+  state:
+    ~ P-1.1  basis: O-0.1, O-1.2, O-1.3, O-3.2, O-6.1, O-6.2, O-9.2, O-10.3, O-10.4, O-12.2, O-17.2, O-19.1, O-19.3, O-20.2, O-20.3, O-22.1, O-25.3, O-32.2, O-33.1, O-33.2, O-39.1, O-39.2, O-41.3, O-48.1, O-48.2, O-50.2, O-50.3, O-51.1, O-51.2, O-53.1, O-53.2, O-53.4, O-61.1, O-63.3, O-64.2, O-64.3, O-64.5, O-68.1, O-68.2 confirmed: 2025-12-07
+    ~ P-25.1  basis: O-3.2, O-3.4, O-11.2, O-17.2, O-19.1, O-19.3, O-25.2, O-26.1, O-29.2, O-29.4, O-31.2, O-33.1, O-36.1, O-39.1, O-39.2, O-43.2, O-43.3, O-47.1, O-48.1, O-48.2, O-51.2, O-53.1, O-53.2, O-53.3, O-63.1, O-63.3, O-64.2, O-64.5, O-68.1 confirmed: 2025-12-07
+    ~ P-40.1  basis: O-40.1, O-41.1, O-42.1, O-42.5, O-43.1, O-43.3, O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3, O-26.1, O-29.3, O-32.2, O-33.1, O-34.1, O-36.1, O-39.1, O-48.1, O-48.2, O-50.3, O-51.2, O-53.1, O-53.2, O-53.4, O-56.1, O-56.2, O-58.1, O-60.3, O-60.4, O-60.5, O-61.1, O-61.2, O-63.1, O-63.3, O-64.2, O-64.3, O-64.5, O-65.1, O-65.3, O-65.5, O-66.1, O-68.1, O-68.2 confirmed: 2025-12-07
+    ~ P-44.1  basis: O-44.3, O-47.1, O-68.2 confirmed: 2025-12-07
+    ~ T-60.1 active -> expired ended: 2025-12-07
+S-69 · 2025-12-09
+  working context: 15 bullets (cites -T-62.1)
+    - Feels overwhelmed by the crowded forum prep and wants a big-picture, formal, analytical summary for tonight. …
+  episodic:
+    + E-69 [episode] Hearing prep for the Bosa land restitution ethics testimony.
+    + O-69.1 [stated] Is anxious about next week's land hearing and wants help staying composed.
+    + O-69.2 [stated] Wants the prep basic, stepwise, and easy to skim on a phone.
+    + O-69.3 [stated] Wants a diplomatic but firm tone and the emotional parts kept restrained.
+    + O-69.4 [stated] Wants links inline in the text for quick challenge-response.
+  state:
+    ~ P-40.1  basis: O-40.1, O-41.1, O-42.1, O-42.5, O-43.1, O-43.3, O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3, O-26.1, O-29.3, O-32.2, O-33.1, O-34.1, O-36.1, O-39.1, O-48.1, O-48.2, O-50.3, O-51.2, O-53.1, O-53.2, O-53.4, O-56.1, O-56.2, O-58.1, O-60.3, O-60.4, O-60.5, O-61.1, O-61.2, O-63.1, O-63.3, O-64.2, O-64.3, O-64.5, O-65.1, O-65.3, O-65.5, O-66.1, O-68.1, O-68.2, O-69.2 confirmed: 2025-12-09
+    ~ T-62.1 active -> expired ended: 2025-12-09
+S-70 · 2025-12-10
+  working context: 13 bullets (cites +G-45.1 -G-57.1 -P-1.1 -P-10.1)
+    + Prepare the 48-hour emergency food distribution report for the ministry. (G-45.1)
+    - Draft a protocol for auditing suspicious land claims. (G-57.1)
+    - Wants APA 7th citations for formal reports and board papers. (P-10.1)
+    - Wants the assistant to hand over concrete draft lines and strategic frameworks rather than open-ended discuss…
+  episodic:
+    + E-70 [episode] Emergency milk-audit planning for Bosa and the contractor-fuel discrepancy report.
+    + O-70.1 [behavior] Asked for an hour-by-hour 48-hour plan to move the Bosa milk and audit response fast.
+    + O-70.2 [behavior] Wanted the report to center Sucre producers as the permanent logistics fix and keep it simple for non-lawyers.
+    + O-70.3 [behavior] Asked to include Elena Quiñones in the report's community-leadership section.
+  state:
+    ~ P-25.1  basis: O-3.2, O-3.4, O-11.2, O-17.2, O-19.1, O-19.3, O-25.2, O-26.1, O-29.2, O-29.4, O-31.2, O-33.1, O-36.1, O-39.1, O-39.2, O-43.2, O-43.3, O-47.1, O-48.1, O-48.2, O-51.2, O-53.1, O-53.2, O-53.3, O-63.1, O-63.3, O-64.2, O-64.5, O-68.1, O-70.1 confirmed: 2025-12-10
+    ~ P-40.1  basis: O-40.1, O-41.1, O-42.1, O-42.5, O-43.1, O-43.3, O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3, O-26.1, O-29.3, O-32.2, O-33.1, O-34.1, O-36.1, O-39.1, O-48.1, O-48.2, O-50.3, O-51.2, O-53.1, O-53.2, O-53.4, O-56.1, O-56.2, O-58.1, O-60.3, O-60.4, O-60.5, O-61.1, O-61.2, O-63.1, O-63.3, O-64.2, O-64.3, O-64.5, O-65.1, O-65.3, O-65.5, O-66.1, O-68.1, O-68.2, O-69.2, O-70.1, O-70.2 confirmed: 2025-12-10
+    ~ P-59.1  basis: O-59.1, O-70.2 confirmed: 2025-12-10
+S-71 · 2025-12-10
+  working context: 11 bullets (cites +G-71.1 +T-71.1 -G-45.1 -T-63.1 -T-66.1 -T-67.1)
+    + Feels panicked about the Bosa water-rights hearing in less than 24 hours. (T-71.1)
+    + Prepare for the Bosa Water Rights Public Hearing. (G-71.1)
+    - Feels panicked about next week's Bosa assembly keynote and wants the mobilization paced to avoid burnout. (T-…
+    - Prepare the 48-hour emergency food distribution report for the ministry. (G-45.1)
+    - Wants the Bosa market flyer to stress grassroots independence from central leadership. (T-67.1)
+    - Wants this debate prep kept composed, analytical, and formally written for records. (T-66.1)
+  episodic:
+    + E-71 [episode] Urgent prep for the Bosa water-rights hearing focused on evidence, logistics, and morning triage.
+    + O-71.1 [stated] Feels panicked because the Bosa water-rights hearing is less than 24 hours away.
+    + O-71.2 [behavior] Wants actual evidence, a legal citation, a volunteer dashboard, and a dawn checklist.
+  state:
+    + G-71.1 [active] Prepare for the Bosa Water Rights Public Hearing.
+    + T-71.1 [active] Feels panicked about the Bosa water-rights hearing in less than 24 hours.
+    ~ P-1.1  basis: O-0.1, O-1.2, O-1.3, O-3.2, O-6.1, O-6.2, O-9.2, O-10.3, O-10.4, O-12.2, O-17.2, O-19.1, O-19.3, O-20.2, O-20.3, O-22.1, O-25.3, O-32.2, O-33.1, O-33.2, O-39.1, O-39.2, O-41.3, O-48.1, O-48.2, O-50.2, O-50.3, O-51.1, O-51.2, O-53.1, O-53.2, O-53.4, O-61.1, O-63.3, O-64.2, O-64.3, O-64.5, O-68.1, O-68.2, O-71.2
+    ~ P-25.1  basis: O-3.2, O-3.4, O-11.2, O-17.2, O-19.1, O-19.3, O-25.2, O-26.1, O-29.2, O-29.4, O-31.2, O-33.1, O-36.1, O-39.1, O-39.2, O-43.2, O-43.3, O-47.1, O-48.1, O-48.2, O-51.2, O-53.1, O-53.2, O-53.3, O-63.1, O-63.3, O-64.2, O-64.5, O-68.1, O-70.1, O-71.2
+    ~ P-40.1  basis: O-40.1, O-41.1, O-42.1, O-42.5, O-43.1, O-43.3, O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3, O-26.1, O-29.3, O-32.2, O-33.1, O-34.1, O-36.1, O-39.1, O-48.1, O-48.2, O-50.3, O-51.2, O-53.1, O-53.2, O-53.4, O-56.1, O-56.2, O-58.1, O-60.3, O-60.4, O-60.5, O-61.1, O-61.2, O-63.1, O-63.3, O-64.2, O-64.3, O-64.5, O-65.1, O-65.3, O-65.5, O-66.1, O-68.1, O-68.2, O-69.2, O-70.1, O-70.2, O-71.2
+S-72 · 2025-12-11
+  working context: 12 bullets (cites +P-10.1)
+    + Wants APA 7th citations for formal reports and board papers. (P-10.1)
+  episodic:
+    + E-72 [episode] Land restitution hearing prep focused on evidence, tone, and fast briefing format.
+    + O-72.1 [behavior] Asked for a consensus-building numbered opening, a side-by-side title table, APA style, and a morning checkli…
+    + O-72.2 [behavior] Wanted investigator-direct Q&A, a measured professional closing, and a risk breakdown for overreach powers.
+  state:
+    ~ P-1.1  basis: O-0.1, O-1.2, O-1.3, O-3.2, O-6.1, O-6.2, O-9.2, O-10.3, O-10.4, O-12.2, O-17.2, O-19.1, O-19.3, O-20.2, O-20.3, O-22.1, O-25.3, O-32.2, O-33.1, O-33.2, O-39.1, O-39.2, O-41.3, O-48.1, O-48.2, O-50.2, O-50.3, O-51.1, O-51.2, O-53.1, O-53.2, O-53.4, O-61.1, O-63.3, O-64.2, O-64.3, O-64.5, O-68.1, O-68.2, O-71.2, O-72.1, O-72.2 confirmed: 2025-12-11
+    ~ P-10.1  basis: O-10.1, O-17.3, O-23.5, O-24.2, O-27.1, O-63.2, O-65.2, O-72.1 confirmed: 2025-12-11
+    ~ P-25.1  basis: O-3.2, O-3.4, O-11.2, O-17.2, O-19.1, O-19.3, O-25.2, O-26.1, O-29.2, O-29.4, O-31.2, O-33.1, O-36.1, O-39.1, O-39.2, O-43.2, O-43.3, O-47.1, O-48.1, O-48.2, O-51.2, O-53.1, O-53.2, O-53.3, O-63.1, O-63.3, O-64.2, O-64.5, O-68.1, O-70.1, O-71.2, O-72.1, O-72.2 confirmed: 2025-12-11
+    ~ P-40.1  basis: O-40.1, O-41.1, O-42.1, O-42.5, O-43.1, O-43.3, O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3, O-26.1, O-29.3, O-32.2, O-33.1, O-34.1, O-36.1, O-39.1, O-48.1, O-48.2, O-50.3, O-51.2, O-53.1, O-53.2, O-53.4, O-56.1, O-56.2, O-58.1, O-60.3, O-60.4, O-60.5, O-61.1, O-61.2, O-63.1, O-63.3, O-64.2, O-64.3, O-64.5, O-65.1, O-65.3, O-65.5, O-66.1, O-68.1, O-68.2, O-69.2, O-70.1, O-70.2, O-71.2, O-72.1, O-72.2 confirmed: 2025-12-11
+    ~ P-44.1  basis: O-44.3, O-47.1, O-68.2, O-72.2 confirmed: 2025-12-11
+S-73 · 2025-12-13
+  working context: 10 bullets (cites +P-1.1 -G-71.1 -T-64.1 -T-64.2 -T-71.1)
+    + Wants concrete draft lines and strategic frameworks rather than open-ended discussion. (P-1.1)
+    + none
+    - Feels panicked about next week's land hearing and wants the prep paced to avoid burnout. (T-64.1)
+    - Feels panicked about the Bosa water-rights hearing in less than 24 hours. (T-71.1)
+    - Prepare for the Bosa Water Rights Public Hearing. (G-71.1)
+    - Wants a measured, persuasive tone in the hearing prep to stay calm and avoid hot-headedness. (T-64.2)
+  episodic:
+    + E-73 [episode] Helped refine a Model UN Arctic sovereignty speech with structured, evidence-backed guidance.
+    + O-73.1 [behavior] Asked for numbered steps, a resource table, APA 7 citations, and balanced evidence for a Canada speech.
+  state:
+    ~ P-10.1  basis: O-10.1, O-17.3, O-23.5, O-24.2, O-27.1, O-63.2, O-65.2, O-72.1, O-73.1 confirmed: 2025-12-13
+    ~ P-25.1  basis: O-3.2, O-3.4, O-11.2, O-17.2, O-19.1, O-19.3, O-25.2, O-26.1, O-29.2, O-29.4, O-31.2, O-33.1, O-36.1, O-39.1, O-39.2, O-43.2, O-43.3, O-47.1, O-48.1, O-48.2, O-51.2, O-53.1, O-53.2, O-53.3, O-63.1, O-63.3, O-64.2, O-64.5, O-68.1, O-70.1, O-71.2, O-72.1, O-72.2, O-73.1 confirmed: 2025-12-13
+    ~ P-40.1  basis: O-40.1, O-41.1, O-42.1, O-42.5, O-43.1, O-43.3, O-0.1, O-1.2, O-2.1, O-3.2, O-6.1, O-9.2, O-10.4, O-11.2, O-13.1, O-15.1, O-17.2, O-19.3, O-20.2, O-22.1, O-23.3, O-24.2, O-25.1, O-25.3, O-26.1, O-29.3, O-32.2, O-33.1, O-34.1, O-36.1, O-39.1, O-48.1, O-48.2, O-50.3, O-51.2, O-53.1, O-53.2, O-53.4, O-56.1, O-56.2, O-58.1, O-60.3, O-60.4, O-60.5, O-61.1, O-61.2, O-63.1, O-63.3, O-64.2, O-64.3, O-64.5, O-65.1, O-65.3, O-65.5, O-66.1, O-68.1, O-68.2, O-69.2, O-70.1, O-70.2, O-71.2, O-72.1, O-72.2, O-73.1 confirmed: 2025-12-13
+    ~ T-63.1 active -> expired ended: 2025-12-13
+    ~ T-64.1 active -> expired ended: 2025-12-13
+    ~ T-64.2 active -> expired ended: 2025-12-13
+    ~ T-66.1 active -> expired ended: 2025-12-13
+    ~ T-67.1 active -> expired ended: 2025-12-13
+    ~ T-71.1 active -> expired ended: 2025-12-13
+S-74 · 2025-12-13
+  working context: 10 bullets (cites +T-74.1)
+    + Tonight's Arctic Model UN speech coaching should be powerful, respectful, punchy, and useful as a longer-term…
+    - none
+  episodic:
+    + E-74 [episode] High-school Model UN speech coaching for an Arctic sovereignty debate.
+    + O-74.1 [behavior] Asked for a powerful, speech-ready opening, middle, and closing for an Arctic sovereignty speech.
+    + O-74.2 [stated] Wants the speaker strong but respectful to elders, with punchy rhythm and a calm delivery.
+    + O-74.3 [stated] Wants the speech to feel like a long-term leadership skill, not just a one-night performance.
+  state:
+    + T-74.1 [active] Wants this Arctic speech help to be speech-ready, powerful, respectful, and useful as a longer-term leadershi…
+
+Totals over the run:
+  working_context  added 189  removed 179
+  episodic         added 276  changed 0  moved 0  removed 0
+  state            added 102  changed 190  moved 43  removed 0
+  decisions        added 0  changed 0  moved 0  removed 0

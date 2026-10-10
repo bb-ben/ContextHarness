@@ -1,0 +1,33 @@
+{
+  "source": "runs/v31_item0/items/000_sonnet-4.5_user_73_915a8016",
+  "model": "gpt-5.4-mini",
+  "effort": "medium",
+  "strategies": {
+    "dimension-first": {
+      "answers": [
+        "B",
+        "B",
+        "B",
+        "B",
+        "B"
+      ],
+      "correct": 0,
+      "chose_trap": 0,
+      "mean_reads": 0.0,
+      "cost_usd": 0.024
+    },
+    "default": {
+      "answers": [
+        "B",
+        "D",
+        "B",
+        "B",
+        "E"
+      ],
+      "correct": 0,
+      "chose_trap": 1,
+      "mean_reads": 0.0,
+      "cost_usd": 0.0134
+    }
+  }
+}

@@ -1,0 +1,29 @@
+# Transient state
+
+- T-47.1 | expired | 2025-11-13 | review: 2025-11-20 | ended: 2025-11-20 | basis: O-47.3 | Is feeling overloaded by the podcast sprint and wants a high-level overview first, then step-by-step tasks right now.
+- T-48.1 | expired | 2025-11-13 | review: 2025-11-20 | ended: 2025-11-20 | basis: O-48.2 | Is overwhelmed by the cup-final media blitz and wants checklist-style help right now.
+- T-49.1 | expired | 2025-11-14 | review: 2025-11-21 | ended: 2025-11-23 | basis: O-49.1 | Wants tight two-line stanzas for the current poetry chain right now.
+- T-50.1 | expired | 2025-11-16 | review: 2025-11-23 | ended: 2025-11-23 | basis: O-50.1 | Is feeling pre-speech jitters about a charity auction in 3 days and wants quick calming support right now.
+- T-51.1 | expired | 2025-11-17 | review: 2025-11-24 | ended: 2025-11-24 | basis: O-51.3 | Wants to lock one piece at a time today and leave the rest for later.
+- T-52.1 | superseded | 2025-11-18 | expires: 2026-11-18 | until: 2025-11-20 | superseded_by: T-54.1 | basis: O-52.1 | Is in Valencia for a year-long logistics project and is running a bilingual youth football outreach on the side.
+- T-53.1 | expired | 2025-11-19 | review: 2025-11-26 | ended: 2025-11-26 | basis: O-53.1, O-53.5 | Is feeling rattled by a workplace mistake and wants practical support right now.
+- T-61.1 | expired | 2025-11-26 | review: 2025-12-03 | ended: 2025-11-26 | basis: O-61.1, O-61.2 | Is feeling rattled by a courier-cutoff mistake and wants quick check-ins right now.
+- T-54.1 | active | 2025-11-20 | expires: 2026-05-20 | basis: O-54.1 | Is seconded to Bangladesh for six months to run NorthWest Freight Solutions' flood-relief logistics.
+- T-55.1 | expired | 2025-11-20 | review: 2025-11-27 | ended: 2025-11-27 | basis: O-55.1, O-55.2, O-55.4 | Is homesick in Toronto and wants chill, practical support right now.
+- T-57.1 | expired | 2025-11-24 | review: 2025-12-01 | ended: 2025-12-04 | basis: O-57.1, O-57.2 | Is feeling discouraged after 25 job rejections and wants hard tactics with weekly checkpoints right now.
+- T-58.1 | expired | 2025-11-24 | review: 2025-12-01 | ended: 2025-12-04 | basis: O-57.1, O-57.2, O-58.2 | supersedes: T-57.1 | Is feeling discouraged after job rejections and wants hard tactics with weekly Monday-night check-ins right now.
+- T-60.1 | expired | 2025-11-25 | review: 2025-12-02 | ended: 2025-12-04 | basis: O-60.1, O-60.2, O-60.3 | Is feeling imposter-syndrome panic before the podcast in six days and wants calm, step-by-step, checklist-based support with quick challenge prompts right now.
+- T-63.1 | expired | 2025-11-27 | review: 2025-12-04 | ended: 2025-12-04 | basis: O-63.5 | Wants low-key jokes and gentler support today while feeling fragile.
+- T-63.2 | expired | 2025-11-27 | review: 2025-12-04 | ended: 2025-12-04 | basis: O-63.7 | Wants a brief Wednesday written check-in while the logo situation is active.
+- T-64.1 | expired | 2025-11-28 | expires: 2025-11-30 | ended: 2025-11-30 | basis: O-64.1 | Is overwhelmed by the remote fan-zine deadline and wants super-clear baby-step help right now.
+- T-66.1 | expired | 2025-11-30 | review: 2025-12-07 | ended: 2025-12-07 | basis: O-66.1, O-66.5, O-67.2 | Is recovering from a panic attack and woke up calmer after using the mantra.
+- T-66.2 | expired | 2025-11-30 | review: 2025-12-07 | ended: 2025-12-07 | basis: O-66.4 | Is drinking about five coffees before lunch.
+- T-68.1 | active | 2025-12-04 | expires: 2025-12-25 | basis: O-68.2 | Has estate paperwork due in three weeks.
+- T-68.2 | superseded | 2025-12-04 | review: 2025-12-11 | until: 2025-12-11 | superseded_by: T-75.1 | basis: O-68.2 | Is feeling financial pressure from a looming braces bill.
+- T-69.1 | active | 2025-12-07 | review: 2025-12-14 | basis: O-69.1 | Wants indirect wording for the roommate boundary talk for now.
+- T-72.1 | active | 2025-12-09 | review: 2025-12-16 | basis: O-72.2, O-72.3 | Wants this comic dialogue kept super PG because a little cousin will read it.
+- T-73.1 | active | 2025-12-10 | review: 2025-12-17 | basis: O-73.1, O-73.3 | Is stressed by the charity app overhaul with three weeks left and wants straight step-by-step support right now.
+- T-73.2 | active | 2025-12-10 | review: 2025-12-17 | basis: O-73.4 | Has a daily 2 pm slump and wants a gentle midday reminder while the charity app work is active.
+- T-74.1 | superseded | 2025-12-10 | expires: 2025-12-11 | until: 2025-12-11 | superseded_by: T-75.2 | basis: O-74.1, O-74.2 | Is preparing for a first crisis press briefing tomorrow morning after being bumped up to spokesperson for a warehouse incident.
+- T-75.1 | active | 2025-12-11 | review: 2025-12-18 | basis: O-68.2 | Is still feeling financial pressure from a looming braces bill.
+- T-75.2 | active | 2025-12-11 | expires: 2025-12-12 | basis: O-74.1, O-74.2 | Is still preparing for a first crisis press briefing tomorrow morning after being bumped up to spokesperson for a warehouse incident.

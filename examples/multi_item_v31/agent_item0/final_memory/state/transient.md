@@ -1,0 +1,16 @@
+# Transient state
+- T-2.1 | superseded | 2025-09-30 | review: 2025-10-07 | basis: O-2.2 | until: 2025-10-01 | superseded_by: T-3.1 | Feels overwhelmed and wants casual, non-formal language in this conversation.
+- T-3.1 | expired | 2025-10-01 | review: 2025-10-08 | basis: O-3.1 | supersedes: T-2.1 | ended: 2025-10-10 | Feels overwhelmed in this conversation and wants casual language plus a visual way to track completed versus pending items.
+- T-5.1 | expired | 2025-10-04 | review: 2025-10-11 | basis: O-5.1, O-6.1, O-6.2 | confirmed: 2025-10-04 | ended: 2025-10-12 | Feels low after a breakup a week ago and ruminates during quiet times.
+- T-6.1 | expired | 2025-10-04 | review: 2025-10-11 | basis: O-6.5 | ended: 2025-10-12 | Wants a brief middle-ground response for casual questions about the breakup.
+- T-6.2 | expired | 2025-10-04 | review: 2025-10-11 | basis: O-6.3 | ended: 2025-10-12 | Has felt less motivated lately to do favorite outdoor activities.
+- T-7.1 | expired | 2025-10-05 | review: 2025-10-12 | basis: O-7.2 | ended: 2025-10-12 | Wants a less confrontational, rapport-first approach in this training scenario.
+- T-14.1 | superseded | 2025-10-15 | review: 2025-10-22 | basis: O-14.2, O-21.1 | confirmed: 2025-10-21 | until: 2025-10-24 | superseded_by: T-22.1 | Wants work emails about the exhibition delay to stay professional and avoid personal accident details.
+- T-14.2 | active | 2025-10-15 | review: 2025-11-15 | basis: O-14.1, O-19.1, O-21.2 | confirmed: 2025-10-21 | Is returning to work after a motorcycle accident.
+- T-15.1 | active | 2025-10-18 | review: 2025-11-15 | basis: O-14.1, O-15.1 | Is more cautious about high-risk decisions while recovering from the motorcycle accident.
+- T-19.1 | expired | 2025-10-19 | review: 2025-10-26 | basis: O-19.2 | ended: 2025-10-27 | Feels worried about an upcoming exhibition planned before the accident.
+- T-20.1 | expired | 2025-10-21 | review: 2025-10-28 | basis: O-20.3, O-20.4 | ended: 2025-10-28 | Feels relieved but still anxious about money after deciding to turn down the oil job.
+- T-22.1 | expired | 2025-10-24 | review: 2025-10-31 | basis: O-14.2, O-21.1 | ended: 2025-11-01 | Wants work emails about the exhibition delay to stay professional and avoid personal accident details.
+- T-24.1 | active | 2025-10-27 | review: 2025-11-03 | basis: O-24.3 | Wants a structured, iterative way to work through the facial-recognition launch and not solve everything today.
+- T-26.1 | active | 2025-10-29 | review: 2025-11-05 | basis: O-26.1 | Dreads sleep because recurring nightmares from climbing and biking close calls are disrupting work at the gallery.
+- T-28.1 | active | 2025-11-01 | review: 2025-11-08 | basis: O-28.1, O-28.2 | Preparing for a high-school euthanasia debate and wants a balanced, respectful full-picture treatment.

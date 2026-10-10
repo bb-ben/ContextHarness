@@ -1,0 +1,20 @@
+# Goals
+- G-0.1 | active | 2025-09-29 | basis: O-0.1 | Build high-pressure communication skills.
+  - 2025-10-05 (S-7, O-7.1, O-7.2, O-7.3): practiced rapport-building and legal-boundary awareness in a high-pressure scenario.
+  - 2025-10-10 (S-10, O-10.1, O-10.2): explored coup-diplomacy pressure points and communication constraints in a simulation frame.
+- G-12.1 | active | 2025-10-13 | basis: O-12.2 | Draft a code of ethics for the AI startup before scaling.
+  - 2025-10-13 (S-13, O-13.2, O-13.3): wants principle-based red lines, a short core code, annual reviews, and external advisors.
+- G-15.1 | active | 2025-10-18 | basis: O-15.1 | Develop the cult project as an awareness and education-focused art installation.
+  - 2025-10-18 (S-15, O-15.2): plans to contact cult-awareness groups and involve Priya and Ryan.
+  - 2025-10-18 (S-16, O-16.1, O-16.2): wants the project to stay critical and document safety protocols and decision-making.
+- G-17.1 | active | 2025-10-19 | due: 2025-11-30 | basis: O-17.1 | Restore the CB750 to reliable riding condition before wedding season.
+  - 2025-10-19 (S-17, O-17.1, O-17.2): identified the critical path as subframe repair, wiring rebuild, carb refresh, and brake bleeding.
+- G-20.1 | active | 2025-10-21 | basis: O-20.2, O-20.3 | Build financial stability without compromising values.
+  - 2025-10-21 (S-20, O-20.2, O-20.3, O-20.4): chose to turn down the oil offer and now wants other paths to stability.
+- G-22.1 | superseded | 2025-10-24 | basis: O-22.1 | until: 2025-10-24 | superseded_by: G-23.1 | Plan an immersive climbing-lodge murder mystery party for ten guests.
+  - 2025-10-24 (S-22, O-22.1): wants an adventure vibe, morally weighty suspects, darkroom photo reveals, simple immersive props, and host-managed pacing.
+- G-23.1 | active | 2025-10-24 | basis: O-23.1, O-23.2, O-23.3, O-23.4, O-23.5 | supersedes: G-22.1 | Plan an immersive 1920s speakeasy murder mystery party for ten guests.
+  - 2025-10-24 (S-23, O-23.1, O-23.2, O-23.3, O-23.4, O-23.5): wants clues woven naturally, gradual tension, three red herrings, and blackmail/double identities in a gritty speakeasy.
+  - 2025-10-27 (S-24, O-24.1, O-24.2, O-24.3): wants consent, retention, access controls, bias testing, and no mass-surveillance use as key ethics guardrails.
+  - 2025-10-28 (S-25, O-25.1, O-25.2, O-25.3, O-25.4): wants the draft grounded in concrete cases, to keep version one focused on core risks, to involve outside stakeholders from the start, and to grow slowly with aligned partners.
+- G-26.1 | active | 2025-10-29 | basis: O-26.1, O-26.2 | Sleep normally again without nightmares interrupting work.

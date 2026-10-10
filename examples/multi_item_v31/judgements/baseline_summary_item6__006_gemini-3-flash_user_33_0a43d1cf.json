@@ -1,0 +1,305 @@
+{
+  "item_id": "Jairo Restrepo_event77_20260326_turn1_communication_medium_preferences_142_counterfactuals.json",
+  "judge_model": "gpt-5.4-mini",
+  "memory_chars": 7659,
+  "attributes": [
+    {
+      "attribute": "preferred_response_format",
+      "current": "executive_summary_with_strategic_tradeoffs",
+      "original": "structured_numbered_steps",
+      "changed": true,
+      "memory_value": "structured checklists/tables with ranked guidance",
+      "current_match": "contradicts",
+      "original_still_current": true,
+      "change_recorded": false,
+      "evidence": "\"prefer structured, ranked, tactical guidance: checklists, urgency order, concise comparisons\"; \"often delivered as tables, checklists, dashboards, or punchy closers\"",
+      "votes": [
+        "contradicts",
+        "partial",
+        "contradicts"
+      ]
+    },
+    {
+      "attribute": "emotional_tone",
+      "current": "diplomatic_and_authoritative",
+      "original": "direct_pragmatic",
+      "changed": true,
+      "memory_value": "measured, persuasive, authoritative; not shouty",
+      "current_match": "matches",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "\"Tone preference ... measured, persuasive, authoritative, not shouty, but definitely not timid\"; \"respectful to elders and diplomats\"",
+      "votes": [
+        "matches",
+        "matches",
+        "matches"
+      ]
+    },
+    {
+      "attribute": "explanation_approach",
+      "current": "impact_assessment_first",
+      "original": "principles_first_then_examples",
+      "changed": true,
+      "memory_value": "shared values/principles first, then rebuttal and synthesis",
+      "current_match": "contradicts",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "\u201cestablish shared values / consensus\u201d / \u201cthesis-antithesis-synthesis\u201d / \u201cmoral duty\u201d",
+      "votes": [
+        "matches",
+        "partial",
+        "contradicts"
+      ]
+    },
+    {
+      "attribute": "example_preference",
+      "current": "real_world_analogies",
+      "changed": false,
+      "memory_value": "historical precedents / grounding narratives",
+      "current_match": "matches",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "\"They also value historical depth, including references to 1940s land grabs / La Violencia-era displacement\"; \"El Recreo as a useful grounding narrative\"",
+      "votes": [
+        "matches",
+        "absent",
+        "matches"
+      ]
+    },
+    {
+      "attribute": "boundary_setting_voice",
+      "current": "value_based_reasoning",
+      "changed": false,
+      "memory_value": "community-centered, value-based framing",
+      "current_match": "matches",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "\"keep the community and displaced families at the center, not elite property narratives\"; \"contrast office paperwork / corporate or elite narratives with territorial reality\"",
+      "votes": [
+        "matches",
+        "partial",
+        "matches"
+      ]
+    }
+  ],
+  "current_fidelity": 0.6,
+  "changed_fidelity": 0.333,
+  "stale": 1,
+  "changes_recorded": 0,
+  "n_attributes": 5,
+  "n_changed": 3,
+  "ungraded": [],
+  "repeats": 3,
+  "agreement": 0.667,
+  "current_fidelity_range": [
+    0.5,
+    0.8
+  ],
+  "estimated_cost_usd": 0.11965,
+  "runs": [
+    {
+      "item_id": "Jairo Restrepo_event77_20260326_turn1_communication_medium_preferences_142_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 7659,
+      "attributes": [
+        {
+          "attribute": "preferred_response_format",
+          "current": "executive_summary_with_strategic_tradeoffs",
+          "original": "structured_numbered_steps",
+          "changed": true,
+          "memory_value": "structured checklists/tables with ranked guidance",
+          "current_match": "contradicts",
+          "original_still_current": true,
+          "change_recorded": false,
+          "evidence": "\"prefer structured, ranked, tactical guidance: checklists, urgency order, concise comparisons\"; \"often delivered as tables, checklists, dashboards, or punchy closers\""
+        },
+        {
+          "attribute": "emotional_tone",
+          "current": "diplomatic_and_authoritative",
+          "original": "direct_pragmatic",
+          "changed": true,
+          "memory_value": "measured, persuasive, authoritative; not shouty",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\"Tone preference ... measured, persuasive, authoritative, not shouty, but definitely not timid\"; \"respectful to elders and diplomats\""
+        },
+        {
+          "attribute": "explanation_approach",
+          "current": "impact_assessment_first",
+          "original": "principles_first_then_examples",
+          "changed": true,
+          "memory_value": "impact/problem first, then solution",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\"1. establish shared values / consensus 2. define the administrative gaps and ethical problem 3. present restitution as the only logical path to peace\"; \"thesis-antithesis-synthesis\""
+        },
+        {
+          "attribute": "example_preference",
+          "current": "real_world_analogies",
+          "changed": false,
+          "memory_value": "historical precedents / grounding narratives",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\"They also value historical depth, including references to 1940s land grabs / La Violencia-era displacement\"; \"El Recreo as a useful grounding narrative\""
+        },
+        {
+          "attribute": "boundary_setting_voice",
+          "current": "value_based_reasoning",
+          "changed": false,
+          "memory_value": "community-centered, value-based framing",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\"keep the community and displaced families at the center, not elite property narratives\"; \"contrast office paperwork / corporate or elite narratives with territorial reality\""
+        }
+      ],
+      "current_fidelity": 0.8,
+      "changed_fidelity": 0.667,
+      "stale": 1,
+      "changes_recorded": 0,
+      "n_attributes": 5,
+      "n_changed": 3,
+      "ungraded": [],
+      "estimated_cost_usd": 0.03434
+    },
+    {
+      "item_id": "Jairo Restrepo_event77_20260326_turn1_communication_medium_preferences_142_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 7659,
+      "attributes": [
+        {
+          "attribute": "preferred_response_format",
+          "current": "executive_summary_with_strategic_tradeoffs",
+          "original": "structured_numbered_steps",
+          "changed": true,
+          "memory_value": "short, structured tactical briefs with tables/checklists",
+          "current_match": "partial",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\"short, forceful, and easy to share\"; \"tables, checklists, dashboards, or punchy closers\"; \"clear opening structure ... 1, 2, 3\""
+        },
+        {
+          "attribute": "emotional_tone",
+          "current": "diplomatic_and_authoritative",
+          "original": "direct_pragmatic",
+          "changed": true,
+          "memory_value": "measured, persuasive, authoritative",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\"measured, persuasive, authoritative, not shouty, but definitely not timid\"; \"more urgent, more strategic, more rhythmic/punchy, still respectful\""
+        },
+        {
+          "attribute": "explanation_approach",
+          "current": "impact_assessment_first",
+          "original": "principles_first_then_examples",
+          "changed": true,
+          "memory_value": "practical, impact-centered, evidence-led",
+          "current_match": "partial",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\"keep community and displaced families at the center\"; \"translate technical/legal material into plain persuasive language\"; \"rather than abstract theory\""
+        },
+        {
+          "attribute": "example_preference",
+          "current": "real_world_analogies",
+          "changed": false,
+          "memory_value": "nothing",
+          "current_match": "absent",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "No explicit preference for analogies; the memory mentions \"historical precedents\" and \"evidence tables,\" but not analogy style."
+        },
+        {
+          "attribute": "boundary_setting_voice",
+          "current": "value_based_reasoning",
+          "changed": false,
+          "memory_value": "value-based legal/moral framing",
+          "current_match": "partial",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\"legitimate justice mechanism, not dictatorial overreach\"; \"focus on facts, records, legality, and accountability\"; \"moral duty\""
+        }
+      ],
+      "current_fidelity": 0.5,
+      "changed_fidelity": 0.667,
+      "stale": 0,
+      "changes_recorded": 0,
+      "n_attributes": 5,
+      "n_changed": 3,
+      "ungraded": [],
+      "estimated_cost_usd": 0.05545
+    },
+    {
+      "item_id": "Jairo Restrepo_event77_20260326_turn1_communication_medium_preferences_142_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 7659,
+      "attributes": [
+        {
+          "attribute": "preferred_response_format",
+          "current": "executive_summary_with_strategic_tradeoffs",
+          "original": "structured_numbered_steps",
+          "changed": true,
+          "memory_value": "structured, ranked tactical guidance; checklists/tables/concise comparisons",
+          "current_match": "contradicts",
+          "original_still_current": true,
+          "change_recorded": false,
+          "evidence": "\u201cstructured, ranked, tactical guidance: checklists, urgency order, concise comparisons\u201d / \u201ctables, checklists, dashboards, or punchy closers\u201d"
+        },
+        {
+          "attribute": "emotional_tone",
+          "current": "diplomatic_and_authoritative",
+          "original": "direct_pragmatic",
+          "changed": true,
+          "memory_value": "measured, persuasive, authoritative; direct in Q&A",
+          "current_match": "matches",
+          "original_still_current": true,
+          "change_recorded": false,
+          "evidence": "\u201cmeasured, persuasive, authoritative, not shouty, but definitely not timid\u201d / \u201cFor Q&A: direct, sharp, factual, no fluff\u201d"
+        },
+        {
+          "attribute": "explanation_approach",
+          "current": "impact_assessment_first",
+          "original": "principles_first_then_examples",
+          "changed": true,
+          "memory_value": "shared values/principles first, then rebuttal and synthesis",
+          "current_match": "contradicts",
+          "original_still_current": true,
+          "change_recorded": false,
+          "evidence": "\u201cestablish shared values / consensus\u201d / \u201cthesis-antithesis-synthesis\u201d / \u201cmoral duty\u201d"
+        },
+        {
+          "attribute": "example_preference",
+          "current": "real_world_analogies",
+          "changed": false,
+          "memory_value": "historical precedents and specific Bosa cases",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\u201chistorical precedents\u201d / \u201cspecific case from Bosa\u201d / \u201cEl Recreo as a useful grounding narrative\u201d"
+        },
+        {
+          "attribute": "boundary_setting_voice",
+          "current": "value_based_reasoning",
+          "changed": false,
+          "memory_value": "facts, records, legality, accountability; moral-duty framing",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "\u201ckeep the focus on facts, records, legality, and accountability\u201d / \u201cmoral duty\u201d / \u201cpro-justice, pro-peace solution\u201d"
+        }
+      ],
+      "current_fidelity": 0.6,
+      "changed_fidelity": 0.333,
+      "stale": 3,
+      "changes_recorded": 0,
+      "n_attributes": 5,
+      "n_changed": 3,
+      "ungraded": [],
+      "estimated_cost_usd": 0.02986
+    }
+  ]
+}
