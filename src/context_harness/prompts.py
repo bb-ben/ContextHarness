@@ -41,6 +41,19 @@ def answer_instruction(read_budget_left: int) -> str:
     )
 
 
+# How the agent should use memory when it responds. "default" adds nothing.
+ANSWER_STRATEGIES: dict[str, str] = {
+    "default": "",
+    "dimension-first": (
+        "Work in this order: (1) compare the candidate responses and find where they actually differ; "
+        "(2) name the preference dimension or dimensions those differences fall on; (3) read the current "
+        "value of each in <preference_dimensions>, and if it was revised, look up what it replaced and why; "
+        "(4) choose the response that best fits those current values. Weigh the dimension the responses "
+        "differ on, not whichever preference is most prominent in context.md."
+    ),
+}
+
+
 TRACKING_GUIDANCE = (
     "People's preferences, goals and circumstances can change over time. Keep track of what "
     "is currently true. When something changes, record the new state as current and mark the "

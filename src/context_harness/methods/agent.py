@@ -146,8 +146,11 @@ class WorkspaceAgent:
                 self._render_state(actions)
                 + [
                     prompts.render_actions(actions),
-                    f"{prompts.answer_instruction(budget.max_chars - budget.used)} "
-                    f"Model calls remaining after this one: {calls_left}.",
+                    " ".join(filter(None, [
+                        prompts.answer_instruction(budget.max_chars - budget.used),
+                        prompts.ANSWER_STRATEGIES[cfg.answer_strategy],
+                        f"Model calls remaining after this one: {calls_left}.",
+                    ])),
                 ]
             )
 

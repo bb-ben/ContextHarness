@@ -126,6 +126,62 @@ def cmd_inspect_memory(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_replay_answer(args: argparse.Namespace) -> int:
+    """Rerun only the answer step against a saved memory, per strategy, N times each."""
+    from collections import defaultdict
+
+    from .models.base import PauseRun
+    from .prompts import ANSWER_STRATEGIES
+    from .replay import find_snapshot, load_source_item, replay_answer
+
+    source = Path(args.source)
+    snapshot, item = find_snapshot(source), load_source_item(source)
+    settings = ModelSettings(model=args.model, max_tokens=args.max_tokens,
+                             effort=None if args.effort == "none" else args.effort, timeout_s=args.timeout)
+    model = make_model(settings)
+    if args.max_requests is not None:
+        model = RequestCap(model, args.max_requests)
+    if args.max_cost_usd is not None:
+        model = CostCap(model, args.max_cost_usd)
+    run_dir = Path(args.out) / (args.run_name or f"{time.strftime('%Y%m%d-%H%M%S')}_replay_{source.name}")
+    strategies = args.strategy or ["default"]
+    print(f"Replaying the answer step for {item.gold.item_id[:60]}…  from {snapshot}")
+    print(f"Strategies {strategies} × {args.repeats} repeats on {args.model}; results in {run_dir}")
+    by_strategy: dict[str, list[dict]] = defaultdict(list)
+    try:
+        for strategy in strategies:
+            cfg = RunConfig("agent", settings, MethodConfig(layout=LAYOUTS[args.layout], answer_strategy=strategy),
+                            {"replay_of": str(source)}, args.log_prompts)
+            for k in range(1, args.repeats + 1):
+                r = replay_answer(item, snapshot, model, cfg, run_dir / f"{strategy}_{k}")
+                by_strategy[strategy].append(r)
+                print(f"  {strategy:<16} #{k}: {r['predicted_letter'] or '-'} "
+                      f"({'correct' if r['correct'] else 'wrong'}), {r['stats']['model_calls']} call(s), "
+                      f"{r['stats']['file_reads']} read(s)")
+    except PauseRun as e:
+        print(f"Stopped: {e}")
+    gold = item.gold
+    print(f"\nCorrect: {gold.correct_letter} ({gold.option_values.get(gold.correct_letter, '')})"
+          + (f"; old-preference trap: {gold.distractor_letter}" if gold.distractor_letter else ""))
+    summary = {}
+    for strategy, rs in by_strategy.items():
+        cost = sum(r["estimated_cost_usd"] or 0 for r in rs)
+        summary[strategy] = {
+            "answers": [r["predicted_letter"] for r in rs],
+            "correct": sum(r["correct"] for r in rs),
+            "chose_trap": sum(bool(r["chose_distractor"]) for r in rs),
+            "mean_reads": sum(r["stats"]["file_reads"] for r in rs) / len(rs),
+            "cost_usd": round(cost, 4),
+        }
+        s_ = summary[strategy]
+        print(f"  {strategy:<16} answers {' '.join(a or '-' for a in s_['answers'])}  correct {s_['correct']}/{len(rs)}  "
+              f"trap {s_['chose_trap']}/{len(rs)}  reads/answer {s_['mean_reads']:.1f}  cost ${cost:.3f}")
+    run_dir.mkdir(parents=True, exist_ok=True)
+    (run_dir / "summary.json").write_text(json.dumps({"source": str(source), "model": args.model,
+                                                      "effort": args.effort, "strategies": summary}, indent=2))
+    return 0
+
+
 def _short(text: str, n: int) -> str:
     return text if len(text) <= n else text[: n - 1] + "…"
 
@@ -243,6 +299,25 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("item_dir", help="runs/<run>/items/<item>")
     p.add_argument("--limit", type=int, default=30, help="Detailed violations to print")
     p.set_defaults(func=cmd_inspect_memory)
+
+    from .prompts import ANSWER_STRATEGIES
+
+    p = sub.add_parser("replay-answer", help="Rerun only the answer step against a saved memory")
+    p.add_argument("source", help="A finished item: runs/<run>/items/<item> or examples/<run>")
+    p.add_argument("--model", default=DEFAULT_MODEL)
+    p.add_argument("--effort", default="medium", choices=["minimal", "low", "medium", "high", "xhigh", "max", "none"])
+    p.add_argument("--strategy", action="append", choices=sorted(ANSWER_STRATEGIES),
+                   help="Answer strategy (repeatable; default: default)")
+    p.add_argument("--repeats", type=int, default=3, help="Answers per strategy")
+    p.add_argument("--layout", choices=sorted(LAYOUTS), default="general")
+    p.add_argument("--max-tokens", type=int, default=16000)
+    p.add_argument("--timeout", type=float, default=300.0)
+    p.add_argument("--max-requests", type=int)
+    p.add_argument("--max-cost-usd", type=float)
+    p.add_argument("--out", default="runs")
+    p.add_argument("--run-name")
+    p.add_argument("--log-prompts", action="store_true")
+    p.set_defaults(func=cmd_replay_answer)
 
     p = sub.add_parser("memory-timeline", help="Per event: what changed in working context, episodic memory and state")
     p.add_argument("item_dir", help="runs/<run>/items/<item>")
