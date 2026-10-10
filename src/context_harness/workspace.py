@@ -55,6 +55,8 @@ GENERAL_DIMENSIONS: tuple[Dimension, ...] = (
     Dimension("challenge-level", "How much to push, question or challenge them versus support and reassure."),
     Dimension("collaboration-style", "Whether they want answers handed over or to work things out together."),
     Dimension("values", "Values and priorities that any recommendation should respect."),
+    Dimension("constraints", "Practical conditions what you recommend must fit: time, effort, equipment, budget, "
+                             "who it is for."),
 )
 
 

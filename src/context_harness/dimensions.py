@@ -14,6 +14,7 @@ from dataclasses import dataclass, field
 from .entries import CHANGE_FIELD, Entry, parse_file
 from .workspace import Layout
 
+EPISODES_FILE = "memory/episodes.md"
 PREFERENCES_FILE = "state/preferences.md"
 HYPOTHESES_FILE = "state/hypotheses.md"
 
@@ -26,11 +27,27 @@ class DimensionRow:
     current: list[Entry] = field(default_factory=list)
     challenged_by: list[Entry] = field(default_factory=list)
     hypotheses: list[Entry] = field(default_factory=list)  # open hypotheses tagged with this dimension
+    # Tagged observations no preference or hypothesis cites yet: a wish seen in one task and
+    # again in another only becomes visible as a pattern if something lists them together.
+    signals: list[Entry] = field(default_factory=list)
 
 
-def dimension_rows(layout: Layout, preferences_text: str, hypotheses_text: str) -> list[DimensionRow]:
+def uncollected_signals(observations: list[Entry], beliefs: list[Entry]) -> dict[str, list[Entry]]:
+    """Observations tagged with a dimension that no preference or hypothesis cites, by dimension."""
+    cited = {ref for b in beliefs for ids in b.refs().values() for ref in ids}
+    out: dict[str, list[Entry]] = {}
+    for o in observations:
+        if o.type == "O" and o.fields.get("topic") and o.id not in cited:
+            out.setdefault(o.fields["topic"], []).append(o)
+    return out
+
+
+def dimension_rows(layout: Layout, preferences_text: str, hypotheses_text: str,
+                   episodes_text: str = "") -> list[DimensionRow]:
     prefs, _ = parse_file(PREFERENCES_FILE, preferences_text, ("P",))
     hyps, _ = parse_file(HYPOTHESES_FILE, hypotheses_text, ("H",))
+    observations, _ = parse_file(EPISODES_FILE, episodes_text, ("E", "O"))
+    signals = uncollected_signals(observations, prefs + hyps)
     rows = {d.key: DimensionRow(d.key, d.description, custom=False) for d in layout.dimensions}
     for p in prefs:
         key = p.fields.get("topic")
@@ -48,6 +65,7 @@ def dimension_rows(layout: Layout, preferences_text: str, hypotheses_text: str) 
         ids = {p.id for p in row.current}
         row.challenged_by = [h for h in open_hyps if ids & set(h.refs().get("challenges", []))]
         row.hypotheses = [h for h in open_hyps if h.fields.get("topic") == row.key and h not in row.challenged_by]
+        row.signals = signals.get(row.key, [])[-6:]
     return list(rows.values())
 
 
@@ -74,5 +92,9 @@ def render_dimensions(rows: list[DimensionRow]) -> str:
                 lines.append("  current: (none yet)")
             lines += [f"  challenged by: {h.id} (open) \"{h.statement}\"" for h in r.challenged_by]
             lines += [f"  open hypothesis: {h.id} \"{h.statement}\"" for h in r.hypotheses]
+            if r.signals:
+                events = len({o.event for o in r.signals})
+                lines.append(f"  signals not yet in any belief ({events} event{'s' if events > 1 else ''}): "
+                             + "; ".join(f"{o.id} \"{o.statement}\"" for o in r.signals))
     lines.append("</preference_dimensions>")
     return "\n".join(lines)

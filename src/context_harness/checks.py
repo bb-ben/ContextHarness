@@ -200,6 +200,19 @@ def check_state(parsed: ParsedWorkspace, events: list[EventInfo], current: int,
         if e.type == "O" and e.fields.get("kind") == "stated" and e.id not in cited:
             add("unused_stated_observation", e, "stated observation cited by no state entry, hypothesis or goal note")
 
+    # A dimension's signals from two different events that no belief has taken up: a
+    # repeated wish that is being recorded but never collected (the new-parent scenario's
+    # "one-handed", "freezer meals", "one-pan").
+    from .dimensions import uncollected_signals
+
+    for topic, signals in uncollected_signals(list(entries.values()),
+                                              [e for e in entries.values() if e.type in ("P", "H")]).items():
+        if len({o.event for o in signals}) >= 2:
+            first = signals[0]
+            out.append(Problem("uncollected_signals", first.path, first.line,
+                               f"{len(signals)} signals on {topic!r} from {len({o.event for o in signals})} events, "
+                               f"cited by no preference or hypothesis: {', '.join(o.id for o in signals)}", first.id))
+
     if f"E-{current}" not in entries:
         out.append(Problem("missing_episode", "memory/episodes.md", 0, f"no E-{current} line for {now.event_id}"))
 

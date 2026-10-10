@@ -48,8 +48,10 @@ def respond_instruction(read_budget_left: int) -> str:
         "Before writing, find the preference dimensions that matter for this reply and their current values, "
         "last changes and review dates in <preference_dimensions>, any active transient state, and the facts in "
         "<state> that bear on it (who they cook for, their diet, their constraints). Use what memory already "
-        "knows instead of asking for it. Then write the reply you would actually send, shaped by who they are "
-        "now, and call respond with it and the IDs of the entries it rests on."
+        "knows instead of asking for it. Go through every current preference, fact and active circumstance: "
+        "the reply should follow each one that bears on this request. Then write the reply you would actually "
+        "send and call respond with it, the IDs it follows (applied) and the IDs of every other current entry "
+        "(skipped)."
     )
 
 

@@ -8,7 +8,7 @@ from typing import Any
 
 from .. import prompts
 from ..dimensions import HYPOTHESES_FILE, PREFERENCES_FILE, dimension_rows, render_dimensions
-from ..entries import Entry, parse_file
+from ..entries import Entry, parse_file, parse_workspace
 from ..tools import Finish, ReadBudget, Respond, SubmitAnswer, ToolExecutor, workspace_tools
 from ..types import AnswerResult, Event, Probe, Question, Session
 from ..checks import goal_end, hypothesis_ripe_at
@@ -80,7 +80,8 @@ class WorkspaceAgent:
         if state := self.preloaded():
             blocks.append(prompts.render_state(state))
             if PREFERENCES_FILE in state:  # the structured view, derived from pre-loaded state
-                rows = dimension_rows(self.ws.layout, state[PREFERENCES_FILE], state.get(HYPOTHESES_FILE, ""))
+                rows = dimension_rows(self.ws.layout, state[PREFERENCES_FILE], state.get(HYPOTHESES_FILE, ""),
+                                      self.ws.read(EPISODES_FILE) if self.ws.layout.spec(EPISODES_FILE) else "")
                 blocks.append(render_dimensions(rows))
         return blocks + [prompts.render_workspace(self.ws.list_files())]
 
@@ -155,7 +156,9 @@ class WorkspaceAgent:
         cfg = self.ctx.config
         always = sum(len(block) for block in self._render_state(""))
         budget = ReadBudget(max(0, cfg.answer_budget_chars - always))
-        reply = Respond()
+        state = parse_workspace({p: self.ws.read(p) for p in self.ws.layout.paths}, self.ws.layout)
+        reply = Respond(required={e.id for e in state.entries.values()
+                                  if e.type in ("P", "F", "T") and e.live and e.path != ARCHIVE_FILE})
         executor = ToolExecutor(workspace_tools(self.ws, writable=False, read_budget=budget) + [reply], self.ctx.trace)
 
         def render(actions: str, calls_left: int) -> str:
@@ -172,7 +175,8 @@ class WorkspaceAgent:
             stop_when=lambda: reply.text is not None,
             on_no_tool_calls=lambda r, log: (log.note("harness", "Call respond with your reply.") or False),
         )
-        return {"text": reply.text, "applied": reply.applied, "steps": outcome.steps, "stop": outcome.stop,
+        return {"text": reply.text or reply.draft, "applied": reply.applied, "skipped": reply.skipped,
+                "accounted_for_all": reply.text is not None, "steps": outcome.steps, "stop": outcome.stop,
                 "read_chars": budget.used}
 
     def answer(self, probe: Probe, question: Question, probe_event_id: str) -> AnswerResult:

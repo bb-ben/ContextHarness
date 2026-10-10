@@ -436,24 +436,43 @@ def workspace_tools(ws: Workspace, writable: bool, read_budget: ReadBudget | Non
 
 
 class Respond(Tool):
-    """Submit a written reply to the person (the generated-response evaluation)."""
+    """Submit a written reply to the person (the generated-response evaluation).
+
+    With `required` IDs (every current preference, fact and active circumstance), the
+    reply must account for each one, as applied or skipped. In the scenarios, replies
+    used some of what memory held and silently left out the rest (a wanted check-in).
+    """
 
     kind = "answer"
 
-    def __init__(self):
+    def __init__(self, required: set[str] | None = None):
+        self.required = set(required or ())
         self.text: str | None = None
+        self.draft: str | None = None
         self.applied: list[str] = []
+        self.skipped: list[str] = []
         self.spec = ToolSpec(
             "respond",
-            "Submit the reply you would send the person, and the IDs of the memory entries it rests on.",
+            "Submit the reply you would send the person. List in applied the IDs of the memory entries it follows, "
+            "and in skipped every other current preference, fact and active circumstance (those that don't bear "
+            "on this request). A reply that leaves any out is returned to you.",
             _schema(required=("text",), text={"type": "string", "description": "Your reply, exactly as you would send it."},
                     applied={"type": "array", "items": {"type": "string"},
-                             "description": "IDs of the memory entries your reply rests on, if any."}),
+                             "description": "IDs of the memory entries your reply follows."},
+                    skipped={"type": "array", "items": {"type": "string"},
+                             "description": "IDs of current entries that don't bear on this request."}),
         )
 
     def run(self, args: dict[str, Any]) -> ToolResult:
-        self.text = args["text"]
-        self.applied = [i.strip() for i in args.get("applied", [])]
+        self.draft = args["text"]
+        applied = [i.strip() for i in args.get("applied", [])]
+        skipped = [i.strip() for i in args.get("skipped", [])]
+        missing = sorted(self.required - set(applied) - set(skipped))
+        if missing:
+            return ToolResult(False, f"Not sent. Account for every current entry: {', '.join(missing)} are neither "
+                                     "applied nor skipped. Apply each one that bears on this request (revise the reply "
+                                     "if needed) and skip the rest, then call respond again.")
+        self.text, self.applied, self.skipped = args["text"], applied, skipped
         return ToolResult(True, "Reply recorded.")
 
 

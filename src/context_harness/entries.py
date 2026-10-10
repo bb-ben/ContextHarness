@@ -147,9 +147,14 @@ def _build(path, no, entry_id, entry_type, event, n, segments) -> tuple[Entry | 
     status = date = None
     fields: dict[str, str] = {}
     if entry_type == "O":
-        if len(head) != 1:
-            return bad("observations need exactly '<kind> | <statement>'")
+        if not head:
+            return bad("observations need '<kind> | <statement>'")
         fields["kind"] = head[0]
+        for segment in head[1:]:  # optional fields, e.g. topic: <dimension>
+            fm = _FIELD.match(segment)
+            if not fm:
+                return bad("observations need '<kind> | [topic: <dimension> |] <statement>'")
+            fields[fm.group("key")] = fm.group("value").strip()
     else:
         if entry_type != "E":
             if not head:

@@ -29,20 +29,47 @@ def _grades(truth, fit):
                                           for a in truth["attributes"]]})]
 
 
+def _live_ids(snapshot):
+    from context_harness.entries import parse_workspace
+    from context_harness.workspace import GENERAL
+
+    parsed = parse_workspace({p: (snapshot / p).read_text() for p in GENERAL.paths if (snapshot / p).exists()}, GENERAL)
+    return sorted(e.id for e in parsed.entries.values()
+                  if e.type in ("P", "F", "T") and e.live and e.path != "memory/archive.md")
+
+
 def test_agent_writes_a_reply_from_memory_without_seeing_options(tmp_path):
     item_dir = _finished_item(tmp_path)
     item = load_source_item(item_dir)
+    live = _live_ids(find_snapshot(item_dir))
     seen = []
 
     def script(req):
         seen.append(req)
-        return "", [("respond", {"text": "Here is a plan.", "applied": ["T-0.1"]})]
+        return "", [("respond", {"text": "Here is a plan.", "applied": live[:1], "skipped": live[1:]})]
 
     reply = respond_with_agent(item, find_snapshot(item_dir), ScriptedModel(script), run_config("agent"), tmp_path / "r")
-    assert reply["text"] == "Here is a plan." and reply["applied"] == ["T-0.1"]
+    assert reply["text"] == "Here is a plan." and reply["applied"] == live[:1] and reply["accounted_for_all"]
     text = "\n".join(b.text for b in seen[0].blocks)
     assert seen[0].phase == "respond" and "<current_conversation" in text and "<question>" not in text
     assert "<preference_dimensions>" in text and "respond with it" in text
+
+
+def test_a_reply_that_leaves_out_current_entries_is_returned(tmp_path):
+    item_dir = _finished_item(tmp_path)
+    live = _live_ids(find_snapshot(item_dir))
+    assert live, "the fixture memory should hold live entries"
+    results = []
+
+    def script(req):
+        if len(results) == 0:
+            results.append("first")
+            return "", [("respond", {"text": "Draft.", "applied": live[:1]})]  # leaves the rest out
+        return "", [("respond", {"text": "Revised.", "applied": live[:1], "skipped": live[1:]})]
+
+    reply = respond_with_agent(load_source_item(item_dir), find_snapshot(item_dir), ScriptedModel(script),
+                               run_config("agent"), tmp_path / "r")
+    assert reply["text"] == "Revised." and reply["steps"] == 2 and reply["accounted_for_all"]
 
 
 def test_plain_text_replies_with_and_without_memory(tmp_path):

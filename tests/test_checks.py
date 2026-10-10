@@ -318,3 +318,27 @@ def test_preference_hypotheses_must_not_resolve_into_transient_entries():
     snap = with_change("state/hypotheses.md", "| resolved_into: P-2.1 |", "| topic: detail-level | resolved_into: T-1.1 |")
     assert codes(snap)["preference_into_transient"] == 1
     assert codes(CLEAN)["preference_into_transient"] == 0
+
+
+def test_tagged_signals_surface_until_a_belief_takes_them_up():
+    from context_harness.dimensions import dimension_rows, render_dimensions
+
+    episodes = ("- E-5 | 2025-07-10 | source: S-5 | Dinner.\n"
+                "  - O-5.1 | behavior | topic: constraints | Asked for a dinner they can make one-handed.\n"
+                "- E-6 | 2025-07-16 | source: S-6 | Batch cooking.\n"
+                "  - O-6.1 | behavior | topic: constraints | Asked for freezer meals, one pan if possible.\n")
+    entries, problems = parse_file("memory/episodes.md", episodes, ("E", "O"))
+    assert not problems and entries[1].fields == {"kind": "behavior", "topic": "constraints"}
+    text = render_dimensions(dimension_rows(HORIZONBENCH, "", "", episodes))
+    assert ('signals not yet in any belief (2 events): O-5.1 "Asked for a dinner they can make one-handed."; '
+            'O-6.1 "Asked for freezer meals, one pan if possible."') in text
+
+    snap = dict(CLEAN, **{"memory/episodes.md": CLEAN["memory/episodes.md"] + episodes.replace("E-5", "E-1").replace(
+        "E-6", "E-2").replace("O-5.1", "O-1.2").replace("O-6.1", "O-2.2").replace("2025-07-10", "2025-10-05").replace(
+        "2025-07-16", "2025-10-09")})
+    assert codes(snap)["uncollected_signals"] == 1
+    taken_up = dict(snap, **{"state/hypotheses.md": CLEAN["state/hypotheses.md"]
+                             + "- H-2.2 | open | 2025-10-09 | topic: constraints | for: O-1.2, O-2.2 | May want one-pan, low-effort meals.\n"})
+    assert codes(taken_up)["uncollected_signals"] == 0
+    hyps = "- H-2.2 | open | 2025-10-09 | topic: constraints | for: O-5.1 | May want one-pan meals.\n"
+    assert "signals not yet in any belief (1 event): O-6.1" in render_dimensions(dimension_rows(HORIZONBENCH, "", hyps, episodes))
