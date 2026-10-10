@@ -330,8 +330,9 @@ def test_tagged_signals_surface_until_a_belief_takes_them_up():
     entries, problems = parse_file("memory/episodes.md", episodes, ("E", "O"))
     assert not problems and entries[1].fields == {"kind": "behavior", "topic": "constraints"}
     text = render_dimensions(dimension_rows(HORIZONBENCH, "", "", episodes))
-    assert ('signals not yet in any belief (2 events): O-5.1 "Asked for a dinner they can make one-handed."; '
+    assert ('recent evidence (latest 2): O-5.1 "Asked for a dinner they can make one-handed."; '
             'O-6.1 "Asked for freezer meals, one pan if possible."') in text
+    assert "    not yet in any belief: O-5.1, O-6.1" in text
 
     snap = dict(CLEAN, **{"memory/episodes.md": CLEAN["memory/episodes.md"] + episodes.replace("E-5", "E-1").replace(
         "E-6", "E-2").replace("O-5.1", "O-1.2").replace("O-6.1", "O-2.2").replace("2025-07-10", "2025-10-05").replace(
@@ -341,7 +342,7 @@ def test_tagged_signals_surface_until_a_belief_takes_them_up():
                              + "- H-2.2 | open | 2025-10-09 | topic: constraints | for: O-1.2, O-2.2 | May want one-pan, low-effort meals.\n"})
     assert codes(taken_up)["uncollected_signals"] == 0
     hyps = "- H-2.2 | open | 2025-10-09 | topic: constraints | for: O-5.1 | May want one-pan meals.\n"
-    assert "signals not yet in any belief (1 event): O-6.1" in render_dimensions(dimension_rows(HORIZONBENCH, "", hyps, episodes))
+    assert "    not yet in any belief: O-6.1\n" in render_dimensions(dimension_rows(HORIZONBENCH, "", hyps, episodes))
 
 
 def test_profile_topics_show_current_facts_or_none_yet():
@@ -353,3 +354,25 @@ def test_profile_topics_show_current_facts_or_none_yet():
     assert 'diet: Dietary pattern' in text and 'current: F-7.1 "Is vegetarian."' in text
     assert text.split("allergies:")[1].split("\n")[1] == "  current: (none yet)"
     assert GENERAL.fact_topics == ()  # only domain layouts carry them
+
+
+def test_recent_evidence_window_and_scoped_values():
+    from context_harness.dimensions import RECENT_WINDOW, dimension_rows, render_dimensions
+
+    episodes = "".join(f"- E-{i} | 2025-10-{10 + i:02d} | source: S-{i} | Chat.\n"
+                       f"  - O-{i}.1 | behavior | topic: output-style | Request {i}.\n" for i in range(9))
+    prefs = ("- P-1.1 | current | 2025-10-11 | topic: output-style | scope: public-speeches | basis: O-1.1 | Punchy.\n"
+             "- P-2.1 | current | 2025-10-12 | topic: output-style | scope: official-documents | basis: O-2.1, O-8.1 | Formal.\n")
+    text = render_dimensions(dimension_rows(HORIZONBENCH, prefs, "", episodes))
+    block = text.split("output-style:")[1].split("\n")
+    assert '  current (for official-documents): P-2.1 "Formal."' in block and '  current (for public-speeches): P-1.1 "Punchy."' in block
+    recent = next(line for line in block if "recent evidence" in line)
+    assert f"latest {RECENT_WINDOW}" in recent and "O-8.1" in recent and "O-2.1" not in recent  # only the latest
+    assert "not yet in any belief: O-3.1, O-4.1, O-5.1, O-6.1, O-7.1" in text  # O-8.1 is cited
+    # two current values on one dimension are fine when their scopes differ, not otherwise
+    snap = dict(CLEAN, **{"state/preferences.md": CLEAN["state/preferences.md"].replace(
+        "| topic: detail-level | basis: O-2.1 | supersedes: P-0.1 |", "| topic: detail-level | scope: work | basis: O-2.1 | supersedes: P-0.1 |")
+        + "- P-2.2 | current | 2025-10-09 | topic: detail-level | scope: home | basis: O-2.1 | Long answers at home.\n"})
+    assert codes(snap)["topic_conflict"] == 0
+    unscoped = dict(snap, **{"state/preferences.md": snap["state/preferences.md"].replace("| scope: home ", "| scope: work ")})
+    assert codes(unscoped)["topic_conflict"] == 1

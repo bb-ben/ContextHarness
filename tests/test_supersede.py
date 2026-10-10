@@ -69,3 +69,18 @@ def test_checks_flag_unexplained_and_overlong_values():
         f"- P-0.2 | current | 2025-10-01 | topic: detail-level | basis: O-0.1 | supersedes: P-0.1 | {'Wants detail. ' * 20}\n")
     codes = {p.code for p in check_state(parse_workspace(snap, GENERAL), [EventInfo(0, "S-0", "2025-10-01")], 0)}
     assert {"missing_change_note", "long_value"} <= codes
+
+
+@pytest.mark.parametrize("note,refused", [
+    ("now also wants formal drafts", True),
+    ("also wants citations", True),
+    ("formal drafts now, no longer dramatic", False),
+    ("adds carb counts per meal", False),
+])
+def test_supersede_refuses_purely_additive_change_notes(ws, note, refused):
+    new = f"- P-20.1 | current | 2025-10-20 | topic: output-style | basis: O-20.1 | changed: {note} | Wants formal drafts."
+    if refused:
+        with pytest.raises(WorkspaceError, match="confirm it instead"):
+            Supersede(ws).run({"id": "P-3.1", "new_entry": new})
+    else:
+        assert Supersede(ws).run({"id": "P-3.1", "new_entry": new}).ok

@@ -307,7 +307,84 @@ BURNOUT = _item(
     event_date="2025-04-02", event_name="Signed off work with burnout", category="health",
 )
 
-SCENARIOS = [DIAGNOSIS, INJURY, NEW_PARENT, BURNOUT]
+# A change that arrives gradually and only in one context: client work turns professional
+# and nutrition-labeled over several small requests, while family cooking stays casual.
+# One value per dimension can't hold both; the final message is about client work.
+MEAL_PREP = _item(
+    "Marisol Vega_foodbody_meal_prep_business",
+    "marisol", "food_writing_style",
+    [
+        ("2025-01-06", "Family dinner ideas.", [
+            (U, "family dinner ideas for this week?? keep it fun, emojis welcome, and no nutrition stuff pls"),
+            (A, "🌮 Taco Tuesday bar, 🍝 one-pot cheesy pasta, 🍕 pita pizzas the kids build themselves!"),
+            (U, "lol perfect, this is the vibe"),
+        ]),
+        ("2025-01-12", "Lunchbox ideas.", [
+            (U, "kids' lunchbox ideas, make them silly"),
+            (A, "🐢 Turtle sandwiches, 🌈 rainbow veggie sticks, 🍌 banana sushi!"),
+        ]),
+        ("2025-01-19", "Party snacks.", [
+            (U, "snacks for my niece's party, go wild with the names"),
+            (A, "🦄 Unicorn popcorn, 🐉 dragon fruit skewers, 🧁 confetti mini muffins."),
+        ]),
+        ("2025-01-26", "Big news.", [
+            (U, "ok big news, I'm starting a small meal-prep business!! first five clients start next month"),
+            (A, "Congratulations! That's exciting. Happy to help with menus, labels and client messages."),
+        ]),
+        ("2025-02-03", "A first client menu.", [
+            (U, "can you write descriptions for my first client menu? make it sound professional, these are paying "
+                "customers"),
+            (A, "Herb-roasted chicken with lemon quinoa and charred broccolini. Black bean and sweet potato bowl..."),
+        ]),
+        ("2025-02-10", "Back to family dinner.", [
+            (U, "back to my chaos kitchen 😂 something fun for the kids tonight?"),
+            (A, "🥞 Breakfast-for-dinner pancake towers! Let them stack their own."),
+        ]),
+        ("2025-02-17", "A client question.", [
+            (U, "one of my clients asked for calories and protein per meal. can you add those to the menu?"),
+            (A, "Added: Herb-roasted chicken, 520 kcal, 42 g protein per serving; Black bean bowl, 480 kcal, 19 g protein..."),
+        ]),
+        ("2025-02-24", "This week's client plan.", [
+            (U, "client plan for this week: clean table, calories and protein per serving, no emojis, it goes straight "
+                "to clients"),
+            (A, "| Meal | Per serving | kcal | Protein |\n|---|---|---|---|\n| Turkey chili | 1 bowl | 450 | 38 g |..."),
+        ]),
+        ("2025-03-03", "Sunday pancakes.", [
+            (U, "sunday pancake ideas for the kids, keep it silly"),
+            (A, "🐻 Bear-face pancakes with banana ears and blueberry eyes!"),
+        ]),
+        ("2025-03-10", "A client email.", [
+            (U, "need a polite, professional reply to a client asking for keto swaps. include the macros for the swaps"),
+            (A, "Dear Ms. Patel, thank you for your note. For the keto option we can replace the quinoa with cauliflower "
+                "rice (8 g net carbs per serving)..."),
+        ]),
+        ("2025-03-17", "Feedback.", [
+            (U, "the clients loved the macro table. that's the format for anything client-facing from now on"),
+            (A, "Noted: client-facing work gets the professional macro table."),
+        ]),
+        ("2025-03-24", None, [
+            (U, "can you draft next week's menu for my Tuesday clients?"),
+        ]),
+    ],
+    [
+        ("A", "casual_no_numbers", "🍗 Tuesday Treats! Crispy lemon chicken, a 🌯 build-your-own burrito bowl and "
+                                   "🥗 crunchy rainbow salad. Your clients will love it!! 🎉"),
+        ("B", "professional_macro_table", "Tuesday menu: a table of three meals (lemon-herb chicken with farro, "
+                                          "black bean burrito bowl, salmon salad) with calories and protein per serving."),
+        ("C", "professional_no_numbers", "Tuesday menu: lemon-herb chicken with farro, black bean burrito bowl, and "
+                                         "salmon salad with citrus vinaigrette, described for your clients."),
+        ("D", "nutrition_lecture", "Before the menu, let's review macronutrient targets, how to balance protein "
+                                   "and carbohydrates, and why portion control matters for meal prep."),
+    ],
+    correct="B", trap="A",
+    original={"client_writing_tone": "casual_fun", "client_nutrition_detail": "no_numbers",
+              "family_cooking_style": "casual_fun"},
+    current={"client_writing_tone": "professional", "client_nutrition_detail": "per_serving_macros_table",
+             "family_cooking_style": "casual_fun"},
+    event_date="2025-01-26", event_name="Started a meal-prep business", category="career",
+)
+
+SCENARIOS = [DIAGNOSIS, INJURY, NEW_PARENT, BURNOUT, MEAL_PREP]
 
 if __name__ == "__main__":
     out = Path(__file__).with_suffix(".jsonl")

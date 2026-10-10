@@ -10,6 +10,7 @@ Domain tools that act in the world (e.g. future FoodBody actions) can subclass
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass
 from typing import Any, Literal, Protocol
 
@@ -328,6 +329,11 @@ class Archive(Tool):
         return ToolResult(True, f"Archived {len(found)} entries.", tuple(sorted(moves)) + (ARCHIVE_FILE,))
 
 
+# On the 75-event item every revision of the style value was "now also wants...": seven
+# additions, no replacement, and the pre-change wording survived to the end.
+ADDITIVE_NOTE = re.compile(r"^(now\s+)?(also|additionally|in addition|plus)\b", re.I)
+
+
 class Supersede(Tool):
     """Revise a belief in one step: write the new entry and close the old one, linked both ways.
 
@@ -384,6 +390,12 @@ class Supersede(Tool):
         if new.type in ("P", "F") and new.type == old.type:
             if not new.fields.get(CHANGE_FIELD):
                 raise WorkspaceError(f"Add {CHANGE_FIELD}: <what is different from {old_id}> to the new entry")
+            if ADDITIVE_NOTE.match(new.fields[CHANGE_FIELD].strip()):
+                raise WorkspaceError(
+                    f"'{CHANGE_FIELD}: {new.fields[CHANGE_FIELD]}' only adds to {old_id}. If the new evidence fits the "
+                    "current value, confirm it instead: edit the current entry to add the observation to basis: and "
+                    "set confirmed: <date>. If the person has moved, rewrite the value from the recent evidence under "
+                    "its dimension and say in changed: what was replaced.")
             if len(new.statement) > VALUE_MAX_CHARS:
                 raise WorkspaceError(
                     f"The statement is {len(new.statement)} characters; keep it under {VALUE_MAX_CHARS}. Describe "

@@ -20,7 +20,7 @@ def test_jsonl_matches_its_generator():
 
 def test_scenarios_are_coherent_items():
     items = load_items(source=str(SCENARIOS / "foodbody.jsonl"))
-    assert len(items) == 4
+    assert len(items) == 5
     for item in items:
         pe = item.gold.preference_evolution
         assert pe["changed_attributes"] and set(pe["current_attributes"]) - set(pe["changed_attributes"])

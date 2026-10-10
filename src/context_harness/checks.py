@@ -183,11 +183,12 @@ def check_state(parsed: ParsedWorkspace, events: list[EventInfo], current: int,
             if end and is_valid_date(end) and end < now.date:  # a goal is live through its due day
                 add("overdue_goal", e, f"{'review' if e.fields.get('review') else 'due'} {end} passed, still active on {now.date}")
 
-    by_topic: dict[tuple[str, str], list[str]] = defaultdict(list)
+    # One current value per topic, or per (topic, scope) when a preference differs by context.
+    by_topic: dict[tuple[str, str, str], list[str]] = defaultdict(list)
     for e in entries.values():
         if e.type in NEEDS_TOPIC and e.status == "current" and e.fields.get("topic"):
-            by_topic[(e.path, e.fields["topic"])].append(e.id)
-    for (path, topic), ids in by_topic.items():
+            by_topic[(e.path, e.fields["topic"], e.fields.get("scope", ""))].append(e.id)
+    for (path, topic, _scope), ids in by_topic.items():
         if len(ids) > 1:
             first = entries[ids[0]]
             out.append(Problem("topic_conflict", path, first.line, f"{len(ids)} current entries for topic {topic!r}: {', '.join(ids)}", ids[0]))
