@@ -1,0 +1,102 @@
+# Episodes
+- E-0 | 2025-09-29 | source: S-0 | High-pressure negotiation drill about a hostage scenario and debrief.
+  - O-0.1 | behavior | Asked for intense crisis-communication practice and wanted to work on recovering from mistakes.
+  - O-0.2 | behavior | Asked whether the roleplay would stay in character or break for feedback.
+- E-1 | 2025-09-30 | source: S-1 | Escalating cyberstalking prompted a safety-planning discussion.
+  - O-1.1 | event | User said the stalking has lasted weeks and includes private motorcycle details.
+  - O-1.2 | event | User runs a gallery and rides a motorcycle.
+  - O-1.3 | behavior | User asked for step-by-step checklist help for urgent safety actions.
+  - O-1.4 | reaction | User chose reporting and precautions over direct confrontation.
+- E-2 | 2025-09-30 | source: S-2 | Continued cyberstalking safety planning and asked for clear, casual, prioritized guidance.
+  - O-2.1 | behavior | Wanted concrete steps, prioritized and broken down clearly because overwhelmed.
+  - O-2.2 | behavior | Asked to keep it casual and not too formal because stressed.
+- E-3 | 2025-10-01 | source: S-3 | Urgent nuclear-crisis roleplay about reactor cooling, venting, and regulator debriefing.
+  - O-3.1 | behavior | Asked for a visual, checklist-style format to track urgent actions.
+- E-4 | 2025-10-01 | source: S-4 | Crisis-simulation discussion about nuclear meltdown response and coordination.
+  - O-4.1 | behavior | Asked for a step-by-step checklist to manage an urgent, high-pressure scenario.
+- E-5 | 2025-10-04 | source: S-5 | Breakup support chat about coping with sadness and rumination.
+  - O-5.1 | event | Broke up about a week ago and feels low, with quiet solitary times hitting hardest.
+  - O-5.2 | stated | Wants straight, practical guidance and actual steps instead of sugarcoating.
+- E-6 | 2025-10-04 | source: S-6 | Breakup coping chat; user wants support and clarity.
+  - O-6.1 | stated | Breakup is about a week old; loneliness and empty evenings are hardest, and work only helps during the day.
+  - O-6.2 | stated | Enjoys motorcycle riding, rock climbing, and wilderness hiking, but has felt unmotivated lately.
+  - O-6.3 | stated | Can probably ride with friend Ryan this weekend and tends to spiral into "it'll never get better" thoughts.
+  - O-6.4 | stated | Concrete steps help, and wants a middle-ground way to answer people without dumping on them.
+  - O-6.5 | stated | Ryan feels solid, Daniela may be safe to open up to, and having a plan feels better than drowning.
+- E-7 | 2025-10-05 | source: S-7 | High-pressure interrogation roleplay drill with real-time coaching and debrief.
+  - O-7.1 | behavior | Asked for interactive roleplay with live coaching and feedback during a difficult training scenario.
+  - O-7.2 | behavior | Used a rapport-first, non-confrontational approach and checked legal boundaries before pressing for details.
+- E-7 | 2025-10-05 | source: S-7 | High-pressure interrogation roleplay practice.
+  - O-7.1 | stated | Wants challenging training and learns better when pushed.
+  - O-7.2 | behavior | Prefers interactive, real-time roleplay for practice.
+- E-8 | 2025-10-06 | source: S-8 | Conversation about preparing a solo Trans-Labrador motorcycle trip on an aging KLR.
+  - O-8.1 | event | User is planning a solo Trans-Labrador ride in about 6 weeks on a 2009 KLR 650 with 65k miles.
+  - O-8.2 | stated | Wants trip prep broken down step by step, starting with what to tackle first.
+- E-9 | 2025-10-07 | source: S-9 | Negotiation drill about a barricaded hostage situation, ending with a debrief.
+  - O-9.1 | behavior | Asked for a full step-by-step analysis and exact watch-outs after the drill.
+  - O-9.2 | stated | Wants harder scenarios and feels confident pushing themselves.
+- E-10 | 2025-10-10 | source: S-10 | Discussion about diplomatic dynamics in coups and how to design realistic crisis simulations.
+- E-11 | 2025-10-12 | source: S-11 | Discussed nuclear-winter survival planning and prep priorities.
+
+- E-11 | 2025-10-12 | source: S-11 | Discussed nuclear-winter survival planning and prep priorities.
+
+- E-11 | 2025-10-12 | source: S-11 | Discussed nuclear-winter survival planning and prep priorities.
+  - O-11.1 | stated | Enjoys wilderness photography trips as part of outdoor time.
+  - O-11.2 | behavior | Wanted the prep organized by priority, with critical vs nice-to-have tiers.
+  - O-11.3 | reaction | Appreciated practical, balanced, non-doomsday framing.
+
+- E-11 | 2025-10-12 | source: S-11 | Discussed nuclear-winter survival planning and prep priorities.
+  - O-11.1 | stated | Enjoys wilderness photography trips as part of outdoor time.
+  - O-11.2 | behavior | Wanted the prep organized by priority, with critical vs nice-to-have tiers.
+  - O-11.3 | reaction | Appreciated practical, balanced, non-doomsday framing.
+- E-12 | 2025-10-13 | source: S-12 | Chat about ethics and governance for an AI recommendation startup before scaling.
+  - O-12.1 | stated | Prefers seeing concrete examples rather than abstract theory.
+  - O-12.2 | stated | Needs to draft a code of ethics before the AI startup scales.
+- E-13 | 2025-10-13 | source: S-13 | Discussed foundations for an AI startup ethics code and trade-offs in recommendation systems.
+  - O-13.1 | stated | Prefers comparing pros and cons of approaches rather than picking one right answer.
+- E-14 | 2025-10-15 | source: S-14 | Discussion about a professional email after a recent motorcycle accident.
+  - O-14.1 | event | Had a bad motorcycle accident a few months ago and is getting back to work at the gallery.
+  - O-14.2 | behavior | Asked for help wording a delay email professionally without much detail about the accident.
+- E-15 | 2025-10-18 | source: S-15 | Discussed safety and ethics around a proposed gothic cult documentary project.
+  - O-15.1 | behavior | Asked for straight, unsugarcoated risk analysis and concrete safety protocols for a risky plan.
+  - O-15.2 | reaction | Welcomed the ethical pivot to cult-awareness art and thanked the assistant for the straight talk.
+- E-16 | 2025-10-18 | source: S-16 | Discussed an ethically grounded cult-awareness art project and safety planning.
+  - O-16.1 | stated | Wants the project to stay critical and avoid glorifying cult dynamics.
+  - O-16.2 | behavior | Wants explicit consent, a safety coordinator, and transparent boundaries for the shoot.
+- E-17 | 2025-10-19 | source: S-17 | Six-week sprint to rescue an 1984 CB750 cafe racer build before wedding season.
+  - O-17.1 | event | Is in a six-week sprint to rescue an 1984 CB750 cafe racer build before wedding season.
+- E-18 | 2025-10-19 | source: S-18 | O-18.1 | User says specific examples help them visualize what to look for.
+- E-19 | 2025-10-19 | source: S-19 | User returned after motorcycle accident and asked about easing back into gallery work.
+  - O-19.1 | event | Had a bad motorcycle accident a few months ago and sustained a TBI.
+  - O-19.2 | stated | Was cleared to go back to work at the gallery.
+  - O-19.3 | stated | Is weighing whether to postpone an upcoming exhibition or push through.
+- E-20 | 2025-10-21 | source: S-20 | Talked through an oil-company job offer and chose to turn it down.
+  - O-20.1 | event | Was offered a communications role at an oil company that would double salary.
+  - O-20.2 | stated | Sees the role as greenwashing and a conflict with environmental values.
+  - O-20.3 | stated | Feels financial pressure from uneven gallery income and no retirement savings.
+  - O-20.4 | stated | Decided to decline the offer and build stability another way.
+- E-21 | 2025-10-21 | source: S-21 | Short chat about drafting professional delay emails after a motorcycle accident and return to gallery work.
+
+  - O-21.1 | event | Had a bad motorcycle accident about 6 months ago and is finally getting back to work at the gallery.
+  - O-21.2 | behavior | Wants a professional email explaining exhibition delays without oversharing.
+- E-22 | 2025-10-24 | source: S-22 | Collaborated on planning an adventure-themed murder mystery party.
+- E-23 | 2025-10-24 | source: S-23 | Collaborative murder mystery planning for a 1920s speakeasy party.
+  - O-23.1 | stated | Wants clues woven naturally into the story rather than obvious hint cards.
+  - O-23.2 | stated | Prefers tension to build gradually instead of everything arriving at once.
+- E-24 | 2025-10-27 | source: S-24 | Talked through ethics and launch safeguards for a facial-recognition app.
+  - O-24.1 | event | Is five days from launching a facial-recognition app and is worried about biometric misuse, law-enforcement access, breaches, consent, and bias.
+  - O-24.2 | stated | Is fine with working through the ethics question iteratively instead of solving everything today.
+- E-25 | 2025-10-28 | source: S-25 | Talked through the foundation and structure of an AI ethics code for wildlife-monitoring computer vision.
+  - O-25.1 | stated | Prefers slower growth with value-aligned partners over compromising ethics for speed.
+  - O-25.2 | stated | Worries investor pressure could clash with stakeholder governance and revenue-sharing commitments.
+- E-26 | 2025-10-29 | source: S-26 | Talked about recurring nightmares tied to climbing and motorcycle close calls.
+  - O-26.1 | stated | Has intense recurring nightmares from climbing and motorcycle close calls and dreads sleep.
+  - O-26.2 | stated | The nightmares are bleeding into gallery work and making it hard to focus.
+  - O-26.3 | behavior | Wants direct, no-sugar-coating guidance about exposure therapy.
+- E-27 | 2025-11-01 | source: S-27 | Debate-prep chat on voluntary euthanasia, with a collaborative style preference.
+  - O-27.1 | stated | Needs help preparing both sides of a voluntary euthanasia debate for school.
+  - O-27.2 | behavior | Wants the prep in bullet points and prefers exploring it together rather than being told the answer.
+- E-28 | 2025-11-01 | source: S-28 | Helped with prep for a high school euthanasia debate.
+
+  - O-28.1 | behavior | Wants debate prep to cover both sides, strong rebuttals, and citations that feel natural.
+  - O-28.2 | reaction | Says the structured, concrete examples made the arguments click.

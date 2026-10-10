@@ -1,0 +1,12 @@
+# Preferences
+- P-2.1 | current | 2025-09-30 | topic: urgent-help-style | basis: O-1.3, O-1.4, O-2.1, O-2.2, O-3.1 | confirmed: 2025-10-01 | Wants clear, casual, checklist-style help for urgent problems.
+- P-7.1 | current | 2025-10-05 | topic: training-challenge | basis: O-7.1, O-7.2, O-9.2 | confirmed: 2025-10-07 | Wants challenging, interactive practice and learns better when pushed.
+- P-8.1 | current | 2025-10-06 | topic: planning-style | basis: O-8.2, O-9.1 | confirmed: 2025-10-07 | Wants prep broken down step by step, with what to tackle first and what can wait.
+- P-12.1 | current | 2025-10-13 | topic: concrete-examples | basis: O-12.1 | confirmed: 2025-10-19 | Prefers seeing concrete examples rather than abstract theory.
+- P-13.1 | current | 2025-10-13 | topic: comparative-reasoning | basis: O-13.1 | confirmed: 2025-11-01 | Prefers comparing pros and cons of approaches rather than picking one right answer.
+- P-16.1 | current | 2025-10-18 | topic: framing-style | basis: O-11.3, O-13.1, O-16.1 | confirmed: 2025-11-01 | Prefers practical, balanced framing over doom-heavy warnings.
+- P-20.1 | current | 2025-10-21 | topic: values-alignment | basis: O-20.2, O-20.4 | Prefers work that does not conflict with environmental and conservation values.
+- P-23.1 | current | 2025-10-24 | topic: clue-integration | basis: O-23.1 | Prefers clues woven naturally into the story rather than obvious hint cards.
+- P-23.2 | current | 2025-10-24 | topic: pacing-slow-burn | basis: O-23.2 | Prefers tension to build gradually instead of arriving all at once.
+- P-25.1 | current | 2025-10-28 | topic: growth-philosophy | basis: O-25.1 | Prefers slower growth with value-aligned partners over compromising ethics for speed.
+- P-27.1 | current | 2025-11-01 | topic: collaborative-style | basis: O-27.2 | confirmed: 2025-11-01 | Prefers exploring hard topics together in bullet points rather than being handed a one-shot answer.

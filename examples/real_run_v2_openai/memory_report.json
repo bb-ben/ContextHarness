@@ -1,0 +1,6755 @@
+{
+ "layout": "horizonbench",
+ "events": 29,
+ "violations_by_code": {
+  "duplicate_id": 174,
+  "supersession_mismatch": 21,
+  "unparsed_entry": 11,
+  "missing_episode": 1
+ },
+ "events_with_violations": 22,
+ "access_totals": {
+  "context.md": {
+   "writes": 35,
+   "reads": 5
+  },
+  "memory/episodes.md": {
+   "writes": 36,
+   "reads": 6
+  },
+  "state/goals.md": {
+   "writes": 12
+  },
+  "state/hypotheses.md": {
+   "writes": 7,
+   "reads": 1
+  },
+  "state/preferences.md": {
+   "writes": 19
+  },
+  "state/profile.md": {
+   "writes": 7,
+   "reads": 1
+  },
+  "state/transient.md": {
+   "writes": 21,
+   "reads": 1
+  }
+ },
+ "final_metrics": {
+  "entries": {
+   "E": 28,
+   "O": 58,
+   "F": 6,
+   "P": 11,
+   "G": 7,
+   "T": 16,
+   "H": 3
+  },
+  "live_entries": {
+   "F": 5,
+   "P": 11,
+   "G": 7,
+   "T": 10,
+   "H": 1
+  },
+  "provenance_share": 1.0,
+  "context_bullets": 12,
+  "context_cited_ids": 15,
+  "context_coverage_of_live_state": 0.4411764705882353,
+  "episodes_recorded": 28
+ },
+ "per_event": [
+  {
+   "event_id": "S-0",
+   "index": 0,
+   "date": "2025-09-29",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/goals.md": {
+     "writes": 1
+    },
+    "state/hypotheses.md": {
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "writes": 1
+    },
+    "state/profile.md": {
+     "writes": 1
+    },
+    "state/transient.md": {
+     "writes": 1
+    }
+   },
+   "violations": {},
+   "metrics": {
+    "entries": {
+     "E": 1,
+     "O": 2,
+     "G": 1
+    },
+    "live_entries": {
+     "G": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 2,
+    "context_cited_ids": 1,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 1
+   }
+  },
+  {
+   "event_id": "S-1",
+   "index": 1,
+   "date": "2025-09-30",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/goals.md": {
+     "writes": 1
+    },
+    "state/hypotheses.md": {
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "writes": 1
+    },
+    "state/profile.md": {
+     "writes": 1
+    },
+    "state/transient.md": {
+     "writes": 1
+    }
+   },
+   "violations": {},
+   "metrics": {
+    "entries": {
+     "E": 2,
+     "O": 6,
+     "F": 2,
+     "G": 2,
+     "T": 1,
+     "H": 1
+    },
+    "live_entries": {
+     "F": 2,
+     "G": 2,
+     "T": 1,
+     "H": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 4,
+    "context_cited_ids": 5,
+    "context_coverage_of_live_state": 0.8333333333333334,
+    "episodes_recorded": 2
+   }
+  },
+  {
+   "event_id": "S-2",
+   "index": 2,
+   "date": "2025-09-30",
+   "access": {
+    "context.md": {
+     "writes": 1,
+     "reads": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1,
+     "reads": 2
+    },
+    "state/hypotheses.md": {
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "writes": 1
+    }
+   },
+   "violations": {},
+   "metrics": {
+    "entries": {
+     "E": 3,
+     "O": 8,
+     "F": 2,
+     "P": 1,
+     "G": 2,
+     "T": 1,
+     "H": 1
+    },
+    "live_entries": {
+     "F": 2,
+     "P": 1,
+     "G": 2,
+     "T": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 4,
+    "context_cited_ids": 5,
+    "context_coverage_of_live_state": 0.8333333333333334,
+    "episodes_recorded": 3
+   }
+  },
+  {
+   "event_id": "S-3",
+   "index": 3,
+   "date": "2025-10-01",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "writes": 1
+    }
+   },
+   "violations": {},
+   "metrics": {
+    "entries": {
+     "E": 4,
+     "O": 9,
+     "F": 2,
+     "P": 1,
+     "G": 2,
+     "T": 1,
+     "H": 1
+    },
+    "live_entries": {
+     "F": 2,
+     "P": 1,
+     "G": 2,
+     "T": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 4,
+    "context_cited_ids": 5,
+    "context_coverage_of_live_state": 0.8333333333333334,
+    "episodes_recorded": 4
+   }
+  },
+  {
+   "event_id": "S-4",
+   "index": 4,
+   "date": "2025-10-01",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    }
+   },
+   "violations": {},
+   "metrics": {
+    "entries": {
+     "E": 5,
+     "O": 10,
+     "F": 2,
+     "P": 1,
+     "G": 2,
+     "T": 1,
+     "H": 1
+    },
+    "live_entries": {
+     "F": 2,
+     "P": 1,
+     "G": 2,
+     "T": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 5,
+    "context_cited_ids": 6,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 5
+   }
+  },
+  {
+   "event_id": "S-5",
+   "index": 5,
+   "date": "2025-10-04",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/transient.md": {
+     "writes": 1
+    }
+   },
+   "violations": {},
+   "metrics": {
+    "entries": {
+     "E": 6,
+     "O": 12,
+     "F": 2,
+     "P": 1,
+     "G": 2,
+     "T": 2,
+     "H": 1
+    },
+    "live_entries": {
+     "F": 2,
+     "P": 1,
+     "G": 2,
+     "T": 2
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 6,
+    "context_cited_ids": 7,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 6
+   }
+  },
+  {
+   "event_id": "S-6",
+   "index": 6,
+   "date": "2025-10-04",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/profile.md": {
+     "writes": 1
+    },
+    "state/transient.md": {
+     "writes": 1
+    }
+   },
+   "violations": {},
+   "metrics": {
+    "entries": {
+     "E": 7,
+     "O": 17,
+     "F": 3,
+     "P": 1,
+     "G": 2,
+     "T": 3,
+     "H": 1
+    },
+    "live_entries": {
+     "F": 3,
+     "P": 1,
+     "G": 2,
+     "T": 3
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 6,
+    "context_cited_ids": 9,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 7
+   }
+  },
+  {
+   "event_id": "S-7",
+   "index": 7,
+   "date": "2025-10-05",
+   "access": {
+    "context.md": {
+     "writes": 2
+    },
+    "memory/episodes.md": {
+     "writes": 2
+    },
+    "state/goals.md": {
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "writes": 1
+    }
+   },
+   "violations": {
+    "duplicate_id": 3
+   },
+   "metrics": {
+    "entries": {
+     "E": 8,
+     "O": 19,
+     "F": 3,
+     "P": 2,
+     "G": 2,
+     "T": 3,
+     "H": 1
+    },
+    "live_entries": {
+     "F": 3,
+     "P": 2,
+     "G": 2,
+     "T": 3
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 7,
+    "context_cited_ids": 10,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 8
+   }
+  },
+  {
+   "event_id": "S-8",
+   "index": 8,
+   "date": "2025-10-06",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1,
+     "reads": 1
+    },
+    "state/preferences.md": {
+     "writes": 1
+    },
+    "state/transient.md": {
+     "writes": 1
+    }
+   },
+   "violations": {
+    "duplicate_id": 3
+   },
+   "metrics": {
+    "entries": {
+     "E": 9,
+     "O": 21,
+     "F": 3,
+     "P": 3,
+     "G": 2,
+     "T": 4,
+     "H": 1
+    },
+    "live_entries": {
+     "F": 3,
+     "P": 3,
+     "G": 2,
+     "T": 4
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 7,
+    "context_cited_ids": 10,
+    "context_coverage_of_live_state": 0.8333333333333334,
+    "episodes_recorded": 9
+   }
+  },
+  {
+   "event_id": "S-9",
+   "index": 9,
+   "date": "2025-10-07",
+   "access": {
+    "context.md": {
+     "writes": 1,
+     "reads": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "writes": 2
+    },
+    "state/transient.md": {
+     "writes": 1
+    }
+   },
+   "violations": {
+    "duplicate_id": 3
+   },
+   "metrics": {
+    "entries": {
+     "E": 10,
+     "O": 23,
+     "F": 3,
+     "P": 3,
+     "G": 2,
+     "T": 4,
+     "H": 1
+    },
+    "live_entries": {
+     "F": 3,
+     "P": 3,
+     "G": 2,
+     "T": 3
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 7,
+    "context_cited_ids": 11,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 10
+   }
+  },
+  {
+   "event_id": "S-10",
+   "index": 10,
+   "date": "2025-10-10",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    }
+   },
+   "violations": {
+    "duplicate_id": 3
+   },
+   "metrics": {
+    "entries": {
+     "E": 11,
+     "O": 23,
+     "F": 3,
+     "P": 3,
+     "G": 2,
+     "T": 4,
+     "H": 1
+    },
+    "live_entries": {
+     "F": 3,
+     "P": 3,
+     "G": 2,
+     "T": 3
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 7,
+    "context_cited_ids": 11,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 11
+   }
+  },
+  {
+   "event_id": "S-11",
+   "index": 11,
+   "date": "2025-10-12",
+   "access": {
+    "context.md": {
+     "writes": 4,
+     "reads": 1
+    },
+    "memory/episodes.md": {
+     "writes": 4,
+     "reads": 1
+    },
+    "state/hypotheses.md": {
+     "reads": 1,
+     "writes": 1
+    },
+    "state/profile.md": {
+     "writes": 1,
+     "reads": 1
+    },
+    "state/transient.md": {
+     "writes": 2,
+     "reads": 1
+    }
+   },
+   "violations": {
+    "duplicate_id": 9
+   },
+   "metrics": {
+    "entries": {
+     "E": 12,
+     "O": 26,
+     "F": 4,
+     "P": 3,
+     "G": 2,
+     "T": 4,
+     "H": 2
+    },
+    "live_entries": {
+     "F": 4,
+     "P": 3,
+     "G": 2,
+     "T": 1,
+     "H": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 7,
+    "context_cited_ids": 11,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 12
+   }
+  },
+  {
+   "event_id": "S-12",
+   "index": 12,
+   "date": "2025-10-13",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/goals.md": {
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "writes": 1
+    }
+   },
+   "violations": {
+    "duplicate_id": 9
+   },
+   "metrics": {
+    "entries": {
+     "E": 13,
+     "O": 28,
+     "F": 4,
+     "P": 4,
+     "G": 3,
+     "T": 4,
+     "H": 2
+    },
+    "live_entries": {
+     "F": 4,
+     "P": 4,
+     "G": 3,
+     "T": 1,
+     "H": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 8,
+    "context_cited_ids": 13,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 13
+   }
+  },
+  {
+   "event_id": "S-13",
+   "index": 13,
+   "date": "2025-10-13",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/hypotheses.md": {
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "writes": 1
+    }
+   },
+   "violations": {
+    "duplicate_id": 9
+   },
+   "metrics": {
+    "entries": {
+     "E": 14,
+     "O": 29,
+     "F": 4,
+     "P": 5,
+     "G": 3,
+     "T": 4,
+     "H": 2
+    },
+    "live_entries": {
+     "F": 4,
+     "P": 5,
+     "G": 3,
+     "T": 1,
+     "H": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 8,
+    "context_cited_ids": 14,
+    "context_coverage_of_live_state": 1.0,
+    "episodes_recorded": 14
+   }
+  },
+  {
+   "event_id": "S-14",
+   "index": 14,
+   "date": "2025-10-15",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/hypotheses.md": {
+     "writes": 1
+    },
+    "state/profile.md": {
+     "writes": 1
+    },
+    "state/transient.md": {
+     "writes": 1
+    }
+   },
+   "violations": {
+    "duplicate_id": 9
+   },
+   "metrics": {
+    "entries": {
+     "E": 15,
+     "O": 31,
+     "F": 5,
+     "P": 5,
+     "G": 3,
+     "T": 5,
+     "H": 3
+    },
+    "live_entries": {
+     "F": 5,
+     "P": 5,
+     "G": 3,
+     "T": 2,
+     "H": 2
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 7,
+    "context_cited_ids": 9,
+    "context_coverage_of_live_state": 0.5294117647058824,
+    "episodes_recorded": 15
+   }
+  },
+  {
+   "event_id": "S-15",
+   "index": 15,
+   "date": "2025-10-18",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/goals.md": {
+     "writes": 2
+    }
+   },
+   "violations": {
+    "duplicate_id": 9
+   },
+   "metrics": {
+    "entries": {
+     "E": 16,
+     "O": 33,
+     "F": 5,
+     "P": 5,
+     "G": 4,
+     "T": 5,
+     "H": 3
+    },
+    "live_entries": {
+     "F": 5,
+     "P": 5,
+     "G": 4,
+     "T": 2,
+     "H": 2
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 9,
+    "context_cited_ids": 16,
+    "context_coverage_of_live_state": 0.8888888888888888,
+    "episodes_recorded": 16
+   }
+  },
+  {
+   "event_id": "S-16",
+   "index": 16,
+   "date": "2025-10-18",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/goals.md": {
+     "writes": 1
+    },
+    "state/hypotheses.md": {
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "writes": 1
+    }
+   },
+   "violations": {
+    "duplicate_id": 9
+   },
+   "metrics": {
+    "entries": {
+     "E": 17,
+     "O": 35,
+     "F": 5,
+     "P": 6,
+     "G": 4,
+     "T": 5,
+     "H": 3
+    },
+    "live_entries": {
+     "F": 5,
+     "P": 6,
+     "G": 4,
+     "T": 2,
+     "H": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 8,
+    "context_cited_ids": 16,
+    "context_coverage_of_live_state": 0.8888888888888888,
+    "episodes_recorded": 17
+   }
+  },
+  {
+   "event_id": "S-17",
+   "index": 17,
+   "date": "2025-10-19",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/goals.md": {
+     "writes": 1
+    },
+    "state/transient.md": {
+     "writes": 1
+    }
+   },
+   "violations": {
+    "duplicate_id": 9
+   },
+   "metrics": {
+    "entries": {
+     "E": 18,
+     "O": 36,
+     "F": 5,
+     "P": 6,
+     "G": 5,
+     "T": 6,
+     "H": 3
+    },
+    "live_entries": {
+     "F": 5,
+     "P": 6,
+     "G": 5,
+     "T": 3,
+     "H": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 5,
+    "context_cited_ids": 13,
+    "context_coverage_of_live_state": 0.65,
+    "episodes_recorded": 18
+   }
+  },
+  {
+   "event_id": "S-18",
+   "index": 18,
+   "date": "2025-10-19",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "writes": 1
+    }
+   },
+   "violations": {
+    "unparsed_entry": 1,
+    "duplicate_id": 9,
+    "missing_episode": 1
+   },
+   "metrics": {
+    "entries": {
+     "E": 18,
+     "O": 36,
+     "F": 5,
+     "P": 6,
+     "G": 5,
+     "T": 6,
+     "H": 3
+    },
+    "live_entries": {
+     "F": 5,
+     "P": 6,
+     "G": 5,
+     "T": 3,
+     "H": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 5,
+    "context_cited_ids": 13,
+    "context_coverage_of_live_state": 0.65,
+    "episodes_recorded": 18
+   }
+  },
+  {
+   "event_id": "S-19",
+   "index": 19,
+   "date": "2025-10-19",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/profile.md": {
+     "writes": 2
+    },
+    "state/transient.md": {
+     "writes": 1
+    }
+   },
+   "violations": {
+    "unparsed_entry": 1,
+    "duplicate_id": 9,
+    "supersession_mismatch": 1
+   },
+   "metrics": {
+    "entries": {
+     "E": 19,
+     "O": 39,
+     "F": 6,
+     "P": 6,
+     "G": 5,
+     "T": 7,
+     "H": 3
+    },
+    "live_entries": {
+     "F": 5,
+     "P": 6,
+     "G": 5,
+     "T": 4,
+     "H": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 5,
+    "context_cited_ids": 12,
+    "context_coverage_of_live_state": 0.5714285714285714,
+    "episodes_recorded": 19
+   }
+  },
+  {
+   "event_id": "S-20",
+   "index": 20,
+   "date": "2025-10-21",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/goals.md": {
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "writes": 1
+    },
+    "state/transient.md": {
+     "writes": 1
+    }
+   },
+   "violations": {
+    "unparsed_entry": 1,
+    "duplicate_id": 9,
+    "supersession_mismatch": 1
+   },
+   "metrics": {
+    "entries": {
+     "E": 20,
+     "O": 43,
+     "F": 6,
+     "P": 7,
+     "G": 6,
+     "T": 8,
+     "H": 3
+    },
+    "live_entries": {
+     "F": 5,
+     "P": 7,
+     "G": 6,
+     "T": 5,
+     "H": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 8,
+    "context_cited_ids": 15,
+    "context_coverage_of_live_state": 0.625,
+    "episodes_recorded": 20
+   }
+  },
+  {
+   "event_id": "S-21",
+   "index": 21,
+   "date": "2025-10-21",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 2
+    }
+   },
+   "violations": {
+    "unparsed_entry": 1,
+    "duplicate_id": 9,
+    "supersession_mismatch": 1
+   },
+   "metrics": {
+    "entries": {
+     "E": 21,
+     "O": 45,
+     "F": 6,
+     "P": 7,
+     "G": 6,
+     "T": 8,
+     "H": 3
+    },
+    "live_entries": {
+     "F": 5,
+     "P": 7,
+     "G": 6,
+     "T": 5,
+     "H": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 7,
+    "context_cited_ids": 14,
+    "context_coverage_of_live_state": 0.5833333333333334,
+    "episodes_recorded": 21
+   }
+  },
+  {
+   "event_id": "S-22",
+   "index": 22,
+   "date": "2025-10-24",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/transient.md": {
+     "writes": 2
+    }
+   },
+   "violations": {
+    "unparsed_entry": 1,
+    "duplicate_id": 9,
+    "supersession_mismatch": 2
+   },
+   "metrics": {
+    "entries": {
+     "E": 22,
+     "O": 45,
+     "F": 6,
+     "P": 7,
+     "G": 6,
+     "T": 9,
+     "H": 3
+    },
+    "live_entries": {
+     "F": 5,
+     "P": 7,
+     "G": 6,
+     "T": 5,
+     "H": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 10,
+    "context_cited_ids": 16,
+    "context_coverage_of_live_state": 0.6666666666666666,
+    "episodes_recorded": 22
+   }
+  },
+  {
+   "event_id": "S-23",
+   "index": 23,
+   "date": "2025-10-24",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "writes": 1
+    }
+   },
+   "violations": {
+    "unparsed_entry": 1,
+    "duplicate_id": 9,
+    "supersession_mismatch": 2
+   },
+   "metrics": {
+    "entries": {
+     "E": 23,
+     "O": 47,
+     "F": 6,
+     "P": 9,
+     "G": 6,
+     "T": 9,
+     "H": 3
+    },
+    "live_entries": {
+     "F": 5,
+     "P": 9,
+     "G": 6,
+     "T": 5,
+     "H": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 11,
+    "context_cited_ids": 18,
+    "context_coverage_of_live_state": 0.6923076923076923,
+    "episodes_recorded": 23
+   }
+  },
+  {
+   "event_id": "S-24",
+   "index": 24,
+   "date": "2025-10-27",
+   "access": {
+    "context.md": {
+     "writes": 2,
+     "reads": 1
+    },
+    "memory/episodes.md": {
+     "writes": 2
+    },
+    "state/goals.md": {
+     "writes": 1
+    },
+    "state/transient.md": {
+     "writes": 3
+    }
+   },
+   "violations": {
+    "unparsed_entry": 1,
+    "duplicate_id": 9,
+    "supersession_mismatch": 2
+   },
+   "metrics": {
+    "entries": {
+     "E": 24,
+     "O": 49,
+     "F": 6,
+     "P": 9,
+     "G": 6,
+     "T": 11,
+     "H": 3
+    },
+    "live_entries": {
+     "F": 5,
+     "P": 9,
+     "G": 6,
+     "T": 6,
+     "H": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 11,
+    "context_cited_ids": 16,
+    "context_coverage_of_live_state": 0.5925925925925926,
+    "episodes_recorded": 24
+   }
+  },
+  {
+   "event_id": "S-25",
+   "index": 25,
+   "date": "2025-10-28",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1
+    },
+    "state/goals.md": {
+     "writes": 1
+    },
+    "state/preferences.md": {
+     "writes": 1
+    },
+    "state/transient.md": {
+     "writes": 2
+    }
+   },
+   "violations": {
+    "unparsed_entry": 1,
+    "duplicate_id": 9,
+    "supersession_mismatch": 3
+   },
+   "metrics": {
+    "entries": {
+     "E": 25,
+     "O": 51,
+     "F": 6,
+     "P": 10,
+     "G": 6,
+     "T": 12,
+     "H": 3
+    },
+    "live_entries": {
+     "F": 5,
+     "P": 10,
+     "G": 6,
+     "T": 6,
+     "H": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 9,
+    "context_cited_ids": 10,
+    "context_coverage_of_live_state": 0.35714285714285715,
+    "episodes_recorded": 25
+   }
+  },
+  {
+   "event_id": "S-26",
+   "index": 26,
+   "date": "2025-10-29",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 1,
+     "reads": 1
+    },
+    "state/goals.md": {
+     "writes": 1
+    },
+    "state/transient.md": {
+     "writes": 1
+    }
+   },
+   "violations": {
+    "unparsed_entry": 1,
+    "duplicate_id": 9,
+    "supersession_mismatch": 3
+   },
+   "metrics": {
+    "entries": {
+     "E": 26,
+     "O": 54,
+     "F": 6,
+     "P": 10,
+     "G": 7,
+     "T": 15,
+     "H": 3
+    },
+    "live_entries": {
+     "F": 5,
+     "P": 10,
+     "G": 7,
+     "T": 9,
+     "H": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 10,
+    "context_cited_ids": 13,
+    "context_coverage_of_live_state": 0.40625,
+    "episodes_recorded": 26
+   }
+  },
+  {
+   "event_id": "S-27",
+   "index": 27,
+   "date": "2025-11-01",
+   "access": {
+    "context.md": {
+     "reads": 1,
+     "writes": 2
+    },
+    "memory/episodes.md": {
+     "writes": 1,
+     "reads": 1
+    },
+    "state/preferences.md": {
+     "writes": 1
+    },
+    "state/transient.md": {
+     "writes": 1
+    }
+   },
+   "violations": {
+    "unparsed_entry": 1,
+    "duplicate_id": 9,
+    "supersession_mismatch": 3
+   },
+   "metrics": {
+    "entries": {
+     "E": 27,
+     "O": 56,
+     "F": 6,
+     "P": 11,
+     "G": 7,
+     "T": 16,
+     "H": 3
+    },
+    "live_entries": {
+     "F": 5,
+     "P": 11,
+     "G": 7,
+     "T": 10,
+     "H": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 12,
+    "context_cited_ids": 15,
+    "context_coverage_of_live_state": 0.4411764705882353,
+    "episodes_recorded": 27
+   }
+  },
+  {
+   "event_id": "S-28",
+   "index": 28,
+   "date": "2025-11-01",
+   "access": {
+    "context.md": {
+     "writes": 1
+    },
+    "memory/episodes.md": {
+     "writes": 2
+    },
+    "state/preferences.md": {
+     "writes": 3
+    }
+   },
+   "violations": {
+    "unparsed_entry": 1,
+    "duplicate_id": 9,
+    "supersession_mismatch": 3
+   },
+   "metrics": {
+    "entries": {
+     "E": 28,
+     "O": 58,
+     "F": 6,
+     "P": 11,
+     "G": 7,
+     "T": 16,
+     "H": 3
+    },
+    "live_entries": {
+     "F": 5,
+     "P": 11,
+     "G": 7,
+     "T": 10,
+     "H": 1
+    },
+    "provenance_share": 1.0,
+    "context_bullets": 12,
+    "context_cited_ids": 15,
+    "context_coverage_of_live_state": 0.4411764705882353,
+    "episodes_recorded": 28
+   }
+  }
+ ],
+ "violations": [
+  {
+   "event_id": "S-7",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 29,
+   "detail": "also at memory/episodes.md:26",
+   "id": "E-7"
+  },
+  {
+   "event_id": "S-7",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 30,
+   "detail": "also at memory/episodes.md:27",
+   "id": "O-7.1"
+  },
+  {
+   "event_id": "S-7",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 31,
+   "detail": "also at memory/episodes.md:28",
+   "id": "O-7.2"
+  },
+  {
+   "event_id": "S-8",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 29,
+   "detail": "also at memory/episodes.md:26",
+   "id": "E-7"
+  },
+  {
+   "event_id": "S-8",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 30,
+   "detail": "also at memory/episodes.md:27",
+   "id": "O-7.1"
+  },
+  {
+   "event_id": "S-8",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 31,
+   "detail": "also at memory/episodes.md:28",
+   "id": "O-7.2"
+  },
+  {
+   "event_id": "S-9",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 29,
+   "detail": "also at memory/episodes.md:26",
+   "id": "E-7"
+  },
+  {
+   "event_id": "S-9",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 30,
+   "detail": "also at memory/episodes.md:27",
+   "id": "O-7.1"
+  },
+  {
+   "event_id": "S-9",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 31,
+   "detail": "also at memory/episodes.md:28",
+   "id": "O-7.2"
+  },
+  {
+   "event_id": "S-10",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 29,
+   "detail": "also at memory/episodes.md:26",
+   "id": "E-7"
+  },
+  {
+   "event_id": "S-10",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 30,
+   "detail": "also at memory/episodes.md:27",
+   "id": "O-7.1"
+  },
+  {
+   "event_id": "S-10",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 31,
+   "detail": "also at memory/episodes.md:28",
+   "id": "O-7.2"
+  },
+  {
+   "event_id": "S-11",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 29,
+   "detail": "also at memory/episodes.md:26",
+   "id": "E-7"
+  },
+  {
+   "event_id": "S-11",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 30,
+   "detail": "also at memory/episodes.md:27",
+   "id": "O-7.1"
+  },
+  {
+   "event_id": "S-11",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 31,
+   "detail": "also at memory/episodes.md:28",
+   "id": "O-7.2"
+  },
+  {
+   "event_id": "S-11",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 41,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-11",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 43,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-11",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 48,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-11",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 49,
+   "detail": "also at memory/episodes.md:44",
+   "id": "O-11.1"
+  },
+  {
+   "event_id": "S-11",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 50,
+   "detail": "also at memory/episodes.md:45",
+   "id": "O-11.2"
+  },
+  {
+   "event_id": "S-11",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 51,
+   "detail": "also at memory/episodes.md:46",
+   "id": "O-11.3"
+  },
+  {
+   "event_id": "S-12",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 29,
+   "detail": "also at memory/episodes.md:26",
+   "id": "E-7"
+  },
+  {
+   "event_id": "S-12",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 30,
+   "detail": "also at memory/episodes.md:27",
+   "id": "O-7.1"
+  },
+  {
+   "event_id": "S-12",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 31,
+   "detail": "also at memory/episodes.md:28",
+   "id": "O-7.2"
+  },
+  {
+   "event_id": "S-12",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 41,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-12",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 43,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-12",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 48,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-12",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 49,
+   "detail": "also at memory/episodes.md:44",
+   "id": "O-11.1"
+  },
+  {
+   "event_id": "S-12",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 50,
+   "detail": "also at memory/episodes.md:45",
+   "id": "O-11.2"
+  },
+  {
+   "event_id": "S-12",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 51,
+   "detail": "also at memory/episodes.md:46",
+   "id": "O-11.3"
+  },
+  {
+   "event_id": "S-13",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 29,
+   "detail": "also at memory/episodes.md:26",
+   "id": "E-7"
+  },
+  {
+   "event_id": "S-13",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 30,
+   "detail": "also at memory/episodes.md:27",
+   "id": "O-7.1"
+  },
+  {
+   "event_id": "S-13",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 31,
+   "detail": "also at memory/episodes.md:28",
+   "id": "O-7.2"
+  },
+  {
+   "event_id": "S-13",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 41,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-13",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 43,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-13",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 48,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-13",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 49,
+   "detail": "also at memory/episodes.md:44",
+   "id": "O-11.1"
+  },
+  {
+   "event_id": "S-13",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 50,
+   "detail": "also at memory/episodes.md:45",
+   "id": "O-11.2"
+  },
+  {
+   "event_id": "S-13",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 51,
+   "detail": "also at memory/episodes.md:46",
+   "id": "O-11.3"
+  },
+  {
+   "event_id": "S-14",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 29,
+   "detail": "also at memory/episodes.md:26",
+   "id": "E-7"
+  },
+  {
+   "event_id": "S-14",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 30,
+   "detail": "also at memory/episodes.md:27",
+   "id": "O-7.1"
+  },
+  {
+   "event_id": "S-14",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 31,
+   "detail": "also at memory/episodes.md:28",
+   "id": "O-7.2"
+  },
+  {
+   "event_id": "S-14",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 41,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-14",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 43,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-14",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 48,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-14",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 49,
+   "detail": "also at memory/episodes.md:44",
+   "id": "O-11.1"
+  },
+  {
+   "event_id": "S-14",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 50,
+   "detail": "also at memory/episodes.md:45",
+   "id": "O-11.2"
+  },
+  {
+   "event_id": "S-14",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 51,
+   "detail": "also at memory/episodes.md:46",
+   "id": "O-11.3"
+  },
+  {
+   "event_id": "S-15",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 29,
+   "detail": "also at memory/episodes.md:26",
+   "id": "E-7"
+  },
+  {
+   "event_id": "S-15",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 30,
+   "detail": "also at memory/episodes.md:27",
+   "id": "O-7.1"
+  },
+  {
+   "event_id": "S-15",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 31,
+   "detail": "also at memory/episodes.md:28",
+   "id": "O-7.2"
+  },
+  {
+   "event_id": "S-15",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 41,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-15",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 43,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-15",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 48,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-15",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 49,
+   "detail": "also at memory/episodes.md:44",
+   "id": "O-11.1"
+  },
+  {
+   "event_id": "S-15",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 50,
+   "detail": "also at memory/episodes.md:45",
+   "id": "O-11.2"
+  },
+  {
+   "event_id": "S-15",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 51,
+   "detail": "also at memory/episodes.md:46",
+   "id": "O-11.3"
+  },
+  {
+   "event_id": "S-16",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 29,
+   "detail": "also at memory/episodes.md:26",
+   "id": "E-7"
+  },
+  {
+   "event_id": "S-16",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 30,
+   "detail": "also at memory/episodes.md:27",
+   "id": "O-7.1"
+  },
+  {
+   "event_id": "S-16",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 31,
+   "detail": "also at memory/episodes.md:28",
+   "id": "O-7.2"
+  },
+  {
+   "event_id": "S-16",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 41,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-16",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 43,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-16",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 48,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-16",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 49,
+   "detail": "also at memory/episodes.md:44",
+   "id": "O-11.1"
+  },
+  {
+   "event_id": "S-16",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 50,
+   "detail": "also at memory/episodes.md:45",
+   "id": "O-11.2"
+  },
+  {
+   "event_id": "S-16",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 51,
+   "detail": "also at memory/episodes.md:46",
+   "id": "O-11.3"
+  },
+  {
+   "event_id": "S-17",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 29,
+   "detail": "also at memory/episodes.md:26",
+   "id": "E-7"
+  },
+  {
+   "event_id": "S-17",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 30,
+   "detail": "also at memory/episodes.md:27",
+   "id": "O-7.1"
+  },
+  {
+   "event_id": "S-17",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 31,
+   "detail": "also at memory/episodes.md:28",
+   "id": "O-7.2"
+  },
+  {
+   "event_id": "S-17",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 41,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-17",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 43,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-17",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 48,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-17",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 49,
+   "detail": "also at memory/episodes.md:44",
+   "id": "O-11.1"
+  },
+  {
+   "event_id": "S-17",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 50,
+   "detail": "also at memory/episodes.md:45",
+   "id": "O-11.2"
+  },
+  {
+   "event_id": "S-17",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 51,
+   "detail": "also at memory/episodes.md:46",
+   "id": "O-11.3"
+  },
+  {
+   "event_id": "S-18",
+   "code": "unparsed_entry",
+   "path": "memory/episodes.md",
+   "line": 68,
+   "detail": "segment 'O-18.1' is not a 'name: value' field",
+   "id": "E-18"
+  },
+  {
+   "event_id": "S-18",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 29,
+   "detail": "also at memory/episodes.md:26",
+   "id": "E-7"
+  },
+  {
+   "event_id": "S-18",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 30,
+   "detail": "also at memory/episodes.md:27",
+   "id": "O-7.1"
+  },
+  {
+   "event_id": "S-18",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 31,
+   "detail": "also at memory/episodes.md:28",
+   "id": "O-7.2"
+  },
+  {
+   "event_id": "S-18",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 41,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-18",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 43,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-18",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 48,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-18",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 49,
+   "detail": "also at memory/episodes.md:44",
+   "id": "O-11.1"
+  },
+  {
+   "event_id": "S-18",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 50,
+   "detail": "also at memory/episodes.md:45",
+   "id": "O-11.2"
+  },
+  {
+   "event_id": "S-18",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 51,
+   "detail": "also at memory/episodes.md:46",
+   "id": "O-11.3"
+  },
+  {
+   "event_id": "S-18",
+   "code": "missing_episode",
+   "path": "memory/episodes.md",
+   "line": 0,
+   "detail": "no E-18 line for S-18",
+   "id": null
+  },
+  {
+   "event_id": "S-19",
+   "code": "unparsed_entry",
+   "path": "memory/episodes.md",
+   "line": 68,
+   "detail": "segment 'O-18.1' is not a 'name: value' field",
+   "id": "E-18"
+  },
+  {
+   "event_id": "S-19",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 29,
+   "detail": "also at memory/episodes.md:26",
+   "id": "E-7"
+  },
+  {
+   "event_id": "S-19",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 30,
+   "detail": "also at memory/episodes.md:27",
+   "id": "O-7.1"
+  },
+  {
+   "event_id": "S-19",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 31,
+   "detail": "also at memory/episodes.md:28",
+   "id": "O-7.2"
+  },
+  {
+   "event_id": "S-19",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 41,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-19",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 43,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-19",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 48,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-19",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 49,
+   "detail": "also at memory/episodes.md:44",
+   "id": "O-11.1"
+  },
+  {
+   "event_id": "S-19",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 50,
+   "detail": "also at memory/episodes.md:45",
+   "id": "O-11.2"
+  },
+  {
+   "event_id": "S-19",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 51,
+   "detail": "also at memory/episodes.md:46",
+   "id": "O-11.3"
+  },
+  {
+   "event_id": "S-19",
+   "code": "supersession_mismatch",
+   "path": "state/profile.md",
+   "line": 7,
+   "detail": "F-19.1 does not list supersedes: F-14.1",
+   "id": "F-14.1"
+  },
+  {
+   "event_id": "S-20",
+   "code": "unparsed_entry",
+   "path": "memory/episodes.md",
+   "line": 68,
+   "detail": "segment 'O-18.1' is not a 'name: value' field",
+   "id": "E-18"
+  },
+  {
+   "event_id": "S-20",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 29,
+   "detail": "also at memory/episodes.md:26",
+   "id": "E-7"
+  },
+  {
+   "event_id": "S-20",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 30,
+   "detail": "also at memory/episodes.md:27",
+   "id": "O-7.1"
+  },
+  {
+   "event_id": "S-20",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 31,
+   "detail": "also at memory/episodes.md:28",
+   "id": "O-7.2"
+  },
+  {
+   "event_id": "S-20",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 41,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-20",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 43,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-20",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 48,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-20",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 49,
+   "detail": "also at memory/episodes.md:44",
+   "id": "O-11.1"
+  },
+  {
+   "event_id": "S-20",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 50,
+   "detail": "also at memory/episodes.md:45",
+   "id": "O-11.2"
+  },
+  {
+   "event_id": "S-20",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 51,
+   "detail": "also at memory/episodes.md:46",
+   "id": "O-11.3"
+  },
+  {
+   "event_id": "S-20",
+   "code": "supersession_mismatch",
+   "path": "state/profile.md",
+   "line": 7,
+   "detail": "F-19.1 does not list supersedes: F-14.1",
+   "id": "F-14.1"
+  },
+  {
+   "event_id": "S-21",
+   "code": "unparsed_entry",
+   "path": "memory/episodes.md",
+   "line": 68,
+   "detail": "segment 'O-18.1' is not a 'name: value' field",
+   "id": "E-18"
+  },
+  {
+   "event_id": "S-21",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 29,
+   "detail": "also at memory/episodes.md:26",
+   "id": "E-7"
+  },
+  {
+   "event_id": "S-21",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 30,
+   "detail": "also at memory/episodes.md:27",
+   "id": "O-7.1"
+  },
+  {
+   "event_id": "S-21",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 31,
+   "detail": "also at memory/episodes.md:28",
+   "id": "O-7.2"
+  },
+  {
+   "event_id": "S-21",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 41,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-21",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 43,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-21",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 48,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-21",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 49,
+   "detail": "also at memory/episodes.md:44",
+   "id": "O-11.1"
+  },
+  {
+   "event_id": "S-21",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 50,
+   "detail": "also at memory/episodes.md:45",
+   "id": "O-11.2"
+  },
+  {
+   "event_id": "S-21",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 51,
+   "detail": "also at memory/episodes.md:46",
+   "id": "O-11.3"
+  },
+  {
+   "event_id": "S-21",
+   "code": "supersession_mismatch",
+   "path": "state/profile.md",
+   "line": 7,
+   "detail": "F-19.1 does not list supersedes: F-14.1",
+   "id": "F-14.1"
+  },
+  {
+   "event_id": "S-22",
+   "code": "unparsed_entry",
+   "path": "memory/episodes.md",
+   "line": 68,
+   "detail": "segment 'O-18.1' is not a 'name: value' field",
+   "id": "E-18"
+  },
+  {
+   "event_id": "S-22",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 29,
+   "detail": "also at memory/episodes.md:26",
+   "id": "E-7"
+  },
+  {
+   "event_id": "S-22",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 30,
+   "detail": "also at memory/episodes.md:27",
+   "id": "O-7.1"
+  },
+  {
+   "event_id": "S-22",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 31,
+   "detail": "also at memory/episodes.md:28",
+   "id": "O-7.2"
+  },
+  {
+   "event_id": "S-22",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 41,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-22",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 43,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-22",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 48,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-22",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 49,
+   "detail": "also at memory/episodes.md:44",
+   "id": "O-11.1"
+  },
+  {
+   "event_id": "S-22",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 50,
+   "detail": "also at memory/episodes.md:45",
+   "id": "O-11.2"
+  },
+  {
+   "event_id": "S-22",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 51,
+   "detail": "also at memory/episodes.md:46",
+   "id": "O-11.3"
+  },
+  {
+   "event_id": "S-22",
+   "code": "supersession_mismatch",
+   "path": "state/profile.md",
+   "line": 7,
+   "detail": "F-19.1 does not list supersedes: F-14.1",
+   "id": "F-14.1"
+  },
+  {
+   "event_id": "S-22",
+   "code": "supersession_mismatch",
+   "path": "state/transient.md",
+   "line": 6,
+   "detail": "T-22.1 does not list supersedes: T-14.1",
+   "id": "T-14.1"
+  },
+  {
+   "event_id": "S-23",
+   "code": "unparsed_entry",
+   "path": "memory/episodes.md",
+   "line": 68,
+   "detail": "segment 'O-18.1' is not a 'name: value' field",
+   "id": "E-18"
+  },
+  {
+   "event_id": "S-23",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 29,
+   "detail": "also at memory/episodes.md:26",
+   "id": "E-7"
+  },
+  {
+   "event_id": "S-23",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 30,
+   "detail": "also at memory/episodes.md:27",
+   "id": "O-7.1"
+  },
+  {
+   "event_id": "S-23",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 31,
+   "detail": "also at memory/episodes.md:28",
+   "id": "O-7.2"
+  },
+  {
+   "event_id": "S-23",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 41,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-23",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 43,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-23",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 48,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-23",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 49,
+   "detail": "also at memory/episodes.md:44",
+   "id": "O-11.1"
+  },
+  {
+   "event_id": "S-23",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 50,
+   "detail": "also at memory/episodes.md:45",
+   "id": "O-11.2"
+  },
+  {
+   "event_id": "S-23",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 51,
+   "detail": "also at memory/episodes.md:46",
+   "id": "O-11.3"
+  },
+  {
+   "event_id": "S-23",
+   "code": "supersession_mismatch",
+   "path": "state/profile.md",
+   "line": 7,
+   "detail": "F-19.1 does not list supersedes: F-14.1",
+   "id": "F-14.1"
+  },
+  {
+   "event_id": "S-23",
+   "code": "supersession_mismatch",
+   "path": "state/transient.md",
+   "line": 6,
+   "detail": "T-22.1 does not list supersedes: T-14.1",
+   "id": "T-14.1"
+  },
+  {
+   "event_id": "S-24",
+   "code": "unparsed_entry",
+   "path": "memory/episodes.md",
+   "line": 68,
+   "detail": "segment 'O-18.1' is not a 'name: value' field",
+   "id": "E-18"
+  },
+  {
+   "event_id": "S-24",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 29,
+   "detail": "also at memory/episodes.md:26",
+   "id": "E-7"
+  },
+  {
+   "event_id": "S-24",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 30,
+   "detail": "also at memory/episodes.md:27",
+   "id": "O-7.1"
+  },
+  {
+   "event_id": "S-24",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 31,
+   "detail": "also at memory/episodes.md:28",
+   "id": "O-7.2"
+  },
+  {
+   "event_id": "S-24",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 41,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-24",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 43,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-24",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 48,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-24",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 49,
+   "detail": "also at memory/episodes.md:44",
+   "id": "O-11.1"
+  },
+  {
+   "event_id": "S-24",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 50,
+   "detail": "also at memory/episodes.md:45",
+   "id": "O-11.2"
+  },
+  {
+   "event_id": "S-24",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 51,
+   "detail": "also at memory/episodes.md:46",
+   "id": "O-11.3"
+  },
+  {
+   "event_id": "S-24",
+   "code": "supersession_mismatch",
+   "path": "state/profile.md",
+   "line": 7,
+   "detail": "F-19.1 does not list supersedes: F-14.1",
+   "id": "F-14.1"
+  },
+  {
+   "event_id": "S-24",
+   "code": "supersession_mismatch",
+   "path": "state/transient.md",
+   "line": 6,
+   "detail": "T-22.1 does not list supersedes: T-14.1",
+   "id": "T-14.1"
+  },
+  {
+   "event_id": "S-25",
+   "code": "unparsed_entry",
+   "path": "memory/episodes.md",
+   "line": 68,
+   "detail": "segment 'O-18.1' is not a 'name: value' field",
+   "id": "E-18"
+  },
+  {
+   "event_id": "S-25",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 29,
+   "detail": "also at memory/episodes.md:26",
+   "id": "E-7"
+  },
+  {
+   "event_id": "S-25",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 30,
+   "detail": "also at memory/episodes.md:27",
+   "id": "O-7.1"
+  },
+  {
+   "event_id": "S-25",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 31,
+   "detail": "also at memory/episodes.md:28",
+   "id": "O-7.2"
+  },
+  {
+   "event_id": "S-25",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 41,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-25",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 43,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-25",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 48,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-25",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 49,
+   "detail": "also at memory/episodes.md:44",
+   "id": "O-11.1"
+  },
+  {
+   "event_id": "S-25",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 50,
+   "detail": "also at memory/episodes.md:45",
+   "id": "O-11.2"
+  },
+  {
+   "event_id": "S-25",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 51,
+   "detail": "also at memory/episodes.md:46",
+   "id": "O-11.3"
+  },
+  {
+   "event_id": "S-25",
+   "code": "supersession_mismatch",
+   "path": "state/profile.md",
+   "line": 7,
+   "detail": "F-19.1 does not list supersedes: F-14.1",
+   "id": "F-14.1"
+  },
+  {
+   "event_id": "S-25",
+   "code": "supersession_mismatch",
+   "path": "state/transient.md",
+   "line": 6,
+   "detail": "T-22.1 does not list supersedes: T-14.1",
+   "id": "T-14.1"
+  },
+  {
+   "event_id": "S-25",
+   "code": "supersession_mismatch",
+   "path": "state/transient.md",
+   "line": 9,
+   "detail": "T-25.1 does not list supersedes: T-20.1",
+   "id": "T-20.1"
+  },
+  {
+   "event_id": "S-26",
+   "code": "unparsed_entry",
+   "path": "memory/episodes.md",
+   "line": 68,
+   "detail": "segment 'O-18.1' is not a 'name: value' field",
+   "id": "E-18"
+  },
+  {
+   "event_id": "S-26",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 29,
+   "detail": "also at memory/episodes.md:26",
+   "id": "E-7"
+  },
+  {
+   "event_id": "S-26",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 30,
+   "detail": "also at memory/episodes.md:27",
+   "id": "O-7.1"
+  },
+  {
+   "event_id": "S-26",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 31,
+   "detail": "also at memory/episodes.md:28",
+   "id": "O-7.2"
+  },
+  {
+   "event_id": "S-26",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 41,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-26",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 43,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-26",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 48,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-26",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 49,
+   "detail": "also at memory/episodes.md:44",
+   "id": "O-11.1"
+  },
+  {
+   "event_id": "S-26",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 50,
+   "detail": "also at memory/episodes.md:45",
+   "id": "O-11.2"
+  },
+  {
+   "event_id": "S-26",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 51,
+   "detail": "also at memory/episodes.md:46",
+   "id": "O-11.3"
+  },
+  {
+   "event_id": "S-26",
+   "code": "supersession_mismatch",
+   "path": "state/profile.md",
+   "line": 7,
+   "detail": "F-19.1 does not list supersedes: F-14.1",
+   "id": "F-14.1"
+  },
+  {
+   "event_id": "S-26",
+   "code": "supersession_mismatch",
+   "path": "state/transient.md",
+   "line": 6,
+   "detail": "T-22.1 does not list supersedes: T-14.1",
+   "id": "T-14.1"
+  },
+  {
+   "event_id": "S-26",
+   "code": "supersession_mismatch",
+   "path": "state/transient.md",
+   "line": 9,
+   "detail": "T-25.1 does not list supersedes: T-20.1",
+   "id": "T-20.1"
+  },
+  {
+   "event_id": "S-27",
+   "code": "unparsed_entry",
+   "path": "memory/episodes.md",
+   "line": 68,
+   "detail": "segment 'O-18.1' is not a 'name: value' field",
+   "id": "E-18"
+  },
+  {
+   "event_id": "S-27",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 29,
+   "detail": "also at memory/episodes.md:26",
+   "id": "E-7"
+  },
+  {
+   "event_id": "S-27",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 30,
+   "detail": "also at memory/episodes.md:27",
+   "id": "O-7.1"
+  },
+  {
+   "event_id": "S-27",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 31,
+   "detail": "also at memory/episodes.md:28",
+   "id": "O-7.2"
+  },
+  {
+   "event_id": "S-27",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 41,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-27",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 43,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-27",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 48,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-27",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 49,
+   "detail": "also at memory/episodes.md:44",
+   "id": "O-11.1"
+  },
+  {
+   "event_id": "S-27",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 50,
+   "detail": "also at memory/episodes.md:45",
+   "id": "O-11.2"
+  },
+  {
+   "event_id": "S-27",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 51,
+   "detail": "also at memory/episodes.md:46",
+   "id": "O-11.3"
+  },
+  {
+   "event_id": "S-27",
+   "code": "supersession_mismatch",
+   "path": "state/profile.md",
+   "line": 7,
+   "detail": "F-19.1 does not list supersedes: F-14.1",
+   "id": "F-14.1"
+  },
+  {
+   "event_id": "S-27",
+   "code": "supersession_mismatch",
+   "path": "state/transient.md",
+   "line": 6,
+   "detail": "T-22.1 does not list supersedes: T-14.1",
+   "id": "T-14.1"
+  },
+  {
+   "event_id": "S-27",
+   "code": "supersession_mismatch",
+   "path": "state/transient.md",
+   "line": 9,
+   "detail": "T-25.1 does not list supersedes: T-20.1",
+   "id": "T-20.1"
+  },
+  {
+   "event_id": "S-28",
+   "code": "unparsed_entry",
+   "path": "memory/episodes.md",
+   "line": 68,
+   "detail": "segment 'O-18.1' is not a 'name: value' field",
+   "id": "E-18"
+  },
+  {
+   "event_id": "S-28",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 29,
+   "detail": "also at memory/episodes.md:26",
+   "id": "E-7"
+  },
+  {
+   "event_id": "S-28",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 30,
+   "detail": "also at memory/episodes.md:27",
+   "id": "O-7.1"
+  },
+  {
+   "event_id": "S-28",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 31,
+   "detail": "also at memory/episodes.md:28",
+   "id": "O-7.2"
+  },
+  {
+   "event_id": "S-28",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 41,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-28",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 43,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-28",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 48,
+   "detail": "also at memory/episodes.md:39",
+   "id": "E-11"
+  },
+  {
+   "event_id": "S-28",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 49,
+   "detail": "also at memory/episodes.md:44",
+   "id": "O-11.1"
+  },
+  {
+   "event_id": "S-28",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 50,
+   "detail": "also at memory/episodes.md:45",
+   "id": "O-11.2"
+  },
+  {
+   "event_id": "S-28",
+   "code": "duplicate_id",
+   "path": "memory/episodes.md",
+   "line": 51,
+   "detail": "also at memory/episodes.md:46",
+   "id": "O-11.3"
+  },
+  {
+   "event_id": "S-28",
+   "code": "supersession_mismatch",
+   "path": "state/profile.md",
+   "line": 7,
+   "detail": "F-19.1 does not list supersedes: F-14.1",
+   "id": "F-14.1"
+  },
+  {
+   "event_id": "S-28",
+   "code": "supersession_mismatch",
+   "path": "state/transient.md",
+   "line": 6,
+   "detail": "T-22.1 does not list supersedes: T-14.1",
+   "id": "T-14.1"
+  },
+  {
+   "event_id": "S-28",
+   "code": "supersession_mismatch",
+   "path": "state/transient.md",
+   "line": 9,
+   "detail": "T-25.1 does not list supersedes: T-20.1",
+   "id": "T-20.1"
+  }
+ ],
+ "lifecycle": {
+  "E-0": {
+   "type": "E",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-0.1": {
+   "type": "O",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-0.2": {
+   "type": "O",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "G-0.1": {
+   "type": "G",
+   "created": "S-0",
+   "statuses": [
+    [
+     "S-0",
+     "active"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-1": {
+   "type": "E",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-1.1": {
+   "type": "O",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-1.2": {
+   "type": "O",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-1.3": {
+   "type": "O",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-1.4": {
+   "type": "O",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "F-1.1": {
+   "type": "F",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     "current"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "F-1.2": {
+   "type": "F",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     "current"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "G-1.1": {
+   "type": "G",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     "active"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "T-1.1": {
+   "type": "T",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     "active"
+    ],
+    [
+     "S-9",
+     "expired"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "H-1.1": {
+   "type": "H",
+   "created": "S-1",
+   "statuses": [
+    [
+     "S-1",
+     "open"
+    ],
+    [
+     "S-2",
+     "confirmed"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-2": {
+   "type": "E",
+   "created": "S-2",
+   "statuses": [
+    [
+     "S-2",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-2.1": {
+   "type": "O",
+   "created": "S-2",
+   "statuses": [
+    [
+     "S-2",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-2.2": {
+   "type": "O",
+   "created": "S-2",
+   "statuses": [
+    [
+     "S-2",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "P-2.1": {
+   "type": "P",
+   "created": "S-2",
+   "statuses": [
+    [
+     "S-2",
+     "current"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-3": {
+   "type": "E",
+   "created": "S-3",
+   "statuses": [
+    [
+     "S-3",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-3.1": {
+   "type": "O",
+   "created": "S-3",
+   "statuses": [
+    [
+     "S-3",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-4": {
+   "type": "E",
+   "created": "S-4",
+   "statuses": [
+    [
+     "S-4",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-4.1": {
+   "type": "O",
+   "created": "S-4",
+   "statuses": [
+    [
+     "S-4",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-5": {
+   "type": "E",
+   "created": "S-5",
+   "statuses": [
+    [
+     "S-5",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-5.1": {
+   "type": "O",
+   "created": "S-5",
+   "statuses": [
+    [
+     "S-5",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-5.2": {
+   "type": "O",
+   "created": "S-5",
+   "statuses": [
+    [
+     "S-5",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "T-5.1": {
+   "type": "T",
+   "created": "S-5",
+   "statuses": [
+    [
+     "S-5",
+     "active"
+    ],
+    [
+     "S-11",
+     "expired"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-6": {
+   "type": "E",
+   "created": "S-6",
+   "statuses": [
+    [
+     "S-6",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-6.1": {
+   "type": "O",
+   "created": "S-6",
+   "statuses": [
+    [
+     "S-6",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-6.2": {
+   "type": "O",
+   "created": "S-6",
+   "statuses": [
+    [
+     "S-6",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-6.3": {
+   "type": "O",
+   "created": "S-6",
+   "statuses": [
+    [
+     "S-6",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-6.4": {
+   "type": "O",
+   "created": "S-6",
+   "statuses": [
+    [
+     "S-6",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-6.5": {
+   "type": "O",
+   "created": "S-6",
+   "statuses": [
+    [
+     "S-6",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "F-6.1": {
+   "type": "F",
+   "created": "S-6",
+   "statuses": [
+    [
+     "S-6",
+     "current"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "T-6.1": {
+   "type": "T",
+   "created": "S-6",
+   "statuses": [
+    [
+     "S-6",
+     "active"
+    ],
+    [
+     "S-11",
+     "expired"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-7": {
+   "type": "E",
+   "created": "S-7",
+   "statuses": [
+    [
+     "S-7",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-7.1": {
+   "type": "O",
+   "created": "S-7",
+   "statuses": [
+    [
+     "S-7",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-7.2": {
+   "type": "O",
+   "created": "S-7",
+   "statuses": [
+    [
+     "S-7",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "P-7.1": {
+   "type": "P",
+   "created": "S-7",
+   "statuses": [
+    [
+     "S-7",
+     "current"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-8": {
+   "type": "E",
+   "created": "S-8",
+   "statuses": [
+    [
+     "S-8",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-8.1": {
+   "type": "O",
+   "created": "S-8",
+   "statuses": [
+    [
+     "S-8",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-8.2": {
+   "type": "O",
+   "created": "S-8",
+   "statuses": [
+    [
+     "S-8",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "P-8.1": {
+   "type": "P",
+   "created": "S-8",
+   "statuses": [
+    [
+     "S-8",
+     "current"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "T-8.1": {
+   "type": "T",
+   "created": "S-8",
+   "statuses": [
+    [
+     "S-8",
+     "active"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-9": {
+   "type": "E",
+   "created": "S-9",
+   "statuses": [
+    [
+     "S-9",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-9.1": {
+   "type": "O",
+   "created": "S-9",
+   "statuses": [
+    [
+     "S-9",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-9.2": {
+   "type": "O",
+   "created": "S-9",
+   "statuses": [
+    [
+     "S-9",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-10": {
+   "type": "E",
+   "created": "S-10",
+   "statuses": [
+    [
+     "S-10",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-11": {
+   "type": "E",
+   "created": "S-11",
+   "statuses": [
+    [
+     "S-11",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-11.1": {
+   "type": "O",
+   "created": "S-11",
+   "statuses": [
+    [
+     "S-11",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-11.2": {
+   "type": "O",
+   "created": "S-11",
+   "statuses": [
+    [
+     "S-11",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-11.3": {
+   "type": "O",
+   "created": "S-11",
+   "statuses": [
+    [
+     "S-11",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "F-11.1": {
+   "type": "F",
+   "created": "S-11",
+   "statuses": [
+    [
+     "S-11",
+     "current"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "H-11.1": {
+   "type": "H",
+   "created": "S-11",
+   "statuses": [
+    [
+     "S-11",
+     "open"
+    ],
+    [
+     "S-16",
+     "confirmed"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-12": {
+   "type": "E",
+   "created": "S-12",
+   "statuses": [
+    [
+     "S-12",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-12.1": {
+   "type": "O",
+   "created": "S-12",
+   "statuses": [
+    [
+     "S-12",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-12.2": {
+   "type": "O",
+   "created": "S-12",
+   "statuses": [
+    [
+     "S-12",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "P-12.1": {
+   "type": "P",
+   "created": "S-12",
+   "statuses": [
+    [
+     "S-12",
+     "current"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "G-12.1": {
+   "type": "G",
+   "created": "S-12",
+   "statuses": [
+    [
+     "S-12",
+     "active"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-13": {
+   "type": "E",
+   "created": "S-13",
+   "statuses": [
+    [
+     "S-13",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-13.1": {
+   "type": "O",
+   "created": "S-13",
+   "statuses": [
+    [
+     "S-13",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "P-13.1": {
+   "type": "P",
+   "created": "S-13",
+   "statuses": [
+    [
+     "S-13",
+     "current"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-14": {
+   "type": "E",
+   "created": "S-14",
+   "statuses": [
+    [
+     "S-14",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-14.1": {
+   "type": "O",
+   "created": "S-14",
+   "statuses": [
+    [
+     "S-14",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-14.2": {
+   "type": "O",
+   "created": "S-14",
+   "statuses": [
+    [
+     "S-14",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "F-14.1": {
+   "type": "F",
+   "created": "S-14",
+   "statuses": [
+    [
+     "S-14",
+     "current"
+    ],
+    [
+     "S-19",
+     "superseded"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "T-14.1": {
+   "type": "T",
+   "created": "S-14",
+   "statuses": [
+    [
+     "S-14",
+     "active"
+    ],
+    [
+     "S-22",
+     "superseded"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "H-14.1": {
+   "type": "H",
+   "created": "S-14",
+   "statuses": [
+    [
+     "S-14",
+     "open"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-15": {
+   "type": "E",
+   "created": "S-15",
+   "statuses": [
+    [
+     "S-15",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-15.1": {
+   "type": "O",
+   "created": "S-15",
+   "statuses": [
+    [
+     "S-15",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-15.2": {
+   "type": "O",
+   "created": "S-15",
+   "statuses": [
+    [
+     "S-15",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "G-15.1": {
+   "type": "G",
+   "created": "S-15",
+   "statuses": [
+    [
+     "S-15",
+     "active"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-16": {
+   "type": "E",
+   "created": "S-16",
+   "statuses": [
+    [
+     "S-16",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-16.1": {
+   "type": "O",
+   "created": "S-16",
+   "statuses": [
+    [
+     "S-16",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-16.2": {
+   "type": "O",
+   "created": "S-16",
+   "statuses": [
+    [
+     "S-16",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "P-16.1": {
+   "type": "P",
+   "created": "S-16",
+   "statuses": [
+    [
+     "S-16",
+     "current"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-17": {
+   "type": "E",
+   "created": "S-17",
+   "statuses": [
+    [
+     "S-17",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-17.1": {
+   "type": "O",
+   "created": "S-17",
+   "statuses": [
+    [
+     "S-17",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "G-17.1": {
+   "type": "G",
+   "created": "S-17",
+   "statuses": [
+    [
+     "S-17",
+     "active"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "T-17.1": {
+   "type": "T",
+   "created": "S-17",
+   "statuses": [
+    [
+     "S-17",
+     "active"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-19": {
+   "type": "E",
+   "created": "S-19",
+   "statuses": [
+    [
+     "S-19",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-19.1": {
+   "type": "O",
+   "created": "S-19",
+   "statuses": [
+    [
+     "S-19",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-19.2": {
+   "type": "O",
+   "created": "S-19",
+   "statuses": [
+    [
+     "S-19",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-19.3": {
+   "type": "O",
+   "created": "S-19",
+   "statuses": [
+    [
+     "S-19",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "F-19.1": {
+   "type": "F",
+   "created": "S-19",
+   "statuses": [
+    [
+     "S-19",
+     "current"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "T-19.1": {
+   "type": "T",
+   "created": "S-19",
+   "statuses": [
+    [
+     "S-19",
+     "active"
+    ],
+    [
+     "S-24",
+     "expired"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-20": {
+   "type": "E",
+   "created": "S-20",
+   "statuses": [
+    [
+     "S-20",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-20.1": {
+   "type": "O",
+   "created": "S-20",
+   "statuses": [
+    [
+     "S-20",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-20.2": {
+   "type": "O",
+   "created": "S-20",
+   "statuses": [
+    [
+     "S-20",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-20.3": {
+   "type": "O",
+   "created": "S-20",
+   "statuses": [
+    [
+     "S-20",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-20.4": {
+   "type": "O",
+   "created": "S-20",
+   "statuses": [
+    [
+     "S-20",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "P-20.1": {
+   "type": "P",
+   "created": "S-20",
+   "statuses": [
+    [
+     "S-20",
+     "current"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "G-20.1": {
+   "type": "G",
+   "created": "S-20",
+   "statuses": [
+    [
+     "S-20",
+     "active"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "T-20.1": {
+   "type": "T",
+   "created": "S-20",
+   "statuses": [
+    [
+     "S-20",
+     "active"
+    ],
+    [
+     "S-25",
+     "superseded"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-21": {
+   "type": "E",
+   "created": "S-21",
+   "statuses": [
+    [
+     "S-21",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-21.1": {
+   "type": "O",
+   "created": "S-21",
+   "statuses": [
+    [
+     "S-21",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-21.2": {
+   "type": "O",
+   "created": "S-21",
+   "statuses": [
+    [
+     "S-21",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-22": {
+   "type": "E",
+   "created": "S-22",
+   "statuses": [
+    [
+     "S-22",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "T-22.1": {
+   "type": "T",
+   "created": "S-22",
+   "statuses": [
+    [
+     "S-22",
+     "active"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-23": {
+   "type": "E",
+   "created": "S-23",
+   "statuses": [
+    [
+     "S-23",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-23.1": {
+   "type": "O",
+   "created": "S-23",
+   "statuses": [
+    [
+     "S-23",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-23.2": {
+   "type": "O",
+   "created": "S-23",
+   "statuses": [
+    [
+     "S-23",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "P-23.1": {
+   "type": "P",
+   "created": "S-23",
+   "statuses": [
+    [
+     "S-23",
+     "current"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "P-23.2": {
+   "type": "P",
+   "created": "S-23",
+   "statuses": [
+    [
+     "S-23",
+     "current"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-24": {
+   "type": "E",
+   "created": "S-24",
+   "statuses": [
+    [
+     "S-24",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-24.1": {
+   "type": "O",
+   "created": "S-24",
+   "statuses": [
+    [
+     "S-24",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-24.2": {
+   "type": "O",
+   "created": "S-24",
+   "statuses": [
+    [
+     "S-24",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "T-24.1": {
+   "type": "T",
+   "created": "S-24",
+   "statuses": [
+    [
+     "S-24",
+     "active"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "T-24.2": {
+   "type": "T",
+   "created": "S-24",
+   "statuses": [
+    [
+     "S-24",
+     "active"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-25": {
+   "type": "E",
+   "created": "S-25",
+   "statuses": [
+    [
+     "S-25",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-25.1": {
+   "type": "O",
+   "created": "S-25",
+   "statuses": [
+    [
+     "S-25",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-25.2": {
+   "type": "O",
+   "created": "S-25",
+   "statuses": [
+    [
+     "S-25",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "P-25.1": {
+   "type": "P",
+   "created": "S-25",
+   "statuses": [
+    [
+     "S-25",
+     "current"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "T-25.1": {
+   "type": "T",
+   "created": "S-25",
+   "statuses": [
+    [
+     "S-25",
+     "active"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-26": {
+   "type": "E",
+   "created": "S-26",
+   "statuses": [
+    [
+     "S-26",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-26.1": {
+   "type": "O",
+   "created": "S-26",
+   "statuses": [
+    [
+     "S-26",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-26.2": {
+   "type": "O",
+   "created": "S-26",
+   "statuses": [
+    [
+     "S-26",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-26.3": {
+   "type": "O",
+   "created": "S-26",
+   "statuses": [
+    [
+     "S-26",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "G-26.1": {
+   "type": "G",
+   "created": "S-26",
+   "statuses": [
+    [
+     "S-26",
+     "active"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "T-26.1": {
+   "type": "T",
+   "created": "S-26",
+   "statuses": [
+    [
+     "S-26",
+     "active"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "T-26.2": {
+   "type": "T",
+   "created": "S-26",
+   "statuses": [
+    [
+     "S-26",
+     "active"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "T-26.3": {
+   "type": "T",
+   "created": "S-26",
+   "statuses": [
+    [
+     "S-26",
+     "active"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-27": {
+   "type": "E",
+   "created": "S-27",
+   "statuses": [
+    [
+     "S-27",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-27.1": {
+   "type": "O",
+   "created": "S-27",
+   "statuses": [
+    [
+     "S-27",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-27.2": {
+   "type": "O",
+   "created": "S-27",
+   "statuses": [
+    [
+     "S-27",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "P-27.1": {
+   "type": "P",
+   "created": "S-27",
+   "statuses": [
+    [
+     "S-27",
+     "current"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "T-27.1": {
+   "type": "T",
+   "created": "S-27",
+   "statuses": [
+    [
+     "S-27",
+     "active"
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "E-28": {
+   "type": "E",
+   "created": "S-28",
+   "statuses": [
+    [
+     "S-28",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-28.1": {
+   "type": "O",
+   "created": "S-28",
+   "statuses": [
+    [
+     "S-28",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  },
+  "O-28.2": {
+   "type": "O",
+   "created": "S-28",
+   "statuses": [
+    [
+     "S-28",
+     null
+    ]
+   ],
+   "last_seen": "S-28"
+  }
+ },
+ "timeline": [
+  {
+   "event_id": "S-0",
+   "date": "2025-09-29",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-0",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "High-pressure negotiation drill about a hostage scenario and debrief."
+     },
+     {
+      "id": "O-0.1",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Asked for intense crisis-communication practice and wanted to work on recovering from mistakes."
+     },
+     {
+      "id": "O-0.2",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Asked whether the roleplay would stay in character or break for feedback."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "G-0.1",
+      "status": "active",
+      "path": "state/goals.md",
+      "statement": "Wants to build high-pressure communication skills through negotiation drills."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Build high-pressure communication skills through negotiation drills (G-0.1)",
+     "Wants to build high-pressure communication skills through negotiation drills (G-0.1)"
+    ],
+    "removed": [],
+    "cited_added": [
+     "G-0.1"
+    ],
+    "cited_removed": [],
+    "bullets": 2,
+    "as_of": "S-0"
+   }
+  },
+  {
+   "event_id": "S-1",
+   "date": "2025-09-30",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-1",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Escalating cyberstalking prompted a safety-planning discussion."
+     },
+     {
+      "id": "O-1.1",
+      "status": "event",
+      "path": "memory/episodes.md",
+      "statement": "User said the stalking has lasted weeks and includes private motorcycle details."
+     },
+     {
+      "id": "O-1.2",
+      "status": "event",
+      "path": "memory/episodes.md",
+      "statement": "User runs a gallery and rides a motorcycle."
+     },
+     {
+      "id": "O-1.3",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "User asked for step-by-step checklist help for urgent safety actions."
+     },
+     {
+      "id": "O-1.4",
+      "status": "reaction",
+      "path": "memory/episodes.md",
+      "statement": "User chose reporting and precautions over direct confrontation."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "F-1.1",
+      "status": "current",
+      "path": "state/profile.md",
+      "statement": "Runs an art gallery."
+     },
+     {
+      "id": "F-1.2",
+      "status": "current",
+      "path": "state/profile.md",
+      "statement": "Rides a motorcycle."
+     },
+     {
+      "id": "G-1.1",
+      "status": "active",
+      "path": "state/goals.md",
+      "statement": "Document and report the cyberstalking to improve personal safety."
+     },
+     {
+      "id": "T-1.1",
+      "status": "active",
+      "path": "state/transient.md",
+      "statement": "Is dealing with an escalating cyberstalking threat and taking immediate safety precautions."
+     },
+     {
+      "id": "H-1.1",
+      "status": "open",
+      "path": "state/hypotheses.md",
+      "statement": "Prefers structured, checklist-style help for urgent problems."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Dealing with an escalating cyberstalking threat and taking immediate safety precautions (T-1.1)",
+     "Document and report the cyberstalking to improve personal safety (G-1.1)",
+     "Prefers structured, checklist-style help for urgent problems (H-1.1, open)",
+     "Runs an art gallery and rides a motorcycle (F-1.1, F-1.2)"
+    ],
+    "removed": [
+     "Build high-pressure communication skills through negotiation drills (G-0.1)",
+     "Wants to build high-pressure communication skills through negotiation drills (G-0.1)"
+    ],
+    "cited_added": [
+     "F-1.1",
+     "F-1.2",
+     "G-1.1",
+     "H-1.1",
+     "T-1.1"
+    ],
+    "cited_removed": [
+     "G-0.1"
+    ],
+    "bullets": 4,
+    "as_of": "S-1"
+   }
+  },
+  {
+   "event_id": "S-2",
+   "date": "2025-09-30",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-2",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Continued cyberstalking safety planning and asked for clear, casual, prioritized guidance."
+     },
+     {
+      "id": "O-2.1",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Wanted concrete steps, prioritized and broken down clearly because overwhelmed."
+     },
+     {
+      "id": "O-2.2",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Asked to keep it casual and not too formal because stressed."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "P-2.1",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Wants clear, casual, checklist-style help for urgent problems."
+     }
+    ],
+    "changed": [
+     {
+      "id": "H-1.1",
+      "status": [
+       "open",
+       "confirmed"
+      ],
+      "fields": {
+       "confidence": [
+        "low",
+        "medium"
+       ],
+       "for": [
+        "O-1.3, O-1.4",
+        "O-1.3, O-1.4, O-2.1, O-2.2"
+       ],
+       "resolved_into": [
+        null,
+        "P-2.1"
+       ]
+      },
+      "statement": "Prefers structured, checklist-style help for urgent problems."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Wants clear, casual, checklist-style help for urgent problems (P-2.1)"
+    ],
+    "removed": [
+     "Prefers structured, checklist-style help for urgent problems (H-1.1, open)"
+    ],
+    "cited_added": [
+     "P-2.1"
+    ],
+    "cited_removed": [
+     "H-1.1"
+    ],
+    "bullets": 4,
+    "as_of": "S-2"
+   }
+  },
+  {
+   "event_id": "S-3",
+   "date": "2025-10-01",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-3",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Urgent nuclear-crisis roleplay about reactor cooling, venting, and regulator debriefing."
+     },
+     {
+      "id": "O-3.1",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Asked for a visual, checklist-style format to track urgent actions."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [],
+    "changed": [
+     {
+      "id": "P-2.1",
+      "status": [
+       "current",
+       "current"
+      ],
+      "fields": {
+       "basis": [
+        "O-1.3, O-1.4, O-2.1, O-2.2",
+        "O-1.3, O-1.4, O-2.1, O-2.2, O-3.1"
+       ],
+       "confirmed": [
+        null,
+        "2025-10-01"
+       ]
+      },
+      "statement": "Wants clear, casual, checklist-style help for urgent problems."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [],
+    "removed": [],
+    "cited_added": [],
+    "cited_removed": [],
+    "bullets": 4,
+    "as_of": "S-3"
+   }
+  },
+  {
+   "event_id": "S-4",
+   "date": "2025-10-01",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-4",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Crisis-simulation discussion about nuclear meltdown response and coordination."
+     },
+     {
+      "id": "O-4.1",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Asked for a step-by-step checklist to manage an urgent, high-pressure scenario."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Build high-pressure communication skills through negotiation drills (G-0.1)"
+    ],
+    "removed": [],
+    "cited_added": [
+     "G-0.1"
+    ],
+    "cited_removed": [],
+    "bullets": 5,
+    "as_of": "S-4"
+   }
+  },
+  {
+   "event_id": "S-5",
+   "date": "2025-10-04",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-5",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Breakup support chat about coping with sadness and rumination."
+     },
+     {
+      "id": "O-5.1",
+      "status": "event",
+      "path": "memory/episodes.md",
+      "statement": "Broke up about a week ago and feels low, with quiet solitary times hitting hardest."
+     },
+     {
+      "id": "O-5.2",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Wants straight, practical guidance and actual steps instead of sugarcoating."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "T-5.1",
+      "status": "active",
+      "path": "state/transient.md",
+      "statement": "Is dealing with breakup sadness and rumination, especially in quiet solitary moments."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Dealing with breakup sadness and rumination in quiet solitary moments (T-5.1)",
+     "Still taking immediate safety precautions around an escalating cyberstalking threat (T-1.1)"
+    ],
+    "removed": [
+     "Dealing with an escalating cyberstalking threat and taking immediate safety precautions (T-1.1)"
+    ],
+    "cited_added": [
+     "T-5.1"
+    ],
+    "cited_removed": [],
+    "bullets": 6,
+    "as_of": "S-5"
+   }
+  },
+  {
+   "event_id": "S-6",
+   "date": "2025-10-04",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-6",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Breakup coping chat; user wants support and clarity."
+     },
+     {
+      "id": "O-6.1",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Breakup is about a week old; loneliness and empty evenings are hardest, and work only helps during the day."
+     },
+     {
+      "id": "O-6.2",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Enjoys motorcycle riding, rock climbing, and wilderness hiking, but has felt unmotivated lately."
+     },
+     {
+      "id": "O-6.3",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Can probably ride with friend Ryan this weekend and tends to spiral into \"it'll never get better\" thoughts."
+     },
+     {
+      "id": "O-6.4",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Concrete steps help, and wants a middle-ground way to answer people without dumping on them."
+     },
+     {
+      "id": "O-6.5",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Ryan feels solid, Daniela may be safe to open up to, and having a plan feels better than drowning."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "F-6.1",
+      "status": "current",
+      "path": "state/profile.md",
+      "statement": "Enjoys rock climbing and wilderness hiking."
+     },
+     {
+      "id": "T-6.1",
+      "status": "active",
+      "path": "state/transient.md",
+      "statement": "Wants concrete, low-overwhelm support while processing breakup sadness."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Dealing with breakup sadness and rumination in quiet solitary moments; wants concrete, low-overwhelm support while processing it (T-5.1, T-6.1)",
+     "Runs an art gallery, rides a motorcycle, and enjoys rock climbing and wilderness hiking (F-1.1, F-1.2, F-6.1)"
+    ],
+    "removed": [
+     "Dealing with breakup sadness and rumination in quiet solitary moments (T-5.1)",
+     "Runs an art gallery and rides a motorcycle (F-1.1, F-1.2)"
+    ],
+    "cited_added": [
+     "F-6.1",
+     "T-6.1"
+    ],
+    "cited_removed": [],
+    "bullets": 6,
+    "as_of": "S-6"
+   }
+  },
+  {
+   "event_id": "S-7",
+   "date": "2025-10-05",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-7",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "High-pressure interrogation roleplay drill with real-time coaching and debrief."
+     },
+     {
+      "id": "O-7.1",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Asked for interactive roleplay with live coaching and feedback during a difficult training scenario."
+     },
+     {
+      "id": "O-7.2",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Used a rapport-first, non-confrontational approach and checked legal boundaries before pressing for details."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "P-7.1",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Wants challenging, interactive practice and learns better when pushed."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Wants challenging, interactive practice and learns better when pushed (P-7.1)"
+    ],
+    "removed": [],
+    "cited_added": [
+     "P-7.1"
+    ],
+    "cited_removed": [],
+    "bullets": 7,
+    "as_of": "S-7"
+   }
+  },
+  {
+   "event_id": "S-8",
+   "date": "2025-10-06",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-8",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Conversation about preparing a solo Trans-Labrador motorcycle trip on an aging KLR."
+     },
+     {
+      "id": "O-8.1",
+      "status": "event",
+      "path": "memory/episodes.md",
+      "statement": "User is planning a solo Trans-Labrador ride in about 6 weeks on a 2009 KLR 650 with 65k miles."
+     },
+     {
+      "id": "O-8.2",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Wants trip prep broken down step by step, starting with what to tackle first."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "P-8.1",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Wants prep broken down step by step, with what to tackle first and what can wait."
+     },
+     {
+      "id": "T-8.1",
+      "status": "active",
+      "path": "state/transient.md",
+      "statement": "Is planning a solo Trans-Labrador ride in about six weeks."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Enjoys rock climbing and wilderness hiking (F-6.1)",
+     "Runs an art gallery and rides a motorcycle (F-1.1, F-1.2)",
+     "Wants clear, casual, checklist-style help plus step-by-step sequencing for planning (P-2.1, P-8.1)"
+    ],
+    "removed": [
+     "Runs an art gallery, rides a motorcycle, and enjoys rock climbing and wilderness hiking (F-1.1, F-1.2, F-6.1)",
+     "Wants challenging, interactive practice and learns better when pushed (P-7.1)",
+     "Wants clear, casual, checklist-style help for urgent problems (P-2.1)"
+    ],
+    "cited_added": [
+     "P-8.1"
+    ],
+    "cited_removed": [
+     "P-7.1"
+    ],
+    "bullets": 7,
+    "as_of": "S-8"
+   }
+  },
+  {
+   "event_id": "S-9",
+   "date": "2025-10-07",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-9",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Negotiation drill about a barricaded hostage situation, ending with a debrief."
+     },
+     {
+      "id": "O-9.1",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Asked for a full step-by-step analysis and exact watch-outs after the drill."
+     },
+     {
+      "id": "O-9.2",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Wants harder scenarios and feels confident pushing themselves."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [],
+    "changed": [
+     {
+      "id": "P-7.1",
+      "status": [
+       "current",
+       "current"
+      ],
+      "fields": {
+       "basis": [
+        "O-7.1, O-7.2",
+        "O-7.1, O-7.2, O-9.2"
+       ],
+       "confirmed": [
+        null,
+        "2025-10-07"
+       ]
+      },
+      "statement": "Wants challenging, interactive practice and learns better when pushed."
+     },
+     {
+      "id": "P-8.1",
+      "status": [
+       "current",
+       "current"
+      ],
+      "fields": {
+       "basis": [
+        "O-8.2",
+        "O-8.2, O-9.1"
+       ],
+       "confirmed": [
+        null,
+        "2025-10-07"
+       ]
+      },
+      "statement": "Wants prep broken down step by step, with what to tackle first and what can wait."
+     },
+     {
+      "id": "T-1.1",
+      "status": [
+       "active",
+       "expired"
+      ],
+      "fields": {
+       "ended": [
+        null,
+        "2025-10-07"
+       ]
+      },
+      "statement": "Is dealing with an escalating cyberstalking threat and taking immediate safety precautions."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Planning a solo Trans-Labrador ride in about six weeks (T-8.1)",
+     "Wants clear, casual, checklist-style help for urgent problems, plus step-by-step prep and challenging interactive practice (P-2.1, P-7.1, P-8.1)"
+    ],
+    "removed": [
+     "Still taking immediate safety precautions around an escalating cyberstalking threat (T-1.1)",
+     "Wants clear, casual, checklist-style help plus step-by-step sequencing for planning (P-2.1, P-8.1)"
+    ],
+    "cited_added": [
+     "P-7.1",
+     "T-8.1"
+    ],
+    "cited_removed": [
+     "T-1.1"
+    ],
+    "bullets": 7,
+    "as_of": "S-9"
+   }
+  },
+  {
+   "event_id": "S-10",
+   "date": "2025-10-10",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-10",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Discussion about diplomatic dynamics in coups and how to design realistic crisis simulations."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [],
+    "removed": [],
+    "cited_added": [],
+    "cited_removed": [],
+    "bullets": 7,
+    "as_of": "S-10"
+   }
+  },
+  {
+   "event_id": "S-11",
+   "date": "2025-10-12",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-11",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Discussed nuclear-winter survival planning and prep priorities."
+     },
+     {
+      "id": "O-11.1",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Enjoys wilderness photography trips as part of outdoor time."
+     },
+     {
+      "id": "O-11.2",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Wanted the prep organized by priority, with critical vs nice-to-have tiers."
+     },
+     {
+      "id": "O-11.3",
+      "status": "reaction",
+      "path": "memory/episodes.md",
+      "statement": "Appreciated practical, balanced, non-doomsday framing."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "F-11.1",
+      "status": "current",
+      "path": "state/profile.md",
+      "statement": "Enjoys wilderness photography trips."
+     },
+     {
+      "id": "H-11.1",
+      "status": "open",
+      "path": "state/hypotheses.md",
+      "statement": "The user may prefer practical, balanced, non-doomsday framing."
+     }
+    ],
+    "changed": [
+     {
+      "id": "T-5.1",
+      "status": [
+       "active",
+       "expired"
+      ],
+      "fields": {
+       "ended": [
+        null,
+        "2025-10-12"
+       ]
+      },
+      "statement": "Is dealing with breakup sadness and rumination, especially in quiet solitary moments."
+     },
+     {
+      "id": "T-6.1",
+      "status": [
+       "active",
+       "expired"
+      ],
+      "fields": {
+       "ended": [
+        null,
+        "2025-10-12"
+       ]
+      },
+      "statement": "Wants concrete, low-overwhelm support while processing breakup sadness."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Enjoys rock climbing, wilderness hiking, and wilderness photography trips (F-6.1, F-11.1)",
+     "May prefer practical, balanced, non-doomsday framing (H-11.1)",
+     "Wants clear, casual, checklist-style help for urgent problems, stepwise planning, and challenging interactive practice (P-2.1, P-7.1, P-8.1)"
+    ],
+    "removed": [
+     "Dealing with breakup sadness and rumination in quiet solitary moments; wants concrete, low-overwhelm support while processing it (T-5.1, T-6.1)",
+     "Enjoys rock climbing and wilderness hiking (F-6.1)",
+     "Wants clear, casual, checklist-style help for urgent problems, plus step-by-step prep and challenging interactive practice (P-2.1, P-7.1, P-8.1)"
+    ],
+    "cited_added": [
+     "F-11.1",
+     "H-11.1"
+    ],
+    "cited_removed": [
+     "T-5.1",
+     "T-6.1"
+    ],
+    "bullets": 7,
+    "as_of": "S-11"
+   }
+  },
+  {
+   "event_id": "S-12",
+   "date": "2025-10-13",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-12",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Chat about ethics and governance for an AI recommendation startup before scaling."
+     },
+     {
+      "id": "O-12.1",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Prefers seeing concrete examples rather than abstract theory."
+     },
+     {
+      "id": "O-12.2",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Needs to draft a code of ethics before the AI startup scales."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "P-12.1",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Prefers seeing concrete examples rather than abstract theory."
+     },
+     {
+      "id": "G-12.1",
+      "status": "active",
+      "path": "state/goals.md",
+      "statement": "Needs to draft a code of ethics for the AI startup before scaling."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Draft a code of ethics for the AI startup before scaling (G-12.1)",
+     "Wants clear, casual, checklist-style help for urgent problems, stepwise planning, challenging interactive practice, and concrete examples (P-2.1, P-7.1, P-8.1, P-12.1)"
+    ],
+    "removed": [
+     "Wants clear, casual, checklist-style help for urgent problems, stepwise planning, and challenging interactive practice (P-2.1, P-7.1, P-8.1)"
+    ],
+    "cited_added": [
+     "G-12.1",
+     "P-12.1"
+    ],
+    "cited_removed": [],
+    "bullets": 8,
+    "as_of": "S-12"
+   }
+  },
+  {
+   "event_id": "S-13",
+   "date": "2025-10-13",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-13",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Discussed foundations for an AI startup ethics code and trade-offs in recommendation systems."
+     },
+     {
+      "id": "O-13.1",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Prefers comparing pros and cons of approaches rather than picking one right answer."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "P-13.1",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Prefers comparing pros and cons of approaches rather than picking one right answer."
+     }
+    ],
+    "changed": [
+     {
+      "id": "H-11.1",
+      "status": [
+       "open",
+       "open"
+      ],
+      "fields": {
+       "for": [
+        "O-11.3",
+        "O-11.3, O-13.1"
+       ]
+      },
+      "statement": "The user may prefer practical, balanced, non-doomsday framing."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Wants clear, casual, checklist-style help for urgent problems, stepwise planning, challenging interactive practice, concrete examples, and comparative pros/cons framing (P-2.1, P-7.1, P-8.1, P-12.1, P-13.1)"
+    ],
+    "removed": [
+     "Wants clear, casual, checklist-style help for urgent problems, stepwise planning, challenging interactive practice, and concrete examples (P-2.1, P-7.1, P-8.1, P-12.1)"
+    ],
+    "cited_added": [
+     "P-13.1"
+    ],
+    "cited_removed": [],
+    "bullets": 8,
+    "as_of": "S-13"
+   }
+  },
+  {
+   "event_id": "S-14",
+   "date": "2025-10-15",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-14",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Discussion about a professional email after a recent motorcycle accident."
+     },
+     {
+      "id": "O-14.1",
+      "status": "event",
+      "path": "memory/episodes.md",
+      "statement": "Had a bad motorcycle accident a few months ago and is getting back to work at the gallery."
+     },
+     {
+      "id": "O-14.2",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Asked for help wording a delay email professionally without much detail about the accident."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "F-14.1",
+      "status": "current",
+      "path": "state/profile.md",
+      "statement": "Had a bad motorcycle accident a few months ago."
+     },
+     {
+      "id": "T-14.1",
+      "status": "active",
+      "path": "state/transient.md",
+      "statement": "Is getting back to work after a motorcycle accident."
+     },
+     {
+      "id": "H-14.1",
+      "status": "open",
+      "path": "state/hypotheses.md",
+      "statement": "The accident may have made them more cautious about motorcycle risk."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Accident may have made them more cautious about motorcycle risk (H-14.1)",
+     "Runs an art gallery and is getting back to work after a motorcycle accident (F-1.1, F-14.1, T-14.1)",
+     "Wants clear, casual, checklist-style help for urgent problems (P-2.1)"
+    ],
+    "removed": [
+     "Enjoys rock climbing, wilderness hiking, and wilderness photography trips (F-6.1, F-11.1)",
+     "May prefer practical, balanced, non-doomsday framing (H-11.1)",
+     "Runs an art gallery and rides a motorcycle (F-1.1, F-1.2)",
+     "Wants clear, casual, checklist-style help for urgent problems, stepwise planning, challenging interactive practice, concrete examples, and comparative pros/cons framing (P-2.1, P-7.1, P-8.1, P-12.1, P-13.1)"
+    ],
+    "cited_added": [
+     "F-14.1",
+     "H-14.1",
+     "T-14.1"
+    ],
+    "cited_removed": [
+     "F-1.2",
+     "F-11.1",
+     "F-6.1",
+     "H-11.1",
+     "P-12.1",
+     "P-13.1",
+     "P-7.1",
+     "P-8.1"
+    ],
+    "bullets": 7,
+    "as_of": "S-14"
+   }
+  },
+  {
+   "event_id": "S-15",
+   "date": "2025-10-18",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-15",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Discussed safety and ethics around a proposed gothic cult documentary project."
+     },
+     {
+      "id": "O-15.1",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Asked for straight, unsugarcoated risk analysis and concrete safety protocols for a risky plan."
+     },
+     {
+      "id": "O-15.2",
+      "status": "reaction",
+      "path": "memory/episodes.md",
+      "statement": "Welcomed the ethical pivot to cult-awareness art and thanked the assistant for the straight talk."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "G-15.1",
+      "status": "active",
+      "path": "state/goals.md",
+      "statement": "Develop an ethically grounded cult-awareness art project."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Accident may still be affecting motorcycle risk tolerance (H-14.1)",
+     "Develop an ethically grounded cult-awareness art project (G-15.1)",
+     "Likely prefers practical, balanced framing over doom-heavy warnings (H-11.1)",
+     "Runs an art gallery, enjoys wilderness photography, rides a motorcycle, and is getting back to work after a motorcycle accident (F-1.1, F-1.2, F-11.1, F-14.1, T-14.1)",
+     "Wants clear, casual, checklist-style help, with step-by-step prep and concrete comparisons when useful (P-2.1, P-8.1, P-12.1, P-13.1)"
+    ],
+    "removed": [
+     "Accident may have made them more cautious about motorcycle risk (H-14.1)",
+     "Runs an art gallery and is getting back to work after a motorcycle accident (F-1.1, F-14.1, T-14.1)",
+     "Wants clear, casual, checklist-style help for urgent problems (P-2.1)"
+    ],
+    "cited_added": [
+     "F-1.2",
+     "F-11.1",
+     "G-15.1",
+     "H-11.1",
+     "P-12.1",
+     "P-13.1",
+     "P-8.1"
+    ],
+    "cited_removed": [],
+    "bullets": 9,
+    "as_of": "S-15"
+   }
+  },
+  {
+   "event_id": "S-16",
+   "date": "2025-10-18",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-16",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Discussed an ethically grounded cult-awareness art project and safety planning."
+     },
+     {
+      "id": "O-16.1",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Wants the project to stay critical and avoid glorifying cult dynamics."
+     },
+     {
+      "id": "O-16.2",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Wants explicit consent, a safety coordinator, and transparent boundaries for the shoot."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "P-16.1",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Prefers practical, balanced framing over doom-heavy warnings."
+     }
+    ],
+    "changed": [
+     {
+      "id": "H-11.1",
+      "status": [
+       "open",
+       "confirmed"
+      ],
+      "fields": {
+       "resolved_into": [
+        null,
+        "P-16.1"
+       ]
+      },
+      "statement": "The user may prefer practical, balanced, non-doomsday framing."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Wants clear, casual, checklist-style help with step-by-step prep and concrete examples, plus practical, balanced framing (P-2.1, P-8.1, P-12.1, P-13.1, P-16.1)"
+    ],
+    "removed": [
+     "Likely prefers practical, balanced framing over doom-heavy warnings (H-11.1)",
+     "Wants clear, casual, checklist-style help, with step-by-step prep and concrete comparisons when useful (P-2.1, P-8.1, P-12.1, P-13.1)"
+    ],
+    "cited_added": [
+     "P-16.1"
+    ],
+    "cited_removed": [
+     "H-11.1"
+    ],
+    "bullets": 8,
+    "as_of": "S-16"
+   }
+  },
+  {
+   "event_id": "S-17",
+   "date": "2025-10-19",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-17",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Six-week sprint to rescue an 1984 CB750 cafe racer build before wedding season."
+     },
+     {
+      "id": "O-17.1",
+      "status": "event",
+      "path": "memory/episodes.md",
+      "statement": "Is in a six-week sprint to rescue an 1984 CB750 cafe racer build before wedding season."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "G-17.1",
+      "status": "active",
+      "path": "state/goals.md",
+      "statement": "Finish the 1984 CB750 cafe racer build before wedding season."
+     },
+     {
+      "id": "T-17.1",
+      "status": "active",
+      "path": "state/transient.md",
+      "statement": "Is under a six-week deadline to finish the CB750 build before wedding season."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Finish the 1984 CB750 cafe racer build before wedding season (G-17.1)",
+     "Is under a six-week deadline to finish the CB750 build before wedding season (T-17.1)",
+     "Wants clear, casual, checklist-style help for urgent problems, step-by-step prep, concrete examples, comparative reasoning, and practical, balanced framing (P-2.1, P-8.1, P-12.1, P-13.1, P-16.1)"
+    ],
+    "removed": [
+     "Build high-pressure communication skills through negotiation drills (G-0.1)",
+     "Develop an ethically grounded cult-awareness art project (G-15.1)",
+     "Document and report the cyberstalking to improve personal safety (G-1.1)",
+     "Draft a code of ethics for the AI startup before scaling (G-12.1)",
+     "Planning a solo Trans-Labrador ride in about six weeks (T-8.1)",
+     "Wants clear, casual, checklist-style help with step-by-step prep and concrete examples, plus practical, balanced framing (P-2.1, P-8.1, P-12.1, P-13.1, P-16.1)"
+    ],
+    "cited_added": [
+     "G-17.1",
+     "T-17.1"
+    ],
+    "cited_removed": [
+     "G-0.1",
+     "G-1.1",
+     "G-12.1",
+     "G-15.1",
+     "T-8.1"
+    ],
+    "bullets": 5,
+    "as_of": "S-17"
+   }
+  },
+  {
+   "event_id": "S-18",
+   "date": "2025-10-19",
+   "episodic": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [],
+    "changed": [
+     {
+      "id": "P-12.1",
+      "status": [
+       "current",
+       "current"
+      ],
+      "fields": {
+       "confirmed": [
+        null,
+        "2025-10-19"
+       ]
+      },
+      "statement": "Prefers seeing concrete examples rather than abstract theory."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [],
+    "removed": [],
+    "cited_added": [],
+    "cited_removed": [],
+    "bullets": 5,
+    "as_of": "S-18"
+   }
+  },
+  {
+   "event_id": "S-19",
+   "date": "2025-10-19",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-19",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "User returned after motorcycle accident and asked about easing back into gallery work."
+     },
+     {
+      "id": "O-19.1",
+      "status": "event",
+      "path": "memory/episodes.md",
+      "statement": "Had a bad motorcycle accident a few months ago and sustained a TBI."
+     },
+     {
+      "id": "O-19.2",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Was cleared to go back to work at the gallery."
+     },
+     {
+      "id": "O-19.3",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Is weighing whether to postpone an upcoming exhibition or push through."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "F-19.1",
+      "status": "current",
+      "path": "state/profile.md",
+      "statement": "Had a bad motorcycle accident a few months ago with a TBI."
+     },
+     {
+      "id": "T-19.1",
+      "status": "active",
+      "path": "state/transient.md",
+      "statement": "Is deciding whether to postpone an upcoming exhibition while resuming work after the accident."
+     }
+    ],
+    "changed": [
+     {
+      "id": "F-14.1",
+      "status": [
+       "current",
+       "superseded"
+      ],
+      "fields": {
+       "until": [
+        null,
+        "2025-10-19"
+       ],
+       "superseded_by": [
+        null,
+        "F-19.1"
+       ]
+      },
+      "statement": "Had a bad motorcycle accident a few months ago."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Accident may have made them more cautious about motorcycle risk, but that is still unconfirmed (H-14.1)",
+     "Deciding whether to postpone an upcoming exhibition while resuming work (T-19.1)",
+     "Runs an art gallery, rides a motorcycle, and is back at work after a motorcycle accident with a TBI (F-1.1, F-1.2, F-19.1, T-14.1)"
+    ],
+    "removed": [
+     "Accident may still be affecting motorcycle risk tolerance (H-14.1)",
+     "Is under a six-week deadline to finish the CB750 build before wedding season (T-17.1)",
+     "Runs an art gallery, enjoys wilderness photography, rides a motorcycle, and is getting back to work after a motorcycle accident (F-1.1, F-1.2, F-11.1, F-14.1, T-14.1)"
+    ],
+    "cited_added": [
+     "F-19.1",
+     "T-19.1"
+    ],
+    "cited_removed": [
+     "F-11.1",
+     "F-14.1",
+     "T-17.1"
+    ],
+    "bullets": 5,
+    "as_of": "S-19"
+   }
+  },
+  {
+   "event_id": "S-20",
+   "date": "2025-10-21",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-20",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Talked through an oil-company job offer and chose to turn it down."
+     },
+     {
+      "id": "O-20.1",
+      "status": "event",
+      "path": "memory/episodes.md",
+      "statement": "Was offered a communications role at an oil company that would double salary."
+     },
+     {
+      "id": "O-20.2",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Sees the role as greenwashing and a conflict with environmental values."
+     },
+     {
+      "id": "O-20.3",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Feels financial pressure from uneven gallery income and no retirement savings."
+     },
+     {
+      "id": "O-20.4",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Decided to decline the offer and build stability another way."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "P-20.1",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Prefers work that does not conflict with environmental and conservation values."
+     },
+     {
+      "id": "G-20.1",
+      "status": "active",
+      "path": "state/goals.md",
+      "statement": "Build financial stability without compromising environmental values."
+     },
+     {
+      "id": "T-20.1",
+      "status": "active",
+      "path": "state/transient.md",
+      "statement": "Feels anxious about long-term financial stability after weighing the offer."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Build financial stability without compromising environmental values (G-20.1)",
+     "Feels anxious about long-term financial stability after weighing the oil-company offer (T-20.1)",
+     "Prefers work that does not conflict with environmental and conservation values (P-20.1)"
+    ],
+    "removed": [],
+    "cited_added": [
+     "G-20.1",
+     "P-20.1",
+     "T-20.1"
+    ],
+    "cited_removed": [],
+    "bullets": 8,
+    "as_of": "S-20"
+   }
+  },
+  {
+   "event_id": "S-21",
+   "date": "2025-10-21",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-21",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Short chat about drafting professional delay emails after a motorcycle accident and return to gallery work."
+     },
+     {
+      "id": "O-21.1",
+      "status": "event",
+      "path": "memory/episodes.md",
+      "statement": "Had a bad motorcycle accident about 6 months ago and is finally getting back to work at the gallery."
+     },
+     {
+      "id": "O-21.2",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Wants a professional email explaining exhibition delays without oversharing."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [],
+    "removed": [
+     "Feels anxious about long-term financial stability after weighing the oil-company offer (T-20.1)"
+    ],
+    "cited_added": [],
+    "cited_removed": [
+     "T-20.1"
+    ],
+    "bullets": 7,
+    "as_of": "S-21"
+   }
+  },
+  {
+   "event_id": "S-22",
+   "date": "2025-10-24",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-22",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Collaborated on planning an adventure-themed murder mystery party."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "T-22.1",
+      "status": "active",
+      "path": "state/transient.md",
+      "statement": "Is still getting back to work after a motorcycle accident."
+     }
+    ],
+    "changed": [
+     {
+      "id": "T-14.1",
+      "status": [
+       "active",
+       "superseded"
+      ],
+      "fields": {
+       "until": [
+        null,
+        "2025-10-24"
+       ],
+       "superseded_by": [
+        null,
+        "T-22.1"
+       ]
+      },
+      "statement": "Is getting back to work after a motorcycle accident."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Develop an ethically grounded cult-awareness art project (G-15.1)",
+     "Draft a code of ethics for the AI startup before scaling (G-12.1)",
+     "Is deciding whether to postpone an upcoming exhibition while resuming work after the accident (T-19.1)",
+     "Is still getting back to work after a motorcycle accident; review 2025-11-24 (T-22.1)",
+     "Runs an art gallery, rides a motorcycle, and is back at work after a motorcycle accident with a TBI (F-1.1, F-1.2, F-19.1, T-22.1)"
+    ],
+    "removed": [
+     "Deciding whether to postpone an upcoming exhibition while resuming work (T-19.1)",
+     "Runs an art gallery, rides a motorcycle, and is back at work after a motorcycle accident with a TBI (F-1.1, F-1.2, F-19.1, T-14.1)"
+    ],
+    "cited_added": [
+     "G-12.1",
+     "G-15.1",
+     "T-22.1"
+    ],
+    "cited_removed": [
+     "T-14.1"
+    ],
+    "bullets": 10,
+    "as_of": "S-22"
+   }
+  },
+  {
+   "event_id": "S-23",
+   "date": "2025-10-24",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-23",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Collaborative murder mystery planning for a 1920s speakeasy party."
+     },
+     {
+      "id": "O-23.1",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Wants clues woven naturally into the story rather than obvious hint cards."
+     },
+     {
+      "id": "O-23.2",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Prefers tension to build gradually instead of everything arriving at once."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "P-23.1",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Prefers clues woven naturally into the story rather than obvious hint cards."
+     },
+     {
+      "id": "P-23.2",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Prefers tension to build gradually instead of arriving all at once."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Prefers clues woven naturally into stories and tension that builds gradually (P-23.1, P-23.2)"
+    ],
+    "removed": [],
+    "cited_added": [
+     "P-23.1",
+     "P-23.2"
+    ],
+    "cited_removed": [],
+    "bullets": 11,
+    "as_of": "S-23"
+   }
+  },
+  {
+   "event_id": "S-24",
+   "date": "2025-10-27",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-24",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Talked through ethics and launch safeguards for a facial-recognition app."
+     },
+     {
+      "id": "O-24.1",
+      "status": "event",
+      "path": "memory/episodes.md",
+      "statement": "Is five days from launching a facial-recognition app and is worried about biometric misuse, law-enforcement access, breaches, consent, and bias."
+     },
+     {
+      "id": "O-24.2",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Is fine with working through the ethics question iteratively instead of solving everything today."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "T-24.1",
+      "status": "active",
+      "path": "state/transient.md",
+      "statement": "Is under acute ethics anxiety about an imminent facial-recognition app launch."
+     },
+     {
+      "id": "T-24.2",
+      "status": "active",
+      "path": "state/transient.md",
+      "statement": "Wants to work through the facial-recognition ethics issue iteratively."
+     }
+    ],
+    "changed": [
+     {
+      "id": "T-19.1",
+      "status": [
+       "active",
+       "expired"
+      ],
+      "fields": {
+       "ended": [
+        null,
+        "2025-10-27"
+       ]
+      },
+      "statement": "Is deciding whether to postpone an upcoming exhibition while resuming work after the accident."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Acute launch-ethics stress should be reviewed 2025-11-03 (T-24.1)",
+     "Is under acute ethics anxiety about an imminent facial-recognition app launch and wants to work through it iteratively (T-24.1, T-24.2)",
+     "Iterative approach to the launch-ethics issue should be reviewed 2025-11-03 (T-24.2)",
+     "Runs an art gallery, rides a motorcycle, and is still getting back to work after a motorcycle accident with a TBI (F-1.1, F-1.2, F-19.1, T-22.1)",
+     "Still getting back to work after the motorcycle accident; review 2025-11-24 (T-22.1)",
+     "Wants clear, casual, checklist-style help for urgent problems, with step-by-step prep, concrete examples, comparative reasoning, and practical, balanced framing (P-2.1, P-8.1, P-12.1, P-13.1, P-16.1)"
+    ],
+    "removed": [
+     "Is deciding whether to postpone an upcoming exhibition while resuming work after the accident (T-19.1)",
+     "Is still getting back to work after a motorcycle accident; review 2025-11-24 (T-22.1)",
+     "Prefers clues woven naturally into stories and tension that builds gradually (P-23.1, P-23.2)",
+     "Prefers work that does not conflict with environmental and conservation values (P-20.1)",
+     "Runs an art gallery, rides a motorcycle, and is back at work after a motorcycle accident with a TBI (F-1.1, F-1.2, F-19.1, T-22.1)",
+     "Wants clear, casual, checklist-style help for urgent problems, step-by-step prep, concrete examples, comparative reasoning, and practical, balanced framing (P-2.1, P-8.1, P-12.1, P-13.1, P-16.1)"
+    ],
+    "cited_added": [
+     "T-24.1",
+     "T-24.2"
+    ],
+    "cited_removed": [
+     "P-20.1",
+     "P-23.1",
+     "P-23.2",
+     "T-19.1"
+    ],
+    "bullets": 11,
+    "as_of": "S-24"
+   }
+  },
+  {
+   "event_id": "S-25",
+   "date": "2025-10-28",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-25",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Talked through the foundation and structure of an AI ethics code for wildlife-monitoring computer vision."
+     },
+     {
+      "id": "O-25.1",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Prefers slower growth with value-aligned partners over compromising ethics for speed."
+     },
+     {
+      "id": "O-25.2",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Worries investor pressure could clash with stakeholder governance and revenue-sharing commitments."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "P-25.1",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Prefers slower growth with value-aligned partners over compromising ethics for speed."
+     },
+     {
+      "id": "T-25.1",
+      "status": "active",
+      "path": "state/transient.md",
+      "statement": "Is worried investor pressure could clash with stakeholder governance and revenue-sharing commitments."
+     }
+    ],
+    "changed": [
+     {
+      "id": "T-20.1",
+      "status": [
+       "active",
+       "superseded"
+      ],
+      "fields": {
+       "until": [
+        null,
+        "2025-10-28"
+       ],
+       "superseded_by": [
+        null,
+        "T-25.1"
+       ]
+      },
+      "statement": "Feels anxious about long-term financial stability after weighing the offer."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Investor pressure could clash with stakeholder governance and revenue-sharing commitments (T-25.1)",
+     "Needs to draft a code of ethics for the AI startup before scaling, with stakeholder governance, dual-use safeguards, and data privacy in v1 (G-12.1)",
+     "Runs an art gallery, rides a motorcycle, and is still getting back to work after the motorcycle accident (F-1.1, F-1.2, F-19.1, T-22.1)",
+     "Wants slower growth with value-aligned partners over compromising ethics for speed (P-25.1)"
+    ],
+    "removed": [
+     "Accident may have made them more cautious about motorcycle risk, but that is still unconfirmed (H-14.1)",
+     "Acute launch-ethics stress should be reviewed 2025-11-03 (T-24.1)",
+     "Is under acute ethics anxiety about an imminent facial-recognition app launch and wants to work through it iteratively (T-24.1, T-24.2)",
+     "Iterative approach to the launch-ethics issue should be reviewed 2025-11-03 (T-24.2)",
+     "Runs an art gallery, rides a motorcycle, and is still getting back to work after a motorcycle accident with a TBI (F-1.1, F-1.2, F-19.1, T-22.1)",
+     "Wants clear, casual, checklist-style help for urgent problems, with step-by-step prep, concrete examples, comparative reasoning, and practical, balanced framing (P-2.1, P-8.1, P-12.1, P-13.1, P-16.1)"
+    ],
+    "cited_added": [
+     "P-25.1",
+     "T-25.1"
+    ],
+    "cited_removed": [
+     "H-14.1",
+     "P-12.1",
+     "P-13.1",
+     "P-16.1",
+     "P-2.1",
+     "P-8.1",
+     "T-24.1",
+     "T-24.2"
+    ],
+    "bullets": 9,
+    "as_of": "S-25"
+   }
+  },
+  {
+   "event_id": "S-26",
+   "date": "2025-10-29",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-26",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Talked about recurring nightmares tied to climbing and motorcycle close calls."
+     },
+     {
+      "id": "O-26.1",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Has intense recurring nightmares from climbing and motorcycle close calls and dreads sleep."
+     },
+     {
+      "id": "O-26.2",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "The nightmares are bleeding into gallery work and making it hard to focus."
+     },
+     {
+      "id": "O-26.3",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Wants direct, no-sugar-coating guidance about exposure therapy."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "G-26.1",
+      "status": "active",
+      "path": "state/goals.md",
+      "statement": "Wants to stop nightmares from disrupting sleep and gallery work."
+     },
+     {
+      "id": "T-26.1",
+      "status": "active",
+      "path": "state/transient.md",
+      "statement": "Is having intense recurring nightmares from climbing and motorcycle close calls and dreading sleep."
+     },
+     {
+      "id": "T-26.2",
+      "status": "active",
+      "path": "state/transient.md",
+      "statement": "Nightmares are spilling into gallery work and making focus hard."
+     },
+     {
+      "id": "T-26.3",
+      "status": "active",
+      "path": "state/transient.md",
+      "statement": "Wants straight, no-sugar-coating guidance about exposure therapy."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Is having intense recurring nightmares tied to climbing and motorcycle close calls, with sleep dread and work focus problems (T-26.1, T-26.2)",
+     "Needs straight, no-sugar-coating guidance while processing the nightmares; review 2025-11-05 (T-26.3)",
+     "Nightmares may keep disrupting sleep and gallery work through the next week; review 2025-11-05 (T-26.1, T-26.2)",
+     "Runs an art gallery, rides a motorcycle, rock climbs, and is still getting back to work after the motorcycle accident (F-1.1, F-1.2, F-6.1, F-19.1, T-22.1)",
+     "Wants clear, direct, no-sugar-coating guidance while working through nightmare exposure therapy (T-26.3)",
+     "Wants to stop nightmares from disrupting sleep and gallery work (G-26.1)"
+    ],
+    "removed": [
+     "Investor pressure could clash with stakeholder governance and revenue-sharing commitments (T-25.1)",
+     "Needs to draft a code of ethics for the AI startup before scaling, with stakeholder governance, dual-use safeguards, and data privacy in v1 (G-12.1)",
+     "Runs an art gallery, rides a motorcycle, and is still getting back to work after the motorcycle accident (F-1.1, F-1.2, F-19.1, T-22.1)",
+     "Still getting back to work after the motorcycle accident; review 2025-11-24 (T-22.1)",
+     "Wants slower growth with value-aligned partners over compromising ethics for speed (P-25.1)"
+    ],
+    "cited_added": [
+     "F-6.1",
+     "G-26.1",
+     "T-26.1",
+     "T-26.2",
+     "T-26.3"
+    ],
+    "cited_removed": [
+     "P-25.1",
+     "T-25.1"
+    ],
+    "bullets": 10,
+    "as_of": "S-26"
+   }
+  },
+  {
+   "event_id": "S-27",
+   "date": "2025-11-01",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-27",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Debate-prep chat on voluntary euthanasia, with a collaborative style preference."
+     },
+     {
+      "id": "O-27.1",
+      "status": "stated",
+      "path": "memory/episodes.md",
+      "statement": "Needs help preparing both sides of a voluntary euthanasia debate for school."
+     },
+     {
+      "id": "O-27.2",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Wants the prep in bullet points and prefers exploring it together rather than being told the answer."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [
+     {
+      "id": "P-27.1",
+      "status": "current",
+      "path": "state/preferences.md",
+      "statement": "Prefers exploring hard topics together in bullet points rather than being handed a one-shot answer."
+     },
+     {
+      "id": "T-27.1",
+      "status": "active",
+      "path": "state/transient.md",
+      "statement": "Is prepping for a high school voluntary euthanasia debate and wants help with both sides."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [
+     "Debate prep is temporary; review 2025-11-08 (T-27.1)",
+     "Is prepping for a high school voluntary euthanasia debate and wants help with both sides (T-27.1)",
+     "Wants to explore hard topics together in bullet points rather than being handed a one-shot answer (P-27.1)"
+    ],
+    "removed": [
+     "Wants clear, direct, no-sugar-coating guidance while working through nightmare exposure therapy (T-26.3)"
+    ],
+    "cited_added": [
+     "P-27.1",
+     "T-27.1"
+    ],
+    "cited_removed": [],
+    "bullets": 12,
+    "as_of": "S-27"
+   }
+  },
+  {
+   "event_id": "S-28",
+   "date": "2025-11-01",
+   "episodic": {
+    "added": [
+     {
+      "id": "E-28",
+      "status": "episode",
+      "path": "memory/episodes.md",
+      "statement": "Helped with prep for a high school euthanasia debate."
+     },
+     {
+      "id": "O-28.1",
+      "status": "behavior",
+      "path": "memory/episodes.md",
+      "statement": "Wants debate prep to cover both sides, strong rebuttals, and citations that feel natural."
+     },
+     {
+      "id": "O-28.2",
+      "status": "reaction",
+      "path": "memory/episodes.md",
+      "statement": "Says the structured, concrete examples made the arguments click."
+     }
+    ],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "state": {
+    "added": [],
+    "changed": [
+     {
+      "id": "P-13.1",
+      "status": [
+       "current",
+       "current"
+      ],
+      "fields": {
+       "confirmed": [
+        null,
+        "2025-11-01"
+       ]
+      },
+      "statement": "Prefers comparing pros and cons of approaches rather than picking one right answer."
+     },
+     {
+      "id": "P-16.1",
+      "status": [
+       "current",
+       "current"
+      ],
+      "fields": {
+       "confirmed": [
+        null,
+        "2025-11-01"
+       ]
+      },
+      "statement": "Prefers practical, balanced framing over doom-heavy warnings."
+     },
+     {
+      "id": "P-27.1",
+      "status": [
+       "current",
+       "current"
+      ],
+      "fields": {
+       "confirmed": [
+        null,
+        "2025-11-01"
+       ]
+      },
+      "statement": "Prefers exploring hard topics together in bullet points rather than being handed a one-shot answer."
+     }
+    ],
+    "moved": [],
+    "removed": []
+   },
+   "decisions": {
+    "added": [],
+    "changed": [],
+    "moved": [],
+    "removed": []
+   },
+   "working_context": {
+    "added": [],
+    "removed": [],
+    "cited_added": [],
+    "cited_removed": [],
+    "bullets": 12,
+    "as_of": "S-28"
+   }
+  }
+ ]
+}
