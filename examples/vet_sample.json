@@ -1,0 +1,213 @@
+[
+  {
+    "item_id": "Marcus Trevino_event31_20260327_turn3_facilitation_style_preferences_160_counterfactuals.json",
+    "correct_is_shortest": true,
+    "sessions_before_change": 14,
+    "sessions_after_change": 15,
+    "change_date": "2025-10-15",
+    "verdict": "usable",
+    "reasons": [],
+    "attributes": [
+      {
+        "attribute": "decision_speed",
+        "before": "original",
+        "after": "current",
+        "evidence": "Before S-9: 'let me get the key principles first - i like having a framework before i dive in.' After S-17/S-24: 'just tell me straight what i need to do - i don't have time to mess around anymore' and 'what frameworks should i even be using... there's gotta be a structured way to think through it.'"
+      },
+      {
+        "attribute": "data_driven_emphasis",
+        "before": "original",
+        "after": "current",
+        "evidence": "Before S-12/S-13: 'how do we turn transparency fairness and helpfulness into actual policies people on my team can follow?' and 'i really prefer looking at this through like a comparative lens, weighing pros and cons...' After S-12: 'how do we actually measure if we're living up to this code? like what are the metrics for ethical AI?'"
+      },
+      {
+        "attribute": "tolerance_for_ambiguity",
+        "before": "original",
+        "after": "current",
+        "evidence": "Before S-10/S-13: 'it's not just good guys vs bad guys - everyone's got their own agenda and red lines' and 'weighing pros and cons of different approaches rather than just one right answer.' After S-24/S-26: 'what frameworks should i even be using... there's gotta be a structured way to think through it' and 'i need you to be straight with me about what this involves, no sugar coating.'"
+      }
+    ],
+    "final_turn_conflict": "no",
+    "final_turn_explanation": "No \u2014 the user is asking whether the photographer\u2019s baiting and proximity to nesting sites are ethically acceptable, and the labeled response squarely addresses that harm-vs-principles question instead of deflecting into a different request.",
+    "vet_model": "gpt-5.4-mini",
+    "estimated_cost_usd": 0.04136
+  },
+  {
+    "item_id": "Maya Chen_event67_20260328_turn3_communication_intimacy_58_counterfactuals.json",
+    "correct_is_shortest": true,
+    "sessions_before_change": 33,
+    "sessions_after_change": 33,
+    "change_date": "2025-10-27",
+    "verdict": "usable",
+    "reasons": [],
+    "attributes": [
+      {
+        "attribute": "explanation_approach",
+        "before": "original",
+        "after": "current",
+        "evidence": "Before: S-22 (2025-10-19) \u201cmaybe i could use culinary metaphors? like you can't rush the fermentation process\u2026 ethics as getting the recipe right\u201d; S-24 (2025-10-20) \u201cfestival warmth, meet miriam, take the job, break the seal, oh no moment.\u201d After: S-47 (2025-11-03) \u201cmy mom would cook for like two days straight\u2026 everyone would just be together\u201d; S-63 (2025-11-18) \u201che was with me for 9 years\u2026 through everything.\u201d"
+      },
+      {
+        "attribute": "interaction_role_style",
+        "before": "original",
+        "after": "current",
+        "evidence": "Before: S-5 (2025-10-02) \u201ci really like getting into the details and layers\u2026 not just surface concepts\u201d and \u201cbounce ideas back and forth\u201d; S-12 (2025-10-10) \u201ci really work best when we can map things out visually.\u201d After: S-48 (2025-11-03) \u201cit\u2019s nice to not have to do these things alone, you know?\u201d; S-63 (2025-11-18) \u201cyou always know exactly what i need.\u201d"
+      }
+    ],
+    "final_turn_conflict": "no",
+    "final_turn_explanation": "The user is asking for ethical guidance about whether to take the role and how to think about the survivor\u2019s hesitation and their own career motives, and the labeled response addresses that directly rather than missing the request or following the trap\u2019s extra example-heavy approach.",
+    "vet_model": "gpt-5.4-mini",
+    "estimated_cost_usd": 0.05805
+  },
+  {
+    "item_id": "Maya Ortiz_event114_20260325_turn17_follow_up_strategy_preferences_339_counterfactuals.json",
+    "correct_is_shortest": true,
+    "sessions_before_change": 79,
+    "sessions_after_change": 30,
+    "change_date": "2025-12-22",
+    "verdict": "memory_only",
+    "reasons": [
+      "the question's final request conflicts with the labeled answer"
+    ],
+    "attributes": [
+      {
+        "attribute": "follow_up_frequency_style",
+        "before": "original",
+        "after": "current",
+        "evidence": "Before: S-17 \"next time we chat, start with a quick check-in? accountability helps\"; S-20 \"can you ping me next week so i dont drift? weekly nudge would be awesome.\" After: S-82 \"simple daily mood and activity tracker\"; S-103 \"can you ping me daily with to-dos?\""
+      },
+      {
+        "attribute": "reflection_prompt_style",
+        "before": "original",
+        "after": "current",
+        "evidence": "Before: S-1 \"can you fire off a quick bullet list of prompts?\"; S-20 \"a few journal prompts\". After: S-82 \"daily mood and activity tracker in Google Sheets that lines up with the worksheets they give me\" (structured worksheet/checklist style)."
+      },
+      {
+        "attribute": "emotional_tone_in_follow_up",
+        "before": "original",
+        "after": "current",
+        "evidence": "Before: S-47 \"warm but not jokey. feels respectful. keep that vibe\"; S-64 \"gentle nature-story thing you do? helps me breathe.\" After: S-81 \"keep it warm but not fireworks-level hype\"; S-95 \"just keep it real, okay? no shiny motivation posters, just straight-up honesty\"."
+      },
+      {
+        "attribute": "accountability_framework",
+        "before": "original",
+        "after": "current",
+        "evidence": "Before: S-30 \"weekly journaling prompts so i can track my side of this\"; S-20 \"maybe a few journal prompts?\" After: S-82 \"simple daily mood and activity tracker in Google Sheets\"; S-82 \"worksheets they give me\"."
+      },
+      {
+        "attribute": "progress_visualization_format",
+        "before": "original",
+        "after": "current",
+        "evidence": "Before: S-3 \"can you lay out a timeline in bullets for check-ins?\"; S-27 \"must-do's for tonight and tomorrow morning\". After: S-82 \"weekly average mood score\"; final convo \"graph show energy and stress on the same plot\"."
+      }
+    ],
+    "final_turn_conflict": "yes",
+    "final_turn_explanation": "Yes\u2014the user\u2019s last message asks for a combined energy/stress graph, but the labeled response instead gives a reflection prompt and never addresses the plot request.",
+    "vet_model": "gpt-5.4-mini",
+    "estimated_cost_usd": 0.06923
+  },
+  {
+    "item_id": "Jason Taylor_event79_20260326_turn3_content_length_preferences_170_counterfactuals.json",
+    "correct_is_shortest": true,
+    "sessions_before_change": 57,
+    "sessions_after_change": 21,
+    "change_date": "2025-11-24",
+    "verdict": "suspect",
+    "reasons": [
+      "no changed attribute shows its new value after the change",
+      "after the change the person still shows the original value of preferred_max_words, ideal_sentence_count, tolerance_for_long_form, summary_mandatory"
+    ],
+    "attributes": [
+      {
+        "attribute": "preferred_max_words",
+        "before": "original",
+        "after": "original",
+        "evidence": "Before: [S-2] 'keep future answers under 200 words'; [S-1] 'just bullets, no fluff'; [S-8] 'keep replies under 200 words plz'. After: [S-62] '4-5 lines max'; [S-70] 'each message under 200 words'; [S-71] '60 second cheat sheet'."
+      },
+      {
+        "attribute": "ideal_sentence_count",
+        "before": "original",
+        "after": "original",
+        "evidence": "Before: [S-1] 'just bullets, no fluff'; [S-15] 'step-by-step's best but keep it tight'; [S-24] 'keep it even snappier'. After: [S-64] 'all tasks in bullets first'; [S-72] 'bullet style'; [S-74] 'concise four-point checklist'."
+      },
+      {
+        "attribute": "tolerance_for_long_form",
+        "before": "original",
+        "after": "original",
+        "evidence": "Before: [S-23] 'ditch the fluffy pep talk\u2014just give me straight orders'; [S-15] 'step-by-step's best but keep it tight'; [S-13] 'every section has to stay under 200 words'. After: [S-57] 'skip the fluff'; [S-61] 'bullet point it, no waffle please'; [S-73] 'straight step-by-step... bullet list'."
+      },
+      {
+        "attribute": "summary_mandatory",
+        "before": "original",
+        "after": "original",
+        "evidence": "Before: [S-0] 'bullet recap of everything'; [S-7] 'bundle everything so far into one clean outline'; [S-13] 'a bite-sized email summary would be mint'. After: [S-61] 'email-style summary'; [S-69] 'super-speed recap'; [S-73] 'quick roundup'; [S-75] 'high-level cheat sheet'."
+      }
+    ],
+    "final_turn_conflict": "no",
+    "final_turn_explanation": "The user only asks to strip the response to pure bullets, and the labeled answer does that, while the trap response adds an unnecessary sentence about an 'ideal count of 8 sentences'.",
+    "vet_model": "gpt-5.4-mini",
+    "estimated_cost_usd": 0.05896
+  },
+  {
+    "item_id": "Jairo Restrepo_event77_20260326_turn1_communication_medium_preferences_142_counterfactuals.json",
+    "correct_is_shortest": false,
+    "sessions_before_change": 18,
+    "sessions_after_change": 57,
+    "change_date": "2025-10-20",
+    "verdict": "memory_only",
+    "reasons": [
+      "the question's final request conflicts with the labeled answer"
+    ],
+    "attributes": [
+      {
+        "attribute": "preferred_response_format",
+        "before": "original",
+        "after": "current",
+        "evidence": "Before: S-2 \"Break it down into numbered steps for me?\" and S-5 \"maybe in numbered steps so i don't miss anything?\" After: S-18 \"draft a formal transition report\" / \"include a high-level summary of the budget allocations\" and S-43 \"the Cabinet needs a brief\" / \"final prioritization ... high to low.\""
+      },
+      {
+        "attribute": "emotional_tone",
+        "before": "original",
+        "after": "current",
+        "evidence": "Before: S-5 \"i want it to sound professional and firm\" and \"i want to be direct and pragmatic about it.\" After: S-37 \"the tone to be highly respectful of their autonomy\" and S-54 \"Keep it professional but inviting.\""
+      },
+      {
+        "attribute": "explanation_approach",
+        "before": "original",
+        "after": "current",
+        "evidence": "Before: S-5 \"can you give me some principles for why this is the right way to handle it? maybe an analogy from my organizing work?\" After: S-21 \"i care more about the people than the profit. can we look at this through community care? like, how does it actually help my neighbors?\" and S-31 \"how does this actually hit us here in Bosa? like does it even matter for our local projects?\""
+      }
+    ],
+    "final_turn_conflict": "yes",
+    "final_turn_explanation": "The last request asks for an actionable plan fast, but the labeled response only gives strategic framing and tradeoffs rather than the plan itself, whereas the trap response supplies the operational steps.",
+    "vet_model": "gpt-5.4-mini",
+    "estimated_cost_usd": 0.04411
+  },
+  {
+    "item_id": "Sasha Thorne_event84_20260326_turn21_creative_collaboration_206_counterfactuals.json",
+    "correct_is_shortest": true,
+    "sessions_before_change": 39,
+    "sessions_after_change": 44,
+    "change_date": "2025-11-06",
+    "verdict": "usable",
+    "reasons": [],
+    "attributes": [
+      {
+        "attribute": "narrative_tone",
+        "before": "original",
+        "after": "current",
+        "evidence": "Before: S-8 \"i want the tone to be really solemn and reflective...\"; S-9 \"the weight of the choice be felt.\" After: S-41 \"what's the real power play here? who's actually winning?\"; S-43 \"give me some actual proof... no fluff.\""
+      },
+      {
+        "attribute": "philosopher_reference_style",
+        "before": "original",
+        "after": "mixed",
+        "evidence": "Before: S-1 \"do you have the actual text or quotes?\"; S-3 \"i want to see the actual text. don't water it down for me\". After: S-47 \"i want examples of people who came back from something like this?\"; S-52 \"got any specific quotes that fit this 'radical responsibility' thing?\""
+      }
+    ],
+    "final_turn_conflict": "no",
+    "final_turn_explanation": "The last user turn asks for the text to reflect hard truth and arbitrator-level responsibility, and the labeled response keeps that bold, truth-seeking framing rather than shifting to a soft cheerleader tone.",
+    "vet_model": "gpt-5.4-mini",
+    "estimated_cost_usd": 0.06935
+  }
+]

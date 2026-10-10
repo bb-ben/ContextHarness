@@ -253,8 +253,9 @@ S-1 to S-4, before the accident, when the ground truth says the person was neith
 It recorded what happened inside the role-plays as preferences; the contract tells
 the agent to skip task details. No memory recorded the change on any attribute.
 So "holds the current value" rewards ending up right, however it got there, and
-"change recorded" is the measure of tracking change. Item 0 is also a weak test of
-change: its pre-change sessions already contain the language the judge credits.
+"change recorded" is the measure of tracking change. (Item vetting, below, confirms
+that the change itself is real: the person's own requests about how to be helped
+shift at the accident. The words the summary picked up were in the role-plays' content.)
 
 ### v3.1 on three items
 
@@ -294,6 +295,27 @@ attributes.**
 4–6 times the rolling summary, and took about 65 minutes for a 75-event item. Item 6
 ended with dozens of `active` goals, many past their due date.
 
+### Item vetting
+
+Generated items can contradict themselves, and an item like that measures its label,
+not the memory. `context-harness vet-items` shows a model the person's own turns
+before and after each labeled change. For each changed attribute, it reports which
+value those turns show in each period, and whether the question's final request
+conflicts with the labeled answer. It also flags, without a model, whether the
+correct option is the shortest. Evaluator side only.
+
+| Verdict | Meaning | Sample items |
+|---|---|---|
+| `usable` | The change shows in the person's words, and the question's end fits the label | 0, 2, 7 |
+| `memory_only` | The change shows, but the final request conflicts with the labeled answer: grade the memory, not the letter | 3, 6 |
+| `suspect` | The change doesn't show | 5 (all four attributes still show the old value after the change) |
+
+One judgment per item (gpt-5.4-mini, high effort, $0.34 for the six;
+[`examples/vet_sample.json`](../examples/vet_sample.json)). In 5 of the 6 the
+labeled answer is also the shortest option. Vetting checks the labels and the
+question's end, not whether the options separate cleanly, so item 0's ambiguity
+between B and C is not caught.
+
 ### v3.1 → v3.2: preferences across tasks, and goals that close
 
 | Problem in the v3.1 runs | Change |
@@ -312,9 +334,9 @@ ended with dozens of `active` goals, many past their due date.
   consistent, but they haven't been checked against a person's reading, and it
   can't tell a value tracked through a change from one that was there all along.
 - **Real-model data is thin, and the items are noisy.** Three items under v3.1, one
-  item under v2 and v3. Of the three, item 5's label contradicts its own
-  conversations and item 0's options are ambiguous, so items need vetting before
-  their answers count.
+  item under v2 and v3. Vetting finds 3 of the 6 sample items with a labeled change
+  usable as answer tests; it is one model's judgment per item and hasn't been checked
+  against a person's reading.
 - **v3.2 has not met a real model yet.** Whether tagged hypotheses really collect a
   wish across tasks, rather than multiplying, is the open question.
 - **Open choices left for later:**

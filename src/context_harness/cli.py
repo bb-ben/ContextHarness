@@ -225,6 +225,42 @@ def cmd_judge_memory(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_vet_items(args: argparse.Namespace) -> int:
+    """Check that each item's labeled change shows up in the person's own words."""
+    from .models.base import PauseRun
+    from .vet import vet_item
+
+    items = _load(args)
+    settings = ModelSettings(model=args.model, max_tokens=args.max_tokens,
+                             effort=None if args.effort == "none" else args.effort, timeout_s=args.timeout)
+    model = make_model(settings)
+    if args.max_cost_usd is not None:
+        model = CostCap(model, args.max_cost_usd)
+    out = Path(args.out)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    reports = []
+    try:
+        for k, item in enumerate(items):
+            r = vet_item(model, item)
+            reports.append(r)
+            print(f"[{k + 1}/{len(items)}] {item.gold.item_id[:50]}: {r['verdict'].upper()}"
+                  f"  ({r['sessions_after_change']} sessions after the change; "
+                  f"correct option {'is' if r['correct_is_shortest'] else 'is not'} the shortest)")
+            for a in r["attributes"]:
+                print(f"    {a['attribute']:<28} before: {a['before']:<14} after: {a['after']:<14} {_short(a['evidence'], 70)}")
+            if r.get("final_turn_conflict"):
+                print(f"    question's final request conflicts with the label: {r['final_turn_conflict']}"
+                      f" — {_short(r['final_turn_explanation'], 110)}")
+    except PauseRun as e:
+        print(f"Stopped: {e}")
+    out.write_text(json.dumps(reports, indent=2))
+    counts = {v: sum(r["verdict"] == v for r in reports) for v in ("usable", "memory_only", "suspect", "no_change")}
+    print(f"{counts['usable']} usable, {counts['memory_only']} for memory grading only, {counts['suspect']} suspect, "
+          f"{counts['no_change']} without a labeled change; report in {out}; "
+          f"estimated cost ${sum(r['estimated_cost_usd'] or 0 for r in reports):.3f}")
+    return 0
+
+
 def _short(text: str, n: int) -> str:
     return text if len(text) <= n else text[: n - 1] + "…"
 
@@ -374,6 +410,16 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--max-cost-usd", type=float)
     p.add_argument("--out", help="Directory for judgements (default: memory_judgement.json in each item)")
     p.set_defaults(func=cmd_judge_memory)
+
+    p = sub.add_parser("vet-items", help="Check that each labeled preference change shows up in the sessions")
+    _add_dataset_args(p)
+    p.add_argument("--model", default="gpt-5.4-mini")
+    p.add_argument("--effort", default="medium", choices=["minimal", "low", "medium", "high", "xhigh", "max", "none"])
+    p.add_argument("--max-tokens", type=int, default=16000)
+    p.add_argument("--timeout", type=float, default=300.0)
+    p.add_argument("--max-cost-usd", type=float)
+    p.add_argument("--out", default="data/vet_items.json")
+    p.set_defaults(func=cmd_vet_items)
 
     p = sub.add_parser("memory-timeline", help="Per event: what changed in working context, episodic memory and state")
     p.add_argument("item_dir", help="runs/<run>/items/<item>")

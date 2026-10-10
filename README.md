@@ -12,7 +12,7 @@ preferences change after life events. That makes it a sequential testbed for
 whether the layer keeps the user's state current.
 
 **Status:** contract **v3.2**. The layer, instrumentation, and Gemini and OpenAI
-adapters are built and tested offline (158 tests). A model that follows the
+adapters are built and tested offline (161 tests). A model that follows the
 contract produces zero violations across all 901 events of the HorizonBench sample.
 
 **Real runs so far:**
@@ -58,7 +58,7 @@ Requires Python ≥ 3.12 and [uv](https://docs.astral.sh/uv/).
 
 ```bash
 uv sync
-uv run pytest -q                     # 158 tests, offline, no credentials
+uv run pytest -q                     # 161 tests, offline, no credentials
 export GEMINI_API_KEY=...            # for real-model runs (default model: gemini-3.7-flash)
 ```
 
@@ -90,6 +90,9 @@ uv run context-harness replay-answer runs/<run>/items/<item> --model gpt-5.4-min
 # Grade a finished item's memory against the ground-truth preference attributes
 # (three judgings, majority grade; evaluator side only)
 uv run context-harness judge-memory runs/<run>/items/<item> --max-cost-usd 0.30
+
+# Check that each item's labeled change shows up in the person's own words
+uv run context-harness vet-items --config sample --items 0,2,3,5,6,7 --max-cost-usd 0.40
 
 # Inspect what the agent read and wrote, event by event, and every violation
 uv run context-harness inspect-memory runs/<run>/items/<item>
@@ -192,14 +195,14 @@ v2), so it says nothing about the layer.
 | `test_dataset.py`, `test_audit.py` | Chronological ordering, the guarded parser, the dataset audit |
 | `test_scoring.py`, `test_end_to_end.py`, `test_anthropic_adapter.py` | Scoring and aggregation; CLI runs; the Anthropic adapter |
 | `test_judge.py` | The judge grades beliefs, not raw episodes; missing grades count as absent; repeats combine by majority |
+| `test_vet.py` | Vetting reads only the person's turns, split at the change; verdicts separate memory grading from answer scoring |
 | `test_replay.py` | Answer-only replay restores the saved memory, reruns only the answer step, applies the strategy, and leaves the source run untouched |
 
 ## Next steps
 
 1. **Run v3.2 on item 6**, the one valid test so far, and judge it.
-2. **Vet items before trusting their answers.** Check, offline, that a changed
-   attribute actually shows up in the sessions after the change, and that the options
-   separate it. Items 0 and 5 would fail this.
+2. **Score answers only on `usable` items** (0, 2 and 7 in the sample), and grade
+   memory on `memory_only` items too.
 3. **Check the judge against a person's reading** of a few memories, and try a
    stronger judge model.
 4. **Add a FoodBody event renderer and decision/outcome statuses** once a schema is
