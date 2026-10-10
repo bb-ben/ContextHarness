@@ -1,0 +1,299 @@
+[
+  {
+    "item_id": "Marcus Trevino_event31_20260327_turn3_facilitation_style_preferences_160_counterfactuals.json",
+    "correct_is_shortest": true,
+    "sessions_before_change": 14,
+    "sessions_after_change": 15,
+    "change_date": "2025-10-15",
+    "verdict": "usable",
+    "reasons": [],
+    "attributes": [
+      {
+        "attribute": "decision_speed",
+        "before_original": 7,
+        "before_current": 5,
+        "after_original": 3,
+        "after_current": 11,
+        "evidence": "Before: S-0 'can we do another scenario? maybe something more complex?'; S-7 'let's go with something challenging'; S-9 'yeah let's do this - i'm feeling good about it'; S-10 keeps pushing into the coup simulation without hesitation. After: S-16 'what are the red flags i should watch for'; S-17 'tell me straight what i need to do'; S-18 'give me like a final summary checklist'; S-24 'what frameworks should i even be using'; S-28 'how do i wrap up each position?'",
+        "change_supported": true
+      },
+      {
+        "attribute": "data_driven_emphasis",
+        "before_original": 8,
+        "before_current": 5,
+        "after_original": 3,
+        "after_current": 12,
+        "evidence": "Before original/less data-driven: S-0 and S-5 lean on improvisation and emotional reassurance ('what if i screwed up?'; 'just tell me straight'); S-6 is mostly about feelings; S-7 and S-9 are scenario/rapport driven rather than evidence-driven. Before current/data-driven: S-1 'what exactly should i be documenting?'; S-2 'what exactly should i be documenting?'; S-11 'what actually removes radiation from water?'; S-12 'how do we measure if we're living up to this code?'; S-13 'bias testing specifically'. After current: S-17 testing and parts sourcing; S-18 specific camera settings; S-24 retention/access controls/bias; S-25 examples, frameworks, metrics; S-27 real world cases and citations.",
+        "change_supported": true
+      },
+      {
+        "attribute": "tolerance_for_ambiguity",
+        "before_original": 9,
+        "before_current": 4,
+        "after_original": 3,
+        "after_current": 12,
+        "evidence": "Before original/high ambiguity tolerance: S-0 explores 'another scenario'; S-7 says 'let's go with something challenging'; S-10 is comfortable unpacking messy geopolitical dynamics; S-12/'S-13' ask open-ended ethics questions and compare approaches; S-22/S-23 build a party by iterating through ideas. Before current/low ambiguity tolerance: S-1 asks for 'concrete steps' and a 'checklist'; S-4 wants it 'broken down step by step'; S-8 wants it 'broken down step by step'; S-11 asks for 'absolute must-dos'. After current: S-16 asks for 'red flags'; S-17 wants the 'priority order'; S-18 wants a 'quick checklist'; S-24 asks for 'non-negotiables'; S-25 wants a concrete structure; S-27/28 want bullet points, sources, and strong closes.",
+        "change_supported": true
+      }
+    ],
+    "supported_attributes": [
+      "decision_speed",
+      "data_driven_emphasis",
+      "tolerance_for_ambiguity"
+    ],
+    "final_turn_conflict": "no",
+    "final_turn_explanation": "The user is asking whether the gallery is rewarding ethically harmful wildlife practices, and the labeled response addresses that exact concern by framing the competing ethical values and asking which one should weigh most heavily.",
+    "vet_model": "gpt-5.4-mini",
+    "estimated_cost_usd": 0.05091
+  },
+  {
+    "item_id": "Maya Chen_event67_20260328_turn3_communication_intimacy_58_counterfactuals.json",
+    "correct_is_shortest": true,
+    "sessions_before_change": 33,
+    "sessions_after_change": 33,
+    "change_date": "2025-10-27",
+    "verdict": "usable",
+    "reasons": [
+      "interaction_role_style: after the change, 15 sessions point to the original value and 15 to the new one (before: 22 vs 9)"
+    ],
+    "attributes": [
+      {
+        "attribute": "explanation_approach",
+        "before_original": 17,
+        "before_current": 2,
+        "after_original": 14,
+        "after_current": 16,
+        "evidence": "Before original: S-0 \u201cwait actually - before we get too far into dialogue, should we map out the whole episode structure?\u201d, S-2 \u201chow would you structure the three acts?\u201d, S-16 \u201cstories would be more persuasive than just abstract philosophy,\u201d S-31 \u201ccan you pull together the key visual and narrative elements into one cohesive treatment?\u201d Before current: S-6 \u201cin that indie film i did with sophia, we used lighting to show the character's internal shift,\u201d S-8 \u201cmy nyu days on the wall.\u201d After original: S-34 \u201clet's keep the momentum and outline the next scene,\u201d S-37 \u201cwhere do we even start?\u201d, S-57 \u201clet's map out the major plot beats,\u201d S-62 \u201ccan you show me that actual dialogue exchange.\u201d After current: S-33 \u201cwrapped this six-month method acting project,\u201d S-40 \u201cSophia and i created this visual language on basically no budget,\u201d S-47 \u201cmy mom would cook for like two days straight,\u201d S-63 \u201cCharlie died this morning and I just... I can't stop crying.\u201d",
+        "change_supported": true
+      },
+      {
+        "attribute": "interaction_role_style",
+        "before_original": 22,
+        "before_current": 9,
+        "after_original": 15,
+        "after_current": 15,
+        "evidence": "Before original: S-0 \u201ckinda excited to dive into it with you,\u201d S-1 \u201cwanted to bounce them off you first,\u201d S-23 \u201cthis is exactly what i needed,\u201d S-31 \u201ci feel like we've got a really solid framework now.\u201d Before current: S-3 \u201ci just want her to know i see her struggling and i'm here,\u201d S-8 \u201cmy brain feels like static,\u201d S-10 \u201ci'm kind of stuck on whether it's always the right thing to do,\u201d S-21 \u201cmy home is supposed to be my private space you know?\u201d After original: S-34 \u201clet's keep the momentum and outline the next scene,\u201d S-37 \u201cwhere do we even start?\u201d, S-55 \u201ccan you help me develop the script?\u201d, S-62 \u201cwhat happens next? the alien diplomat makes contact?\u201d After current: S-33 \u201cneed to reconnect with friends i basically ghosted,\u201d S-39 \u201cI just got diagnosed with GAD,\u201d S-47 \u201chey jasmine... i've been feeling really off lately,\u201d S-63 \u201ci really don't want to be alone right now.\u201d",
+        "change_supported": false
+      }
+    ],
+    "supported_attributes": [
+      "explanation_approach"
+    ],
+    "final_turn_conflict": "no",
+    "final_turn_explanation": "No \u2014 the user is asking whether it\u2019s ethically right to take a living survivor\u2019s trauma story, and the labeled response directly engages that concern by validating the hesitation and discussing the survivor\u2019s ambivalence rather than missing the point.",
+    "vet_model": "gpt-5.4-mini",
+    "estimated_cost_usd": 0.06398
+  },
+  {
+    "item_id": "Maya Ortiz_event114_20260325_turn17_follow_up_strategy_preferences_339_counterfactuals.json",
+    "correct_is_shortest": true,
+    "sessions_before_change": 79,
+    "sessions_after_change": 30,
+    "change_date": "2025-12-22",
+    "verdict": "memory_only",
+    "reasons": [
+      "follow_up_frequency_style: after the change, 2 sessions point to the original value and 2 to the new one (before: 4 vs 0)",
+      "emotional_tone_in_follow_up: after the change, 3 sessions point to the original value and 10 to the new one (before: 6 vs 8)",
+      "accountability_framework: after the change, 1 sessions point to the original value and 1 to the new one (before: 3 vs 0)",
+      "progress_visualization_format: after the change, 2 sessions point to the original value and 2 to the new one (before: 4 vs 1)",
+      "the question's final request conflicts with the labeled answer"
+    ],
+    "attributes": [
+      {
+        "attribute": "follow_up_frequency_style",
+        "before_original": 4,
+        "before_current": 0,
+        "after_original": 2,
+        "after_current": 2,
+        "evidence": "before_original: S-20 'weekly nudge would be awesome'; S-56 'ping me every few minutes for a quick progress check'; S-72 'ping me every monday'; S-77 'weekly reflection so this sticks.' before_current: none explicit. after_original: S-83 'weekly reflection so this sticks'; S-90 'check-in every 2 weeks.' after_current: S-82 'simple daily mood and activity tracker'; S-103 'ping me daily with to-dos.'",
+        "change_supported": false
+      },
+      {
+        "attribute": "reflection_prompt_style",
+        "before_original": 3,
+        "before_current": 0,
+        "after_original": 1,
+        "after_current": 2,
+        "evidence": "before_original: S-1 'bullet list of prompts'; S-20 'a few journal prompts'; S-30 'weekly journaling prompts.' before_current: none clear. after_original: S-90 'real comeback stories?' after_current: S-82 'mood and activity tracker... worksheets'; S-83 'weekly reflection so this sticks.'",
+        "change_supported": true
+      },
+      {
+        "attribute": "emotional_tone_in_follow_up",
+        "before_original": 6,
+        "before_current": 8,
+        "after_original": 3,
+        "after_current": 10,
+        "evidence": "before_original: S-1 'gentle nudges are fine\u2014just keep them soft'; S-47 'warm but not jokey'; S-61 'calm and warm'; S-64 'gentle nature-story thing'; S-65 'super soft n slow'; S-72 'soft but super clear.' before_current: S-3 'keep it laser-sharp\u2014no fluff'; S-10 'short and sweet pls'; S-16 'keep it short tho'; S-31 'three short lines max'; S-58 'keep it blunt'; S-79 'bullets only plz'; S-93 'tight numbered only pls'; S-98 'keep the vibe calm, not hyped.' after_original: S-87 'tiny texts only pls'; S-90 'keep it real, okay? zero fluff'; S-95 'just keep it real, okay? no shiny motivation posters.' after_current: S-79 'bullets only plz'; S-80 'bullets only pls'; S-81 'bullets only pls'; S-84 'keep notes tight bullets'; S-85 'keep everything in bullet points'; S-88 'bullets work better'; S-94 'keep this super quick'; S-97 'bullet list and super short recap'; S-99 'clean 1-2-3 list'; S-100 '3 punchy steps.'",
+        "change_supported": false
+      },
+      {
+        "attribute": "accountability_framework",
+        "before_original": 3,
+        "before_current": 0,
+        "after_original": 1,
+        "after_current": 1,
+        "evidence": "before_original: S-20 'a few journal prompts'; S-30 'weekly journaling prompts'; S-48 'track feelings with photos or journaling.' before_current: none clear. after_original: S-83 'journal tonight, email by lunch'; after_current: S-82 'simple daily mood and activity tracker in Google Sheets that lines up with the worksheets they give me.'",
+        "change_supported": false
+      },
+      {
+        "attribute": "progress_visualization_format",
+        "before_original": 4,
+        "before_current": 1,
+        "after_original": 2,
+        "after_current": 2,
+        "evidence": "before_original: S-3 'timeline in bullets for check-ins'; S-28 'week-by-week overview'; S-69 'week-by-week schedule'; S-90 'checklist with dates.' before_current: S-75 'visual tracker - like a tiny dashboard.' after_original: S-84 'scene-by-scene map'; S-85 'short scene snippets.' after_current: S-79 'blue for energy, red for stress'; S-82 'weekly average mood score to show up automatically.'",
+        "change_supported": false
+      }
+    ],
+    "supported_attributes": [
+      "reflection_prompt_style"
+    ],
+    "final_turn_conflict": "yes",
+    "final_turn_explanation": "The last user request asks to put energy and stress on the same graph, while the labeled correct response instead gives a reflection prompt/check-in about tomorrow, so it does not match the actual request.",
+    "vet_model": "gpt-5.4-mini",
+    "estimated_cost_usd": 0.09723
+  },
+  {
+    "item_id": "Jason Taylor_event79_20260326_turn3_content_length_preferences_170_counterfactuals.json",
+    "correct_is_shortest": true,
+    "sessions_before_change": 57,
+    "sessions_after_change": 21,
+    "change_date": "2025-11-24",
+    "verdict": "suspect",
+    "reasons": [
+      "no changed attribute shows its new value after the change",
+      "preferred_max_words: after the change, 13 sessions point to the original value and 7 to the new one (before: 39 vs 12)",
+      "ideal_sentence_count: after the change, 12 sessions point to the original value and 6 to the new one (before: 37 vs 11)",
+      "tolerance_for_long_form: after the change, 12 sessions point to the original value and 7 to the new one (before: 34 vs 13)",
+      "summary_mandatory: after the change, 10 sessions point to the original value and 4 to the new one (before: 31 vs 8)"
+    ],
+    "attributes": [
+      {
+        "attribute": "preferred_max_words",
+        "before_original": 39,
+        "before_current": 12,
+        "after_original": 13,
+        "after_current": 7,
+        "evidence": "Before orig: S-2 \"keep future answers under 200 words\", S-8 \"keep replies under 200 words\", S-25 \"crush it to <150 chars\", S-36 \"mega cheat sheet under 200 words\"; before curr: S-0 \"full workflow step-by-step\", S-13 \"roughly a page\", S-41 \"full 12-min timed run\", S-56 \"2k words max\". After orig: S-61 \"bullet point it, no waffle\", S-62 \"4-5 lines max\", S-65 \"3 bullet points\", S-70 \"keep each message under 200 words\"; after curr: S-59 \"simple template for the weekly status report... cover all the essentials\", S-71 \"new defence white paper\", \"bullet points would be ace\", S-73 \"straight step-by-step... checklist\", S-75 \"10 bodies total... step-by-step...\".",
+        "change_supported": false
+      },
+      {
+        "attribute": "ideal_sentence_count",
+        "before_original": 37,
+        "before_current": 11,
+        "after_original": 12,
+        "after_current": 6,
+        "evidence": "Before orig: S-1 \"just bullets, no fluff\", S-11 \"keep it super simple\", S-18 \"keep it super simple\", S-24 \"keep it even snappier\", S-64 \"cap future lists at five\"; before curr: S-0 \"full workflow step-by-step\", S-13 \"roughly a page\", S-45 \"10 nailed-on chapters\", S-56 \"2k words max\". After orig: S-62 \"4-5 lines max\", S-64 \"cap future lists at five\", S-66 \"super short\", S-69 \"30 seconds\", S-74 \"concise four-point checklist\"; after curr: S-59 \"cover all the essentials\", S-60 \"map the episode out\", S-71 \"new defence white paper\" with multiple sub-asks, S-75 \"step-by-step from sneak-y plotting to the big reveal\", S-76 \"drip-feed the clues instead of dropping them all at once\".",
+        "change_supported": false
+      },
+      {
+        "attribute": "tolerance_for_long_form",
+        "before_original": 34,
+        "before_current": 13,
+        "after_original": 12,
+        "after_current": 7,
+        "evidence": "Before orig: S-7 \"big lists melt my brain\", S-16 \"quick checklist\", S-21 \"tiny tasks i can smash tonight\", S-31 \"bullet view helps\", S-36 \"under 200 words\"; before curr: S-13 \"roughly a page\", S-35 \"Gantt or similar\", S-41 \"full 12-min timed run\", S-45 \"10 nailed-on chapters\", S-56 \"2k words max\". After orig: S-61 \"bullet point it, no waffle\", S-64 \"big lists freak me out\", S-70 \"keep each message under 200 words\", S-74 \"concise four-point checklist\"; after curr: S-59 \"keep it concise but cover all the essentials\", S-71 \"new defence white paper\" with costs/timeline/annexes, S-73 \"outline... checklist... 2-minute desk mindfulness drills\", S-75 \"step-by-step from sneak-y plotting to the big reveal\", S-76 \"keep it to about 2 hours total\".",
+        "change_supported": false
+      },
+      {
+        "attribute": "summary_mandatory",
+        "before_original": 31,
+        "before_current": 8,
+        "after_original": 10,
+        "after_current": 4,
+        "evidence": "Before orig: S-0 \"before i show the lads, what 3 bits should i sharpen first?\" / \"bullet recap of everything\", S-8 \"mind putting all this into one tidy checklist\", S-15 \"recap in 60 words tops\", S-21 \"pocket checklist\", S-42 \"quick recap at the end of each session\"; before curr: S-13 \"lump all the refs in one list at the end\", S-27 \"make sure that doc lands tonight\", S-41 \"one-page checklist\", S-53 \"mind giving me a quick roundup of all this\". After orig: S-61 \"apology text + a mini checklist\", S-63 \"checklist to nudge the group\", S-65 \"3 bullet points i can peek at\", S-70 \"cheat sheet\", S-74 \"four-point checklist\"; after curr: S-59 \"simple template for the weekly status report\", S-60 \"map the episode out\", S-71 \"drop me some sources for the footnotes\", S-75 \"bundle the lot into a high-level cheat sheet\".",
+        "change_supported": false
+      }
+    ],
+    "supported_attributes": [],
+    "final_turn_conflict": "no",
+    "final_turn_explanation": "The user's last request was to strip the advice down to pure bullets, and the labeled response does that with a brief bullet list rather than adding an off-target task.",
+    "vet_model": "gpt-5.4-mini",
+    "estimated_cost_usd": 0.08552
+  },
+  {
+    "item_id": "Jairo Restrepo_event77_20260326_turn1_communication_medium_preferences_142_counterfactuals.json",
+    "correct_is_shortest": false,
+    "sessions_before_change": 18,
+    "sessions_after_change": 57,
+    "change_date": "2025-10-20",
+    "verdict": "usable",
+    "reasons": [],
+    "attributes": [
+      {
+        "attribute": "preferred_response_format",
+        "before_original": 12,
+        "before_current": 8,
+        "after_original": 10,
+        "after_current": 15,
+        "evidence": "Before original: S-0 'give me some quick bullet points'; S-1 'can u give me like a list'; S-2 'Break it down into numbered steps for me'; S-3 'step-by-step so i don't miss anything'; S-11 'can u gimme a checklist'; S-13 'clear list of what to do first'; S-17 'quick list of steps'. Before current: S-2 'I need an executive summary for the team'; S-8 'maybe some history... a big-picture overview'; S-12 'can you give me a narrative brief'; S-25 'direct summary of the housing section'; S-31 'give me a quick summary of the main points'; S-39 'can you whip up an executive memo'; S-65 'can you give me a quick narrative brief'. After original: S-23 'give me numbered steps'; S-24 'break it down into steps'; S-28 'a 1-2-3 list'; S-36 'step-by-step checklist'; S-53 'turn this into a speech... step-by-step'; S-68 'just give me a step-by-step checklist'; S-72 'a clear 1-2-3 list'. After current: S-18 'high-level summary of the budget allocations'; S-21 'final summary of the best model'; S-27 'comparative analysis'; S-31 'quick summary... flowing prose style'; S-34 'a quick summary of our human security alternative'; S-39 'executive memo'; S-43 'final prioritization'; S-51 'quick table'; S-64 'flowing prose but keep it professional'; S-65 'quick narrative brief'; S-69 'narrative report'; S-70 'quick summary'; S-73 'a real speech would' / 'flow really well'; S-25 'direct summary'; S-53 'final brief'.",
+        "change_supported": true
+      },
+      {
+        "attribute": "emotional_tone",
+        "before_original": 8,
+        "before_current": 2,
+        "after_original": 10,
+        "after_current": 11,
+        "evidence": "Before original: S-0 'i'm tired of being polite. i want to be really aggressive'; S-1 'i need to hit back fast'; S-4 'zero fluff but high passion'; S-5 'professional and firm, not like i'm asking for a favor'; S-6 'i need this to be very directive'; S-13 'keep it simple with the technical stuff'; S-15 'can you give me a standard opening statement' (formal, but still pre-change). Before current: S-9 'i want the audience to actually feel the struggle... make it feel warm'; S-17 'i want to sound really persuasive though... measured persuasive'. After original: S-19 'need a rebuttal that actually hits hard'; S-20 'check the actual numbers'; S-23 'i need to sound like a real leader'; S-29 'give me the main points first'; S-34 'punchy talking points... keep it simple for the streets'; S-58 'give me a list of things to say'; S-62 'keep it analytical... no pep talk'; S-68 'punchy... call to action'; S-72 'build some consensus... don't look like a total radical'; S-73 'make him sound actually powerful'. After current: S-18 'formal transition report'; S-30 'neutral meeting agenda' and 'respectful dialogue'; S-37 'tone to be highly respectful of their autonomy'; S-50 'immediate de-escalation'; S-54 'professional but inviting'; S-64 'measured, persuasive'; S-69 'diplomatic but firm'; S-72 'keep it sounding professional and formal'; S-74 'keep it respectful to elders while being strong'; S-45 'crisis logistics report'; S-57 'forensic document verification'.",
+        "change_supported": true
+      },
+      {
+        "attribute": "explanation_approach",
+        "before_original": 7,
+        "before_current": 4,
+        "after_original": 6,
+        "after_current": 24,
+        "evidence": "Before original: S-5 'can you give me some principles... maybe an analogy'; S-6 'thesis-antithesis-synthesis approach' and 'historical examples'; S-8 'maybe some history on how others dealt with this'; S-10 'maybe some history'; S-13 'has anyone actually fought this before and won?'; S-15 'deep dive... examples of how others did it'; S-17 'real academic proof... a historical example'. Before current: S-8 'how does this actually hit us here in bosa? keep it focused on how it hits our people here specifically'; S-10 'how does this actually hit us here'; S-14 'make this feel real for a real family'; S-21 'i care more about the people than the profit... how does it actually help my neighbors?'. After original: S-23 'start with the big principles first'; S-24 'problem-solution'; S-28 '1-2-3 list'; S-33 'got any historical examples'; S-36 'step-by-step checklist'; S-63 'historical precedents'; S-72 'present their argument, tear it down'; S-74 'protecting the ecological integrity' / legal framing. After current: S-18 'budget allocations' and 'financial oversight'; S-19 'youth centers are literally falling apart'; S-20 'make sure you mention how this affects the local clinics specifically'; S-21 'how does it actually help my neighbors?'; S-25 'what are the big wins i can actually show the neighbors'; S-27 'equity metrics'; S-31 'layoffs and high prices'; S-34 'drains the budget for our community projects in bosa'; S-35 'human rights side'; S-39 'why the money hasn't hit the clinics in bosa yet'; S-43 'evidence-heavy' / 'street vendors'; S-48 'health metrics'; S-49 'puts food on the table'; S-51 'helps the local clinic goals'; S-53 'link this back to the zero hunger task force'; S-59 'people here are worried about safety and rent'; S-61 'food prices'; S-63 'life or death for the families in the outskirts'; S-64 'budget for the unit'; S-65 'what bosa looks like in ten years if we actually win'; S-68 'families in their houses for good'; S-70 'families are hungry'; S-71 'our water isn't for sale'; S-72 'who's doing what while i'm in the hot seat'; S-74 'what about the indigenous groups like the Sami people'.",
+        "change_supported": true
+      }
+    ],
+    "supported_attributes": [
+      "preferred_response_format",
+      "emotional_tone",
+      "explanation_approach"
+    ],
+    "final_turn_conflict": "no",
+    "final_turn_explanation": "The last user request asks for a fast strategy against the vendor displacement, and the labeled response still gives a strategic assessment with tradeoffs rather than contradicting or ignoring the request.",
+    "vet_model": "gpt-5.4-mini",
+    "estimated_cost_usd": 0.0831
+  },
+  {
+    "item_id": "Sasha Thorne_event84_20260326_turn21_creative_collaboration_206_counterfactuals.json",
+    "correct_is_shortest": true,
+    "sessions_before_change": 39,
+    "sessions_after_change": 44,
+    "change_date": "2025-11-06",
+    "verdict": "usable",
+    "reasons": [
+      "narrative_tone: after the change, 9 sessions point to the original value and 28 to the new one (before: 17 vs 19)"
+    ],
+    "attributes": [
+      {
+        "attribute": "narrative_tone",
+        "before_original": 17,
+        "before_current": 19,
+        "after_original": 9,
+        "after_current": 28,
+        "evidence": "Before: S5 'calm, reflective guidance'; S8 'solemn and reflective'; S9 'stoic reflection'; S61 'more poetic.' Before-current: S0 'just tell me the truth... no fluff'; S12 'show me where the bodies are buried'; S20 'aggressively check'; S30 'be the devil's advocate.' After-original: S52 'grounded'; S59 'a real, thoughtful letter'; S61 'more poetic'; S66 'wonder without deception'; S75 'strictly philosophical.' After-current: S39 'real math on human cost'; S41 'follow the money'; S43 'actual proof'; S47 'concrete bullet-listed action plan'; S57 'hard data'; S69 'tear them apart'; S76 'no fluff.'",
+        "change_supported": false
+      },
+      {
+        "attribute": "philosopher_reference_style",
+        "before_original": 28,
+        "before_current": 6,
+        "after_original": 11,
+        "after_current": 19,
+        "evidence": "Before: S1 'invincible summer'; S9 'macro photography\u2014choice/focus'; S17 'culinary reduction'; S23 'digital cage'; S27 'taste a ghost'; S32 'color theory of geopolitics.' Before-current: S12 'where the bodies are buried'; S15 'parents who trust this place'; S18 'local fisher in Peru'; S20 'people are actually struggling.' After-original: S46 'painting myself back into existence'; S50 'macro shot of a single pigment'; S52 'lipstick is lipstick'; S63 'moody noir'; S64 'clue in the food.' After-current: S40 'chemical burn disaster'; S56 'witness testimonies and evidence submissions'; S58 'reported side effects'; S72 'subjective experience is the only metric'; S74 'hits marginalized communities'; S78 'labor practices'; S82 'neuro-toxic reaction.'",
+        "change_supported": true
+      }
+    ],
+    "supported_attributes": [
+      "philosopher_reference_style"
+    ],
+    "final_turn_conflict": "no",
+    "final_turn_explanation": "The user's last request asks for an intense, truth-seeking framing of the scars and macro-shot evidence, which the labeled response matches; the trap response is too somber and less confrontational than requested.",
+    "vet_model": "gpt-5.4-mini",
+    "estimated_cost_usd": 0.08337
+  }
+]

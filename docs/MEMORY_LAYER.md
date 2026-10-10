@@ -502,6 +502,17 @@ not stop "what changed" from being "one more thing".
 The next design question is re-deriving a value from recent evidence rather than
 patching the previous value, which is what a rolling summary does each event.
 
+**How much of the 0.3 is the item?** Counting the person's own messages after the
+change, the format evidence is even: step-by-step words in 24 of 57 sessions, summary
+words in 23, both in 11. A one-sided vetting pass had called every change on this item
+clear. Vetting now counts both sides ([`examples/vet_sample_two_sided.json`](../examples/vet_sample_two_sided.json),
+$0.46 plus $0.15 for a pass that ran out of output tokens): item 5's four changes are
+contradicted (after the change, 13 sessions still point to short answers against 7);
+items 0 and 6 are supported, though item 6's format only narrowly. `judge-memory
+--vet` scores a memory only on unchanged attributes and supported changes. Single-pass
+LLM counts over 50+ sessions are rough; the keyword count and the model's count
+disagreed in direction on item 6.
+
 ## Known gaps
 
 - **The archive itself has no rollover yet** (200,000 chars). That's enough for

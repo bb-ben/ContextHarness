@@ -249,7 +249,11 @@ def cmd_vet_items(args: argparse.Namespace) -> int:
     reports = []
     try:
         for k, item in enumerate(items):
-            r = vet_item(model, item)
+            try:
+                r = vet_item(model, item)
+            except RuntimeError as e:  # one item the model couldn't finish shouldn't lose the others
+                print(f"[{k + 1}/{len(items)}] {item.gold.item_id[:50]}: ERROR {e}")
+                continue
             reports.append(r)
             print(f"[{k + 1}/{len(items)}] {item.gold.item_id[:50]}: {r['verdict'].upper()}"
                   f"  ({r['sessions_after_change']} sessions after the change; "
