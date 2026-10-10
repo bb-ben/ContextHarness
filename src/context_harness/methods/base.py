@@ -30,6 +30,11 @@ class MethodConfig:
     # A key of prompts.ANSWER_STRATEGIES. dimension-first gave 10/10 consistent answers and
     # avoided the old-preference trap in replays where "default" fell for it 2 times in 5.
     answer_strategy: str = "dimension-first"
+    # v3.10: show the agent the memory checks' open problems in its next update, and
+    # optionally add a review call after each update to fix contradictions.
+    check_feedback: bool = True
+    review_step: bool = False
+    max_review_steps: int = 3
     episode_rollover_at: float = 0.8  # roll old episodes into the archive above this share of the limit...
     episode_rollover_to: float = 0.5  # ...until the episode log is back under this share
     max_update_steps: int = 8

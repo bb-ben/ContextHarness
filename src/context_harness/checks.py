@@ -378,6 +378,12 @@ class MemoryMonitor:
         self.previous = parsed
         return record
 
+    def open_problems(self, limit: int = 12) -> list[str]:
+        """Violations still open after the last event, one line each, for the agent to fix."""
+        rows = [self.violations[i] for i in self.open.values()]
+        lines = [f"{v['code']}{' ' + v['id'] if v.get('id') else ''} ({v['path']}): {v['detail']}" for v in rows]
+        return lines[:limit] + ([f"... and {len(lines) - limit} more"] if len(lines) > limit else [])
+
     def _track(self, parsed: ParsedWorkspace, event: EventInfo) -> None:
         for e in parsed.entries.values():
             life = self.lifecycle.setdefault(e.id, {"type": e.type, "created": event.event_id, "statuses": []})

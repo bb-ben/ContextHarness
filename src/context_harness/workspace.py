@@ -44,8 +44,12 @@ class Dimension:
 # A deployment (e.g. FoodBody) supplies its own list; the agent may add dimensions
 # only with a stated reason (`new_dimension:`), and the checks watch their growth.
 GENERAL_DIMENSIONS: tuple[Dimension, ...] = (
-    Dimension("help-format", "How help should be structured: checklists, numbered steps, bullets, prose, length."),
-    Dimension("detail-level", "How much depth, background and length they want."),
+    # Length lives only in detail-level: when both claimed it, "about 3 lines" was recorded on
+    # one while "detailed, thorough" stayed current on the other, in all six v3.9 runs.
+    Dimension("help-format", "How help is laid out: checklists, numbered steps, tables, bullets or prose. "
+                             "Not length (that is detail-level)."),
+    Dimension("detail-level", "How long and how deep answers should be: a few lines or a thorough treatment, "
+                              "with or without background."),
     Dimension("explanation-style", "What makes ideas land: concrete examples, analogies, data and evidence, theory."),
     Dimension("tone", "How to talk with them in conversation: casual or formal, gentle or blunt, playful or serious."),
     Dimension("output-style", "How the work they ask you to produce should read: its register and voice (formal or "

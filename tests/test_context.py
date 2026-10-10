@@ -193,3 +193,24 @@ def test_answer_budget_counts_preloaded_state(evolved_item, tmp_path):
     overhead = (48000 - always) - shown
     assert 0 < overhead < 6000 and "g" * 500 in answer.blocks[1].text
     assert "<preference_dimensions>" in answer.blocks[1].text
+
+
+def test_open_problems_reach_the_next_update_and_the_review_step_runs(evolved_item, tmp_path):
+    def script(req):
+        if req.phase == "answer":
+            return "", [("submit_answer", {"letter": "A"})]
+        if req.phase == "memory_review":
+            return "", [("finish", {})]
+        if ev(req) == 0:  # a transient entry with no end date: missing_end_date
+            return "", [("append_file", {"path": "state/transient.md",
+                                         "text": "- T-0.1 | active | 2025-10-02 | basis: O-0.1 | Busy week."}),
+                        ("finish", {})]
+        return "", [("finish", {})]
+
+    model = ScriptedModel(script)
+    run([evolved_item], model, tmp_path / "run", run_config("agent", review_step=True), progress=lambda *_: None)
+    updates = {ev(r): r for r in model.requests if r.phase == "memory_update" and r.metadata.get("step") == 0}
+    assert "<memory_problems>\n(none)" in updates[0].blocks[1].text
+    assert "missing_end_date T-0.1" in updates[1].blocks[1].text  # shown after the event that caused it
+    reviews = [r for r in model.requests if r.phase == "memory_review"]
+    assert len(reviews) == len(updates) and "Review your memory" in reviews[0].blocks[1].text

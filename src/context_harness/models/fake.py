@@ -54,9 +54,8 @@ class FakeModel:
 
     def complete(self, request: ModelRequest) -> ModelResponse:
         self.requests.append(request)
-        handler = {"memory_update": self._memory_update, "summary_update": self._summary_update}.get(
-            request.phase, self._answer
-        )
+        handler = {"memory_update": self._memory_update, "summary_update": self._summary_update,
+                   "memory_review": lambda r: ("Nothing to fix.", [self._call("finish")])}.get(request.phase, self._answer)
         text, calls = handler(request)
         return ModelResponse(
             text=text,

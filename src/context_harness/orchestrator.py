@@ -104,6 +104,8 @@ def run_item(item: BenchmarkItem, model: ModelAdapter, item_dir: Path, cfg: RunC
         if method.has_workspace:
             method.ws.restore_snapshot(checkpoint["workspace"])
             monitor.restore(checkpoint["monitor"], checkpoint["workspace"])
+            if cfg.method_config.check_feedback and hasattr(method, "set_feedback"):
+                method.set_feedback(monitor.open_problems())
         method.restore_state(checkpoint["method_state"], episode.sessions)
         session_log, start, elapsed_before = checkpoint["session_log"], checkpoint["next_event"], checkpoint["elapsed_s"]
         trace.emit("item_resumed", next_event=start, events_total=len(episode.sessions))
@@ -153,6 +155,8 @@ def run_item(item: BenchmarkItem, model: ModelAdapter, item_dir: Path, cfg: RunC
                 entry["new_violations"] = sum(record["new_violations"].values())  # first seen this event
                 trace.emit("memory_check", **{k: record[k] for k in ("event_id", "access", "violations",
                                                                      "new_violations", "metrics")})
+                if cfg.method_config.check_feedback and hasattr(method, "set_feedback"):
+                    method.set_feedback(monitor.open_problems())
             session_log.append(entry)
             trace.emit("event_end", **{k: v for k, v in entry.items() if k != "index"})
             save_checkpoint(session.index + 1)

@@ -35,6 +35,7 @@ class WorkspaceAgent:
             self.ws.save_snapshot(ctx.item_dir / "snapshots" / "initial")
         self.system = prompts.load_contract(cfg.contract_path)
         self.finish = Finish()
+        self._feedback: list[str] = []
         self.update_executor = ToolExecutor(workspace_tools(self.ws, writable=True) + [self.finish], ctx.trace)
 
     def _on_change(self, change: FileChange) -> None:
@@ -132,6 +133,7 @@ class WorkspaceAgent:
         def render(actions: str, calls_left: int) -> str:
             return "\n\n".join(
                 self._render_state(actions)
+                + ([prompts.render_problems(self._feedback)] if self.ctx.config.check_feedback else [])
                 + [
                     prompts.render_due(self.due(date)),
                     prompts.render_actions(actions),
@@ -152,6 +154,39 @@ class WorkspaceAgent:
             stop_when=lambda: self.finish.called,
         )
         self.ctx.trace.emit("update_loop_end", event_id=event.event_id, stop=outcome.stop, steps=outcome.steps)
+        if self.ctx.config.review_step:
+            self._review(event)
+
+    def set_feedback(self, problems: list[str]) -> None:
+        """Open problems from the memory checks, shown in the next update (contract v3.10)."""
+        self._feedback = list(problems)
+
+    def _review(self, event: Event) -> None:
+        """One more short loop after the update: re-read the updated view and fix contradictions.
+
+        The same event replayed twice could end with different memories (v3.9: replies from
+        identical settings scored 0.0, 0.5 and 1.0); a second look at the result is the
+        cheapest lever on that variance.
+        """
+        self._phase = "memory_review"
+        self.finish.called = False
+
+        def render(actions: str, calls_left: int) -> str:
+            return "\n\n".join(
+                self._render_state(actions)
+                + ([prompts.render_problems(self._feedback)] if self.ctx.config.check_feedback else [])
+                + [prompts.render_actions(actions),
+                   f"{prompts.REVIEW_INSTRUCTION} Model calls remaining after this one: {calls_left}."]
+            )
+
+        outcome = run_step_loop(
+            model=self.ctx.model, executor=self.update_executor, phase="memory_review", system=self.system,
+            fixed_text=prompts.render_event(event), render_dynamic=render,
+            max_steps=self.ctx.config.max_review_steps, log=ActionLog(self.ctx.config.action_log_max_chars),
+            metadata={"event_id": event.event_id}, stop_when=lambda: self.finish.called,
+        )
+        self.ctx.trace.emit("review_loop_end", event_id=event.event_id, stop=outcome.stop, steps=outcome.steps)
+        self._phase = "memory_update"
 
     def respond(self, probe: Probe, probe_event_id: str) -> dict:
         """Write a reply to the probe conversation from memory (the generated-response evaluation)."""

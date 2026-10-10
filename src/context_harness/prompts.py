@@ -32,6 +32,21 @@ UPDATE_INSTRUCTION = (
 )
 
 
+REVIEW_INSTRUCTION = (
+    "Review your memory now that this event's edits are done, using <preference_dimensions>, "
+    "<profile_topics> (if shown) and <state> as they are now. Fix, with edit_file or supersede: "
+    "(1) current values that contradict each other, including across dimensions; (2) a scope that "
+    "covers every request this person makes (then it is not a scope); (3) anything the person said "
+    "in this event about how they want help, or a lasting fact about them, that is not recorded; "
+    "(4) anything under <memory_problems>. Then call finish. If nothing needs fixing, call finish alone."
+)
+
+
+def render_problems(problems: list[str]) -> str:
+    body = "\n".join(f"- {p}" for p in problems) if problems else "(none)"
+    return f"<memory_problems>\n{body}\n</memory_problems>"
+
+
 def answer_instruction(read_budget_left: int) -> str:
     return (
         "You are now responding to the person in <current_conversation>. Memory is read-only. "
