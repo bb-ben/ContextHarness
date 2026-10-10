@@ -19,6 +19,7 @@ from typing import Callable
 CONTEXT_FILE = "context.md"
 EPISODES_FILE = "memory/episodes.md"
 TRANSIENT_FILE = "state/transient.md"
+GOALS_FILE = "state/goals.md"
 ARCHIVE_FILE = "memory/archive.md"
 
 
@@ -46,7 +47,9 @@ GENERAL_DIMENSIONS: tuple[Dimension, ...] = (
     Dimension("help-format", "How help should be structured: checklists, numbered steps, bullets, prose, length."),
     Dimension("detail-level", "How much depth, background and length they want."),
     Dimension("explanation-style", "What makes ideas land: concrete examples, analogies, data and evidence, theory."),
-    Dimension("tone", "Register and warmth: casual or formal, gentle or blunt, playful or serious."),
+    Dimension("tone", "How to talk with them in conversation: casual or formal, gentle or blunt, playful or serious."),
+    Dimension("output-style", "How the work they ask you to produce should read: its register and voice (formal or "
+                              "casual, diplomatic, persuasive, plain) and how it is framed."),
     Dimension("decision-style", "How they like to reach decisions: quick or deliberate, intuitive or evidence-driven, "
                                 "open-ended or decisive."),
     Dimension("challenge-level", "How much to push, question or challenge them versus support and reassure."),

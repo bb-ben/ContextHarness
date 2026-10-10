@@ -40,6 +40,11 @@ class EventInfo:
     date: str  # YYYY-MM-DD
 
 
+def goal_end(e: Entry) -> str | None:
+    """The date by which an active goal must be reviewed: its review date if set, else its due date."""
+    return e.fields.get("review") or e.fields.get("due")
+
+
 _OBS_ID = re.compile(r"\bO-\d+\.\d+\b")
 
 _GENERIC_TOKENS = {"style", "level", "preference", "preferences", "type", "mode", "pref"}
@@ -118,6 +123,8 @@ def check_state(parsed: ParsedWorkspace, events: list[EventInfo], current: int,
             add("missing_topic", e, "no topic:")
         if e.type == "T" and not (e.fields.get("expires") or e.fields.get("review")):
             add("missing_end_date", e, "no expires: or review:")
+        if e.type == "G" and e.status == "active" and not (e.fields.get("due") or e.fields.get("review")):
+            add("missing_end_date", e, "active goal with no due: or review:")
         for key, ids in e.refs().items():
             for ref in ids:
                 if ref not in entries:
@@ -140,6 +147,10 @@ def check_state(parsed: ParsedWorkspace, events: list[EventInfo], current: int,
             end = e.fields.get("expires") or e.fields.get("review")
             if end and is_valid_date(end) and end <= now.date:
                 add("overdue_transient", e, f"due {end}, still active on {now.date}")
+        if e.type == "G" and e.status == "active":
+            end = goal_end(e)
+            if end and is_valid_date(end) and end < now.date:  # a goal is live through its due day
+                add("overdue_goal", e, f"{'review' if e.fields.get('review') else 'due'} {end} passed, still active on {now.date}")
 
     by_topic: dict[tuple[str, str], list[str]] = defaultdict(list)
     for e in entries.values():

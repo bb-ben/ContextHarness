@@ -28,7 +28,7 @@ CLEAN = {
         "- P-0.1 | superseded | 2025-10-01 | topic: detail-level | basis: O-0.1 | until: 2025-10-09 | superseded_by: P-2.1 | Likes long, detailed answers.\n"
         "- P-2.1 | current | 2025-10-09 | topic: detail-level | basis: O-2.1 | supersedes: P-0.1 | Wants short answers.\n"
     ),
-    "state/goals.md": "# Goals\n- G-1.1 | active | 2025-10-05 | basis: O-1.1 | Pass the exams.\n  - 2025-10-09 (S-2): studying daily.\n",
+    "state/goals.md": "# Goals\n- G-1.1 | active | 2025-10-05 | review: 2025-10-23 | basis: O-1.1 | Pass the exams.\n  - 2025-10-09 (S-2): studying daily.\n",
     "state/transient.md": "# Transient state\n- T-1.1 | active | 2025-10-05 | expires: 2025-10-12 | basis: O-1.1 | Stressed by exams.\n",
     "state/hypotheses.md": "# Hypotheses\n- H-1.1 | confirmed | 2025-10-05 | for: O-1.1, O-2.1 | resolved_into: P-2.1 | Exams may make them want brevity.\n",
 }
@@ -76,7 +76,7 @@ def test_parser_reads_entries_observations_and_progress_notes():
     ("state/goals.md", "basis: O-1.1 | Pass", "basis: H-1.1 | Pass", "basis_not_observation"),
     ("state/transient.md", " | expires: 2025-10-12", "", "missing_end_date"),
     ("state/preferences.md", "| topic: detail-level | basis: O-2.1", "| basis: O-2.1", "missing_topic"),
-    ("state/goals.md", "- G-1.1 | active | 2025-10-05 | basis: O-1.1 | Pass the exams.", "- G-1.1 | active | Pass the exams.", "unparsed_entry"),
+    ("state/goals.md", "- G-1.1 | active | 2025-10-05 | review: 2025-10-23 | basis: O-1.1 | Pass the exams.", "- G-1.1 | active | Pass the exams.", "unparsed_entry"),
     ("state/goals.md", "# Goals\n", "# Goals\n- pass exams eventually\n", "unparsed_line"),
     ("state/goals.md", "- G-1.1 |", "- P-1.1 |", "wrong_file"),
     ("state/goals.md", "| active |", "| ongoing |", "bad_status"),
@@ -108,7 +108,7 @@ def test_overdue_transient_is_flagged_once_its_date_passes():
 
 
 @pytest.mark.parametrize("path,old,new,code", [
-    ("state/goals.md", "- G-1.1 | active | 2025-10-05 | basis: O-1.1 | Pass the exams.\n", "", "entry_deleted"),
+    ("state/goals.md", "- G-1.1 | active | 2025-10-05 | review: 2025-10-23 | basis: O-1.1 | Pass the exams.\n", "", "entry_deleted"),
     ("memory/episodes.md", "Has exams all week.", "Has one exam.", "history_rewritten"),
     ("state/goals.md", "basis: O-1.1 | Pass", "basis: O-2.1 | Pass", "history_rewritten"),
     ("state/preferences.md", "P-0.1 | superseded", "P-0.1 | current", "status_reverted"),
@@ -158,8 +158,29 @@ def test_stated_observations_must_be_applied(where, flagged):
     assert (codes(snap)["unused_stated_observation"] == 1) is flagged
 
 
+def test_goals_need_a_review_date_and_are_flagged_once_it_passes():
+    no_date = with_change("state/goals.md", " | review: 2025-10-23", "")
+    assert codes(no_date)["missing_end_date"] == 1
+    due_soon = with_change("state/goals.md", "review: 2025-10-23", "due: 2025-10-20")
+    assert codes(due_soon, current=3)["overdue_goal"] == 0  # live through its due day
+    passed = with_change("state/goals.md", "review: 2025-10-23", "review: 2025-10-19")
+    assert codes(passed, current=3)["overdue_goal"] == 1
+    lapsed = with_change("state/goals.md", "| active | 2025-10-05 | review: 2025-10-23",
+                         "| lapsed | 2025-10-05 | review: 2025-10-19 | ended: 2025-10-20")
+    assert not {"overdue_goal", "missing_end_date", "bad_status"} & set(codes(lapsed, current=3))
+
+
+def test_dimension_view_lists_open_hypotheses_under_their_dimension():
+    from context_harness.dimensions import dimension_rows, render_dimensions
+
+    hyps = "- H-5.1 | open | 2025-10-09 | topic: output-style | for: O-5.1 | May want formal, persuasive writing in general.\n"
+    text = render_dimensions(dimension_rows(HORIZONBENCH, "", hyps))
+    block = text.split("output-style:")[1].split("\n", 2)
+    assert 'open hypothesis: H-5.1 "May want formal, persuasive writing in general."' in "\n".join(block[:3])
+
+
 def test_archiving_a_live_entry_is_flagged():
-    goal = "- G-1.1 | active | 2025-10-05 | basis: O-1.1 | Pass the exams.\n  - 2025-10-09 (S-2): studying daily.\n"
+    goal = "- G-1.1 | active | 2025-10-05 | review: 2025-10-23 | basis: O-1.1 | Pass the exams.\n  - 2025-10-09 (S-2): studying daily.\n"
     snap = with_change("state/goals.md", goal, "")
     snap["memory/archive.md"] = "# Archive\n" + goal
     found = codes(snap)
@@ -265,5 +286,5 @@ def test_dimension_view_shows_values_custom_reasons_and_challenges():
     assert 'decision-style: How they like to reach decisions' in text
     assert 'current: P-2.1 "Decides quickly."' in text and 'challenged by: H-2.1 (open)' in text
     assert "Dimensions you added:" in text and "gift-ideas: none covers gifts" in text
-    assert "tone: Register" in text and "Formal" not in text  # superseded values are not current
+    assert "tone: How to talk with them" in text and "Formal" not in text  # superseded values are not current
     assert text.count("current: (none yet)") == len(HORIZONBENCH.dimensions) - 1

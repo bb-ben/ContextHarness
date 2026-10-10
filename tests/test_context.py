@@ -99,6 +99,23 @@ def test_contract_prompt_event_ids_finish_and_due_reminders(evolved_item, tmp_pa
     assert open_at == ["S-2", "S-3"] and report["unresolved_at_end"] >= 1  # ...left open for two events
 
 
+def test_past_due_goals_are_listed_after_their_due_day(evolved_item, tmp_path):
+    def script(req):
+        if req.phase == "answer":
+            return "", [("submit_answer", {"letter": "A"})]
+        if ev(req) == 0:
+            return "", [("append_file", {"path": "state/goals.md",
+                                         "text": "- G-0.1 | active | 2025-10-02 | due: 2025-10-02 | basis: O-0.1 | Give the talk."}),
+                        ("finish", {})]
+        return "", [("finish", {})]
+
+    model = ScriptedModel(script)
+    run([evolved_item], model, tmp_path / "run", run_config("agent"), progress=lambda *_: None)
+    reqs = {(r.phase, ev(r), r.metadata.get("step")): r for r in model.requests}
+    assert _due_block(reqs[("memory_update", 1, 0)]) == "(none)"  # 2025-10-02: the due day itself
+    assert "G-0.1 | active" in _due_block(reqs[("memory_update", 2, 0)])  # 2025-10-12: passed
+
+
 def test_old_episodes_roll_over_into_the_archive_unchanged(evolved_item, tmp_path):
     import json
     import re

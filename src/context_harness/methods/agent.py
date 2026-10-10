@@ -11,7 +11,9 @@ from ..dimensions import HYPOTHESES_FILE, PREFERENCES_FILE, dimension_rows, rend
 from ..entries import Entry, parse_file
 from ..tools import Finish, ReadBudget, SubmitAnswer, ToolExecutor, workspace_tools
 from ..types import AnswerResult, Event, Probe, Question, Session
-from ..workspace import ARCHIVE_FILE, CONTEXT_FILE, EPISODES_FILE, TRANSIENT_FILE, FileChange, Workspace, WorkspaceError
+from ..checks import goal_end
+from ..workspace import (ARCHIVE_FILE, CONTEXT_FILE, EPISODES_FILE, GOALS_FILE, TRANSIENT_FILE, FileChange, Workspace,
+                         WorkspaceError)
 from .base import ActionLog, MethodContext, answer_with_tools, run_step_loop
 
 
@@ -38,17 +40,21 @@ class WorkspaceAgent:
         self.ctx.trace.emit("file_diff", phase=self._phase, event_id=self._event_id, **asdict(change))
 
     def due(self, date: str) -> list[tuple[Entry, str]]:
-        """Active transient entries whose expires/review date has arrived (the layer's reminder)."""
-        if self.ws.layout.spec(TRANSIENT_FILE) is None:
-            return []
-        text = self.ws.read(TRANSIENT_FILE)
-        lines = text.splitlines()
-        entries, _ = parse_file(TRANSIENT_FILE, text, ("T",))
+        """The layer's reminders: active transient entries whose expires/review date has
+        arrived, and active goals whose review or due date has passed."""
         out = []
-        for e in entries:
-            end = e.fields.get("expires") or e.fields.get("review")
-            if e.status == "active" and end and end <= date:
-                out.append((e, lines[e.line - 1]))
+        for path, kind in ((TRANSIENT_FILE, "T"), (GOALS_FILE, "G")):
+            if self.ws.layout.spec(path) is None:
+                continue
+            text = self.ws.read(path)
+            lines = text.splitlines()
+            entries, _ = parse_file(path, text, (kind,))
+            for e in entries:
+                if e.status != "active":
+                    continue
+                end = (e.fields.get("expires") or e.fields.get("review")) if kind == "T" else goal_end(e)
+                if end and (end <= date if kind == "T" else end < date):
+                    out.append((e, lines[e.line - 1]))
         return out
 
     def preloaded(self) -> dict[str, str]:

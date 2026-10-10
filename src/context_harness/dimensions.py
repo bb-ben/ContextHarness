@@ -25,6 +25,7 @@ class DimensionRow:
     custom: bool
     current: list[Entry] = field(default_factory=list)
     challenged_by: list[Entry] = field(default_factory=list)
+    hypotheses: list[Entry] = field(default_factory=list)  # open hypotheses tagged with this dimension
 
 
 def dimension_rows(layout: Layout, preferences_text: str, hypotheses_text: str) -> list[DimensionRow]:
@@ -46,6 +47,7 @@ def dimension_rows(layout: Layout, preferences_text: str, hypotheses_text: str) 
     for row in rows.values():
         ids = {p.id for p in row.current}
         row.challenged_by = [h for h in open_hyps if ids & set(h.refs().get("challenges", []))]
+        row.hypotheses = [h for h in open_hyps if h.fields.get("topic") == row.key and h not in row.challenged_by]
     return list(rows.values())
 
 
@@ -67,5 +69,6 @@ def render_dimensions(rows: list[DimensionRow]) -> str:
             else:
                 lines.append("  current: (none yet)")
             lines += [f"  challenged by: {h.id} (open) \"{h.statement}\"" for h in r.challenged_by]
+            lines += [f"  open hypothesis: {h.id} \"{h.statement}\"" for h in r.hypotheses]
     lines.append("</preference_dimensions>")
     return "\n".join(lines)

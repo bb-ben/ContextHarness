@@ -11,8 +11,8 @@ contract. HorizonBench supplies long, dated conversation histories in which
 preferences change after life events. That makes it a sequential testbed for
 whether the layer keeps the user's state current.
 
-**Status:** contract **v3.1**. The layer, instrumentation, and Gemini and OpenAI
-adapters are built and tested offline (155 tests). A model that follows the
+**Status:** contract **v3.2**. The layer, instrumentation, and Gemini and OpenAI
+adapters are built and tested offline (158 tests). A model that follows the
 contract produces zero violations across all 901 events of the HorizonBench sample.
 
 **Real runs so far:**
@@ -58,7 +58,7 @@ Requires Python ≥ 3.12 and [uv](https://docs.astral.sh/uv/).
 
 ```bash
 uv sync
-uv run pytest -q                     # 155 tests, offline, no credentials
+uv run pytest -q                     # 158 tests, offline, no credentials
 export GEMINI_API_KEY=...            # for real-model runs (default model: gemini-3.7-flash)
 ```
 
@@ -196,9 +196,7 @@ v2), so it says nothing about the layer.
 
 ## Next steps
 
-1. **Contract v3.2:** turn a wish repeated across different tasks into a hypothesis
-   on a dimension; separate how to talk to the person from how the work they ask
-   for should sound; give goals review dates so past-due goals close.
+1. **Run v3.2 on item 6**, the one valid test so far, and judge it.
 2. **Vet items before trusting their answers.** Check, offline, that a changed
    attribute actually shows up in the sessions after the change, and that the options
    separate it. Items 0 and 5 would fail this.

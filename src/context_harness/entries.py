@@ -25,11 +25,12 @@ _AS_OF = re.compile(r"as of .*\((S-\d+)\)")
 OBS_KINDS = {"stated", "reaction", "behavior", "event"}
 LIVE_STATUSES = {"current", "active", "open"}
 # Closed entries may be moved to the archive; live and paused ones may not.
-CLOSED_STATUSES = {"superseded", "retracted", "expired", "refuted", "withdrawn", "confirmed", "achieved", "abandoned"}
+CLOSED_STATUSES = {"superseded", "retracted", "expired", "refuted", "withdrawn", "confirmed", "achieved", "abandoned",
+                   "lapsed"}
 STATUSES: dict[str, set[str]] = {
     "F": {"current", "superseded", "retracted"},
     "P": {"current", "superseded", "retracted"},
-    "G": {"active", "achieved", "abandoned", "paused", "superseded", "retracted"},
+    "G": {"active", "achieved", "abandoned", "lapsed", "paused", "superseded", "retracted"},
     "T": {"active", "expired", "superseded", "retracted"},
     "H": {"open", "confirmed", "refuted", "withdrawn", "retracted"},
 }  # D and R statuses are not yet specified

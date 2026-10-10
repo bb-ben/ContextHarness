@@ -67,8 +67,8 @@ read and written. It then runs the checks below. Results go to the item's trace 
 |---|---|
 | Does each entry follow the format? | `unparsed_line`, `unparsed_entry`, `wrong_file`, `orphan_observation`, `duplicate_id`, `bad_status`, `bad_kind` |
 | Are preferences disciplined? | `undeclared_dimension` (a topic outside the seed list with no `new_dimension:` reason), `near_duplicate_dimension`, `unsupported_promotion` (a preference resting on non-stated evidence from one event, with no confirmed hypothesis), `unused_stated_observation` (a `stated` observation cited by no state entry, hypothesis or goal note) |
-| Does each entry have a source and date? | `future_id` (ID names an event that hasn't happened), `bad_date`, `date_mismatch` (date differs from its event's real date), `bad_source`, `parent_mismatch`, `missing_basis`, `dangling_ref`, `basis_not_observation`, `missing_topic`, `missing_end_date` |
-| Do current-state files contradict each other? | `topic_conflict` (two `current` entries for one topic), `incomplete_supersession`, `supersession_mismatch`, `unresolved_confirmation`, `overdue_transient`, `archived_live`, `context_stale`, `context_uncited`, `context_dangling`, `context_inactive` |
+| Does each entry have a source and date? | `future_id` (ID names an event that hasn't happened), `bad_date`, `date_mismatch` (date differs from its event's real date), `bad_source`, `parent_mismatch`, `missing_basis`, `dangling_ref`, `basis_not_observation`, `missing_topic`, `missing_end_date` (a transient entry with no `expires:`/`review:`, or an active goal with no `due:`/`review:`) |
+| Do current-state files contradict each other? | `topic_conflict` (two `current` entries for one topic), `incomplete_supersession`, `supersession_mismatch`, `unresolved_confirmation`, `overdue_transient`, `overdue_goal` (an active goal past its review or due date), `archived_live`, `context_stale`, `context_uncited`, `context_dangling`, `context_inactive` |
 | Does information survive across events? | `missing_episode` (an event left no `E` line), `entry_deleted`, `history_rewritten` (statement, date or kind changed, or basis lost), `status_reverted`; plus each entry's lifecycle (created, status changes, deleted) |
 | Which files are read and edited? | Per-event, per-file reads, writes and errors, from tool calls |
 
@@ -294,6 +294,14 @@ attributes.**
 4–6 times the rolling summary, and took about 65 minutes for a 75-event item. Item 6
 ended with dozens of `active` goals, many past their due date.
 
+### v3.1 → v3.2: preferences across tasks, and goals that close
+
+| Problem in the v3.1 runs | Change |
+|---|---|
+| On item 6 the same wish ("formal, measured, persuasive") came up in about 15 different tasks; each went under its own goal and never became a preference | A wish about one task that could be general also opens a hypothesis tagged with a dimension (`topic:` on `H`). `<preference_dimensions>` lists open hypotheses under their dimension, so the next task with the same wish finds and supports it |
+| `tone` held "casual, humorous" because the person chats casually, while everything they asked to have written was formal | New seed dimension `output-style` (how the work they ask for should read); `tone` is now how to talk with them |
+| 24 goals were still `active` at the end of item 6, 17 of them past their date and 7 with none | Every active goal needs `due:` or `review:`. Past-due goals appear under `<due>` to close (`achieved`, `abandoned`, or the new `lapsed`) or to push back. Checks: `missing_end_date` now covers goals; `overdue_goal` |
+
 ## Known gaps
 
 - **The archive itself has no rollover yet** (200,000 chars). That's enough for
@@ -307,10 +315,8 @@ ended with dozens of `active` goals, many past their due date.
   item under v2 and v3. Of the three, item 5's label contradicts its own
   conversations and item 0's options are ambiguous, so items need vetting before
   their answers count.
-- **Repeated wishes across tasks never become preferences** (item 6), and the seed
-  `tone` dimension mixes how to talk to the person with how the work they ask for
-  should sound.
-- **Goals don't close.** Without review dates, past-due goals stay `active`.
+- **v3.2 has not met a real model yet.** Whether tagged hypotheses really collect a
+  wish across tasks, rather than multiplying, is the open question.
 - **Open choices left for later:**
   - per-event review of open hypotheses (v2's accident hypothesis sat untouched for
     14 events);
