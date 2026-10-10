@@ -1,0 +1,33 @@
+{
+  "source": "examples/real_run_v3_openai",
+  "model": "gpt-5.4-mini",
+  "effort": "medium",
+  "strategies": {
+    "default": {
+      "answers": [
+        "D",
+        "B",
+        "B",
+        "B",
+        "D"
+      ],
+      "correct": 0,
+      "chose_trap": 2,
+      "mean_reads": 0.0,
+      "cost_usd": 0.0101
+    },
+    "dimension-first": {
+      "answers": [
+        "B",
+        "B",
+        "B",
+        "B",
+        "B"
+      ],
+      "correct": 0,
+      "chose_trap": 0,
+      "mean_reads": 0.0,
+      "cost_usd": 0.0125
+    }
+  }
+}

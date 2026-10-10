@@ -178,6 +178,26 @@ start by investigating his methods") fits the stored memory about as well as the
 correct C ("weigh it through a few ethical lenses"). The remaining gap is in how
 memory is *used* and in how finely it is worded, not in whether it is kept.
 
+**Answer-only replays** (`context-harness replay-answer`; five answers per strategy
+on each saved memory, about $0.002 each; see
+[`examples/answer_replays/`](../examples/answer_replays)):
+
+| Memory | `default` | `dimension-first` |
+|---|---|---|
+| v3 | D B B B D (the old-preference trap twice) | B B B B B |
+| v2 | B B B B B | B B B B B |
+
+- **A single run hides variance.** On the v3 memory, the default answering step chose
+  the trap 2 times in 5.
+- **`dimension-first` makes the answer consistent** and avoids the trap, but neither
+  memory leads this model to the correct C.
+- **The limit is now memory content.** v3 recorded the person's *stated* preference
+  for "comparing tradeoffs and pros and cons rather than a single right answer"
+  (`O-13.1`) as evidence but never carried it into state. Under one value per
+  dimension, it fell between decision style and explanation style. Across the two
+  runs, 3 of 26 (v2) and 4 of 23 (v3) stated observations never reached any state
+  entry or hypothesis.
+
 ## Known gaps
 
 - **The archive itself has no rollover yet** (200,000 chars). That's enough for
