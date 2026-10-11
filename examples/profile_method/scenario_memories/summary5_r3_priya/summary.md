@@ -1,0 +1,10 @@
+- User prefers actual structured meal plans when asking for food help, including breakfast/lunch/dinner for the week.
+- As of 2025-09-24, user saw a dietitian and needs carb counts per meal, with a target of under 45g carbs per meal.
+- As of 2025-09-29, user explicitly confirmed that per-meal carb numbers are exactly what they need and wants them kept in future food suggestions.
+- On 2025-10-03, user asked for next week laid out the same way: days, meals, and carbs, and wanted it to “still keep it fun,” so future meal plans should keep the same structured format with some variety/enjoyable elements.
+- This supersedes the earlier preference for only loose, flexible grocery lists and wing-it meal ideas; that style was previously preferred but is no longer the main need.
+- User still likes practical, low-effort food ideas, but “winging it” is not working for them right now.
+- User has type 2 diabetes (shared 2025-09-20) and is feeling freaked out; they need practical, reassuring food guidance that fits their dietitian-directed carb goals.
+- User dislikes calorie tracking and other numeric nutrition info in general, but carb counts are now specifically wanted because their dietitian asked for them.
+- For food suggestions, keep them practical and easy to execute; meal structure is now helpful rather than stressful.
+- User also wants quick meal options when possible; on 2025-09-29 they specifically asked for a dinner swap that would still take under 20 minutes.

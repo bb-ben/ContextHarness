@@ -1,0 +1,26 @@
+{
+  "model": "gpt-5.4-mini",
+  "rows": [
+    {
+      "source": "profile_item6__006_gemini-3-flash_user_33_0a43d1cf",
+      "condition": "memory",
+      "memory_kind": "profile",
+      "repeat": 1,
+      "changed_fit_current": 0.0,
+      "changed_fit_original": 1.0,
+      "all_fit_current": 0.2,
+      "utilization": null
+    },
+    {
+      "source": "profile_item6__006_gemini-3-flash_user_33_0a43d1cf",
+      "condition": "memory",
+      "memory_kind": "profile",
+      "repeat": 2,
+      "changed_fit_current": 0.0,
+      "changed_fit_original": 0.667,
+      "all_fit_current": 0.2,
+      "utilization": null
+    }
+  ],
+  "estimated_cost_usd": 0.0382
+}

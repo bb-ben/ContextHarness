@@ -1,0 +1,306 @@
+{
+  "model": "gpt-5.4-mini",
+  "rows": [
+    {
+      "source": "profile_r1__000_foodbody-scenarios_priya_45b8dd3f",
+      "condition": "memory",
+      "memory_kind": "profile",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 0.75,
+      "utilization": null
+    },
+    {
+      "source": "profile_r1__001_foodbody-scenarios_tom_65fd5cd8",
+      "condition": "memory",
+      "memory_kind": "profile",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 1.0,
+      "utilization": null
+    },
+    {
+      "source": "profile_r1__002_foodbody-scenarios_dani_cd5a822e",
+      "condition": "memory",
+      "memory_kind": "profile",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 0.75,
+      "utilization": null
+    },
+    {
+      "source": "profile_r1__003_foodbody-scenarios_lena_a7a829dd",
+      "condition": "memory",
+      "memory_kind": "profile",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 1.0,
+      "utilization": null
+    },
+    {
+      "source": "profile_r1__004_foodbody-scenarios_marisol_183be56c",
+      "condition": "memory",
+      "memory_kind": "profile",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 0.667,
+      "utilization": null
+    },
+    {
+      "source": "profile_r2__000_foodbody-scenarios_priya_45b8dd3f",
+      "condition": "memory",
+      "memory_kind": "profile",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 1.0,
+      "utilization": null
+    },
+    {
+      "source": "profile_r2__001_foodbody-scenarios_tom_65fd5cd8",
+      "condition": "memory",
+      "memory_kind": "profile",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 0.667,
+      "utilization": null
+    },
+    {
+      "source": "profile_r2__002_foodbody-scenarios_dani_cd5a822e",
+      "condition": "memory",
+      "memory_kind": "profile",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 1.0,
+      "utilization": null
+    },
+    {
+      "source": "profile_r2__003_foodbody-scenarios_lena_a7a829dd",
+      "condition": "memory",
+      "memory_kind": "profile",
+      "repeat": 1,
+      "changed_fit_current": 0.5,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 0.75,
+      "utilization": null
+    },
+    {
+      "source": "profile_r2__004_foodbody-scenarios_marisol_183be56c",
+      "condition": "memory",
+      "memory_kind": "profile",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 0.667,
+      "utilization": null
+    },
+    {
+      "source": "profile_r3__000_foodbody-scenarios_priya_45b8dd3f",
+      "condition": "memory",
+      "memory_kind": "profile",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 1.0,
+      "utilization": null
+    },
+    {
+      "source": "profile_r3__001_foodbody-scenarios_tom_65fd5cd8",
+      "condition": "memory",
+      "memory_kind": "profile",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 1.0,
+      "utilization": null
+    },
+    {
+      "source": "profile_r3__002_foodbody-scenarios_dani_cd5a822e",
+      "condition": "memory",
+      "memory_kind": "profile",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 1.0,
+      "utilization": null
+    },
+    {
+      "source": "profile_r3__003_foodbody-scenarios_lena_a7a829dd",
+      "condition": "memory",
+      "memory_kind": "profile",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 1.0,
+      "utilization": null
+    },
+    {
+      "source": "profile_r3__004_foodbody-scenarios_marisol_183be56c",
+      "condition": "memory",
+      "memory_kind": "profile",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 0.667,
+      "utilization": null
+    },
+    {
+      "source": "summary5_r1__000_foodbody-scenarios_priya_45b8dd3f",
+      "condition": "memory",
+      "memory_kind": "summary",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 1.0,
+      "utilization": null
+    },
+    {
+      "source": "summary5_r1__001_foodbody-scenarios_tom_65fd5cd8",
+      "condition": "memory",
+      "memory_kind": "summary",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 1.0,
+      "utilization": null
+    },
+    {
+      "source": "summary5_r1__002_foodbody-scenarios_dani_cd5a822e",
+      "condition": "memory",
+      "memory_kind": "summary",
+      "repeat": 1,
+      "changed_fit_current": 0.5,
+      "changed_fit_original": 0.5,
+      "all_fit_current": 0.75,
+      "utilization": null
+    },
+    {
+      "source": "summary5_r1__003_foodbody-scenarios_lena_a7a829dd",
+      "condition": "memory",
+      "memory_kind": "summary",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 1.0,
+      "utilization": null
+    },
+    {
+      "source": "summary5_r1__004_foodbody-scenarios_marisol_183be56c",
+      "condition": "memory",
+      "memory_kind": "summary",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 0.667,
+      "utilization": null
+    },
+    {
+      "source": "summary5_r2__000_foodbody-scenarios_priya_45b8dd3f",
+      "condition": "memory",
+      "memory_kind": "summary",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 0.75,
+      "utilization": null
+    },
+    {
+      "source": "summary5_r2__001_foodbody-scenarios_tom_65fd5cd8",
+      "condition": "memory",
+      "memory_kind": "summary",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 1.0,
+      "utilization": null
+    },
+    {
+      "source": "summary5_r2__002_foodbody-scenarios_dani_cd5a822e",
+      "condition": "memory",
+      "memory_kind": "summary",
+      "repeat": 1,
+      "changed_fit_current": 0.5,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 0.75,
+      "utilization": null
+    },
+    {
+      "source": "summary5_r2__003_foodbody-scenarios_lena_a7a829dd",
+      "condition": "memory",
+      "memory_kind": "summary",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 1.0,
+      "utilization": null
+    },
+    {
+      "source": "summary5_r2__004_foodbody-scenarios_marisol_183be56c",
+      "condition": "memory",
+      "memory_kind": "summary",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 0.667,
+      "utilization": null
+    },
+    {
+      "source": "summary5_r3__000_foodbody-scenarios_priya_45b8dd3f",
+      "condition": "memory",
+      "memory_kind": "summary",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 0.75,
+      "utilization": null
+    },
+    {
+      "source": "summary5_r3__001_foodbody-scenarios_tom_65fd5cd8",
+      "condition": "memory",
+      "memory_kind": "summary",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 1.0,
+      "utilization": null
+    },
+    {
+      "source": "summary5_r3__002_foodbody-scenarios_dani_cd5a822e",
+      "condition": "memory",
+      "memory_kind": "summary",
+      "repeat": 1,
+      "changed_fit_current": 0.5,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 0.75,
+      "utilization": null
+    },
+    {
+      "source": "summary5_r3__003_foodbody-scenarios_lena_a7a829dd",
+      "condition": "memory",
+      "memory_kind": "summary",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 1.0,
+      "utilization": null
+    },
+    {
+      "source": "summary5_r3__004_foodbody-scenarios_marisol_183be56c",
+      "condition": "memory",
+      "memory_kind": "summary",
+      "repeat": 1,
+      "changed_fit_current": 1.0,
+      "changed_fit_original": 0.0,
+      "all_fit_current": 0.667,
+      "utilization": null
+    }
+  ],
+  "estimated_cost_usd": 0.323
+}

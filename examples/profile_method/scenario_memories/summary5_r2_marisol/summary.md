@@ -1,0 +1,11 @@
+- User likes a fun, casual tone and is okay with emojis in responses.
+- For family dinner ideas, user prefers simple, playful suggestions.
+- User explicitly does **not** want nutrition-related info in those meal ideas.
+- For kids’ food ideas, including lunchbox and pancake ideas, user prefers silly, playful suggestions.
+- For party snacks, user likes creative, playful names and asked to “go wild” with the names (current as of 2025-01-19).
+- As of 2025-01-26, user is starting a small meal-prep business, with the first five clients starting next month.
+- As of 2025-02-03, when writing descriptions for the meal-prep/client menu, user wants a professional tone because these are paying customers.
+- As of 2025-02-17, for the meal-prep/client menu, user wants calories and protein included per meal when clients ask for them.
+- As of 2025-02-24, for client plans that go straight to clients, user wants a clean table, calories and protein per serving, and **no emojis**.
+- As of 2025-03-10, when drafting client-facing emails or replies about diet modifications (e.g., keto swaps), user wants a polite, professional tone and wants macros included for the swaps.
+- As of 2025-03-17, user confirmed that the professional macro table is the standard format for **anything client-facing from now on**.

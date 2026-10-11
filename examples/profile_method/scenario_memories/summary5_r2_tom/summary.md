@@ -1,0 +1,8 @@
+- **As of 2025-08-04:** User’s long-term goal is still a **sub-3:30 marathon**.
+- **As of 2025-08-30:** User has a **stress fracture in the foot** and was told by a doctor to take **8 weeks with no running**. Recovery/injury-aware guidance is needed, especially around **nutrition for bone healing**: **calcium, vitamin D, protein, and sufficient total energy**.
+- **As of 2025-09-03:** User wants coaching to be **gentler and more supportive right now**. They said the last plan made them feel like a failure and want to **focus on healing, not performance**.  
+  - **Supersedes as of 2025-09-03:** The prior preference for a **brutal / no-soft-pedaling coaching style** and being **pushed harder, not coddled**. That approach is no longer desired in the current injury/recovery context.
+- **As of 2025-09-08:** User responded positively to **kind, supportive bone-healing meal ideas** and said that style **helps more than the drill-sergeant approach**. This reinforces the current preference for a compassionate tone during recovery.
+- User wants **weekly training plans in table format**, with distances in **kilometers (km)**.
+- **As of 2025-08-15:** User also likes **fueling guidance in table format** (example: long-run fueling for a 32 km run).
+- **As of 2025-08-22:** User wants **race-week meal plans optimized purely for performance** and is willing to **eat whatever wins**; low-prioritizes preference and convenience if they conflict with race performance.

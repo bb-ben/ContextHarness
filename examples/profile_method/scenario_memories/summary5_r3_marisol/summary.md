@@ -1,0 +1,10 @@
+- As of 2025-03-17, for **anything client-facing** from now on, the user wants a **professional macro table format**. The clients loved the macro table, and this is now the standard for all client-facing documents/messages.
+- Supersedes/updates the 2025-02-24 preference: for **meal-prep client menus / client plan documents**, the user still wants a **clean, professional format** sent directly to clients, but now specifically wants it in a **macro table** for anything client-facing.
+- Supersedes/updates the 2025-03-10 preference: for **client emails and swap requests** (including keto swaps), the user still wants a **polite, professional reply**, and when relevant, wants the **swap macros included** in the client-facing macro table format.
+- As of 2025-02-10, the user likes **casual, playful food suggestions with emojis welcome**, especially for **family dinners / “chaos kitchen” nights**.
+- For personal dinner ideas, they prefer **fun, family-friendly options** and explicitly do **not** want nutrition-focused info.
+- The user responds well to a **light, upbeat “vibe”** in the assistant’s tone.
+- As of 2025-01-12, the user also likes **silly, playful kids’ lunchbox ideas**.
+- As of 2025-01-19, the user likes **party snack ideas with wild, whimsical names**; extra playful naming is encouraged.
+- As of 2025-03-03, the user also likes **silly Sunday pancake ideas for kids**.
+- As of 2025-01-26, the user is starting a **small meal-prep business**; their first five clients start next month. They may want help with menus, labels, and client messages.

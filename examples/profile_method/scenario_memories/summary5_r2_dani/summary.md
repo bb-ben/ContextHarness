@@ -1,0 +1,11 @@
+- As of 2025-06-02, user strongly prefers explanations that include the “why” behind each step, especially for hands-on projects like cooking.
+- User enjoys detailed scientific/technical reasoning and explicitly said they “love the science.”
+- User responded positively to very detailed breakdowns and said: “Love the detail. More of this always.”
+- As of 2025-06-08, user especially likes deep, technique-focused cooking guidance for long projects like a Sunday cook; they asked for a “vegetarian ramen broth with real depth” and wanted it to “go deep on technique.”
+- As of 2025-06-08, user likes spicy food and said they put chili crisp on everything.
+- As of 2025-06-15, user also appreciates full, detailed troubleshooting rundowns for bread/baking problems, such as why sourdough turns out dense.
+- As of 2025-06-22, user continues to value very detailed, step-by-step guidance for ambitious, multi-hour cooking projects (e.g. a six-hour vegetarian mole for friends) and reacted enthusiastically to a technique-forward walkthrough, saying: “Honestly this is the best part of my week.”
+- As of 2025-07-01, user’s baby arrived early; life is currently chaotic and they’re sleeping in about 90-minute chunks.
+- As of 2025-07-10, during the newborn period user also wants some answers to be extremely short and practical, especially for late-night use; they asked for a one-handed dinner and said: “Keep it SHORT, like 3 lines. I read your answers at 3am.”
+- As of 2025-07-16, user again preferred very short, practical help with batch cooking/freezer meals, asking for a “short list, no explanations,” and said: “Short is all I can handle now.”
+- As of 2025-07-24, user is still in the newborn-period mode and wants quick, low-effort, one-pan vegetarian dinner ideas that are spicy; they said, “Another one-pan thing? Still vegetarian obviously, and spicy, my taste buds are the only thing awake.”

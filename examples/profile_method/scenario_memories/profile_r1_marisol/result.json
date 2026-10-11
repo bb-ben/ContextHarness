@@ -1,0 +1,197 @@
+{
+  "item_index": 4,
+  "item_id": "Marisol Vega_foodbody_meal_prep_business",
+  "item_key": "183be56c3141",
+  "method": "profile",
+  "model": "gpt-5.4-mini",
+  "predicted_letter": "B",
+  "answer_via": "tool",
+  "correct": true,
+  "invalid": false,
+  "chose_distractor": false,
+  "predicted_value": "professional_macro_table",
+  "error": null,
+  "gold": {
+    "correct_letter": "B",
+    "distractor_letter": "A",
+    "has_evolved": true,
+    "generator": "foodbody-scenarios",
+    "user_id": "foodbody-scenarios/marisol",
+    "preference_domain": "food_writing_style"
+  },
+  "ordering": {
+    "policy": "chronological",
+    "n_history_sessions_in_text": 11,
+    "n_replayed": 11,
+    "text_order_monotonic": true,
+    "n_moved": 0,
+    "dropped_after_probe": [],
+    "truncated_to_last": null
+  },
+  "answer_details": {
+    "stop": "stop_condition",
+    "steps": 1,
+    "applied": []
+  },
+  "utilization": null,
+  "reference_heuristics": {
+    "shortest_option": "A",
+    "shortest_option_correct": false
+  },
+  "latency_s": 55.566,
+  "stats": {
+    "model_calls": 12,
+    "usage": {
+      "input_tokens": 18355,
+      "output_tokens": 12538,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0
+    },
+    "usage_by_phase": {
+      "profile_update": {
+        "input_tokens": 16994,
+        "output_tokens": 12465,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      },
+      "answer": {
+        "input_tokens": 1361,
+        "output_tokens": 73,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      }
+    },
+    "calls_by_phase": {
+      "profile_update": 11,
+      "answer": 1
+    },
+    "served_by": {
+      "gpt-5.4-mini-2026-03-17": 12
+    },
+    "tool_calls": 1,
+    "tool_errors": 0,
+    "file_ops": 0,
+    "file_reads": 0,
+    "refusals": 0
+  },
+  "estimated_cost_usd": 0.07018725,
+  "memory_chars": {
+    "profile.md": 2963,
+    "memory/episodes.md": 3373
+  },
+  "memory": null,
+  "evolution_diagnostics": null,
+  "evidence_chain": null,
+  "sessions": [
+    {
+      "index": 0,
+      "event_id": "S-0",
+      "date": "2025-01-06T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 642,
+      "output_tokens": 376,
+      "latency_s": 2.26
+    },
+    {
+      "index": 1,
+      "event_id": "S-1",
+      "date": "2025-01-12T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 810,
+      "output_tokens": 946,
+      "latency_s": 4.375
+    },
+    {
+      "index": 2,
+      "event_id": "S-2",
+      "date": "2025-01-19T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 1104,
+      "output_tokens": 942,
+      "latency_s": 4.675
+    },
+    {
+      "index": 3,
+      "event_id": "S-3",
+      "date": "2025-01-26T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 1217,
+      "output_tokens": 1063,
+      "latency_s": 4.463
+    },
+    {
+      "index": 4,
+      "event_id": "S-4",
+      "date": "2025-02-03T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 1405,
+      "output_tokens": 1086,
+      "latency_s": 4.919
+    },
+    {
+      "index": 5,
+      "event_id": "S-5",
+      "date": "2025-02-10T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 1577,
+      "output_tokens": 977,
+      "latency_s": 4.341
+    },
+    {
+      "index": 6,
+      "event_id": "S-6",
+      "date": "2025-02-17T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 1680,
+      "output_tokens": 1289,
+      "latency_s": 5.945
+    },
+    {
+      "index": 7,
+      "event_id": "S-7",
+      "date": "2025-02-24T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 1890,
+      "output_tokens": 1436,
+      "latency_s": 6.388
+    },
+    {
+      "index": 8,
+      "event_id": "S-8",
+      "date": "2025-03-03T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2100,
+      "output_tokens": 1386,
+      "latency_s": 5.737
+    },
+    {
+      "index": 9,
+      "event_id": "S-9",
+      "date": "2025-03-10T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2201,
+      "output_tokens": 1521,
+      "latency_s": 6.078
+    },
+    {
+      "index": 10,
+      "event_id": "S-10",
+      "date": "2025-03-17T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2368,
+      "output_tokens": 1443,
+      "latency_s": 5.596
+    }
+  ]
+}

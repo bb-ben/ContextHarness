@@ -77,6 +77,11 @@ contract produces zero violations across all 901 events of the HorizonBench samp
   where the agent re-reads its memory and fixes contradictions, cut stale values and
   raised replies that follow the new preferences from 0.67 to 0.83, at 63% more cost.
   See [`examples/v310_review_runs/`](examples/v310_review_runs).
+- **The profile method ($2.97).** One profile rewritten each event, citing numbered
+  evidence, under a 1,781-character prompt instead of the 25,200-character contract.
+  Replies follow the new preferences 0.94 of the time on the neutral-ending scenarios
+  (structured agent with review step: 0.83; rolling summary: 0.83), at about a tenth of
+  the structured agent's cost. See [`examples/profile_method/`](examples/profile_method).
 - **Memory judge on that item.** Graded against the ground-truth attributes, v3
   holds 0.38 of the person's current preferences, v2 0.0, and the rolling summary
   0.75. The summary's lead comes from role-play content recorded before the change,
@@ -253,8 +258,8 @@ v2), so it says nothing about the layer.
 
 ## Next steps
 
-1. **Test v3.10 with the review step on the 75-event item**, where values grew by
-   addition; it's the one place the design hasn't held.
+1. **Make the profile method the main line**: more scenarios and repeated runs on
+   long histories, and decide which of the structured design's pieces (if any) to keep.
 2. **Measure variance:** run each scenario several times per version and compare
    distributions, not single runs.
 3. **Add more neutral-ending scenarios.** They are the only tests so far where replies

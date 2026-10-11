@@ -1,0 +1,167 @@
+{
+  "item_index": 0,
+  "item_id": "Priya Raman_foodbody_diagnosis_meal_planning",
+  "item_key": "45b8dd3f8b3f",
+  "method": "profile",
+  "model": "gpt-5.4-mini",
+  "predicted_letter": "B",
+  "answer_via": "tool",
+  "correct": true,
+  "invalid": false,
+  "chose_distractor": false,
+  "predicted_value": "structured_with_carbs",
+  "error": null,
+  "gold": {
+    "correct_letter": "B",
+    "distractor_letter": "A",
+    "has_evolved": true,
+    "generator": "foodbody-scenarios",
+    "user_id": "foodbody-scenarios/priya",
+    "preference_domain": "meal_planning_style"
+  },
+  "ordering": {
+    "policy": "chronological",
+    "n_history_sessions_in_text": 8,
+    "n_replayed": 8,
+    "text_order_monotonic": true,
+    "n_moved": 0,
+    "dropped_after_probe": [],
+    "truncated_to_last": null
+  },
+  "answer_details": {
+    "stop": "stop_condition",
+    "steps": 1,
+    "applied": []
+  },
+  "utilization": null,
+  "reference_heuristics": {
+    "shortest_option": "D",
+    "shortest_option_correct": false
+  },
+  "latency_s": 39.781,
+  "stats": {
+    "model_calls": 9,
+    "usage": {
+      "input_tokens": 12358,
+      "output_tokens": 9230,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0
+    },
+    "usage_by_phase": {
+      "profile_update": {
+        "input_tokens": 11090,
+        "output_tokens": 9146,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      },
+      "answer": {
+        "input_tokens": 1268,
+        "output_tokens": 84,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      }
+    },
+    "calls_by_phase": {
+      "profile_update": 8,
+      "answer": 1
+    },
+    "served_by": {
+      "gpt-5.4-mini-2026-03-17": 9
+    },
+    "tool_calls": 1,
+    "tool_errors": 0,
+    "file_ops": 0,
+    "file_reads": 0,
+    "refusals": 0
+  },
+  "estimated_cost_usd": 0.0508035,
+  "memory_chars": {
+    "profile.md": 2641,
+    "memory/episodes.md": 2684
+  },
+  "memory": null,
+  "evolution_diagnostics": null,
+  "evidence_chain": null,
+  "sessions": [
+    {
+      "index": 0,
+      "event_id": "S-0",
+      "date": "2025-09-01T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 668,
+      "output_tokens": 570,
+      "latency_s": 3.065
+    },
+    {
+      "index": 1,
+      "event_id": "S-1",
+      "date": "2025-09-05T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 906,
+      "output_tokens": 919,
+      "latency_s": 3.918
+    },
+    {
+      "index": 2,
+      "event_id": "S-2",
+      "date": "2025-09-10T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 1087,
+      "output_tokens": 915,
+      "latency_s": 3.897
+    },
+    {
+      "index": 3,
+      "event_id": "S-3",
+      "date": "2025-09-14T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 1268,
+      "output_tokens": 1251,
+      "latency_s": 5.391
+    },
+    {
+      "index": 4,
+      "event_id": "S-4",
+      "date": "2025-09-20T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 1457,
+      "output_tokens": 1303,
+      "latency_s": 5.256
+    },
+    {
+      "index": 5,
+      "event_id": "S-5",
+      "date": "2025-09-24T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 1752,
+      "output_tokens": 1326,
+      "latency_s": 6.071
+    },
+    {
+      "index": 6,
+      "event_id": "S-6",
+      "date": "2025-09-29T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 1843,
+      "output_tokens": 1490,
+      "latency_s": 5.827
+    },
+    {
+      "index": 7,
+      "event_id": "S-7",
+      "date": "2025-10-03T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2109,
+      "output_tokens": 1372,
+      "latency_s": 5.578
+    }
+  ]
+}

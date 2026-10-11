@@ -580,6 +580,46 @@ see [`examples/v310_review_runs/`](../examples/v310_review_runs).
   cooking stays casual" (1 of 9 runs keeps it). Nine runs per condition is still a
   small sample.
 
+### The profile method: simpler, and better so far
+
+**Diagnosis.** Every structured-agent failure from v3.2 to v3.10 had the same shape:
+an old belief survived because one of many per-entry decisions went the wrong way
+(merge instead of replace, temporary instead of lasting, the wrong dimension, a scope
+that dodged the conflict, "now also…"). Each fix closed one route and the failure
+moved to the next, while the contract grew from 14,300 to 25,200 characters. The
+rolling summary, which makes one decision per event (rewrite who this person is now),
+kept scoring at or above the agent.
+
+**The profile method** (`--method profile`, [`methods/profile.py`](../src/context_harness/methods/profile.py))
+keeps what worked and drops the bookkeeping. One call per event, under a 1,781-character
+prompt: append the episode and up to three observations (numbered by the harness), and
+rewrite one profile (facts, how they want help, goals, right now, dated changes) that
+cites observation IDs. Every version of the profile is kept as the change history.
+
+**Results** (gpt-5.4-mini, medium effort; $2.97 for the round; see
+[`examples/profile_method/`](../examples/profile_method)):
+
+| | v3.10 + review | Rolling summary | **Profile** |
+|---|---|---|---|
+| Replies follow the new values, 3 neutral-ending scenarios (9 each) | 0.83 | 0.83 | **0.94** |
+| Same, all 5 scenarios (15 each) | not run | 0.90 | **0.97** |
+| Expected beliefs present (memory checks) | most | all | all |
+| Cost per scenario run | about $0.48 | about $0.02 | about $0.05 |
+| 75-event item: memory against ground truth | 0.3 (v3.8) | 0.6 (v3.1 round) | 0.6 |
+| 75-event item: replies follow the new values | 0.17 (v3.8) | not run | 0.0 |
+| 75-event item: cost | $7.11 (v3.8) | about $0.93 | $1.43 |
+
+- **On the scenarios the profile is the best of the three**, at about a tenth of the
+  structured agent's cost, and it keeps what the summary lacks: evidence for each
+  claim and a dated record of what changed.
+- **It keeps context-dependent preferences the way a person would write them**: "In
+  the newborn period … very short; otherwise detailed, science-forward", and "client
+  documents: professional, with macros; family meals: fun".
+- **The 75-event item is still not solved.** The profile doubles the structured
+  agent's memory score and gets the tone change right, but keeps "step-by-step" as
+  the format, and the replies follow it. That format change is evenly split in the
+  person's own messages (24 sessions against 23), so it is a weak test either way.
+
 ## Known gaps
 
 - **The archive itself has no rollover yet** (200,000 chars). That's enough for

@@ -1,0 +1,166 @@
+{
+  "item_index": 3,
+  "item_id": "Lena Fischer_foodbody_burnout",
+  "item_key": "a7a829dd4c2c",
+  "method": "summary",
+  "model": "gpt-5.4-mini",
+  "predicted_letter": "B",
+  "answer_via": "tool",
+  "correct": true,
+  "invalid": false,
+  "chose_distractor": false,
+  "predicted_value": "gentle_no_numbers",
+  "error": null,
+  "gold": {
+    "correct_letter": "B",
+    "distractor_letter": "A",
+    "has_evolved": true,
+    "generator": "foodbody-scenarios",
+    "user_id": "foodbody-scenarios/lena",
+    "preference_domain": "nutrition_tracking_style"
+  },
+  "ordering": {
+    "policy": "chronological",
+    "n_history_sessions_in_text": 8,
+    "n_replayed": 8,
+    "text_order_monotonic": true,
+    "n_moved": 0,
+    "dropped_after_probe": [],
+    "truncated_to_last": null
+  },
+  "answer_details": {
+    "stop": "stop_condition",
+    "steps": 1,
+    "applied": []
+  },
+  "utilization": null,
+  "reference_heuristics": {
+    "shortest_option": "D",
+    "shortest_option_correct": false
+  },
+  "latency_s": 16.599,
+  "stats": {
+    "model_calls": 9,
+    "usage": {
+      "input_tokens": 4324,
+      "output_tokens": 3334,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0
+    },
+    "usage_by_phase": {
+      "summary_update": {
+        "input_tokens": 3421,
+        "output_tokens": 3274,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      },
+      "answer": {
+        "input_tokens": 903,
+        "output_tokens": 60,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      }
+    },
+    "calls_by_phase": {
+      "summary_update": 8,
+      "answer": 1
+    },
+    "served_by": {
+      "gpt-5.4-mini-2026-03-17": 9
+    },
+    "tool_calls": 1,
+    "tool_errors": 0,
+    "file_ops": 0,
+    "file_reads": 0,
+    "refusals": 0
+  },
+  "estimated_cost_usd": 0.018246,
+  "memory_chars": {
+    "summary.md": 2055
+  },
+  "memory": null,
+  "evolution_diagnostics": null,
+  "evidence_chain": null,
+  "sessions": [
+    {
+      "index": 0,
+      "event_id": "S-0",
+      "date": "2025-03-03T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 238,
+      "output_tokens": 136,
+      "latency_s": 1.104
+    },
+    {
+      "index": 1,
+      "event_id": "S-1",
+      "date": "2025-03-09T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 296,
+      "output_tokens": 434,
+      "latency_s": 2.23
+    },
+    {
+      "index": 2,
+      "event_id": "S-2",
+      "date": "2025-03-16T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 352,
+      "output_tokens": 269,
+      "latency_s": 1.663
+    },
+    {
+      "index": 3,
+      "event_id": "S-3",
+      "date": "2025-03-23T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 361,
+      "output_tokens": 254,
+      "latency_s": 1.307
+    },
+    {
+      "index": 4,
+      "event_id": "S-4",
+      "date": "2025-04-02T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 409,
+      "output_tokens": 496,
+      "latency_s": 2.405
+    },
+    {
+      "index": 5,
+      "event_id": "S-5",
+      "date": "2025-04-08T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 459,
+      "output_tokens": 521,
+      "latency_s": 2.147
+    },
+    {
+      "index": 6,
+      "event_id": "S-6",
+      "date": "2025-04-15T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 648,
+      "output_tokens": 589,
+      "latency_s": 2.662
+    },
+    {
+      "index": 7,
+      "event_id": "S-7",
+      "date": "2025-04-22T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 658,
+      "output_tokens": 575,
+      "latency_s": 2.262
+    }
+  ]
+}

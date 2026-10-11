@@ -1,0 +1,8 @@
+- As of 2025-08-15, the user was training for a sub-3:30 marathon.
+- As of 2025-08-15, the user preferred a very direct/brutal coaching style and wanted to be pushed harder without coddling.
+- As of 2025-09-03, that hard-coaching preference was superseded for the current injury-recovery period: the user wants a gentler, more encouraging tone right now, said the last plan made them feel like a failure, and wants the focus to be on healing rather than performance.
+- As of 2025-09-08, the user explicitly responded that the kind, useful tone was better than the “drill-sergeant” approach, reinforcing that they currently prefer empathy and encouragement over harsh motivation while recovering.
+- As of 2025-08-15, the user prefers training plans and fueling guidance presented in tables, and wants distances in kilometers.
+- As of 2025-08-22, the user wants race-week meal/fueling guidance optimized strictly for performance and is willing to eat whatever works best.
+- As of 2025-08-30, the user has a stress fracture in the foot and has been told by a doctor to take 8 weeks off running.
+- As of 2025-08-30, the user is focused on nutrition to support bone healing during injury recovery, including meal ideas for bone-healing support.

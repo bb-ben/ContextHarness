@@ -1,0 +1,166 @@
+{
+  "item_index": 2,
+  "item_id": "Dani Morales_foodbody_new_parent",
+  "item_key": "cd5a822e9b39",
+  "method": "summary",
+  "model": "gpt-5.4-mini",
+  "predicted_letter": "B",
+  "answer_via": "tool",
+  "correct": true,
+  "invalid": false,
+  "chose_distractor": false,
+  "predicted_value": "brief_one_pan",
+  "error": null,
+  "gold": {
+    "correct_letter": "B",
+    "distractor_letter": "A",
+    "has_evolved": true,
+    "generator": "foodbody-scenarios",
+    "user_id": "foodbody-scenarios/dani",
+    "preference_domain": "cooking_help_style"
+  },
+  "ordering": {
+    "policy": "chronological",
+    "n_history_sessions_in_text": 8,
+    "n_replayed": 8,
+    "text_order_monotonic": true,
+    "n_moved": 0,
+    "dropped_after_probe": [],
+    "truncated_to_last": null
+  },
+  "answer_details": {
+    "stop": "stop_condition",
+    "steps": 1,
+    "applied": []
+  },
+  "utilization": null,
+  "reference_heuristics": {
+    "shortest_option": "C",
+    "shortest_option_correct": false
+  },
+  "latency_s": 18.654,
+  "stats": {
+    "model_calls": 9,
+    "usage": {
+      "input_tokens": 4328,
+      "output_tokens": 3459,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0
+    },
+    "usage_by_phase": {
+      "summary_update": {
+        "input_tokens": 3496,
+        "output_tokens": 3374,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      },
+      "answer": {
+        "input_tokens": 832,
+        "output_tokens": 85,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      }
+    },
+    "calls_by_phase": {
+      "summary_update": 8,
+      "answer": 1
+    },
+    "served_by": {
+      "gpt-5.4-mini-2026-03-17": 9
+    },
+    "tool_calls": 1,
+    "tool_errors": 0,
+    "file_ops": 0,
+    "file_reads": 0,
+    "refusals": 0
+  },
+  "estimated_cost_usd": 0.0188115,
+  "memory_chars": {
+    "summary.md": 1900
+  },
+  "memory": null,
+  "evolution_diagnostics": null,
+  "evidence_chain": null,
+  "sessions": [
+    {
+      "index": 0,
+      "event_id": "S-0",
+      "date": "2025-06-02T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 240,
+      "output_tokens": 140,
+      "latency_s": 1.401
+    },
+    {
+      "index": 1,
+      "event_id": "S-1",
+      "date": "2025-06-08T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 313,
+      "output_tokens": 253,
+      "latency_s": 2.765
+    },
+    {
+      "index": 2,
+      "event_id": "S-2",
+      "date": "2025-06-15T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 368,
+      "output_tokens": 271,
+      "latency_s": 1.577
+    },
+    {
+      "index": 3,
+      "event_id": "S-3",
+      "date": "2025-06-22T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 414,
+      "output_tokens": 372,
+      "latency_s": 1.814
+    },
+    {
+      "index": 4,
+      "event_id": "S-4",
+      "date": "2025-07-01T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 458,
+      "output_tokens": 481,
+      "latency_s": 2.131
+    },
+    {
+      "index": 5,
+      "event_id": "S-5",
+      "date": "2025-07-10T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 514,
+      "output_tokens": 592,
+      "latency_s": 2.933
+    },
+    {
+      "index": 6,
+      "event_id": "S-6",
+      "date": "2025-07-16T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 581,
+      "output_tokens": 547,
+      "latency_s": 2.276
+    },
+    {
+      "index": 7,
+      "event_id": "S-7",
+      "date": "2025-07-24T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 608,
+      "output_tokens": 718,
+      "latency_s": 2.9
+    }
+  ]
+}

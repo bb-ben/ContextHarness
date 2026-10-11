@@ -1,0 +1,9 @@
+- Current as of 2025-09-08: User wants a gentle, kind, supportive coaching style that is practical and useful, especially right now while healing. They explicitly said the “drill-sergeant” / brutal style was less helpful and that the kind approach helped more. This supersedes the prior tough coaching preference.
+- Current as of 2025-09-03: User asked to focus on healing, not performance, because the last plan made them feel like a failure.
+- Current as of 2025-08-30: User has a stress fracture in the foot and is currently facing 8 weeks with no running. Doctor said nutrition matters for healing; user is gutted and likely needs practical recovery-focused nutrition guidance.
+- Current as of 2025-09-08: User wants bone-healing meal ideas and nutrition help in table format, still in metric.
+- Current as of 2025-08-22: User wants race-week nutrition guidance focused purely on performance; they are open to whatever foods “win,” including low-fiber, familiar carb-loading options. This may be lower priority for now given the injury/healing focus.
+- Current as of 2025-08-15: User prefers guidance presented in table format when practical, including fueling advice for long runs.
+- Current as of 2025-08-09: User is training for a sub-3:30 marathon. This goal may be on hold while healing from the stress fracture.
+- Superseded as of 2025-09-08: User previously preferred a direct, tough coaching style (“Be brutal with me”; “don’t coddle me”). This was reinforced on 2025-08-09 during feedback on a missed workout, but user now prefers a gentler, supportive approach focused on recovery/healing.
+- Current as of 2025-08-04: When providing training plans, user wants them in a weekly table and prefers distances in kilometers (km).

@@ -1,0 +1,837 @@
+{
+  "item_index": 6,
+  "item_id": "Jairo Restrepo_event77_20260326_turn1_communication_medium_preferences_142_counterfactuals.json",
+  "item_key": "0a43d1cf6c94",
+  "method": "profile",
+  "model": "gpt-5.4-mini",
+  "predicted_letter": "D",
+  "answer_via": "tool",
+  "correct": false,
+  "invalid": false,
+  "chose_distractor": true,
+  "predicted_value": "direct_pragmatic",
+  "error": null,
+  "gold": {
+    "correct_letter": "A",
+    "distractor_letter": "D",
+    "has_evolved": true,
+    "generator": "gemini-3-flash",
+    "user_id": "gemini-3-flash/user_33",
+    "preference_domain": "communication_medium_preferences"
+  },
+  "ordering": {
+    "policy": "chronological",
+    "n_history_sessions_in_text": 75,
+    "n_replayed": 75,
+    "text_order_monotonic": true,
+    "n_moved": 0,
+    "dropped_after_probe": [],
+    "truncated_to_last": null
+  },
+  "answer_details": {
+    "stop": "stop_condition",
+    "steps": 1,
+    "applied": []
+  },
+  "utilization": null,
+  "reference_heuristics": {
+    "shortest_option": "C",
+    "shortest_option_correct": false
+  },
+  "latency_s": 1627.276,
+  "stats": {
+    "model_calls": 76,
+    "usage": {
+      "input_tokens": 359532,
+      "output_tokens": 258012,
+      "cache_read_input_tokens": 6656,
+      "cache_creation_input_tokens": 0
+    },
+    "usage_by_phase": {
+      "profile_update": {
+        "input_tokens": 357032,
+        "output_tokens": 257829,
+        "cache_read_input_tokens": 6656,
+        "cache_creation_input_tokens": 0
+      },
+      "answer": {
+        "input_tokens": 2500,
+        "output_tokens": 183,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      }
+    },
+    "calls_by_phase": {
+      "profile_update": 75,
+      "answer": 1
+    },
+    "served_by": {
+      "gpt-5.4-mini-2026-03-17": 76
+    },
+    "tool_calls": 1,
+    "tool_errors": 0,
+    "file_ops": 0,
+    "file_reads": 0,
+    "refusals": 0
+  },
+  "estimated_cost_usd": 1.4312022,
+  "memory_chars": {
+    "profile.md": 6220,
+    "memory/episodes.md": 48018
+  },
+  "memory": null,
+  "evolution_diagnostics": null,
+  "evidence_chain": null,
+  "sessions": [
+    {
+      "index": 0,
+      "event_id": "S-0",
+      "date": "2025-09-28T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2664,
+      "output_tokens": 1084,
+      "latency_s": 6.361
+    },
+    {
+      "index": 1,
+      "event_id": "S-1",
+      "date": "2025-09-28T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2233,
+      "output_tokens": 1199,
+      "latency_s": 5.465
+    },
+    {
+      "index": 2,
+      "event_id": "S-2",
+      "date": "2025-10-01T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2142,
+      "output_tokens": 3220,
+      "latency_s": 12.595
+    },
+    {
+      "index": 3,
+      "event_id": "S-3",
+      "date": "2025-10-01T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3446,
+      "output_tokens": 2345,
+      "latency_s": 8.999
+    },
+    {
+      "index": 4,
+      "event_id": "S-4",
+      "date": "2025-10-01T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2808,
+      "output_tokens": 1666,
+      "latency_s": 6.804
+    },
+    {
+      "index": 5,
+      "event_id": "S-5",
+      "date": "2025-10-02T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3089,
+      "output_tokens": 1856,
+      "latency_s": 6.934
+    },
+    {
+      "index": 6,
+      "event_id": "S-6",
+      "date": "2025-10-04T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3572,
+      "output_tokens": 2928,
+      "latency_s": 11.699
+    },
+    {
+      "index": 7,
+      "event_id": "S-7",
+      "date": "2025-10-05T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3483,
+      "output_tokens": 3859,
+      "latency_s": 14.317
+    },
+    {
+      "index": 8,
+      "event_id": "S-8",
+      "date": "2025-10-06T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4807,
+      "output_tokens": 2216,
+      "latency_s": 8.057
+    },
+    {
+      "index": 9,
+      "event_id": "S-9",
+      "date": "2025-10-07T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4348,
+      "output_tokens": 3566,
+      "latency_s": 13.97
+    },
+    {
+      "index": 10,
+      "event_id": "S-10",
+      "date": "2025-10-10T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5018,
+      "output_tokens": 2638,
+      "latency_s": 10.096
+    },
+    {
+      "index": 11,
+      "event_id": "S-11",
+      "date": "2025-10-11T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5207,
+      "output_tokens": 2928,
+      "latency_s": 10.221
+    },
+    {
+      "index": 12,
+      "event_id": "S-12",
+      "date": "2025-10-11T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5049,
+      "output_tokens": 3011,
+      "latency_s": 10.981
+    },
+    {
+      "index": 13,
+      "event_id": "S-13",
+      "date": "2025-10-12T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5615,
+      "output_tokens": 3218,
+      "latency_s": 11.331
+    },
+    {
+      "index": 14,
+      "event_id": "S-14",
+      "date": "2025-10-14T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 6576,
+      "output_tokens": 3298,
+      "latency_s": 11.97
+    },
+    {
+      "index": 15,
+      "event_id": "S-15",
+      "date": "2025-10-15T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5581,
+      "output_tokens": 3199,
+      "latency_s": 11.324
+    },
+    {
+      "index": 16,
+      "event_id": "S-16",
+      "date": "2025-10-15T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4159,
+      "output_tokens": 2214,
+      "latency_s": 10.241
+    },
+    {
+      "index": 17,
+      "event_id": "S-17",
+      "date": "2025-10-18T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3430,
+      "output_tokens": 2215,
+      "latency_s": 10.068
+    },
+    {
+      "index": 18,
+      "event_id": "S-18",
+      "date": "2025-10-20T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 2574,
+      "output_tokens": 1371,
+      "latency_s": 6.131
+    },
+    {
+      "index": 19,
+      "event_id": "S-19",
+      "date": "2025-10-26T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3585,
+      "output_tokens": 2080,
+      "latency_s": 9.882
+    },
+    {
+      "index": 20,
+      "event_id": "S-20",
+      "date": "2025-10-27T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3351,
+      "output_tokens": 1854,
+      "latency_s": 8.153
+    },
+    {
+      "index": 21,
+      "event_id": "S-21",
+      "date": "2025-10-28T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4368,
+      "output_tokens": 2889,
+      "latency_s": 11.983
+    },
+    {
+      "index": 22,
+      "event_id": "S-22",
+      "date": "2025-10-28T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4471,
+      "output_tokens": 2663,
+      "latency_s": 11.417
+    },
+    {
+      "index": 23,
+      "event_id": "S-23",
+      "date": "2025-10-30T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 3868,
+      "output_tokens": 2335,
+      "latency_s": 9.131
+    },
+    {
+      "index": 24,
+      "event_id": "S-24",
+      "date": "2025-10-30T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4349,
+      "output_tokens": 2511,
+      "latency_s": 9.119
+    },
+    {
+      "index": 25,
+      "event_id": "S-25",
+      "date": "2025-11-01T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4824,
+      "output_tokens": 2690,
+      "latency_s": 9.204
+    },
+    {
+      "index": 26,
+      "event_id": "S-26",
+      "date": "2025-11-02T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4918,
+      "output_tokens": 2923,
+      "latency_s": 9.929
+    },
+    {
+      "index": 27,
+      "event_id": "S-27",
+      "date": "2025-11-02T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4873,
+      "output_tokens": 2995,
+      "latency_s": 10.38
+    },
+    {
+      "index": 28,
+      "event_id": "S-28",
+      "date": "2025-11-03T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5887,
+      "output_tokens": 3241,
+      "latency_s": 10.578
+    },
+    {
+      "index": 29,
+      "event_id": "S-29",
+      "date": "2025-11-04T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5491,
+      "output_tokens": 3206,
+      "latency_s": 11.246
+    },
+    {
+      "index": 30,
+      "event_id": "S-30",
+      "date": "2025-11-04T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4081,
+      "output_tokens": 3178,
+      "latency_s": 10.923
+    },
+    {
+      "index": 31,
+      "event_id": "S-31",
+      "date": "2025-11-05T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5616,
+      "output_tokens": 3696,
+      "latency_s": 12.847
+    },
+    {
+      "index": 32,
+      "event_id": "S-32",
+      "date": "2025-11-05T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4119,
+      "output_tokens": 3773,
+      "latency_s": 13.809
+    },
+    {
+      "index": 33,
+      "event_id": "S-33",
+      "date": "2025-11-05T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4742,
+      "output_tokens": 3416,
+      "latency_s": 12.226
+    },
+    {
+      "index": 34,
+      "event_id": "S-34",
+      "date": "2025-11-06T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4754,
+      "output_tokens": 3527,
+      "latency_s": 12.611
+    },
+    {
+      "index": 35,
+      "event_id": "S-35",
+      "date": "2025-11-06T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5054,
+      "output_tokens": 5257,
+      "latency_s": 17.964
+    },
+    {
+      "index": 36,
+      "event_id": "S-36",
+      "date": "2025-11-09T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4936,
+      "output_tokens": 4022,
+      "latency_s": 13.46
+    },
+    {
+      "index": 37,
+      "event_id": "S-37",
+      "date": "2025-11-09T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4215,
+      "output_tokens": 3621,
+      "latency_s": 12.885
+    },
+    {
+      "index": 38,
+      "event_id": "S-38",
+      "date": "2025-11-11T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5722,
+      "output_tokens": 4768,
+      "latency_s": 15.427
+    },
+    {
+      "index": 39,
+      "event_id": "S-39",
+      "date": "2025-11-13T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4876,
+      "output_tokens": 3588,
+      "latency_s": 11.293
+    },
+    {
+      "index": 40,
+      "event_id": "S-40",
+      "date": "2025-11-13T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4616,
+      "output_tokens": 3494,
+      "latency_s": 11.352
+    },
+    {
+      "index": 41,
+      "event_id": "S-41",
+      "date": "2025-11-13T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5138,
+      "output_tokens": 3765,
+      "latency_s": 13.953
+    },
+    {
+      "index": 42,
+      "event_id": "S-42",
+      "date": "2025-11-14T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5580,
+      "output_tokens": 3633,
+      "latency_s": 12.873
+    },
+    {
+      "index": 43,
+      "event_id": "S-43",
+      "date": "2025-11-14T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5622,
+      "output_tokens": 6253,
+      "latency_s": 22.246
+    },
+    {
+      "index": 44,
+      "event_id": "S-44",
+      "date": "2025-11-15T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5357,
+      "output_tokens": 3868,
+      "latency_s": 13.765
+    },
+    {
+      "index": 45,
+      "event_id": "S-45",
+      "date": "2025-11-15T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4294,
+      "output_tokens": 3823,
+      "latency_s": 15.182
+    },
+    {
+      "index": 46,
+      "event_id": "S-46",
+      "date": "2025-11-15T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5496,
+      "output_tokens": 3706,
+      "latency_s": 13.804
+    },
+    {
+      "index": 47,
+      "event_id": "S-47",
+      "date": "2025-11-15T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5200,
+      "output_tokens": 3854,
+      "latency_s": 13.482
+    },
+    {
+      "index": 48,
+      "event_id": "S-48",
+      "date": "2025-11-16T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5335,
+      "output_tokens": 3900,
+      "latency_s": 12.685
+    },
+    {
+      "index": 49,
+      "event_id": "S-49",
+      "date": "2025-11-19T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5233,
+      "output_tokens": 3985,
+      "latency_s": 2.966
+    },
+    {
+      "index": 50,
+      "event_id": "S-50",
+      "date": "2025-11-19T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4365,
+      "output_tokens": 3799,
+      "latency_s": 13.741
+    },
+    {
+      "index": 51,
+      "event_id": "S-51",
+      "date": "2025-11-20T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4978,
+      "output_tokens": 4081,
+      "latency_s": 14.691
+    },
+    {
+      "index": 52,
+      "event_id": "S-52",
+      "date": "2025-11-20T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4390,
+      "output_tokens": 5252,
+      "latency_s": 20.627
+    },
+    {
+      "index": 53,
+      "event_id": "S-53",
+      "date": "2025-11-21T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5214,
+      "output_tokens": 3688,
+      "latency_s": 316.997
+    },
+    {
+      "index": 54,
+      "event_id": "S-54",
+      "date": "2025-11-21T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4449,
+      "output_tokens": 3485,
+      "latency_s": 15.811
+    },
+    {
+      "index": 55,
+      "event_id": "S-55",
+      "date": "2025-11-26T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 6715,
+      "output_tokens": 4008,
+      "latency_s": 318.808
+    },
+    {
+      "index": 56,
+      "event_id": "S-56",
+      "date": "2025-11-28T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5633,
+      "output_tokens": 4014,
+      "latency_s": 19.287
+    },
+    {
+      "index": 57,
+      "event_id": "S-57",
+      "date": "2025-11-28T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4414,
+      "output_tokens": 3834,
+      "latency_s": 17.874
+    },
+    {
+      "index": 58,
+      "event_id": "S-58",
+      "date": "2025-11-29T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5616,
+      "output_tokens": 4180,
+      "latency_s": 19.301
+    },
+    {
+      "index": 59,
+      "event_id": "S-59",
+      "date": "2025-11-29T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5727,
+      "output_tokens": 4164,
+      "latency_s": 17.919
+    },
+    {
+      "index": 60,
+      "event_id": "S-60",
+      "date": "2025-11-30T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 6286,
+      "output_tokens": 4006,
+      "latency_s": 17.86
+    },
+    {
+      "index": 61,
+      "event_id": "S-61",
+      "date": "2025-12-02T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5866,
+      "output_tokens": 3881,
+      "latency_s": 18.215
+    },
+    {
+      "index": 62,
+      "event_id": "S-62",
+      "date": "2025-12-02T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 6029,
+      "output_tokens": 4024,
+      "latency_s": 18.46
+    },
+    {
+      "index": 63,
+      "event_id": "S-63",
+      "date": "2025-12-05T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5395,
+      "output_tokens": 4374,
+      "latency_s": 19.629
+    },
+    {
+      "index": 64,
+      "event_id": "S-64",
+      "date": "2025-12-05T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5946,
+      "output_tokens": 4157,
+      "latency_s": 20.273
+    },
+    {
+      "index": 65,
+      "event_id": "S-65",
+      "date": "2025-12-05T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 6037,
+      "output_tokens": 4605,
+      "latency_s": 21.916
+    },
+    {
+      "index": 66,
+      "event_id": "S-66",
+      "date": "2025-12-05T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 6001,
+      "output_tokens": 3891,
+      "latency_s": 17.906
+    },
+    {
+      "index": 67,
+      "event_id": "S-67",
+      "date": "2025-12-05T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4600,
+      "output_tokens": 4113,
+      "latency_s": 22.406
+    },
+    {
+      "index": 68,
+      "event_id": "S-68",
+      "date": "2025-12-07T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 4798,
+      "output_tokens": 3010,
+      "latency_s": 14.418
+    },
+    {
+      "index": 69,
+      "event_id": "S-69",
+      "date": "2025-12-09T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5989,
+      "output_tokens": 3225,
+      "latency_s": 14.802
+    },
+    {
+      "index": 70,
+      "event_id": "S-70",
+      "date": "2025-12-10T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 6129,
+      "output_tokens": 3474,
+      "latency_s": 15.586
+    },
+    {
+      "index": 71,
+      "event_id": "S-71",
+      "date": "2025-12-10T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5483,
+      "output_tokens": 3691,
+      "latency_s": 16.051
+    },
+    {
+      "index": 72,
+      "event_id": "S-72",
+      "date": "2025-12-11T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 6348,
+      "output_tokens": 5056,
+      "latency_s": 24.622
+    },
+    {
+      "index": 73,
+      "event_id": "S-73",
+      "date": "2025-12-13T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5805,
+      "output_tokens": 3682,
+      "latency_s": 16.552
+    },
+    {
+      "index": 74,
+      "event_id": "S-74",
+      "date": "2025-12-13T06:52:18.974225",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 5703,
+      "output_tokens": 5590,
+      "latency_s": 27.344
+    }
+  ]
+}

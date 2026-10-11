@@ -1,0 +1,156 @@
+{
+  "item_index": 1,
+  "item_id": "Tom Okafor_foodbody_injury_coaching",
+  "item_key": "65fd5cd87d8a",
+  "method": "summary",
+  "model": "gpt-5.4-mini",
+  "predicted_letter": "B",
+  "answer_via": "tool",
+  "correct": true,
+  "invalid": false,
+  "chose_distractor": false,
+  "predicted_value": "gentle_recovery",
+  "error": null,
+  "gold": {
+    "correct_letter": "B",
+    "distractor_letter": "A",
+    "has_evolved": true,
+    "generator": "foodbody-scenarios",
+    "user_id": "foodbody-scenarios/tom",
+    "preference_domain": "coaching_style"
+  },
+  "ordering": {
+    "policy": "chronological",
+    "n_history_sessions_in_text": 7,
+    "n_replayed": 7,
+    "text_order_monotonic": true,
+    "n_moved": 0,
+    "dropped_after_probe": [],
+    "truncated_to_last": null
+  },
+  "answer_details": {
+    "stop": "stop_condition",
+    "steps": 1,
+    "applied": []
+  },
+  "utilization": null,
+  "reference_heuristics": {
+    "shortest_option": "C",
+    "shortest_option_correct": false
+  },
+  "latency_s": 14.06,
+  "stats": {
+    "model_calls": 8,
+    "usage": {
+      "input_tokens": 3607,
+      "output_tokens": 2620,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0
+    },
+    "usage_by_phase": {
+      "summary_update": {
+        "input_tokens": 2830,
+        "output_tokens": 2532,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      },
+      "answer": {
+        "input_tokens": 777,
+        "output_tokens": 88,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      }
+    },
+    "calls_by_phase": {
+      "summary_update": 7,
+      "answer": 1
+    },
+    "served_by": {
+      "gpt-5.4-mini-2026-03-17": 8
+    },
+    "tool_calls": 1,
+    "tool_errors": 0,
+    "file_ops": 0,
+    "file_reads": 0,
+    "refusals": 0
+  },
+  "estimated_cost_usd": 0.01449525,
+  "memory_chars": {
+    "summary.md": 1470
+  },
+  "memory": null,
+  "evolution_diagnostics": null,
+  "evidence_chain": null,
+  "sessions": [
+    {
+      "index": 0,
+      "event_id": "S-0",
+      "date": "2025-08-04T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 258,
+      "output_tokens": 133,
+      "latency_s": 1.162
+    },
+    {
+      "index": 1,
+      "event_id": "S-1",
+      "date": "2025-08-09T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 294,
+      "output_tokens": 261,
+      "latency_s": 1.595
+    },
+    {
+      "index": 2,
+      "event_id": "S-2",
+      "date": "2025-08-15T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 368,
+      "output_tokens": 348,
+      "latency_s": 1.898
+    },
+    {
+      "index": 3,
+      "event_id": "S-3",
+      "date": "2025-08-22T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 371,
+      "output_tokens": 447,
+      "latency_s": 2.276
+    },
+    {
+      "index": 4,
+      "event_id": "S-4",
+      "date": "2025-08-30T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 427,
+      "output_tokens": 517,
+      "latency_s": 2.382
+    },
+    {
+      "index": 5,
+      "event_id": "S-5",
+      "date": "2025-09-03T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 537,
+      "output_tokens": 387,
+      "latency_s": 1.889
+    },
+    {
+      "index": 6,
+      "event_id": "S-6",
+      "date": "2025-09-08T09:00:00.000001",
+      "file_ops": 0,
+      "model_calls": 1,
+      "input_tokens": 575,
+      "output_tokens": 439,
+      "latency_s": 1.941
+    }
+  ]
+}

@@ -1,0 +1,318 @@
+{
+  "item_id": "Jairo Restrepo_event77_20260326_turn1_communication_medium_preferences_142_counterfactuals.json",
+  "judge_model": "gpt-5.4-mini",
+  "memory_chars": 6253,
+  "attributes": [
+    {
+      "attribute": "preferred_response_format",
+      "current": "executive_summary_with_strategic_tradeoffs",
+      "original": "structured_numbered_steps",
+      "changed": true,
+      "memory_value": "step-by-step/checklists; big-picture first in some contexts",
+      "current_match": "contradicts",
+      "original_still_current": true,
+      "change_recorded": false,
+      "evidence": "O-16.2, O-57.2, O-71.3: 'clear checklists and exact sequences work best'; O-9.1: 'big picture first, then structured steps'",
+      "votes": [
+        "contradicts",
+        "contradicts",
+        "contradicts"
+      ]
+    },
+    {
+      "attribute": "emotional_tone",
+      "current": "diplomatic_and_authoritative",
+      "original": "direct_pragmatic",
+      "changed": true,
+      "memory_value": "measured, professional, respectful, firm",
+      "current_match": "matches",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "O-17.3, O-72.1, O-69.2, O-23.3: 'persuasive but measured, professional delivery'; 'firm but not radical'; 'calm and persuasive'; 'leader-like delivery'",
+      "votes": [
+        "matches",
+        "partial",
+        "matches"
+      ]
+    },
+    {
+      "attribute": "explanation_approach",
+      "current": "impact_assessment_first",
+      "original": "principles_first_then_examples",
+      "changed": true,
+      "memory_value": "principles/big-picture first, then examples and steps",
+      "current_match": "contradicts",
+      "original_still_current": true,
+      "change_recorded": false,
+      "evidence": "O-23.1: 'broad constitutional principle first, then numbered steps and cases'; O-9.1: 'big picture first... story/case-study explanations'; O-20.1, O-63.2",
+      "votes": [
+        "contradicts",
+        "partial",
+        "contradicts"
+      ]
+    },
+    {
+      "attribute": "example_preference",
+      "current": "real_world_analogies",
+      "changed": false,
+      "memory_value": "real-world analogies and stories",
+      "current_match": "matches",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "O-9.1: 'plain-language analogies'; O-38.1, O-49.1, O-60.1: 'story/case-study explanations'; local examples like health-clinic data, murals, food prices",
+      "votes": [
+        "matches",
+        "matches",
+        "matches"
+      ]
+    },
+    {
+      "attribute": "boundary_setting_voice",
+      "current": "value_based_reasoning",
+      "changed": false,
+      "memory_value": "morally serious, values-based framing",
+      "current_match": "matches",
+      "original_still_current": false,
+      "change_recorded": false,
+      "evidence": "O-55.2, O-65.3: 'morally serious framing'; O-71.1: 'popular sovereignty and neighborhood survival'",
+      "votes": [
+        "matches",
+        "matches",
+        "matches"
+      ]
+    }
+  ],
+  "current_fidelity": 0.6,
+  "changed_fidelity": 0.333,
+  "stale": 2,
+  "changes_recorded": 0,
+  "n_attributes": 5,
+  "n_changed": 3,
+  "ungraded": [],
+  "repeats": 3,
+  "agreement": 0.867,
+  "current_fidelity_range": [
+    0.6,
+    0.6
+  ],
+  "estimated_cost_usd": 0.1152,
+  "runs": [
+    {
+      "item_id": "Jairo Restrepo_event77_20260326_turn1_communication_medium_preferences_142_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 6253,
+      "attributes": [
+        {
+          "attribute": "preferred_response_format",
+          "current": "executive_summary_with_strategic_tradeoffs",
+          "original": "structured_numbered_steps",
+          "changed": true,
+          "memory_value": "step-by-step/checklists; big-picture first in some contexts",
+          "current_match": "contradicts",
+          "original_still_current": true,
+          "change_recorded": false,
+          "evidence": "O-16.2, O-57.2, O-71.3: 'clear checklists and exact sequences work best'; O-9.1: 'big picture first, then structured steps'"
+        },
+        {
+          "attribute": "emotional_tone",
+          "current": "diplomatic_and_authoritative",
+          "original": "direct_pragmatic",
+          "changed": true,
+          "memory_value": "measured, professional, respectful, firm",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "O-17.3, O-72.1, O-69.2, O-23.3: 'persuasive but measured, professional delivery'; 'firm but not radical'; 'calm and persuasive'; 'leader-like delivery'"
+        },
+        {
+          "attribute": "explanation_approach",
+          "current": "impact_assessment_first",
+          "original": "principles_first_then_examples",
+          "changed": true,
+          "memory_value": "principles/big-picture first, then examples and steps",
+          "current_match": "contradicts",
+          "original_still_current": true,
+          "change_recorded": false,
+          "evidence": "O-23.1: 'broad constitutional principle first, then numbered steps and cases'; O-9.1: 'big picture first... story/case-study explanations'; O-20.1, O-63.2"
+        },
+        {
+          "attribute": "example_preference",
+          "current": "real_world_analogies",
+          "changed": false,
+          "memory_value": "real-world analogies and stories",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "O-9.1: 'plain-language analogies'; O-38.1, O-49.1, O-60.1: 'story/case-study explanations'; local examples like health-clinic data, murals, food prices"
+        },
+        {
+          "attribute": "boundary_setting_voice",
+          "current": "value_based_reasoning",
+          "changed": false,
+          "memory_value": "morally serious, values-based framing",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "O-55.2, O-65.3: 'morally serious framing'; O-71.1: 'popular sovereignty and neighborhood survival'"
+        }
+      ],
+      "current_fidelity": 0.6,
+      "changed_fidelity": 0.333,
+      "stale": 2,
+      "changes_recorded": 0,
+      "n_attributes": 5,
+      "n_changed": 3,
+      "ungraded": [],
+      "estimated_cost_usd": 0.04615
+    },
+    {
+      "item_id": "Jairo Restrepo_event77_20260326_turn1_communication_medium_preferences_142_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 6253,
+      "attributes": [
+        {
+          "attribute": "preferred_response_format",
+          "current": "executive_summary_with_strategic_tradeoffs",
+          "original": "structured_numbered_steps",
+          "changed": true,
+          "memory_value": "structured steps and checklists",
+          "current_match": "contradicts",
+          "original_still_current": true,
+          "change_recorded": false,
+          "evidence": "O-16.2/O-17.1: \u201cfast, practical, step-by-step help\u201d; O-57.2/O-68.3/O-71.3: \u201cclear checklists and exact sequences work best\u201d"
+        },
+        {
+          "attribute": "emotional_tone",
+          "current": "diplomatic_and_authoritative",
+          "original": "direct_pragmatic",
+          "changed": true,
+          "memory_value": "measured, professional, respectful; firm but not authoritarian",
+          "current_match": "partial",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "O-17.3/O-69.2: \u201cpersuasive but measured, professional delivery\u201d; O-72.1: \u201cformal, consensus-building hearing openings that sound firm but not radical\u201d"
+        },
+        {
+          "attribute": "explanation_approach",
+          "current": "impact_assessment_first",
+          "original": "principles_first_then_examples",
+          "changed": true,
+          "memory_value": "big-picture first in some settings, but principle-first for panels",
+          "current_match": "partial",
+          "original_still_current": true,
+          "change_recorded": false,
+          "evidence": "O-9.1/O-20.2: \u201cbig picture first\u201d; O-23.1: \u201cbroad constitutional principle first, then numbered steps and cases\u201d; O-69.1: \u201cevidence-first talking points\u201d"
+        },
+        {
+          "attribute": "example_preference",
+          "current": "real_world_analogies",
+          "changed": false,
+          "memory_value": "real-world analogies, stories, and case studies",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "O-9.1/O-10.1/O-13.1/O-41.1: \u201cplain-language analogies\u201d; \u201cstory/case-study explanations\u201d"
+        },
+        {
+          "attribute": "boundary_setting_voice",
+          "current": "value_based_reasoning",
+          "changed": false,
+          "memory_value": "morally serious, value-based reasoning",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "O-55.2/O-65.3: \u201cmorally serious framing\u201d; O-63.2: \u201cbalanced acknowledgment of the other side's claims\u201d"
+        }
+      ],
+      "current_fidelity": 0.6,
+      "changed_fidelity": 0.333,
+      "stale": 2,
+      "changes_recorded": 0,
+      "n_attributes": 5,
+      "n_changed": 3,
+      "ungraded": [],
+      "estimated_cost_usd": 0.03626
+    },
+    {
+      "item_id": "Jairo Restrepo_event77_20260326_turn1_communication_medium_preferences_142_counterfactuals.json",
+      "judge_model": "gpt-5.4-mini",
+      "memory_chars": 6253,
+      "attributes": [
+        {
+          "attribute": "preferred_response_format",
+          "current": "executive_summary_with_strategic_tradeoffs",
+          "original": "structured_numbered_steps",
+          "changed": true,
+          "memory_value": "step-by-step/checklists; big picture then steps",
+          "current_match": "contradicts",
+          "original_still_current": true,
+          "change_recorded": false,
+          "evidence": "[O-16.2, O-17.1, O-20.3] \"fast, practical, step-by-step help\"; [O-57.2, O-57.3] \"clear checklists and exact sequences\"; [O-68.3, O-69.1, O-71.2, O-71.3] \"short first move, then ... step-by-step plan\""
+        },
+        {
+          "attribute": "emotional_tone",
+          "current": "diplomatic_and_authoritative",
+          "original": "direct_pragmatic",
+          "changed": true,
+          "memory_value": "measured, professional, respectful; firm but not shouty",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "[O-17.3, O-23.3, O-64.3, O-69.2, O-72.3, O-73.2] \"persuasive but measured, professional delivery\"; [O-66.2, O-73.1, O-74.1, O-74.2, O-74.3] \"high-energy... still sound respectful to elders/authority\""
+        },
+        {
+          "attribute": "explanation_approach",
+          "current": "impact_assessment_first",
+          "original": "principles_first_then_examples",
+          "changed": true,
+          "memory_value": "principles/big picture first, then steps/examples",
+          "current_match": "contradicts",
+          "original_still_current": true,
+          "change_recorded": false,
+          "evidence": "[O-9.1, O-10.1, O-13.1, O-17.2, O-20.2, O-28.2, O-31.1, O-38.1, O-41.1, O-66.2, O-73.1, O-74.1, O-74.2, O-74.3] \"big picture first, then structured steps\"; [O-23.1, O-24.2, O-63.2, O-64.2, O-73.2] \"broad constitutional principle first, then numbered steps and cases\""
+        },
+        {
+          "attribute": "example_preference",
+          "current": "real_world_analogies",
+          "changed": false,
+          "memory_value": "plain-language analogies and case studies",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "[O-9.1, O-10.1, O-13.1, O-17.2, O-20.2, O-28.2, O-31.1, O-38.1] \"plain-language analogies, memorable framing, historical precedents, and story/case-study explanations\""
+        },
+        {
+          "attribute": "boundary_setting_voice",
+          "current": "value_based_reasoning",
+          "changed": false,
+          "memory_value": "morally serious, values-based framing",
+          "current_match": "matches",
+          "original_still_current": false,
+          "change_recorded": false,
+          "evidence": "[O-55.2, O-65.3] \"morally serious framing\"; [O-71.1, O-71.2, O-71.3] \"popular sovereignty and neighborhood survival\"; [O-19.1, O-20.1, O-29.1, O-39.1, O-63.2, O-68.2, O-70.2, O-73.2] balanced value-based acknowledgment"
+        }
+      ],
+      "current_fidelity": 0.6,
+      "changed_fidelity": 0.333,
+      "stale": 2,
+      "changes_recorded": 0,
+      "n_attributes": 5,
+      "n_changed": 3,
+      "ungraded": [],
+      "estimated_cost_usd": 0.03279
+    }
+  ],
+  "on_supported_changes": {
+    "supported_attributes": [
+      "preferred_response_format",
+      "emotional_tone",
+      "explanation_approach"
+    ],
+    "dropped": [],
+    "current_fidelity": 0.6,
+    "changed_fidelity": 0.333,
+    "stale": 2,
+    "changes_recorded": 0,
+    "n_changed": 3
+  }
+}
