@@ -1,0 +1,62 @@
+{
+  "Hannah Brooks_foodbody_long_retirement": {
+    "must_contain": [
+      "Is allergic to peanuts",
+      "Cooks for one person now (the children left home)",
+      "Is retired",
+      "Is on a budget (fixed income) and wants cheap ingredients",
+      "Has time and enjoys slower cooking projects (braising, bread)"
+    ],
+    "must_not_assert": [
+      "Cooks for a family of three",
+      "Likes splurging on premium ingredients",
+      "Needs dinners done in 30 minutes"
+    ],
+    "reply_should": [
+      "Sizes meals for one person",
+      "Uses budget-friendly ingredients",
+      "Includes at least one slower, hands-on cooking project",
+      "Contains no peanuts"
+    ]
+  },
+  "Ade Okonkwo_foodbody_long_pregnancy": {
+    "must_contain": [
+      "Is pregnant",
+      "Is lactose intolerant",
+      "Avoids pregnancy-unsafe foods (raw fish, cold deli meat, soft unpasteurized cheese)",
+      "Wants gentle encouragement rather than pushing",
+      "No calorie cutting or macro targets now",
+      "Has low iron"
+    ],
+    "must_not_assert": [
+      "Wants a calorie deficit to lean out",
+      "Wants blunt pushing and accountability",
+      "Wants 140 g protein or other macro targets"
+    ],
+    "reply_should": [
+      "Contains no raw fish, cold deli meat or soft unpasteurized cheese",
+      "Is dairy-free",
+      "Has no calorie deficit or macro targets",
+      "Is gentle in tone"
+    ]
+  },
+  "Sam Rivera_foodbody_long_night_shifts": {
+    "must_contain": [
+      "Is vegan",
+      "Is a nurse working night shifts (7pm to 7am, three nights a week)",
+      "Wants short, bullet-point answers now",
+      "Needs portable meals that don't need reheating (unreliable microwave)",
+      "Eats around a night-shift schedule"
+    ],
+    "must_not_assert": [
+      "Wants long, detailed science explanations as the default",
+      "Wants elaborate weekend cooking projects"
+    ],
+    "reply_should": [
+      "Is short (a brief list)",
+      "Suggests only vegan food",
+      "Suggests meals that can be eaten cold or without reheating",
+      "Fits a night shift (portable, timed for the shift)"
+    ]
+  }
+}
