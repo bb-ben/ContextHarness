@@ -158,3 +158,22 @@ def test_answer_model_and_judge_share_one_cost_cap(monkeypatch):
         judge.complete(request)
     with pytest.raises(QuotaExhausted):
         answer.complete(request)
+
+
+def test_memconflict_keeps_answered_rows_when_a_run_is_stopped(tmp_path):
+    import pytest
+
+    from context_harness.models.base import PauseRun
+
+    seen = []
+    base = _profile_script(seen)
+
+    def script(req):
+        if req.phase == "profile_update" and ev(req) == 3:
+            raise PauseRun("cost cap")
+        return base(req)
+
+    with pytest.raises(PauseRun):
+        mc.run_person(_person(), "profile", ScriptedModel(script), ScriptedModel(base), tmp_path, per_person=6)
+    kept = [json.loads(line)["question_id"] for line in (tmp_path / "questions.jsonl").read_text().splitlines()]
+    assert kept == ["Q1", "Q2", "Q3"]  # answered before the stop

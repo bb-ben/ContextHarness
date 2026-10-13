@@ -114,6 +114,7 @@ def run_person(person: dict[str, Any], method_name: str, model: ModelAdapter, ju
     method, trace = open_method(method_name, model, out_dir)
     questions = sample_questions(person, per_person)
     rows = []
+    saved = (out_dir / "questions.jsonl").open("w")  # row by row, so a run stopped by its cap keeps them
     for session in sessions_of(person):
         method.observe(session)
         for q in questions.get(session.index, []):
@@ -137,8 +138,10 @@ def run_person(person: dict[str, Any], method_name: str, model: ModelAdapter, ju
                 "reason": graded.get("reason", ""), "answer_cost_usd": round(answer_cost, 5),
                 "judge_cost_usd": round(judge_cost, 5),
             })
+            saved.write(json.dumps(rows[-1]) + "\n")
+            saved.flush()
     trace.close()
-    (out_dir / "questions.jsonl").write_text("".join(json.dumps(r) + "\n" for r in rows))
+    saved.close()
     return rows
 
 

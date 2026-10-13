@@ -620,7 +620,55 @@ cites observation IDs. Every version of the profile is kept as the change histor
   the format, and the replies follow it. That format change is evenly split in the
   person's own messages (24 sessions against 23), so it is a weak test either way.
 
+### Two outside benchmarks: MemConflict and DynamicMem
+
+Both benchmarks replay a long history through the profile or the summary and ask
+questions answered from that memory alone. MemConflict has about 52 chat sessions per
+person and asks whether the right memory wins when memories disagree. DynamicMem has
+about 15 months of app logs per user and asks for current habits and for service that
+depends on them. See the README for setup, and
+[`examples/benchmarks_pilot/RESULTS.txt`](../examples/benchmarks_pilot/RESULTS.txt).
+
+**Pilot** (gpt-5.4-mini; MemConflict: 2 people, 30 questions each; DynamicMem: 1 user,
+5 checkpoints):
+
+| | Profile | Summary |
+|---|---|---|
+| MemConflict: dynamic (a real update) | 0.60 | 0.50 |
+| MemConflict: static (a false later claim) | 0.05 | 0.05 |
+| MemConflict: conditional (a preference under a condition) | 0.21 | 0.05 |
+| DynamicMem: state completion | 0.10 | 0.24 |
+| DynamicMem: personalized service | 0.34 | 0.29 |
+
+- **Most misses are retention, not reasoning.** The evidence for the answer was in
+  memory for 3 of 20 static questions and 7 of 19 conditional ones for the profile (2
+  and 1 for the summary). When it was there, dynamic answers were right about 70% of
+  the time. Background facts (name, birthplace, degree, siblings) and "when they like
+  X" don't survive in a document organized around how to help.
+- **Newest wins, even when the newest claim is false.** Static conflicts plant a later
+  wrong statement; both designs adopt it. Neither keeps "these two sources disagree".
+- **The profile has no place for routines.** DynamicMem's state questions are
+  schedules (weekly budget review, Sundays 09:30, home office). The profile's
+  sections don't hold them, so it scores below the summary on state completion even
+  though it serves the user slightly better.
+- **Both memories overflowed their 8,000-character limit**, and the hard cut dropped
+  the end. For the profile, that means Right now and Changes. The profile was cut on
+  26 of 53 MemConflict events and 44 of 68 DynamicMem events; the summary on 51 of 53
+  and 56 of 67. On the earlier FoodBody runs this was 11% of profile updates.
+  - Asking the model afterwards to rewrite under the limit trims only 5–10%, even
+    with a concrete target.
+  - Showing the current length and limit in every update prompt, plus the shorten
+    step, halved the profile's cuts (13 of 53) but left the summary's high (38 of
+    52).
+  - On MemConflict person 0 the fix did not change the profile's accuracy (0.25
+    before, 0.22 after, 30 questions), which fits the retention diagnosis above.
+
 ## Known gaps
+
+- **Long histories outgrow an 8,000-character memory.** On MemConflict and DynamicMem
+  both designs keep too little: background facts, conditional preferences, routines.
+  A cut-off tail is the worst way to lose it. Candidates: a Routines section, a larger
+  limit for long histories, and keeping "sources disagree" instead of newest-wins.
 
 - **The archive itself has no rollover yet** (200,000 chars). That's enough for
   HorizonBench, but not for years of FoodBody data.

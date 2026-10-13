@@ -1,0 +1,58 @@
+===== PILOT (code d6d43ce; memory cut at 8,000 chars as before) =====
+MemConflict (answer accuracy 0-1; mean over people, range in brackets)
+design    people    n  overall           dynamic           static            conditional       update aware      conflict noticed  memory has evidence
+profile        2   59  0.29 (0.25-0.33)  0.60 (0.55-0.65)  0.05 (0.00-0.10)  0.21 (0.20-0.22)  0.60 (0.50-0.70)  0.30              0.43 (0.33-0.52)
+summary        2   59  0.20 (0.19-0.22)  0.50 (0.45-0.55)  0.05 (0.00-0.10)  0.05 (0.00-0.10)  0.65 (0.60-0.70)  0.50 (0.30-0.70)  0.29 (0.28-0.30)
+  n per type: profile: 20/20/19, summary: 20/20/19
+
+DynamicMem (0-1; DynamicMem's own evaluator; mean over users, range in brackets)
+design    users  state_completion       personalized_service   state_value_f1        
+profile       1  0.10                   0.34                   0.04                  
+summary       1  0.24                   0.29                   0.12                  
+
+Cost from traces and our judge (DynamicMem's evaluator not included): dynamicmem profile $2.03, dynamicmem summary $1.16, memconflict profile $3.21, memconflict summary $2.21; total $8.63
+
+===== AFTER THE SIZE-AWARE FIX (code 3f4cffe), MemConflict person 0, profile only =====
+MemConflict (answer accuracy 0-1; mean over people, range in brackets)
+design    people    n  overall           dynamic           static            conditional       update aware      conflict noticed  memory has evidence
+profile        1   30  0.22              0.60              0.00              0.05              0.80              0.40              0.37
+  n per type: profile: 10/10/10
+
+Cost from traces and our judge (DynamicMem's evaluator not included): memconflict profile $2.20; total $2.20
+
+===== WHERE THE MISSES COME FROM (MemConflict, all questions above) =====
+               evidence for the reference answer present in memory / right when present / answers "can't confirm"
+profile pilot  dynamic 15/20, 0.70, 6   | static 3/20, 0.33, 6   | conditional 7/19, 0.57, 13
+summary pilot  dynamic 14/20, 0.71, 10  | static 2/20, 0.25, 10  | conditional 1/19, 1.00, 18
+profile fixed  dynamic 9/10, 0.61, 1    | static 1/10, 0.00, 4   | conditional 1/10, 0.50, 9
+
+===== MEMORY OVER ITS 8,000-CHARACTER LIMIT (share of updates cut) =====
+                         pilot (hard cut)          size shown in prompt + shorten step (3f4cffe)
+MemConflict profile      26/53 (person 0)          13/53 (shortening needed on 17)
+MemConflict summary      51/53 (person 0)          38/52 (shortening needed on 40)
+DynamicMem profile       44/68                     not rerun
+DynamicMem summary       56/67                     not rerun
+Earlier FoodBody runs    profile 91/804, summary 3/315
+
+===== DYNAMICMEM PER CHECKPOINT (state completion / personalized service) =====
+checkpoint   profile        summary
+1            0.07 / 0.29    0.41 / 0.36
+2            0.15 / 0.33    0.40 / 0.26
+3            0.11 / 0.34    0.15 / 0.31
+4            0.07 / 0.41    0.17 / 0.27
+5            0.10 / 0.36    0.09 / 0.25
+
+===== SETTINGS =====
+Model gpt-5.4-mini, medium effort, for memory updates and answers. MemConflict judge: the same
+model at high effort, one judging per answer, MemConflict's published metric definitions.
+DynamicMem judge: its own evaluator (holistic Core+Detail judge) with gpt-5.4-mini; the paper
+used gpt-5.4, so these scores compare our designs, not the paper's tables.
+MemConflict: people 0 and 1 of Data/Step4_4.jsonl (53 and 51 sessions), 30 questions each,
+10 per conflict type (seeded). DynamicMem: user 001_user_001, 1,455 logs in 68 weekly events,
+5 checkpoints (30-45 state keys and service requests each).
+
+===== COST =====
+Pilot: MemConflict $5.42, DynamicMem replay and answers $3.85, DynamicMem's judge about $1.53.
+Fix: first shorten attempt (stopped) $3.15, shorten check on 6 texts $0.15, rerun $4.42 (the
+summary rerun hit its $2.20 cap at event 52 of 53 before any answer was saved; fixed since).
+Round total about $18.50.
