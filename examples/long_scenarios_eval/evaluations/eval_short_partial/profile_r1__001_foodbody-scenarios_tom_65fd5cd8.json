@@ -1,0 +1,156 @@
+{
+  "source": "profile_r1__001_foodbody-scenarios_tom_65fd5cd8",
+  "method": "profile",
+  "case": "tom",
+  "memory": {
+    "checklist": [
+      {
+        "id": "M1",
+        "item": "Has a stress fracture and can't run for about 8 weeks",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory says: 'Stress fracture in the foot; no running for 8 weeks starting 2025-08-30, unless cleared earlier.'"
+      },
+      {
+        "id": "M2",
+        "item": "Wants gentle, supportive coaching now",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory says: 'they want a gentler, supportive tone' and 'focus on healing rather than performance pressure' while recovering."
+      },
+      {
+        "id": "M3",
+        "item": "Focus is recovery and healing, not performance",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory says: 'Right now - Marathon training is paused because of the foot stress fracture' and 'They want support centered on healing, not performance, while recovering.'"
+      },
+      {
+        "id": "M4",
+        "item": "Wants tables and metric units",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory says they prefer 'weekly schedules or structured guidance in table format, with distances in kilometers' and for recovery nutrition 'practical guidance in table format, metric units'."
+      },
+      {
+        "id": "N1",
+        "item": "Wants blunt, push-hard coaching",
+        "kind": "must_not_assert",
+        "mark": "asserted",
+        "votes": [
+          "asserted",
+          "asserted",
+          "asserted"
+        ],
+        "evidence": "Memory still states 'Marathon training: direct, blunt, accountability-heavy coaching; no sugarcoating' as a help preference."
+      },
+      {
+        "id": "N2",
+        "item": "Focus is performance and race goals",
+        "kind": "must_not_assert",
+        "mark": "absent",
+        "votes": [
+          "absent",
+          "absent",
+          "absent"
+        ],
+        "evidence": "Memory does not present current focus as 'performance and race goals'; it says the right now focus is healing, not performance."
+      }
+    ],
+    "contain_rate": 1.0,
+    "stale_rate": 0.5,
+    "criteria": {
+      "faithfulness": 2,
+      "currency": 1,
+      "recall": 2,
+      "change_tracking": 2,
+      "provenance": 2,
+      "consistency": 2
+    },
+    "criteria_reasons": {
+      "faithfulness": "All stated memory facts are supported by the person's messages; no clear inventions.",
+      "currency": "The memory is mostly current, but it still retains the older blunt-coaching preference alongside the newer recovery tone, so it is not fully updated everywhere.",
+      "recall": "It captures the main facts, preferences, and the recovery context well, including tables, metric units, and tone changes.",
+      "change_tracking": "It explicitly records what changed and when, with dated change notes for 2025-08-30, 2025-09-03, and 2025-09-08.",
+      "provenance": "Claims are tied to dated evidence tags/observations and the recorded changes line up with the provided messages.",
+      "consistency": "Current recovery guidance is coherent, and the coaching preferences are separated by context rather than directly contradicting each other."
+    },
+    "agreement": 0.944,
+    "judge_cost_usd": 0.05236
+  },
+  "reply": {
+    "checklist": [
+      {
+        "id": "R1",
+        "item": "Is gentle and reassuring rather than harsh",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "The tone is reassuring: \"You’re not undoing your recovery\" and \"don’t spiral\"."
+      },
+      {
+        "id": "R2",
+        "item": "Focuses on recovery and healing",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "It stays centered on healing, e.g. \"Bones heal from the overall pattern\" and \"Support bone healing\"."
+      },
+      {
+        "id": "R3",
+        "item": "Uses a table",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "It includes a clear table under \"What to do now\"."
+      },
+      {
+        "id": "R4",
+        "item": "Uses metric units where it gives quantities or distances",
+        "mark": "ignores",
+        "votes": [
+          "partial",
+          "ignores",
+          "ignores"
+        ],
+        "evidence": "It mentions metric units, but gives no actual quantities or distances in metric units."
+      }
+    ],
+    "follow_rate": 0.75,
+    "violate_rate": 0.0,
+    "asks_for_known": false,
+    "agreement": 0.917,
+    "judge_cost_usd": 0.0093,
+    "text": "You’re not undoing your recovery. Three nights of pizza is not a disaster. It’s just three meals.\n\nBones heal from the overall pattern, not from one imperfect week. So don’t spiral, and don’t try to “make up for it” by under-eating tomorrow.\n\n### What to do now\n\n| When | Focus | Simple target |\n|---|---|---|\n| Next meal | Re-center | Protein + calcium-rich food + fruit/veg |\n| Today | Hydrate | Water through the day; don’t skip meals |\n| Next 2–3 days | Support bone healing | 3 solid meals/day, each with protein |\n| This week | Restore balance | Include dairy or fortified alternatives, leafy greens, eggs, fish, tofu, beans |\n\n### Easy reset meals\n- Greek yogurt + fruit + oats\n- Eggs + toast + spinach\n- Chicken/tofu rice bowl with veg\n- Salmon/tinned sardines + potatoes + salad\n- Cottage cheese or milk + banana\n\n### The main thing\n- Get back to normal eating.\n- Prioritize protein at each meal.\n- Keep calcium and vitamin D in the picture.\n- Keep recovery steady. No guilt tax.\n\nIf you want, I can give you a 1-day bone-healing reset menu in metric units that’s easy to follow tomorrow.",
+    "reply_cost_usd": 0.00276
+  }
+}

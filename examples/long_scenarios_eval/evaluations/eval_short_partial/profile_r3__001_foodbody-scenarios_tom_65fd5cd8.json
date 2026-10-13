@@ -1,0 +1,156 @@
+{
+  "source": "profile_r3__001_foodbody-scenarios_tom_65fd5cd8",
+  "method": "profile",
+  "case": "tom",
+  "memory": {
+    "checklist": [
+      {
+        "id": "M1",
+        "item": "Has a stress fracture and can't run for about 8 weeks",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "\"They have a foot stress fracture and were told not to run for 8 weeks starting 2025-08-30\""
+      },
+      {
+        "id": "M2",
+        "item": "Wants gentle, supportive coaching now",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "\"during injury recovery, they want gentler, healing-focused support and less performance pressure\""
+      },
+      {
+        "id": "M3",
+        "item": "Focus is recovery and healing, not performance",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "\"They want coaching to emphasize healing rather than performance while they recover\""
+      },
+      {
+        "id": "M4",
+        "item": "Wants tables and metric units",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "\"They like structured answers in table form\" and \"For training-related distances, prefer kilometers\""
+      },
+      {
+        "id": "N1",
+        "item": "Wants blunt, push-hard coaching",
+        "kind": "must_not_assert",
+        "mark": "asserted",
+        "votes": [
+          "absent",
+          "asserted",
+          "asserted"
+        ],
+        "evidence": "The memory says blunt help only in marathon-training/fueling contexts, while current recovery guidance is gentle/healing-focused."
+      },
+      {
+        "id": "N2",
+        "item": "Focus is performance and race goals",
+        "kind": "must_not_assert",
+        "mark": "absent",
+        "votes": [
+          "absent",
+          "absent",
+          "asserted"
+        ],
+        "evidence": "The memory frames sub-3:30 as a long-term goal and says marathon training is on hold; it does not present performance/race goals as the current focus."
+      }
+    ],
+    "contain_rate": 1.0,
+    "stale_rate": 0.5,
+    "criteria": {
+      "faithfulness": 2,
+      "currency": 2,
+      "recall": 2,
+      "change_tracking": 2,
+      "provenance": 2,
+      "consistency": 2
+    },
+    "criteria_reasons": {
+      "faithfulness": "All listed beliefs are directly supported by the evidence and no unsupported facts are introduced.",
+      "currency": "Current state is updated to injury recovery and paused running rather than training/performance.",
+      "recall": "It captures the key preferences: injury status, healing focus, tables, metric units, and marathon goal context.",
+      "change_tracking": "It records the shift from hard accountability to gentler support and notes when the injury and recovery change began.",
+      "provenance": "Claims are tied to dated observation tags like [O-4.1], [O-5.3], and [O-6.1].",
+      "consistency": "The current beliefs do not conflict; healing-first recovery guidance is consistent with the paused training state."
+    },
+    "agreement": 0.944,
+    "judge_cost_usd": 0.05735
+  },
+  "reply": {
+    "checklist": [
+      {
+        "id": "R1",
+        "item": "Is gentle and reassuring rather than harsh",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "It starts with “You didn’t undo your recovery,” and keeps a calm, supportive tone throughout."
+      },
+      {
+        "id": "R2",
+        "item": "Focuses on recovery and healing",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "It repeatedly centers healing and recovery, e.g. “bone-healing,” “repair,” and “recovery support.”"
+      },
+      {
+        "id": "R3",
+        "item": "Uses a table",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "It includes a two-column table with “What to do now” and “Why it helps.”"
+      },
+      {
+        "id": "R4",
+        "item": "Uses metric units where it gives quantities or distances",
+        "mark": "ignores",
+        "votes": [
+          "follows",
+          "ignores",
+          "ignores"
+        ],
+        "evidence": "The reply gives no quantities or distances that require units, so there’s nothing non-metric to correct."
+      }
+    ],
+    "follow_rate": 0.75,
+    "violate_rate": 0.0,
+    "asks_for_known": false,
+    "agreement": 0.917,
+    "judge_cost_usd": 0.00927,
+    "text": "You didn’t undo your recovery.\n\nThree pizza nights is not a bone-healing disaster. It’s just three meals that were probably heavy on salt/refined carbs and light on the stuff your body actually needs to rebuild. The fix is boring and simple:\n\n| What to do now | Why it helps |\n|---|---|\n| Eat a proper protein-forward breakfast today | Gives your body the raw materials for repair |\n| Get calcium + vitamin D in your next 2–3 meals | Bone healing needs both |\n| Add fruit/veg to every meal today | Micronutrients and overall recovery support |\n| Drink water normally | Pizza is salty; don’t let dehydration stack on top |\n| Get back to a regular meal rhythm | No compensation, no starving, no “making up for it” |\n| Prioritize sleep tonight | Probably the highest-return recovery tool you have |\n\nA good rule for the next 24 hours: just aim for one solid recovery day, not perfection.\n\nIf you want, I can give you a very simple “reset day” menu for today using normal food, nothing fussy.",
+    "reply_cost_usd": 0.00216
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "source": "profile_r2__004_foodbody-scenarios_marisol_183be56c",
+  "method": "profile",
+  "case": "marisol",
+  "memory": {
+    "checklist": [
+      {
+        "id": "M1",
+        "item": "Runs a meal-prep business with paying clients",
+        "kind": "must_contain",
+        "mark": "partial",
+        "votes": [
+          "partial",
+          "partial",
+          "partial"
+        ],
+        "evidence": "Memory says they are \"starting a small meal-prep business\" and that \"first five meal-prep clients start next month,\" but it does not explicitly say the clients are paying."
+      },
+      {
+        "id": "M2",
+        "item": "For client work: professional tone, no emojis",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory says client-facing materials should be \"polished, professional\" and to \"skip emojis in materials that go straight to clients.\""
+      },
+      {
+        "id": "M3",
+        "item": "For client work: calories and protein per serving, in a table",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory says client-facing materials should use a \"clean macro table format\" and include \"calories and protein per meal or per serving.\""
+      },
+      {
+        "id": "M4",
+        "item": "Family cooking stays casual and fun",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory says family dinner ideas should stay \"fun, casual, playful, and emoji-friendly\" and that nutrition talk should be avoided in that context."
+      },
+      {
+        "id": "M5",
+        "item": "Has kids",
+        "kind": "must_contain",
+        "mark": "missing",
+        "votes": [
+          "missing",
+          "missing",
+          "missing"
+        ],
+        "evidence": "The memory mentions kids' lunchboxes and kids' pancake ideas, but never explicitly says the person has kids."
+      },
+      {
+        "id": "N1",
+        "item": "Wants no nutrition numbers for client work",
+        "kind": "must_not_assert",
+        "mark": "absent",
+        "votes": [
+          "absent",
+          "absent",
+          "absent"
+        ],
+        "evidence": "The memory actually says to include calories and protein for client-facing materials, so it does not assert that client work should have no nutrition numbers."
+      },
+      {
+        "id": "N2",
+        "item": "Wants an emoji-filled, casual style for client menus",
+        "kind": "must_not_assert",
+        "mark": "absent",
+        "votes": [
+          "absent",
+          "absent",
+          "absent"
+        ],
+        "evidence": "The memory says to \"skip emojis in materials that go straight to clients,\" which is the opposite of an emoji-filled casual client-menu style."
+      }
+    ],
+    "contain_rate": 0.6,
+    "stale_rate": 0.0,
+    "criteria": {
+      "faithfulness": 2,
+      "currency": 1,
+      "recall": 1,
+      "change_tracking": 2,
+      "provenance": 2,
+      "consistency": 2
+    },
+    "criteria_reasons": {
+      "faithfulness": "All listed memories are supported by the evidence, with no obvious invention.",
+      "currency": "Current preferences are up to date, and the newer client-work formatting replaces older casual wording.",
+      "recall": "It captures the main recurring preferences: casual family food, silly kids' food, wild party names, and client-menu formatting.",
+      "change_tracking": "The change log records shifts over time, including client-facing tone and macro-table format with dates.",
+      "provenance": "Claims are consistently tied to tagged evidence references like [O-0.1] and [O-10.1].",
+      "consistency": "The current beliefs do not contradict each other because casual-family guidance is separated from professional client-facing guidance."
+    },
+    "agreement": 0.949,
+    "judge_cost_usd": 0.0496
+  },
+  "reply": {
+    "checklist": [
+      {
+        "id": "R1",
+        "item": "Is professional, with no emojis",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "Uses a polished, professional tone and includes no emojis."
+      },
+      {
+        "id": "R2",
+        "item": "Gives calories and protein per serving",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "The table includes both Calories and Protein columns for each menu item."
+      },
+      {
+        "id": "R3",
+        "item": "Uses a table",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "The menu is presented in a table format."
+      }
+    ],
+    "follow_rate": 1.0,
+    "violate_rate": 0.0,
+    "asks_for_known": false,
+    "agreement": 1.0,
+    "judge_cost_usd": 0.00442,
+    "text": "Absolutely — here’s a polished draft for next week’s Tuesday client menu:\n\n| Meal | Menu Item | Description | Calories | Protein |\n|---|---|---|---:|---:|\n| 1 | Lemon Herb Chicken Bowl | Grilled lemon herb chicken, rice, roasted zucchini, cherry tomatoes, and garlic yogurt sauce | 520 | 42g |\n| 2 | Turkey Taco Skillet | Seasoned ground turkey, peppers, corn, black beans, cilantro-lime rice, and salsa | 560 | 38g |\n| 3 | BBQ Salmon Box | BBQ glazed salmon, sweet potato wedges, and roasted green beans | 610 | 36g |\n| 4 | Beef & Broccoli Noodles | Tender beef, broccoli, rice noodles, and savory ginger-soy sauce | 590 | 34g |\n| 5 | Pesto Chicken Pasta | Chicken breast, pasta, spinach, roasted tomatoes, and basil pesto | 640 | 41g |\n\nIf you want, I can also turn this into a client-ready version with your business name, a cleaner branded title, or swap in keto / lower-carb options.",
+    "reply_cost_usd": 0.00441
+  }
+}

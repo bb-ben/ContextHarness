@@ -1,0 +1,40 @@
+- User likes science-heavy, in-depth explanations, especially when they include the reasoning behind each step.
+- This strongly applies to nutrition topics, including protein combining, amino acids, limiting amino acids, why protein variety across a day matters more than perfectly combining proteins in a single meal, B12 for vegans, and omega-3s for vegans.
+- On 2025-01-09, the user also showed interest in cooking with the same “why it works” style: they asked for a full batch-cook method for a big vegan chili and wanted each step explained.
+- On 2025-01-13, the user asked about good compression socks for 12-hour shifts, suggesting interest in practical health/workwear recommendations; a concise answer pointed them toward graduated 15–20 mmHg socks.
+- On 2025-01-16, the user asked “Why does soaking beans matter?” and wanted a full explanation, reinforcing a preference for detailed, mechanism-based cooking/food science explanations.
+- On 2025-01-20, the user asked for a Sunday cooking project with a four-hour time budget; a meal plan centered on homemade tempeh bowls with three sauces was suggested, indicating interest in structured, time-bounded cooking projects and plant-forward meals.
+- On 2025-01-23, the user asked how to get turmeric stains out of a cutting board, suggesting interest in practical kitchen cleanup/stain-removal tips as well.
+- On 2025-01-27, the user asked for a detailed explanation of B12 for vegans, reinforcing interest in vegan nutrition fundamentals, especially absorption, sources, and dosing.
+- On 2025-01-30, the user asked for a detailed homemade seitan recipe “with the why,” further confirming a strong preference for step-by-step cooking explanations grounded in food science.
+- On 2025-02-03, the user asked for book recommendations about nursing history, indicating interest in nursing history and related literature.
+- On 2025-02-06, the user asked “What’s the science behind fermenting tempeh?”, reinforcing interest in the microbiology and food-science mechanisms behind plant-based cooking.
+- On 2025-02-10, the user asked about an elaborate vegan Sunday brunch, suggesting interest in impressive, special-occasion vegan meals and brunch ideas.
+- On 2025-02-13, the user asked the best way to clean a cast-iron pan, showing interest in practical kitchen maintenance and cookware care.
+- On 2025-02-17, the user asked to “Go deep on omega-3 sources for vegans,” reinforcing interest in detailed vegan nutrition guidance, including ALA conversion, algae oil, and dosing.
+- On 2025-02-20, the user said they are moving to night shifts next week: 7pm to 7am, three nights a week. This is relevant for future advice about sleep, meals, caffeine, hydration, and shift-work routines.
+- On 2025-02-24, the user said “Keep it short” when asking what to eat at 3am on a night shift, indicating they sometimes prefer very concise answers for practical shift-work questions.
+- On 2025-02-27, the user asked whether blackout curtains are worth it, suggesting current interest in improving daytime sleep conditions for night-shift work.
+- On 2025-03-03, the user said their unit’s microwave is broken half the time and asked for meals that don’t need reheating, suggesting ongoing interest in portable, cold, ready-to-eat meals for work; examples given were grain salads, wraps, and cold noodle bowls.
+- On 2025-03-06, the user said “Too long, I’m reading this half asleep. Just the list,” reinforcing that when they are tired or asking practical shift-work questions, they want extremely concise, list-style answers.
+- On 2025-03-10, the user asked how to nap before a shift without feeling groggy, indicating interest in quick, practical sleep advice for shift work; guidance given was to keep naps to about 20 minutes or a full 90 minutes.
+- On 2025-03-13, the user asked for “Bullet points please” and wanted portable vegan snacks for the night, reinforcing a preference for very concise, list-style answers for shift-work food questions; examples given were roasted chickpeas, trail mix, and rice cakes with peanut butter.
+- On 2025-03-17, the user asked “When should I eat on a 7pm to 7am shift? Short answer,” confirming they still want brief, direct timing advice for night-shift eating; the suggested structure was a meal at 6pm, a light snack at 1am, and a small breakfast after the shift.
+- On 2025-03-20, the user asked for a gift for a coworker who is retiring; a simple, practical suggestion was a nice notebook and a card from the team, suggesting occasional interest in straightforward workplace gift ideas.
+- On 2025-03-24, the user asked for a quick no-cook lunch they could grab before work; a bean salad in a jar was suggested, reinforcing interest in fast, portable, no-cook work lunches.
+- On 2025-03-27, the user said, “That was perfect. Short is what I need on these weeks,” reinforcing that during these weeks they want brief, direct answers.
+- On 2025-03-31, the user asked whether coffee at 4am is okay; the practical guidance given was to stop caffeine about six hours before sleep.
+- On 2025-04-03, the user asked, “Three lines: what helps with night-shift nausea?” reinforcing that for shift-work discomfort they want extremely concise answers; the reply was: small meals, ginger, avoid greasy food.
+- On 2025-04-07, the user asked for something they could eat cold from a container at 2am; “Peanut soba noodles” was suggested, reinforcing interest in portable, cold, no-reheat night-shift meals.
+- On 2025-04-10, the user asked about sunglasses for driving home in the morning; the concise recommendation given was polarized, wraparound sunglasses.
+- On 2025-04-14, the user explicitly asked for a list only: vegan proteins that keep without a fridge for 12 hours. Suggested examples included roasted chickpeas, nuts, and shelf-stable tofu.
+- On 2025-04-17, the user asked, “Short version please: breakfast after a night shift, before sleeping?” showing they want very brief, practical advice for post-shift food; the suggested answer was toast with nut butter.
+- On 2025-04-21, the user asked how to explain their sleep schedule to their family; the advice was to share their shift calendar.
+- On 2025-04-24, the user asked, “Keep it brief: one weekend cook that covers three night shifts?” and the answer was a big tray of cold peanut noodles, reinforcing interest in one-cook meal prep for multiple shifts and a preference for very concise responses in that context.
+- On 2025-04-28, the user asked, “Just bullets: what should I keep in my locker for food?” and the suggested items were nuts, crackers, and oat bars, reinforcing interest in simple, shelf-stable, grab-and-go shift snacks.
+- On 2025-05-01, the user asked about running shoes for someone on their feet all day; the concise recommendation was cushioned neutral trainers, indicating practical interest in comfort-focused footwear for long standing/walking shifts.
+- On 2025-05-05, the user asked about hydration on night shifts; the practical advice given was about one bottle per four hours and easing off before sleep, suggesting this is their current preferred hydration rule of thumb.
+
+- Current preference: detailed, explanatory answers that connect technique or recommendations to science/reasoning, not just short recipes, rules, or product picks; but if the user explicitly asks to “keep it short,” wants “bullet points,” says they are tired/half asleep, asks for shift-work timing, asks for a three-line answer, or signals they need brevity on “these weeks,” give a brief, direct, list-style answer.
+- Also helpful to suggest no-reheat, portable meals and snacks when relevant to work/shift eating, practical sleep/timing tips for night-shift routines, straightforward workplace gift ideas when asked, and practical driving/eye-protection gear like polarized wraparound sunglasses for morning commute after night shifts.
+- For caffeine timing, keep in mind their night shift schedule and that a ~6-hour cutoff before intended sleep was given as the

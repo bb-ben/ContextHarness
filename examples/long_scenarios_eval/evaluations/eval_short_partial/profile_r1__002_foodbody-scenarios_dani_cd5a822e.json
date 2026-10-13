@@ -1,0 +1,168 @@
+{
+  "source": "profile_r1__002_foodbody-scenarios_dani_cd5a822e",
+  "method": "profile",
+  "case": "dani",
+  "memory": {
+    "checklist": [
+      {
+        "id": "M1",
+        "item": "Is vegetarian",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory says: \"Vegetarian [O-7.1].\""
+      },
+      {
+        "id": "M2",
+        "item": "Likes spicy food and chili crisp",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "partial"
+        ],
+        "evidence": "Memory says: \"Enjoys chili crisp on everything [O-1.2]\" and notes spicy options are welcome."
+      },
+      {
+        "id": "M3",
+        "item": "Has a newborn",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory says: \"Currently in the newborn period after an early baby arrival, with sleep in roughly 90-minute chunks [O-4.1, O-4.2].\""
+      },
+      {
+        "id": "M4",
+        "item": "Wants very short answers (about three lines) now",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory says newborn/late-night practical questions should be \"kept very short\"; change log 2025-07-10 adds \"about 3 lines\"."
+      },
+      {
+        "id": "M5",
+        "item": "Wants one-pan, freezer-friendly, low-effort cooking",
+        "kind": "must_contain",
+        "mark": "partial",
+        "votes": [
+          "partial",
+          "partial",
+          "partial"
+        ],
+        "evidence": "Memory clearly includes low-friction cooking like \"one-pan or one-handed ideas\" and notes freezer-meal requests in a change log, but it does not clearly state freezer-friendly cooking as a standing current preference."
+      },
+      {
+        "id": "N1",
+        "item": "Wants detailed, in-depth explanations as the default",
+        "kind": "must_not_assert",
+        "mark": "asserted",
+        "votes": [
+          "asserted",
+          "asserted",
+          "asserted"
+        ],
+        "evidence": "Memory still says they \"Prefer detailed, science-forward explanations\" and enjoy an \"educational style rather than terse answers.\""
+      },
+      {
+        "id": "N2",
+        "item": "Wants elaborate weekend cooking projects",
+        "kind": "must_not_assert",
+        "mark": "asserted",
+        "votes": [
+          "asserted",
+          "asserted",
+          "asserted"
+        ],
+        "evidence": "Memory says \"For involved cooking projects, long-form guidance fits well when they have time\" and records positive reactions to ambitious projects."
+      }
+    ],
+    "contain_rate": 0.8,
+    "stale_rate": 1.0,
+    "criteria": {
+      "faithfulness": 2,
+      "currency": 1,
+      "recall": 2,
+      "change_tracking": 2,
+      "provenance": 2,
+      "consistency": 2
+    },
+    "criteria_reasons": {
+      "faithfulness": "All listed beliefs are grounded in the supplied messages; no obviously invented facts.",
+      "currency": "Newborn-era short-answer needs are current, but older default-detailed preferences are still presented broadly as current rather than fully time-scoped.",
+      "recall": "Core preferences are captured, but the freezer-friendly nuance is only weakly represented and not stated as a standing preference.",
+      "change_tracking": "The memory includes dated change notes showing the shift toward shorter, lower-friction help during the newborn period.",
+      "provenance": "Claims are tagged with source IDs and dates, and the tags support the stated preferences.",
+      "consistency": "The memory keeps detailed-help preferences and short-answer newborn needs in separate contexts, so the current beliefs do not directly clash."
+    },
+    "agreement": 0.923,
+    "judge_cost_usd": 0.0662
+  },
+  "reply": {
+    "checklist": [
+      {
+        "id": "R1",
+        "item": "Is short (a few lines)",
+        "mark": "violates",
+        "votes": [
+          "partial",
+          "violates",
+          "violates"
+        ],
+        "evidence": "It’s fairly concise, but it’s more than a few lines and longer than the user’s preferred very short answer."
+      },
+      {
+        "id": "R2",
+        "item": "Suggests only vegetarian dishes",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "All the dinner ideas are vegetarian."
+      },
+      {
+        "id": "R3",
+        "item": "Suggests spicy options",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "It includes a clearly spicy option: chili crisp peanut noodles."
+      },
+      {
+        "id": "R4",
+        "item": "Suggests one-pan or freezer-friendly meals",
+        "mark": "follows",
+        "votes": [
+          "partial",
+          "follows",
+          "follows"
+        ],
+        "evidence": "It includes one-pan/one-pot ideas like sheet-pan gnocchi and one-pot pasta, but it doesn’t really address freezer-friendly meals."
+      }
+    ],
+    "follow_rate": 0.75,
+    "violate_rate": 0.25,
+    "asks_for_known": false,
+    "agreement": 0.833,
+    "judge_cost_usd": 0.00809,
+    "text": "Absolutely — here are a few low-friction vegetarian dinners for the week:\n\n- Chili crisp peanut noodles + cucumber + tofu\n- Sheet-pan gnocchi with broccoli, white beans, and feta\n- Lentil coconut curry over rice\n- Black bean quesadillas with sautéed peppers + salsa\n- Miso butter mushrooms on rice with a jammy egg or tofu\n- One-pot tomato chickpea pasta\n\nIf you want, I can turn this into a 5-night plan with a grocery list and keep it very newborn-friendly.",
+    "reply_cost_usd": 0.00194
+  }
+}

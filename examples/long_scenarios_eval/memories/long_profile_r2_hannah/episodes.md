@@ -1,0 +1,79 @@
+- E-0 | 2025-02-03 | source: S-0 | Asked for a weeknight dinner for self and two teenagers that could be ready in 30 minutes.
+  - O-0.1 | stated | They have two teenagers at home and are cooking for three people.
+  - O-0.2 | behavior | They want quick weeknight meal ideas that can be on the table in about 30 minutes.
+- E-1 | 2025-02-06 | source: S-1 | User asked for a grocery list for three people this week and said they don’t mind splurging on better ingredients.
+  - O-1.1 | stated | They are shopping for three people this week.
+  - O-1.2 | behavior | They’re open to higher-end grocery suggestions, including good olive oil and grass-fed beef.
+- E-2 | 2025-02-10 | source: S-2 | Asked for a birthday dessert for Leo and noted a peanut allergy.
+  - O-2.1 | stated | They are allergic to peanuts.
+  - O-2.2 | behavior | They asked for a dessert idea for Leo's birthday.
+- E-3 | 2025-02-13 | source: S-3 | Asked what wine pairs well with short ribs.
+- E-4 | 2025-02-17 | source: S-4 | Discussed waking at 4am and tips for sleeping better.
+  - O-4.1 | event | They are currently waking around 4am and looking for ways to sleep better [O-4.1].
+- E-5 | 2025-02-20 | source: S-5 | Asked for a fast 30-minute dinner for hungry kids after practice.
+  - O-5.1 | behavior | They want dinner ideas that can be made in 30 minutes or less, especially on busy weeknights.
+- E-6 | 2025-02-24 | source: S-6 | Asked whether a stand mixer is worth buying.
+  - O-6.1 | behavior | They asked for a simple purchase recommendation about a stand mixer.
+- E-7 | 2025-02-28 | source: S-7 | User asked for a splurge-worthy Saturday dinner for three and wanted to try dry-aged steak.
+  - O-7.1 | behavior | For special dinners, they like splurge-worthy, restaurant-style ideas and are interested in dry-aged steak.
+  - O-7.2 | stated | They were cooking for three people in this dinner request.
+- E-8 | 2025-03-04 | source: S-8 | Asked for a practical way to keep herbs fresh longer.
+  - O-8.1 | behavior | They asked for a practical, straightforward tip to keep herbs fresh longer.
+- E-9 | 2025-03-08 | source: S-9 | Asked for quick lunchbox ideas for two teenagers.
+  - O-9.1 | behavior | They wanted quick, practical lunchbox ideas for two teenagers.
+- E-10 | 2025-03-12 | source: S-10 | Asked for good stretches after a long day at a desk.
+- E-11 | 2025-03-17 | source: S-11 | Asked for a wine pairing for mushroom risotto.
+  - O-11.1 | behavior | They wanted a wine pairing suggestion for mushroom risotto.
+- E-12 | 2025-03-21 | source: S-12 | Asked for another 30-minute dinner suggestion during a chaotic evening.
+  - O-12.1 | behavior | They still want very quick weeknight dinners, around 30 minutes or less.
+  - O-12.2 | event | Their evenings are chaotic/busy right now.
+- E-13 | 2025-03-26 | source: S-13 | Asked how long cooked rice keeps in the fridge; assistant answered with a simple food-safety guideline.
+  - O-13.1 | behavior | They asked for a straightforward storage/safety answer about cooked rice.
+  - O-13.2 | behavior | They favor concise, practical help for everyday kitchen questions.
+- E-14 | 2025-04-02 | source: S-14 | User shared major life changes: both teenagers are out of the house and they retired, leaving the home quiet.
+  - O-14.1 | event | Maya left for an exchange year, Leo moved into his dorm, and Friday was the user's last day at work; they are retired now and the house feels quiet.
+- E-15 | 2025-04-06 | source: S-15 | User asked how to scale recipes down now that they are cooking for one.
+  - O-15.1 | stated | They are cooking for just themselves now, and recipes often make too much.
+  - O-15.2 | behavior | They want practical help scaling recipes down for one person.
+- E-16 | 2025-04-10 | source: S-16 | Asked for a podcast recommendation about food history.
+  - O-16.1 | behavior | They were looking for a good podcast about food history.
+- E-17 | 2025-04-14 | source: S-17 | Asked for cheaper cuts of meat that still taste good now that they’re on a pension and watching spending.
+  - O-17.1 | stated | They are on a pension now and trying to watch what they spend.
+  - O-17.2 | behavior | They want cheaper cuts that still taste good.
+- E-18 | 2025-04-18 | source: S-18 | Asked for a basic lesson on braising.
+  - O-18.1 | behavior | They wanted a simple, step-by-step explanation of how to braise properly.
+- E-19 | 2025-04-22 | source: S-19 | Answered a baking question about the difference between baking soda and baking powder.
+- E-20 | 2025-04-26 | source: S-20 | User asked for a single-portion dinner that wouldn’t leave a week of leftovers.
+  - O-20.1 | behavior | They want single-portion dinner ideas that avoid generating a lot of leftovers.
+  - O-20.2 | behavior | They’re still looking for practical dinner help sized for one person.
+- E-21 | 2025-04-30 | source: S-21 | Asked for a budget meal plan for one around $40 a week because groceries are adding up.
+  - O-21.1 | stated | Groceries are adding up, and they want to keep food spending around $40 a week.
+  - O-21.2 | behavior | They want a budget meal plan sized for one person.
+- E-22 | 2025-05-04 | source: S-22 | Asked whether a slow cooker is worth getting, prompting a simple appliance recommendation.
+  - O-22.1 | behavior | They asked whether they should get a slow cooker.
+  - O-22.2 | behavior | For appliance-buying questions, brief practical guidance and good alternatives seem to fit them.
+- E-23 | 2025-05-08 | source: S-23 | User wants a weekend bread-baking project and says they finally have time.
+  - O-23.1 | behavior | They want a manageable weekend cooking project, specifically bread from scratch.
+- E-24 | 2025-05-12 | source: S-24 | Asked how to sharpen a knife; assistant suggested a whetstone and honing.
+- E-25 | 2025-05-16 | source: S-25 | Asked for a dinner for one tonight and was happy to spend about an hour cooking.
+  - O-25.1 | behavior | They asked for a dinner for one and said they were happy to spend about an hour cooking [O-25.1].
+- E-26 | 2025-05-20 | source: S-26 | User asked for ideas for a small herb garden on a balcony.
+  - O-26.1 | behavior | They’re interested in practical herb choices for a small balcony garden and likely want compact, easy-to-maintain plants.
+- E-27 | 2025-05-24 | source: S-27 | User preferred cheap, no-fuss dinner ideas built around beans and lentils, not fancy ingredients.
+  - O-27.1 | behavior | They want budget-friendly meal ideas based on cheap staples like beans and lentils.
+  - O-27.2 | reaction | They explicitly asked to skip the fancy stuff, signaling a preference for simple everyday food when cost matters.
+- E-28 | 2025-05-28 | source: S-28 | Asked for a simple cake for a friend coming for coffee.
+  - O-28.1 | behavior | For casual entertaining, they wanted a simple cake, suggesting they prefer easy, unfussy bakes in that context.
+- E-29 | 2025-06-01 | source: S-29 | Asked whether whole chickens are cheaper and said they have time to learn to break one down.
+  - O-29.1 | behavior | They asked about a cost-saving grocery choice and were interested in learning the butchery skill of jointing a whole chicken.
+  - O-29.2 | stated | They said they have time to learn right now.
+- E-30 | 2025-06-05 | source: S-30 | Asked for a simple way to store bread so it stays fresh longer.
+  - O-30.1 | behavior | They asked a straightforward, practical food-storage question about bread.
+- E-31 | 2025-06-09 | source: S-31 | Asked for a slow Sunday recipe for one and liked the idea of something simmering.
+  - O-31.1 | behavior | They wanted a slow-cooked Sunday recipe sized for one person, and specifically like having something simmering.
+- E-32 | 2025-06-13 | source: S-32 | Asked for good walking routes to stay active and mentioned walking every morning.
+  - O-32.1 | stated | They walk every morning now to stay active.
+- E-33 | 2025-06-17 | source: S-33 | Compared frozen vs fresh vegetables on a budget.
+  - O-33.1 | behavior | They asked a budget-minded grocery question comparing frozen vegetables with fresh ones, which fits their practical cost-conscious shopping style [O-33.1].
+- E-34 | 2025-06-21 | source: S-34 | User asked which spices are worth buying first for a basic kitchen.
+  - O-34.1 | behavior | They want practical guidance on building a useful starter spice cupboard, with a focus on versatile basics.

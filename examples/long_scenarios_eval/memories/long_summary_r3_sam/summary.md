@@ -1,0 +1,39 @@
+- User enjoys science-heavy, in-depth explanations, especially on nutrition and cooking topics.
+- Current interest shown: understanding how protein combining works, including amino acids, limiting amino acids, and why variety across the day matters more than combining perfectly at each meal.
+- Current interest shown: batch-cooking a big vegan chili and wanting the full method plus explanations for why each step matters, including technique details like blooming spices in oil.
+- Current interest shown (2025-01-13): looking for good compression socks for 12-hour shifts; suggested option was graduated 15–20 mmHg socks.
+- Current interest shown (2025-01-16): wants a full explanation of why soaking beans matters, including the science/technique behind it.
+- Current interest shown (2025-01-20): likes planned cooking projects with a defined time budget; requested a Sunday cooking project with four hours available and was suggested homemade tempeh bowls with three sauces.
+- Current interest shown (2025-01-23): wants ways to remove turmeric stains from a cutting board; suggested method was baking soda paste followed by sunlight.
+- Current interest shown (2025-01-27): wants a detailed explanation of vitamin B12 for vegans, including why plants don’t make it, how absorption works, and dosing/supplement guidance.
+- Current interest shown (2025-01-30): wants a detailed homemade seitan recipe with the “why” behind each step, especially the role of vital wheat gluten and kneading in building gluten structure.
+- Current interest shown (2025-02-03): asked for book recommendations about nursing history; suggested title was *Notes on Nursing* by Florence Nightingale.
+- Current interest shown (2025-02-06): wants the science behind fermenting tempeh, including how the Rhizopus mold works and what the fermentation is doing to the beans.
+- Current interest shown (2025-02-10): wants an elaborate vegan Sunday brunch; suggested components were chickpea-flour omelettes, cashew hollandaise, and waffles.
+- Current interest shown (2025-02-13): asked for the best way to clean a cast-iron pan; suggested routine was hot water, a brush, drying thoroughly, and a thin oil coat.
+- Current interest shown (2025-02-17): wants a deep dive on omega-3 sources for vegans, including ALA conversion, algae oil, and how much omega-3 is needed.
+- Current circumstance shown (2025-02-20): moved to night shifts, 7pm to 7am, three nights a week.
+- Current interest shown (2025-02-24): asked what to eat at 3am and wanted a short answer; likely prefers light, easy-to-digest night-shift snacks.
+- Current interest shown (2025-02-27): asked whether blackout curtains are worth it; indicates interest in improving daytime sleep for night-shift work and was advised they are worth it for sleeping in the day.
+- Current interest shown (2025-03-03): needs meals that don’t need reheating for work, since the unit microwave is broken half the time; examples suggested were grain salads, wraps, and cold noodle bowls.
+- Current preference shown (2025-03-06): when sleepy/half-asleep, prefers a very brief response as just a list.
+- Current interest shown (2025-03-10): wants to nap before a shift without feeling groggy; advised a 20-minute nap or a full 90-minute nap.
+- Current preference shown (2025-03-13): asked for “Bullet points please” when requesting portable vegan snacks, reinforcing that they want concise bullet lists when asking for quick night-shift food ideas.
+- Current interest shown (2025-03-17): asked when to eat on a 7pm to 7am shift and wanted a short answer; advised meal at 6pm, light snack at 1am, small breakfast after.
+- Current interest shown (2025-03-20): asked for a gift for a coworker who’s retiring; suggested a nice notebook and a card from the team.
+- Current interest shown (2025-03-24): asked for a quick no-cook lunch to grab before work; suggested bean salad in a jar.
+- Current preference confirmed (2025-03-27): short answers are what the user needs on these weeks, especially during busy/night-shift periods.
+- Current interest shown (2025-03-31): asked if coffee at 4am is okay; response emphasized timing caffeine about six hours before sleep, suggesting the user is still thinking about caffeine timing around night shifts and daytime sleep.
+- Current interest shown (2025-04-03): asked for a very short answer on what helps with night-shift nausea; suggested small meals, ginger, and avoiding greasy food.
+- Current preference reinforced (2025-04-03): for simple night-shift health questions, the user may prefer extremely concise answers, even just a few lines or bullets.
+- Current interest shown (2025-04-07): asked for something to eat cold from a container at 2am; suggested peanut soba noodles, reinforcing interest in cold, portable, no-reheat night-shift food.
+- Current interest shown (2025-04-10): asked about sunglasses for driving home in the morning; suggested polarized, wraparound sunglasses, indicating continued concern with night-shift commutes and bright morning light.
+- Current interest shown (2025-04-14): asked for a list only of vegan proteins that keep without a fridge for 12 hours; suggested roasted chickpeas, nuts, and shelf-stable tofu.
+- Current preference reinforced (2025-04-14): when they explicitly ask “List only,” they want just the list with no extra explanation.
+- Current interest shown (2025-04-17): asked for a short version of what to eat for breakfast after a night shift before sleeping; suggested toast with nut butter, reinforcing preference for very brief, practical food answers around night shifts.
+- Current interest shown (2025-04-21): asked how to explain their sleep schedule to family; likely wants simple, practical wording for communicating night-shift sleep needs, and “share your shift calendar” was suggested.
+- Current interest shown (2025-04-24): asked for one weekend cook that covers three night shifts; suggested a big tray of cold peanut noodles, reinforcing a preference for simple batch-cooked, cold, portable meals for multiple shifts.
+- Current preference shown (2025-04-28): when asking practical food prep questions, especially “Just bullets” or “List only,” they want only a short bullet list with no extra explanation.
+- Current interest shown (2025-04-28): wants simple locker-stable food ideas for work; suggested items were nuts, crackers, and oat bars.
+- Current interest shown (2025-05-01): asked for running shoes for someone on their feet all day; suggested cushioned neutral trainers.
+- Current interest shown (2025-05-05): asked a quick question about hydration on night shifts; suggested target was about one bottle per four hours and easing off before sleep.

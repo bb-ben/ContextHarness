@@ -1,0 +1,168 @@
+{
+  "source": "profile_r2__002_foodbody-scenarios_dani_cd5a822e",
+  "method": "profile",
+  "case": "dani",
+  "memory": {
+    "checklist": [
+      {
+        "id": "M1",
+        "item": "Is vegetarian",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory says \"They are vegetarian\" and \"They are vegetarian [O-1.1, O-3.1, O-7.1].\""
+      },
+      {
+        "id": "M2",
+        "item": "Likes spicy food and chili crisp",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory says \"They like spicy food and chili crisp\" and notes spicy-leaning suggestions fit well."
+      },
+      {
+        "id": "M3",
+        "item": "Has a newborn",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory says \"They currently have a newborn baby who arrived early.\""
+      },
+      {
+        "id": "M4",
+        "item": "Wants very short answers (about three lines) now",
+        "kind": "must_contain",
+        "mark": "partial",
+        "votes": [
+          "present",
+          "partial",
+          "partial"
+        ],
+        "evidence": "Memory says that for late-night/newborn-period requests they want answers \"kept very short and practical,\" and the change log quotes \"keep it SHORT, like 3 lines\" / \"Short is all I can handle now.\""
+      },
+      {
+        "id": "M5",
+        "item": "Wants one-pan, freezer-friendly, low-effort cooking",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory says current batch-cooking/freezer-meal requests should be \"short lists, one-pan ideas if possible, and no explanations,\" and that they are \"currently trying to batch-cook freezer meals in one day\" with a minimal, practical process."
+      },
+      {
+        "id": "N1",
+        "item": "Wants detailed, in-depth explanations as the default",
+        "kind": "must_not_assert",
+        "mark": "asserted",
+        "votes": [
+          "asserted",
+          "asserted",
+          "asserted"
+        ],
+        "evidence": "Memory still says \"In cooking and baking tasks, they usually want detailed explanations of the science and reasoning behind each step\" and \"generally prefer that style\" as current help preferences."
+      },
+      {
+        "id": "N2",
+        "item": "Wants elaborate weekend cooking projects",
+        "kind": "must_not_assert",
+        "mark": "asserted",
+        "votes": [
+          "asserted",
+          "asserted",
+          "asserted"
+        ],
+        "evidence": "Memory's Goals section says they want to \"Learn to make fresh pasta from scratch\" and build skill with \"technique-heavy cooking projects like vegetarian ramen broth and similar long-format dishes.\""
+      }
+    ],
+    "contain_rate": 0.8,
+    "stale_rate": 1.0,
+    "criteria": {
+      "faithfulness": 1,
+      "currency": 2,
+      "recall": 2,
+      "change_tracking": 2,
+      "provenance": 2,
+      "consistency": 2
+    },
+    "criteria_reasons": {
+      "faithfulness": "Most claims are supported, but one current-right-now statement is speculative: the newborn period likely remaining dominant for the next few weeks/months.",
+      "currency": "Current newborn, short-answer, and batch-cooking preferences are updated and the shift from earlier detail-seeking is tracked.",
+      "recall": "It captures the key enduring facts and the important preference shift to short, practical help during the newborn period.",
+      "change_tracking": "The memory includes dated changes showing the move from detailed walkthroughs to short, practical requests after the baby arrived.",
+      "provenance": "Most claims are tagged to observations, but at least one forward-looking claim is not grounded in the evidence.",
+      "consistency": "The detailed-vs-short preferences are scoped to different contexts, so the current beliefs do not directly contradict each other."
+    },
+    "agreement": 0.923,
+    "judge_cost_usd": 0.06226
+  },
+  "reply": {
+    "checklist": [
+      {
+        "id": "R1",
+        "item": "Is short (a few lines)",
+        "mark": "partial",
+        "votes": [
+          "violates",
+          "partial",
+          "partial"
+        ],
+        "evidence": "The reply is a full list of six dinners plus an offer, not the requested ~three lines."
+      },
+      {
+        "id": "R2",
+        "item": "Suggests only vegetarian dishes",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "All suggested dinners are vegetarian (tofu, beans, lentils, eggs, mushrooms, etc.)."
+      },
+      {
+        "id": "R3",
+        "item": "Suggests spicy options",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "It includes explicitly spicy/heat-forward options like chili crisp tofu, spicy lentil curry, and chili crisp eggs."
+      },
+      {
+        "id": "R4",
+        "item": "Suggests one-pan or freezer-friendly meals",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "It includes one-pan meals such as sheet-pan gnocchi and one-pan shakshuka-ish eggs."
+      }
+    ],
+    "follow_rate": 0.75,
+    "violate_rate": 0.0,
+    "asks_for_known": false,
+    "agreement": 0.917,
+    "judge_cost_usd": 0.00873,
+    "text": "Absolutely — here are a few low-lift, vegetarian, spicy-leaning dinners for the week:\n\n- **Chili crisp tofu + broccoli rice bowls**\n- **Sheet-pan gnocchi with peppers, onions, and white beans**\n- **Spicy lentil curry with spinach + naan**\n- **Miso ramen with mushrooms, greens, and tofu**\n- **Black bean quesadillas with salsa + avocado**\n- **One-pan shakshuka-ish eggs with chickpeas and chili crisp**\n\nIf you want, I can turn these into a **very short shopping list** or a **3-night plan**.",
+    "reply_cost_usd": 0.00203
+  }
+}

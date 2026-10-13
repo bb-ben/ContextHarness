@@ -1,0 +1,85 @@
+- E-0 | 2025-02-03 | source: S-0 | Asked for a weeknight dinner for self and two teenagers that could be on the table in 30 minutes.
+  - O-0.1 | stated | They have two teenagers at home and are cooking for three people.
+  - O-0.2 | behavior | They want meal ideas that fit a 30-minute weeknight deadline.
+- E-1 | 2025-02-06 | source: S-1 | Asked for a grocery list for the household of three and said they don’t mind splurging on premium ingredients.
+  - O-1.1 | stated | They said they don’t mind splurging on groceries and mentioned good olive oil and grass-fed beef.
+  - O-1.2 | behavior | They asked for a grocery list for the three of them for the week.
+  - O-1.3 | stated | Their household for meal planning is still them plus two teenagers.
+- E-2 | 2025-02-10 | source: S-2 | Asked for a birthday dessert for Leo and specified a peanut allergy.
+  - O-2.1 | stated | They are allergic to peanuts, so food suggestions need to avoid peanuts.
+- E-3 | 2025-02-13 | source: S-3 | Asked what wine pairs with short ribs.
+  - O-3.1 | behavior | Asked for a wine pairing recommendation for short ribs.
+- E-4 | 2025-02-17 | source: S-4 | User asked for tips to sleep better because they keep waking at 4am.
+  - O-4.1 | stated | They are currently waking at 4am and want to sleep better.
+  - O-4.2 | behavior | They asked for practical sleep-improvement tips.
+- E-5 | 2025-02-20 | source: S-5 | Quick 30-minute dinner idea for the user and two teenagers after practice.
+  - O-5.1 | behavior | Asked for a fast dinner with a hard limit of 30 minutes or less.
+  - O-5.2 | event | Mentioned the kids were starving after practice, so dinner needed to be especially quick and filling.
+- E-6 | 2025-02-24 | source: S-6 | Asked whether a stand mixer is worth buying.
+  - O-6.1 | behavior | They asked for advice on whether a stand mixer is worth it, showing they are considering a kitchen appliance purchase.
+- E-7 | 2025-02-28 | source: S-7 | Asked for a splurge-worthy Saturday dinner for three and specifically wanted dry-aged steak.
+  - O-7.1 | behavior | They asked for an indulgent weekend dinner for three people.
+  - O-7.2 | stated | They want to try dry-aged steak.
+- E-8 | 2025-03-04 | source: S-8 | Asked how to keep herbs fresh longer.
+  - O-8.1 | behavior | Asked for a practical way to keep herbs fresh longer, showing interest in simple kitchen/storage tips.
+- E-9 | 2025-03-08 | source: S-9 | Asked for quick lunchbox ideas for two teenagers.
+  - O-9.1 | behavior | Requested quick lunchbox ideas for two teenagers, reinforcing that practical, fast meal suggestions are useful for the household.
+- E-10 | 2025-03-12 | source: S-10 | Asked for stretches to do after a long day at a desk.
+  - O-10.1 | behavior | Asked for practical stretch suggestions for desk-related tightness, indicating they like simple, actionable mobility advice.
+  - O-10.2 | stated | They spend long days at a desk, so posture/desk stiffness is a real part of their routine.
+- E-11 | 2025-03-17 | source: S-11 | Asked for a wine pairing for mushroom risotto.
+  - O-11.1 | behavior | They asked for a wine pairing for mushroom risotto, reinforcing that concise wine-pairing suggestions are useful to them [O-3.1, O-11.1].
+- E-12 | 2025-03-21 | source: S-12 | 2025-03-21: asked again for a 30-minute dinner on a chaotic night.
+  - O-12.1 | behavior | They again asked for a very fast weeknight dinner, reinforcing that 30-minute or less meals are a recurring need, especially when home is chaotic.
+- E-13 | 2025-03-26 | source: S-13 | Asked how long cooked rice keeps in the fridge.
+  - O-13.1 | behavior | Asked a practical food-storage safety question about cooked rice, reinforcing that actionable kitchen/storage help fits them.
+- E-14 | 2025-04-02 | source: S-14 | User reported a major life transition: both teenagers are away and they retired, leaving the house quiet.
+  - O-14.1 | event | Maya left for an exchange year and Leo moved into his dorm, so both kids are currently away from home.
+  - O-14.2 | event | They retired on 2025-04-02.
+  - O-14.3 | reaction | They described the house as "so quiet," suggesting they are feeling the emptiness of the transition.
+- E-15 | 2025-04-06 | source: S-15 | 2025-04-06: asked how to scale recipes down while cooking for one instead of four.
+  - O-15.1 | behavior | They want practical advice for scaling recipes down to one-person cooking, especially when recipes are written for four.
+  - O-15.2 | event | They are currently cooking just for themselves while the teenagers are away.
+- E-16 | 2025-04-10 | source: S-16 | Asked for a podcast recommendation about food history.
+  - O-16.1 | behavior | Asked for recommendations for podcasts about food history.
+- E-17 | 2025-04-14 | source: S-17 | Asked for cheaper-tasting-good cuts now that they are on a pension and watching spending.
+  - O-17.1 | stated | They are on a pension now and are trying to watch what they spend.
+  - O-17.2 | behavior | They asked for cheaper cuts of meat that still taste good.
+- E-18 | 2025-04-18 | source: S-18 | Asked for a lesson on how to braise properly.
+- E-19 | 2025-04-22 | source: S-19 | Asked about the difference between baking soda and baking powder.
+  - O-19.1 | behavior | Asked a basic baking-chemistry question, suggesting they like practical, plain-English cooking explanations.
+- E-20 | 2025-04-26 | source: S-20 | Asked for a single-portion dinner that wouldn't leave a week of leftovers.
+  - O-20.1 | behavior | They asked for a dinner idea sized for one person with minimal leftovers.
+- E-21 | 2025-04-30 | source: S-21 | Asked for a budget meal plan for one at about $40 a week because groceries are adding up.
+  - O-21.1 | stated | Groceries are adding up and they want to keep food spending around $40 a week.
+  - O-21.2 | behavior | They asked for a budget meal plan specifically for one person.
+- E-22 | 2025-05-04 | source: S-22 | Asked whether they should get a slow cooker and considered a Dutch oven as an alternative.
+  - O-22.1 | behavior | They asked for advice on whether to buy a slow cooker, showing interest in practical kitchen appliance guidance.
+  - O-22.2 | behavior | They seem to value comparing a new appliance against something they may already have, like a Dutch oven.
+- E-23 | 2025-05-08 | source: S-23 | Asked for a weekend bread-from-scratch project now that they finally have time.
+  - O-23.1 | behavior | Asked for a simple weekend project involving bread from scratch, suggesting interest in approachable baking projects.
+  - O-23.2 | stated | Said they finally have time, indicating their schedule has opened up recently.
+- E-24 | 2025-05-12 | source: S-24 | Asked for practical advice on how to sharpen a kitchen knife.
+  - O-24.1 | behavior | Asked a practical knife-sharpening question, reinforcing that plain-English, actionable kitchen maintenance help fits them.
+- E-25 | 2025-05-16 | source: S-25 | Asked for dinner for one tonight and accepted a roughly hour-long cook, resulting in a mushroom risotto suggestion.
+  - O-25.1 | behavior | Asked for a dinner for one and said they were happy to spend about an hour cooking tonight.
+- E-26 | 2025-05-20 | source: S-26 | Asked for ideas for a small herb garden on a balcony.
+  - O-26.1 | behavior | Asked for ideas for a small herb garden on a balcony, suggesting interest in compact, low-maintenance gardening projects.
+- E-27 | 2025-05-24 | source: S-27 | Asked for cheap, simple meal ideas and said to skip fancy stuff.
+  - O-27.1 | behavior | They explicitly preferred beans, lentils, and whatever is cheap and good, and asked to skip fancy stuff, reinforcing a no-frills, budget-first food preference.
+- E-28 | 2025-05-28 | source: S-28 | Asked for a simple cake to serve with coffee for a visiting friend.
+  - O-28.1 | behavior | Asked for a simple cake for a coffee visit, reinforcing a preference for unfussy, approachable baking ideas.
+- E-29 | 2025-06-01 | source: S-29 | Asked whether buying whole chickens and breaking them down is cheaper, and expressed interest in learning the skill.
+  - O-29.1 | behavior | Asked if whole chickens are cheaper and wanted to learn how to break them down, reinforcing interest in cost-saving kitchen skills and hands-on butchery [O-29.1].
+  - O-29.2 | stated | Said they have time to learn, indicating their current schedule has room for food-prep skill-building [O-29.2].
+- E-30 | 2025-06-05 | source: S-30 | Asked how to store bread so it doesn't go stale.
+  - O-30.1 | behavior | Asked for practical bread-storage advice, reinforcing that actionable kitchen/storage help fits them. [O-30.1]
+- E-31 | 2025-06-09 | source: S-31 | Asked for a slow Sunday recipe for one and said they like having something simmering.
+  - O-31.1 | behavior | They wanted a slow Sunday recipe for one, especially something that can simmer for a while. [O-31.1]
+- E-32 | 2025-06-13 | source: S-32 | Asked for good walking routes and mentioned they now walk every morning to stay active.
+  - O-32.1 | stated | They walk every morning now.
+  - O-32.2 | behavior | Asked for good walking routes to stay active.
+- E-33 | 2025-06-17 | source: S-33 | Asked whether frozen or fresh vegetables are better on a budget.
+  - O-33.1 | behavior | Asked a practical grocery-shopping question comparing frozen vs fresh vegetables for budget reasons, reinforcing a preference for straightforward value comparisons.
+- E-34 | 2025-06-21 | source: S-34 | Asked which spices are worth buying first.
+  - O-34.1 | behavior | Asked which spices are worth buying first, suggesting they like practical, prioritized pantry advice.

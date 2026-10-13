@@ -1,0 +1,156 @@
+{
+  "source": "profile_r2__001_foodbody-scenarios_tom_65fd5cd8",
+  "method": "profile",
+  "case": "tom",
+  "memory": {
+    "checklist": [
+      {
+        "id": "M1",
+        "item": "Has a stress fracture and can't run for about 8 weeks",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "\"As of 2025-08-30, has a stress fracture in the foot and is off running for about 8 weeks per doctor advice.\""
+      },
+      {
+        "id": "M2",
+        "item": "Wants gentle, supportive coaching now",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "\"during injury/recovery they want a gentler, supportive, healing-first tone and less performance pressure\""
+      },
+      {
+        "id": "M3",
+        "item": "Focus is recovery and healing, not performance",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "\"Recovery and healing are the immediate focus; they want support framed around healing rather than performance.\""
+      },
+      {
+        "id": "M4",
+        "item": "Wants tables and metric units",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "\"want a weekly table and distances in kilometers\" / \"still in metric\""
+      },
+      {
+        "id": "N1",
+        "item": "Wants blunt, push-hard coaching",
+        "kind": "must_not_assert",
+        "mark": "absent",
+        "votes": [
+          "asserted",
+          "absent",
+          "absent"
+        ],
+        "evidence": "\"for normal training they prefer blunt, direct, accountability-focused feedback rather than coddling\""
+      },
+      {
+        "id": "N2",
+        "item": "Focus is performance and race goals",
+        "kind": "must_not_assert",
+        "mark": "absent",
+        "votes": [
+          "absent",
+          "absent",
+          "absent"
+        ],
+        "evidence": "Memory explicitly says \"Recovery and healing are the immediate focus\" rather than performance-focus."
+      }
+    ],
+    "contain_rate": 1.0,
+    "stale_rate": 0.0,
+    "criteria": {
+      "faithfulness": 2,
+      "currency": 2,
+      "recall": 2,
+      "change_tracking": 2,
+      "provenance": 2,
+      "consistency": 2
+    },
+    "criteria_reasons": {
+      "faithfulness": "All current beliefs are supported by the evidence; the late-October note is a reasonable date calculation from the 8-week pause.",
+      "currency": "The memory reflects the current recovery state and updates tone/preference around that context.",
+      "recall": "It captures the main goals, injury status, tone preferences, and format/unit preferences.",
+      "change_tracking": "The Changes section records the key shifts with dates and what changed.",
+      "provenance": "Claims are tied to dated citations/observation codes and those citations support the claims.",
+      "consistency": "The current beliefs do not contradict each other; bluntness is limited to normal training, while recovery is framed gently."
+    },
+    "agreement": 0.972,
+    "judge_cost_usd": 0.03986
+  },
+  "reply": {
+    "checklist": [
+      {
+        "id": "R1",
+        "item": "Is gentle and reassuring rather than harsh",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "Uses calm, supportive language like 'No, you did not undo your recovery' and 'That’s a blip, not a disaster.'"
+      },
+      {
+        "id": "R2",
+        "item": "Focuses on recovery and healing",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "Centers bone healing and recovery with advice like 'Bone-healing priorities: enough calories, protein, calcium, vitamin D, and hydration.'"
+      },
+      {
+        "id": "R3",
+        "item": "Uses a table",
+        "mark": "ignores",
+        "votes": [
+          "ignores",
+          "ignores",
+          "ignores"
+        ],
+        "evidence": "The reply gives bullet points but no table."
+      },
+      {
+        "id": "R4",
+        "item": "Uses metric units where it gives quantities or distances",
+        "mark": "ignores",
+        "votes": [
+          "ignores",
+          "ignores",
+          "ignores"
+        ],
+        "evidence": "It does not include any metric units, and it gives no quantities or distances to convert."
+      }
+    ],
+    "follow_rate": 0.5,
+    "violate_rate": 0.0,
+    "asks_for_known": false,
+    "agreement": 1.0,
+    "judge_cost_usd": 0.00795,
+    "text": "No, you did not undo your recovery with three pizza nights.\n\nThat’s a blip, not a disaster. What matters for bone healing is the next 1–2 weeks, not one stretch of meals.\n\nDo this now:\n- **Next meal:** protein + carb + fruit/veg + calcium source\n- **Today:** get back to normal eating, don’t “compensate” by starving\n- **This week:** aim for 3 solid meals + 1–2 snacks, with protein each time\n- **Bone-healing priorities:** enough calories, **protein**, **calcium**, **vitamin D**, and hydration\n\nSimple reset for the rest of today:\n- Greek yogurt + fruit\n- Eggs or chicken with rice/potatoes and vegetables\n- Glass of milk or fortified alt milk\n- Snack: nuts, cheese, or a protein shake\n\nIf you want, I can turn this into a **very simple 1-day bone-healing meal plan** so you don’t have to think about it.",
+    "reply_cost_usd": 0.00196
+  }
+}

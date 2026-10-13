@@ -1,0 +1,87 @@
+- E-0 | 2025-01-06 | source: S-0 | Discussed protein combining and protein quality; user wanted a deep science explanation.
+  - O-0.1 | behavior | Asked how protein combining works, indicating interest in nutrition/food science.
+  - O-0.2 | stated | Said they love the science and wanted a deep explanation.
+- E-1 | 2025-01-09 | source: S-1 | Planned a weekend batch-cook of vegan chili and wanted the full method plus the reason behind each step.
+  - O-1.1 | behavior | Asked for a complete cooking method rather than a brief recipe, suggesting they value thorough step-by-step guidance for cooking tasks.
+  - O-1.2 | stated | Explicitly wanted to know why each step matters, showing a preference for explanations of mechanism and rationale, not just instructions.
+- E-2 | 2025-01-13 | source: S-2 | Asked for good compression socks for 12-hour shifts.
+  - O-2.1 | event | They have 12-hour shifts or at least need socks suitable for long 12-hour work shifts.
+  - O-2.2 | behavior | They asked for a concise product recommendation rather than a broad explanation, suggesting practical, task-focused help for this topic.
+- E-3 | 2025-01-16 | source: S-3 | Explained why soaking beans matters, with a request for a full explanation.
+  - O-3.1 | behavior | Asked why soaking beans matters and explicitly wanted the full explanation, reinforcing a preference for detailed cooking-science reasoning.
+- E-4 | 2025-01-20 | source: S-4 | Planned a Sunday cooking project within a four-hour time budget.
+  - O-4.1 | behavior | Asked for a Sunday cooking project and specified having four hours, suggesting they like structured, time-bounded meal ideas when cooking.
+  - O-4.2 | behavior | The request was for a project-style plan rather than just a single recipe, reinforcing interest in organized cooking guidance.
+- E-5 | 2025-01-23 | source: S-5 | Asked how to remove turmeric stains from a cutting board.
+  - O-5.1 | behavior | Asked for a practical fix for turmeric stains on a cutting board.
+- E-6 | 2025-01-27 | source: S-6 | Explained B12 for vegans in detail, covering sources, absorption, and dosing.
+  - O-6.1 | behavior | Asked for a detailed explanation of B12 for vegans, reinforcing their interest in nutrition science and vegan nutrition topics.
+- E-7 | 2025-01-30 | source: S-7 | Detailed homemade seitan recipe request with explanations for why each step matters.
+  - O-7.1 | behavior | Asked for a detailed homemade seitan recipe and wanted the reasons behind the steps, reinforcing a preference for thorough, explanatory cooking guidance.
+  - O-7.2 | behavior | Chose a vegan protein project (seitan), suggesting ongoing interest in plant-based/vegan cooking.
+- E-8 | 2025-02-03 | source: S-8 | Asked for a book recommendation about nursing history.
+  - O-8.1 | behavior | Asked for book recommendations about nursing history, showing a new interest in that topic.
+- E-9 | 2025-02-06 | source: S-9 | Discussed the science behind fermenting tempeh.
+  - O-9.1 | behavior | Asked about the science behind fermenting tempeh, showing interest in food-fermentation science and plant-based cooking.
+  - O-9.2 | behavior | Focused on a vegan protein food, reinforcing ongoing interest in plant-based protein preparation.
+- E-10 | 2025-02-10 | source: S-10 | Asked for an elaborate vegan Sunday brunch idea.
+  - O-10.1 | behavior | Asked for an elaborate vegan Sunday brunch, suggesting interest in indulgent plant-based meal ideas.
+- E-11 | 2025-02-13 | source: S-11 | Asked for the best way to clean a cast-iron pan.
+  - O-11.1 | behavior | Asked a practical household/cookware-care question and seemed to want a directly useful method.
+- E-12 | 2025-02-17 | source: S-12 | Discussed omega-3 sources for vegans and the science of ALA conversion, algae oil, and dosing.
+  - O-12.1 | behavior | Asked to "go deep" on omega-3 sources for vegans, reinforcing a preference for in-depth, science-forward nutrition explanations.
+  - O-12.2 | behavior | Focused on vegan omega-3 options, adding another ongoing vegan nutrition topic to their interests.
+- E-13 | 2025-02-20 | source: S-13 | User is moving to 7pm–7am night shifts three nights a week next week.
+  - O-13.1 | event | They will be starting night shifts next week, specifically 7pm to 7am, three nights a week.
+- E-14 | 2025-02-24 | source: S-14 | First night shift completed; discussed what to eat at 3am and asked for a short answer.
+  - O-14.1 | behavior | Asked what to eat at 3am during a night shift and explicitly said to keep it short, suggesting concise answers for immediate shift-food questions.
+  - O-14.2 | event | Has now started the 7pm–7am night-shift schedule and has at least completed the first night shift.
+- E-15 | 2025-02-27 | source: S-15 | Asked whether blackout curtains are worth it for daytime sleep during night shifts.
+  - O-15.1 | behavior | Asked a practical sleep-environment question about blackout curtains, suggesting they are trying to improve daytime sleep.
+  - O-15.2 | event | Their night-shift routine is still ongoing, so sleep-support questions are now part of that context.
+- E-16 | 2025-03-03 | source: S-16 | Asked for meal ideas that don’t need reheating because the unit microwave is unreliable.
+  - O-16.1 | behavior | Asked for meals that can be eaten without reheating, showing a need for practical work-friendly food ideas.
+  - O-16.2 | event | Their unit’s microwave is broken half the time, so reliable no-reheat meals are currently useful.
+- E-17 | 2025-03-06 | source: S-17 | User said the previous answer was too long while half asleep and wanted only a list for a quick food suggestion.
+  - O-17.1 | reaction | They asked to cut the answer down to just the list because they were reading half asleep, showing they want ultra-brief responses in tired/immediate food contexts.
+- E-18 | 2025-03-10 | source: S-18 | Asked how to nap before a shift without feeling groggy.
+  - O-18.1 | behavior | Asked for practical advice on pre-shift napping to avoid grogginess, showing a shift-work sleep concern.
+  - O-18.2 | behavior | The question was direct and task-focused, consistent with wanting concise help for immediate sleep/work problems.
+- E-19 | 2025-03-13 | source: S-19 | Asked for bullet-point portable vegan snack ideas for the night shift.
+  - O-19.1 | behavior | Asked specifically for bullet points, showing a strong preference for list-format answers in quick night-shift food contexts.
+  - O-19.2 | behavior | Asked for portable vegan snacks for the night, reinforcing the need for practical, portable plant-based work food ideas.
+- E-20 | 2025-03-17 | source: S-20 | Asked for a short answer on when to eat during a 7pm–7am night shift.
+  - O-20.1 | behavior | Asked when to eat on a 7pm–7am shift and explicitly wanted a short answer, reinforcing a preference for concise shift-schedule guidance.
+  - O-20.2 | behavior | Focused on meal timing for night work, showing that practical, time-based advice is especially useful in the night-shift context.
+- E-21 | 2025-03-20 | source: S-21 | Asked for a practical gift idea for a retiring coworker.
+  - O-21.1 | behavior | Asked for a practical retirement gift suggestion for a coworker; this appears to be a one-off gift-planning request.
+- E-22 | 2025-03-24 | source: S-22 | Asked for a quick no-cook lunch to grab before work.
+  - O-22.1 | behavior | Asked for a quick no-cook lunch, showing a preference for fast, grab-and-go work food when time is limited.
+  - O-22.2 | behavior | Framed it as food to take before work, reinforcing the practical work-meal context.
+- E-23 | 2025-03-27 | source: S-23 | Confirmed that short, concise answers are especially preferred during these weeks.
+  - O-23.1 | reaction | Said, "That was perfect. Short is what I need on these weeks," confirming a strong preference for brief replies in the current period.
+- E-24 | 2025-03-31 | source: S-24 | Asked whether coffee at 4am is okay during a night shift.
+  - O-24.1 | behavior | Asked a practical caffeine-timing question tied to the night-shift schedule, showing they want direct guidance for managing alertness and sleep during overnight work.
+- E-25 | 2025-04-03 | source: S-25 | Asked for a three-line answer on what helps with night-shift nausea.
+  - O-25.1 | behavior | Asked for the answer in exactly three lines, reinforcing a strong preference for very brief replies in immediate night-shift symptom questions.
+  - O-25.2 | event | Reported night-shift nausea as a current issue during the overnight work routine.
+- E-26 | 2025-04-07 | source: S-26 | Asked for something cold they could eat from a container at 2am on a night shift.
+  - O-26.1 | behavior | Asked for a cold, container-eaten food idea at 2am, reinforcing a need for very practical night-shift meals that don’t require reheating.
+- E-27 | 2025-04-10 | source: S-27 | Asked for sunglasses for driving home in the morning after a night shift.
+  - O-27.1 | behavior | Asked for sunglasses for morning driving, showing another practical gear question tied to the night-shift commute.
+  - O-27.2 | event | The question came in the context of ongoing overnight work and a morning drive home.
+- E-28 | 2025-04-14 | source: S-28 | Asked for a list-only answer on vegan proteins that keep without a fridge for 12 hours.
+  - O-28.1 | behavior | Asked for a 'List only' response, reinforcing a strong preference for ultra-brief, format-constrained answers in practical food contexts [O-28.1].
+  - O-28.2 | behavior | Asked specifically about vegan proteins that can keep without refrigeration for 12 hours, showing an ongoing need for shelf-stable plant-based work/shift food [O-28.2].
+- E-29 | 2025-04-17 | source: S-29 | Asked for a very short breakfast suggestion after a night shift before going to sleep.
+  - O-29.1 | behavior | Asked for the 'short version' for breakfast after a night shift before sleep, reinforcing a preference for very brief answers in post-shift food contexts.
+- E-30 | 2025-04-21 | source: S-30 | Asked for help explaining a night-shift sleep schedule to family.
+  - O-30.1 | behavior | Asked how to explain their sleep schedule to family, showing a need for practical wording about night-shift sleep.
+- E-31 | 2025-04-24 | source: S-31 | Asked for a brief weekend meal-prep idea to cover three night shifts.
+  - O-31.1 | behavior | Asked for one weekend cook that could cover three night shifts, showing a need for practical, high-yield meal-prep solutions for night work and a preference for brief answers.
+- E-32 | 2025-04-28 | source: S-32 | Asked for bullet-only food ideas to keep in a locker.
+  - O-32.1 | behavior | Asked for 'Just bullets' when requesting food to keep in a locker, showing they want extremely concise, list-only answers for this kind of practical work-food question.
+- E-33 | 2025-05-01 | source: S-33 | Asked for a running-shoe recommendation for someone on their feet all day.
+  - O-33.1 | behavior | Asked for shoes for being on their feet all day, showing a preference for practical, directly useful footwear advice for long periods of standing [O-33.1].
+- E-34 | 2025-05-05 | source: S-34 | Asked for quick hydration guidance for night shifts.
+  - O-34.1 | behavior | Asked about hydration on night shifts in a very brief, practical way, reinforcing a preference for short, directly useful advice for shift-work self-care.

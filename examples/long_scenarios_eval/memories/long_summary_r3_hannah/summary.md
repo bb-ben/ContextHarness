@@ -1,0 +1,36 @@
+Current known preference(s) and relevant context:
+- As of 2025-06-21, the user asked which spices are worth buying first. Suggested starter spices were cumin, smoked paprika, chili flakes, and oregano.
+- As of 2025-06-17, the user asked whether frozen vegetables or fresh are better on a budget. Guidance given was that frozen is often cheaper and just as nutritious.
+- As of 2025-06-13, the user walks every morning now and asked for good walking routes to stay active. Suggested route style was a loop with a hill in the middle.
+- As of 2025-06-09, the user wanted a slow Sunday recipe for one and likes having something simmering. A small pot of ragu was suggested, taking about two hours.
+- As of 2025-06-05, the user asked how to store bread so it doesn’t go stale. Guidance given was to keep the cut side down on a board, or freeze sliced bread.
+- As of 2025-06-01, the user asked whether it is cheaper to buy whole chickens and break them down. They have time to learn. Guidance given was that it is usually cheaper by about a third, and a simple method for jointing a chicken was explained.
+- As of 2025-05-28, the user wanted a simple cake for coffee with a friend. A lemon drizzle loaf was suggested.
+- As of 2025-05-24, the user said to skip fancy stuff and wants cheap, good foods like beans and lentils. Suggested options were black bean soup and red lentil dal.
+- As of 2025-05-20, the user asked for ideas for a small herb garden on a balcony. Suggested herbs were basil, thyme, rosemary, and chives.
+- As of 2025-05-16, the user wanted dinner for one and was happy to spend about an hour cooking. A mushroom risotto for one was suggested, taking about 45 minutes.
+- As of 2025-05-12, the user asked how to sharpen a knife. Guidance given was to use a whetstone at about a 15-degree angle, then hone.
+- As of 2025-05-08, the user wanted a weekend project and was interested in making bread from scratch now that they finally have time. A simple overnight loaf was suggested as a good first project.
+- As of 2025-05-04, the user asked whether they should get a slow cooker. Guidance given was that a Dutch oven can do the same job if they already have one.
+- As of 2025-04-30, the user said groceries are adding up and asked for a budget meal plan for one, around $40 a week. Suggested staples were lentils, eggs, a whole chicken, rice, and seasonal vegetables.
+- As of 2025-04-26, the user wanted a single-portion dinner that does not leave a week of leftovers. A suggested option was a one-pan chicken thigh with lentils.
+- As of 2025-04-22, the user asked about the difference between baking soda and baking powder. The guidance given was: baking soda needs an acid; baking powder carries its own acid.
+- As of 2025-04-18, the user wanted to learn how to braise properly. The guidance given was: sear first, add aromatics and liquid, cover, and cook low for about three hours.
+- As of 2025-04-14, the user is retired and now on a pension, and is trying to watch spending. They asked for cheaper cuts that still taste good; suggested options were chicken thighs, pork shoulder, and beef chuck, especially for braising.
+- As of 2025-04-10, the user asked for good podcasts about food history; Gastropod was recommended as a good start.
+- As of 2025-04-06, the user is cooking for just themselves now. Many recipes make four servings, so guidance was to halve or quarter recipes and freeze single portions. This supersedes earlier assumptions that they were cooking for three or for two teenagers.
+- As of 2025-04-02, major life changes occurred: Maya left for her exchange year, Leo moved into his dorm, and the user retired after their last day of work on Friday. The house is now very quiet.
+- As of 2025-03-26, the user asked how long cooked rice keeps in the fridge; the answer given was up to four days, cooled quickly.
+- As of 2025-03-21, the user again wanted a 30-minute dinner because things were chaotic. A suggested meal that fit this need was sheet-pan chicken thighs and vegetables (about 30 minutes).
+- As of 2025-03-17, the user asked for a wine pairing for mushroom risotto; suggested pairings were Pinot Noir or oaked Chardonnay.
+- As of 2025-03-12, the user asked for good stretches after a long day at a desk. Suggested stretches included hip flexor lunges and a doorway chest stretch.
+- As of 2025-03-08, the user asked for quick lunchbox ideas for two teenagers. Suggested lunchbox ideas included chicken wraps, pasta salad, and cheese and crackers.
+- As of 2025-03-04, the user asked how to keep herbs fresh longer; the suggested method was to place stems in water, loosely cover them, and store them in the fridge.
+- As of 2025-02-28, the user wanted a splurge-worthy Saturday dinner and wanted to try dry-aged steak. A suggested meal that fit this need was dry-aged ribeye with potato gratin and a Bordeaux.
+- As of 2025-02-24, the user was considering whether a stand mixer is worth it; the advice given was that it is worth it if they bake weekly.
+- As of 2025-02-20, the user wanted a fast dinner for hungry kids after practice, with a 30-minute maximum. A suggested meal that fit this need was steak tacos with quick-pickled onions (about 20 minutes).
+- As of 2025-02-17, the user was looking for tips to sleep better because they kept waking up around 4am. Suggested basics were keeping a fixed wake time and making the bedroom cool and dark.
+- As of 2025-02-13, the user asked what wine goes with short ribs; suggested pairings were Cabernet Sauvignon or Syrah.
+- As of 2025-02-10, the user was looking for a birthday dessert for Leo and needed it to be peanut-free due to a peanut allergy.
+- As of 2025-02-06, the user was shopping for three people for the week and was okay splurging on higher-quality ingredients like good olive oil and grass-fed beef. A grocery list fitting that preference included: grass-fed ground beef, wild salmon, aged parmesan, good olive oil, berries, sourdough, and greens.
+- As of 2025-02-03, the user asked for weeknight dinner ideas that could be on the table in 30 minutes or less. A suggested meal that fit this need was pan-seared salmon with garlic green beans and rice (about 25 minutes).

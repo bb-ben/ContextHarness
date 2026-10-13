@@ -1,0 +1,1487 @@
+{
+  "model": "gpt-5.4-mini",
+  "judge_effort": "high",
+  "repeats": 3,
+  "rows": [
+    {
+      "source": "v310_review_r1__002_foodbody-scenarios_dani_cd5a822e",
+      "method": "agent",
+      "case": "dani",
+      "memory": {
+        "checklist": [
+          {
+            "id": "M1",
+            "item": "Is vegetarian",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Profile says 'Is vegetarian' (F-1.1 current)."
+          },
+          {
+            "id": "M2",
+            "item": "Likes spicy food and chili crisp",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Preferences says 'Likes food spicy and keeps chili crisp on everything' (P-1.1 current)."
+          },
+          {
+            "id": "M3",
+            "item": "Has a newborn",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Profile says 'Has a newborn at home' and transient state says sleeping in 90-minute chunks."
+          },
+          {
+            "id": "M4",
+            "item": "Wants very short answers (about three lines) now",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Preferences says 'Wants very short answers, about 3 lines, for now' (P-5.1 current)."
+          },
+          {
+            "id": "M5",
+            "item": "Wants one-pan, freezer-friendly, low-effort cooking",
+            "kind": "must_contain",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "Memory includes 'Wants one-pan recipes when possible,' but does not state freezer-friendly or low-effort as current preferences."
+          },
+          {
+            "id": "N1",
+            "item": "Wants detailed, in-depth explanations as the default",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "It appears only as superseded history: 'Wants detailed, thorough explanations' (P-0.2 superseded by P-5.1)."
+          },
+          {
+            "id": "N2",
+            "item": "Wants elaborate weekend cooking projects",
+            "kind": "must_not_assert",
+            "mark": "absent",
+            "votes": [
+              "absent",
+              "past_only",
+              "absent"
+            ],
+            "evidence": "No current belief about elaborate weekend cooking projects is stated in the memory."
+          }
+        ],
+        "contain_rate": 0.8,
+        "stale_rate": 0.0,
+        "criteria": {
+          "faithfulness": 2,
+          "currency": 2,
+          "recall": 1,
+          "change_tracking": 2,
+          "provenance": 2,
+          "consistency": 2
+        },
+        "criteria_reasons": {
+          "faithfulness": "Current claims are all supported by the evidence and nothing invented.",
+          "currency": "The memory reflects the present state, including shorter replies and newborn-related constraints.",
+          "recall": "Core preferences are present, but freezer-friendly and low-effort cooking are not fully retained.",
+          "change_tracking": "It records the shift from detailed to very short replies and marks older states as superseded.",
+          "provenance": "Claims are linked to bases/dates or superseded records, so the source is traceable.",
+          "consistency": "The current entries do not contradict each other."
+        },
+        "agreement": 0.949,
+        "judge_cost_usd": 0.04958
+      },
+      "reply": {
+        "checklist": [
+          {
+            "id": "R1",
+            "item": "Is short (a few lines)",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "It stays very brief: a short intro plus three bullet points."
+          },
+          {
+            "id": "R2",
+            "item": "Suggests only vegetarian dishes",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "All three suggestions are vegetarian (tofu, chickpeas, mushrooms/veg)."
+          },
+          {
+            "id": "R3",
+            "item": "Suggests spicy options",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "It explicitly frames them as spicy and includes chili crisp/spicy dishes."
+          },
+          {
+            "id": "R4",
+            "item": "Suggests one-pan or freezer-friendly meals",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "partial",
+              "follows"
+            ],
+            "evidence": "It says “three easy vegetarian, spicy, one-pan ideas,” which matches the one-pan/freezer-friendly direction."
+          }
+        ],
+        "follow_rate": 1.0,
+        "violate_rate": 0.0,
+        "asks_for_known": false,
+        "agreement": 0.917,
+        "judge_cost_usd": 0.00574,
+        "text": "Sure — three easy vegetarian, spicy, one-pan ideas:\n- Chili crisp tofu with broccoli and rice\n- Chickpea spinach curry with naan\n- Spicy mushroom udon with bok choy",
+        "reply_cost_usd": 0.0119
+      }
+    },
+    {
+      "source": "v310_review_r1__003_foodbody-scenarios_lena_a7a829dd",
+      "method": "agent",
+      "case": "lena",
+      "memory": {
+        "checklist": [
+          {
+            "id": "M1",
+            "item": "Wants no grams, calories or tracking numbers",
+            "kind": "must_contain",
+            "mark": "partial",
+            "votes": [
+              "present",
+              "partial",
+              "partial"
+            ],
+            "evidence": "context.md says: 'Now - Wants no grams or calories shown' and 'On burnout leave; food tracking worsens anxiety for now.'"
+          },
+          {
+            "id": "M2",
+            "item": "Wants gentle check-ins instead of reports",
+            "kind": "must_contain",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "context.md/watch says: 'May prefer gentle, supportive tone for eating check-ins' and 'May prefer check-ins about eating instead of weekly reports'—but only as tentative hypotheses, not stated as current wants."
+          },
+          {
+            "id": "M3",
+            "item": "Prefers Mediterranean food",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "state/preferences.md marks 'Wants Mediterranean-style meal plans' as current."
+          },
+          {
+            "id": "M4",
+            "item": "Cooks for self and partner",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "state/profile.md marks 'Cooks for self and partner' as current."
+          },
+          {
+            "id": "M5",
+            "item": "Is on leave for burnout",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "state/transient.md says 'On burnout leave' and that this state is active/current."
+          },
+          {
+            "id": "N1",
+            "item": "Wants exact grams or macros per meal",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "state/preferences.md shows 'Wants exact grams listed for every meal' as superseded by 'Wants no grams or calories shown'."
+          },
+          {
+            "id": "N2",
+            "item": "Wants weekly numeric reports",
+            "kind": "must_not_assert",
+            "mark": "absent",
+            "votes": [
+              "absent",
+              "absent",
+              "absent"
+            ],
+            "evidence": "The memory does not assert a current desire for weekly numeric reports; it only says the user may prefer check-ins instead of weekly reports."
+          }
+        ],
+        "contain_rate": 0.6,
+        "stale_rate": 0.0,
+        "criteria": {
+          "faithfulness": 2,
+          "currency": 1,
+          "recall": 2,
+          "change_tracking": 2,
+          "provenance": 2,
+          "consistency": 2
+        },
+        "criteria_reasons": {
+          "faithfulness": "The substantive current claims match the evidence and the old exact-grams preference is clearly superseded.",
+          "currency": "Current state reflects the latest change to no numbers and burnout leave, with older preferences replaced or downgraded.",
+          "recall": "It keeps the key cuisine, household, burnout, and no-numbers preferences, plus the shift toward gentler check-ins.",
+          "change_tracking": "It records the switch from exact meal grams to no numbers and preserves the burnout/anxiety state with timestamps.",
+          "provenance": "There are dates, statuses, and basis IDs, but the evidence links are mostly internal/opaque rather than explicit quotes or visible citations.",
+          "consistency": "The current items do not contradict each other; the protein goal is an internal target, not a display preference."
+        },
+        "agreement": 0.872,
+        "judge_cost_usd": 0.07356
+      },
+      "reply": {
+        "checklist": [
+          {
+            "id": "R1",
+            "item": "Contains no grams, calories or macro numbers",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "It keeps the grocery list and meal ideas free of grams, calories, and macro numbers."
+          },
+          {
+            "id": "R2",
+            "item": "Is Mediterranean",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "The list and meal ideas are clearly Mediterranean-leaning, with items like olive oil, hummus, feta, chickpeas, salmon, and pita."
+          },
+          {
+            "id": "R3",
+            "item": "Is sized for two people",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "It explicitly says the list is 'for you and your partner,' so it is sized for two people."
+          },
+          {
+            "id": "R4",
+            "item": "Includes a gentle check-in about how eating is going",
+            "mark": "ignores",
+            "votes": [
+              "partial",
+              "ignores",
+              "ignores"
+            ],
+            "evidence": "It offers a follow-up about cooking energy, but it does not really check in on how eating is going."
+          }
+        ],
+        "follow_rate": 0.75,
+        "violate_rate": 0.0,
+        "asks_for_known": false,
+        "agreement": 0.917,
+        "judge_cost_usd": 0.01011,
+        "text": "Absolutely — here’s a simple Mediterranean-leaning grocery list for you and your partner, kept low-pressure and protein-friendly, with no grams or calories:\n\n**Produce**\n- Spinach or mixed greens\n- Tomatoes\n- Cucumbers\n- Bell peppers\n- Onions\n- Garlic\n- Lemons\n- Zucchini\n- Berries\n- Bananas\n\n**Protein**\n- Greek yogurt\n- Eggs\n- Chicken\n- Salmon or tuna\n- Chickpeas\n- Lentils\n- Feta\n\n**Carbs / staples**\n- Whole-grain bread or pita\n- Rice or couscous\n- Oats\n- Potatoes\n\n**Pantry / extras**\n- Olive oil\n- Olives\n- Hummus\n- Canned tomatoes\n- Nuts\n- Herbs and spices\n\n**Easy meal ideas**\n- Yogurt + fruit for breakfast\n- Eggs + toast for breakfast\n- Hummus and veg pitas for lunch\n- Lentil salad for lunch\n- Sheet-pan chicken and vegetables for dinner\n- Salmon rice bowls for dinner\n- Chickpea pasta for dinner\n- Tuna pasta salad for dinner\n\nIf you want, I can turn this into a full 7-day plan or tailor it to your budget and how much cooking energy you have this week.",
+        "reply_cost_usd": 0.01167
+      }
+    },
+    {
+      "source": "v310_review_r1__004_foodbody-scenarios_marisol_183be56c",
+      "method": "agent",
+      "case": "marisol",
+      "memory": {
+        "checklist": [
+          {
+            "id": "M1",
+            "item": "Runs a meal-prep business with paying clients",
+            "kind": "must_contain",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "Memory says \"Is starting a small meal-prep business\" and client-facing work, but it does not state that the business is running now or that the clients are paying."
+          },
+          {
+            "id": "M2",
+            "item": "For client work: professional tone, no emojis",
+            "kind": "must_contain",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "Memory says client-facing copy should sound professional and client-facing menus should omit emojis, but the no-emojis rule is only stated for menus, not all client work."
+          },
+          {
+            "id": "M3",
+            "item": "For client work: calories and protein per serving, in a table",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says client-facing menus should use a clean table and include calories and protein per serving, and client-facing work should use a macro table."
+          },
+          {
+            "id": "M4",
+            "item": "Family cooking stays casual and fun",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says replies should be fun and playful, emojis are welcome, and kid-focused ideas should be playful and silly."
+          },
+          {
+            "id": "M5",
+            "item": "Has kids",
+            "kind": "must_contain",
+            "mark": "missing",
+            "votes": [
+              "missing",
+              "missing",
+              "missing"
+            ],
+            "evidence": "Memory says the person \"cooks for kids,\" but it never directly states that they have kids."
+          },
+          {
+            "id": "N1",
+            "item": "Wants no nutrition numbers for client work",
+            "kind": "must_not_assert",
+            "mark": "absent",
+            "votes": [
+              "absent",
+              "absent",
+              "asserted"
+            ],
+            "evidence": "The memory does not say they want no nutrition numbers for client work; instead it records calories/protein and a macro table for client-facing output."
+          },
+          {
+            "id": "N2",
+            "item": "Wants an emoji-filled, casual style for client menus",
+            "kind": "must_not_assert",
+            "mark": "absent",
+            "votes": [
+              "absent",
+              "absent",
+              "absent"
+            ],
+            "evidence": "The memory does not present client menus as emoji-filled or casual; it says client-facing menus omit emojis and sound professional."
+          }
+        ],
+        "contain_rate": 0.4,
+        "stale_rate": 0.0,
+        "criteria": {
+          "faithfulness": 2,
+          "currency": 2,
+          "recall": 1,
+          "change_tracking": 2,
+          "provenance": 2,
+          "consistency": 2
+        },
+        "criteria_reasons": {
+          "faithfulness": "Most claims are evidence-backed, but \"cooks for kids\" is an inferred profile fact rather than something directly stated.",
+          "currency": "Current preferences are up to date, and the older client-menu style has been superseded.",
+          "recall": "It captures the major business and style preferences, but misses explicit \"paying clients\" and does not directly state that the person has kids.",
+          "change_tracking": "It records the key shift from P-7.1 to P-7.2 and notes what changed.",
+          "provenance": "The memory attaches dates/basis IDs to the stored facts, so the claims are traceable.",
+          "consistency": "The current beliefs do not contradict each other because kid/family style and client-facing style are scoped separately."
+        },
+        "agreement": 0.949,
+        "judge_cost_usd": 0.04271
+      },
+      "reply": {
+        "checklist": [
+          {
+            "id": "R1",
+            "item": "Is professional, with no emojis",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "Uses a clean, professional tone and includes no emojis."
+          },
+          {
+            "id": "R2",
+            "item": "Gives calories and protein per serving",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "Each menu item includes calories and protein per serving."
+          },
+          {
+            "id": "R3",
+            "item": "Uses a table",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "The response is formatted as a table."
+          }
+        ],
+        "follow_rate": 1.0,
+        "violate_rate": 0.0,
+        "asks_for_known": false,
+        "agreement": 1.0,
+        "judge_cost_usd": 0.00356,
+        "text": "| Menu item | Calories / serving | Protein / serving | Carbs / serving | Fat / serving |\n|---|---:|---:|---:|---:|\n| Lemon herb chicken, brown rice, broccoli | 520 | 38g | 42g | 18g |\n| Turkey meatballs, marinara, penne | 610 | 36g | 58g | 21g |\n| Teriyaki salmon, jasmine rice, snap peas | 560 | 34g | 49g | 20g |\n| Beef taco bowl, cilantro rice, black beans | 590 | 33g | 54g | 22g |\n| Chickpea coconut curry, basmati rice | 540 | 18g | 62g | 19g |",
+        "reply_cost_usd": 0.01663
+      }
+    },
+    {
+      "source": "v310_review_r2__002_foodbody-scenarios_dani_cd5a822e",
+      "method": "agent",
+      "case": "dani",
+      "memory": {
+        "checklist": [
+          {
+            "id": "M1",
+            "item": "Is vegetarian",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "context.md: \"Is vegetarian\"; state/profile.md: \"Is vegetarian.\""
+          },
+          {
+            "id": "M2",
+            "item": "Likes spicy food and chili crisp",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "context.md: \"Likes spicy food\"; state/preferences.md: \"Likes spicy food and puts chili crisp on everything.\""
+          },
+          {
+            "id": "M3",
+            "item": "Has a newborn",
+            "kind": "must_contain",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "state/profile.md: \"Has a baby who arrived early.\" The memory says baby, but not explicitly \"newborn.\""
+          },
+          {
+            "id": "M4",
+            "item": "Wants very short answers (about three lines) now",
+            "kind": "must_contain",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "context.md: \"Wants brief, no-explanation answers for meal requests\" and transient.md: \"Wants a very brief reply for this late-night dinner request.\" It captures shortness, but not the exact \"about three lines\" wording."
+          },
+          {
+            "id": "M5",
+            "item": "Wants one-pan, freezer-friendly, low-effort cooking",
+            "kind": "must_contain",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "context.md: \"Wants low-effort help for now, especially with baby-related meals\" plus expired transient notes about \"Freezer meals... One pan if possible.\" The low-effort part is current, but one-pan/freezer-friendly is not current."
+          },
+          {
+            "id": "N1",
+            "item": "Wants detailed, in-depth explanations as the default",
+            "kind": "must_not_assert",
+            "mark": "asserted",
+            "votes": [
+              "asserted",
+              "asserted",
+              "asserted"
+            ],
+            "evidence": "state/preferences.md still lists current preferences for \"science-heavy explanations with the why behind each step\" and \"thorough, detailed answers rather than brief ones.\""
+          },
+          {
+            "id": "N2",
+            "item": "Wants elaborate weekend cooking projects",
+            "kind": "must_not_assert",
+            "mark": "absent",
+            "votes": [
+              "absent",
+              "absent",
+              "absent"
+            ],
+            "evidence": "No current memory item asserts elaborate weekend cooking projects; the only related note is an expired archive entry about cooking for friends."
+          }
+        ],
+        "contain_rate": 0.4,
+        "stale_rate": 0.5,
+        "criteria": {
+          "faithfulness": 2,
+          "currency": 1,
+          "recall": 1,
+          "change_tracking": 1,
+          "provenance": 2,
+          "consistency": 2
+        },
+        "criteria_reasons": {
+          "faithfulness": "The listed current beliefs are supported by the evidence and the memory metadata; nothing looks invented.",
+          "currency": "The memory still keeps broad detailed-answer preferences current alongside newer brief-meal preferences, so it is only partly up to date.",
+          "recall": "Core preferences are there, but the explicit one-pan/freezer-friendly cooking preference and the exact newborn wording are not fully retained.",
+          "change_tracking": "Some expiration/supersession is recorded, but the transition from detail-heavy to brief/low-effort help is not cleanly consolidated.",
+          "provenance": "Most claims include dates, basis links, or confirmation/supersession markers that point back to evidence.",
+          "consistency": "The scoped brief-meal preference coexists with a still-current broad preference for detailed answers, creating some tension."
+        },
+        "agreement": 0.923,
+        "judge_cost_usd": 0.05294
+      },
+      "reply": {
+        "checklist": [
+          {
+            "id": "R1",
+            "item": "Is short (a few lines)",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "It’s fairly concise, but it’s longer than the requested ‘about three lines.’"
+          },
+          {
+            "id": "R2",
+            "item": "Suggests only vegetarian dishes",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "All suggested dinners are vegetarian."
+          },
+          {
+            "id": "R3",
+            "item": "Suggests spicy options",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "It clearly frames the ideas as spicy and includes chili crisp and other spicy dishes."
+          },
+          {
+            "id": "R4",
+            "item": "Suggests one-pan or freezer-friendly meals",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "partial",
+              "follows"
+            ],
+            "evidence": "It includes one-pan/freezer-friendly options like a sheet-pan meal and frozen veg."
+          }
+        ],
+        "follow_rate": 0.75,
+        "violate_rate": 0.0,
+        "asks_for_known": false,
+        "agreement": 0.917,
+        "judge_cost_usd": 0.00775,
+        "text": "Absolutely — a few low-effort vegetarian, spicy dinners for the week:\n- Chickpea coconut curry + rice\n- Black bean tacos with salsa and chili crisp\n- Tofu stir-fry with frozen veg + noodles\n- Spicy pasta with white beans and spinach\n- Sheet-pan halloumi and vegetables with pita",
+        "reply_cost_usd": 0.00922
+      }
+    },
+    {
+      "source": "v310_review_r2__003_foodbody-scenarios_lena_a7a829dd",
+      "method": "agent",
+      "case": "lena",
+      "memory": {
+        "checklist": [
+          {
+            "id": "M1",
+            "item": "Wants no grams, calories or tracking numbers",
+            "kind": "must_contain",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "Memory says “Wants meal plans without grams or calories” and “constant tracking is still feeding anxiety,” but it does not explicitly say all tracking numbers are unwanted."
+          },
+          {
+            "id": "M2",
+            "item": "Wants gentle check-ins instead of reports",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says “Wants gentle check-ins about how eating's going instead of weekly reports.”"
+          },
+          {
+            "id": "M3",
+            "item": "Prefers Mediterranean food",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says “Wants Mediterranean-style meal plans.”"
+          },
+          {
+            "id": "M4",
+            "item": "Cooks for self and partner",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says “Cooks for self and partner.”"
+          },
+          {
+            "id": "M5",
+            "item": "Is on leave for burnout",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says “On burnout leave; constant tracking is still feeding anxiety.”"
+          },
+          {
+            "id": "N1",
+            "item": "Wants exact grams or macros per meal",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "The old exact-grams preference is marked superseded, and the current state says meal plans are without grams or calories."
+          },
+          {
+            "id": "N2",
+            "item": "Wants weekly numeric reports",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "The weekly-report preference is marked superseded and replaced by gentle check-ins."
+          }
+        ],
+        "contain_rate": 0.8,
+        "stale_rate": 0.0,
+        "criteria": {
+          "faithfulness": 2,
+          "currency": 2,
+          "recall": 2,
+          "change_tracking": 2,
+          "provenance": 2,
+          "consistency": 2
+        },
+        "criteria_reasons": {
+          "faithfulness": "The stated memories are supported by the evidence and nothing clearly invented is being kept current.",
+          "currency": "Current entries reflect the latest preferences and status; superseded beliefs are not left as current.",
+          "recall": "The important preferences and context are all captured, including food style, formatting, household, and burnout leave.",
+          "change_tracking": "Preference changes are recorded with superseded/current transitions and dates.",
+          "provenance": "Most claims include basis or date references that align with the evidence.",
+          "consistency": "The current beliefs do not contradict one another."
+        },
+        "agreement": 1.0,
+        "judge_cost_usd": 0.02129
+      },
+      "reply": {
+        "checklist": [
+          {
+            "id": "R1",
+            "item": "Contains no grams, calories or macro numbers",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "No grams, calories, or macro numbers appear in the list."
+          },
+          {
+            "id": "R2",
+            "item": "Is Mediterranean",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "It explicitly gives a Mediterranean-style grocery list with Mediterranean ingredients."
+          },
+          {
+            "id": "R3",
+            "item": "Is sized for two people",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "It says the list is 'sized for you and your partner.'"
+          },
+          {
+            "id": "R4",
+            "item": "Includes a gentle check-in about how eating is going",
+            "mark": "ignores",
+            "votes": [
+              "ignores",
+              "ignores",
+              "ignores"
+            ],
+            "evidence": "It does not include any gentle check-in about how eating is going."
+          }
+        ],
+        "follow_rate": 0.75,
+        "violate_rate": 0.0,
+        "asks_for_known": false,
+        "agreement": 1.0,
+        "judge_cost_usd": 0.00661,
+        "text": "Absolutely — here’s a flexible Mediterranean-style grocery list for the week, sized for you and your partner and kept free of grams/calories:\n\n**Produce**\n- Tomatoes\n- Cucumbers\n- Greens like spinach or romaine\n- Onions\n- Garlic\n- Lemons\n- Bell peppers\n- Zucchini\n- Carrots\n- A few fruits for snacks and breakfasts\n\n**Protein**\n- Chicken or fish, if you want non-vegetarian meals\n- Eggs\n- Greek yogurt\n- Chickpeas\n- Lentils\n- Feta or another salty cheese\n\n**Carbs / staples**\n- Pita or flatbread\n- Rice or couscous\n- Pasta\n- Potatoes\n- Oats\n\n**Pantry**\n- Olive oil\n- Olives\n- Canned tomatoes\n- Tahini\n- Hummus\n- Herbs and spices you like: oregano, cumin, basil, paprika\n\n**Easy extras**\n- Nuts\n- Avocados\n- Bread\n\nIf you want, I can turn this into a simple 5–7 day meal plan or trim it down to a tighter budget.",
+        "reply_cost_usd": 0.012
+      }
+    },
+    {
+      "source": "v310_review_r2__004_foodbody-scenarios_marisol_183be56c",
+      "method": "agent",
+      "case": "marisol",
+      "memory": {
+        "checklist": [
+          {
+            "id": "M1",
+            "item": "Runs a meal-prep business with paying clients",
+            "kind": "must_contain",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "`T-10.2 | active ... First five meal-prep clients are underway.` and `P-10.1 | current ... scope: client-facing` show a meal-prep client business, but it does not explicitly say the clients are paying."
+          },
+          {
+            "id": "M2",
+            "item": "For client work: professional tone, no emojis",
+            "kind": "must_contain",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "`P-10.1 | current ... Wants client-facing work to use a professional macro table ...` supports professional tone, but the memory does not explicitly keep the 'no emojis' part current."
+          },
+          {
+            "id": "M3",
+            "item": "For client work: calories and protein per serving, in a table",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "`P-10.1 | current ... Wants client-facing work to use a professional macro table with macros, calories, and protein per serving.`"
+          },
+          {
+            "id": "M4",
+            "item": "Family cooking stays casual and fun",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "partial",
+              "present"
+            ],
+            "evidence": "`P-1.1 | current ... Wants playful, emoji-friendly food ideas with silly examples.`"
+          },
+          {
+            "id": "M5",
+            "item": "Has kids",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "`F-2.1 | current ... Prepares lunchboxes for kids.`"
+          },
+          {
+            "id": "N1",
+            "item": "Wants no nutrition numbers for client work",
+            "kind": "must_not_assert",
+            "mark": "absent",
+            "votes": [
+              "absent",
+              "absent",
+              "absent"
+            ],
+            "evidence": "The memory current state says client-facing work should include macros, calories, and protein; it does not say client work should avoid nutrition numbers."
+          },
+          {
+            "id": "N2",
+            "item": "Wants an emoji-filled, casual style for client menus",
+            "kind": "must_not_assert",
+            "mark": "absent",
+            "votes": [
+              "absent",
+              "absent",
+              "absent"
+            ],
+            "evidence": "The memory current state is professional macro-table style, not an emoji-filled casual style for client menus."
+          }
+        ],
+        "contain_rate": 0.6,
+        "stale_rate": 0.0,
+        "criteria": {
+          "faithfulness": 2,
+          "currency": 2,
+          "recall": 1,
+          "change_tracking": 2,
+          "provenance": 2,
+          "consistency": 2
+        },
+        "criteria_reasons": {
+          "faithfulness": "Current entries are supported by the supplied messages and avoid obvious invention.",
+          "currency": "The newest preferences are marked current and older client-style preferences are superseded.",
+          "recall": "It captures the main preferences and business context, but misses the explicit 'paying customers' detail.",
+          "change_tracking": "It records the shift from playful family cooking to professional client-facing formatting, with dates and superseded states.",
+          "provenance": "Entries include basis IDs and dates, but generally not direct quotes or explicit evidence links in the text.",
+          "consistency": "The current beliefs do not contradict each other."
+        },
+        "agreement": 0.949,
+        "judge_cost_usd": 0.03779
+      },
+      "reply": {
+        "checklist": [
+          {
+            "id": "R1",
+            "item": "Is professional, with no emojis",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "Professional tone, and there are no emojis."
+          },
+          {
+            "id": "R2",
+            "item": "Gives calories and protein per serving",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "Each menu item lists calories and protein per serving."
+          },
+          {
+            "id": "R3",
+            "item": "Uses a table",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "The menu is formatted as a table."
+          }
+        ],
+        "follow_rate": 1.0,
+        "violate_rate": 0.0,
+        "asks_for_known": false,
+        "agreement": 1.0,
+        "judge_cost_usd": 0.00456,
+        "text": "Absolutely — here’s a clean draft for next week’s Tuesday client menu:\n\n| Menu Item | Description | Macros | Calories | Protein |\n|---|---|---:|---:|---:|\n| Lemon Herb Chicken Bowl | Grilled chicken, roasted potatoes, green beans, lemon-herb finish | 32g C / 14g F / 38g P | 410 | 38g |\n| Turkey Chili with Rice | Lean turkey chili with brown rice and black beans | 41g C / 10g F / 34g P | 395 | 34g |\n| Garlic Salmon with Quinoa | Baked salmon, quinoa, zucchini, and lemon garlic drizzle | 28g C / 18g F / 35g P | 430 | 35g |\n| Beef Stir-Fry | Lean beef, jasmine rice, broccoli, peppers, and sesame soy glaze | 44g C / 13g F / 31g P | 415 | 31g |\n| Mediterranean Chicken Pasta | Chicken, whole wheat pasta, spinach, tomatoes, and olive oil herb sauce | 46g C / 12g F / 36g P | 440 | 36g |\n\nIf you want, I can also turn this into a more polished client-ready version with portion sizes or a shorter menu-card layout.",
+        "reply_cost_usd": 0.02703
+      }
+    },
+    {
+      "source": "v310_review_r3__002_foodbody-scenarios_dani_cd5a822e",
+      "method": "agent",
+      "case": "dani",
+      "memory": {
+        "checklist": [
+          {
+            "id": "M1",
+            "item": "Is vegetarian",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "state/profile.md F-7.1 current: Vegetarian."
+          },
+          {
+            "id": "M2",
+            "item": "Likes spicy food and chili crisp",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "state/preferences.md P-1.1 current: wants food spicy and likes chili crisp on everything."
+          },
+          {
+            "id": "M3",
+            "item": "Has a newborn",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "partial",
+              "present",
+              "present"
+            ],
+            "evidence": "state/profile.md F-4.1 current: has a new baby; the memory does not literally say \"newborn\"."
+          },
+          {
+            "id": "M4",
+            "item": "Wants very short answers (about three lines) now",
+            "kind": "must_contain",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "state/preferences.md P-6.1 current: wants terse outputs with no explanations; the \"about three lines\" constraint only appears in expired T-5.2, not as current."
+          },
+          {
+            "id": "M5",
+            "item": "Wants one-pan, freezer-friendly, low-effort cooking",
+            "kind": "must_contain",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "state/preferences.md P-7.1 current: easy, batchable one-pan meal ideas; freezer-friendly is only in superseded T-6.2, and low-effort is implied rather than stated."
+          },
+          {
+            "id": "N1",
+            "item": "Wants detailed, in-depth explanations as the default",
+            "kind": "must_not_assert",
+            "mark": "asserted",
+            "votes": [
+              "asserted",
+              "asserted",
+              "asserted"
+            ],
+            "evidence": "state/preferences.md P-0.2 current says wants detailed, thorough answers, and P-0.1 current says wants explanations of the why behind each step and the science."
+          },
+          {
+            "id": "N2",
+            "item": "Wants elaborate weekend cooking projects",
+            "kind": "must_not_assert",
+            "mark": "absent",
+            "votes": [
+              "absent",
+              "absent",
+              "absent"
+            ],
+            "evidence": "The memory does not present elaborate weekend cooking projects as a current preference."
+          }
+        ],
+        "contain_rate": 0.6,
+        "stale_rate": 0.5,
+        "criteria": {
+          "faithfulness": 2,
+          "currency": 1,
+          "recall": 1,
+          "change_tracking": 1,
+          "provenance": 2,
+          "consistency": 0
+        },
+        "criteria_reasons": {
+          "faithfulness": "Most entries are grounded in the evidence, but the current detail-level/terse-answer mix is not fully faithful to the latest messages.",
+          "currency": "Some current needs are updated, but an older detailed-explanation preference is still kept as current alongside newer short-answer behavior.",
+          "recall": "It captures the main profile/preferences, but misses or weakly states some important current constraints like freezer-friendly cooking and the exact short-answer limit.",
+          "change_tracking": "Several changes are tracked with dates and supersedes links, but the shift from detailed to terse answers is not cleanly resolved.",
+          "provenance": "Claims are generally tied to dated basis references or confirmation notes, so the provenance is explicit.",
+          "consistency": "Current beliefs conflict: the memory says both that the person wants detailed, thorough answers and that they want terse outputs with no explanations."
+        },
+        "agreement": 0.872,
+        "judge_cost_usd": 0.05594
+      },
+      "reply": {
+        "checklist": [
+          {
+            "id": "R1",
+            "item": "Is short (a few lines)",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "It’s concise, but 6 bullets plus intro is more than a few lines."
+          },
+          {
+            "id": "R2",
+            "item": "Suggests only vegetarian dishes",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "All suggested dinners are vegetarian (tofu, veggies, chickpeas, noodles, lentils, tempeh)."
+          },
+          {
+            "id": "R3",
+            "item": "Suggests spicy options",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "Several options are explicitly spicy, like chili-crisp tofu and spicy peanut noodles."
+          },
+          {
+            "id": "R4",
+            "item": "Suggests one-pan or freezer-friendly meals",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "It includes one-pan-friendly meals such as sheet-pan fajita veggies and tempeh tray bake."
+          }
+        ],
+        "follow_rate": 0.75,
+        "violate_rate": 0.0,
+        "asks_for_known": false,
+        "agreement": 1.0,
+        "judge_cost_usd": 0.00643,
+        "text": "Yep — here are 6 vegetarian, spicy, batchable, one-pan-friendly dinners:\n- Chili-crisp tofu + broccoli + rice\n- Sheet-pan fajita veggies + black beans\n- One-pot chickpea tikka with spinach\n- Spicy peanut noodles with edamame\n- Lentil bolognese over pasta\n- Tempeh tray bake with peppers + zucchini",
+        "reply_cost_usd": 0.01826
+      }
+    },
+    {
+      "source": "v310_review_r3__003_foodbody-scenarios_lena_a7a829dd",
+      "method": "agent",
+      "case": "lena",
+      "memory": {
+        "checklist": [
+          {
+            "id": "M1",
+            "item": "Wants no grams, calories or tracking numbers",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "state/preferences.md P-5.1 is current: 'Wants no grams or calories shown anymore' and 'changed: no numeric food tracking; grams and calories now avoided'."
+          },
+          {
+            "id": "M2",
+            "item": "Wants gentle check-ins instead of reports",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "state/hypotheses.md H-7.1/H-7.2 resolved into current preferences P-7.1 'Wants a gentle tone for check-ins about eating' and P-7.2 'Prefers check-ins about eating over weekly reports'."
+          },
+          {
+            "id": "M3",
+            "item": "Prefers Mediterranean food",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "state/profile.md F-0.1 is current: 'Follows a Mediterranean-style diet.'"
+          },
+          {
+            "id": "M4",
+            "item": "Cooks for self and partner",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "state/profile.md F-0.2 is current: 'Cooks for self and partner.'"
+          },
+          {
+            "id": "M5",
+            "item": "Is on leave for burnout",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "state/transient.md T-6.1 is active: 'Signed off work with burnout.'"
+          },
+          {
+            "id": "N1",
+            "item": "Wants exact grams or macros per meal",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "state/preferences.md P-1.1 is superseded and memory/archive.md P-0.1 is retracted; exact grams/macros are recorded as prior, not current."
+          },
+          {
+            "id": "N2",
+            "item": "Wants weekly numeric reports",
+            "kind": "must_not_assert",
+            "mark": "absent",
+            "votes": [
+              "absent",
+              "absent",
+              "absent"
+            ],
+            "evidence": "The current memory says the person prefers check-ins over weekly reports (P-7.2) and only mentions a weekly-report hypothesis as open, not as a current preference."
+          }
+        ],
+        "contain_rate": 1.0,
+        "stale_rate": 0.0,
+        "criteria": {
+          "faithfulness": 2,
+          "currency": 2,
+          "recall": 2,
+          "change_tracking": 2,
+          "provenance": 2,
+          "consistency": 2
+        },
+        "criteria_reasons": {
+          "faithfulness": "Current entries are supported by the evidence and dated change logs.",
+          "currency": "Outdated preferences are superseded/retracted and the current state matches the latest messages.",
+          "recall": "It preserves the key diet, household, burnout, and communication preferences.",
+          "change_tracking": "It records what changed, from exact grams to no numeric tracking, with dates and supersession.",
+          "provenance": "Claims include basis codes, dates, and explicit current/superseded labels.",
+          "consistency": "The current beliefs do not contradict each other."
+        },
+        "agreement": 1.0,
+        "judge_cost_usd": 0.02435
+      },
+      "reply": {
+        "checklist": [
+          {
+            "id": "R1",
+            "item": "Contains no grams, calories or macro numbers",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "No grams, calories, or macro/tracking numbers are included."
+          },
+          {
+            "id": "R2",
+            "item": "Is Mediterranean",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "The grocery base is explicitly framed around Mediterranean-style meals and ingredients."
+          },
+          {
+            "id": "R3",
+            "item": "Is sized for two people",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "It says you’re cooking for you and your partner, so it’s sized for two people."
+          },
+          {
+            "id": "R4",
+            "item": "Includes a gentle check-in about how eating is going",
+            "mark": "ignores",
+            "votes": [
+              "ignores",
+              "ignores",
+              "ignores"
+            ],
+            "evidence": "There’s no gentle check-in about how eating is going; it only offers to make a meal plan."
+          }
+        ],
+        "follow_rate": 0.75,
+        "violate_rate": 0.0,
+        "asks_for_known": false,
+        "agreement": 1.0,
+        "judge_cost_usd": 0.00672,
+        "text": "Absolutely — I can help with that.\n\nSince you’re cooking for you and your partner and you like Mediterranean-style meals, here’s a simple weekly grocery base:\n\n- Produce: salad greens, tomatoes, cucumbers, peppers, onions, garlic, lemons, zucchini, broccoli, fruit for snacks\n- Proteins: chicken or fish, eggs, Greek yogurt, chickpeas, lentils, tofu if you use it\n- Carbs: rice, pasta, potatoes, bread or pita, oats\n- Pantry: olive oil, olives, tomatoes, beans, nuts, herbs, vinegar, broth\n- Extras: feta or other cheese, hummus, avocados\n\nA low-effort way to use this is to build the week around a few repeats:\n- one pasta or rice meal\n- one tray-bake meal\n- one soup or stew\n- a couple of quick lunches from leftovers\n\nIf you want, I can turn this into a full meal plan and shopping list for the week without numbers.",
+        "reply_cost_usd": 0.00581
+      }
+    },
+    {
+      "source": "v310_review_r3__004_foodbody-scenarios_marisol_183be56c",
+      "method": "agent",
+      "case": "marisol",
+      "memory": {
+        "checklist": [
+          {
+            "id": "M1",
+            "item": "Runs a meal-prep business with paying clients",
+            "kind": "must_contain",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "Memory says \"Runs a small meal-prep business; first five clients start next month,\" but it does not state paying clients as current."
+          },
+          {
+            "id": "M2",
+            "item": "For client work: professional tone, no emojis",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory explicitly says client-facing work should be \"professional\" and \"emoji-free\"."
+          },
+          {
+            "id": "M3",
+            "item": "For client work: calories and protein per serving, in a table",
+            "kind": "must_contain",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "Memory says nutrition macros per serving and clean macro tables, but it no longer states calories and protein specifically."
+          },
+          {
+            "id": "M4",
+            "item": "Family cooking stays casual and fun",
+            "kind": "must_contain",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "Memory says she \"cooks for kids\" and likes playful, emoji-friendly chat replies, but it does not directly say family cooking stays casual and fun."
+          },
+          {
+            "id": "M5",
+            "item": "Has kids",
+            "kind": "must_contain",
+            "mark": "missing",
+            "votes": [
+              "missing",
+              "missing",
+              "missing"
+            ],
+            "evidence": "Memory says \"cooks for kids,\" but it never explicitly says she has kids."
+          },
+          {
+            "id": "N1",
+            "item": "Wants no nutrition numbers for client work",
+            "kind": "must_not_assert",
+            "mark": "absent",
+            "votes": [
+              "absent",
+              "absent",
+              "absent"
+            ],
+            "evidence": "Memory states the opposite current preference: nutrition macros per serving in menus/tables."
+          },
+          {
+            "id": "N2",
+            "item": "Wants an emoji-filled, casual style for client menus",
+            "kind": "must_not_assert",
+            "mark": "absent",
+            "votes": [
+              "absent",
+              "absent",
+              "absent"
+            ],
+            "evidence": "Memory says client-facing work is professional and emoji-free, not emoji-filled/casual."
+          }
+        ],
+        "contain_rate": 0.2,
+        "stale_rate": 0.0,
+        "criteria": {
+          "faithfulness": 2,
+          "currency": 1,
+          "recall": 1,
+          "change_tracking": 2,
+          "provenance": 2,
+          "consistency": 2
+        },
+        "criteria_reasons": {
+          "faithfulness": "Current entries are supported by the evidence and no unsupported belief is invented.",
+          "currency": "Most preferences are updated, but the business/client timing is still phrased as \"start next month,\" which is stale by the current date.",
+          "recall": "Core business and style preferences are there, but some important details like paying clients and explicit kids/household facts are not fully captured.",
+          "change_tracking": "The memory records superseded preferences and notes what changed, with dates.",
+          "provenance": "Claims are tied to basis IDs and confirmation dates, and the support matches the evidence.",
+          "consistency": "The current beliefs do not contradict each other; client-facing and chat preferences are kept separate."
+        },
+        "agreement": 1.0,
+        "judge_cost_usd": 0.06977
+      },
+      "reply": {
+        "checklist": [
+          {
+            "id": "R1",
+            "item": "Is professional, with no emojis",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "Professional client-ready tone and no emojis are used throughout."
+          },
+          {
+            "id": "R2",
+            "item": "Gives calories and protein per serving",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "Each menu item includes calories and protein per serving in the table."
+          },
+          {
+            "id": "R3",
+            "item": "Uses a table",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "The menu is presented in a clear table format."
+          }
+        ],
+        "follow_rate": 1.0,
+        "violate_rate": 0.0,
+        "asks_for_known": false,
+        "agreement": 1.0,
+        "judge_cost_usd": 0.0042,
+        "text": "Absolutely — here’s a client-ready draft for next week’s Tuesday menu, with macros per serving:\n\n| Menu Item | Description | Calories | Protein | Carbs | Fat |\n|---|---|---:|---:|---:|---:|\n| Lemon Herb Chicken Bowl | Grilled chicken, roasted potatoes, green beans, lemon herb drizzle | 520 | 42g | 38g | 22g |\n| Turkey Meatball Marinara | Turkey meatballs, whole wheat pasta, marinara, parmesan | 610 | 39g | 54g | 24g |\n| Garlic Ginger Salmon Box | Salmon, jasmine rice, broccoli, garlic ginger sauce | 575 | 36g | 48g | 25g |\n| Beef Taco Rice Bowl | Seasoned beef, rice, black beans, corn salsa, avocado crema | 640 | 34g | 57g | 29g |\n| Veggie Pesto Pasta | Pasta, roasted vegetables, basil pesto, mozzarella | 540 | 18g | 61g | 24g |\n\nIf you want, I can also tighten this into a more premium-sounding version or tailor it to a specific calorie target.",
+        "reply_cost_usd": 0.01396
+      }
+    }
+  ],
+  "estimated_cost_usd": 0.6101
+}

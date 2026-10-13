@@ -1,0 +1,168 @@
+{
+  "source": "profile_r3__002_foodbody-scenarios_dani_cd5a822e",
+  "method": "profile",
+  "case": "dani",
+  "memory": {
+    "checklist": [
+      {
+        "id": "M1",
+        "item": "Is vegetarian",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory states: \"Vegetarian [O-7.1].\""
+      },
+      {
+        "id": "M2",
+        "item": "Likes spicy food and chili crisp",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory states: \"Likes spicy food and puts chili crisp on everything [O-1.2].\""
+      },
+      {
+        "id": "M3",
+        "item": "Has a newborn",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory states: \"Currently in an early-newborn household period with very disrupted sleep [O-4.1, O-4.2].\""
+      },
+      {
+        "id": "M4",
+        "item": "Wants very short answers (about three lines) now",
+        "kind": "must_contain",
+        "mark": "partial",
+        "votes": [
+          "partial",
+          "partial",
+          "present"
+        ],
+        "evidence": "Memory says they \"often want very short, practical, no-explanation answers\" in the newborn period and for \"3am\" tasks, but it does not explicitly say \"about three lines.\""
+      },
+      {
+        "id": "M5",
+        "item": "Wants one-pan, freezer-friendly, low-effort cooking",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "partial",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory explicitly mentions \"batch-cooking, freezer-meal, or quick one-pan requests\" and says \"Quick vegetarian spicy one-pan meals are especially useful,\" but \"low-effort\" is implied rather than stated."
+      },
+      {
+        "id": "N1",
+        "item": "Wants detailed, in-depth explanations as the default",
+        "kind": "must_not_assert",
+        "mark": "asserted",
+        "votes": [
+          "asserted",
+          "asserted",
+          "asserted"
+        ],
+        "evidence": "Memory still says they \"Prefer detailed, science-forward explanations\" and that \"long-form technique and depth fit best\" for cooking/troubleshooting."
+      },
+      {
+        "id": "N2",
+        "item": "Wants elaborate weekend cooking projects",
+        "kind": "must_not_assert",
+        "mark": "asserted",
+        "votes": [
+          "asserted",
+          "asserted",
+          "asserted"
+        ],
+        "evidence": "Memory still says they \"Enjoys weekend and other slow cooking projects, including making fresh pasta from scratch and long vegetarian mole projects.\""
+      }
+    ],
+    "contain_rate": 0.8,
+    "stale_rate": 1.0,
+    "criteria": {
+      "faithfulness": 2,
+      "currency": 2,
+      "recall": 2,
+      "change_tracking": 2,
+      "provenance": 2,
+      "consistency": 2
+    },
+    "criteria_reasons": {
+      "faithfulness": "The memory entries are grounded in the evidence and mostly paraphrase it accurately.",
+      "currency": "Current newborn-phase needs and recent preference shifts are presented as current, not stale.",
+      "recall": "It captures the main identity, flavor preference, sleep context, and help-style preferences.",
+      "change_tracking": "The change log clearly records how preferences shifted over time with dates.",
+      "provenance": "Claims are tied to dated evidence tags and quoted-like summaries throughout the memory.",
+      "consistency": "The current preferences are contextual rather than contradictory, so the profile stays coherent."
+    },
+    "agreement": 0.923,
+    "judge_cost_usd": 0.06755
+  },
+  "reply": {
+    "checklist": [
+      {
+        "id": "R1",
+        "item": "Is short (a few lines)",
+        "mark": "violates",
+        "votes": [
+          "violates",
+          "partial",
+          "violates"
+        ],
+        "evidence": "It’s much longer than a few lines: it gives five bullets plus a follow-up offer."
+      },
+      {
+        "id": "R2",
+        "item": "Suggests only vegetarian dishes",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "All the meal ideas are vegetarian (halloumi/tofu, chickpea curry, noodles, lentil tacos, orzo with beans/feta)."
+      },
+      {
+        "id": "R3",
+        "item": "Suggests spicy options",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "It includes clearly spicy ideas like chili crisp and spicy peanut noodles."
+      },
+      {
+        "id": "R4",
+        "item": "Suggests one-pan or freezer-friendly meals",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "It includes one-pan meals such as a sheet-pan dinner and one-pan orzo."
+      }
+    ],
+    "follow_rate": 0.75,
+    "violate_rate": 0.25,
+    "asks_for_known": false,
+    "agreement": 0.917,
+    "judge_cost_usd": 0.00836,
+    "text": "Yes — a few very low-lift vegetarian dinner ideas for this week:\n\n- Sheet-pan halloumi or tofu + broccoli + peppers + onions, served with rice and chili crisp\n- Coconut chickpea curry with spinach, served over rice or naan\n- Spicy peanut noodles with edamame, shredded carrots, and cucumber\n- Lentil tacos or burrito bowls with salsa, avocado, and pickled onions\n- One-pan orzo with tomatoes, zucchini, white beans, and feta\n\nIf you want, I can turn this into a 5-night plan with a shopping list and minimal prep.",
+    "reply_cost_usd": 0.00177
+  }
+}

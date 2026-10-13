@@ -1,0 +1,3244 @@
+{
+  "model": "gpt-5.4-mini",
+  "judge_effort": "high",
+  "repeats": 3,
+  "rows": [
+    {
+      "source": "long_profile_r1__000_foodbody-scenarios_hannah_7f010053",
+      "method": "profile",
+      "case": "hannah",
+      "memory": {
+        "checklist": [
+          {
+            "id": "M1",
+            "item": "Is allergic to peanuts",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "\"Has a peanut allergy; food and dessert suggestions should avoid peanuts [O-2.1].\""
+          },
+          {
+            "id": "M2",
+            "item": "Cooks for one person now (the children left home)",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "\"Is currently cooking mostly for one person while the kids are away [O-15.2].\""
+          },
+          {
+            "id": "M3",
+            "item": "Is retired",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "\"Retired as of 2025-04-02 [O-14.2].\""
+          },
+          {
+            "id": "M4",
+            "item": "Is on a budget (fixed income) and wants cheap ingredients",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "\"Is on a pension and currently trying to watch what I spend [O-17.1, O-21.1].\" / \"Budget meal plans for one, around $40 a week, are welcome [O-21.1, O-21.2].\""
+          },
+          {
+            "id": "M5",
+            "item": "Has time and enjoys slower cooking projects (braising, bread)",
+            "kind": "must_contain",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "present",
+              "partial"
+            ],
+            "evidence": "\"They are currently have more time for weekend projects and are exploring bread-baking now [O-23.1, O-23.2].\" and \"For slow Sunday or otherwise leisurely cooking, simmering one-pot recipes are a good fit [O-31.1].\" (slower cooking and bread are present, but braising is not stated)"
+          },
+          {
+            "id": "N1",
+            "item": "Cooks for a family of three",
+            "kind": "must_not_assert",
+            "mark": "absent",
+            "votes": [
+              "absent",
+              "absent",
+              "absent"
+            ],
+            "evidence": "The memory says they are currently cooking mostly for one and that the kids are away; it does not state they now cook for a family of three."
+          },
+          {
+            "id": "N2",
+            "item": "Likes splurging on premium ingredients",
+            "kind": "must_not_assert",
+            "mark": "asserted",
+            "votes": [
+              "asserted",
+              "asserted",
+              "asserted"
+            ],
+            "evidence": "\"For occasional weekend or splurge meals, richer, more indulgent ideas are welcome [O-7.1].\" / \"open to premium ingredients when appropriate\""
+          },
+          {
+            "id": "N3",
+            "item": "Needs dinners done in 30 minutes",
+            "kind": "must_not_assert",
+            "mark": "asserted",
+            "votes": [
+              "asserted",
+              "asserted",
+              "asserted"
+            ],
+            "evidence": "\"quick weeknight meals around 30 minutes have been a recurring good fit\" keeps the 30-minute dinner preference current."
+          }
+        ],
+        "contain_rate": 0.8,
+        "stale_rate": 0.667,
+        "criteria": {
+          "faithfulness": 1,
+          "currency": 2,
+          "recall": 2,
+          "change_tracking": 2,
+          "provenance": 1,
+          "consistency": 2
+        },
+        "criteria_reasons": {
+          "faithfulness": "Mostly grounded in the evidence, but a few details are inferred or over-specific (e.g., the rough duration of the temporary empty-nest phase and some unsupported helper preferences).",
+          "currency": "The memory reflects the current retirement, one-person cooking, budget focus, and ongoing sleep issue without leaving clearly stale states current.",
+          "recall": "It captures the major facts and preferences: peanut allergy, retirement, pension/budgeting, one-person cooking, bread/projects, gardening, morning walks, and sleep trouble.",
+          "change_tracking": "It records multiple changes with dates and distinguishes past household circumstances from the current one.",
+          "provenance": "The memory includes citations, but they are internal-style placeholders and some claims are paraphrased rather than directly tied to the quoted evidence.",
+          "consistency": "The current beliefs fit together without internal contradiction: budget focus, occasional splurges, one-person cooking, and time for projects all coexist."
+        },
+        "agreement": 0.929,
+        "judge_cost_usd": 0.0622
+      },
+      "reply": {
+        "checklist": [
+          {
+            "id": "R1",
+            "item": "Sizes meals for one person",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "It explicitly says “for one person” and plans meals to avoid leftovers."
+          },
+          {
+            "id": "R2",
+            "item": "Uses budget-friendly ingredients",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "It repeatedly emphasizes “budget-friendly” and includes cheap staples like lentils, cabbage, potatoes, and tinned tomatoes."
+          },
+          {
+            "id": "R3",
+            "item": "Includes at least one slower, hands-on cooking project",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "It includes a slower hands-on project meal: “Weekend project meal: homemade bread + soup or stew.”"
+          },
+          {
+            "id": "R4",
+            "item": "Contains no peanuts",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "It states the plan is “peanut-free” and does not include peanuts in the meals or shopping list."
+          }
+        ],
+        "follow_rate": 1.0,
+        "violate_rate": 0.0,
+        "asks_for_known": false,
+        "agreement": 1.0,
+        "judge_cost_usd": 0.00623,
+        "text": "Here’s a simple, budget-friendly week for **one person** that won’t leave you buried in leftovers and stays **peanut-free**:\n\n### This week’s dinners\n**Mon:** **Sausage, cabbage, and potatoes skillet**  \nFast, cheap, and very filling. Brown sliced sausage, add onions, cabbage, and diced potatoes. Cover until tender.\n\n**Tue:** **Tomato pasta with white beans**  \nCook pasta, warm tinned tomatoes with garlic, stir in cannellini beans and a handful of spinach if you have it.\n\n**Wed:** **Chicken thighs with tray-bake veg**  \nRoast 1–2 chicken thighs with carrots, onions, and potatoes. Easy, low effort, and good value.\n\n**Thu:** **Lentil soup + toast**  \nLentils, carrot, onion, celery if you’ve got it, plus stock. Great cheap dinner and good for a cooler night.\n\n**Fri:** **Egg fried rice or veggie omelet**  \nUse up leftover rice and any veg. Quick, light, and good before the weekend.\n\n**Sat:** **Weekend project meal: homemade bread + soup or stew**  \nSince you’ve been wanting to bake more, this is a good day for a simple loaf and a pot of soup.\n\n**Sun:** **Slow-cooked one-pot dinner**  \nSomething like beef and barley stew, chickpea and veg stew, or a simple chicken casserole.\n\n### Easy shopping list\n- Potatoes  \n- Onions  \n- Carrots  \n- Cabbage  \n- Eggs  \n- Pasta  \n- Rice  \n- Lentils  \n- 1–2 tins tomatoes  \n- 1 tin beans  \n- Chicken thighs or sausage  \n- Bread ingredients if you want to bake\n\nIf you want, I can turn this into a **full $40-ish shopping list with exact quantities**.",
+        "reply_cost_usd": 0.00588
+      }
+    },
+    {
+      "source": "long_profile_r1__001_foodbody-scenarios_ade_2dc63092",
+      "method": "profile",
+      "case": "ade",
+      "memory": {
+        "checklist": [
+          {
+            "id": "M1",
+            "item": "Is pregnant",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says: \"2025-04-29 onward: pregnant\" and \"Their doctor has paused hard training and calorie cutting during pregnancy.\""
+          },
+          {
+            "id": "M2",
+            "item": "Is lactose intolerant",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says: \"Is lactose intolerant\" and later \"identified as lactose intolerant.\""
+          },
+          {
+            "id": "M3",
+            "item": "Avoids pregnancy-unsafe foods (raw fish, cold deli meat, soft unpasteurized cheese)",
+            "kind": "must_contain",
+            "mark": "missing",
+            "votes": [
+              "missing",
+              "partial",
+              "missing"
+            ],
+            "evidence": "Memory mentions pregnancy food-safety questions (\"sushi\", \"cheese\", \"deli sandwiches/cold deli meats\") but does not state that she avoids these unsafe foods as a current preference."
+          },
+          {
+            "id": "M4",
+            "item": "Wants gentle encouragement rather than pushing",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says she \"wants encouragement more than pushing right now\" and \"prefer encouragement over pushing or hard accountability.\""
+          },
+          {
+            "id": "M5",
+            "item": "No calorie cutting or macro targets now",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says \"no macro targets or calorie counting for now\" and that hard training and calorie cutting are paused during pregnancy."
+          },
+          {
+            "id": "M6",
+            "item": "Has low iron",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says \"Their iron levels are a bit low\" and marks this as current."
+          },
+          {
+            "id": "N1",
+            "item": "Wants a calorie deficit to lean out",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "The memory frames half-marathon training / leaning-out as past or on hold: \"The prior half-marathon training / leaning-out push is temporarily on hold\" and \"the half-marathon cut phase is no longer current.\""
+          },
+          {
+            "id": "N2",
+            "item": "Wants blunt pushing and accountability",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "The memory says blunt accountability was a past preference when tracking targets, but now notes it has been narrowed by pregnancy guidance and she prefers encouragement more than pushing right now."
+          },
+          {
+            "id": "N3",
+            "item": "Wants 140 g protein or other macro targets",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "absent",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "The memory does not state that she wants 140 g protein or any other specific macro target now; it says the opposite."
+          }
+        ],
+        "contain_rate": 0.833,
+        "stale_rate": 0.0,
+        "criteria": {
+          "faithfulness": 2,
+          "currency": 2,
+          "recall": 1,
+          "change_tracking": 2,
+          "provenance": 2,
+          "consistency": 2
+        },
+        "criteria_reasons": {
+          "faithfulness": "Claims are supported by the evidence and nothing clearly invented stands out.",
+          "currency": "Current state is updated for pregnancy; earlier cutting/training goals are explicitly marked as no longer current.",
+          "recall": "Most key facts are captured, but the explicit avoidance of pregnancy-unsafe foods is not stated.",
+          "change_tracking": "Several changes are dated and the memory distinguishes past preferences from current ones.",
+          "provenance": "Claims are annotated with dated references/citations, and the citations generally support them.",
+          "consistency": "The current beliefs do not contradict one another."
+        },
+        "agreement": 0.933,
+        "judge_cost_usd": 0.04221
+      },
+      "reply": {
+        "checklist": [
+          {
+            "id": "R1",
+            "item": "Contains no raw fish, cold deli meat or soft unpasteurized cheese",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "The lunches avoid raw fish, cold deli meat, and soft unpasteurized cheese; the only fish is cooked salmon."
+          },
+          {
+            "id": "R2",
+            "item": "Is dairy-free",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "It explicitly says the plan is \"dairy-free/lactose-free\" and none of the listed lunches include dairy."
+          },
+          {
+            "id": "R3",
+            "item": "Has no calorie deficit or macro targets",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "There are no calorie deficit claims or macro targets anywhere in the reply."
+          },
+          {
+            "id": "R4",
+            "item": "Is gentle in tone",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "The tone is soft and supportive, using phrases like \"Absolutely\" and \"If you want,\" without pushing."
+          }
+        ],
+        "follow_rate": 1.0,
+        "violate_rate": 0.0,
+        "asks_for_known": false,
+        "agreement": 1.0,
+        "judge_cost_usd": 0.00679,
+        "text": "Absolutely — here’s a simple, pregnancy-friendly lunch plan for this week that’s filling, dairy-free/lactose-free, and easy to pack. I built in a bit of iron support too.\n\n### This week’s lunches\n\n**Monday: Chicken rice bowl**\n- Cooked chicken\n- Rice\n- Roasted peppers or carrots\n- Cucumber or spinach\n- Avocado or olive oil + lemon\n- Optional: salsa or tahini\n\n**Tuesday: Turkey + bean chili**\n- Turkey chili with beans\n- Side of rice, bread, or tortilla chips\n- Fruit on the side if you want something fresh\n\n**Wednesday: Salmon quinoa bowl**\n- Cooked salmon\n- Quinoa\n- Edamame or chickpeas\n- Cucumber + shredded carrots\n- Lemon/soy/sesame dressing\n\n**Thursday: Hummus + egg pita box**\n- Pita or wraps\n- Hummus\n- Hard-boiled eggs\n- Baby carrots, cucumber, cherry tomatoes\n- Grapes or an orange\n\n**Friday: Beef or tofu stir-fry noodles**\n- Beef strips or tofu\n- Noodles or rice\n- Broccoli, peppers, snap peas\n- Simple soy/ginger sauce\n\n### Easy prep once, use all week\nIf you want to keep it low-effort, prep:\n- 1 grain: rice or quinoa\n- 2 proteins: chicken + turkey chili, or salmon + eggs\n- 2–3 veggies: roasted peppers, carrots, cucumbers, broccoli\n- 2 sauces: salsa, tahini, or soy/ginger\n\n### If you’re extra hungry\nAdd one of these to any lunch:\n- Fruit\n- Nuts or trail mix\n- Crackers or pita\n- A granola bar\n- Roasted chickpeas\n\n### Iron boost tip\nPair iron-rich foods with vitamin C when you can, like:\n- chili + orange\n- beef + peppers\n- chickpeas + tomatoes/lemon\n\nIf you want, I can also turn this into a **shopping list** or make it into a **super quick no-cook lunch plan** for work days.",
+        "reply_cost_usd": 0.00596
+      }
+    },
+    {
+      "source": "long_profile_r1__002_foodbody-scenarios_sam_c675d6b4",
+      "method": "profile",
+      "case": "sam",
+      "memory": {
+        "checklist": [
+          {
+            "id": "M1",
+            "item": "Is vegan",
+            "kind": "must_contain",
+            "mark": "missing",
+            "votes": [
+              "missing",
+              "missing",
+              "missing"
+            ],
+            "evidence": "The memory repeatedly mentions vegan-related topics and snacks, but it never states that the person themselves is vegan."
+          },
+          {
+            "id": "M2",
+            "item": "Is a nurse working night shifts (7pm to 7am, three nights a week)",
+            "kind": "must_contain",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "It states: \"Working night shifts 7pm to 7am, three nights a week,\" but it never says the person is a nurse."
+          },
+          {
+            "id": "M3",
+            "item": "Wants short, bullet-point answers now",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "It says they want \"especially short answers for practical questions\" during night-shift weeks and that \"ultra-short list-only answers work best.\""
+          },
+          {
+            "id": "M4",
+            "item": "Needs portable meals that don't need reheating (unreliable microwave)",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "It says their unit’s microwave is \"unreliable/broken about half the time,\" so meals may need to be \"edible cold or without reheating.\""
+          },
+          {
+            "id": "M5",
+            "item": "Eats around a night-shift schedule",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "It says they are \"Working night shifts 7pm to 7am, three nights a week\" and has multiple current notes about meal timing on that schedule."
+          },
+          {
+            "id": "N1",
+            "item": "Wants long, detailed science explanations as the default",
+            "kind": "must_not_assert",
+            "mark": "asserted",
+            "votes": [
+              "asserted",
+              "asserted",
+              "absent"
+            ],
+            "evidence": "The memory still says they \"Prefers science-heavy, detailed explanations\" for nutrition and food-prep topics."
+          },
+          {
+            "id": "N2",
+            "item": "Wants elaborate weekend cooking projects",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "The only weekend-cooking reference is a dated change-log entry: \"2025-01-20: Current focus includes planning a four-hour Sunday cooking project.\""
+          }
+        ],
+        "contain_rate": 0.6,
+        "stale_rate": 0.5,
+        "criteria": {
+          "faithfulness": 2,
+          "currency": 2,
+          "recall": 1,
+          "change_tracking": 2,
+          "provenance": 2,
+          "consistency": 2
+        },
+        "criteria_reasons": {
+          "faithfulness": "Most current claims are directly supported by the evidence and stay close to what was asked.",
+          "currency": "The memory captures the present night-shift schedule, short-answer preference, and current work-food constraints.",
+          "recall": "It preserves many key preferences, but misses core identity facts like being vegan and being a nurse.",
+          "change_tracking": "It includes dated entries showing how preferences and needs evolved over time.",
+          "provenance": "Claims are tied to observation codes and dated entries, so the source of most statements is visible.",
+          "consistency": "The current beliefs are compatible because the detailed-science preference is scoped to some topics, while practical night-shift questions get brief answers."
+        },
+        "agreement": 0.923,
+        "judge_cost_usd": 0.0814
+      },
+      "reply": {
+        "checklist": [
+          {
+            "id": "R1",
+            "item": "Is short (a brief list)",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "Gives a brief bullet-point list."
+          },
+          {
+            "id": "R2",
+            "item": "Suggests only vegan food",
+            "mark": "violates",
+            "votes": [
+              "violates",
+              "violates",
+              "violates"
+            ],
+            "evidence": "Includes non-vegan feta in the lentil salad option."
+          },
+          {
+            "id": "R3",
+            "item": "Suggests meals that can be eaten cold or without reheating",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "All suggested meals are cold/no-reheat options like salads, wraps, and sandwiches."
+          },
+          {
+            "id": "R4",
+            "item": "Fits a night shift (portable, timed for the shift)",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "Frames the ideas for night shift and uses portable work meals suitable to take to work."
+          }
+        ],
+        "follow_rate": 0.75,
+        "violate_rate": 0.25,
+        "asks_for_known": false,
+        "agreement": 1.0,
+        "judge_cost_usd": 0.00912,
+        "text": "Yep — for night shift, I’d do cold/no-reheat meals like:\n\n- **Pasta salad**: chickpeas + veg + pesto or Italian dressing\n- **Wraps**: hummus + tofu/beans + spinach + cucumber\n- **Rice/grain bowl**: quinoa + edamame + roasted veg + tahini\n- **Bean salad**: black beans + corn + peppers + lime + avocado\n- **PB&banana sandwich + fruit + nuts** for a lighter shift meal\n- **Lentil salad** with feta or tahini dressing\n\nIf you want, I can make you a **3-night work meal plan** with a short grocery list.",
+        "reply_cost_usd": 0.0032
+      }
+    },
+    {
+      "source": "long_profile_r2__000_foodbody-scenarios_hannah_7f010053",
+      "method": "profile",
+      "case": "hannah",
+      "memory": {
+        "checklist": [
+          {
+            "id": "M1",
+            "item": "Is allergic to peanuts",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory explicitly says: \"They are allergic to peanuts [O-2.1].\""
+          },
+          {
+            "id": "M2",
+            "item": "Cooks for one person now (the children left home)",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says the household is now just the user because Maya is on an exchange year and Leo is in a dorm, and that they are \"cooking for one\" and need recipes scaled down."
+          },
+          {
+            "id": "M3",
+            "item": "Is retired",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory states: \"They are retired and on a pension\" and notes their last day at work was retirement."
+          },
+          {
+            "id": "M4",
+            "item": "Is on a budget (fixed income) and wants cheap ingredients",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says they are \"on a pension now and trying to watch what I spend\" and favors cheap staples/cheaper cuts and budget meal planning."
+          },
+          {
+            "id": "M5",
+            "item": "Has time and enjoys slower cooking projects (braising, bread)",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory includes wanting to \"teach me to braise properly,\" a \"weekend project\" of \"Bread from scratch,\" and says they currently have time for hands-on kitchen skills and slow Sunday cooking."
+          },
+          {
+            "id": "N1",
+            "item": "Cooks for a family of three",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "absent"
+            ],
+            "evidence": "Memory says they are no longer usually cooking for three, and only refers to the three-person household as the past (two teenagers)."
+          },
+          {
+            "id": "N2",
+            "item": "Likes splurging on premium ingredients",
+            "kind": "must_not_assert",
+            "mark": "asserted",
+            "votes": [
+              "past_only",
+              "asserted",
+              "asserted"
+            ],
+            "evidence": "The splurging note appears as a dated past item (e.g. Feb 6 / change log); current memory instead emphasizes budget-conscious cooking, with splurge-worthy meals only as a special-case preference."
+          },
+          {
+            "id": "N3",
+            "item": "Needs dinners done in 30 minutes",
+            "kind": "must_not_assert",
+            "mark": "asserted",
+            "votes": [
+              "asserted",
+              "asserted",
+              "asserted"
+            ],
+            "evidence": "Memory still says weeknight meals should be ready in \"30 minutes or less,\" so 30-minute dinners are presented as current."
+          }
+        ],
+        "contain_rate": 1.0,
+        "stale_rate": 0.667,
+        "criteria": {
+          "faithfulness": 2,
+          "currency": 2,
+          "recall": 2,
+          "change_tracking": 2,
+          "provenance": 2,
+          "consistency": 2
+        },
+        "criteria_reasons": {
+          "faithfulness": "Claims are grounded in the provided evidence and profile notes; no clear invention.",
+          "currency": "Current situation is updated to one-person household, retirement, and budget concerns, with past states marked as changes.",
+          "recall": "Key enduring preferences and needs are covered, including allergy, household change, budget, and slower cooking interests.",
+          "change_tracking": "The memory includes dated change notes showing when major shifts happened.",
+          "provenance": "Statements cite observation IDs and dates, making the source of each claim traceable.",
+          "consistency": "The current beliefs do not contradict each other."
+        },
+        "agreement": 0.952,
+        "judge_cost_usd": 0.03949
+      },
+      "reply": {
+        "checklist": [
+          {
+            "id": "R1",
+            "item": "Sizes meals for one person",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "It explicitly frames the plan as “for one” and uses small quantities like 1–2 sausages and a small chicken portion."
+          },
+          {
+            "id": "R2",
+            "item": "Uses budget-friendly ingredients",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "It directly says “budget-friendly” and relies on cheap staples such as beans, lentils, eggs, tuna, frozen veg, and pasta."
+          },
+          {
+            "id": "R3",
+            "item": "Includes at least one slower, hands-on cooking project",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "It includes a “Weekend option” of a “Slow bean or lentil stew,” which is a slower, hands-on cook-up."
+          },
+          {
+            "id": "R4",
+            "item": "Contains no peanuts",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "No peanuts or peanut-based ingredients are included in any of the suggested meals."
+          }
+        ],
+        "follow_rate": 1.0,
+        "violate_rate": 0.0,
+        "asks_for_known": false,
+        "agreement": 1.0,
+        "judge_cost_usd": 0.00679,
+        "text": "Here’s a simple, budget-friendly week for one that stays quick and doesn’t leave loads of leftovers:\n\n**Mon:** **Sausage, beans, and greens** — fry 1–2 sausages, add a tin of cannellini or butter beans, garlic, and a handful of spinach/kale. Serve with toast or mash.\n\n**Tue:** **Red lentil tomato soup** — red lentils, onion, garlic, stock, and a tin of tomatoes. Good with bread.\n\n**Wed:** **Chicken stir-fry** — a small chicken thigh or breast, frozen stir-fry veg, soy sauce, and rice or noodles.\n\n**Thu:** **Egg fried rice** — use leftover rice, 2 eggs, peas, spring onion if you have it, and a little soy sauce.\n\n**Fri:** **Pasta with tuna, lemon, and peas** — tinned tuna, frozen peas, garlic, a little cream or olive oil, and pasta.\n\n**Weekend option:** **Slow bean or lentil stew** if you feel like a comforting cook-up, or a **simple omelette + salad** if you want very little effort.\n\nIf you want, I can turn this into a **very short shopping list** for the week.",
+        "reply_cost_usd": 0.00414
+      }
+    },
+    {
+      "source": "long_profile_r2__001_foodbody-scenarios_ade_2dc63092",
+      "method": "profile",
+      "case": "ade",
+      "memory": {
+        "checklist": [
+          {
+            "id": "M1",
+            "item": "Is pregnant",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "‘They are pregnant.’ and ‘They are pregnant, and hard training and calorie cutting are paused until their doctor clears them.’"
+          },
+          {
+            "id": "M2",
+            "item": "Is lactose intolerant",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "‘They are lactose intolerant and don’t eat much dairy.’"
+          },
+          {
+            "id": "M3",
+            "item": "Avoids pregnancy-unsafe foods (raw fish, cold deli meat, soft unpasteurized cheese)",
+            "kind": "must_contain",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "missing"
+            ],
+            "evidence": "The memory says pregnancy food-safety questions are active and to give direct, conservative guidance on what is safe or not safe, but it does not explicitly state that they avoid raw fish, cold deli meat, or soft unpasteurized cheese."
+          },
+          {
+            "id": "M4",
+            "item": "Wants gentle encouragement rather than pushing",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "‘They want encouragement more than pushing right now’ and ‘respond well to kind reassurance when they miss walks.’"
+          },
+          {
+            "id": "M5",
+            "item": "No calorie cutting or macro targets now",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "‘Their doctor wants them eating enough, not counting macros’ and ‘hard training and calorie cutting are paused until their doctor clears them.’"
+          },
+          {
+            "id": "M6",
+            "item": "Has low iron",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "‘Their iron is a bit low right now’ and ‘Improve low iron during pregnancy with safe, practical nutrition support.’"
+          },
+          {
+            "id": "N1",
+            "item": "Wants a calorie deficit to lean out",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "The old goal is explicitly relegated to the past: ‘previously training for a May half marathon and aiming to lean out with a 300-calorie deficit and 140 g protein; no longer current.’"
+          },
+          {
+            "id": "N2",
+            "item": "Wants blunt pushing and accountability",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "The memory says they ‘usually prefer blunt, direct accountability, but right now encouragement and a lighter touch fit better’ and ‘They want encouragement more than pushing right now.’"
+          },
+          {
+            "id": "N3",
+            "item": "Wants 140 g protein or other macro targets",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "Macro targets are described as dropped: ‘doctor wants them eating enough, not counting macros’ and ‘macro targets dropped.’"
+          }
+        ],
+        "contain_rate": 0.833,
+        "stale_rate": 0.0,
+        "criteria": {
+          "faithfulness": 2,
+          "currency": 2,
+          "recall": 1,
+          "change_tracking": 2,
+          "provenance": 2,
+          "consistency": 2
+        },
+        "criteria_reasons": {
+          "faithfulness": "Claims are grounded in the evidence and the memory mostly avoids inventing unsupported facts.",
+          "currency": "Current pregnancy, no-cutting/no-macro-counting, and lighter-touch support are all updated to the present.",
+          "recall": "Most key facts are present, but the specific pregnancy-unsafe food avoidance is only implied, not stated.",
+          "change_tracking": "Several shifts are tracked with dates and clear before/after notes, including the pregnancy-related changes.",
+          "provenance": "The memory consistently attaches claims to dated observations or citations.",
+          "consistency": "The current beliefs do not contradict each other; older goals are marked as past."
+        },
+        "agreement": 0.956,
+        "judge_cost_usd": 0.03626
+      },
+      "reply": {
+        "checklist": [
+          {
+            "id": "R1",
+            "item": "Contains no raw fish, cold deli meat or soft unpasteurized cheese",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "No raw fish, soft cheese, or clearly cold deli meat appears in the lunch plan."
+          },
+          {
+            "id": "R2",
+            "item": "Is dairy-free",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "The lunches and snacks are all dairy-free as written, with no milk, cheese, or yogurt included."
+          },
+          {
+            "id": "R3",
+            "item": "Has no calorie deficit or macro targets",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "It gives meal ideas without calorie cutting language or macro targets."
+          },
+          {
+            "id": "R4",
+            "item": "Is gentle in tone",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "The tone is supportive and non-pushy, using gentle suggestions and an optional offer at the end."
+          }
+        ],
+        "follow_rate": 1.0,
+        "violate_rate": 0.0,
+        "asks_for_known": false,
+        "agreement": 1.0,
+        "judge_cost_usd": 0.01421,
+        "text": "Absolutely — here’s a simple, pregnancy-friendly lunch plan for the week that’s filling, portable, and not dairy-heavy.\n\n### This week’s lunches\n**Monday:** Chicken rice bowl\n- Chicken, rice, roasted carrots or peppers, spinach\n- Add salsa or lemon for vitamin C\n\n**Tuesday:** Turkey avocado wrap\n- Whole wheat wrap, turkey, avocado, lettuce, tomato\n- Side: fruit or baby carrots\n\n**Wednesday:** Lentil soup + toast\n- Lentil or lentil-veg soup\n- Whole grain toast with hummus or olive oil\n\n**Thursday:** Beef taco bowl\n- Ground beef, rice or quinoa, black beans, lettuce, salsa\n- Add bell peppers if you have them\n\n**Friday:** Egg salad or chickpea salad sandwich\n- Use mayo + mustard + celery\n- Serve on whole grain bread with cucumber or fruit\n\n### Easy snack add-ons if you’re hungry\n- Apple + peanut butter\n- Hummus + crackers\n- Roasted edamame\n- Trail mix\n- Hard-boiled eggs\n- Banana + peanut butter\n\n### Quick prep list\n- Cook: rice/quinoa, chicken or turkey, 1 pot of lentils or beef\n- Wash/cut: peppers, spinach, cucumbers, fruit\n- Keep on hand: wraps, bread, hummus, salsa, beans\n\n### For the low iron piece\nTry to pair iron foods with something vitamin C-ish when you can: peppers, tomatoes, citrus, berries, salsa.\n\nIf you want, I can turn this into a **one-shop grocery list** or make it into **cold desk lunches only**.",
+        "reply_cost_usd": 0.00448
+      }
+    },
+    {
+      "source": "long_profile_r2__002_foodbody-scenarios_sam_c675d6b4",
+      "method": "profile",
+      "case": "sam",
+      "memory": {
+        "checklist": [
+          {
+            "id": "M1",
+            "item": "Is vegan",
+            "kind": "must_contain",
+            "mark": "missing",
+            "votes": [
+              "missing",
+              "missing",
+              "missing"
+            ],
+            "evidence": "The memory repeatedly mentions vegan nutrition and plant-based/vegan recipes, but it never explicitly says the person is vegan."
+          },
+          {
+            "id": "M2",
+            "item": "Is a nurse working night shifts (7pm to 7am, three nights a week)",
+            "kind": "must_contain",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "It states they work 12-hour night shifts, 7pm–7am, three nights a week, but it does not say they are a nurse."
+          },
+          {
+            "id": "M3",
+            "item": "Wants short, bullet-point answers now",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "It says they want short, practical answers for work/night-shift food questions and that bullets are especially good; it also notes they especially want short answers overall."
+          },
+          {
+            "id": "M4",
+            "item": "Needs portable meals that don't need reheating (unreliable microwave)",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "It says the unit microwave is unreliable / broken half the time, so no-reheat food is useful."
+          },
+          {
+            "id": "M5",
+            "item": "Eats around a night-shift schedule",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "It states they are working 7pm–7am night shifts three nights a week, and several food preferences are framed around that schedule."
+          },
+          {
+            "id": "N1",
+            "item": "Wants long, detailed science explanations as the default",
+            "kind": "must_not_assert",
+            "mark": "asserted",
+            "votes": [
+              "asserted",
+              "asserted",
+              "absent"
+            ],
+            "evidence": "The memory still says they 'prefer in-depth, science-forward explanations for technical topics' for nutrition and food-science questions."
+          },
+          {
+            "id": "N2",
+            "item": "Wants elaborate weekend cooking projects",
+            "kind": "must_not_assert",
+            "mark": "asserted",
+            "votes": [
+              "asserted",
+              "asserted",
+              "absent"
+            ],
+            "evidence": "The memory still says they like 'complete, step-by-step cooking guidance' and 'elaborate vegan meals' for cooking projects."
+          }
+        ],
+        "contain_rate": 0.6,
+        "stale_rate": 1.0,
+        "criteria": {
+          "faithfulness": 2,
+          "currency": 2,
+          "recall": 1,
+          "change_tracking": 2,
+          "provenance": 2,
+          "consistency": 2
+        },
+        "criteria_reasons": {
+          "faithfulness": "The memory’s claims are grounded in the provided conversation history and change notes; no clear inventions.",
+          "currency": "It captures the current shift-work and brief-answer needs while keeping scoped detailed preferences for technical topics.",
+          "recall": "It remembers most key preferences, but omits explicit vegan identity and the nurse role.",
+          "change_tracking": "It includes dated change notes showing when preferences like short answers and hydration guidance became current.",
+          "provenance": "Claims are linked to [O-...] citations and those citations match the evidence well.",
+          "consistency": "The current beliefs do not directly contradict each other; detailed answers are scoped to technical topics while short answers are preferred elsewhere."
+        },
+        "agreement": 0.949,
+        "judge_cost_usd": 0.07597
+      },
+      "reply": {
+        "checklist": [
+          {
+            "id": "R1",
+            "item": "Is short (a brief list)",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "A concise bulleted list of meal ideas."
+          },
+          {
+            "id": "R2",
+            "item": "Suggests only vegan food",
+            "mark": "follows",
+            "votes": [
+              "partial",
+              "follows",
+              "follows"
+            ],
+            "evidence": "Most ideas are vegan, but the pesto pasta salad may not be vegan as written."
+          },
+          {
+            "id": "R3",
+            "item": "Suggests meals that can be eaten cold or without reheating",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "All listed meals are no-reheat options that can be eaten cold."
+          },
+          {
+            "id": "R4",
+            "item": "Fits a night shift (portable, timed for the shift)",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "The meals are portable for work, but the reply doesn’t really time them around a night-shift schedule."
+          }
+        ],
+        "follow_rate": 0.75,
+        "violate_rate": 0.0,
+        "asks_for_known": false,
+        "agreement": 0.917,
+        "judge_cost_usd": 0.00817,
+        "text": "Yep — a few good no-reheat work meals:\n\n- Wraps: hummus + roasted veg + greens + tofu/tempeh\n- Pasta salad: chickpeas, pesto, spinach, tomatoes\n- Grain bowl: rice/quinoa + edamame + cucumber + avocado + sauce\n- Bean salad: black beans, corn, salsa, lime, tortilla chips\n- PB&banana sandwiches or bagel + peanut butter + fruit\n- Snack box: nuts, crackers, fruit, olives, vegan cheese\n- Overnight oats or chia pudding for a later break\n\nIf you want, I can make you a 3-night-shift meal plan from these.",
+        "reply_cost_usd": 0.00293
+      }
+    },
+    {
+      "source": "long_profile_r3__000_foodbody-scenarios_hannah_7f010053",
+      "method": "profile",
+      "case": "hannah",
+      "memory": {
+        "checklist": [
+          {
+            "id": "M1",
+            "item": "Is allergic to peanuts",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says: \"Has a peanut allergy and needs peanuts avoided in food suggestions\"."
+          },
+          {
+            "id": "M2",
+            "item": "Cooks for one person now (the children left home)",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says they are \"cooking mostly for one in an empty-nest transition\" and \"cooking for one now\" after the teens left home."
+          },
+          {
+            "id": "M3",
+            "item": "Is retired",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says \"Retired in late March/early April 2025\" and also \"on a pension now.\""
+          },
+          {
+            "id": "M4",
+            "item": "Is on a budget (fixed income) and wants cheap ingredients",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says they are \"trying to watch what I spend,\" want cheaper cuts, and asked for a budget meal plan around \"$40 a week.\""
+          },
+          {
+            "id": "M5",
+            "item": "Has time and enjoys slower cooking projects (braising, bread)",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "partial",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory supports slower cooking generally—\"an hour-long dinner,\" \"a weekend bread-baking project,\" and \"a slow Sunday simmering dish\"—but it does not explicitly mention braising."
+          },
+          {
+            "id": "N1",
+            "item": "Cooks for a family of three",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "absent",
+              "past_only"
+            ],
+            "evidence": "Earlier entries are framed as past household situations (e.g., asking for meals for three / two teenagers), while the current profile says they are cooking mostly for one in an empty-nest transition."
+          },
+          {
+            "id": "N2",
+            "item": "Likes splurging on premium ingredients",
+            "kind": "must_not_assert",
+            "mark": "asserted",
+            "votes": [
+              "asserted",
+              "absent",
+              "asserted"
+            ],
+            "evidence": "Memory still says they are \"comfortable including higher-quality or splurge items when useful\" and like \"splurge-worthy, restaurant-style ideas\" for special dinners."
+          },
+          {
+            "id": "N3",
+            "item": "Needs dinners done in 30 minutes",
+            "kind": "must_not_assert",
+            "mark": "asserted",
+            "votes": [
+              "asserted",
+              "asserted",
+              "asserted"
+            ],
+            "evidence": "Memory still says \"especially quick dinners; 30-minute dinners are a strong fit,\" which presents 30-minute dinners as a current preference."
+          }
+        ],
+        "contain_rate": 1.0,
+        "stale_rate": 0.667,
+        "criteria": {
+          "faithfulness": 2,
+          "currency": 2,
+          "recall": 2,
+          "change_tracking": 2,
+          "provenance": 2,
+          "consistency": 2
+        },
+        "criteria_reasons": {
+          "faithfulness": "The profile statements are grounded in the provided evidence and avoid obvious inventions.",
+          "currency": "Current status is updated to retired, empty-nest, pension, and newer interests; older states are mostly relegated to history.",
+          "recall": "It captures the major facts and preferences, including retirement, empty nest, budget cooking, quick meals, and slower projects.",
+          "change_tracking": "The change log clearly records when major preferences shifted and labels them by date.",
+          "provenance": "Claims are tagged with source IDs/dates, making the basis for most statements traceable.",
+          "consistency": "The current profile is internally coherent, with no direct contradictions among present beliefs."
+        },
+        "agreement": 0.929,
+        "judge_cost_usd": 0.06059
+      },
+      "reply": {
+        "checklist": [
+          {
+            "id": "R1",
+            "item": "Sizes meals for one person",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "It explicitly says the plan is \"for one\" and suggests saving portions or making smaller amounts."
+          },
+          {
+            "id": "R2",
+            "item": "Uses budget-friendly ingredients",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "The meal ideas and shopping list center on low-cost staples like lentils, beans, eggs, rice, potatoes, and chicken thighs, plus a budget tip."
+          },
+          {
+            "id": "R3",
+            "item": "Includes at least one slower, hands-on cooking project",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "follows",
+              "partial"
+            ],
+            "evidence": "It includes a slower weekend chili, but it’s not especially hands-on and the rest of the week is mostly quick meals."
+          },
+          {
+            "id": "R4",
+            "item": "Contains no peanuts",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "No peanuts are included anywhere in the meal plan or shopping list."
+          }
+        ],
+        "follow_rate": 0.75,
+        "violate_rate": 0.0,
+        "asks_for_known": false,
+        "agreement": 0.917,
+        "judge_cost_usd": 0.00764,
+        "text": "Here’s a practical, budget-friendly week of dinners for one that should mostly reuse the same ingredients and avoid a pile of leftovers:\n\n**This week’s plan**\n1. **Sheet-pan lemon chicken thighs + potatoes + green beans**\n   - Cheap, filling, and easy to make 2 portions; save one portion for lunch or freeze it.\n\n2. **Lentil tomato soup with toast**\n   - Onion, carrot, garlic, lentils, canned tomatoes, broth/water, and a handful of spinach if you have it.\n\n3. **Sausage and pepper pasta**\n   - Use one sausage link or a small pack, plus onion, bell pepper, and a little pasta.\n\n4. **Egg fried rice with frozen mixed veg**\n   - Great for using up leftover rice and vegetables. Add soy sauce and a little sesame oil if you have it.\n\n5. **Black bean tacos or rice bowls**\n   - Canned black beans, salsa, cheese, lettuce, and tortillas or rice.\n\n**Weekend option if you want a slower cook:**\n- **Simple chili** with beans, canned tomatoes, onion, and a little ground turkey or beef if it’s on sale. It freezes well.\n\n**Shopping list that covers most of it**\n- Chicken thighs\n- Eggs\n- Lentils\n- 1 can black beans\n- 1 can tomatoes\n- Rice\n- Pasta\n- Potatoes\n- Onions\n- Carrots\n- Garlic\n- 1–2 bell peppers\n- Frozen green beans or mixed vegetables\n- Bread or tortillas\n- Salsa\n- Cheese\n- Spinach or lettuce\n- 1 pack sausage or a small amount of ground meat\n\n**Budget tip:** if you want to keep it closer to your weekly target, skip the sausage or ground meat and do one extra bean or egg meal instead.\n\nIf you want, I can turn this into a **full 5-day meal plan with exact portions and a tighter grocery list for one around $40**.",
+        "reply_cost_usd": 0.00608
+      }
+    },
+    {
+      "source": "long_profile_r3__001_foodbody-scenarios_ade_2dc63092",
+      "method": "profile",
+      "case": "ade",
+      "memory": {
+        "checklist": [
+          {
+            "id": "M1",
+            "item": "Is pregnant",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory states \"They are pregnant\" in Facts/Right now."
+          },
+          {
+            "id": "M2",
+            "item": "Is lactose intolerant",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory states \"They are lactose intolerant\" in Facts."
+          },
+          {
+            "id": "M3",
+            "item": "Avoids pregnancy-unsafe foods (raw fish, cold deli meat, soft unpasteurized cheese)",
+            "kind": "must_contain",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "missing",
+              "partial"
+            ],
+            "evidence": "Memory notes pregnancy food-safety questions and that they ask about sushi, cheese, deli sandwiches, and fish, but it does not explicitly say they avoid raw fish, cold deli meat, or soft unpasteurized cheese."
+          },
+          {
+            "id": "M4",
+            "item": "Wants gentle encouragement rather than pushing",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory states they \"want encouragement more than pushing right now\" and prefer a gentle tone."
+          },
+          {
+            "id": "M5",
+            "item": "No calorie cutting or macro targets now",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says their doctor told them to pause hard training and calorie cutting and to eat enough rather than count macros."
+          },
+          {
+            "id": "M6",
+            "item": "Has low iron",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory states \"Their iron levels are a bit low\" and they are looking for iron-rich foods."
+          },
+          {
+            "id": "N1",
+            "item": "Wants a calorie deficit to lean out",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "The old lean-out goal appears only in a dated past note: \"2025-03-03: ... lean-out phase,\" while current guidance says no calorie cutting now."
+          },
+          {
+            "id": "N2",
+            "item": "Wants blunt pushing and accountability",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "Blunt accountability is described as a prior preference: \"before pregnancy/nutrition guidance changed,\" and current preference is encouragement more than pushing."
+          },
+          {
+            "id": "N3",
+            "item": "Wants 140 g protein or other macro targets",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "Macro targets are mentioned only as past context; current memory says nutrition shifted away from macro counting and no longer to track targets."
+          }
+        ],
+        "contain_rate": 0.833,
+        "stale_rate": 0.0,
+        "criteria": {
+          "faithfulness": 2,
+          "currency": 2,
+          "recall": 1,
+          "change_tracking": 2,
+          "provenance": 2,
+          "consistency": 2
+        },
+        "criteria_reasons": {
+          "faithfulness": "The memory is grounded in the person’s messages and does not obviously invent current traits.",
+          "currency": "Current state is updated to pregnancy, no cutting/macro counting, and gentler support.",
+          "recall": "It captures the main enduring facts and current preferences, including pregnancy context, lactose intolerance, low iron, fatigue, and gentle support.",
+          "change_tracking": "The Changes section records key shifts with dates and summarizes what changed.",
+          "provenance": "Most claims carry citations to evidence IDs, and the dated change log links beliefs to observations.",
+          "consistency": "The current beliefs do not contradict each other."
+        },
+        "agreement": 0.956,
+        "judge_cost_usd": 0.03444
+      },
+      "reply": {
+        "checklist": [
+          {
+            "id": "R1",
+            "item": "Contains no raw fish, cold deli meat or soft unpasteurized cheese",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "The plan avoids raw fish, cold deli meat, and soft unpasteurized cheese; it only includes cooked foods like chicken, lentils, salmon, and eggs."
+          },
+          {
+            "id": "R2",
+            "item": "Is dairy-free",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "No dairy ingredients are used in the lunches or prep suggestions, so it stays dairy-free."
+          },
+          {
+            "id": "R3",
+            "item": "Has no calorie deficit or macro targets",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "There are no calorie deficit instructions or macro targets anywhere in the reply."
+          },
+          {
+            "id": "R4",
+            "item": "Is gentle in tone",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "The tone is supportive and non-pushy, with phrases like \"Absolutely\" and optional follow-up offers."
+          }
+        ],
+        "follow_rate": 1.0,
+        "violate_rate": 0.0,
+        "asks_for_known": false,
+        "agreement": 1.0,
+        "judge_cost_usd": 0.00744,
+        "text": "Absolutely — here’s a simple lunch plan for this week that’s pregnancy-friendly, portable, and gentle for nausea, with a bit of iron built in.\n\n### This week’s lunches\n**Monday:**  \n**Chicken rice bowl**  \n- Cooked chicken\n- Rice or quinoa\n- Spinach\n- Cucumber or roasted carrots\n- Tahini or olive oil + lemon\n\n**Tuesday:**  \n**Hummus + roasted veggie wrap**  \n- Hummus\n- Roasted peppers/zucchini or carrots\n- Spinach\n- Whole wheat wrap\n- Side of fruit like grapes, orange, or apple\n\n**Wednesday:**  \n**Lentil soup + bread**  \n- Lentil soup or lentil stew\n- Whole grain bread or toast\n- Fruit on the side\n\n**Thursday:**  \n**Salmon quinoa salad**  \n- Cooked salmon\n- Quinoa\n- Greens\n- Avocado or cucumber\n- Lemon + olive oil dressing\n\n**Friday:**  \n**Egg salad or egg + avocado sandwich**  \n- Hard-boiled eggs\n- Whole grain bread or wrap\n- Avocado\n- Tomato or lettuce\n- Side of carrots or fruit\n\n### Easy prep to make the week smoother\n- Cook a batch of **rice or quinoa**\n- Roast a tray of **veggies**\n- Make **hard-boiled eggs**\n- Buy or make **lentil soup**\n- Keep **hummus, wraps, fruit, and spinach** on hand\n\n### If nausea is worse some days\nKeep lunch a bit blander:\n- Toast + eggs\n- Rice + chicken\n- Soup + bread\n- Crackers + hummus\n- Banana + nut butter alongside lunch if needed\n\nIf you want, I can turn this into a **grocery list** or make it into **5 super quick lunches with almost no cooking**.",
+        "reply_cost_usd": 0.00581
+      }
+    },
+    {
+      "source": "long_profile_r3__002_foodbody-scenarios_sam_c675d6b4",
+      "method": "profile",
+      "case": "sam",
+      "memory": {
+        "checklist": [
+          {
+            "id": "M1",
+            "item": "Is vegan",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "\"Appears to eat vegan and regularly asks about vegan nutrition, vegan snacks, vegan meal ideas, and vegan protein options.\""
+          },
+          {
+            "id": "M2",
+            "item": "Is a nurse working night shifts (7pm to 7am, three nights a week)",
+            "kind": "must_contain",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "\"Works long shifts and is now on night shifts: 7pm–7am, three nights a week.\" (night shifts are stated, but not that they are a nurse)"
+          },
+          {
+            "id": "M3",
+            "item": "Wants short, bullet-point answers now",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "partial",
+              "present"
+            ],
+            "evidence": "\"During these busy weeks, they want answers short; brevity is especially important right now.\" and \"When they say they’re tired or half asleep, keep it extremely brief—often just bullets or a list.\""
+          },
+          {
+            "id": "M4",
+            "item": "Needs portable meals that don't need reheating (unreliable microwave)",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "\"Needs work meals and snacks that can be eaten cold or at room temperature because the unit microwave is unreliable.\""
+          },
+          {
+            "id": "M5",
+            "item": "Eats around a night-shift schedule",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "\"Working night shifts now: 7pm–7am, three nights a week.\" and \"Also wants a simple eating schedule for a 7pm–7am shift.\""
+          },
+          {
+            "id": "N1",
+            "item": "Wants long, detailed science explanations as the default",
+            "kind": "must_not_assert",
+            "mark": "asserted",
+            "votes": [
+              "asserted",
+              "asserted",
+              "asserted"
+            ],
+            "evidence": "\"Prefers scientifically detailed explanations and is comfortable with technical depth, especially for science, nutrition, and food-fermentation topics.\""
+          },
+          {
+            "id": "N2",
+            "item": "Wants elaborate weekend cooking projects",
+            "kind": "must_not_assert",
+            "mark": "absent",
+            "votes": [
+              "absent",
+              "absent",
+              "absent"
+            ],
+            "evidence": "The memory says cooking projects should fit a time window and be concise when requested; it does not present a preference for elaborate weekend cooking projects."
+          }
+        ],
+        "contain_rate": 0.8,
+        "stale_rate": 0.5,
+        "criteria": {
+          "faithfulness": 2,
+          "currency": 2,
+          "recall": 1,
+          "change_tracking": 2,
+          "provenance": 2,
+          "consistency": 2
+        },
+        "criteria_reasons": {
+          "faithfulness": "The memory’s claims are broadly supported by the person’s messages and stay within the evidence.",
+          "currency": "It reflects current night-shift needs, short-answer preference, and no-reheat meals without obvious stale beliefs overtaking current ones.",
+          "recall": "It captures the key stable facts and the important current preferences, including format and shift-work needs.",
+          "change_tracking": "It includes a dated change log showing when new preferences and needs emerged.",
+          "provenance": "Most claims are tied to cited observations or dated entries, making their basis traceable.",
+          "consistency": "The current beliefs do not conflict with each other; context-specific detail and brevity preferences coexist cleanly."
+        },
+        "agreement": 0.897,
+        "judge_cost_usd": 0.06928
+      },
+      "reply": {
+        "checklist": [
+          {
+            "id": "R1",
+            "item": "Is short (a brief list)",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "It gives a brief bullet-point list."
+          },
+          {
+            "id": "R2",
+            "item": "Suggests only vegan food",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "Every suggested meal is vegan (tofu, chickpeas, lentils, hummus, beans, oats)."
+          },
+          {
+            "id": "R3",
+            "item": "Suggests meals that can be eaten cold or without reheating",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "It explicitly says the meals are good cold or at room temp and don’t need a microwave."
+          },
+          {
+            "id": "R4",
+            "item": "Fits a night shift (portable, timed for the shift)",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "The meals are portable work foods, but it doesn’t really time them to a night shift beyond a later offer to make a plan."
+          }
+        ],
+        "follow_rate": 0.75,
+        "violate_rate": 0.0,
+        "asks_for_known": false,
+        "agreement": 1.0,
+        "judge_cost_usd": 0.00697,
+        "text": "Yep — here are easy vegan work meals that are good cold / at room temp and don’t need a microwave:\n\n- **Chickpea “tuna” wrap**: mashed chickpeas + vegan mayo or hummus + celery/pickles + spinach\n- **Tofu quinoa bowl**: baked tofu + quinoa + cucumber + edamame + sesame dressing\n- **Lentil pasta salad**: lentil pasta + cherry tomatoes + olives + arugula + pesto\n- **Hummus snack box**: hummus, pita, carrots, cucumber, roasted chickpeas, fruit\n- **Rice paper rolls**: tofu or tempeh + rice noodles + lettuce + carrots + peanut sauce\n- **Bean salad**: black beans or chickpeas + corn + peppers + avocado + lime\n- **Overnight oats**: oats + soy milk + chia + peanut butter + berries\n\nIf you want, I can turn this into a **3-night-shift plan** or a **shopping list**.",
+        "reply_cost_usd": 0.00339
+      }
+    },
+    {
+      "source": "long_summary_r1__000_foodbody-scenarios_hannah_7f010053",
+      "method": "summary",
+      "case": "hannah",
+      "memory": {
+        "checklist": [
+          {
+            "id": "M1",
+            "item": "Is allergic to peanuts",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says on 2025-02-10 there was a peanut allergy concern and to avoid peanuts/cross-contamination."
+          },
+          {
+            "id": "M2",
+            "item": "Cooks for one person now (the children left home)",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says on 2025-04-06 they were 'cooking for just me now' after Maya and Leo left home."
+          },
+          {
+            "id": "M3",
+            "item": "Is retired",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says on 2025-04-02 they retired: 'Friday was my last day at work: I retired.'"
+          },
+          {
+            "id": "M4",
+            "item": "Is on a budget (fixed income) and wants cheap ingredients",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says they are 'on a pension now and trying to watch what I spend' and want cheaper cuts/cheap meals."
+          },
+          {
+            "id": "M5",
+            "item": "Has time and enjoys slower cooking projects (braising, bread)",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says they had 'the whole afternoon' to learn braising, wanted a bread-from-scratch weekend project, and like a slow Sunday recipe/something simmering."
+          },
+          {
+            "id": "N1",
+            "item": "Cooks for a family of three",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "Early entries mention dinner for 'me and my two teenagers' / 'the three of us,' but later memory explicitly says this was superseded when Maya and Leo left home."
+          },
+          {
+            "id": "N2",
+            "item": "Likes splurging on premium ingredients",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "Splurging on good olive oil, grass-fed beef, and dry-aged steak appears in dated early entries; later memory shifts to watching spending and cheaper cuts."
+          },
+          {
+            "id": "N3",
+            "item": "Needs dinners done in 30 minutes",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "The 30-minute dinner need appears in February/March entries, but later memory shows they have time for hour-long, braising, and slow Sunday cooking."
+          }
+        ],
+        "contain_rate": 1.0,
+        "stale_rate": 0.0,
+        "criteria": {
+          "faithfulness": 1,
+          "currency": 2,
+          "recall": 2,
+          "change_tracking": 2,
+          "provenance": 1,
+          "consistency": 2
+        },
+        "criteria_reasons": {
+          "faithfulness": "Most user facts are supported, but the memory also stores assistant-generated recipe/pairing suggestions as if they were part of the record.",
+          "currency": "The latest state is current: retired, living alone, budget-conscious, and interested in slower cooking; older context is dated.",
+          "recall": "It preserves the major durable facts and preferences: allergy, solo household, retirement, budget, and slower-cooking interests.",
+          "change_tracking": "It tracks the main shifts with dates, especially the move from family cooking to solo retirement on 2025-04-02.",
+          "provenance": "User-state claims are date-stamped, but many added dish suggestions are not clearly sourced back to the evidence.",
+          "consistency": "The current beliefs do not contradict each other; older family/splurge/30-minute context is dated as past."
+        },
+        "agreement": 0.976,
+        "judge_cost_usd": 0.07183
+      },
+      "reply": {
+        "checklist": [
+          {
+            "id": "R1",
+            "item": "Sizes meals for one person",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "It explicitly says “for one” and all meal ideas are single-household friendly."
+          },
+          {
+            "id": "R2",
+            "item": "Uses budget-friendly ingredients",
+            "mark": "follows",
+            "votes": [
+              "partial",
+              "follows",
+              "follows"
+            ],
+            "evidence": "Most meals are cheap staples (lentils, pasta, beans), but the braised beef chuck and chicken thighs are less clearly budget-first than the others."
+          },
+          {
+            "id": "R3",
+            "item": "Includes at least one slower, hands-on cooking project",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "It includes slower projects like “Slow ragu or chili” and “braised beef chuck.”"
+          },
+          {
+            "id": "R4",
+            "item": "Contains no peanuts",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "No peanut-containing ingredients are included in the suggested meals."
+          }
+        ],
+        "follow_rate": 1.0,
+        "violate_rate": 0.0,
+        "asks_for_known": false,
+        "agreement": 0.917,
+        "judge_cost_usd": 0.00661,
+        "text": "I’d do a simple, low-waste week for one:\n\n1. **Red lentil dal** with rice and a handful of spinach\n2. **Sheet-pan chicken thighs** with potatoes and onions\n3. **Pasta with mushrooms, garlic, chili flakes, and parmesan**\n4. **Bean soup** with carrots/celery and toast\n5. **Slow ragu or chili** — make a little extra and freeze one portion\n\nIf you want one special meal, swap #5 for **braised beef chuck** with mash.\n\nIf you’d like, I can turn this into a **full shopping list** for the week.",
+        "reply_cost_usd": 0.00435
+      }
+    },
+    {
+      "source": "long_summary_r1__001_foodbody-scenarios_ade_2dc63092",
+      "method": "summary",
+      "case": "ade",
+      "memory": {
+        "checklist": [
+          {
+            "id": "M1",
+            "item": "Is pregnant",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "As of 2025-04-29, user is pregnant and 9 weeks along; later notes continue pregnancy-related questions through 2025-07-05."
+          },
+          {
+            "id": "M2",
+            "item": "Is lactose intolerant",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "As of 2025-03-13, user is lactose intolerant and wanted a high-protein breakfast that is not yogurt."
+          },
+          {
+            "id": "M3",
+            "item": "Avoids pregnancy-unsafe foods (raw fish, cold deli meat, soft unpasteurized cheese)",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present"
+            ],
+            "evidence": "Memory notes pregnancy food-safety limits: sushi/raw fish off the menu for now (2025-05-03), deli meats best avoided unless heated steaming (2025-05-27), and soft unpasteurized cheeses should be avoided while hard pasteurized cheeses are okay (2025-05-17)."
+          },
+          {
+            "id": "M4",
+            "item": "Wants gentle encouragement rather than pushing",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present"
+            ],
+            "evidence": "As of 2025-05-24, user said they need encouragement more than pushing; 2025-06-10 also thanks the assistant for kindness about missed walks."
+          },
+          {
+            "id": "M5",
+            "item": "No calorie cutting or macro targets now",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present"
+            ],
+            "evidence": "As of 2025-05-13, user's doctor wants them eating enough and not counting; macro targets are dropped for now."
+          },
+          {
+            "id": "M6",
+            "item": "Has low iron",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present"
+            ],
+            "evidence": "As of 2025-05-31, user said their iron levels are a bit low."
+          },
+          {
+            "id": "N1",
+            "item": "Wants a calorie deficit to lean out",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "Memory says the prior calorie-deficit/leaning-out plan was superseded as of 2025-04-29 due to pregnancy."
+          },
+          {
+            "id": "N2",
+            "item": "Wants blunt pushing and accountability",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "Memory marks blunt accountability/pushy encouragement as a prior preference superseded as of 2025-05-24."
+          },
+          {
+            "id": "N3",
+            "item": "Wants 140 g protein or other macro targets",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "Memory says prior nutrition targets/structure, including protein goals, were superseded as of 2025-05-13."
+          }
+        ],
+        "contain_rate": 1.0,
+        "stale_rate": 0.0,
+        "criteria": {
+          "faithfulness": 2,
+          "currency": 2,
+          "recall": 2,
+          "change_tracking": 2,
+          "provenance": 2,
+          "consistency": 2
+        },
+        "criteria_reasons": {
+          "faithfulness": "The core personal facts align with the evidence, but the memory also adds unsupported specific advice details that are not shown in the user messages.",
+          "currency": "Current state is updated: pregnancy, gentler tone, no cutting/macros, and low-iron status replace earlier training/cutting preferences.",
+          "recall": "It retains the important current facts and preferences, including pregnancy, lactose intolerance, food restrictions, tone preference, and low iron.",
+          "change_tracking": "Major shifts are recorded with dates, including pregnancy, stopping hard training/cutting, dropping macro targets, and changing tone preference.",
+          "provenance": "Most entries are date-stamped and tied to specific user messages, giving clear provenance for the remembered facts.",
+          "consistency": "The current beliefs do not conflict with each other; outdated preferences are explicitly marked as superseded."
+        },
+        "agreement": 0.978,
+        "judge_cost_usd": 0.03697
+      },
+      "reply": {
+        "checklist": [
+          {
+            "id": "R1",
+            "item": "Contains no raw fish, cold deli meat or soft unpasteurized cheese",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "All the listed lunches use cooked ingredients and avoid raw fish, cold deli meat, and soft unpasteurized cheese."
+          },
+          {
+            "id": "R2",
+            "item": "Is dairy-free",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "No dairy ingredients are included in the plan; the meals are written to be dairy-free."
+          },
+          {
+            "id": "R3",
+            "item": "Has no calorie deficit or macro targets",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "The reply only gives meal ideas and optional follow-up help, with no calorie deficit or macro targets."
+          },
+          {
+            "id": "R4",
+            "item": "Is gentle in tone",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "The tone is supportive and non-pushy, with phrases like “simple,” “if you want,” and “if any of these feel too much.”"
+          }
+        ],
+        "follow_rate": 1.0,
+        "violate_rate": 0.0,
+        "asks_for_known": false,
+        "agreement": 1.0,
+        "judge_cost_usd": 0.01106,
+        "text": "Absolutely — here’s a simple, pregnancy-friendly lunch plan for the week that should feel filling without being fussy.\n\n**Monday:** Chicken, rice, and roasted veg bowl  \n- Cooked chicken, brown rice, carrots, courgette, olive oil or avocado\n\n**Tuesday:** Lentil and sweet potato soup + bread  \n- Nice and comforting, and easy to reheat\n\n**Wednesday:** Turkey or chicken wrap  \n- Use freshly cooked meat if you can, with hummus, spinach, cucumber, and grated carrot\n\n**Thursday:** Salmon quinoa bowl  \n- Cooked salmon, quinoa, cucumber, tomatoes, and a simple lemon-olive oil dressing\n\n**Friday:** Chickpea pasta salad  \n- Pasta, chickpeas, roasted peppers, spinach, and a vinaigrette\n\nIf you want, I can also turn this into:\n1. a **shopping list**, or  \n2. a **meal-prep version** so you can do it in one cook session.\n\nIf any of these feel too much on a tired day, we can make the lunches even simpler.",
+        "reply_cost_usd": 0.00327
+      }
+    },
+    {
+      "source": "long_summary_r1__002_foodbody-scenarios_sam_c675d6b4",
+      "method": "summary",
+      "case": "sam",
+      "memory": {
+        "checklist": [
+          {
+            "id": "M1",
+            "item": "Is vegan",
+            "kind": "must_contain",
+            "mark": "missing",
+            "votes": [
+              "missing",
+              "missing",
+              "present"
+            ],
+            "evidence": "Memory only mentions repeated vegan-focused topics and 'plant-forward meals'; it never states the user is vegan."
+          },
+          {
+            "id": "M2",
+            "item": "Is a nurse working night shifts (7pm to 7am, three nights a week)",
+            "kind": "must_contain",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "It records 'moving to night shifts next week: 7pm to 7am, three nights a week,' but never says the user is a nurse."
+          },
+          {
+            "id": "M3",
+            "item": "Wants short, bullet-point answers now",
+            "kind": "must_contain",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "present",
+              "partial"
+            ],
+            "evidence": "It says the user sometimes wants 'keep it short,' 'bullet points please,' and 'Just the list' for shift-work questions, but not that brevity is the default now."
+          },
+          {
+            "id": "M4",
+            "item": "Needs portable meals that don't need reheating (unreliable microwave)",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "It explicitly says the user has an unreliable microwave and prefers 'meals and snacks' that are portable/no-reheat; e.g. 'meals that don't need reheating' and 'vegan proteins that keep without a fridge for 12 hours.'"
+          },
+          {
+            "id": "M5",
+            "item": "Eats around a night-shift schedule",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "The memory records the night-shift routine: 'moving to night shifts next week: 7pm to 7am, three nights a week,' plus later questions about 3am food, shift timing, breakfast after shifts, and hydration on night shifts."
+          },
+          {
+            "id": "N1",
+            "item": "Wants long, detailed science explanations as the default",
+            "kind": "must_not_assert",
+            "mark": "asserted",
+            "votes": [
+              "asserted",
+              "asserted",
+              "asserted"
+            ],
+            "evidence": "It states: 'Current preference: detailed, explanatory answers that connect technique or recommendations to science/reasoning.'"
+          },
+          {
+            "id": "N2",
+            "item": "Wants elaborate weekend cooking projects",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "Weekend cooking/elaborate meal asks are only dated past examples (e.g. 2025-01-20 Sunday cooking project, 2025-02-10 elaborate vegan Sunday brunch, 2025-04-24 one weekend cook), not a current preference."
+          }
+        ],
+        "contain_rate": 0.4,
+        "stale_rate": 0.5,
+        "criteria": {
+          "faithfulness": 1,
+          "currency": 2,
+          "recall": 1,
+          "change_tracking": 2,
+          "provenance": 1,
+          "consistency": 2
+        },
+        "criteria_reasons": {
+          "faithfulness": "Most claims are anchored in dated user requests; no obvious invented user facts.",
+          "currency": "The memory reflects the current night-shift context and the user's current brevity exceptions rather than stale assumptions.",
+          "recall": "It captures many key habits, but misses explicit vegan identity and the nursing role.",
+          "change_tracking": "It records dated shifts in work schedule and communication style over time.",
+          "provenance": "Many entries cite dates and quotes from the user's messages, making the source clear.",
+          "consistency": "The current beliefs fit together: detailed by default, brief when requested, with shift-work context."
+        },
+        "agreement": 0.846,
+        "judge_cost_usd": 0.08075
+      },
+      "reply": {
+        "checklist": [
+          {
+            "id": "R1",
+            "item": "Is short (a brief list)",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "Gives a brief intro plus a compact bullet list."
+          },
+          {
+            "id": "R2",
+            "item": "Suggests only vegan food",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "follows",
+              "partial"
+            ],
+            "evidence": "Most options are vegan, but the pesto pasta salad isn’t explicitly vegan."
+          },
+          {
+            "id": "R3",
+            "item": "Suggests meals that can be eaten cold or without reheating",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "The meals are described as travel-friendly and cold-friendly, so no reheating is needed."
+          },
+          {
+            "id": "R4",
+            "item": "Fits a night shift (portable, timed for the shift)",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "It mentions travel well, but doesn’t tailor the meals to the night-shift schedule or timing."
+          }
+        ],
+        "follow_rate": 0.5,
+        "violate_rate": 0.0,
+        "asks_for_known": false,
+        "agreement": 0.917,
+        "judge_cost_usd": 0.00839,
+        "text": "Yep — a few good work meals that travel well and taste fine cold:\n\n- Peanut soba noodles + edamame + cucumber/carrot\n- Bean salad wrap: white beans, greens, hummus, chopped veg\n- Grain bowl: rice/quinoa, chickpeas, roasted veg, tahini\n- Pasta salad with pesto, cherry tomatoes, olives, tofu\n- Couscous box with chickpeas, raisins, cucumber, lemon\n- Wraps with hummus, falafel, spinach, pickles\n- Cold baked potato with beans and salsa\n- Tofu noodle salad with sesame dressing\n\nFor the week, I’d do 2 big base meals and mix up the sauces so it doesn’t get boring.",
+        "reply_cost_usd": 0.00264
+      }
+    },
+    {
+      "source": "long_summary_r2__000_foodbody-scenarios_hannah_7f010053",
+      "method": "summary",
+      "case": "hannah",
+      "memory": {
+        "checklist": [
+          {
+            "id": "M1",
+            "item": "Is allergic to peanuts",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says on 2025-02-10 the dessert for Leo's birthday needed to be \"completely peanut-free due to a peanut allergy\"; it also says \"nut-free options are safest.\""
+          },
+          {
+            "id": "M2",
+            "item": "Cooks for one person now (the children left home)",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says on 2025-04-06 the user is \"cooking for just me now\" and on 2025-04-02 that Maya left for her exchange year and Leo moved into his dorm, superseding the earlier family-of-three setup."
+          },
+          {
+            "id": "M3",
+            "item": "Is retired",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says on 2025-04-02 the user \"retired\" and that Friday was their last day at work."
+          },
+          {
+            "id": "M4",
+            "item": "Is on a budget (fixed income) and wants cheap ingredients",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says on 2025-04-14 the user is \"on a pension now and trying to watch what I spend,\" and on 2025-04-30 asks for a budget meal plan for one around $40 a week."
+          },
+          {
+            "id": "M5",
+            "item": "Has time and enjoys slower cooking projects (braising, bread)",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says the user asked on 2025-04-18 to learn braising properly and on 2025-05-08 wanted a bread-from-scratch weekend project because they \"finally have time,\" showing interest in slower cooking projects."
+          },
+          {
+            "id": "N1",
+            "item": "Cooks for a family of three",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "Memory explicitly says the earlier \"three of them\"/two-teenagers framing is superseded by the 2025-04-02 household change."
+          },
+          {
+            "id": "N2",
+            "item": "Likes splurging on premium ingredients",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "Memory mentions splurging only in the 2025-02-06 context and later shifts to pension/budget-conscious notes; it is not presented as current."
+          },
+          {
+            "id": "N3",
+            "item": "Needs dinners done in 30 minutes",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "Memory says the 30-minute dinner need on 2025-03-21 is \"superseded by the 2025-04-02 household change,\" so it is historical only."
+          }
+        ],
+        "contain_rate": 1.0,
+        "stale_rate": 0.0,
+        "criteria": {
+          "faithfulness": 2,
+          "currency": 2,
+          "recall": 2,
+          "change_tracking": 2,
+          "provenance": 2,
+          "consistency": 2
+        },
+        "criteria_reasons": {
+          "faithfulness": "Mostly supported by the evidence, but some entries include inference or assistant-suggested details rather than only user-stated facts.",
+          "currency": "Current household, budget, and cooking preferences are updated, and older assumptions are explicitly marked superseded.",
+          "recall": "It captures the main lasting facts and preferences: peanut allergy, retirement, solo cooking, budget focus, slower cooking, and daily walking.",
+          "change_tracking": "Key transitions are dated and the shift from family meals to solo cooking is clearly tracked and superseded.",
+          "provenance": "Dates are attached, but some claims are paraphrased or inferred rather than directly quoted back to the evidence.",
+          "consistency": "The current beliefs are internally consistent and do not conflict with one another."
+        },
+        "agreement": 0.952,
+        "judge_cost_usd": 0.04729
+      },
+      "reply": {
+        "checklist": [
+          {
+            "id": "R1",
+            "item": "Sizes meals for one person",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "It includes one explicit serving-size cue (“slow ragu for one”) and offers a plan for one person, but most dishes aren’t clearly portioned for a single cook."
+          },
+          {
+            "id": "R2",
+            "item": "Uses budget-friendly ingredients",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "The reply repeatedly emphasizes affordability (“cheap,” “cheaper,” “budget”) and uses low-cost staples like lentils, beans, rice, pasta, and tinned tomatoes."
+          },
+          {
+            "id": "R3",
+            "item": "Includes at least one slower, hands-on cooking project",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "“Sunday: a small slow ragu for one” is a clear slower, hands-on cooking project."
+          },
+          {
+            "id": "R4",
+            "item": "Contains no peanuts",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "No peanuts are included in the suggested meals or shopping list."
+          }
+        ],
+        "follow_rate": 0.75,
+        "violate_rate": 0.0,
+        "asks_for_known": false,
+        "agreement": 1.0,
+        "judge_cost_usd": 0.00766,
+        "text": "How about a cheap, low-fuss week built around the same core ingredients so nothing gets wasted:\n\n**This week**\n- **Mon:** red lentil dal with rice\n- **Tue:** chicken thighs traybaked with potatoes, carrots, and onions\n- **Wed:** mushroom risotto or mushroom barley if you want it a bit cheaper\n- **Thu:** bean and tomato soup with toast\n- **Fri/Sat:** pasta with tinned tomatoes, garlic, chili flakes, and a little cheese\n- **Sunday:** a small slow ragu for one, if you want something simmering\n\n**Shopping list staples**\n- onions, garlic, carrots\n- potatoes\n- rice or pasta\n- red lentils\n- 2–4 chicken thighs\n- tinned tomatoes\n- beans or chickpeas\n- mushrooms\n- bread\n- stock cubes, cumin, smoked paprika, chili flakes, oregano\n\nIf you want, I can turn that into a **proper 7-day plan with a tight shopping list** for one person and keep it around your usual budget.",
+        "reply_cost_usd": 0.00464
+      }
+    },
+    {
+      "source": "long_summary_r2__001_foodbody-scenarios_ade_2dc63092",
+      "method": "summary",
+      "case": "ade",
+      "memory": {
+        "checklist": [
+          {
+            "id": "M1",
+            "item": "Is pregnant",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "“As of 2025-04-29, user is pregnant and 9 weeks along.”"
+          },
+          {
+            "id": "M2",
+            "item": "Is lactose intolerant",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "“As of 2025-03-13, user is lactose intolerant.”"
+          },
+          {
+            "id": "M3",
+            "item": "Avoids pregnancy-unsafe foods (raw fish, cold deli meat, soft unpasteurized cheese)",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "“raw fish is off the menu for now… cooked sushi rolls are fine” and “stick to hard, pasteurized cheeses and avoid soft unpasteurized cheeses,” plus “deli sandwiches are only okay if the deli meat is heated until steaming.”"
+          },
+          {
+            "id": "M4",
+            "item": "Wants gentle encouragement rather than pushing",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "“As of 2025-05-24, the user needs encouragement more than pushing right now. They explicitly said they want encouragement instead of blunt accountability at this time.”"
+          },
+          {
+            "id": "M5",
+            "item": "No calorie cutting or macro targets now",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "“As of 2025-05-13, the user’s doctor wants them eating enough and not counting; macro targets have been dropped… regular, balanced meals with no tracking.”"
+          },
+          {
+            "id": "M6",
+            "item": "Has low iron",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "“As of 2025-05-31, the user’s iron levels are a bit low.”"
+          },
+          {
+            "id": "N1",
+            "item": "Wants a calorie deficit to lean out",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "The memory says the calorie deficit was the earlier goal on 2025-03-06/03-28, but it was superseded by pregnancy guidance and later no-counting guidance."
+          },
+          {
+            "id": "N2",
+            "item": "Wants blunt pushing and accountability",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "Blunt pushing is described as an earlier preference, then explicitly superseded by “encouragement more than pushing right now.”"
+          },
+          {
+            "id": "N3",
+            "item": "Wants 140 g protein or other macro targets",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "The 140 g protein / macro targets are listed only as prior targets and then marked as dropped entirely."
+          }
+        ],
+        "contain_rate": 1.0,
+        "stale_rate": 0.0,
+        "criteria": {
+          "faithfulness": 2,
+          "currency": 2,
+          "recall": 2,
+          "change_tracking": 2,
+          "provenance": 2,
+          "consistency": 2
+        },
+        "criteria_reasons": {
+          "faithfulness": "Current personal facts are supported by the user’s messages, and outdated goals are clearly marked as superseded.",
+          "currency": "The memory reflects the current pregnancy, no-counting, and encouragement preferences rather than stale pre-pregnancy goals.",
+          "recall": "It preserves the key ongoing facts and preferences: pregnancy, lactose intolerance, food safety, low iron, and communication style.",
+          "change_tracking": "It tracks major changes over time, including the shift from cutting/tracking and blunt accountability to eating enough and wanting gentleness.",
+          "provenance": "Entries are dated and often explicitly note what was asked and when, with superseding links to earlier context.",
+          "consistency": "The current beliefs align with each other; earlier conflicting goals are clearly labeled as past only."
+        },
+        "agreement": 0.956,
+        "judge_cost_usd": 0.04052
+      },
+      "reply": {
+        "checklist": [
+          {
+            "id": "R1",
+            "item": "Contains no raw fish, cold deli meat or soft unpasteurized cheese",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "Uses cooked salmon and avoids raw fish, deli meat, and soft unpasteurized cheese."
+          },
+          {
+            "id": "R2",
+            "item": "Is dairy-free",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "The lunches are dairy-free and the reply says it doesn't rely on dairy."
+          },
+          {
+            "id": "R3",
+            "item": "Has no calorie deficit or macro targets",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "No calorie deficit or macro targets are mentioned."
+          },
+          {
+            "id": "R4",
+            "item": "Is gentle in tone",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "Tone is supportive and gentle, with optional suggestions rather than pressure."
+          }
+        ],
+        "follow_rate": 1.0,
+        "violate_rate": 0.0,
+        "asks_for_known": false,
+        "agreement": 1.0,
+        "judge_cost_usd": 0.00704,
+        "text": "Absolutely — here’s a simple, pregnancy-friendly lunch plan for this week that’s filling, easy to prep, and doesn’t rely on dairy or any food-safety risks:\n\n**Monday:** Chicken, rice, and roasted veg bowl\n- Chicken breast or thighs\n- Brown rice or couscous\n- Roasted carrots, peppers, zucchini\n- Olive oil + lemon or a mild dressing\n\n**Tuesday:** Lentil and sweet potato stew + bread\n- Lentils, sweet potato, spinach\n- Serve with wholegrain bread or pita\n- Great if you want something comforting\n\n**Wednesday:** Salmon quinoa bowl\n- Cooked salmon\n- Quinoa\n- Cucumber, avocado, spinach, cherry tomatoes\n- Simple lemon-olive oil dressing\n\n**Thursday:** Chickpea avocado wrap\n- Chickpeas mashed with a little mayo or olive oil\n- Avocado, lettuce, grated carrot\n- Wrap in a wholegrain tortilla\n- Add fruit on the side if you’re still hungry\n\n**Friday:** Tofu stir-fry with rice\n- Tofu\n- Mixed vegetables\n- Rice\n- Light soy/ginger sauce\n\n**Easy extras to keep nearby if you get hungry fast:**\n- Fruit\n- Nuts\n- Hummus and crackers\n- Boiled eggs\n- Peanut butter on toast\n\nIf you want, I can also turn this into a **shopping list** or make it **super quick with leftovers** so you don’t have to cook every day.",
+        "reply_cost_usd": 0.00382
+      }
+    },
+    {
+      "source": "long_summary_r2__002_foodbody-scenarios_sam_c675d6b4",
+      "method": "summary",
+      "case": "sam",
+      "memory": {
+        "checklist": [
+          {
+            "id": "M1",
+            "item": "Is vegan",
+            "kind": "must_contain",
+            "mark": "missing",
+            "votes": [
+              "missing",
+              "missing",
+              "partial"
+            ],
+            "evidence": "Memory repeatedly references vegan topics, but never explicitly says the user is vegan now."
+          },
+          {
+            "id": "M2",
+            "item": "Is a nurse working night shifts (7pm to 7am, three nights a week)",
+            "kind": "must_contain",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "It records the night-shift schedule (7pm–7am, three nights a week) but does not state that the user is a nurse."
+          },
+          {
+            "id": "M3",
+            "item": "Wants short, bullet-point answers now",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "It says that when the user is half asleep or wants it short, they want extremely terse, list-only answers, and notes a preference for bullets."
+          },
+          {
+            "id": "M4",
+            "item": "Needs portable meals that don't need reheating (unreliable microwave)",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "It says the user asked for meals that don't need reheating because the microwave is broken half the time, and highlights cold/no-cook grab-and-go meals."
+          },
+          {
+            "id": "M5",
+            "item": "Eats around a night-shift schedule",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "It explicitly says the user is transitioning to night shifts and discusses questions around 7pm–7am shifts and overnight eating timing."
+          },
+          {
+            "id": "N1",
+            "item": "Wants long, detailed science explanations as the default",
+            "kind": "must_not_assert",
+            "mark": "asserted",
+            "votes": [
+              "asserted",
+              "past_only",
+              "asserted"
+            ],
+            "evidence": "The memory still states the user likes science-heavy, detailed explanations and enjoys going deep into mechanisms."
+          },
+          {
+            "id": "N2",
+            "item": "Wants elaborate weekend cooking projects",
+            "kind": "must_not_assert",
+            "mark": "asserted",
+            "votes": [
+              "asserted",
+              "past_only",
+              "asserted"
+            ],
+            "evidence": "The memory presents the user as interested in cooking projects and project-style meal prep, including a 4-hour Sunday cooking project and current meal-prep interests."
+          }
+        ],
+        "contain_rate": 0.6,
+        "stale_rate": 1.0,
+        "criteria": {
+          "faithfulness": 1,
+          "currency": 1,
+          "recall": 1,
+          "change_tracking": 2,
+          "provenance": 1,
+          "consistency": 2
+        },
+        "criteria_reasons": {
+          "faithfulness": "Mostly grounded in the evidence, but it adds some unsupported specifics and inferred details.",
+          "currency": "It updates some preferences well, but still keeps broad detailed-science framing alongside the later brief-answer preference.",
+          "recall": "It captures many key preferences, but misses or softens important identity facts like vegan status and nurse role.",
+          "change_tracking": "It tracks shifts over time, especially the move from detailed answers to brief list-style responses on workweeks.",
+          "provenance": "Items are dated, but several claims are not tightly tied to direct evidence and some look like assistant-added details.",
+          "consistency": "The current beliefs mostly coexist without direct contradiction because the short-answer preference is framed as context-dependent."
+        },
+        "agreement": 0.872,
+        "judge_cost_usd": 0.07433
+      },
+      "reply": {
+        "checklist": [
+          {
+            "id": "R1",
+            "item": "Is short (a brief list)",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "It gives a brief bullet list of meal ideas."
+          },
+          {
+            "id": "R2",
+            "item": "Suggests only vegan food",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "All suggested meals are vegan (tofu, tempeh, beans, hummus, grains, vegetables)."
+          },
+          {
+            "id": "R3",
+            "item": "Suggests meals that can be eaten cold or without reheating",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "It explicitly says the meals are \"easy to eat cold or at room temp.\""
+          },
+          {
+            "id": "R4",
+            "item": "Fits a night shift (portable, timed for the shift)",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "The ideas are portable enough for work, but the reply does not really address night-shift timing or how to time meals for the shift."
+          }
+        ],
+        "follow_rate": 0.75,
+        "violate_rate": 0.0,
+        "asks_for_known": false,
+        "agreement": 1.0,
+        "judge_cost_usd": 0.00794,
+        "text": "Yep — here are some good take-to-work meals for the week, especially if you need them to be easy to eat cold or at room temp:\n\n- **Peanut soba noodles** with edamame, shredded carrots, cucumber, and sesame seeds\n- **Bean + grain salad**: chickpeas or black beans, quinoa/farro, roasted veg, lemon-tahini dressing\n- **Wraps**: hummus, tofu or tempeh, spinach, cucumber, grated carrot, pickles\n- **Pasta salad** with white beans, olives, tomatoes, arugula, vinaigrette\n- **Rice bowl eaten cold**: rice, marinated tofu, broccoli, corn, salsa or peanut sauce\n- **Lentil salad** with herbs, cucumber, red onion, and a simple mustard dressing\n- **Snack-box lunch**: crackers, hummus, nuts, fruit, roasted chickpeas, baby carrots\n\nIf you want, I can turn this into a **3-day or 5-day work lunch plan** with a grocery list.",
+        "reply_cost_usd": 0.0032
+      }
+    },
+    {
+      "source": "long_summary_r3__000_foodbody-scenarios_hannah_7f010053",
+      "method": "summary",
+      "case": "hannah",
+      "memory": {
+        "checklist": [
+          {
+            "id": "M1",
+            "item": "Is allergic to peanuts",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says on 2025-02-10 the user needed dessert for Leo's birthday to be 'peanut-free due to a peanut allergy.'"
+          },
+          {
+            "id": "M2",
+            "item": "Cooks for one person now (the children left home)",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says on 2025-04-06 the user is 'cooking for just me now' and later 'supersedes earlier assumptions that they were cooking for three or for two teenagers.'"
+          },
+          {
+            "id": "M3",
+            "item": "Is retired",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says on 2025-04-14 the user 'is retired and now on a pension,' and on 2025-04-02 they 'retired after their last day of work.'"
+          },
+          {
+            "id": "M4",
+            "item": "Is on a budget (fixed income) and wants cheap ingredients",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says on 2025-04-14 the user is 'trying to watch what I spend' and on 2025-05-24 wanted 'cheap, good' foods; also 2025-04-30 was a budget meal plan for one."
+          },
+          {
+            "id": "M5",
+            "item": "Has time and enjoys slower cooking projects (braising, bread)",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says the user wanted 'to braise properly' (2025-04-18), 'bread from scratch' as a 'weekend project' (2025-05-08), and a 'slow Sunday recipe' because they like 'having something simmering' (2025-06-09)."
+          },
+          {
+            "id": "N1",
+            "item": "Cooks for a family of three",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "Family-of-three context appears only in dated history, e.g. 2025-02-06 shopping 'for three people' and 2025-04-06 says this was superseded by cooking for just me now."
+          },
+          {
+            "id": "N2",
+            "item": "Likes splurging on premium ingredients",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "Splurging appears only in older dated entries, e.g. 2025-02-06 'okay splurging' on good olive oil and grass-fed beef; later notes shift to watching spending."
+          },
+          {
+            "id": "N3",
+            "item": "Needs dinners done in 30 minutes",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "30-minute dinners are mentioned only in dated past requests, e.g. 2025-02-03 and 2025-03-21; later memory notes slower cooking projects and cooking for one."
+          }
+        ],
+        "contain_rate": 1.0,
+        "stale_rate": 0.0,
+        "criteria": {
+          "faithfulness": 2,
+          "currency": 2,
+          "recall": 2,
+          "change_tracking": 2,
+          "provenance": 2,
+          "consistency": 2
+        },
+        "criteria_reasons": {
+          "faithfulness": "The listed user facts are directly supported by the dated evidence and nothing current looks invented.",
+          "currency": "Older states are time-stamped as history, and the newer single-person/retired/budget context replaces earlier assumptions.",
+          "recall": "It captures the key status changes and preferences, including allergy, household size, retirement, budget, and slow-cooking interests.",
+          "change_tracking": "Major transitions are dated and noted, especially the move to cooking for one and retirement around early April 2025.",
+          "provenance": "Nearly every item is anchored with dates or quotes from the evidence, making the source of each claim clear.",
+          "consistency": "The current beliefs fit together and do not conflict; earlier family-size and speed-cooking items are clearly historical."
+        },
+        "agreement": 0.952,
+        "judge_cost_usd": 0.05398
+      },
+      "reply": {
+        "checklist": [
+          {
+            "id": "R1",
+            "item": "Sizes meals for one person",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "It frames the plan as “for one” and repeats “for one person” in the suggestions."
+          },
+          {
+            "id": "R2",
+            "item": "Uses budget-friendly ingredients",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "It explicitly says “keeping it cheap” and uses economical ingredients like lentils, beans, and chicken thighs."
+          },
+          {
+            "id": "R3",
+            "item": "Includes at least one slower, hands-on cooking project",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "The “roast a whole chicken” / leftover meals and the simmered ragu provide a slower, project-style cooking option."
+          },
+          {
+            "id": "R4",
+            "item": "Contains no peanuts",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "No peanuts or peanut ingredients are mentioned anywhere in the meal plan."
+          }
+        ],
+        "follow_rate": 1.0,
+        "violate_rate": 0.0,
+        "asks_for_known": false,
+        "agreement": 1.0,
+        "judge_cost_usd": 0.0088,
+        "text": "A simple week for one, keeping it cheap and not too fussy:\n\n- Monday: red lentil dal with rice\n- Tuesday: one-pan chicken thigh with lentils and carrots\n- Wednesday: mushroom risotto for one\n- Thursday: black bean soup with toast\n- Friday: ragu or tomato pasta, made in a small pot so it can simmer a while\n- Weekend: roast a whole chicken and use the leftovers for a few meals\n\nIf you want, I can turn that into a proper shopping list for one person, or make it even more budget-focused.",
+        "reply_cost_usd": 0.00214
+      }
+    },
+    {
+      "source": "long_summary_r3__001_foodbody-scenarios_ade_2dc63092",
+      "method": "summary",
+      "case": "ade",
+      "memory": {
+        "checklist": [
+          {
+            "id": "M1",
+            "item": "Is pregnant",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says: \"2025-04-29 (current): User is pregnant.\""
+          },
+          {
+            "id": "M2",
+            "item": "Is lactose intolerant",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says: \"2025-03-13: User is lactose intolerant\" and keeps it as a current preference."
+          },
+          {
+            "id": "M3",
+            "item": "Avoids pregnancy-unsafe foods (raw fish, cold deli meat, soft unpasteurized cheese)",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says pregnancy guidance/current avoidances: raw fish is out for now, cold deli meats are best avoided unless heated until steaming, and avoid soft unpasteurized cheeses."
+          },
+          {
+            "id": "M4",
+            "item": "Wants gentle encouragement rather than pushing",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says current tone should be \"supportive and encouraging, not harsh or overly pushy\" and \"user wants encouragement more than pushing right now.\""
+          },
+          {
+            "id": "M5",
+            "item": "No calorie cutting or macro targets now",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says: \"User’s doctor wants them eating enough, not counting. Drop macro targets entirely\" and \"No macro targets for now.\""
+          },
+          {
+            "id": "M6",
+            "item": "Has low iron",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "Memory says: \"2025-05-31 (current): User said their iron levels are a bit low.\""
+          },
+          {
+            "id": "N1",
+            "item": "Wants a calorie deficit to lean out",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "Memory explicitly labels the half-marathon/cutting phase as \"superseded by 2025-04-29, and further superseded by 2025-05-13.\""
+          },
+          {
+            "id": "N2",
+            "item": "Wants blunt pushing and accountability",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "Memory says blunt pushing was \"Superseded 2025-05-24\" and current tone is encouraging instead."
+          },
+          {
+            "id": "N3",
+            "item": "Wants 140 g protein or other macro targets",
+            "kind": "must_not_assert",
+            "mark": "past_only",
+            "votes": [
+              "past_only",
+              "past_only",
+              "past_only"
+            ],
+            "evidence": "Memory says the 140 g protein target was \"Superseded 2025-05-13\" and that macro counting stopped."
+          }
+        ],
+        "contain_rate": 1.0,
+        "stale_rate": 0.0,
+        "criteria": {
+          "faithfulness": 1,
+          "currency": 2,
+          "recall": 2,
+          "change_tracking": 2,
+          "provenance": 1,
+          "consistency": 2
+        },
+        "criteria_reasons": {
+          "faithfulness": "Mostly supported by the evidence, but a few lines add inference-like language beyond the user’s exact messages.",
+          "currency": "Current status is updated well: pregnancy, no cutting/macros, gentler tone, and low iron are all marked current.",
+          "recall": "It retains the key facts and preferences requested in the checklist, including diet constraints and tone.",
+          "change_tracking": "Major changes are dated and marked superseded, especially the shift from training/cutting to pregnancy-safe guidance.",
+          "provenance": "Most claims are date-linked, but a few entries rely on interpretive summaries rather than direct evidence.",
+          "consistency": "The current beliefs do not conflict with each other."
+        },
+        "agreement": 1.0,
+        "judge_cost_usd": 0.04812
+      },
+      "reply": {
+        "checklist": [
+          {
+            "id": "R1",
+            "item": "Contains no raw fish, cold deli meat or soft unpasteurized cheese",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "Uses only cooked proteins and safe foods; no raw fish, cold deli meat, or soft unpasteurized cheese appear."
+          },
+          {
+            "id": "R2",
+            "item": "Is dairy-free",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "The lunch ideas and prep suggestions are dairy-free; no milk, cheese, yogurt, or other dairy ingredients are included."
+          },
+          {
+            "id": "R3",
+            "item": "Has no calorie deficit or macro targets",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "It gives meal ideas without calorie cutting, deficit language, or macro targets."
+          },
+          {
+            "id": "R4",
+            "item": "Is gentle in tone",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "The tone is reassuring and non-pushy, e.g. 'you do not need a “perfect” lunch' and 'if you want' wording."
+          }
+        ],
+        "follow_rate": 1.0,
+        "violate_rate": 0.0,
+        "asks_for_known": false,
+        "agreement": 1.0,
+        "judge_cost_usd": 0.00824,
+        "text": "Absolutely — here’s a simple, pregnancy-safe lunch plan for the week that should actually keep you full without being fussy.\n\n**Monday:** Chicken rice bowl\n- Chicken, rice, roasted carrots or broccoli, and avocado\n- Add a squeeze of lemon or a simple tahini dressing\n\n**Tuesday:** Lentil soup + bread\n- Lentil and vegetable soup\n- Side of whole-grain toast or pita\n- Fruit on the side if you want something sweet\n\n**Wednesday:** Turkey or chicken wrap\n- Use **heated** turkey/chicken, hummus, spinach, cucumber, and shredded carrots\n- Pack with an apple or grapes\n\n**Thursday:** Tofu stir-fry box\n- Tofu, noodles or rice, mixed vegetables, and a mild soy-ginger sauce\n- Great if you want something easy on your stomach\n\n**Friday:** Salmon grain bowl\n- Cooked salmon, quinoa or rice, cucumber, edamame, and greens\n- Add olive oil + lemon\n\n**Easy prep so this feels doable:**\n- Cook 1 grain base for the week: rice or quinoa\n- Roast a tray of vegetables\n- Make 2 proteins ahead: chicken/tofu/salmon\n- Keep fruit and nuts on hand for a little extra if lunch isn’t enough\n\nIf you’re still getting hungry fast, that’s okay — pregnancy appetite can be intense. You do not need a “perfect” lunch; you just need a solid one that gives you enough.\n\nIf you want, I can turn this into a **grocery list** or make it **more Nigerian/Yoruba-friendly** too.",
+        "reply_cost_usd": 0.00414
+      }
+    },
+    {
+      "source": "long_summary_r3__002_foodbody-scenarios_sam_c675d6b4",
+      "method": "summary",
+      "case": "sam",
+      "memory": {
+        "checklist": [
+          {
+            "id": "M1",
+            "item": "Is vegan",
+            "kind": "must_contain",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "The memory repeatedly mentions vegan meals/topics (e.g., \"big vegan chili,\" \"B12 for vegans,\" \"homemade seitan,\" \"vegan Sunday brunch,\" \"vegan proteins\"), but it never explicitly states the user is vegan as a current identity."
+          },
+          {
+            "id": "M2",
+            "item": "Is a nurse working night shifts (7pm to 7am, three nights a week)",
+            "kind": "must_contain",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "The memory clearly records night shifts at 7pm–7am, three nights a week, but it does not explicitly say the user is a nurse."
+          },
+          {
+            "id": "M3",
+            "item": "Wants short, bullet-point answers now",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "It records that the user wants short answers, bullet points, and list-only replies on these weeks (e.g., \"Just the list,\" \"Bullet points please,\" \"Keep it brief,\" \"short answers are what I need\")."
+          },
+          {
+            "id": "M4",
+            "item": "Needs portable meals that don't need reheating (unreliable microwave)",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "It says the user needs meals that don't need reheating because the unit microwave is broken half the time."
+          },
+          {
+            "id": "M5",
+            "item": "Eats around a night-shift schedule",
+            "kind": "must_contain",
+            "mark": "present",
+            "votes": [
+              "present",
+              "present",
+              "present"
+            ],
+            "evidence": "It records multiple night-shift eating questions (3am food, when to eat on a 7pm–7am shift, breakfast after a night shift)."
+          },
+          {
+            "id": "N1",
+            "item": "Wants long, detailed science explanations as the default",
+            "kind": "must_not_assert",
+            "mark": "asserted",
+            "votes": [
+              "asserted",
+              "asserted",
+              "asserted"
+            ],
+            "evidence": "The memory still says the user \"enjoys science-heavy, in-depth explanations,\" presenting that as a current trait."
+          },
+          {
+            "id": "N2",
+            "item": "Wants elaborate weekend cooking projects",
+            "kind": "must_not_assert",
+            "mark": "asserted",
+            "votes": [
+              "asserted",
+              "absent",
+              "asserted"
+            ],
+            "evidence": "The memory still says the user likes planned cooking projects and even records elaborate weekend/Sunday cooking requests as current interests."
+          }
+        ],
+        "contain_rate": 0.6,
+        "stale_rate": 1.0,
+        "criteria": {
+          "faithfulness": 1,
+          "currency": 1,
+          "recall": 1,
+          "change_tracking": 2,
+          "provenance": 1,
+          "consistency": 2
+        },
+        "criteria_reasons": {
+          "faithfulness": "Most entries are supported by the evidence, but a few are inferred rather than directly stated (for example, vegan identity and some \"likely\" preference interpretations).",
+          "currency": "It tracks the newer brief-answer preference, but it still leaves the broader science-heavy preference looking current, so the current picture is only partly updated.",
+          "recall": "It captures the main night-shift and food-preference facts, but misses or softens some important identity details like being vegan and being a nurse.",
+          "change_tracking": "It includes dates and shows the shift toward concise answers and night-shift routines over time.",
+          "provenance": "Most claims are tied to dated observations, but they are paraphrased and not consistently linked to direct quotes or explicit evidence.",
+          "consistency": "The current beliefs fit together overall; the brief-answer preference and the science-heavy interest are framed as context-dependent rather than directly contradictory."
+        },
+        "agreement": 0.923,
+        "judge_cost_usd": 0.06276
+      },
+      "reply": {
+        "checklist": [
+          {
+            "id": "R1",
+            "item": "Is short (a brief list)",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "A brief bullet list of seven meal ideas."
+          },
+          {
+            "id": "R2",
+            "item": "Suggests only vegan food",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "All listed meals are vegan ingredients only."
+          },
+          {
+            "id": "R3",
+            "item": "Suggests meals that can be eaten cold or without reheating",
+            "mark": "follows",
+            "votes": [
+              "follows",
+              "follows",
+              "follows"
+            ],
+            "evidence": "These are salads, wraps, and snack-style meals that can be eaten cold."
+          },
+          {
+            "id": "R4",
+            "item": "Fits a night shift (portable, timed for the shift)",
+            "mark": "partial",
+            "votes": [
+              "partial",
+              "partial",
+              "partial"
+            ],
+            "evidence": "The meals are portable, but the reply does not really tailor them to a night-shift eating schedule."
+          }
+        ],
+        "follow_rate": 0.75,
+        "violate_rate": 0.0,
+        "asks_for_known": false,
+        "agreement": 1.0,
+        "judge_cost_usd": 0.00771,
+        "text": "Yep — a few good packable work meals:\n\n- Peanut soba noodle salad with edamame + cucumber\n- Chickpea salad wraps with greens and pickles\n- Rice bowl with roasted veg + tofu + tahini sauce\n- Bean salad jar with corn, tomato, avocado, and crackers\n- Couscous salad with chickpeas, herbs, lemon, and olives\n- Pasta salad with white beans, spinach, and pesto\n- Hummus, pita, raw veg, fruit, and a handful of nuts\n\nIf you want, I can also make you a 3-shift meal plan or a grocery list for these.",
+        "reply_cost_usd": 0.00251
+      }
+    }
+  ],
+  "estimated_cost_usd": 1.2378
+}

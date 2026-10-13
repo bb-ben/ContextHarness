@@ -1,0 +1,168 @@
+{
+  "source": "profile_r2__000_foodbody-scenarios_priya_45b8dd3f",
+  "method": "profile",
+  "case": "priya",
+  "memory": {
+    "checklist": [
+      {
+        "id": "M1",
+        "item": "Has type 2 diabetes",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory says they were \"Recently diagnosed with type 2 diabetes\" and are \"newly diagnosed with type 2 diabetes\"."
+      },
+      {
+        "id": "M2",
+        "item": "Wants structured weekly meal plans rather than loose ideas",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory says they \"want an actual structured weekly plan\" and want the weekly plan format to \"stay consistent from week to week.\""
+      },
+      {
+        "id": "M3",
+        "item": "Wants carb counts per meal, under about 45 g",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory states the current target is \"under 45g per meal\" and that \"carb counts per meal\" are useful."
+      },
+      {
+        "id": "M4",
+        "item": "Wants meals quick, about 20 minutes or less",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "partial"
+        ],
+        "evidence": "Memory notes they want \"quick and practical\" help, including \"sub-20-minute options\" and quick substitutions."
+      },
+      {
+        "id": "M5",
+        "item": "Likes a playful, fun tone",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory says snack help should be \"friendly, playful, low-pressure\" and to keep it \"fun.\""
+      },
+      {
+        "id": "N1",
+        "item": "Wants loose ideas and no rigid plans",
+        "kind": "must_not_assert",
+        "mark": "absent",
+        "votes": [
+          "past_only",
+          "absent",
+          "absent"
+        ],
+        "evidence": "The memory records a change to structured weekly planning on 2025-09-24 and says winging meals is no longer working, so the earlier loose/no-rigid preference is only historical."
+      },
+      {
+        "id": "N2",
+        "item": "Wants no numbers or calorie information",
+        "kind": "must_not_assert",
+        "mark": "absent",
+        "votes": [
+          "absent",
+          "absent",
+          "absent"
+        ],
+        "evidence": "The memory does not currently say they want no numbers or calorie information; instead it emphasizes carb counts per meal."
+      }
+    ],
+    "contain_rate": 1.0,
+    "stale_rate": 0.0,
+    "criteria": {
+      "faithfulness": 2,
+      "currency": 2,
+      "recall": 2,
+      "change_tracking": 2,
+      "provenance": 2,
+      "consistency": 2
+    },
+    "criteria_reasons": {
+      "faithfulness": "All listed beliefs are directly supported by the evidence and nothing unsupported is invented.",
+      "currency": "The memory reflects the current structured, carb-counted planning needs and does not keep outdated preferences as current.",
+      "recall": "It captures the major needs: diabetes, structure, carb limits, quick meals, and playful tone.",
+      "change_tracking": "It records the shift from loose help to structured meal planning with dated change notes.",
+      "provenance": "Claims are tied to cited observation IDs and the citations match the evidence.",
+      "consistency": "The current beliefs do not contradict each other."
+    },
+    "agreement": 0.949,
+    "judge_cost_usd": 0.04258
+  },
+  "reply": {
+    "checklist": [
+      {
+        "id": "R1",
+        "item": "Gives a carb count for what it suggests",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "Each dinner idea includes an estimated carb range like ~25–30g and ~35–45g."
+      },
+      {
+        "id": "R2",
+        "item": "Keeps it quick (about 20 minutes or less)",
+        "mark": "partial",
+        "votes": [
+          "partial",
+          "partial",
+          "partial"
+        ],
+        "evidence": "It sounds easy and low-effort, but it never clearly says the meals are about 20 minutes or less."
+      },
+      {
+        "id": "R3",
+        "item": "Fits a structured plan rather than a loose list of ideas",
+        "mark": "ignores",
+        "votes": [
+          "violates",
+          "ignores",
+          "ignores"
+        ],
+        "evidence": "It gives a loose list of dinner ideas instead of a structured plan."
+      },
+      {
+        "id": "R4",
+        "item": "Keeps a light, playful tone",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "The tone is light and playful, with lines like 'Oof, long day meals' and 'least-brain-power option'."
+      }
+    ],
+    "follow_rate": 0.5,
+    "violate_rate": 0.0,
+    "asks_for_known": false,
+    "agreement": 0.917,
+    "judge_cost_usd": 0.00782,
+    "text": "Oof, long day meals deserve to be low-effort. Here are a few super easy dinner ideas that stay friendly with your carb target:\n\n1) **Rotisserie chicken bowl**\n- Chicken + microwave steam-in-bag veggies + 1/2 cup rice\n- **~25–30g carbs**\n\n2) **Egg scramble dinner**\n- 2–3 eggs, sautéed veggies, a slice of toast, or a small tortilla\n- **~15–30g carbs**\n\n3) **Taco salad**\n- Ground turkey/beef, lettuce, salsa, cheese, avocado, a small handful of tortilla chips if you want\n- **~15–25g carbs**\n\n4) **Pasta-ish but controlled**\n- Protein + lots of veg + 1 cup cooked pasta\n- **~35–45g carbs**\n\nIf you want the easiest possible answer: **rotisserie chicken + frozen veggies + a little rice** is the least-brain-power option and still solid.\n\nIf you tell me what you’ve got in the fridge, I’ll pick the best one for tonight.",
+    "reply_cost_usd": 0.00218
+  }
+}

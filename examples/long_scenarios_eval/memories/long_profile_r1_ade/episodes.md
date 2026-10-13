@@ -1,0 +1,79 @@
+- E-0 | 2025-03-03 | source: S-0 | Set macros for half-marathon training while aiming to lean out with a 300-calorie deficit.
+  - O-0.1 | stated | They’re training for a half marathon in May.
+  - O-0.2 | stated | They want to lean out, keep a 300-calorie deficit, and target 140 g protein.
+- E-1 | 2025-03-06 | source: S-1 | User asked for blunt accountability after missing their protein target.
+  - O-1.1 | behavior | They want direct, blunt push/accountability when they miss a nutrition target.
+- E-2 | 2025-03-10 | source: S-2 | Asked for running shoe recommendations for flat feet.
+  - O-2.1 | behavior | Asked for best running shoes for flat feet.
+- E-3 | 2025-03-13 | source: S-3 | Asked for a high-protein breakfast without yogurt because they’re lactose intolerant.
+  - O-3.1 | stated | They’re lactose intolerant.
+  - O-3.2 | behavior | They wanted a high-protein breakfast option that avoids yogurt/dairy.
+- E-4 | 2025-03-17 | source: S-4 | Asked how to fuel a 16 km long run during half-marathon training.
+  - O-4.1 | behavior | They want practical, straightforward fueling guidance for long runs.
+- E-5 | 2025-03-20 | source: S-5 | Asked how to keep earbuds from falling out while running.
+  - O-5.1 | behavior | They want quick, practical fixes for run-gear problems while training.
+- E-6 | 2025-03-24 | source: S-6 | Weekly check-in on protein intake during half-marathon training; user asked for accountability push after averaging 128 g protein.
+  - O-6.1 | behavior | They want direct accountability and a push when they fall short of their protein target, including on weekly check-ins.
+- E-7 | 2025-03-28 | source: S-7 | Asked for a high-protein meal plan for a cutting week.
+  - O-7.1 | behavior | Asked for a meal plan for a cutting week that is high in protein.
+- E-8 | 2025-04-01 | source: S-8 | Asked whether using a sauna after long runs is a good idea.
+  - O-8.1 | behavior | Asked if a sauna is good after long runs, showing interest in practical post-run recovery advice.
+- E-9 | 2025-04-05 | source: S-9 | Fast, high-protein dinner after a run; user wanted a quick post-run meal idea.
+  - O-9.1 | behavior | Asked for a fast, high-protein dinner after a run, showing they like quick practical meal ideas around training.
+- E-10 | 2025-04-09 | source: S-10 | Asked for a birthday gift idea for their sister.
+  - O-10.1 | behavior | Asked for a gift idea for their sister's birthday.
+- E-11 | 2025-04-13 | source: S-11 | Asked whether eating too many carbs before tempo runs is a problem.
+  - O-11.1 | behavior | Asked if carbs before tempo runs are too much, showing interest in practical pre-run fueling guidance.
+- E-12 | 2025-04-17 | source: S-12 | Asked for snack ideas that hit 30 g protein.
+  - O-12.1 | behavior | They want quick, practical snack ideas that deliver about 30 g protein.
+  - O-12.2 | behavior | Nutrition help still needs to be concise and useful for hitting targets around training.
+- E-13 | 2025-04-21 | source: S-13 | Asked how to clean water bottles properly.
+  - O-13.1 | behavior | Asked for a simple, proper way to clean water bottles, showing preference for practical maintenance advice.
+- E-14 | 2025-04-25 | source: S-14 | User asked for strict accountability for nutrition this week with no excuses.
+  - O-14.1 | behavior | They want strong, no-excuses accountability for this week’s nutrition.
+- E-15 | 2025-04-29 | source: S-15 | User shared that they are 9 weeks pregnant and their doctor has paused hard training and calorie cutting.
+  - O-15.1 | event | They are pregnant and 9 weeks along.
+  - O-15.2 | stated | Their doctor has told them no more hard training or calorie cutting for now.
+- E-16 | 2025-05-03 | source: S-16 | Pregnancy food-safety question about whether sushi is allowed during pregnancy.
+  - O-16.1 | behavior | Asked if sushi is off the menu now, showing they want clear, practical pregnancy-safe food guidance.
+- E-17 | 2025-05-06 | source: S-17 | Pregnancy morning nausea; asked for gentle foods they can keep down.
+  - O-17.1 | behavior | Asked for gentle foods they can keep down while nauseous in the mornings, showing they want practical symptom-management advice during pregnancy.
+  - O-17.2 | event | They’re experiencing morning nausea in early pregnancy.
+- E-18 | 2025-05-10 | source: S-18 | Asked for comfortable shoes for walking while swapping from running to walks.
+  - O-18.1 | behavior | Asked for comfortable shoes for walking, indicating a current shift from running to walking.
+- E-19 | 2025-05-13 | source: S-19 | User asked to drop macro targets because their doctor wants them eating enough without counting.
+  - O-19.1 | stated | They no longer want to count macros; their doctor wants them eating enough instead.
+  - O-19.2 | behavior | Nutrition help should now focus on regular balanced meals rather than targets or tracking.
+- E-20 | 2025-05-17 | source: S-20 | Pregnancy-safe cheese advice and dairy is not a big part of their diet.
+  - O-20.1 | stated | They don’t eat much dairy anyway.
+  - O-20.2 | behavior | They asked which cheeses are safe in pregnancy, showing they want clear, practical pregnancy food-safety guidance about dairy.
+- E-21 | 2025-05-20 | source: S-21 | Asked for tips to sleep on their side during pregnancy.
+  - O-21.1 | behavior | Asked for practical tips for sleeping on their side, showing a current pregnancy comfort/sleeping concern.
+- E-22 | 2025-05-24 | source: S-22 | User said they need encouragement more than pushing right now.
+  - O-22.1 | stated | They currently want encouragement more than pushing or hard accountability.
+- E-23 | 2025-05-27 | source: S-23 | Pregnancy food-safety question about whether deli sandwiches are okay.
+  - O-23.1 | behavior | Asked if deli sandwiches are okay during pregnancy, showing they want clear, practical food-safety guidance.
+- E-24 | 2025-05-31 | source: S-24 | Pregnancy nutrition question about iron-rich foods because their levels are a bit low.
+  - O-24.1 | stated | Their iron levels are a bit low.
+  - O-24.2 | behavior | They asked for iron-rich foods, showing a practical nutrition need during pregnancy.
+- E-25 | 2025-06-03 | source: S-25 | Asked what to pack in a hospital bag for upcoming childbirth prep.
+  - O-25.1 | behavior | Asked what goes in a hospital bag, showing they want practical, pregnancy-related preparation advice.
+- E-26 | 2025-06-07 | source: S-26 | Asked for a gentle, light dinner suggestion.
+  - O-26.1 | behavior | Asked for a dinner that is gentle and not heavy, suggesting a preference for simple, easy-to-eat meals when that fits the moment.
+- E-27 | 2025-06-10 | source: S-27 | User said kind reassurance about missed walks this week helped.
+  - O-27.1 | reaction | They said being kind about missed walks this week helped them.
+- E-28 | 2025-06-14 | source: S-28 | Asked for names that work in both English and Yoruba.
+  - O-28.1 | behavior | Asked for names that work in both English and Yoruba, showing interest in bilingual-friendly name options.
+- E-29 | 2025-06-17 | source: S-29 | Asked which fish are safe in pregnancy, especially salmon.
+  - O-29.1 | behavior | Asked which fish are safe in pregnancy and mentioned missing salmon, showing they want clear, practical seafood guidance.
+- E-30 | 2025-06-21 | source: S-30 | Pregnancy snack ideas for work because they’re getting hungry every two hours.
+  - O-30.1 | behavior | Asked for easy snacks for work, showing they want simple, practical snack ideas.
+  - O-30.2 | stated | They get hungry every two hours now.
+- E-31 | 2025-06-24 | source: S-31 | Asked whether it is normal to be this tired during pregnancy.
+  - O-31.1 | behavior | Asked if being this tired in pregnancy is normal, showing a current concern about pregnancy fatigue.
+- E-32 | 2025-06-28 | source: S-32 | Asked for folate-rich foods during pregnancy.
+  - O-32.1 | behavior | Asked for folate-rich foods, showing practical pregnancy nutrition guidance remains useful.
+- E-33 | 2025-07-01 | source: S-33 | Asked for a comforting dinner idea after a long day.
+  - O-33.1 | behavior | Asked for something comforting for dinner after a long day, showing that on exhausting days they like mild, comforting meals.
+- E-34 | 2025-07-05 | source: S-34 | User asked whether prenatal yoga is worth trying during pregnancy.
+  - O-34.1 | behavior | Asked if prenatal yoga is worth trying, showing interest in a gentle pregnancy-safe exercise option.

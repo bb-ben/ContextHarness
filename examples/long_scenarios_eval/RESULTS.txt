@@ -1,0 +1,31 @@
+===== LONG SCENARIOS (35 events) =====
+design      n  must-contain      stale kept        criteria /12      reply follows     reply violates    asks-known  agreement
+profile     9  0.81 (0.60-1.00)  0.44 (0.00-1.00)  11.11 (10.00-12.00) 0.89 (0.75-1.00)  0.03 (0.00-0.25)  0/9         0.96 (0.90-1.00)
+summary     9  0.84 (0.40-1.00)  0.28 (0.00-1.00)  10.33 (8.00-12.00) 0.86 (0.50-1.00)  0.00              0/9         0.96 (0.85-1.00)
+
+per scenario (must-contain / stale kept / reply follows):
+  ade       profile: 0.83 / 0.00 / 1.00   |   summary: 1.00 / 0.00 / 1.00
+  hannah    profile: 0.93 (0.80-1.00) / 0.67 / 0.92 (0.75-1.00)   |   summary: 1.00 / 0.00 / 0.92 (0.75-1.00)
+  sam       profile: 0.67 (0.60-0.80) / 0.67 (0.50-1.00) / 0.75   |   summary: 0.53 (0.40-0.60) / 0.83 (0.50-1.00) / 0.67 (0.50-0.75)
+
+criteria means by design:
+  profile   faithfuln 1.89 (1.00-2.00)  currency 2.00  recall 1.33 (1.00-2.00)  change_tr 2.00  provenanc 1.89 (1.00-2.00)  consisten 2.00
+  summary   faithfuln 1.44 (1.00-2.00)  currency 1.78 (1.00-2.00)  recall 1.67 (1.00-2.00)  change_tr 2.00  provenanc 1.44 (1.00-2.00)  consisten 2.00
+
+===== SHORT SCENARIOS (8-11 events), re-graded =====
+design      n  must-contain      stale kept        criteria /12      reply follows     reply violates    asks-known  agreement
+agent       9  0.60 (0.20-1.00)  0.11 (0.00-0.50)  10.44 (7.00-12.00) 0.86 (0.75-1.00)  0.00              0/9         0.96 (0.87-1.00)
+profile    15  0.89 (0.60-1.00)  0.27 (0.00-1.00)  11.40 (10.00-12.00) 0.72 (0.50-1.00)  0.05 (0.00-0.25)  0/15        0.94 (0.83-1.00)
+summary    15  0.91 (0.20-1.00)  0.17 (0.00-1.00)  10.40 (9.00-12.00) 0.71 (0.33-1.00)  0.08 (0.00-0.25)  1/15        0.93 (0.75-1.00)
+
+per scenario (must-contain / stale kept / reply follows):
+  dani      agent: 0.60 (0.40-0.80) / 0.33 (0.00-0.50) / 0.83 (0.75-1.00)   |   profile: 0.80 / 1.00 / 0.75   |   summary: 0.93 (0.80-1.00) / 0.50 (0.00-1.00) / 0.75
+  lena      agent: 0.80 (0.60-1.00) / 0.00 / 0.75   |   profile: 1.00 / 0.00 / 0.75   |   summary: 1.00 / 0.00 / 0.67 (0.50-0.75)
+  marisol   agent: 0.40 (0.20-0.60) / 0.00 / 1.00   |   profile: 0.73 (0.60-0.80) / 0.00 / 0.78 (0.67-1.00)   |   summary: 0.60 (0.20-0.80) / 0.17 (0.00-0.50) / 0.78 (0.33-1.00)
+  priya     profile: 0.93 (0.80-1.00) / 0.00 / 0.67 (0.50-0.75)   |   summary: 1.00 / 0.17 (0.00-0.50) / 0.58 (0.50-0.75)
+  tom       profile: 1.00 / 0.33 (0.00-0.50) / 0.67 (0.50-0.75)   |   summary: 1.00 / 0.00 / 0.75
+
+criteria means by design:
+  agent     faithfuln 2.00  currency 1.56 (1.00-2.00)  recall 1.33 (1.00-2.00)  change_tr 1.78 (1.00-2.00)  provenanc 2.00  consisten 1.78 (0.00-2.00)
+  profile   faithfuln 1.93 (1.00-2.00)  currency 1.80 (1.00-2.00)  recall 1.80 (1.00-2.00)  change_tr 2.00  provenanc 1.87 (1.00-2.00)  consisten 2.00
+  summary   faithfuln 1.40 (0.00-2.00)  currency 1.87 (1.00-2.00)  recall 1.80 (1.00-2.00)  change_tr 2.00  provenanc 1.33 (1.00-2.00)  consisten 2.00

@@ -1,0 +1,69 @@
+- As of 2025-02-03, user needed quick weeknight dinner ideas for themselves and two teenagers, with a hard time limit of about 30 minutes or less.
+- A previously suggested fit was pan-seared salmon with garlic green beans and rice, which takes about 25 minutes and serves three.
+- As of 2025-02-06, user asked for a grocery list for the three of them for the week and said they do not mind splurging; preferred higher-quality ingredients like good olive oil and grass-fed beef.
+- A suggested grocery basket included: grass-fed ground beef, wild salmon, aged parmesan, good olive oil, berries, sourdough, and greens.
+- As of 2025-02-10, user wanted a dessert for Leo’s birthday and has a peanut allergy concern; avoid peanuts and anything with nuts nearby/cross-contaminated.
+- A suggested dessert was a chocolate olive-oil cake made with no nuts anywhere near it.
+- As of 2025-02-13, user asked what wine goes with short ribs.
+- A suggested pairing was Cabernet Sauvignon or Syrah.
+- As of 2025-02-17, user asked for tips on sleeping better because they keep waking at 4am.
+- A suggested approach was to keep a fixed wake time and use a cool, dark room.
+- As of 2025-02-20, user again wanted a fast dinner, 30 minutes max, because the kids were starving after practice.
+- A suggested dinner was steak tacos with quick-pickled onions, ready in about 20 minutes.
+- As of 2025-02-24, user asked whether a stand mixer is worth it.
+- A suggested answer was: yes, if they bake weekly.
+- As of 2025-02-28, user wanted a splurge-worthy Saturday dinner for the three of them and specifically wanted to try dry-aged steak.
+- A suggested dinner was dry-aged ribeye with potato gratin and a Bordeaux.
+- As of 2025-03-04, user asked how to keep herbs fresh longer.
+- A suggested approach was to keep stems in water, loosely covered, in the fridge.
+- As of 2025-03-08, user wanted quick lunchbox ideas for two teenagers.
+- A suggested set of lunchbox options was chicken wraps, pasta salad, and cheese and crackers.
+- As of 2025-03-12, user asked for good stretches after a long day at a desk.
+- A suggested answer was hip flexor lunges and a doorway chest stretch.
+- As of 2025-03-17, user asked for a wine pairing for mushroom risotto.
+- A suggested pairing was Pinot Noir or oaked Chardonnay.
+- As of 2025-03-21, user again wanted a 30-minute dinner because things were chaotic.
+- A suggested dinner was sheet-pan chicken thighs and vegetables, ready in about 30 minutes.
+- As of 2025-03-26, user asked how long cooked rice keeps in the fridge.
+- A suggested answer was up to four days, if cooled quickly.
+- As of 2025-04-02, user retired. Maya left for her exchange year, Leo moved into his dorm, and the house is now very quiet. This supersedes the earlier assumption that the user was feeding two teenagers at home day-to-day, though quick dinners may still be relevant when the kids are home.
+- As of 2025-04-06, user said they are cooking for just themselves now and that many recipes make four; they want help scaling recipes down.
+- A suggested approach was to halve or quarter recipes and freeze single portions.
+- As of 2025-04-10, user asked for good podcasts about food history.
+- A suggested podcast was Gastropod.
+- As of 2025-04-14, user said they are on a pension now and trying to watch what they spend; they want cheaper cuts that still taste good.
+- A suggested set of economical, flavorful cuts was chicken thighs, pork shoulder, and beef chuck, especially for braising.
+- As of 2025-04-18, user said they’ve got the whole afternoon and want to learn to braise properly.
+- A suggested braising method was: sear the meat, add aromatics and liquid, cover, and cook low for about three hours.
+- As of 2025-04-22, user asked about the difference between baking soda and baking powder.
+- A suggested explanation was: baking soda needs an acid; baking powder already contains its own acid.
+- As of 2025-04-26, user wanted a single-portion dinner that wouldn’t leave a week of leftovers.
+- A suggested dinner was a one-pan chicken thigh with lentils.
+- As of 2025-04-30, user said groceries are adding up and asked for a budget meal plan for one, around $40 a week.
+- A suggested budget plan centered on lentils, eggs, a whole chicken, rice, and seasonal vegetables.
+- As of 2025-05-04, user asked whether they should get a slow cooker.
+- A suggested answer was that a Dutch oven does the same job if they already have one.
+- As of 2025-05-08, user wanted a weekend project and asked about making bread from scratch now that they finally have time.
+- A suggested project was a simple overnight loaf.
+- As of 2025-05-12, user asked how to sharpen a knife.
+- A suggested answer was to use a whetstone at about 15 degrees, then hone.
+- As of 2025-05-16, user wanted dinner for one and said they were happy to spend an hour cooking.
+- A suggested dinner was mushroom risotto for one, taking about 45 minutes.
+- As of 2025-05-20, user asked for ideas for a small herb garden on a balcony.
+- A suggested set of herbs was basil, thyme, rosemary, and chives.
+- As of 2025-05-24, user said “Skip the fancy stuff. Beans, lentils, whatever’s cheap and good,” showing a stronger preference for simple, economical meals.
+- A suggested pair of cheap, good meal ideas was black bean soup and red lentil dal.
+- As of 2025-05-28, user asked for a simple cake because a friend is coming for coffee.
+- A suggested cake was a lemon drizzle loaf.
+- As of 2025-06-01, user asked whether it is cheaper to buy whole chickens and break them down, and said they have time to learn.
+- A suggested answer was yes, usually by about a third, and offered instructions on how to joint a chicken.
+- As of 2025-06-05, user asked how to store bread so it doesn't go stale.
+- A suggested answer was to store it cut side down on a board, or freeze it sliced.
+- As of 2025-06-09, user asked for a slow Sunday recipe for one and said they like having something simmering.
+- A suggested recipe was a small pot of ragu, simmered for about two hours.
+- As of 2025-06-13, user said they walk every morning now and asked for good walking routes to stay active.
+- A suggested walking route idea was a loop with a hill in the middle.
+- As of 2025-06-17, user asked whether frozen vegetables or fresh are better on a budget.
+- A suggested answer was that frozen is often cheaper and just as nutritious.
+- As of 2025-06-21, user asked which spices are worth buying first.
+- A suggested starter spice set was cumin, smoked paprika, chili flakes, and oregano.

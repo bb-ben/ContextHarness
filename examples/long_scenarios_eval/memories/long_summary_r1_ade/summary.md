@@ -1,0 +1,37 @@
+- As of 2025-07-05, user asked if prenatal yoga is worth trying; response was that many people find it helpful and they should check with their doctor. Prenatal exercise/movement guidance is now a current topic.
+- As of 2025-07-01, user asked for something comforting for dinner after a long day; suggested option was a mild lentil and sweet potato stew. Comforting, gentle dinner ideas are currently relevant.
+- As of 2025-06-28, user asked for folate-rich foods; suggested options were leafy greens, beans, and fortified grains. Folate/early-pregnancy nutrition is now a current topic.
+- As of 2025-06-24, user asked, “Is it normal to be this tired?”; response was that it is very common and they should mention it to their doctor. Pregnancy-related fatigue is a current topic.
+- As of 2025-06-21, user asked for easy work snacks because they get hungry every two hours; suggested options were hummus and crackers, fruit, and nuts.
+- As of 2025-06-17, user asked which fish is safe and said they miss salmon; cooked salmon is okay, and high-mercury fish should be avoided.
+- As of 2025-06-14, user asked for names that work in both English and Yoruba; suggested examples were Tola, Ade, Femi, and Kemi.
+- As of 2025-06-10, user appreciated kindness about missed walks this week; gentle reassurance and framing rest as part of it helped. Current tone preference remains supportive and non-pushy.
+- As of 2025-06-07, user wanted a gentle dinner and nothing heavy; suggested option was chicken and rice soup.
+- As of 2025-06-03, user asked what goes in a hospital bag; suggested basics were comfortable clothes, snacks, and chargers.
+- As of 2025-05-31, user asked about iron-rich foods because their levels are a bit low; suggested options were lentils, spinach, beef, and fortified cereals, ideally paired with vitamin C.
+- As of 2025-05-27, user asked whether deli sandwiches are okay; cold deli meats are best avoided unless heated until steaming.
+- As of 2025-05-24, user says they need encouragement more than pushing right now. Supportive, reassuring tone is preferred at present.
+- Superseded as of 2025-05-24: prior preference for blunt accountability and pushy encouragement (notably around nutrition adherence) is less desired right now.
+- As of 2025-05-20, user asked for tips for sleeping on their side; a pillow between the knees was suggested.
+- As of 2025-05-17, user asked which cheeses are safe during pregnancy; hard pasteurized cheeses are okay, and soft unpasteurized cheeses should be avoided.
+- As of 2025-05-13, user’s doctor wants them eating enough and not counting; macro targets are dropped for now. Current guidance is just regular, balanced meals.
+- Superseded as of 2025-05-13: prior nutrition targets/structure (calorie and macro goals, including ~1,900 kcal/day and 140 g protein) are no longer the focus.
+- As of 2025-05-10, user is swapping running for walks and asked for comfortable shoes; cushioned walking shoes were recommended.
+- As of 2025-05-06, user is pregnant and dealing with morning nausea; gentle foods/drinks suggested that may stay down are dry crackers, ginger tea, and small meals.
+- As of 2025-05-03, user is pregnant and asks whether specific foods are okay; raw fish/sushi is off the menu for now, but cooked rolls are fine.
+- As of 2025-04-29, user is pregnant and 9 weeks along. Their doctor says no more hard training or calorie cutting for now.
+- Superseded as of 2025-04-29: user was training for a half marathon in May and aiming to lean out while maintaining performance with a ~300-calorie deficit, ~1,900 kcal/day, 140 g protein, 190 g carbs, and 60 g fat. That cut/training focus was paused due to pregnancy.
+- As of 2025-03-10, user has flat feet and was looking at running shoe options; stability shoes were suggested, and trying shoes on at a running store was recommended.
+- As of 2025-03-13, user is lactose intolerant and wants high-protein breakfast ideas that are not yogurt.
+- As of 2025-03-17, for a 16 km long run, suggested fueling was a carb-rich breakfast and a gel every 40 minutes.
+- As of 2025-03-20, user’s earbuds fall out when running; suggested fixes were ear hooks or trying a smaller tip size.
+- As of 2025-03-24, user averaged 128 g protein in a weekly check; they wanted tough pushback to hit 140 g consistently, with the guiding message: “140 means 140. Plan it.”
+- As of 2025-03-28, user asked for a high-protein cutting-week meal plan; suggested staples included chicken, lentils, eggs, and tofu, with ~1,900 kcal/day maintained as the calorie target.
+- As of 2025-04-01, user asked whether a sauna is good after long runs; advice given was that it’s fine if they rehydrate afterward.
+- As of 2025-04-05, user asked for a fast, high-protein dinner after a run; suggested option was salmon, quinoa, and broccoli (~45 g protein).
+- As of 2025-04-09, user asked for a gift idea for their sister’s birthday; suggested idea was a cooking class for two.
+- As of 2025-04-13, user asked whether they are eating too many carbs before tempo runs; advice given was no—carbs before tempo work help.
+- As of 2025-04-17, user asked for snack ideas that hit 30 g protein; suggested options were a tuna wrap or a protein shake made with water.
+- As of 2025-04-21, user asked how to clean water bottles properly; advised method was hot soapy water plus a bottle brush, then air-dry.
+- As of 2025-04-25, user asked for accountability that week and said “No excuses”; assistant agreed to have them log every meal and check numbers on Friday.
+- As of 2025-05-06 to 2025-07-05, pregnancy-related food, comfort, and activity guidance has been a recurring topic, including nausea management, safe foods, deli meat caution, pregnancy-safe cheese, iron-rich foods, side-sleeping support, hospital bag prep, gentle meal ideas, fish safety, reassurance around missed walks/rest, easy work snacks for frequent hunger, fatigue as a common pregnancy symptom to mention to a doctor, folate-rich foods, comforting dinner ideas, and prenatal yoga.

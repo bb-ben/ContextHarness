@@ -1,0 +1,168 @@
+{
+  "source": "profile_r1__003_foodbody-scenarios_lena_a7a829dd",
+  "method": "profile",
+  "case": "lena",
+  "memory": {
+    "checklist": [
+      {
+        "id": "M1",
+        "item": "Wants no grams, calories or tracking numbers",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory says nutrition and meal planning should avoid grams, calories, and other numeric tracking; Right now also says no grams or calories shown from 2025-04-08 onward."
+      },
+      {
+        "id": "M2",
+        "item": "Wants gentle check-ins instead of reports",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory says they prefer gentle check-ins about eating over weekly reports; ask how things feel, not how they measure."
+      },
+      {
+        "id": "M3",
+        "item": "Prefers Mediterranean food",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory says they prefer Mediterranean-style meals."
+      },
+      {
+        "id": "M4",
+        "item": "Cooks for self and partner",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory says they cook for themselves and their partner, so meal suggestions should account for two people."
+      },
+      {
+        "id": "M5",
+        "item": "Is on leave for burnout",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory says they are signed off work with burnout as of 2025-04-02."
+      },
+      {
+        "id": "N1",
+        "item": "Wants exact grams or macros per meal",
+        "kind": "must_not_assert",
+        "mark": "past_only",
+        "votes": [
+          "past_only",
+          "past_only",
+          "past_only"
+        ],
+        "evidence": "The change log mentions 2025-03-16 macro/gram formatting as a past fit, but current sections now say to avoid grams and calories."
+      },
+      {
+        "id": "N2",
+        "item": "Wants weekly numeric reports",
+        "kind": "must_not_assert",
+        "mark": "past_only",
+        "votes": [
+          "absent",
+          "past_only",
+          "past_only"
+        ],
+        "evidence": "Memory prefers gentle check-ins over weekly reports; it does not state weekly numeric reports are currently wanted."
+      }
+    ],
+    "contain_rate": 1.0,
+    "stale_rate": 0.0,
+    "criteria": {
+      "faithfulness": 2,
+      "currency": 2,
+      "recall": 2,
+      "change_tracking": 2,
+      "provenance": 1,
+      "consistency": 2
+    },
+    "criteria_reasons": {
+      "faithfulness": "Most current beliefs are supported, but a few phrases are slightly inferential (for example 'simple'/'practical'/'duration unknown') rather than directly stated.",
+      "currency": "Current preferences are updated to avoid numbers and prefer gentle check-ins; older tracking preferences are relegated to the change log.",
+      "recall": "All required facts and preferences are present, including the burnout leave and the shift away from reports.",
+      "change_tracking": "The memory records key changes with dates, especially the move away from tracking and the switch to gentle check-ins.",
+      "provenance": "It includes dated change notes and citations, but some claims are still summarized rather than directly tied to the user’s exact wording.",
+      "consistency": "The current beliefs do not contradict each other."
+    },
+    "agreement": 0.949,
+    "judge_cost_usd": 0.03558
+  },
+  "reply": {
+    "checklist": [
+      {
+        "id": "R1",
+        "item": "Contains no grams, calories or macro numbers",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "It mentions no grams, calories, or macro/tracking numbers anywhere."
+      },
+      {
+        "id": "R2",
+        "item": "Is Mediterranean",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "It explicitly offers a \"Mediterranean-style\" grocery list and uses Mediterranean foods like hummus, pitta, feta, and grains."
+      },
+      {
+        "id": "R3",
+        "item": "Is sized for two people",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "It repeatedly says the list is \"for two\" and \"for two people.\""
+      },
+      {
+        "id": "R4",
+        "item": "Includes a gentle check-in about how eating is going",
+        "mark": "ignores",
+        "votes": [
+          "ignores",
+          "ignores",
+          "ignores"
+        ],
+        "evidence": "It doesn't ask a gentle check-in about how eating is going; it only asks planning details like meals and pantry items."
+      }
+    ],
+    "follow_rate": 0.75,
+    "violate_rate": 0.0,
+    "asks_for_known": false,
+    "agreement": 1.0,
+    "judge_cost_usd": 0.00865,
+    "text": "Absolutely — I can help with that in a calm, simple way.\n\nIf you want, I can make you a Mediterranean-style grocery list for two that keeps things easy and low-effort for a burnout week. I can base it around a few flexible meals, like:\n- a traybake or sheet-pan dinner\n- pasta or grains with veg and feta\n- hummus/pitta-style lunches\n- something cosy for a couple of easy dinners\n\nIf you’d like, send me:\n- how many dinners you want to cover\n- whether you want breakfasts/lunches too\n- anything you already have in the cupboard/fridge\n- any foods you want to use up or avoid\n\nThen I’ll turn it into a simple shopping list for two with no fuss.",
+    "reply_cost_usd": 0.00188
+  }
+}

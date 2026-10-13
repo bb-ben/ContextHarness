@@ -1,0 +1,168 @@
+{
+  "source": "profile_r1__000_foodbody-scenarios_priya_45b8dd3f",
+  "method": "profile",
+  "case": "priya",
+  "memory": {
+    "checklist": [
+      {
+        "id": "M1",
+        "item": "Has type 2 diabetes",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "\"Newly diagnosed with type 2 diabetes as of 2025-09-20\" and \"Newly diagnosed with type 2 diabetes ... this is current as of 2025-10-03\""
+      },
+      {
+        "id": "M2",
+        "item": "Wants structured weekly meal plans rather than loose ideas",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "\"they want actual structure: week-long plans with breakfast, lunch, and dinner\" and \"still wants next-week meal plans laid out by day with meals and carb counts\""
+      },
+      {
+        "id": "M3",
+        "item": "Wants carb counts per meal, under about 45 g",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "\"working with a dietitian and have a target of staying under 45 g of carbs per meal\" and \"per-meal carb counts are especially useful\""
+      },
+      {
+        "id": "M4",
+        "item": "Wants meals quick, about 20 minutes or less",
+        "kind": "must_contain",
+        "mark": "partial",
+        "votes": [
+          "partial",
+          "partial",
+          "partial"
+        ],
+        "evidence": "\"For quick diabetes dinner swaps, they like fast options and appreciate when carbs are estimated, with an eye toward under-20-minute meals when possible\""
+      },
+      {
+        "id": "M5",
+        "item": "Likes a playful, fun tone",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "\"For casual snack ideas, a playful or fun vibe is still welcome when they ask for it\" and \"still keep it fun though\""
+      },
+      {
+        "id": "N1",
+        "item": "Wants loose ideas and no rigid plans",
+        "kind": "must_not_assert",
+        "mark": "past_only",
+        "votes": [
+          "past_only",
+          "past_only",
+          "past_only"
+        ],
+        "evidence": "The old preference is only mentioned in the change log: \"2025-09-01: preferred loose, non-rigid dinner ideas\" and earlier grocery-list flexibility; current sections instead say they want \"actual structure\"."
+      },
+      {
+        "id": "N2",
+        "item": "Wants no numbers or calorie information",
+        "kind": "must_not_assert",
+        "mark": "past_only",
+        "votes": [
+          "past_only",
+          "past_only",
+          "past_only"
+        ],
+        "evidence": "The memory only mentions this as a prior preference: \"previously preferred quick, flexible suggestions with no calorie or numbers talk\"; current sections instead emphasize carb counts per meal."
+      }
+    ],
+    "contain_rate": 0.8,
+    "stale_rate": 0.0,
+    "criteria": {
+      "faithfulness": 2,
+      "currency": 2,
+      "recall": 2,
+      "change_tracking": 2,
+      "provenance": 2,
+      "consistency": 2
+    },
+    "criteria_reasons": {
+      "faithfulness": "The stated beliefs are all supported by the evidence and nothing looks invented.",
+      "currency": "Current preferences are updated to structured, carb-counted planning and the older loose/no-numbers preferences are relegated to past context.",
+      "recall": "It retains the key diagnosis, dietitian, carb target, planning style, quick-meal preference, and fun tone.",
+      "change_tracking": "The memory explicitly records the shift from loose planning to structured weekly plans and dates the change points.",
+      "provenance": "Claims are tied to bracketed evidence references and the change log dates.",
+      "consistency": "The current beliefs do not contradict each other; loose/no-numbers preferences are clearly historical."
+    },
+    "agreement": 0.949,
+    "judge_cost_usd": 0.03659
+  },
+  "reply": {
+    "checklist": [
+      {
+        "id": "R1",
+        "item": "Gives a carb count for what it suggests",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "Each suggested dinner includes explicit carb totals, like \"~27–30 g carbs\" and \"~20–25 g carbs.\""
+      },
+      {
+        "id": "R2",
+        "item": "Keeps it quick (about 20 minutes or less)",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "The options are very fast, using things like rotisserie chicken, eggs, and deli roll-ups, which fit a 20-minute-or-less dinner."
+      },
+      {
+        "id": "R3",
+        "item": "Fits a structured plan rather than a loose list of ideas",
+        "mark": "violates",
+        "votes": [
+          "partial",
+          "violates",
+          "violates"
+        ],
+        "evidence": "It’s organized with headings, but it’s still a loose set of dinner ideas rather than a structured meal plan."
+      },
+      {
+        "id": "R4",
+        "item": "Keeps a light, playful tone",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "It opens with a playful joke about being at \"3%\" energy and keeps the tone light and casual."
+      }
+    ],
+    "follow_rate": 0.75,
+    "violate_rate": 0.25,
+    "asks_for_known": false,
+    "agreement": 0.917,
+    "judge_cost_usd": 0.00861,
+    "text": "Ugh, same energy level as a phone at 3% 😅\n\nFor a tired-night dinner, I’d go with the easiest one-pan option:\n\n**Rotisserie chicken + bagged salad + microwaved microwave rice**\n- 4–5 oz chicken: **0 g carbs**\n- Big handful of salad + dressing: **~5–8 g carbs**\n- 1/2 cup microwave rice: **~22 g carbs**\n- Total: **~27–30 g carbs**\n\nIf you want something even simpler:\n\n**Egg scramble bowl**\n- 2–3 eggs with spinach/cheese: **~2–4 g carbs**\n- 1 slice whole-grain toast: **~12–15 g carbs**\n- Side of berries or tomato/cucumber: **~5–8 g carbs**\n- Total: **~20–25 g carbs**\n\n**Fastest “I cannot cook” option:**\n- Deli turkey roll-ups + string cheese + baby carrots + hummus\n- Total: **~15–20 g carbs** depending on hummus/carrot amount\n\nIf you tell me what you’ve got in the fridge, I can turn it into a super quick dinner with the carb count. ",
+    "reply_cost_usd": 0.00248
+  }
+}

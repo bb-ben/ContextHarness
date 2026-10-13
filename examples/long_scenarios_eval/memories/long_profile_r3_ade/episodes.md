@@ -1,0 +1,82 @@
+- E-0 | 2025-03-03 | source: S-0 | Set nutrition macros for half-marathon training while aiming to lean out.
+  - O-0.1 | stated | They’re training for a half marathon in May and want to lean out while keeping a ~300-calorie deficit and 140 g protein.
+- E-1 | 2025-03-06 | source: S-1 | User asked for blunt accountability after missing protein, in the context of half-marathon training and a lean-out cut.
+  - O-1.1 | stated | They want blunt, pushy help when they miss a target.
+  - O-1.2 | event | They missed protein yesterday.
+  - O-1.3 | behavior | They asked for direct pressure rather than a мягкий/encouraging tone.
+- E-2 | 2025-03-10 | source: S-2 | Asked for running shoe recommendations for flat feet.
+  - O-2.1 | behavior | They asked for best running shoes for flat feet, indicating a need for practical footwear guidance for running.
+- E-3 | 2025-03-13 | source: S-3 | Asked for a high-protein breakfast without yogurt because they are lactose intolerant.
+  - O-3.1 | stated | They are lactose intolerant.
+  - O-3.2 | behavior | They asked for a high-protein breakfast that does not use yogurt.
+- E-4 | 2025-03-17 | source: S-4 | Asked how to fuel a 16 km long run while training for a half marathon.
+  - O-4.1 | behavior | They asked for fueling advice for a 16 km long run.
+  - O-4.2 | event | They are in an active half-marathon training phase that includes long runs.
+- E-5 | 2025-03-20 | source: S-5 | User asked how to keep earbuds from falling out while running.
+  - O-5.1 | behavior | They asked for a practical fix for earbuds falling out during runs.
+  - O-5.2 | behavior | This reinforces that running-gear questions should be answered with direct, useful recommendations.
+- E-6 | 2025-03-24 | source: S-6 | Weekly protein check-in: they averaged 128 g protein and wanted blunt accountability to hit 140 g.
+  - O-6.1 | stated | They averaged 128 g protein this week, below their 140 g target.
+  - O-6.2 | behavior | They asked to be pushed, preferring direct accountability over reassurance.
+- E-7 | 2025-03-28 | source: S-7 | Asked for a high-protein meal plan for a cutting week.
+  - O-7.1 | behavior | They asked for a high-protein meal plan for a cutting week, consistent with their ongoing cut and protein-focus goals.
+- E-8 | 2025-04-01 | source: S-8 | Asked whether using a sauna after long runs is a good recovery strategy.
+  - O-8.1 | behavior | They asked about sauna use after long runs, showing interest in post-run recovery guidance.
+- E-9 | 2025-04-05 | source: S-9 | Asked for a fast, high-protein dinner after a run.
+  - O-9.1 | behavior | They wanted a quick dinner that was high in protein immediately after running, showing a preference for fast post-run meal ideas.
+- E-10 | 2025-04-09 | source: S-10 | Asked for a birthday gift idea for their sister.
+  - O-10.1 | behavior | They asked for a gift idea for their sister's birthday.
+- E-11 | 2025-04-13 | source: S-11 | Asked whether they are eating too many carbs before tempo runs.
+  - O-11.1 | behavior | They asked if eating too many carbs before tempo runs is a problem, showing they want practical guidance on pre-workout fueling for tempo sessions.
+- E-12 | 2025-04-17 | source: S-12 | Asked for snack ideas that hit 30 g protein.
+  - O-12.1 | behavior | They asked for snack ideas that hit 30 g protein, showing they want practical high-protein options with a specific target.
+- E-13 | 2025-04-21 | source: S-13 | Asked how to clean water bottles properly.
+  - O-13.1 | behavior | They asked for a simple, practical cleaning method for water bottles.
+- E-14 | 2025-04-25 | source: S-14 | Weekly accountability check-in for diet/protein adherence; user asked for no-excuses pressure.
+  - O-14.1 | stated | They want accountability this week and explicitly said “No excuses.”
+  - O-14.2 | event | This week’s accountability plan is to log every meal and review numbers on Friday.
+- E-15 | 2025-04-29 | source: S-15 | User announced a 9-week pregnancy and said their doctor wants hard training and calorie cutting paused for now.
+  - O-15.1 | event | They are 9 weeks pregnant.
+  - O-15.2 | stated | Their doctor says no more hard training or calorie cutting for now.
+  - O-15.3 | event | Their half-marathon training and cutting phase are currently on hold because of the pregnancy and medical guidance.
+- E-16 | 2025-05-03 | source: S-16 | Pregnancy food-safety question about whether sushi is off the menu.
+  - O-16.1 | behavior | They asked whether sushi is off the menu now during pregnancy.
+  - O-16.2 | behavior | They seem to prefer a direct, practical safety answer with a clear safe alternative.
+- E-17 | 2025-05-06 | source: S-17 | Pregnancy morning nausea; asked for gentle foods/drinks they can keep down.
+  - O-17.1 | behavior | They asked for gentle options they can keep down for morning nausea, showing a preference for bland, easy-to-tolerate suggestions in this context.
+  - O-17.2 | event | They are dealing with morning nausea during pregnancy.
+- E-18 | 2025-05-10 | source: S-18 | Asked for comfortable walking shoes after swapping from running to walks.
+  - O-18.1 | behavior | They’re now asking for comfortable walking shoes, indicating their footwear needs have shifted from running to walking for the moment.
+- E-19 | 2025-05-13 | source: S-19 | User asked to drop macro targets because their doctor wants them eating enough, not counting.
+  - O-19.1 | stated | Their doctor wants them eating enough rather than counting macros.
+- E-20 | 2025-05-17 | source: S-20 | Pregnancy cheese safety question; answered which cheeses are safe in pregnancy.
+  - O-20.1 | behavior | They asked which cheeses are safe during pregnancy, continuing to want direct food-safety guidance.
+- E-21 | 2025-05-20 | source: S-21 | Asked for tips for sleeping on her side during pregnancy.
+  - O-21.1 | behavior | They asked for practical tips to sleep on their side, indicating a current pregnancy-related sleep comfort need.
+- E-22 | 2025-05-24 | source: S-22 | User said they need encouragement more than pushing right now.
+  - O-22.1 | stated | They said they need encouragement more than pushing right now.
+- E-23 | 2025-05-27 | source: S-23 | Asked whether deli sandwiches are okay during pregnancy.
+  - O-23.1 | behavior | They asked a direct pregnancy food-safety question about deli sandwiches, continuing to want clear yes/no guidance and practical safe handling advice. [O-23.1]
+- E-24 | 2025-05-31 | source: S-24 | Pregnancy nutrition check-in about iron levels being a bit low and asking for iron-rich foods.
+  - O-24.1 | stated | They said their iron levels are a bit low and asked for iron-rich foods.
+- E-25 | 2025-06-03 | source: S-25 | Asked for a hospital bag packing list during pregnancy.
+  - O-25.1 | behavior | They asked what to put in a hospital bag, looking for a practical pregnancy prep checklist.
+- E-26 | 2025-06-07 | source: S-26 | Asked for a gentle, not-heavy dinner option.
+  - O-26.1 | behavior | They wanted a gentle dinner and preferred something not heavy.
+  - O-26.2 | behavior | They continue to favor simple, easy-to-tolerate meal ideas in the current pregnancy context.
+- E-27 | 2025-06-10 | source: S-27 | User said kindness about missed walks this week helped; assistant replied that rest is part of it.
+  - O-27.1 | reaction | They appreciated being treated kindly about missed walks this week, suggesting reassurance and permission to rest are helpful.
+- E-28 | 2025-06-14 | source: S-28 | Asked for names that work in both English and Yoruba.
+  - O-28.1 | behavior | They asked for names that work in both English and Yoruba, showing interest in bilingual/culturally flexible name ideas.
+- E-29 | 2025-06-17 | source: S-29 | Pregnancy fish-safety question about which fish are safe, especially salmon.
+  - O-29.1 | behavior | They asked which fish are safe during pregnancy and mentioned missing salmon, showing they want direct food-safety guidance with practical reassurance.
+- E-30 | 2025-06-21 | source: S-30 | Asked for easy work snacks because pregnancy hunger is hitting every two hours.
+  - O-30.1 | behavior | They want easy, practical snacks for work and are getting hungry about every two hours now, suggesting a need for frequent portable food options during pregnancy.
+- E-31 | 2025-06-24 | source: S-31 | Pregnancy fatigue question: user asked if being this tired is normal during pregnancy.
+  - O-31.1 | behavior | They asked whether extreme tiredness is normal during pregnancy, showing a current fatigue concern and wanting practical reassurance.
+- E-32 | 2025-06-28 | source: S-32 | Asked for folate-rich foods during pregnancy.
+  - O-32.1 | behavior | They asked for folate-rich foods, showing they want simple nutrient-focused pregnancy nutrition suggestions.
+- E-33 | 2025-07-01 | source: S-33 | Asked for a comforting dinner idea after a long day and received a mild lentil and sweet potato stew suggestion.
+  - O-33.1 | behavior | They wanted something comforting for dinner after a long day, reinforcing a preference for mild, easy-to-tolerate meals when tired. [O-33.1]
+- E-34 | 2025-07-05 | source: S-34 | Asked whether prenatal yoga is worth trying during pregnancy.
+  - O-34.1 | behavior | They asked if prenatal yoga is worth trying, showing interest in a gentle pregnancy-safe exercise option. [O-34.1]

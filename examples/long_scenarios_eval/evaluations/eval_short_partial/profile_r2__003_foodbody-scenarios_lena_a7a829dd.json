@@ -1,0 +1,168 @@
+{
+  "source": "profile_r2__003_foodbody-scenarios_lena_a7a829dd",
+  "method": "profile",
+  "case": "lena",
+  "memory": {
+    "checklist": [
+      {
+        "id": "M1",
+        "item": "Wants no grams, calories or tracking numbers",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "“do not show grams, calories, or other numeric tracking” and “they do not want grams or calories shown.”"
+      },
+      {
+        "id": "M2",
+        "item": "Wants gentle check-ins instead of reports",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "“they now prefer gentle check-ins about how eating is going, rather than weekly reports or detailed tracking.”"
+      },
+      {
+        "id": "M3",
+        "item": "Prefers Mediterranean food",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "“Prefers Mediterranean-style food” and “Practical Mediterranean meal ideas for two are still the best fit.”"
+      },
+      {
+        "id": "M4",
+        "item": "Cooks for self and partner",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "“Cooks for themself and their partner; dinner planning is for two.”"
+      },
+      {
+        "id": "M5",
+        "item": "Is on leave for burnout",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "“Is currently signed off work with burnout” and “On leave from work because of burnout.”"
+      },
+      {
+        "id": "N1",
+        "item": "Wants exact grams or macros per meal",
+        "kind": "must_not_assert",
+        "mark": "past_only",
+        "votes": [
+          "past_only",
+          "past_only",
+          "past_only"
+        ],
+        "evidence": "Exact per-serving macro/gram detail is only in the change log as historical preference: “2025-03-16: Exact per-serving macro/gram detail used to be preferred...”"
+      },
+      {
+        "id": "N2",
+        "item": "Wants weekly numeric reports",
+        "kind": "must_not_assert",
+        "mark": "past_only",
+        "votes": [
+          "past_only",
+          "past_only",
+          "past_only"
+        ],
+        "evidence": "Weekly reports appear only as prior behavior: “2025-03-09: Weekly nutrition reporting ... was previously useful,” while current preference says to prefer gentle check-ins instead."
+      }
+    ],
+    "contain_rate": 1.0,
+    "stale_rate": 0.0,
+    "criteria": {
+      "faithfulness": 2,
+      "currency": 2,
+      "recall": 2,
+      "change_tracking": 2,
+      "provenance": 2,
+      "consistency": 2
+    },
+    "criteria_reasons": {
+      "faithfulness": "Most claims are supported, but “direct and specific” is a slight unsupported stylistic addition.",
+      "currency": "Current preferences are updated; outdated tracking/reporting preferences are kept as past-only.",
+      "recall": "It captures the key stable facts, current boundaries, and the main preference changes.",
+      "change_tracking": "Major shifts are dated and summarized, including the move away from tracking on 2025-04-08 and the later gentle check-in preference.",
+      "provenance": "The memory includes citations and dates, but not every claim is tightly traceable from the evidence shown.",
+      "consistency": "The current beliefs do not conflict with each other."
+    },
+    "agreement": 0.949,
+    "judge_cost_usd": 0.02878
+  },
+  "reply": {
+    "checklist": [
+      {
+        "id": "R1",
+        "item": "Contains no grams, calories or macro numbers",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "Uses no grams, calories, or tracking numbers anywhere."
+      },
+      {
+        "id": "R2",
+        "item": "Is Mediterranean",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "Built around a Mediterranean-style week with foods like olive oil, hummus, tahini, chickpeas, feta, and salmon."
+      },
+      {
+        "id": "R3",
+        "item": "Is sized for two people",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "Explicitly says “for two” and frames the shop and meals for two people."
+      },
+      {
+        "id": "R4",
+        "item": "Includes a gentle check-in about how eating is going",
+        "mark": "ignores",
+        "votes": [
+          "ignores",
+          "ignores",
+          "ignores"
+        ],
+        "evidence": "It offers grocery/list help but does not include any gentle check-in about how eating is going."
+      }
+    ],
+    "follow_rate": 0.75,
+    "violate_rate": 0.0,
+    "asks_for_known": false,
+    "agreement": 1.0,
+    "judge_cost_usd": 0.00631,
+    "text": "Absolutely — I can help make this easy.\n\nFor a low-effort Mediterranean-style week for two, I’d build the shop around a few flexible anchors:\n\n- **Protein:** chicken thighs or breasts, salmon, eggs, Greek yogurt, chickpeas, lentils, feta\n- **Veg:** salad leaves, cucumbers, tomatoes, peppers, courgettes, onions, garlic, spinach\n- **Carbs:** pita, rice, couscous, potatoes, pasta\n- **Fats/flavour:** olive oil, olives, hummus, tahini, lemon, herbs, pesto\n- **Fruit/snacks:** berries, apples, bananas, nuts\n\nA simple cozy meal rhythm could be:\n- **Roast chicken traybake** with peppers, onions, courgettes, potatoes\n- **Salmon with lemony rice and greens**\n- **Chickpea and feta salad wraps or pitas**\n- **Lentil soup or stew** with bread\n- **Egg-based meal** like shakshuka or an omelette night\n\nIf you want, I can turn this into a **full grocery list** for the week, or make it from a specific store you use.",
+    "reply_cost_usd": 0.00311
+  }
+}

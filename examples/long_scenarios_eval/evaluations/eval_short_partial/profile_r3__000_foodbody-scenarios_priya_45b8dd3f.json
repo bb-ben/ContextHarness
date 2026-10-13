@@ -1,0 +1,168 @@
+{
+  "source": "profile_r3__000_foodbody-scenarios_priya_45b8dd3f",
+  "method": "profile",
+  "case": "priya",
+  "memory": {
+    "checklist": [
+      {
+        "id": "M1",
+        "item": "Has type 2 diabetes",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "“They have type 2 diabetes, diagnosed on 2025-09-20” and “They are still adjusting to a type 2 diabetes diagnosis from 2025-09-20.”"
+      },
+      {
+        "id": "M2",
+        "item": "Wants structured weekly meal plans rather than loose ideas",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "“They want structured weekly meal plans laid out by day (breakfast/lunch/dinner) with carb counts, rather than loose ideas.”"
+      },
+      {
+        "id": "M3",
+        "item": "Wants carb counts per meal, under about 45 g",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "“For diabetes-related meals, include carb counts per meal and keep each meal under 45g carbs.”"
+      },
+      {
+        "id": "M4",
+        "item": "Wants meals quick, about 20 minutes or less",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "partial"
+        ],
+        "evidence": "“Quick dinner swaps are useful, especially when they want a meal done in under 20 minutes.”"
+      },
+      {
+        "id": "M5",
+        "item": "Likes a playful, fun tone",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "“Even for structured diabetes meal plans, they still like it to feel fun.”"
+      },
+      {
+        "id": "N1",
+        "item": "Wants loose ideas and no rigid plans",
+        "kind": "must_not_assert",
+        "mark": "past_only",
+        "votes": [
+          "past_only",
+          "past_only",
+          "past_only"
+        ],
+        "evidence": "The memory says the earlier loose/wingable preference “no longer fits” and lists it under Changes, not as current."
+      },
+      {
+        "id": "N2",
+        "item": "Wants no numbers or calorie information",
+        "kind": "must_not_assert",
+        "mark": "past_only",
+        "votes": [
+          "past_only",
+          "past_only",
+          "past_only"
+        ],
+        "evidence": "The memory notes an earlier preference to avoid calorie/counting details on 2025-09-01, but current sections instead say carb counts are now needed."
+      }
+    ],
+    "contain_rate": 1.0,
+    "stale_rate": 0.0,
+    "criteria": {
+      "faithfulness": 2,
+      "currency": 2,
+      "recall": 2,
+      "change_tracking": 2,
+      "provenance": 2,
+      "consistency": 2
+    },
+    "criteria_reasons": {
+      "faithfulness": "All current memory claims are directly supported by the evidence and none appear invented.",
+      "currency": "Current preferences are updated correctly, and outdated ones are pushed into the change log rather than kept as current.",
+      "recall": "It captures the key facts and help preferences: diagnosis, structured plans, carb limits, quick meals, and fun tone.",
+      "change_tracking": "It records the major shifts over time with rough dates, especially the move from loose ideas to structured diabetic meal planning.",
+      "provenance": "Claims are paired with bracketed citations and dated change notes that trace them back to the evidence.",
+      "consistency": "The current profile has no internal contradictions; current and past preferences are separated cleanly."
+    },
+    "agreement": 0.974,
+    "judge_cost_usd": 0.02594
+  },
+  "reply": {
+    "checklist": [
+      {
+        "id": "R1",
+        "item": "Gives a carb count for what it suggests",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "Gives carb counts for the main bowl and the alternative ideas."
+      },
+      {
+        "id": "R2",
+        "item": "Keeps it quick (about 20 minutes or less)",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "The main dinner is explicitly a 20-minute bowl, with microwave/heat-and-toss steps."
+      },
+      {
+        "id": "R3",
+        "item": "Fits a structured plan rather than a loose list of ideas",
+        "mark": "ignores",
+        "votes": [
+          "partial",
+          "ignores",
+          "ignores"
+        ],
+        "evidence": "It gives one structured recipe, but not the more structured meal-plan style the user prefers."
+      },
+      {
+        "id": "R4",
+        "item": "Keeps a light, playful tone",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "Uses a light, playful tone like 'easy-mode dinner' and 'call it a win'."
+      }
+    ],
+    "follow_rate": 0.75,
+    "violate_rate": 0.0,
+    "asks_for_known": false,
+    "agreement": 0.917,
+    "judge_cost_usd": 0.00783,
+    "text": "Oof, let’s go **easy-mode dinner** tonight:\n\n## 20-minute rice bowl\n- **Rotisserie chicken** (or leftover protein)\n- **1/2 cup cooked rice**: ~22g carbs\n- **Big scoop of frozen stir-fry veg**: ~8g carbs\n- **Soy sauce / garlic / sriracha**: ~2–4g carbs\n- **Optional avocado or cheese**: ~1–2g carbs\n\n**Total:** about **32–36g carbs** for the bowl, so still under your 45g target.\n\n### How to make it\n1. Microwave the rice.\n2. Heat the veggies.\n3. Toss in chicken.\n4. Add sauce and call it a win.\n\n### If you want an even faster swap\n- **Egg scramble + toast + fruit:** about **25–35g carbs** depending on the toast/fruit\n- **Chicken salad wrap** with a low-carb wrap: usually **20–30g carbs**\n\nIf you tell me what you’ve got in the fridge, I can turn it into a dinner in like 2 minutes flat.",
+    "reply_cost_usd": 0.00383
+  }
+}

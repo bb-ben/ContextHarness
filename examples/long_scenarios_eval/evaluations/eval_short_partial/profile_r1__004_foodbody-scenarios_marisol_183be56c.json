@@ -1,0 +1,157 @@
+{
+  "source": "profile_r1__004_foodbody-scenarios_marisol_183be56c",
+  "method": "profile",
+  "case": "marisol",
+  "memory": {
+    "checklist": [
+      {
+        "id": "M1",
+        "item": "Runs a meal-prep business with paying clients",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory says they are \"starting and actively running a small meal-prep business\" and that they \"prepare client menus, client plans, and client emails for paying customers.\""
+      },
+      {
+        "id": "M2",
+        "item": "For client work: professional tone, no emojis",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory says client-facing work should be \"professional, polished... clean, client-ready, and emoji-free,\" and direct client emails should be \"polite, professional, and concise.\""
+      },
+      {
+        "id": "M3",
+        "item": "For client work: calories and protein per serving, in a table",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory says client-facing work should use a \"macro-table format\" and include \"calories, protein, and other requested macro details when asked.\""
+      },
+      {
+        "id": "M4",
+        "item": "Family cooking stays casual and fun",
+        "kind": "must_contain",
+        "mark": "present",
+        "votes": [
+          "present",
+          "present",
+          "present"
+        ],
+        "evidence": "Memory says family meal ideas should be \"fun, casual, and a little silly; emojis are welcome; skip nutrition talk.\""
+      },
+      {
+        "id": "M5",
+        "item": "Has kids",
+        "kind": "must_contain",
+        "mark": "missing",
+        "votes": [
+          "missing",
+          "missing",
+          "missing"
+        ],
+        "evidence": "The memory mentions kids' food requests, but never explicitly says the person has kids."
+      },
+      {
+        "id": "N1",
+        "item": "Wants no nutrition numbers for client work",
+        "kind": "must_not_assert",
+        "mark": "absent",
+        "votes": [
+          "absent",
+          "absent",
+          "absent"
+        ],
+        "evidence": "Memory says client-facing work should include calories/protein/macros, not that nutrition numbers should be avoided."
+      },
+      {
+        "id": "N2",
+        "item": "Wants an emoji-filled, casual style for client menus",
+        "kind": "must_not_assert",
+        "mark": "absent",
+        "votes": [
+          "absent",
+          "absent",
+          "absent"
+        ],
+        "evidence": "Memory says client menus should be \"emoji-free\" and client-facing work should be professional, so it does not assert a casual, emoji-filled style for client menus."
+      }
+    ],
+    "contain_rate": 0.8,
+    "stale_rate": 0.0,
+    "criteria": {
+      "faithfulness": 2,
+      "currency": 2,
+      "recall": 1,
+      "change_tracking": 2,
+      "provenance": 2,
+      "consistency": 2
+    },
+    "criteria_reasons": {
+      "faithfulness": "The memory’s current beliefs are supported by the evidence and stay within what was said.",
+      "currency": "The memory reflects the person’s current business/client and family-style preferences, not stale ones.",
+      "recall": "It captures the main patterns well, but misses at least one important explicit fact: that they have kids.",
+      "change_tracking": "It includes a dated change log showing how preferences evolved over time.",
+      "provenance": "Claims are tied to bracketed evidence references and the references align with the stated preferences.",
+      "consistency": "The current beliefs do not conflict; family requests and client-facing requests are kept separate."
+    },
+    "agreement": 1.0,
+    "judge_cost_usd": 0.03594
+  },
+  "reply": {
+    "checklist": [
+      {
+        "id": "R1",
+        "item": "Is professional, with no emojis",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "Professional client-facing tone and no emojis."
+      },
+      {
+        "id": "R2",
+        "item": "Gives calories and protein per serving",
+        "mark": "partial",
+        "votes": [
+          "partial",
+          "partial",
+          "partial"
+        ],
+        "evidence": "It includes calories/protein columns, but every entry is still marked TBD instead of giving values."
+      },
+      {
+        "id": "R3",
+        "item": "Uses a table",
+        "mark": "follows",
+        "votes": [
+          "follows",
+          "follows",
+          "follows"
+        ],
+        "evidence": "The menu is formatted in a table."
+      }
+    ],
+    "follow_rate": 0.667,
+    "violate_rate": 0.0,
+    "asks_for_known": false,
+    "agreement": 1.0,
+    "judge_cost_usd": 0.00681,
+    "text": "Absolutely — here’s a clean draft you can send to your Tuesday clients. If you want, I can also turn this into a version with exact calories/protein once you send me your recipes or target macros.\n\n## Tuesday Client Menu\n\n| Meal | Description | Calories | Protein |\n|---|---|---:|---:|\n| Lemon Herb Chicken Bowl | Grilled chicken breast served with garlic roasted potatoes, green beans, and a light lemon herb sauce. | TBD | TBD |\n| Turkey Taco Rice Bowl | Seasoned ground turkey over cilantro-lime rice with corn, black beans, pico de gallo, and shredded cheese. | TBD | TBD |\n| Garlic Butter Shrimp Pasta | Shrimp tossed with pasta, spinach, cherry tomatoes, and a garlic butter parmesan sauce. | TBD | TBD |\n| BBQ Chicken Sweet Potato Plate | BBQ chicken breast with roasted sweet potato wedges and maple seasoned Brussels sprouts. | TBD | TBD |\n| Teriyaki Beef Stir-Fry | Sliced beef with jasmine rice, broccoli, carrots, and a house teriyaki glaze. | TBD | TBD |\n\nIf you’d like, I can also make this:\n- more high-protein\n- lower calorie\n- family-style\n- dairy-free / gluten-free\n- fully formatted with estimated macros",
+    "reply_cost_usd": 0.00447
+  }
+}
