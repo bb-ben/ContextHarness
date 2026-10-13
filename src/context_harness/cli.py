@@ -347,6 +347,77 @@ def cmd_respond_eval(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_evaluate(args: argparse.Namespace) -> int:
+    """Grade finished runs' memories and replies against reference checklists."""
+    from collections import defaultdict
+
+    from .judge import memory_text
+    from .memeval import CRITERIA, evaluate_memory, evaluate_reply, load_checklists
+    from .models.base import PauseRun
+    from .models.pricing import cost_usd
+    from .replay import find_snapshot, load_source_item
+    from .respond import reply_from_memory, write
+
+    def adapter(effort: str):
+        m = make_model(ModelSettings(model=args.model, max_tokens=args.max_tokens,
+                                     effort=None if effort == "none" else effort, timeout_s=args.timeout))
+        return CostCap(m, args.max_cost_usd) if args.max_cost_usd is not None else m
+
+    checklists = load_checklists(args.checklists)
+    judge, responder = adapter(args.judge_effort), adapter(args.effort)
+    run_dir = Path(args.out) / (args.run_name or f"{time.strftime('%Y%m%d-%H%M%S')}_evaluate")
+    rows, spent = [], 0.0
+    try:
+        for source in map(Path, args.sources):
+            item, snapshot = load_source_item(source), find_snapshot(source)
+            checklist = checklists.get(item.gold.item_id)
+            if checklist is None:
+                print(f"skip {source}: no checklist for {item.gold.item_id}")
+                continue
+            if args.max_cost_usd is not None and spent >= args.max_cost_usd:
+                raise PauseRun(f"cost cap ${args.max_cost_usd:.2f} reached")
+            method = json.loads((source / "result.json").read_text())["method"]
+            label = f"{source.parent.parent.name}__{source.name}" if source.parent.name == "items" else source.name
+            out = run_dir / label
+            out.mkdir(parents=True, exist_ok=True)
+            mem = evaluate_memory(judge, item, memory_text(snapshot), checklist, args.repeats)
+            row = {"source": label, "method": method, "case": item.gold.user_id.split("/")[-1], "memory": mem}
+            spent += mem["judge_cost_usd"]
+            if not args.no_reply:
+                cfg = RunConfig("agent", responder.settings, MethodConfig(layout=LAYOUTS[args.layout]), {}, False)
+                reply = reply_from_memory(item, snapshot, responder, cfg, out / "reply")
+                reply_cost = cost_usd(reply.pop("usage"), args.model) or 0.0
+                graded = evaluate_reply(judge, item, reply.get("text") or "", checklist, args.repeats)
+                row["reply"] = {**graded, "text": reply.get("text"), "reply_cost_usd": round(reply_cost, 5)}
+                spent += reply_cost + graded["judge_cost_usd"]
+            write(out / "eval.json", row)
+            rows.append(row)
+            r = row.get("reply") or {}
+            print(f"{label[:52]:<52} must-contain {mem['contain_rate']}  stale {mem['stale_rate']}  "
+                  f"criteria {sum(v for v in mem['criteria'].values() if v is not None)}/{2 * len(CRITERIA)}"
+                  + (f"  reply follows {r['follow_rate']} violates {r['violate_rate']}" if r else ""))
+    except PauseRun as e:
+        print(f"Stopped: {e}")
+    groups = defaultdict(list)
+    for row in rows:
+        groups[(row["method"], row["case"])].append(row)
+    print(f"\n{'method':<9} {'case':<10} {'n':>2}  must-contain  stale  " + "  ".join(k[:6] for k in CRITERIA)
+          + "  reply-follows  reply-violates")
+    mean = lambda xs: (sum(xs) / len(xs)) if xs else float("nan")  # noqa: E731
+    for (method, case), rs in sorted(groups.items()):
+        crit = "  ".join(f"{mean([r['memory']['criteria'][k] for r in rs if r['memory']['criteria'][k] is not None]):6.2f}"
+                         for k in CRITERIA)
+        reps = [r["reply"] for r in rs if "reply" in r]
+        print(f"{method:<9} {case:<10} {len(rs):>2}  {mean([r['memory']['contain_rate'] for r in rs]):12.2f}  "
+              f"{mean([r['memory']['stale_rate'] for r in rs if r['memory']['stale_rate'] is not None]):5.2f}  {crit}  "
+              f"{mean([x['follow_rate'] for x in reps]):13.2f}  {mean([x['violate_rate'] for x in reps]):14.2f}")
+    run_dir.mkdir(parents=True, exist_ok=True)
+    write(run_dir / "summary.json", {"model": args.model, "judge_effort": args.judge_effort, "repeats": args.repeats,
+                                     "rows": rows, "estimated_cost_usd": round(spent, 4)})
+    print(f"\nEstimated cost ${spent:.3f}; evaluations in {run_dir}")
+    return 0
+
+
 def _short(text: str, n: int) -> str:
     return text if len(text) <= n else text[: n - 1] + "…"
 
@@ -519,6 +590,23 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--out", default="runs")
     p.add_argument("--run-name")
     p.set_defaults(func=cmd_respond_eval)
+
+    p = sub.add_parser("evaluate", help="Grade finished runs' memory and replies against reference checklists")
+    p.add_argument("sources", nargs="+", help="Finished items: runs/<run>/items/<item>")
+    p.add_argument("--checklists", nargs="+", required=True, help="JSON files mapping item id to its checklist")
+    p.add_argument("--repeats", type=int, default=3, help="Judgings per memory and per reply; majority kept")
+    p.add_argument("--no-reply", action="store_true", help="Grade memory only")
+    p.add_argument("--model", default="gpt-5.4-mini")
+    p.add_argument("--effort", default="medium", choices=["minimal", "low", "medium", "high", "xhigh", "max", "none"],
+                   help="Effort for writing the reply")
+    p.add_argument("--judge-effort", default="high", choices=["minimal", "low", "medium", "high", "xhigh", "max", "none"])
+    p.add_argument("--layout", choices=sorted(LAYOUTS), default="general")
+    p.add_argument("--max-tokens", type=int, default=16000)
+    p.add_argument("--timeout", type=float, default=300.0)
+    p.add_argument("--max-cost-usd", type=float)
+    p.add_argument("--out", default="runs")
+    p.add_argument("--run-name")
+    p.set_defaults(func=cmd_evaluate)
 
     p = sub.add_parser("vet-items", help="Check that each labeled preference change shows up in the sessions")
     _add_dataset_args(p)

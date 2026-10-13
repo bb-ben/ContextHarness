@@ -107,6 +107,21 @@ def respond_with_text(item: BenchmarkItem, memory: str | None, label: str, model
     return {"text": text, "applied": [], "usage": trace.stats.usage}
 
 
+def reply_from_memory(item: BenchmarkItem, snapshot: Path, model: ModelAdapter, cfg: RunConfig,
+                      out_dir: Path) -> dict[str, Any]:
+    """The reply each memory design would give, using that design's own memory: the agent
+    through its workspace and contract, a summary or profile as plain text."""
+    kind = snapshot_kind(snapshot)
+    if kind == "agent":
+        return respond_with_agent(item, snapshot, model, cfg, out_dir)
+    if kind == "summary":
+        return respond_with_text(item, (snapshot / "summary.md").read_text(), "a rolling summary", model, out_dir)
+    if kind == "profile":
+        return respond_with_text(item, (snapshot / "profile.md").read_text(),
+                                 "a profile of who they are now, with evidence", model, out_dir)
+    raise ValueError(f"No memory to reply from in {snapshot}")
+
+
 def full_history_text(item: BenchmarkItem) -> str:
     return "\n\n".join(prompts.render_session(s) for s in item.episode.sessions)
 

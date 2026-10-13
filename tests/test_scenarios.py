@@ -16,6 +16,8 @@ def test_jsonl_matches_its_generator():
     built = runpy.run_path(str(SCENARIOS / "foodbody.py"))["SCENARIOS"]
     on_disk = [json.loads(line) for line in (SCENARIOS / "foodbody.jsonl").read_text().splitlines()]
     assert on_disk == built, "run `python scenarios/foodbody.py` to rebuild foodbody.jsonl"
+    checklists = runpy.run_path(str(SCENARIOS / "foodbody.py"))["CHECKLISTS"]
+    assert json.loads((SCENARIOS / "foodbody_checklists.json").read_text()) == checklists
 
 
 def test_scenarios_are_coherent_items():

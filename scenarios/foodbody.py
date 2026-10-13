@@ -386,7 +386,56 @@ MEAL_PREP = _item(
 
 SCENARIOS = [DIAGNOSIS, INJURY, NEW_PARENT, BURNOUT, MEAL_PREP]
 
+# Reference checklists for the evaluation framework (context_harness.memeval), written
+# from the conversations above: what a correct memory holds at the end, which outdated
+# beliefs it no longer presents as current, and what a good reply to the last message does.
+CHECKLISTS = {
+    DIAGNOSIS["id"]: {
+        "must_contain": ["Has type 2 diabetes", "Wants structured weekly meal plans rather than loose ideas",
+                         "Wants carb counts per meal, under about 45 g", "Wants meals quick, about 20 minutes or less",
+                         "Likes a playful, fun tone"],
+        "must_not_assert": ["Wants loose ideas and no rigid plans", "Wants no numbers or calorie information"],
+        "reply_should": ["Gives a carb count for what it suggests", "Keeps it quick (about 20 minutes or less)",
+                         "Fits a structured plan rather than a loose list of ideas", "Keeps a light, playful tone"],
+    },
+    INJURY["id"]: {
+        "must_contain": ["Has a stress fracture and can't run for about 8 weeks", "Wants gentle, supportive coaching now",
+                         "Focus is recovery and healing, not performance", "Wants tables and metric units"],
+        "must_not_assert": ["Wants blunt, push-hard coaching", "Focus is performance and race goals"],
+        "reply_should": ["Is gentle and reassuring rather than harsh", "Focuses on recovery and healing",
+                         "Uses a table", "Uses metric units where it gives quantities or distances"],
+    },
+    NEW_PARENT["id"]: {
+        "must_contain": ["Is vegetarian", "Likes spicy food and chili crisp", "Has a newborn",
+                         "Wants very short answers (about three lines) now",
+                         "Wants one-pan, freezer-friendly, low-effort cooking"],
+        "must_not_assert": ["Wants detailed, in-depth explanations as the default",
+                            "Wants elaborate weekend cooking projects"],
+        "reply_should": ["Is short (a few lines)", "Suggests only vegetarian dishes", "Suggests spicy options",
+                         "Suggests one-pan or freezer-friendly meals"],
+    },
+    BURNOUT["id"]: {
+        "must_contain": ["Wants no grams, calories or tracking numbers", "Wants gentle check-ins instead of reports",
+                         "Prefers Mediterranean food", "Cooks for self and partner", "Is on leave for burnout"],
+        "must_not_assert": ["Wants exact grams or macros per meal", "Wants weekly numeric reports"],
+        "reply_should": ["Contains no grams, calories or macro numbers", "Is Mediterranean",
+                         "Is sized for two people", "Includes a gentle check-in about how eating is going"],
+    },
+    MEAL_PREP["id"]: {
+        "must_contain": ["Runs a meal-prep business with paying clients",
+                         "For client work: professional tone, no emojis",
+                         "For client work: calories and protein per serving, in a table",
+                         "Family cooking stays casual and fun", "Has kids"],
+        "must_not_assert": ["Wants no nutrition numbers for client work",
+                            "Wants an emoji-filled, casual style for client menus"],
+        "reply_should": ["Is professional, with no emojis", "Gives calories and protein per serving",
+                         "Uses a table"],
+    },
+}
+
 if __name__ == "__main__":
     out = Path(__file__).with_suffix(".jsonl")
     out.write_text("".join(json.dumps(s) + "\n" for s in SCENARIOS))
-    print(f"Wrote {len(SCENARIOS)} scenarios to {out}")
+    checklists = Path(__file__).with_name("foodbody_checklists.json")
+    checklists.write_text(json.dumps(CHECKLISTS, indent=2) + "\n")
+    print(f"Wrote {len(SCENARIOS)} scenarios to {out} and their checklists to {checklists}")
