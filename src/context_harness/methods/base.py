@@ -53,6 +53,31 @@ class MethodContext:
     resume: bool = False  # reopen an existing workspace instead of creating one
 
 
+SHORTEN_SYSTEM = """\
+This {kind} of one person is over its limit of {max_chars} characters. Rewrite it under
+the limit without losing anything that is true of them now: keep every current fact,
+preference, condition and recent change. Merge overlapping lines, use fewer words, drop
+what has ended or been replaced, and keep at most the three most recent citations per
+line. Keep the same section headings. Reply with the rewritten {kind} only."""
+
+
+def fit_to_limit(ctx: MethodContext, text: str, max_chars: int, kind: str, event_id: str) -> tuple[str, dict]:
+    """Bring an over-long rewrite under the limit: one call asking for a shorter version,
+    then a hard cut only if that is still too long. A plain cut drops whole sections at
+    the end (the newest lines of a summary; a profile's Right now and Changes)."""
+    if len(text) <= max_chars:
+        return text, {"shortened": False, "truncated": False}
+    response = ctx.model.complete(ModelRequest(
+        phase=f"{kind}_shorten", system=SHORTEN_SYSTEM.format(kind=kind, max_chars=max_chars),
+        blocks=(TextBlock(f'<{kind} chars="{len(text)}">\n{text}\n</{kind}>\n\n'
+                          f"Rewrite it under {max_chars} characters."),),
+        metadata={"event_id": event_id}))
+    shorter = response.text.strip()
+    if shorter and len(shorter) < len(text):
+        text = shorter
+    return text[:max_chars], {"shortened": True, "truncated": len(text) > max_chars}
+
+
 class MemoryMethod(Protocol):
     name: str
     has_workspace: bool  # True if it keeps a state workspace (enables memory checks)

@@ -57,7 +57,9 @@ class FakeModel:
         handler = {"memory_update": self._memory_update, "summary_update": self._summary_update,
                    "memory_review": lambda r: ("Nothing to fix.", [self._call("finish")]),
                    "profile_update": self._profile_update}.get(request.phase, self._answer)
-        if handler == self._answer and request.tools and not {"submit_answer", "read_file"} & {t.name for t in request.tools}:
+        if request.phase.endswith("_shorten"):  # keep the first half of the over-long text
+            handler = lambda r: (_body(r).split("\n", 1)[1].rsplit("\n</", 1)[0][: len(_body(r)) // 2], [])  # noqa: E731
+        elif handler == self._answer and request.tools and not {"submit_answer", "read_file"} & {t.name for t in request.tools}:
             handler = self._fill_tool  # any other single-tool request (benchmark adapters)
         text, calls = handler(request)
         return ModelResponse(

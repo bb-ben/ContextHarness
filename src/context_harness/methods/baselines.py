@@ -9,7 +9,7 @@ from .. import prompts
 from ..models.base import ModelRequest, TextBlock
 from ..tools import SubmitAnswer, ToolExecutor
 from ..types import AnswerResult, Event, Probe, Question, Session
-from .base import MethodContext, answer_with_tools
+from .base import MethodContext, answer_with_tools, fit_to_limit
 
 
 def _no_dynamic(actions: str, calls_left: int) -> str:
@@ -115,15 +115,14 @@ class RollingSummary:
         if response.stop_reason == "refusal" or not new:
             self.ctx.trace.emit("summary_unchanged", event_id=session.event_id, reason=response.stop_reason or "empty")
             return
-        truncated = len(new) > self.max_chars
-        new = new[: self.max_chars]
+        new, fit = fit_to_limit(self.ctx, new, self.max_chars, "summary", session.event_id)
         diff = "".join(
             difflib.unified_diff(
                 self.summary.splitlines(keepends=True), new.splitlines(keepends=True), "a/summary", "b/summary"
             )
         )
         self.ctx.trace.emit(
-            "summary_update", event_id=session.event_id, chars=len(new), truncated=truncated, diff=diff
+            "summary_update", event_id=session.event_id, chars=len(new), **fit, diff=diff
         )
         self.summary = new
 

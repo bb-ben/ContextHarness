@@ -24,7 +24,7 @@ from .. import prompts
 from ..models.base import ModelRequest, TextBlock, ToolSpec
 from ..tools import SubmitAnswer, ToolExecutor
 from ..types import AnswerResult, Event, Probe, Question, Session
-from .base import MethodContext, answer_with_tools
+from .base import MethodContext, answer_with_tools, fit_to_limit
 
 KINDS = ("stated", "behavior", "reaction", "event")
 RECENT_EPISODE_CHARS = 5000  # the latest episode lines shown with each update
@@ -137,12 +137,10 @@ class ProfileMemory:
         if not args or not args["profile"].strip():
             self.ctx.trace.emit("profile_unchanged", event_id=event.event_id)
             return
-        new = args["profile"].strip()
-        truncated = len(new) > self.max_chars
-        new = new[: self.max_chars]
+        new, fit = fit_to_limit(self.ctx, args["profile"].strip(), self.max_chars, "profile", event.event_id)
         diff = "".join(difflib.unified_diff(self.profile.splitlines(keepends=True), new.splitlines(keepends=True),
                                             "a/profile", "b/profile"))
-        self.ctx.trace.emit("profile_update", event_id=event.event_id, chars=len(new), truncated=truncated,
+        self.ctx.trace.emit("profile_update", event_id=event.event_id, chars=len(new), **fit,
                             observations=len(observations), diff=diff)
         self.profile = new
         with self.versions_path.open("a") as f:  # the profile's history, one version per event
