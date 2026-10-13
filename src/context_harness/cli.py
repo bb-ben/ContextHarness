@@ -12,7 +12,7 @@ from .dataset import iter_rows, load_items, parse_item
 from .evaluation import aggregate, format_summary
 from .methods import METHODS, MethodConfig
 from .models import ModelSettings, RequestCap, make_model
-from .models.pricing import CostCap
+from .models.pricing import PRICES_PER_MTOK, CostCap
 from .orchestrator import RunConfig, run
 from .workspace import CONTEXT_FILE, LAYOUTS
 
@@ -418,6 +418,83 @@ def cmd_evaluate(args: argparse.Namespace) -> int:
     return 0
 
 
+def _bench_model(args: argparse.Namespace, effort: str, shared_with=None):
+    m = make_model(ModelSettings(model=args.model, max_tokens=args.max_tokens,
+                                 effort=None if effort == "none" else effort, timeout_s=args.timeout))
+    if m.settings.model not in PRICES_PER_MTOK:  # the fake model: nothing to count
+        return m
+    return CostCap(m, args.max_cost_usd if args.max_cost_usd is not None else float("inf"), shared_with)
+
+
+def _spent(model) -> float:
+    return getattr(model, "spent", 0.0)  # shared by every cap made with shared_with=model
+
+
+def cmd_memconflict(args: argparse.Namespace) -> int:
+    """Replay MemConflict chains through memory methods; answer and grade sampled questions."""
+    from .benchmarks import memconflict as mc
+    from .models.base import PauseRun
+    from .respond import write
+
+    people = mc.load_people(Path(args.data))
+    picked = [people[int(i)] for i in args.people.split(",")] if args.people else people[: args.max_people]
+    model = _bench_model(args, args.effort)
+    judge = _bench_model(args, args.judge_effort, shared_with=model if isinstance(model, CostCap) else None)
+    run_dir = Path(args.out) / (args.run_name or f"{time.strftime('%Y%m%d-%H%M%S')}_memconflict")
+    rows = []
+    try:
+        for method in args.methods.split(","):
+            for n, person in enumerate(picked):
+                if args.max_sessions:
+                    person = {**person, "Full_Session_Chain": person["Full_Session_Chain"][: args.max_sessions]}
+                got = mc.run_person(person, method, model, judge, run_dir / method / f"person_{n}", args.questions)
+                rows += [{**r, "method": method} for r in got]
+                print(f"{method:<8} person {n}: {len(got)} questions, accuracy "
+                      f"{mc.summarize(got)['answer_accuracy']}  (spent ${_spent(model):.2f})")
+    except PauseRun as e:
+        print(f"Stopped: {e}")
+    summary = {m: mc.summarize([r for r in rows if r["method"] == m]) for m in args.methods.split(",")}
+    run_dir.mkdir(parents=True, exist_ok=True)
+    write(run_dir / "summary.json", {"model": args.model, "effort": args.effort, "judge_effort": args.judge_effort,
+                                     "questions_per_person": args.questions, "people": len(picked),
+                                     "results": summary, "estimated_cost_usd": round(_spent(model), 4)})
+    print(json.dumps(summary, indent=1))
+    print(f"\nEstimated cost ${_spent(model):.3f}; results in {run_dir}")
+    return 0
+
+
+def cmd_dynamicmem(args: argparse.Namespace) -> int:
+    """Replay DynamicMem app logs through memory methods; write predictions; score with its evaluator."""
+    from .benchmarks import dynamicmem as dm
+    from .models.base import PauseRun
+    from .respond import write
+
+    data = Path(args.data)
+    users = args.users.split(",") if args.users else sorted(p.parent.name for p in data.glob("*/task_packs.json"))[: args.max_users]
+    model = _bench_model(args, args.effort)
+    run_dir = Path(args.out) / (args.run_name or f"{time.strftime('%Y%m%d-%H%M%S')}_dynamicmem")
+    results = []
+    try:
+        for method in args.methods.split(","):
+            for user in users:
+                out = run_dir / method / user
+                row = {"method": method, "user": user,
+                       **dm.run_user(data / user, method, model, out, max_checkpoints=args.max_checkpoints)}
+                if args.score:
+                    row["scores"] = dm.evaluate_with_dynamicmem(Path(args.repo), data / user, out,
+                                                                None if args.judge_model == "none" else args.judge_model)
+                results.append(row)
+                print(f"{method:<8} {user}: {row}  (spent on replay/answers ${_spent(model):.2f})")
+    except PauseRun as e:
+        print(f"Stopped: {e}")
+    run_dir.mkdir(parents=True, exist_ok=True)
+    write(run_dir / "summary.json", {"model": args.model, "effort": args.effort, "judge_model": args.judge_model,
+                                     "results": results, "estimated_cost_usd": round(_spent(model), 4),
+                                     "note": "judge cost (DynamicMem's evaluator) is not included"})
+    print(f"\nEstimated replay/answer cost ${_spent(model):.3f}; results in {run_dir}")
+    return 0
+
+
 def _short(text: str, n: int) -> str:
     return text if len(text) <= n else text[: n - 1] + "…"
 
@@ -607,6 +684,38 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--out", default="runs")
     p.add_argument("--run-name")
     p.set_defaults(func=cmd_evaluate)
+
+    def bench_args(p: argparse.ArgumentParser) -> None:
+        p.add_argument("--methods", default="profile,summary", help="Comma-separated: profile, summary")
+        p.add_argument("--model", default="gpt-5.4-mini")
+        p.add_argument("--effort", default="medium", choices=["minimal", "low", "medium", "high", "xhigh", "max", "none"])
+        p.add_argument("--max-tokens", type=int, default=16000)
+        p.add_argument("--timeout", type=float, default=300.0)
+        p.add_argument("--max-cost-usd", type=float, help="One budget for memory, answers and judging (not DynamicMem's own evaluator)")
+        p.add_argument("--out", default="runs")
+        p.add_argument("--run-name")
+
+    p = sub.add_parser("memconflict", help="MemConflict: right memory when memories disagree (local data clone)")
+    p.add_argument("--data", default="data/external/MemConflict/Data/Step4_4.jsonl")
+    p.add_argument("--people", help="Comma-separated person indices (0-29)")
+    p.add_argument("--max-people", type=int, default=1)
+    p.add_argument("--questions", type=int, default=12, help="Questions per person, split evenly by conflict type")
+    p.add_argument("--max-sessions", type=int, help="Replay only the first N sessions (smoke tests)")
+    p.add_argument("--judge-effort", default="high", choices=["minimal", "low", "medium", "high", "xhigh", "max", "none"])
+    bench_args(p)
+    p.set_defaults(func=cmd_memconflict)
+
+    p = sub.add_parser("dynamicmem", help="DynamicMem: user state over months of app logs (local data download)")
+    p.add_argument("--data", default="data/external/dynamicmem_data")
+    p.add_argument("--users", help="Comma-separated user folders, e.g. 001_user_001")
+    p.add_argument("--max-users", type=int, default=1)
+    p.add_argument("--max-checkpoints", type=int, help="Stop after N of the 5 checkpoints")
+    p.add_argument("--score", action=argparse.BooleanOptionalAction, default=True,
+                   help="Score with DynamicMem's own evaluator (needs --repo)")
+    p.add_argument("--repo", default="data/external/DynamicMem", help="Local clone of the DynamicMem repository")
+    p.add_argument("--judge-model", default="gpt-5.4-mini", help="Judge for DynamicMem's evaluator (paper: gpt-5.4); none = its rule-based scoring only")
+    bench_args(p)
+    p.set_defaults(func=cmd_dynamicmem)
 
     p = sub.add_parser("vet-items", help="Check that each labeled preference change shows up in the sessions")
     _add_dataset_args(p)

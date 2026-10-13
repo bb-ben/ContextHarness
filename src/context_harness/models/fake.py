@@ -57,6 +57,8 @@ class FakeModel:
         handler = {"memory_update": self._memory_update, "summary_update": self._summary_update,
                    "memory_review": lambda r: ("Nothing to fix.", [self._call("finish")]),
                    "profile_update": self._profile_update}.get(request.phase, self._answer)
+        if handler == self._answer and request.tools and not {"submit_answer", "read_file"} & {t.name for t in request.tools}:
+            handler = self._fill_tool  # any other single-tool request (benchmark adapters)
         text, calls = handler(request)
         return ModelResponse(
             text=text,
@@ -134,6 +136,20 @@ class FakeModel:
         lines = [] if current == "(empty)" else current.splitlines()
         lines = (lines + [f"- {date}: {first_user[:200]}"])[-30:]
         return "\n".join(lines), []
+
+    def _fill_tool(self, request: ModelRequest) -> tuple[str, list[ToolCall]]:
+        """Call the first tool with its required fields filled by type, from the prompt's opening words."""
+        spec = request.tools[0]
+        words = _clean(_body(request), 80)
+
+        def value(schema: dict):
+            if "enum" in schema:
+                return schema["enum"][-1]
+            return {"string": words, "number": 1, "integer": 1, "boolean": True, "array": [], "object": {}}.get(
+                schema.get("type"), words)
+
+        props = spec.input_schema.get("properties", {})
+        return "", [self._call(spec.name, **{k: value(props.get(k, {})) for k in spec.input_schema.get("required", [])})]
 
     def _answer(self, request: ModelRequest) -> tuple[str, list[ToolCall]]:
         tool_names = {t.name for t in request.tools}

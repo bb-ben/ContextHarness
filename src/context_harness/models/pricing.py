@@ -29,17 +29,23 @@ def cost_usd(usage: Usage, model: str) -> float | None:
 class CostCap:
     """Stops a run once its estimated spend reaches `max_usd`, by pausing it.
 
-    Checked before each request, so the overshoot is at most one request.
+    Checked before each request, so the overshoot is at most one request. Caps made with
+    `shared_with` draw on the same budget (e.g. an answering model and its judge).
     """
 
-    def __init__(self, inner: ModelAdapter, max_usd: float):
+    def __init__(self, inner: ModelAdapter, max_usd: float, shared_with: CostCap | None = None):
         if inner.settings.model not in PRICES_PER_MTOK:
             raise ValueError(f"No published price recorded for {inner.settings.model}; add it to models/pricing.py")
-        self.inner, self.max_usd, self.settings, self.spent = inner, max_usd, inner.settings, 0.0
+        self.inner, self.max_usd, self.settings = inner, max_usd, inner.settings
+        self._ledger = shared_with._ledger if shared_with else [0.0]
+
+    @property
+    def spent(self) -> float:
+        return self._ledger[0]
 
     def complete(self, request: ModelRequest) -> ModelResponse:
         if self.spent >= self.max_usd:
             raise QuotaExhausted(f"cost cap of ${self.max_usd:.2f} reached (spent ${self.spent:.3f})")
         response = self.inner.complete(request)
-        self.spent += cost_usd(response.usage, self.settings.model) or 0.0
+        self._ledger[0] += cost_usd(response.usage, self.settings.model) or 0.0
         return response
