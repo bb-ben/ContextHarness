@@ -184,6 +184,42 @@ Two commands show how memory evolved:
 
 Run `context-harness run -h` for the full list.
 
+### External benchmarks: MemConflict and DynamicMem
+
+Two more benchmarks test the memory layer on tasks other than HorizonBench's
+multiple choice. Each one replays the benchmark's history through a memory method
+(`profile` or `summary`). It then answers the benchmark's questions from that memory
+alone, never from the raw history. The data stays in `data/external/` (git-ignored).
+
+| | MemConflict | DynamicMem |
+|---|---|---|
+| Asks | Is the right memory used when memories disagree? | Does the user model stay accurate over months? |
+| History | ~52 dated chat sessions per person (30 people) | 1,000–2,600 app-activity logs per user over ~15 months (10 users), replayed as weekly events |
+| Questions | 3,750 attached to sessions, of three types. Dynamic: a real update, so the new state must win. Static: a false later claim, so the true fact must survive. Conditional: a preference that holds only under a condition. | 5 checkpoints per user. State Completion: fill in 17–48 current habits and preferences. Personalized Service: one request per habit that depends on it. |
+| Scored by | A judge using MemConflict's published metric definitions: answer accuracy, update awareness and conflict recognition. Plus our own check of whether the memory itself holds the evidence. | DynamicMem's own evaluator, run from its clone. It gives the Core+Detail judge scores (`state_completion`, `personalized_service`; its default holistic judge) and a rule-based `state_value_f1`. |
+| License | None stated (data is read from the clone, never copied) | MIT |
+
+```bash
+# Setup (once)
+git clone --depth 1 https://github.com/TaoZhen1110/MemConflict data/external/MemConflict
+git clone --depth 1 https://github.com/wenyaxie023/DynamicMem data/external/DynamicMem
+uv run python -c "from huggingface_hub import snapshot_download as d; \
+  d('xiewenya/dynamicmem', repo_type='dataset', local_dir='data/external/dynamicmem_data')"   # 80 MB
+
+# MemConflict: 2 people, 30 questions each (10 per conflict type), both designs
+uv run context-harness memconflict --people 0,1 --questions 30 --methods profile,summary --max-cost-usd 9
+
+# DynamicMem: one user, all 5 checkpoints, both designs, scored by DynamicMem's evaluator
+uv run context-harness dynamicmem --users 001_user_001 --methods profile,summary --max-cost-usd 5
+```
+
+`--max-cost-usd` is one budget for memory updates, answers and our judge. DynamicMem's
+evaluator calls its judge itself, outside that budget; with `--judge-model gpt-5.4-mini`
+it saves its judge inputs to `judge_io.json`. The paper's judge is `gpt-5.4`, so
+absolute DynamicMem scores are comparable between our designs, not with the paper's
+tables. Offline smoke tests: add `--model fake` (and `--judge-model none` for
+DynamicMem's rule-based scores only).
+
 ## How a run works
 
 ```

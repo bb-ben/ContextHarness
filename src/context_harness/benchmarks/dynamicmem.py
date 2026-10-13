@@ -24,15 +24,17 @@ from pathlib import Path
 from typing import Any
 
 from ..models.base import ModelAdapter, ToolSpec
+from ..tracing import TracedModel
 from ..types import Session, Turn
 from .common import call_tool, memory_text, open_method
 
 LOG_CHARS = 420  # per rendered log line; most logs are shorter
 
-# DynamicMem's headline numbers, as its evaluator names them in tce_eval.json "summary"
+# DynamicMem's headline numbers, as its evaluator names them in tce_eval.json "summary".
+# Its default LLM judge is the holistic one: per field, 0.8 * core correct + 0.2 * detail/2.
 HEADLINE = {
-    "state_completion": "snapshot_point_score_mean_on_expected_mean",  # LLM judge (Core+Detail points)
-    "personalized_service": "rq3_apply_answer_point_score_mean_mean",  # LLM judge
+    "state_completion": "snapshot_holistic_score_mean_on_expected_mean",
+    "personalized_service": "rq3_apply_holistic_score_mean_mean",
     "state_value_f1": "snapshot_value_f1_mean_on_expected_mean",  # rule-based slot match
 }
 
@@ -146,7 +148,7 @@ def run_user(user_dir: Path, method_name: str, model: ModelAdapter, out_dir: Pat
         method.observe(event)
         if last in by_index:
             cp = by_index[last]
-            snapshot, service, cost = answer_checkpoint(model, memory_text(method), cp)
+            snapshot, service, cost = answer_checkpoint(TracedModel(model, trace), memory_text(method), cp)
             answer_cost += cost
             predictions.append({"checkpoint_id": cp["checkpoint_id"], "snapshot_state": snapshot,
                                 "evidence": {"app_log_id": "", "evidence_content": ""},
