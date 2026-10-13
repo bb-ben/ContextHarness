@@ -115,7 +115,8 @@ from the user's conversation sessions with the assistant. Later, the assistant w
 this summary alone to respond the way this user wants at that time.
 
 You receive the current summary and the session that just ended. Write the complete updated \
-summary. {tracking_guidance} Stay under {max_chars} characters; anything longer is cut off. \
+summary. {tracking_guidance} Stay under {max_chars} characters; the current summary's length is shown, so when it is \
+near the limit, make room by condensing older or resolved material. \
 Output only the summary text."""
 
 

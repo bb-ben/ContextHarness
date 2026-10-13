@@ -60,8 +60,11 @@ def test_over_long_rewrite_is_shortened_by_the_model_not_cut(evolved_item, tmp_p
         if req.phase == "answer":
             return "", [("submit_answer", {"letter": "A"})]
         if req.phase == "profile_shorten":
-            assert "over its limit of 120 characters" in req.system and 'chars="200"' in req.blocks[0].text
-            return "## Right now\n- short" if ev(req) != 2 else "x" * 150, []  # event 2: still too long
+            text = req.blocks[0].text
+            assert "the limit is 120. Rewrite it to about 90 characters" in text
+            if ev(req) == 2:  # event 2: still too long after both attempts
+                return "x" * (199 if "This is 200 characters" in text else 150), []
+            return "## Right now\n- short", []
         return "", [("record", {"episode": "e", "observations": [], "profile": "## Facts\n" + "f" * 191})]
 
     run([evolved_item], ScriptedModel(script), tmp_path / "run", run_config("profile", summary_max_chars=120),
@@ -69,5 +72,5 @@ def test_over_long_rewrite_is_shortened_by_the_model_not_cut(evolved_item, tmp_p
     item_dir = next((tmp_path / "run" / "items").iterdir())
     updates = [json.loads(line) for line in (item_dir / "trace.jsonl").read_text().splitlines()
                if '"event": "profile_update"' in line]
-    assert updates[0]["shortened"] and not updates[0]["truncated"] and updates[0]["chars"] == len("## Right now\n- short")
-    assert updates[2]["shortened"] and updates[2]["truncated"] and updates[2]["chars"] == 120  # cut only as a last resort
+    assert updates[0]["shortened"] == 1 and not updates[0]["truncated"] and updates[0]["chars"] == len("## Right now\n- short")
+    assert updates[2]["shortened"] == 2 and updates[2]["truncated"] and updates[2]["chars"] == 120  # cut as a last resort

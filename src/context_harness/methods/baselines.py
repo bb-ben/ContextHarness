@@ -103,7 +103,8 @@ class RollingSummary:
             system=self.system,
             blocks=(
                 TextBlock(
-                    f"<current_summary>\n{self.summary or '(empty)'}\n</current_summary>\n\n"
+                    f'<current_summary chars="{len(self.summary)}" limit="{self.max_chars}">\n'
+                    f"{self.summary or '(empty)'}\n</current_summary>\n\n"
                     + prompts.render_session(session)
                     + "\n\nWrite the complete updated summary."
                 ),

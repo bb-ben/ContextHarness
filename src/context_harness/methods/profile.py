@@ -60,7 +60,8 @@ Rules:
 - Cite the observations behind each claim in brackets, e.g. [O-5.1, O-6.2]. Weigh the
   recent episodes shown: repeated recent evidence outweighs older evidence.
 - A one-off request about a single task doesn't change how they want help.
-- Stay under {max_chars} characters."""
+- Stay under {max_chars} characters. The profile's current length is shown; when it is near the
+  limit, make room by merging lines and dropping what has ended or been replaced."""
 
 PROFILE_ANSWER_SYSTEM = """\
 You are an AI assistant with an ongoing relationship with one user. You are partway through a \
@@ -113,7 +114,7 @@ class ProfileMemory:
             phase="profile_update",
             system=PROFILE_SYSTEM.format(next_ids=next_ids, max_chars=self.max_chars),
             blocks=(TextBlock(
-                f"<profile>\n{self.profile or '(empty)'}\n</profile>\n\n"
+                f'<profile chars="{len(self.profile)}" limit="{self.max_chars}">\n{self.profile or "(empty)"}\n</profile>\n\n'
                 f"<recent_episodes>\n{self._recent_episodes()}\n</recent_episodes>\n\n"
                 + prompts.render_event(event)
                 + "\n\nCall record with the episode, its observations and the complete rewritten profile."),),

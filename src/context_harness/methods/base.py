@@ -54,28 +54,34 @@ class MethodContext:
 
 
 SHORTEN_SYSTEM = """\
-This {kind} of one person is over its limit of {max_chars} characters. Rewrite it under
-the limit without losing anything that is true of them now: keep every current fact,
-preference, condition and recent change. Merge overlapping lines, use fewer words, drop
-what has ended or been replaced, and keep at most the three most recent citations per
-line. Keep the same section headings. Reply with the rewritten {kind} only."""
+You shorten one person's {kind} to a target length without losing anything that is true
+of them now: keep every current fact, preference, condition and recent change. Merge
+overlapping lines, use fewer words, drop what has ended or been replaced, and keep at
+most the three most recent citations per line. Keep the same section headings. Reply
+with the shortened {kind} only."""
 
 
-def fit_to_limit(ctx: MethodContext, text: str, max_chars: int, kind: str, event_id: str) -> tuple[str, dict]:
-    """Bring an over-long rewrite under the limit: one call asking for a shorter version,
-    then a hard cut only if that is still too long. A plain cut drops whole sections at
-    the end (the newest lines of a summary; a profile's Right now and Changes)."""
-    if len(text) <= max_chars:
-        return text, {"shortened": False, "truncated": False}
-    response = ctx.model.complete(ModelRequest(
-        phase=f"{kind}_shorten", system=SHORTEN_SYSTEM.format(kind=kind, max_chars=max_chars),
-        blocks=(TextBlock(f'<{kind} chars="{len(text)}">\n{text}\n</{kind}>\n\n'
-                          f"Rewrite it under {max_chars} characters."),),
-        metadata={"event_id": event_id}))
-    shorter = response.text.strip()
-    if shorter and len(shorter) < len(text):
+def fit_to_limit(ctx: MethodContext, text: str, max_chars: int, kind: str, event_id: str,
+                 attempts: int = 2) -> tuple[str, dict]:
+    """Bring an over-long rewrite under the limit: up to `attempts` calls asking for a
+    shorter version, then a hard cut only if it is still too long. A plain cut drops whole
+    sections at the end (the newest lines of a summary; a profile's Right now and Changes).
+    Asked only to get "under the limit", models trim 5-10%; a concrete target works."""
+    calls = 0
+    while len(text) > max_chars and calls < attempts:
+        calls += 1
+        target = int(max_chars * 0.75)  # headroom, so the next event doesn't overflow at once
+        response = ctx.model.complete(ModelRequest(
+            phase=f"{kind}_shorten", system=SHORTEN_SYSTEM.format(kind=kind),
+            blocks=(TextBlock(f"<{kind}>\n{text}\n</{kind}>\n\nThis is {len(text):,} characters; the limit is "
+                              f"{max_chars:,}. Rewrite it to about {target:,} characters, about "
+                              f"{round(100 * (1 - target / len(text)))}% shorter."),),
+            metadata={"event_id": event_id}))
+        shorter = response.text.strip()
+        if not shorter or len(shorter) >= len(text):
+            break
         text = shorter
-    return text[:max_chars], {"shortened": True, "truncated": len(text) > max_chars}
+    return text[:max_chars], {"shortened": calls, "truncated": len(text) > max_chars}
 
 
 class MemoryMethod(Protocol):

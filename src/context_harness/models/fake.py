@@ -19,7 +19,7 @@ _EVENT = re.compile(r'<event id="S-(\d+)" type="[^"]*" date="([^"]+)">(.*?)</eve
 _USER_LINE = re.compile(r"^User: (.*)$", re.M)
 _WORKING = re.compile(r"<working_context[^>]*>\n(.*?)\n</working_context>", re.S)
 _DUE = re.compile(r"<due>\n(.*?)\n</due>", re.S)
-_SUMMARY = re.compile(r"<current_summary>\n(.*?)\n</current_summary>", re.S)
+_SUMMARY = re.compile(r"<current_summary[^>]*>\n(.*?)\n</current_summary>", re.S)
 _OPTION = re.compile(r"^([A-E]): (.*)$", re.M)
 _QUESTION = re.compile(r"<question>.*?</question>", re.S)
 _SEEN = re.compile(r"events seen: (\d+)")
@@ -123,7 +123,7 @@ class FakeModel:
         """Contract-following stand-in: one observation, and a profile that cites it."""
         prompt = _body(request)
         k, date, first_user = _event_facts(prompt)
-        old = re.search(r"<profile>\n(.*?)\n</profile>", prompt, re.S).group(1)
+        old = re.search(r"<profile[^>]*>\n(.*?)\n</profile>", prompt, re.S).group(1)
         line = f"- {date}: asked about {_clean(first_user, 60)} [O-{k}.1]"
         lines = [x for x in old.splitlines() if x.startswith("- ")][-20:] + [line]
         profile = "## How they want help\n" + "\n".join(lines)
