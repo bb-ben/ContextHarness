@@ -74,3 +74,47 @@ def test_over_long_rewrite_is_shortened_by_the_model_not_cut(evolved_item, tmp_p
                if '"event": "profile_update"' in line]
     assert updates[0]["shortened"] == 1 and not updates[0]["truncated"] and updates[0]["chars"] == len("## Right now\n- short")
     assert updates[2]["shortened"] == 2 and updates[2]["truncated"] and updates[2]["chars"] == 120  # cut as a last resort
+
+
+def test_facts_ledger_keeps_facts_records_changes_and_conflicts():
+    from context_harness.methods.profile import FactsLedger
+
+    ledger = FactsLedger()
+    assert ledger.apply("birthdate", "1988-05-14", False, "E-2", "2022-01-24") == "added"
+    assert ledger.apply("Residence", "Darwin, Australia", False, "E-3", "2022-02-01") == "added"
+    assert ledger.apply("birthdate", "1988-05-14.", False, "E-9", "2022-04-01") == "repeated"
+    assert ledger.apply("residence", "Melbourne, Australia", True, "E-5", "2022-02-25") == "changed"
+    assert ledger.apply("birthdate", "1990-05-14", False, "E-27", "2022-08-03") == "conflict"
+    assert ledger.apply("birthdate", "1990-05-14", False, "E-30", "2022-09-01") == "repeated"
+    text = ledger.render()
+    assert "- birthdate: 1988-05-14 [E-2, 2022-01-24]; CONFLICT, also reported: 1990-05-14 [E-27, 2022-08-03]" in text
+    assert "- Residence: Melbourne, Australia [E-5, 2022-02-25]; earlier: Darwin, Australia (until 2022-02-25)" in text
+    restored = FactsLedger(list(ledger.entries.values()))
+    assert restored.render() == text
+
+
+def test_facts_survive_profile_rewrites_and_reach_the_answer(evolved_item, tmp_path):
+    seen = []
+
+    def script(req):
+        seen.append(req)
+        if req.phase == "answer":
+            return "", [("submit_answer", {"letter": "A"})]
+        k = ev(req)
+        facts = [{"key": "allergy", "value": "peanuts", "changed": False}] if k == 0 else []
+        return "", [("record", {"episode": "e", "observations": [], "facts": facts,
+                                "profile": f"## How they want help\n- version {k}"})]
+
+    run([evolved_item], ScriptedModel(script), tmp_path / "run", run_config("profile"), progress=lambda *_: None)
+    updates = [r for r in seen if r.phase == "profile_update"]
+    assert "<facts>\n(none yet)\n</facts>" in updates[0].blocks[0].text
+    assert "- allergy: peanuts [E-0," in updates[-1].blocks[0].text  # shown in every later update
+    answer = next(r for r in seen if r.phase == "answer")
+    assert "- allergy: peanuts [E-0," in answer.prompt_text() and "version" in answer.prompt_text()
+    item_dir = next((tmp_path / "run" / "items").iterdir())
+    snap = item_dir / "snapshots" / "final"
+    assert "- allergy: peanuts" in (snap / "facts.md").read_text()
+    from context_harness.methods.profile import read_profile_memory
+    assert read_profile_memory(snap).startswith("## Lasting facts") and "- allergy: peanuts" in read_profile_memory(snap)
+    versions = [json.loads(line) for line in (item_dir / "profile_versions.jsonl").read_text().splitlines()]
+    assert "allergy" in versions[-1]["facts"]

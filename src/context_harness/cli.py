@@ -283,6 +283,7 @@ def cmd_respond_eval(args: argparse.Namespace) -> int:
     from .evaluation import utilization
     from .models.base import PauseRun
     from .models.pricing import cost_usd
+    from .methods.profile import read_profile_memory
     from .replay import find_snapshot, load_source_item
     from .respond import (full_history_text, judge_response, respond_with_agent, respond_with_text, snapshot_kind,
                           write)
@@ -316,7 +317,7 @@ def cmd_respond_eval(args: argparse.Namespace) -> int:
                         reply, used = respond_with_text(item, (snapshot / "summary.md").read_text(), "a rolling summary",
                                                         responder, out), None
                     elif condition == "memory" and kind == "profile":
-                        reply, used = respond_with_text(item, (snapshot / "profile.md").read_text(),
+                        reply, used = respond_with_text(item, read_profile_memory(snapshot),
                                                         "a profile of who they are now, with evidence", responder,
                                                         out), None
                     elif condition == "full-history":

@@ -50,7 +50,10 @@ def live_beliefs(snapshot: Path) -> list[tuple[str, str]]:
     (without its Changes section, which names old values on purpose), or the summary."""
     if (snapshot / "profile.md").exists():
         text = (snapshot / "profile.md").read_text().split("## Changes")[0]
-        return [("profile", line) for line in text.splitlines() if line.strip()]
+        facts = (snapshot / "facts.md").read_text() if (snapshot / "facts.md").exists() else ""
+        # a fact's current value only: "; earlier:" names old values on purpose, like ## Changes
+        current = [line.split("; earlier:")[0] for line in facts.splitlines() if line.strip()]
+        return [("facts", line) for line in current] + [("profile", line) for line in text.splitlines() if line.strip()]
     if (snapshot / "summary.md").exists():
         return [("summary", line) for line in (snapshot / "summary.md").read_text().splitlines() if line.strip()]
     out = []

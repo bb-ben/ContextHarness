@@ -22,10 +22,11 @@ def open_method(name: str, model: ModelAdapter, item_dir: Path, config: MethodCo
 
 def memory_text(method) -> str:
     """What the method would read when answering: the profile or the summary, not raw logs."""
+    if hasattr(method, "memory_text"):  # the profile: facts ledger + profile
+        return method.memory_text()
     snap = method.memory_snapshot()
-    for key in ("profile.md", "summary.md"):
-        if key in snap:
-            return snap[key]
+    if "summary.md" in snap:
+        return snap["summary.md"]
     raise ValueError(f"benchmark adapters support the profile and summary methods, not {method.name!r}")
 
 

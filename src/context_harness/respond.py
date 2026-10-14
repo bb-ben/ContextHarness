@@ -25,6 +25,7 @@ from . import prompts
 from .judge import ground_truth
 from .methods.agent import WorkspaceAgent
 from .methods.base import MethodContext
+from .methods.profile import read_profile_memory
 from .models.base import ModelAdapter, ModelRequest, TextBlock, ToolSpec
 from .models.pricing import cost_usd
 from .orchestrator import RunConfig
@@ -117,7 +118,7 @@ def reply_from_memory(item: BenchmarkItem, snapshot: Path, model: ModelAdapter, 
     if kind == "summary":
         return respond_with_text(item, (snapshot / "summary.md").read_text(), "a rolling summary", model, out_dir)
     if kind == "profile":
-        return respond_with_text(item, (snapshot / "profile.md").read_text(),
+        return respond_with_text(item, read_profile_memory(snapshot),
                                  "a profile of who they are now, with evidence", model, out_dir)
     raise ValueError(f"No memory to reply from in {snapshot}")
 
