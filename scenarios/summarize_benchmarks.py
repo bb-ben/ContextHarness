@@ -32,6 +32,18 @@ def trace_cost(path: Path) -> float:
     return total
 
 
+def judge_cost_estimate(path: Path, model: str = "gpt-5.4-mini") -> float:
+    """DynamicMem's evaluator doesn't report its usage; estimate it from the judge inputs
+    and outputs it saves (4 characters per token, no hidden reasoning)."""
+    if not path.exists():
+        return 0.0
+    calls = [c for v in json.loads(path.read_text()).values() if isinstance(v, list) for c in v if isinstance(c, dict)]
+    text = lambda x: x if isinstance(x, str) else json.dumps(x)  # noqa: E731
+    usage = Usage(input_tokens=sum(len(text(c.get("prompt", ""))) for c in calls) // 4,
+                  output_tokens=sum(len(text(c.get("raw_output", ""))) for c in calls) // 4)
+    return cost_usd(usage, model) or 0.0
+
+
 def fmt(xs: list[float]) -> str:
     xs = [x for x in xs if x is not None]
     if not xs:
@@ -55,6 +67,7 @@ def main(runs: list[Path]) -> None:
             method = e.parent.parent.name
             dm_scores[method][e.parent.name] = {k: summary.get(v) for k, v in HEADLINE.items()}
             cost[f"dynamicmem {method}"] += trace_cost(e.parent / "trace.jsonl")
+            cost["dynamicmem evaluator judge (est.)"] += judge_cost_estimate(e.parent / "judge_io.json")
     if mc_rows:
         print("MemConflict (answer accuracy 0-1; mean over people, range in brackets)")
         print(f"{'design':<9} {'people':>6} {'n':>4}  {'overall':<17} " + " ".join(f"{t.split('_')[0]:<17}" for t in TYPES)
@@ -75,7 +88,7 @@ def main(runs: list[Path]) -> None:
         for method, users in sorted(dm_scores.items()):
             print(f"{method:<9} {len(users):>5}  " + " ".join(f"{fmt([u[k] for u in users.values()]):<22}" for k in HEADLINE))
     if cost:
-        print("\nCost from traces and our judge (DynamicMem's evaluator not included): "
+        print("\nCost from traces, our judge and an estimate for DynamicMem's evaluator: "
               + ", ".join(f"{k} ${v:.2f}" for k, v in sorted(cost.items())) + f"; total ${sum(cost.values()):.2f}")
 
 

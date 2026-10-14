@@ -1,0 +1,46 @@
+Code 724ec68. Same pilot data as examples/benchmarks_pilot; only the model that writes memory and answers changes.
+Judges fixed: MemConflict gpt-5.4-mini (high effort, 1 judging per answer); DynamicMem's own evaluator with gpt-5.4-mini.
+
+=== sol ===
+MemConflict (answer accuracy 0-1; mean over people, range in brackets)
+design    people    n  overall           dynamic           static            conditional       update aware      conflict noticed  memory has evidence
+profile        2   59  0.32 (0.26-0.38)  0.70              0.05 (0.00-0.10)  0.20 (0.06-0.35)  0.70 (0.60-0.80)  0.40              0.49 (0.38-0.60)
+summary        2   59  0.25 (0.22-0.28)  0.68 (0.65-0.70)  0.07 (0.00-0.15)  0.00              0.75 (0.60-0.90)  0.35 (0.30-0.40)  0.48 (0.40-0.55)
+  n per type: profile: 20/20/19, summary: 20/20/19
+DynamicMem (0-1; DynamicMem's own evaluator; mean over users, range in brackets)
+design    users  state_completion       personalized_service   state_value_f1        
+profile       1  0.19                   0.49                   0.08                  
+summary       1  0.27                   0.38                   0.10                  
+Cost from traces, our judge and an estimate for DynamicMem's evaluator: dynamicmem evaluator judge (est.) $1.58, dynamicmem profile $6.09, dynamicmem summary $6.21, memconflict profile $10.14, memconflict summary $9.84; total $33.87
+=== mini ===
+MemConflict (answer accuracy 0-1; mean over people, range in brackets)
+design    people    n  overall           dynamic           static            conditional       update aware      conflict noticed  memory has evidence
+profile        2   59  0.28 (0.28-0.28)  0.72 (0.60-0.85)  0.05 (0.00-0.10)  0.06 (0.00-0.11)  0.75 (0.60-0.90)  0.35 (0.30-0.40)  0.41 (0.40-0.41)
+summary        2   59  0.27 (0.25-0.29)  0.57 (0.55-0.60)  0.17 (0.05-0.30)  0.05 (0.00-0.10)  0.55 (0.40-0.70)  0.45 (0.20-0.70)  0.43 (0.33-0.52)
+  n per type: profile: 20/20/19, summary: 20/20/19
+DynamicMem (0-1; DynamicMem's own evaluator; mean over users, range in brackets)
+design    users  state_completion       personalized_service   state_value_f1        
+profile       1  0.19                   0.32                   0.09                  
+summary       1  0.32                   0.39                   0.14                  
+Cost from traces, our judge and an estimate for DynamicMem's evaluator: dynamicmem evaluator judge (est.) $1.54, dynamicmem profile $2.18, dynamicmem summary $3.18, memconflict profile $4.20, memconflict summary $4.60; total $15.71
+
+DynamicMem per checkpoint (state completion / personalized service), checkpoints 1-5:
+  sol profile    0.12/0.53  0.34/0.48  0.15/0.50  0.24/0.49  0.12/0.46
+  sol summary    0.43/0.46  0.27/0.41  0.18/0.35  0.24/0.40  0.22/0.27
+  mini profile   0.15/0.31  0.13/0.31  0.30/0.37  0.13/0.32  0.24/0.31
+  mini summary   0.35/0.39  0.32/0.40  0.41/0.40  0.30/0.47  0.19/0.29
+
+How each model works (memory updates and answers, all runs):
+run                    calls/event    cut  avg memory chars  in tok/call  out tok/call  reasoning/call  latency/call
+mini dm profile               1.38     4%              6688         5356          4267            2193           19s
+mini dm summary               2.37    49%              7563         3243          3851            1973           15s
+mini mc profile               1.65    27%              6314         5379          4119            2091           18s
+mini mc summary               2.61    83%              7768         3545          2940             983           12s
+sol dm profile                2.71    68%              7586         4002          2509              79           40s
+sol dm summary                3.03    90%              7781         3302          2355              75           41s
+sol mc profile                2.75    81%              7750         4292          2509              84           41s
+sol mc summary                2.96    97%              7965         3626          2314              70           44s
+("cut": share of updates still over the 8,000-character limit after up to two shortening calls)
+
+Prices per 1M tokens (input / cached / output): gpt-5.4-mini $0.75 / $0.075 / $4.50; gpt-6.1-sol $2.00 / $0.10 / $10.00.
+Total: gpt-6.1-sol $33.87, gpt-5.4-mini $15.71 (judges included), smoke test $0.57. Wall time: about 1 hour (mini), 3.5 hours (sol).

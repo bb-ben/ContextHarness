@@ -663,6 +663,31 @@ depends on them. See the README for setup, and
   - On MemConflict person 0 the fix did not change the profile's accuracy (0.25
     before, 0.22 after, 30 questions), which fits the retention diagnosis above.
 
+### A stronger model: gpt-6.1-sol against gpt-5.4-mini
+
+Same pilot, same code (724ec68) and same judges; only the model that writes memory and
+answers changes. Results are in [`examples/model_comparison/RESULTS.txt`](../examples/model_comparison/RESULTS.txt).
+
+| | Profile, sol | Profile, mini | Summary, sol | Summary, mini |
+|---|---|---|---|---|
+| MemConflict overall | 0.32 | 0.28 | 0.25 | 0.27 |
+| MemConflict, evidence kept in memory | 0.49 | 0.41 | 0.48 | 0.43 |
+| DynamicMem: state completion | 0.19 | 0.19 | 0.27 | 0.32 |
+| DynamicMem: personalized service | **0.49** | 0.32 | 0.38 | 0.39 |
+| Cost, both benchmarks (DynamicMem's own judge adds about $0.80 each) | $16.2 | $6.4 | $16.1 | $7.8 |
+
+- **One clear gain:** gpt-6.1-sol's profile serves the user better on DynamicMem. It
+  scores 0.46–0.53 at every checkpoint, against 0.31–0.37 for gpt-5.4-mini.
+  Elsewhere the differences are within single-run noise.
+- **It costs 2.2 times as much and takes about 2 times as long per call.** Its price
+  per token is 2.2–2.7 times higher, but it barely reasons at medium effort (about 80
+  reasoning tokens per call, against 2,000). Most of the extra cost comes from
+  overflow: it writes fuller memories that are cut on 68–97% of updates, so most
+  events take three calls.
+- **The bottleneck is still what memory keeps, not the model.** Even with the stronger
+  model, the evidence for half the MemConflict answers isn't in memory. The
+  8,000-character limit binds harder for a model that writes more.
+
 ## Known gaps
 
 - **Long histories outgrow an 8,000-character memory.** On MemConflict and DynamicMem
