@@ -86,6 +86,8 @@ def test_facts_ledger_keeps_facts_records_changes_and_conflicts():
     assert ledger.apply("residence", "Melbourne, Australia", True, "E-5", "2022-02-25") == "changed"
     assert ledger.apply("birthdate", "1990-05-14", False, "E-27", "2022-08-03") == "conflict"
     assert ledger.apply("birthdate", "1990-05-14", False, "E-30", "2022-09-01") == "repeated"
+    copied = "Melbourne, Australia [E-5, 2022-02-25]; earlier: Darwin, Australia (until 2022-02-25)"
+    assert ledger.apply("residence", copied, False, "E-31", "2022-09-02") == "repeated"  # a copied ledger line
     text = ledger.render()
     assert "- birthdate: 1988-05-14 [E-2, 2022-01-24]; CONFLICT, also reported: 1990-05-14 [E-27, 2022-08-03]" in text
     assert "- Residence: Melbourne, Australia [E-5, 2022-02-25]; earlier: Darwin, Australia (until 2022-02-25)" in text

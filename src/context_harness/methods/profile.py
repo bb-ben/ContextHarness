@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import difflib
 import json
+import re
 from typing import Any
 
 from .. import prompts
@@ -54,7 +55,9 @@ class FactsLedger:
         self.entries: dict[str, dict] = {_norm(e["key"]): e for e in entries or []}
 
     def apply(self, key: str, value: str, changed: bool, event: str, date: str) -> str:
-        key, value = str(key).strip().rstrip(":"), " ".join(str(value).replace(";", ",").split())[:FACT_VALUE_CHARS]
+        # The model sometimes re-reports a fact by copying its ledger line; keep the value only.
+        value = re.sub(r"\s*\[E-\d+[^\]]*\]", "", re.split(r";\s*(?:earlier|CONFLICT)", str(value))[0])
+        key, value = str(key).strip().rstrip(":"), " ".join(value.replace(";", ",").split())[:FACT_VALUE_CHARS]
         if not key or not value:
             return "ignored"
         cur = self.entries.get(_norm(key))
