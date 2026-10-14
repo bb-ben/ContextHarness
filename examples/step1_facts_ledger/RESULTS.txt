@@ -49,3 +49,6 @@ observations (3 per weekly event), so the pattern across weeks was never seen.
 
 Cost: MemConflict $3.06 (before $4.20), DynamicMem $1.80 + evaluator about $0.76 (before $2.18),
 FoodBody runs $2.39 (before-code rerun $3.04), grading $1.26, ledger check $0.19. Round total $12.50.
+
+CORRECTION (2026-10-14): DynamicMem plain-text attribute answers were dropped (fixed in 355c134). Re-scored
+(state completion / service): step 1 0.18 / 0.32; profile before step 1 0.28 / 0.35; summary 0.40 / 0.37.

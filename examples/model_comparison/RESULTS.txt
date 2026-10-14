@@ -44,3 +44,8 @@ sol mc summary                2.96    97%              7965         3626        
 
 Prices per 1M tokens (input / cached / output): gpt-5.4-mini $0.75 / $0.075 / $4.50; gpt-6.1-sol $2.00 / $0.10 / $10.00.
 Total: gpt-6.1-sol $33.87, gpt-5.4-mini $15.71 (judges included), smoke test $0.57. Wall time: about 1 hour (mini), 3.5 hours (sol).
+
+CORRECTION (2026-10-14): the DynamicMem adapter dropped plain-text answers, so every "user attribute"
+field (about a quarter of the state fields) scored zero, for every design and model (fixed in 355c134).
+Re-scored from the traces (state completion / personalized service; service changes only by re-judging):
+  gpt-6.1-sol profile 0.33 / 0.48, summary 0.32 / 0.37; gpt-5.4-mini profile 0.28 / 0.35, summary 0.40 / 0.37.

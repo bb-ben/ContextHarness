@@ -56,3 +56,7 @@ Pilot: MemConflict $5.42, DynamicMem replay and answers $3.85, DynamicMem's judg
 Fix: first shorten attempt (stopped) $3.15, shorten check on 6 texts $0.15, rerun $4.42 (the
 summary rerun hit its $2.20 cap at event 52 of 53 before any answer was saved; fixed since).
 Round total about $18.50.
+
+CORRECTION (2026-10-14): DynamicMem plain-text attribute answers were dropped (fixed in 355c134), so the
+state-completion scores above count every attribute as zero. These pilot runs predate traced answers and
+can't be re-scored; see examples/step3_log_search/RESULTS.txt for re-scored DynamicMem numbers.

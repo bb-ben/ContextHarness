@@ -1,0 +1,63 @@
+Step 3: up to 8 specific observations per event, searched when answering (code 10d7c65), against
+step 1 (0c1472b) and the profile before step 1 (724ec68 benchmarks / 71ded91 FoodBody). gpt-5.4-mini, medium.
+Judges unchanged. DynamicMem numbers here are after the attribute fix (355c134), re-scored from traces.
+
+===== STEP 3 =====
+MemConflict (answer accuracy 0-1; mean over people, range in brackets)
+design    people    n  overall           dynamic           static            conditional       update aware      conflict noticed  memory has evidence
+profile        2   59  0.58 (0.48-0.68)  0.70 (0.60-0.80)  0.35 (0.25-0.45)  0.71 (0.61-0.80)  0.80 (0.70-0.90)  0.85 (0.80-0.90)  0.93 (0.93-0.93)
+  n per type: profile: 20/20/19
+DynamicMem (0-1; DynamicMem's own evaluator; mean over users, range in brackets)
+design    users  state_completion       personalized_service   state_value_f1        
+profile       1  0.55                   0.45                   0.27                  
+
+===== STEP 1 =====
+MemConflict (answer accuracy 0-1; mean over people, range in brackets)
+design    people    n  overall           dynamic           static            conditional       update aware      conflict noticed  memory has evidence
+profile        2   59  0.41 (0.35-0.47)  0.78 (0.75-0.80)  0.33 (0.25-0.40)  0.11 (0.00-0.22)  0.80              0.85 (0.80-0.90)  0.66 (0.63-0.69)
+  n per type: profile: 20/20/19
+DynamicMem (0-1; DynamicMem's own evaluator; mean over users, range in brackets)
+design    users  state_completion       personalized_service   state_value_f1        
+profile       1  0.18                   0.32                   0.11                  
+
+===== BEFORE STEP 1 (profile and summary) =====
+MemConflict (answer accuracy 0-1; mean over people, range in brackets)
+design    people    n  overall           dynamic           static            conditional       update aware      conflict noticed  memory has evidence
+profile        2   59  0.28 (0.28-0.28)  0.72 (0.60-0.85)  0.05 (0.00-0.10)  0.06 (0.00-0.11)  0.75 (0.60-0.90)  0.35 (0.30-0.40)  0.41 (0.40-0.41)
+summary        2   59  0.27 (0.25-0.29)  0.57 (0.55-0.60)  0.17 (0.05-0.30)  0.05 (0.00-0.10)  0.55 (0.40-0.70)  0.45 (0.20-0.70)  0.43 (0.33-0.52)
+  n per type: profile: 20/20/19, summary: 20/20/19
+DynamicMem (0-1; DynamicMem's own evaluator; mean over users, range in brackets)
+design    users  state_completion       personalized_service   state_value_f1        
+profile       1  0.28                   0.35                   0.16                  
+summary       1  0.40                   0.37                   0.22                  
+
+===== ANSWER NOISE: the step-3 MemConflict questions answered again on the same rebuilt memory =====
+original           profile        2   59  0.58 (0.48-0.68)  0.70 (0.60-0.80)  0.35 (0.25-0.45)  0.71 (0.61-0.80)  0.80 (0.70-0.90)  0.85 (0.80-0.90)  0.93 (0.93-0.93)
+same again         profile        2   59  0.61 (0.55-0.67)  0.72 (0.70-0.75)  0.40 (0.35-0.45)  0.71 (0.61-0.80)  0.85 (0.80-0.90)  0.80 (0.60-1.00)  0.91 (0.90-0.93)
+precedence wording profile        2   59  0.60 (0.52-0.68)  0.72 (0.60-0.85)  0.38 (0.30-0.45)  0.71 (0.67-0.75)  0.85 (0.80-0.90)  0.75 (0.60-0.90)  0.90 (0.87-0.93)
+(precedence wording: "for what is true now, the facts and profile come first"; no effect, reverted in 1cf1c6f)
+
+===== FOODBODY LONG SCENARIOS (3 x 3 runs; checklists, 3 judgings, majority) =====
+design      n  must-contain      stale kept        criteria /12      reply follows     reply violates    asks-known  agreement
+long_base71   9  0.81 (0.60-1.00)  0.31 (0.00-0.67)  11.33 (11.00-12.00) 0.78 (0.50-1.00)  0.08 (0.00-0.25)  1/9         0.96 (0.91-1.00)
+long_ledger   9  0.81 (0.60-1.00)  0.20 (0.00-0.50)  10.67 (9.00-12.00) 0.83 (0.75-1.00)  0.03 (0.00-0.25)  0/9         0.94 (0.84-1.00)
+long_step3   9  0.77 (0.60-1.00)  0.31 (0.00-0.67)  11.00 (9.00-12.00) 0.81 (0.50-1.00)  0.06 (0.00-0.50)  0/9         0.95 (0.83-1.00)
+
+per scenario (must-contain / stale kept / reply follows):
+  ade       long_base71: 0.83 / 0.00 / 0.83 (0.75-1.00)   |   long_ledger: 0.83 / 0.00 / 0.83 (0.75-1.00)   |   long_step3: 0.83 / 0.00 / 0.83 (0.50-1.00)
+  hannah    long_base71: 1.00 / 0.44 (0.33-0.67) / 0.92 (0.75-1.00)   |   long_ledger: 0.93 (0.80-1.00) / 0.11 (0.00-0.33) / 0.83 (0.75-1.00)   |   long_step3: 0.87 (0.80-1.00) / 0.44 (0.33-0.67) / 0.83 (0.75-1.00)
+  sam       long_base71: 0.60 / 0.50 / 0.58 (0.50-0.75)   |   long_ledger: 0.67 (0.60-0.80) / 0.50 / 0.83 (0.75-1.00)   |   long_step3: 0.60 / 0.50 / 0.75
+
+criteria means by design:
+  long_base71 faithfuln 1.89 (1.00-2.00)  currency 2.00  recall 1.44 (1.00-2.00)  change_tr 2.00  provenanc 2.00  consisten 2.00
+  long_ledger faithfuln 1.67 (1.00-2.00)  currency 1.89 (1.00-2.00)  recall 1.44 (1.00-2.00)  change_tr 2.00  provenanc 1.67 (1.00-2.00)  consisten 2.00
+  long_step3 faithfuln 1.67 (1.00-2.00)  currency 1.89 (1.00-2.00)  recall 1.67 (1.00-2.00)  change_tr 2.00  provenanc 1.78 (1.00-2.00)  consisten 2.00
+
+DynamicMem fields the judge marked core-correct, all 5 checkpoints (after the attribute fix):
+  cmp_mini_dm_profile    habits 36/212  preferences 31/48  user_attributes 33/91
+  step1_dm_profile       habits 29/212  preferences 25/48  user_attributes 18/91
+  step3_dm_profile       habits 116/212  preferences 32/48  user_attributes 52/91
+  cmp_mini_dm_summary    habits 84/212  preferences 29/48  user_attributes 33/91
+
+Cost: real check $0.22; MemConflict $3.81; DynamicMem $2.42 + its evaluator about $0.78; re-scoring six
+DynamicMem runs about $4.71; FoodBody runs $2.79 + grading $0.64; answer replays $2.17. Round total about $17.50.

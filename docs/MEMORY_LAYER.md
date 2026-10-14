@@ -663,6 +663,8 @@ depends on them. See the README for setup, and
   - On MemConflict person 0 the fix did not change the profile's accuracy (0.25
     before, 0.22 after, 30 questions), which fits the retention diagnosis above.
 
+*Correction (2026-10-14): DynamicMem's adapter dropped plain-text "attribute" answers, about a quarter of the state fields, for every design and model (fixed in 355c134). The pilot runs can't be re-scored; later runs were re-scored from their traces (step 3 entry below and each results file). With attributes counted, gpt-5.4-mini's summary still leads its profile before step 3 (0.40 against 0.28), and gpt-6.1-sol's profile and summary become about equal (0.33 against 0.32).*
+
 ### A stronger model: gpt-6.1-sol against gpt-5.4-mini
 
 Same pilot, same code (724ec68) and same judges; only the model that writes memory and
@@ -687,6 +689,8 @@ answers changes. Results are in [`examples/model_comparison/RESULTS.txt`](../exa
 - **The bottleneck is still what memory keeps, not the model.** Even with the stronger
   model, the evidence for half the MemConflict answers isn't in memory. The
   8,000-character limit binds harder for a model that writes more.
+
+*Correction (2026-10-14): DynamicMem's adapter dropped plain-text "attribute" answers, about a quarter of the state fields, for every design and model (fixed in 355c134). The pilot runs can't be re-scored; later runs were re-scored from their traces (step 3 entry below and each results file). With attributes counted, gpt-5.4-mini's summary still leads its profile before step 3 (0.40 against 0.28), and gpt-6.1-sol's profile and summary become about equal (0.33 against 0.32).*
 
 ### Step 1: a facts ledger the harness keeps, and a Routines section
 
@@ -723,13 +727,60 @@ Routines (days, times, place). Results are in
 - **No regression on FoodBody.** The rubric dips slightly (11.3 to 10.7, from a few
   embellished details), which is within the spread of 9 runs.
 
+*Correction (2026-10-14): DynamicMem's adapter dropped plain-text "attribute" answers, about a quarter of the state fields, for every design and model (fixed in 355c134). The pilot runs can't be re-scored; later runs were re-scored from their traces (step 3 entry below and each results file). With attributes counted, gpt-5.4-mini's summary still leads its profile before step 3 (0.40 against 0.28), and gpt-6.1-sol's profile and summary become about equal (0.33 against 0.32).*
+
+### Step 3: more observations, searched when answering
+
+Step 1 left preferences under a condition, routines and named possessions to the
+episode log, which kept 3 observations per event and was never read when answering. Now:
+
+- **Observations:** up to 8 per event, each specific and self-contained, e.g. "drinks
+  fresh orange juice as a morning boost before training" or "checks bank balances on
+  Sundays at 09:30".
+- **Answering:** answers see the ledger, the profile and the log lines most relevant to
+  the question ([`methods/log_search.py`](../src/context_harness/methods/log_search.py)),
+  within the existing 48,000-character answer budget. The whole log is shown if it
+  fits; otherwise BM25 picks the lines.
+
+Results are in [`examples/step3_log_search/RESULTS.txt`](../examples/step3_log_search/RESULTS.txt).
+All DynamicMem numbers are re-scored after the fix noted above.
+
+| | Step 1 | **Step 3** | Summary |
+|---|---|---|---|
+| MemConflict overall (2 people, 59 questions) | 0.41 | **0.58** | 0.27 |
+| – preferences under a condition | 0.11 | **0.71** | 0.05 |
+| – real updates (dynamic) | 0.78 | 0.70 | 0.57 |
+| – false later claims (static) | 0.33 | 0.35 | 0.17 |
+| – evidence for the answer kept in memory | 0.66 | **0.93** | 0.43 |
+| DynamicMem: current habits and attributes | 0.18 | **0.55** | 0.40 |
+| DynamicMem: personalized service | 0.32 | **0.45** | 0.37 |
+| FoodBody long: replies follow the checklist (9 runs) | 0.83 | 0.81 | |
+| FoodBody long: stale beliefs kept | 0.20 | 0.31 | |
+| Cost of memory and answers (MemConflict + DynamicMem + FoodBody) | $7.25 | $9.02 | |
+
+- **Retention is largely solved.** The evidence is in memory for 93% of MemConflict
+  answers. Preferences under a condition went from 0.11 to 0.71. DynamicMem got
+  116 of 212 habit fields right (from 29) and 52 of 91 attributes (from 18). The
+  profile now beats the summary on both benchmarks.
+- **Real updates and false claims are unchanged within noise.** Re-answering the same
+  rebuilt memory moves scores by about 0.05 overall
+  ([`scenarios/replay_memconflict_answers.py`](../scenarios/replay_memconflict_answers.py)).
+  An instruction that the ledger and profile outrank the log had no effect (0.60
+  against 0.61) and was reverted.
+- **FoodBody replies are unchanged within the spread of 9 runs.**
+- **The profile now uses up to 48,000 characters when answering,** the same budget as
+  the recent-history baseline; the summary uses 8,000. Cost is about 25% higher than
+  step 1.
+
 ## Known gaps
 
-- **Long histories outgrow an 8,000-character memory.** On MemConflict and DynamicMem
-  both designs keep too little: background facts, conditional preferences, routines.
-  A cut-off tail is the worst way to lose it. Candidates: a Routines section, a larger
-  limit for long histories, and keeping "sources disagree" instead of newest-wins.
-
+- **False later claims are still handled poorly** (MemConflict static 0.35). The
+  ledger keeps the conflict, but answers often pick the later value or don't say
+  which one is right.
+- **The episode log grows without limit.** Search keeps answers within budget, but BM25
+  is lexical: a routine logged as "bank balance check" won't match "budget review".
+- **Answers are noisy:** about ±0.05 overall on 59 questions. One run per person or
+  user can't separate smaller effects; more people and repeated runs are needed.
 - **The archive itself has no rollover yet** (200,000 chars). That's enough for
   HorizonBench, but not for years of FoodBody data.
 - **Semantic contradictions aren't detected yet.** Two current entries with
