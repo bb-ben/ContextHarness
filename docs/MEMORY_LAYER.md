@@ -688,6 +688,41 @@ answers changes. Results are in [`examples/model_comparison/RESULTS.txt`](../exa
   model, the evidence for half the MemConflict answers isn't in memory. The
   8,000-character limit binds harder for a model that writes more.
 
+### Step 1: a facts ledger the harness keeps, and a Routines section
+
+The diagnosis was that one rewritten document drops what was said once, and that
+"newest wins" believes false later claims. So lasting facts (identity, family,
+education, work, residence, health, allergies, diet rules) now go to a ledger. The
+model reports facts that are new or that differ from the ledger. The harness keeps
+them, and a different value replaces the old one only when the model marks a real
+change; otherwise both are kept as a conflict. The profile's Facts section became
+Routines (days, times, place). Results are in
+[`examples/step1_facts_ledger/RESULTS.txt`](../examples/step1_facts_ledger/RESULTS.txt).
+
+| | Before | Step 1 |
+|---|---|---|
+| MemConflict overall (2 people, 59 questions) | 0.28 | **0.41** |
+| – static (a false later claim) | 0.05 | **0.33** |
+| – dynamic (a real update) | 0.72 | 0.78 |
+| – conditional | 0.06 | 0.11 |
+| – conflict noticed | 0.35 | **0.85** |
+| – evidence kept in memory | 0.41 | **0.66** |
+| DynamicMem: state completion / service | 0.19 / 0.32 | 0.13 / 0.32 |
+| FoodBody long: replies follow the checklist (9 runs) | 0.78 | 0.83 |
+| FoodBody long: stale beliefs kept | 0.31 | 0.20 |
+| Cost, all of the above | $9.42 | $8.01 |
+
+- **The ledger did what it was for.** Static facts survive, and conflicts are
+  noticed and raised. Real changes are marked as changes ("location: Melbourne;
+  earlier: Darwin"). It is also cheaper, because the profile no longer overflows as
+  often.
+- **Routines did not help DynamicMem.** The section exists but holds only about 5
+  routines. Spotting "every Sunday at 09:30" needs the pattern across weeks, and with
+  3 observations per weekly event the small routines never get recorded. That is step
+  3's problem: more observations, searched when answering.
+- **No regression on FoodBody.** The rubric dips slightly (11.3 to 10.7, from a few
+  embellished details), which is within the spread of 9 runs.
+
 ## Known gaps
 
 - **Long histories outgrow an 8,000-character memory.** On MemConflict and DynamicMem

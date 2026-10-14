@@ -1,11 +1,14 @@
 """Combine `evaluate` summaries into per-design tables: means with the spread across runs.
 
-Usage: python scenarios/summarize_evals.py runs/<eval run>/summary.json [...]
+Usage: python scenarios/summarize_evals.py [--by-run] runs/<eval run>/summary.json [...]
+--by-run groups by run name (long_ledger_r1 and long_ledger_r2 -> long_ledger) instead
+of by method, to compare two versions of the same method.
 """
 
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
 from collections import defaultdict
@@ -66,4 +69,8 @@ def table(rs: list[dict]) -> None:
 
 
 if __name__ == "__main__":
-    table(rows(sys.argv[1:]))
+    args = sys.argv[1:]
+    rs = rows([a for a in args if a != "--by-run"])
+    if "--by-run" in args:
+        rs = [{**r, "method": re.sub(r"_r\d+$", "", r["source"].split("__")[0])} for r in rs]
+    table(rs)

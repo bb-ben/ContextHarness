@@ -1,0 +1,51 @@
+Step 1: a facts ledger the harness keeps, and a Routines section (code 0c1472b), against the
+profile just before it (71ded91 for FoodBody; 724ec68 for the benchmarks, same method code).
+gpt-5.4-mini, medium effort. Judges unchanged (gpt-5.4-mini).
+
+===== MEMCONFLICT + DYNAMICMEM: STEP 1 =====
+MemConflict (answer accuracy 0-1; mean over people, range in brackets)
+design    people    n  overall           dynamic           static            conditional       update aware      conflict noticed  memory has evidence
+profile        2   59  0.41 (0.35-0.47)  0.78 (0.75-0.80)  0.33 (0.25-0.40)  0.11 (0.00-0.22)  0.80              0.85 (0.80-0.90)  0.66 (0.63-0.69)
+  n per type: profile: 20/20/19
+DynamicMem (0-1; DynamicMem's own evaluator; mean over users, range in brackets)
+design    users  state_completion       personalized_service   state_value_f1        
+profile       1  0.13                   0.32                   0.06                  
+Cost from traces, our judge and an estimate for DynamicMem's evaluator: dynamicmem evaluator judge (est.) $0.76, dynamicmem profile $1.80, memconflict profile $3.06; total $5.62
+
+===== MEMCONFLICT + DYNAMICMEM: BEFORE (profile and summary) =====
+MemConflict (answer accuracy 0-1; mean over people, range in brackets)
+design    people    n  overall           dynamic           static            conditional       update aware      conflict noticed  memory has evidence
+profile        2   59  0.28 (0.28-0.28)  0.72 (0.60-0.85)  0.05 (0.00-0.10)  0.06 (0.00-0.11)  0.75 (0.60-0.90)  0.35 (0.30-0.40)  0.41 (0.40-0.41)
+summary        2   59  0.27 (0.25-0.29)  0.57 (0.55-0.60)  0.17 (0.05-0.30)  0.05 (0.00-0.10)  0.55 (0.40-0.70)  0.45 (0.20-0.70)  0.43 (0.33-0.52)
+  n per type: profile: 20/20/19, summary: 20/20/19
+DynamicMem (0-1; DynamicMem's own evaluator; mean over users, range in brackets)
+design    users  state_completion       personalized_service   state_value_f1        
+profile       1  0.19                   0.32                   0.09                  
+summary       1  0.32                   0.39                   0.14                  
+Cost from traces, our judge and an estimate for DynamicMem's evaluator: dynamicmem evaluator judge (est.) $1.54, dynamicmem profile $2.18, dynamicmem summary $3.18, memconflict profile $4.20, memconflict summary $4.60; total $15.71
+
+===== FOODBODY LONG SCENARIOS (3 scenarios x 3 runs; reference checklists, 3 judgings, majority) =====
+design      n  must-contain      stale kept        criteria /12      reply follows     reply violates    asks-known  agreement
+long_base71   9  0.81 (0.60-1.00)  0.31 (0.00-0.67)  11.33 (11.00-12.00) 0.78 (0.50-1.00)  0.08 (0.00-0.25)  1/9         0.96 (0.91-1.00)
+long_ledger   9  0.81 (0.60-1.00)  0.20 (0.00-0.50)  10.67 (9.00-12.00) 0.83 (0.75-1.00)  0.03 (0.00-0.25)  0/9         0.94 (0.84-1.00)
+
+per scenario (must-contain / stale kept / reply follows):
+  ade       long_base71: 0.83 / 0.00 / 0.83 (0.75-1.00)   |   long_ledger: 0.83 / 0.00 / 0.83 (0.75-1.00)
+  hannah    long_base71: 1.00 / 0.44 (0.33-0.67) / 0.92 (0.75-1.00)   |   long_ledger: 0.93 (0.80-1.00) / 0.11 (0.00-0.33) / 0.83 (0.75-1.00)
+  sam       long_base71: 0.60 / 0.50 / 0.58 (0.50-0.75)   |   long_ledger: 0.67 (0.60-0.80) / 0.50 / 0.83 (0.75-1.00)
+
+criteria means by design:
+  long_base71 faithfuln 1.89 (1.00-2.00)  currency 2.00  recall 1.44 (1.00-2.00)  change_tr 2.00  provenanc 2.00  consisten 2.00
+  long_ledger faithfuln 1.67 (1.00-2.00)  currency 1.89 (1.00-2.00)  recall 1.44 (1.00-2.00)  change_tr 2.00  provenanc 1.67 (1.00-2.00)  consisten 2.00
+
+DynamicMem fields the judge marked core-correct (all 5 checkpoints):
+                    habits    preferences  attributes | days  start time  frequency  location
+profile before      35/212    29/48        5/91       | 8/38  1/48        11/50      12/40
+profile step 1      29/212    23/48        0/91       | 6/38  5/48        9/50       8/40
+summary             86/212    29/48        0/91       | 18/38 8/48        29/50      22/40
+The Routines section holds about 5 routines (one matches an expected habit exactly: Tuesdays
+14:00 site briefing); the Sunday budget review, monthly transfer and therapy never became
+observations (3 per weekly event), so the pattern across weeks was never seen.
+
+Cost: MemConflict $3.06 (before $4.20), DynamicMem $1.80 + evaluator about $0.76 (before $2.18),
+FoodBody runs $2.39 (before-code rerun $3.04), grading $1.26, ledger check $0.19. Round total $12.50.
