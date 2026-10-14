@@ -23,6 +23,8 @@ from context_harness.models.pricing import PRICES_PER_MTOK, cost_usd  # noqa: E4
 def trace_cost(path: Path) -> float:
     """Spend recorded in a trace; responses name a dated snapshot (gpt-5.4-mini-2026-03-17)."""
     total = 0.0
+    if not path.exists():  # an answer-only replay has no trace; its rows carry their cost
+        return total
     for line in path.read_text().splitlines():
         row = json.loads(line)
         if "usage" in row and row.get("model"):

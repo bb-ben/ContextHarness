@@ -153,7 +153,8 @@ def test_answers_see_the_relevant_observations(evolved_item, tmp_path):
 
     run([evolved_item], ScriptedModel(script), tmp_path / "run", run_config("profile"), progress=lambda *_: None)
     answer = next(r for r in seen if r.phase == "answer").prompt_text()
-    assert "## From the episode log: the observations most relevant here (oldest first)" in answer
+    assert "## From the episode log: earlier observations most relevant here (oldest first)" in answer
+    assert "the lasting facts and the profile above come first" in answer
     assert "| O-0.1 | stated | Detail number 0 about zucchini bread." in answer
     item_dir = next((tmp_path / "run" / "items").iterdir())
     episodes = (item_dir / "snapshots" / "final" / "memory" / "episodes.md").read_text()

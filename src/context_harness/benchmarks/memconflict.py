@@ -109,6 +109,28 @@ def _answer_spec() -> ToolSpec:
         "answer": {"type": "string"}}, "required": ["answer"]})
 
 
+def answer_and_grade(model: ModelAdapter, judge: ModelAdapter, memory: str, q: dict[str, Any]) -> dict[str, Any]:
+    """Answer one question from memory alone, and grade the answer."""
+    args, answer_cost, text = call_tool(model, "memconflict_answer", ANSWER_SYSTEM,
+                                        f"<memory>\n{memory or '(empty)'}\n</memory>\n\nQuestion: {q['question']}",
+                                        _answer_spec())
+    answer = (args or {}).get("answer") or text or ""
+    graded, judge_cost, _ = call_tool(judge, "memconflict_judge", JUDGE_SYSTEM, (
+        f"Conflict type: {q['conflict_type']}\nQuestion: {q['question']}\nReference answer: {q['answer']}\n"
+        f"Model answer: {answer}\n\n<memory>\n{memory or '(empty)'}\n</memory>"), _judge_spec())
+    graded = graded or {}
+    return {
+        "question_id": q["question_id"], "conflict_type": q["conflict_type"], "difficulty": q.get("difficulty"),
+        "question": q["question"], "reference": q["answer"], "answer": answer,
+        "answer_accuracy": float(graded.get("answer_accuracy", 0) or 0),
+        "update_awareness": int(graded.get("update_awareness", 0) or 0),
+        "conflict_recognition": int(graded.get("conflict_recognition", 0) or 0),
+        "memory_support": int(graded.get("memory_support", 0) or 0),
+        "reason": graded.get("reason", ""), "answer_cost_usd": round(answer_cost, 5),
+        "judge_cost_usd": round(judge_cost, 5),
+    }
+
+
 def run_person(person: dict[str, Any], method_name: str, model: ModelAdapter, judge: ModelAdapter,
                out_dir: Path, per_person: int) -> list[dict[str, Any]]:
     method, trace = open_method(method_name, model, out_dir)
@@ -119,25 +141,8 @@ def run_person(person: dict[str, Any], method_name: str, model: ModelAdapter, ju
         method.observe(session)
         for q in questions.get(session.index, []):
             memory = memory_text(method, q["question"])
-            args, answer_cost, text = call_tool(model, "memconflict_answer", ANSWER_SYSTEM,
-                                                f"<memory>\n{memory or '(empty)'}\n</memory>\n\nQuestion: {q['question']}",
-                                                _answer_spec())
-            answer = (args or {}).get("answer") or text or ""
-            graded, judge_cost, _ = call_tool(judge, "memconflict_judge", JUDGE_SYSTEM, (
-                f"Conflict type: {q['conflict_type']}\nQuestion: {q['question']}\nReference answer: {q['answer']}\n"
-                f"Model answer: {answer}\n\n<memory>\n{memory or '(empty)'}\n</memory>"), _judge_spec())
-            graded = graded or {}
-            rows.append({
-                "person": person["ID"], "session": session.index, "date": session.date,
-                "question_id": q["question_id"], "conflict_type": q["conflict_type"], "difficulty": q.get("difficulty"),
-                "question": q["question"], "reference": q["answer"], "answer": answer,
-                "answer_accuracy": float(graded.get("answer_accuracy", 0) or 0),
-                "update_awareness": int(graded.get("update_awareness", 0) or 0),
-                "conflict_recognition": int(graded.get("conflict_recognition", 0) or 0),
-                "memory_support": int(graded.get("memory_support", 0) or 0),
-                "reason": graded.get("reason", ""), "answer_cost_usd": round(answer_cost, 5),
-                "judge_cost_usd": round(judge_cost, 5),
-            })
+            rows.append({"person": person["ID"], "session": session.index, "date": session.date,
+                         **answer_and_grade(model, judge, memory, q)})
             saved.write(json.dumps(rows[-1]) + "\n")
             saved.flush()
     trace.close()
