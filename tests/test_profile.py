@@ -32,7 +32,7 @@ def test_one_call_per_event_numbered_evidence_and_versions(evolved_item, tmp_pat
     item_dir = next((tmp_path / "run" / "items").iterdir())
     updates = [r for r in seen if r.phase == "profile_update"]
     n_events = results[0]["stats"]["calls_by_phase"]["profile_update"] - 1  # event 1 was retried once
-    assert len(updates) == n_events + 1 and "O-0.1, O-0.2, O-0.3" in updates[0].system
+    assert len(updates) == n_events + 1 and "O-0.1 to O-0.8" in updates[0].system
     episodes = (item_dir / "snapshots" / "final" / "memory" / "episodes.md").read_text()
     assert "- E-0 |" in episodes and "  - O-0.1 | stated | Said something in event 0." in episodes
     assert "  - O-0.2 | behavior | x" in episodes  # an unknown kind falls back to behavior
@@ -120,3 +120,44 @@ def test_facts_survive_profile_rewrites_and_reach_the_answer(evolved_item, tmp_p
     assert read_profile_memory(snap).startswith("## Lasting facts") and "- allergy: peanuts" in read_profile_memory(snap)
     versions = [json.loads(line) for line in (item_dir / "profile_versions.jsonl").read_text().splitlines()]
     assert "allergy" in versions[-1]["facts"]
+
+
+def test_log_search_shows_everything_that_fits_else_the_most_relevant_lines():
+    from context_harness.methods.log_search import dated_entries, relevant_log
+
+    log = ["- E-0 | 2022-01-01 | source: S-0 | Talked about breakfast.",
+           "  - O-0.1 | stated | Drinks fresh orange juice as a morning boost before training.",
+           "- E-1 | 2022-02-01 | source: S-1 | Talked about work.",
+           "  - O-1.1 | behavior | Asked for a meeting agenda template.",
+           "  - O-1.2 | stated | Checks bank balances on Sundays at 09:30."]
+    assert dated_entries(log)[1] == "- 2022-01-01 | O-0.1 | stated | Drinks fresh orange juice as a morning boost before training."
+    assert relevant_log(log, "anything", 10_000).count("\n") == 4  # all of it fits
+    picked = relevant_log(log, "When does the user prefer orange juice?", 120)
+    assert "orange juice" in picked and "agenda" not in picked
+    both = relevant_log(log, "orange juice; bank balances", 400)
+    assert both.index("orange juice") < both.index("bank balances")  # shown oldest first
+
+
+def test_answers_see_the_relevant_observations(evolved_item, tmp_path):
+    seen = []
+
+    def script(req):
+        seen.append(req)
+        if req.phase == "answer":
+            return "", [("submit_answer", {"letter": "A"})]
+        k = ev(req)
+        obs = [{"kind": "stated", "text": f"Detail number {k} about zucchini bread."}] + [
+            {"kind": "behavior", "text": f"filler {k}.{n}"} for n in range(9)]  # 10 offered, 8 kept
+        return "", [("record", {"episode": f"Chat {k}.", "observations": obs, "facts": [],
+                                "profile": "## How they want help\n- short"})]
+
+    run([evolved_item], ScriptedModel(script), tmp_path / "run", run_config("profile"), progress=lambda *_: None)
+    answer = next(r for r in seen if r.phase == "answer").prompt_text()
+    assert "## From the episode log: the observations most relevant here (oldest first)" in answer
+    assert "| O-0.1 | stated | Detail number 0 about zucchini bread." in answer
+    item_dir = next((tmp_path / "run" / "items").iterdir())
+    episodes = (item_dir / "snapshots" / "final" / "memory" / "episodes.md").read_text()
+    assert "O-0.8 |" in episodes and "O-0.9 |" not in episodes
+    from context_harness.methods.profile import read_profile_memory
+    assert "zucchini bread" in read_profile_memory(item_dir / "snapshots" / "final", "zucchini")
+    assert "zucchini bread" not in read_profile_memory(item_dir / "snapshots" / "final")  # no query: beliefs only

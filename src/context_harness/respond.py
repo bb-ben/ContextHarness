@@ -118,7 +118,8 @@ def reply_from_memory(item: BenchmarkItem, snapshot: Path, model: ModelAdapter, 
     if kind == "summary":
         return respond_with_text(item, (snapshot / "summary.md").read_text(), "a rolling summary", model, out_dir)
     if kind == "profile":
-        return respond_with_text(item, read_profile_memory(snapshot),
+        query = prompts.render_probe(item.episode.probe, f"S-{len(item.episode.sessions)}")
+        return respond_with_text(item, read_profile_memory(snapshot, query, cfg.method_config.answer_budget_chars),
                                  "a profile of who they are now, with evidence", model, out_dir)
     raise ValueError(f"No memory to reply from in {snapshot}")
 

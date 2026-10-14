@@ -12,6 +12,9 @@ This method does both with one call per event and a short prompt:
 - one profile document, rewritten each event to describe the person now, with dated
   "Changes" lines and observation IDs cited inline;
 - every version of the profile, kept by the harness as the change history;
+- answers also see the episode-log lines most relevant to the question (step 3), so
+  details mentioned once (a preference under a condition, a routine's time, a named
+  possession) can be used without crowding the profile;
 - a facts ledger (step 1 of the long-history fixes): lasting facts such as birthdate,
   allergies, diagnoses or where they live, kept by the harness rather than rewritten.
   On MemConflict and DynamicMem the rewritten profile dropped facts mentioned once
@@ -32,9 +35,11 @@ from ..models.base import ModelRequest, TextBlock, ToolSpec
 from ..tools import SubmitAnswer, ToolExecutor
 from ..types import AnswerResult, Event, Probe, Question, Session
 from .base import MethodContext, answer_with_tools, fit_to_limit
+from .log_search import relevant_log
 
 KINDS = ("stated", "behavior", "reaction", "event")
-RECENT_EPISODE_CHARS = 5000  # the latest episode lines shown with each update
+RECENT_EPISODE_CHARS = 10000  # the latest episode lines shown with each update
+MAX_OBSERVATIONS = 8  # per event
 MAX_FACTS = 60  # ledger keys; new keys beyond this are refused (and traced)
 FACT_VALUE_CHARS = 160
 
@@ -89,15 +94,23 @@ class FactsLedger:
         return "\n".join(lines)
 
 
-def profile_memory_text(facts: str, profile: str) -> str:
-    """What answering reads: the facts ledger, then the profile."""
-    return f"## Lasting facts (as reported; conflicts kept)\n{facts.strip() or '(none yet)'}\n\n{profile.strip()}"
+def profile_memory_text(facts: str, profile: str, log_lines: list[str] | None = None, query: str | None = None,
+                        budget_chars: int = 48000) -> str:
+    """What answering reads: the facts ledger, the profile and, given a query, the
+    episode-log lines most relevant to it, all within the answer budget."""
+    text = f"## Lasting facts (as reported; conflicts kept)\n{facts.strip() or '(none yet)'}\n\n{profile.strip()}"
+    if query is None or not log_lines:
+        return text
+    heading = "\n\n## From the episode log: the observations most relevant here (oldest first)\n"
+    found = relevant_log(log_lines, query, max(0, budget_chars - len(text) - len(heading)))
+    return text + heading + (found or "(none)")
 
 
-def read_profile_memory(snapshot) -> str:
+def read_profile_memory(snapshot, query: str | None = None, budget_chars: int = 48000) -> str:
     """profile_memory_text from a saved snapshot (older snapshots have no facts.md)."""
-    facts = snapshot / "facts.md"
-    return profile_memory_text(facts.read_text() if facts.exists() else "", (snapshot / "profile.md").read_text())
+    facts, log = snapshot / "facts.md", snapshot / "memory" / "episodes.md"
+    return profile_memory_text(facts.read_text() if facts.exists() else "", (snapshot / "profile.md").read_text(),
+                               log.read_text().splitlines() if log.exists() else None, query, budget_chars)
 
 PROFILE_SYSTEM = """\
 You keep the long-term memory an assistant has of one person, in three parts:
@@ -107,11 +120,15 @@ You keep the long-term memory an assistant has of one person, in three parts:
 
 After each conversation, call record once with:
 1. episode: one line on what the conversation was about.
-2. observations: 0 to 3 things it showed about the person (their preferences,
-   reactions, circumstances, life events, lasting facts). Each has a kind: stated
-   (they said it about themselves or how they want things), behavior (what they asked
-   for or did), reaction (how they responded), or event (something in their life).
-   They are numbered {next_ids} in the order you list them.
+2. observations: 0 to 8 things it showed about the person (their preferences,
+   reactions, circumstances, routines, life events, things they own or use). Each has
+   a kind: stated (they said it about themselves or how they want things), behavior
+   (what they asked for or did), reaction (how they responded), or event (something
+   in their life). They are numbered {next_ids} in the order you list them. Each is
+   searched later on its own, so make it specific and self-contained: name the thing
+   and keep the details, e.g. "drinks fresh orange juice as a morning boost before
+   training", "checks bank balances on Sundays at 09:30", "owns a Weber Genesis E-325s
+   gas grill". Small details count, even ones mentioned in passing.
 3. facts: lasting facts this conversation states, even in passing: who they are (name,
    birthdate, birthplace), family, education, work, where they live, health
    (conditions, allergies, medications), diet rules, household. Each has a short key
@@ -148,7 +165,9 @@ You are an AI assistant with an ongoing relationship with one user. You are part
 conversation with them, shown in <current_conversation>. Earlier sessions are not shown. \
 <profile> is your memory of who this user is now, updated after every earlier session, with \
 the evidence for each point cited by observation ID. Its lasting facts are kept as reported; \
-where reports conflict, both are shown.
+where reports conflict, both are shown. After the profile come the observations from earlier \
+sessions most relevant to this conversation, with their dates: use them for details the \
+profile doesn't hold, and prefer newer ones where they differ.
 
 {answer_task}"""
 
@@ -196,7 +215,7 @@ class ProfileMemory:
 
     def observe(self, event: Event) -> None:
         k = event.index
-        next_ids = ", ".join(f"O-{k}.{n}" for n in (1, 2, 3))
+        next_ids = f"O-{k}.1 to O-{k}.{MAX_OBSERVATIONS}"
         request = ModelRequest(
             phase="profile_update",
             system=PROFILE_SYSTEM.format(next_ids=next_ids, max_chars=self.max_chars),
@@ -218,7 +237,7 @@ class ProfileMemory:
                 args = call.arguments
                 break
         date = event.date[:10]
-        observations = [o for o in (args or {}).get("observations", []) if isinstance(o, dict)][:3]
+        observations = [o for o in (args or {}).get("observations", []) if isinstance(o, dict)][:MAX_OBSERVATIONS]
         self.episodes.append(f"- E-{k} | {date} | source: {event.event_id} | "
                              f"{(args or {}).get('episode', '(not recorded)').strip()}")
         for n, o in enumerate(observations, 1):
@@ -244,7 +263,8 @@ class ProfileMemory:
 
     def answer(self, probe: Probe, question: Question, probe_event_id: str) -> AnswerResult:
         submit = SubmitAnswer(question.letters)
-        fixed = (f"<profile>\n{self.memory_text()}\n</profile>\n\n" + prompts.render_probe(probe, probe_event_id)
+        query = prompts.render_probe(probe, probe_event_id) + "\n" + prompts.render_question(question)
+        fixed = (f"<profile>\n{self.memory_text(query)}\n</profile>\n\n" + prompts.render_probe(probe, probe_event_id)
                  + "\n\n" + prompts.render_question(question))
         return answer_with_tools(
             ctx=self.ctx, executor=ToolExecutor([submit], self.ctx.trace), submit=submit,
@@ -253,8 +273,10 @@ class ProfileMemory:
             + "\n\nCall submit_answer with your choice.",
         )
 
-    def memory_text(self) -> str:
-        return profile_memory_text(self.facts.render(), self.profile or "(empty)")
+    def memory_text(self, query: str | None = None) -> str:
+        """The ledger and profile; given a query, also the relevant episode-log lines."""
+        return profile_memory_text(self.facts.render(), self.profile or "(empty)", self.episodes, query,
+                                   self.ctx.config.answer_budget_chars)
 
     def memory_snapshot(self) -> dict[str, str]:
         return {"profile.md": self.profile, "facts.md": self.facts.render() + "\n",

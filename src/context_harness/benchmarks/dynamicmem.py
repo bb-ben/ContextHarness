@@ -21,7 +21,7 @@ import json
 import subprocess
 import sys
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 
 from ..models.base import ModelAdapter, ToolSpec
 from ..tracing import TracedModel
@@ -100,9 +100,13 @@ def _service_items(checkpoint: dict[str, Any]) -> list[tuple[str, dict]]:
     return [(key, item) for key, block in (qa.get("keys") or {}).items() for item in block.get("items", [])]
 
 
-def answer_checkpoint(model: ModelAdapter, memory: str, checkpoint: dict[str, Any]) -> tuple[dict, dict, float]:
-    """State Completion and Personalized Service for one checkpoint, from memory alone."""
+def answer_checkpoint(model: ModelAdapter, memory_for: Callable[[str], str],
+                      checkpoint: dict[str, Any]) -> tuple[dict, dict, float]:
+    """State Completion and Personalized Service for one checkpoint, from memory alone.
+    memory_for(query) gives the memory shown for a request (for the profile, the ledger,
+    profile and the episode-log lines relevant to it)."""
     requested, keys = _state_request(checkpoint["state_completion_pack"])
+    memory = memory_for(" ".join(k.split(":", 1)[-1].replace("_", " ") for k in keys))
     state_spec = ToolSpec("submit", "Submit the filled templates.", {"type": "object", "properties": {
         "state": {"type": "object", "description": "state_key -> the filled template (JSON object)"}},
         "required": ["state"]})
@@ -125,6 +129,8 @@ def answer_checkpoint(model: ModelAdapter, memory: str, checkpoint: dict[str, An
     cost_c = 0.0
     answers: dict[int, Any] = {}
     if items:
+        memory = memory_for(" ".join(f"{k.split(':', 1)[-1].replace('_', ' ')} {i.get('scenario', '')} "
+                                     f"{i.get('task_instruction', '')}" for k, i in items))
         args, cost_c, _ = call_tool(model, "dynamicmem_service", SERVICE_SYSTEM,
                                     f"<memory>\n{memory or '(empty)'}\n</memory>\n\nRequests:\n" + "\n\n".join(listed),
                                     service_spec)
@@ -151,7 +157,8 @@ def run_user(user_dir: Path, method_name: str, model: ModelAdapter, out_dir: Pat
         method.observe(event)
         if last in by_index:
             cp = by_index[last]
-            snapshot, service, cost = answer_checkpoint(TracedModel(model, trace), memory_text(method), cp)
+            snapshot, service, cost = answer_checkpoint(TracedModel(model, trace),
+                                                        lambda q: memory_text(method, q), cp)
             answer_cost += cost
             predictions.append({"checkpoint_id": cp["checkpoint_id"], "snapshot_state": snapshot,
                                 "evidence": {"app_log_id": "", "evidence_content": ""},

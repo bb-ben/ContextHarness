@@ -20,10 +20,11 @@ def open_method(name: str, model: ModelAdapter, item_dir: Path, config: MethodCo
     return make_method(name, ctx), trace
 
 
-def memory_text(method) -> str:
-    """What the method would read when answering: the profile or the summary, not raw logs."""
-    if hasattr(method, "memory_text"):  # the profile: facts ledger + profile
-        return method.memory_text()
+def memory_text(method, query: str | None = None) -> str:
+    """What the method would read when answering this query: the summary, or the profile's
+    ledger, profile and relevant episode-log lines. Never the raw history."""
+    if hasattr(method, "memory_text"):
+        return method.memory_text(query)
     snap = method.memory_snapshot()
     if "summary.md" in snap:
         return snap["summary.md"]

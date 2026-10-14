@@ -118,7 +118,7 @@ def run_person(person: dict[str, Any], method_name: str, model: ModelAdapter, ju
     for session in sessions_of(person):
         method.observe(session)
         for q in questions.get(session.index, []):
-            memory = memory_text(method)
+            memory = memory_text(method, q["question"])
             args, answer_cost, text = call_tool(model, "memconflict_answer", ANSWER_SYSTEM,
                                                 f"<memory>\n{memory or '(empty)'}\n</memory>\n\nQuestion: {q['question']}",
                                                 _answer_spec())
