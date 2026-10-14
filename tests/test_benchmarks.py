@@ -78,7 +78,8 @@ def _logs():
 def _packs():
     def checkpoint(cid, index):
         return {"checkpoint_id": cid, "as_of": {"log_index": index},
-                "state_completion_pack": {"keys": {"habits_state:run": {"question_text": "When do they run?"}}},
+                "state_completion_pack": {"keys": {"habits_state:run": {"question_text": "When do they run?"},
+                                                   "user_attributes_state:grill": {"question_text": "Their grill?"}}},
                 "rq3_apply_service_qa": {"keys": {"habits_state:run": {"items": [
                     {"qa_id": "q1", "service_family": "user_communication", "scenario": "Monday 7am.",
                      "task_instruction": "Draft a reminder."}]}}}}
@@ -105,6 +106,7 @@ def test_dynamicmem_predictions_in_benchmark_format(tmp_path):
             return f"summary after event {ev(req)}", []
         if req.phase == "dynamicmem_state":
             return "", [("submit", {"state": {"habits_state:run": {"habits_state:run": {"timing": "07:00"}},
+                                              "user_attributes_state:grill": "Weber Genesis E-325s",
                                               "not_asked": {"x": 1}}})]
         if req.phase == "dynamicmem_service":
             return "", [("submit", {"answers": [{"n": 0, "answer": "Run at 7."}]})]
@@ -118,7 +120,8 @@ def test_dynamicmem_predictions_in_benchmark_format(tmp_path):
     pred = json.loads((tmp_path / "out" / "tce_results.json").read_text())
     assert pred["task_contract_version"] == "taskabc_v2"
     p = pred["predictions"][0]
-    assert p["checkpoint_id"] == "cp1" and p["snapshot_state"] == {"habits_state:run": {"timing": "07:00"}}
+    assert p["checkpoint_id"] == "cp1" and p["snapshot_state"] == {  # plain-text attributes are kept too
+        "habits_state:run": {"timing": "07:00"}, "user_attributes_state:grill": "Weber Genesis E-325s"}
     assert p["rq3_apply_answers"]["habits_state:run"]["items"][0] == {
         "qa_id": "q1", "service_family": "user_communication", "answer": "Run at 7.", "evidence": []}
 

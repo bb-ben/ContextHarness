@@ -100,6 +100,37 @@ def _service_items(checkpoint: dict[str, Any]) -> list[tuple[str, dict]]:
     return [(key, item) for key, block in (qa.get("keys") or {}).items() for item in block.get("items", [])]
 
 
+def snapshot_from_state(raw: dict[str, Any], keys: list[str]) -> dict[str, Any]:
+    """The requested keys' answers. Habits come back as objects, attributes as plain text
+    (their template is a single blank), so any non-empty value counts."""
+    out = {}
+    for k, v in raw.items():
+        if isinstance(v, dict) and set(v) == {k}:  # wrapped in its own key: {"k": {"k": ...}}
+            v = v[k]
+        if k in keys and v not in (None, "", [], {}):
+            out[k] = v
+    return out
+
+
+def rebuild_snapshots(out_dir: Path, user_dir: Path) -> int:
+    """Re-read each checkpoint's State Completion answers from the trace into
+    tce_results.json (for runs scored before attributes were kept). Returns how many
+    predictions changed."""
+    packs = json.loads((user_dir / "task_packs.json").read_text())
+    states = [c["tool_calls"][0]["arguments"].get("state") or {}
+              for c in map(json.loads, (out_dir / "trace.jsonl").read_text().splitlines())
+              if c.get("event") == "model_call" and c.get("phase") == "dynamicmem_state" and c.get("tool_calls")]
+    results = json.loads((out_dir / "tce_results.json").read_text())
+    changed = 0
+    for pred, cp, raw in zip(results["predictions"], packs["checkpoints"], states):
+        assert pred["checkpoint_id"] == cp["checkpoint_id"]
+        new = snapshot_from_state(raw, list(cp["state_completion_pack"]["keys"]))
+        changed += new != pred["snapshot_state"]
+        pred["snapshot_state"] = new
+    (out_dir / "tce_results.json").write_text(json.dumps(results, indent=1, ensure_ascii=False))
+    return changed
+
+
 def answer_checkpoint(model: ModelAdapter, memory_for: Callable[[str], str],
                       checkpoint: dict[str, Any]) -> tuple[dict, dict, float]:
     """State Completion and Personalized Service for one checkpoint, from memory alone.
@@ -112,10 +143,7 @@ def answer_checkpoint(model: ModelAdapter, memory_for: Callable[[str], str],
         "required": ["state"]})
     args, cost_a, _ = call_tool(model, "dynamicmem_state", STATE_SYSTEM,
                                 f"<memory>\n{memory or '(empty)'}\n</memory>\n\nKeys to fill:\n{requested}", state_spec)
-    raw = (args or {}).get("state") or {}
-    snapshot = {k: v for k, v in raw.items() if k in keys and isinstance(v, dict)}
-    # a template may come back wrapped in its own key: {"k": {"k": {...}}}
-    snapshot = {k: (v[k] if set(v) == {k} and isinstance(v[k], dict) else v) for k, v in snapshot.items()}
+    snapshot = snapshot_from_state((args or {}).get("state") or {}, keys)
 
     items = _service_items(checkpoint)
     listed = []
