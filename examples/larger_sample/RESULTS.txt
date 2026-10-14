@@ -1,0 +1,34 @@
+Larger sample: profile with step 3 (10d7c65; behavior unchanged at 016a24c) against the rolling summary.
+gpt-5.4-mini, medium effort. Judges unchanged. MemConflict: people 0-4 of Data/Step4_4.jsonl, 30 seeded questions
+each (10 per type). DynamicMem: users 001-003, 5 checkpoints each. One run per person or user.
+Reused runs with unchanged code: step3_mc_profile_p0/p1, step3_dm_profile (profile); cmp_mini_mc_summary_p0/p1,
+cmp_mini_dm_summary (summary, code 724ec68, re-scored after 355c134). New: people 2-4 and users 002-003.
+
+MemConflict (answer accuracy 0-1; mean over people, range in brackets)
+design    people    n  overall           dynamic           static            conditional       update aware      conflict noticed  memory has evidence
+profile        5  149  0.55 (0.45-0.68)  0.66 (0.50-0.80)  0.35 (0.25-0.50)  0.63 (0.45-0.80)  0.78 (0.70-0.90)  0.86 (0.80-0.90)  0.91 (0.87-0.93)
+summary        5  149  0.25 (0.15-0.30)  0.56 (0.40-0.65)  0.13 (0.00-0.30)  0.05 (0.00-0.10)  0.58 (0.40-0.70)  0.36 (0.20-0.70)  0.42 (0.33-0.52)
+  n per type: profile: 50/50/49, summary: 50/50/49
+DynamicMem (0-1; DynamicMem's own evaluator; mean over users, range in brackets)
+design    users  state_completion       personalized_service   state_value_f1        
+profile       3  0.42 (0.35-0.55)       0.41 (0.35-0.45)       0.26 (0.24-0.27)      
+summary       3  0.39 (0.38-0.40)       0.36 (0.33-0.37)       0.23 (0.22-0.24)      
+Cost from traces, our judge and an estimate for DynamicMem's evaluator: dynamicmem evaluator judge (est.) $4.56, dynamicmem profile $7.61, dynamicmem summary $8.76, memconflict profile $10.76, memconflict summary $11.95; total $43.64
+
+MemConflict per person (overall): profile / summary
+  person 0  0.68 / 0.25     person 1  0.48 / 0.29     person 2  0.45 / 0.15
+  person 3  0.53 / 0.25     person 4  0.58 / 0.30
+
+DynamicMem per user (state completion / personalized service):
+  001  profile 0.55 / 0.45   summary 0.40 / 0.37
+  002  profile 0.35 / 0.35   summary 0.38 / 0.33
+  003  profile 0.36 / 0.42   summary 0.38 / 0.37
+Fields marked core-correct (habits / preferences / attributes):
+  001  profile 116/212  32/48  52/91    summary  84/212  29/48  33/91
+  002  profile  91/271  26/50  30/82    summary 107/271  28/50  28/82
+  003  profile  64/183  21/41  24/73    summary  75/183  23/41  22/73
+Each profile's log reaches about 100,000 characters; about 37,000 fit the answer budget, picked by one BM25
+search over all ~40 keys of a checkpoint.
+
+Cost of the new runs: $28.07 (MemConflict 6 runs, DynamicMem 4 runs, DynamicMem's evaluator estimated).
+The "Cost" line above also counts the reused runs.

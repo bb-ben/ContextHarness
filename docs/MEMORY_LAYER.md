@@ -772,13 +772,41 @@ All DynamicMem numbers are re-scored after the fix noted above.
   the recent-history baseline; the summary uses 8,000. Cost is about 25% higher than
   step 1.
 
+### A larger sample: 5 people on MemConflict, 3 users on DynamicMem
+
+To firm up step 3 before more design changes, both designs ran on 5 MemConflict
+people (149 questions each) and 3 DynamicMem users. That is one run per person or
+user; earlier runs were reused where the code hadn't changed. Results are in
+[`examples/larger_sample/RESULTS.txt`](../examples/larger_sample/RESULTS.txt).
+
+| | Profile (step 3) | Summary |
+|---|---|---|
+| MemConflict overall, mean of 5 people (range) | **0.55** (0.45–0.68) | 0.25 (0.15–0.30) |
+| – real updates / false later claims / conditional | 0.66 / 0.35 / 0.63 | 0.56 / 0.13 / 0.05 |
+| DynamicMem habits and attributes, mean of 3 users (range) | 0.42 (0.35–0.55) | 0.39 (0.38–0.40) |
+| DynamicMem personalized service | 0.41 (0.35–0.45) | 0.36 (0.33–0.37) |
+
+- **MemConflict is a firm win.** The profile beats the summary for every one of the 5
+  people, on every question type.
+- **DynamicMem is not.** The step-3 edge came from user 001. On users 002 and 003 the
+  summary gets more habit fields right (107 against 91, 75 against 64), and service is
+  only slightly ahead.
+  - **Why:** each log reaches about 100,000 characters, of which about 37,000 fit the
+    answer budget, picked by one keyword search over all ~40 questions of a
+    checkpoint.
+  - **Two limits:** one combined search can't cover every routine, and matching is
+    lexical ("bank balance check" against "budget review").
+  - **Candidates:** a search per question, or semantic search.
+
 ## Known gaps
 
 - **False later claims are still handled poorly** (MemConflict static 0.35). The
   ledger keeps the conflict, but answers often pick the later value or don't say
   which one is right.
 - **The episode log grows without limit.** Search keeps answers within budget, but BM25
-  is lexical: a routine logged as "bank balance check" won't match "budget review".
+  is lexical: a routine logged as "bank balance check" won't match "budget review". On
+  DynamicMem, one combined search over ~40 questions misses routines; the profile ties
+  the summary on 2 of 3 users.
 - **Answers are noisy:** about ±0.05 overall on 59 questions. One run per person or
   user can't separate smaller effects; more people and repeated runs are needed.
 - **The archive itself has no rollover yet** (200,000 chars). That's enough for
