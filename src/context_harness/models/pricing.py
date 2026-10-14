@@ -11,6 +11,8 @@ from .base import ModelAdapter, ModelRequest, ModelResponse, QuotaExhausted, Usa
 PRICES_PER_MTOK: dict[str, tuple[float, float, float]] = {
     # developers.openai.com/api/docs/models/gpt-5.4-mini, checked 2026-10-09
     "gpt-5.4-mini": (0.75, 0.075, 4.50),
+    # developers.openai.com/api/docs/models/gpt-6.1-sol, checked 2026-10-13
+    "gpt-6.1-sol": (2.00, 0.10, 10.00),
 }
 
 

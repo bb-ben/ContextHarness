@@ -418,8 +418,8 @@ def cmd_evaluate(args: argparse.Namespace) -> int:
     return 0
 
 
-def _bench_model(args: argparse.Namespace, effort: str, shared_with=None):
-    m = make_model(ModelSettings(model=args.model, max_tokens=args.max_tokens,
+def _bench_model(args: argparse.Namespace, effort: str, shared_with=None, model: str | None = None):
+    m = make_model(ModelSettings(model=model or args.model, max_tokens=args.max_tokens,
                                  effort=None if effort == "none" else effort, timeout_s=args.timeout))
     if m.settings.model not in PRICES_PER_MTOK:  # the fake model: nothing to count
         return m
@@ -439,7 +439,8 @@ def cmd_memconflict(args: argparse.Namespace) -> int:
     people = mc.load_people(Path(args.data))
     picked = [people[int(i)] for i in args.people.split(",")] if args.people else people[: args.max_people]
     model = _bench_model(args, args.effort)
-    judge = _bench_model(args, args.judge_effort, shared_with=model if isinstance(model, CostCap) else None)
+    judge = _bench_model(args, args.judge_effort, shared_with=model if isinstance(model, CostCap) else None,
+                         model=args.judge_model or ("fake" if args.model == "fake" else "gpt-5.4-mini"))
     run_dir = Path(args.out) / (args.run_name or f"{time.strftime('%Y%m%d-%H%M%S')}_memconflict")
     rows = []
     try:
@@ -455,7 +456,8 @@ def cmd_memconflict(args: argparse.Namespace) -> int:
         print(f"Stopped: {e}")
     summary = {m: mc.summarize([r for r in rows if r["method"] == m]) for m in args.methods.split(",")}
     run_dir.mkdir(parents=True, exist_ok=True)
-    write(run_dir / "summary.json", {"model": args.model, "effort": args.effort, "judge_effort": args.judge_effort,
+    write(run_dir / "summary.json", {"model": args.model, "effort": args.effort, "judge_model": judge.settings.model,
+                                     "judge_effort": args.judge_effort,
                                      "questions_per_person": args.questions, "people": len(picked),
                                      "results": summary, "estimated_cost_usd": round(_spent(model), 4)})
     print(json.dumps(summary, indent=1))
@@ -701,6 +703,8 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--max-people", type=int, default=1)
     p.add_argument("--questions", type=int, default=12, help="Questions per person, split evenly by conflict type")
     p.add_argument("--max-sessions", type=int, help="Replay only the first N sessions (smoke tests)")
+    p.add_argument("--judge-model", help="Judge model (default gpt-5.4-mini, kept fixed so designs and models "
+                                          "are graded alike)")
     p.add_argument("--judge-effort", default="high", choices=["minimal", "low", "medium", "high", "xhigh", "max", "none"])
     bench_args(p)
     p.set_defaults(func=cmd_memconflict)

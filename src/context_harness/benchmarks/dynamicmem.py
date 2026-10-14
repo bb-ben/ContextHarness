@@ -144,6 +144,9 @@ def run_user(user_dir: Path, method_name: str, model: ModelAdapter, out_dir: Pat
     by_index = {c["as_of"]["log_index"]: c for c in checkpoints}
     method, trace = open_method(method_name, model, out_dir)
     predictions, answer_cost = [], 0.0
+    artifact = {"task_contract_version": packs.get("task_contract_version"),
+                "research_frame_version": packs.get("research_frame_version"),
+                "user_id": packs.get("user_id"), "method": method_name, "predictions": predictions}
     for event, last in weekly_events(logs, list(by_index)):
         method.observe(event)
         if last in by_index:
@@ -154,13 +157,11 @@ def run_user(user_dir: Path, method_name: str, model: ModelAdapter, out_dir: Pat
                                 "evidence": {"app_log_id": "", "evidence_content": ""},
                                 "rq3_apply_answers": service})
             (out_dir / f"memory_at_{cp['checkpoint_id']}.md").write_text(memory_text(method))
+            # after every checkpoint, so a run stopped by its cost cap can still be scored
+            (out_dir / "tce_results.json").write_text(json.dumps(artifact, indent=1, ensure_ascii=False))
             if len(predictions) == len(checkpoints):
                 break  # nothing left to score; skip replaying the rest
     trace.close()
-    artifact = {"task_contract_version": packs.get("task_contract_version"),
-                "research_frame_version": packs.get("research_frame_version"),
-                "user_id": packs.get("user_id"), "method": method_name, "predictions": predictions}
-    (out_dir / "tce_results.json").write_text(json.dumps(artifact, indent=1, ensure_ascii=False))
     return {"predictions": len(predictions), "answer_cost_usd": round(answer_cost, 4)}
 
 
