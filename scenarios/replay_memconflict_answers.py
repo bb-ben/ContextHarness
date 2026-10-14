@@ -7,7 +7,9 @@ ledger from profile_versions.jsonl, episode-log lines from the record calls in t
 Usage:
   python scenarios/replay_memconflict_answers.py --heading new --out runs/replay_new_p0 \
       runs/step3_mc_profile_p0/profile/person_0 [--max-cost-usd 2]
---heading old uses the log heading the run itself had, to measure answer-to-answer noise.
+--heading old uses the log heading the step-3 runs had, to measure answer-to-answer noise;
+new used "History and details. For what is true now, the lasting facts and the profile
+above come first" (tested 2026-10-14: no effect, 0.60 vs 0.61; reverted).
 """
 
 from __future__ import annotations
@@ -25,6 +27,9 @@ from context_harness.models import ModelSettings, make_model  # noqa: E402
 from context_harness.models.pricing import CostCap  # noqa: E402
 
 OLD_HEADING = "\n\n## From the episode log: the observations most relevant here (oldest first)\n"
+NEW_HEADING = ("\n\n## From the episode log: earlier observations most relevant here (oldest first)\n"
+               "History and details. For what is true now, the lasting facts and the profile above come "
+               "first; use these lines for details they don't hold.\n")
 
 
 def memories(run: Path):
@@ -57,8 +62,7 @@ def main() -> None:
     ap.add_argument("--out", type=Path, required=True)
     ap.add_argument("--max-cost-usd", type=float, default=2.0)
     args = ap.parse_args()
-    if args.heading == "old":
-        profile.LOG_HEADING = OLD_HEADING
+    profile.LOG_HEADING = OLD_HEADING if args.heading == "old" else NEW_HEADING
     model = CostCap(make_model(ModelSettings(model="gpt-5.4-mini", effort="medium")), args.max_cost_usd)
     judge = CostCap(make_model(ModelSettings(model="gpt-5.4-mini", effort="high")), args.max_cost_usd, shared_with=model)
     rows = [json.loads(line) for line in (args.run / "questions.jsonl").open()]

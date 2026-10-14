@@ -94,12 +94,7 @@ class FactsLedger:
         return "\n".join(lines)
 
 
-# The ledger and profile are the current state; the log is the evidence behind them,
-# old values and passing claims included. Without saying which comes first, answers
-# took an older job or a later false claim from the log over the ledger (step 3 runs).
-LOG_HEADING = ("\n\n## From the episode log: earlier observations most relevant here (oldest first)\n"
-               "History and details. For what is true now, the lasting facts and the profile above come "
-               "first; use these lines for details they don't hold.\n")
+LOG_HEADING = "\n\n## From the episode log: the observations most relevant here (oldest first)\n"
 
 
 def profile_memory_text(facts: str, profile: str, log_lines: list[str] | None = None, query: str | None = None,
@@ -175,8 +170,7 @@ conversation with them, shown in <current_conversation>. Earlier sessions are no
 the evidence for each point cited by observation ID. Its lasting facts are kept as reported; \
 where reports conflict, both are shown. After the profile come the observations from earlier \
 sessions most relevant to this conversation, with their dates: use them for details the \
-profile doesn't hold. Where they differ from the facts or the profile, the facts and the \
-profile are the current state.
+profile doesn't hold, and prefer newer ones where they differ.
 
 {answer_task}"""
 
