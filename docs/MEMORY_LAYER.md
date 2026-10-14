@@ -710,7 +710,7 @@ Routines (days, times, place). Results are in
 | DynamicMem: state completion / service | 0.19 / 0.32 | 0.13 / 0.32 |
 | FoodBody long: replies follow the checklist (9 runs) | 0.78 | 0.83 |
 | FoodBody long: stale beliefs kept | 0.31 | 0.20 |
-| Cost, all of the above | $9.42 | $8.01 |
+| Cost of memory and answers, all of the above (judging excluded) | $9.42 | $7.25 |
 
 - **The ledger did what it was for.** Static facts survive, and conflicts are
   noticed and raised. Real changes are marked as changes ("location: Melbourne;
