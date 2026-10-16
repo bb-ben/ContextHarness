@@ -1,98 +1,53 @@
 # ContextHarness
 
-The context-management and user-state layer for **FoodBody**, a longitudinal health
-and wellness agent, developed and tested on
-[HorizonBench](https://github.com/stellalisy/HorizonBench).
+A research harness for the context-management and user-memory layer of **FoodBody**, a
+longitudinal health and wellness agent. It replays long, dated histories of one person
+through a memory design, event by event, then tests whether what the design kept is
+correct, current and actually used.
 
-The layer keeps three kinds of memory across sessions: a bounded **working context**,
-**episodic memory** of what happened, and the **current user state**. The agent
-maintains all three itself, through a small set of file tools, under a written
-contract. HorizonBench supplies long, dated conversation histories in which
-preferences change after life events. That makes it a sequential testbed for
-whether the layer keeps the user's state current.
+The designs are compared on four testbeds:
 
-**Status:** contract **v3.10**. The layer, instrumentation, and Gemini and OpenAI
-adapters are built and tested offline (193 tests). A model that follows the
-contract produces zero violations across all 901 events of the HorizonBench sample.
+| Testbed | What it tests |
+|---|---|
+| [HorizonBench](https://github.com/stellalisy/HorizonBench) | Long conversation histories in which preferences change after life events; a five-choice question at the end |
+| FoodBody-style scenarios (`scenarios/`) | Health and food histories with known changes (a diagnosis, an injury, a new baby), graded against reference checklists |
+| [MemConflict](https://github.com/TaoZhen1110/MemConflict) | Whether the right memory wins when memories disagree: real updates, false later claims, preferences that hold under a condition |
+| [DynamicMem](https://github.com/wenyaxie023/DynamicMem) | Whether the user model stays accurate over ~15 months of app activity, and serves the user well |
 
-**Real runs so far:**
-- **v1 (Gemini, 3½ events).** It followed the format and promoted a hypothesis
-  correctly. It also showed three problems, which v2 fixed; see
-  [`examples/real_run_v1_gemini/`](examples/real_run_v1_gemini).
-- **v2 (gpt-5.4-mini, one full item, $1.02).** Memory stayed well-formed and
-  bounded, but preferences only accumulated: every signal got a new topic, so none
-  was ever superseded and the change in the person was missed. See
-  [`examples/real_run_v2_openai/`](examples/real_run_v2_openai).
-- **v3 (same item, $1.33).** Preference dimensions fixed the accumulation: all
-  preferences sat on 7 seed dimensions, 4 were superseded, and the life event was
-  linked to the decision-style value and revised it. The answer was still wrong,
-  because the answering step leaned on the top of `context.md` rather than the
-  revised value; see
-  [`examples/real_run_v3_openai/`](examples/real_run_v3_openai).
-- **Baselines on that item ($0.44)** are wrong too: the full history in one call
-  answered D B B, recent history B B B, and the rolling summary A. The item is hard
-  for this model whatever memory it gets; see
-  [`examples/baselines_item0/`](examples/baselines_item0).
-- **v3.1 on three items ($14.79).** No method, ours or a baseline, answers any of
-  the three correctly. One item's label contradicts its own conversations, and
-  another's options are ambiguous. On the valid one (item 6), the rolling summary
-  holds the person's changed preferences better than our agent, because v3.1 filed
-  a preference repeated across many tasks under each task's goal. No memory recorded
-  any change. See [`examples/multi_item_v31/`](examples/multi_item_v31) and the
-  [design log](docs/MEMORY_LAYER.md#v31-on-three-items).
-- **v3.2 on item 6 ($5.85).** Preferences repeated across tasks are now collected,
-  and goals close (1 active at the end, against 24). The memory scores the same,
-  0.3, and still records no change: each revision of a preference merges new clauses
-  into the old ones instead of replacing what changed. See
-  [`examples/v32_item6/`](examples/v32_item6).
-- **v3.3 on two FoodBody-style scenarios ($1.13 with the reply tests).** The agent
-  recorded its first changes: it replaced "loose ideas, no numbers" with "structured
-  weekly plans with carb counts" and noted what changed. Replies written from its
-  memory used carb counts, which replies without memory never did. A rolling summary
-  did as well or better on these short histories, at a tenth of the cost. See
-  [`examples/v33_scenarios/`](examples/v33_scenarios) and the
-  [design log](docs/MEMORY_LAYER.md#v32--v33-revisions-that-replace-and-checking-that-memory-is-used).
-- **v3.4–v3.6 on four scenarios ($2.25).** Two new scenarios end on a neutral
-  message, so replies without memory fit 0% of the changes and replies from memory
-  50–100%. v3.4 and v3.5 kept the old preference standing behind temporary entries
-  that expired; v3.6 gives how someone wants help a single home (preferences, with a
-  review date if the change may not last), and both changes landed. Replies now use
-  memory directly ("for you and your partner, Mediterranean-leaning, no grams"). A
-  rolling summary still writes better-fitting replies on these short histories. See
-  [`examples/scenarios_v34_v36/`](examples/scenarios_v34_v36) and the
-  [design log](docs/MEMORY_LAYER.md#v34--v36-one-home-for-how-they-want-help).
-- **v3.7–v3.8 on four scenarios ($1.78).** Repeated wishes are collected under a
-  dimension and replies must account for all of memory; with both, replies from
-  memory fit the changed preferences in 7 of 8 cases and never the old ones (no
-  memory: 0 on the neutral-ending scenarios). A `foodbody` layout keeps diet,
-  allergies and household in view. Run-to-run variance is now the main limit. See
-  [`examples/scenarios_v37_v38/`](examples/scenarios_v37_v38).
-- **v3.8 on item 6, 75 events ($7.44 with evaluations).** Memory still scores 0.3
-  and replies follow the old style: the replies used memory faithfully, but every
-  revision of the style value added to it ("now also…") instead of replacing it. What
-  works on 8-event scenarios erodes over 75. See
-  [`examples/v38_item6/`](examples/v38_item6).
-- **v3.9–v3.10 on three scenarios, 54 runs (about $15 with vetting).** Reasoning
-  effort didn't matter; run-to-run variance did. A review call after each update,
-  where the agent re-reads its memory and fixes contradictions, cut stale values and
-  raised replies that follow the new preferences from 0.67 to 0.83, at 63% more cost.
-  See [`examples/v310_review_runs/`](examples/v310_review_runs).
-- **The profile method ($2.97).** One profile rewritten each event, citing numbered
-  evidence, under a 1,781-character prompt instead of the 25,200-character contract.
-  Replies follow the new preferences 0.94 of the time on the neutral-ending scenarios
-  (structured agent with review step: 0.83; rolling summary: 0.83), at about a tenth of
-  the structured agent's cost. See [`examples/profile_method/`](examples/profile_method).
-- **Memory judge on that item.** Graded against the ground-truth attributes, v3
-  holds 0.38 of the person's current preferences, v2 0.0, and the rolling summary
-  0.75. The summary's lead comes from role-play content recorded before the change,
-  though, and no memory recorded the change itself; see
-  [`docs/MEMORY_LAYER.md`](docs/MEMORY_LAYER.md#memory-judge).
+Results and the reasoning behind each design change are recorded in the design log,
+[`docs/MEMORY_LAYER.md`](docs/MEMORY_LAYER.md), with each round's tables in
+`examples/<round>/RESULTS.txt`.
 
 | Read | For |
 |---|---|
-| [`agent.md`](agent.md) | The memory contract: what goes in each file, the entry format, how beliefs form, change and expire. It is the agent's system prompt, verbatim. |
-| [`docs/MEMORY_LAYER.md`](docs/MEMORY_LAYER.md) | Layer design, the per-call prompt, every check, pause/resume, and the FoodBody extension points |
+| [`docs/MEMORY_LAYER.md`](docs/MEMORY_LAYER.md) | The designs in detail, the design log with every round's results, and known gaps |
 | [`docs/DATASET_NOTES.md`](docs/DATASET_NOTES.md) | HorizonBench findings. **Read before interpreting accuracy:** picking the shortest option scores 78.2% on the benchmark |
+| [`agent.md`](agent.md) | The structured agent's contract, used verbatim as its system prompt |
+
+## Memory designs
+
+**The current design is `profile`.** After each event, one model call returns a short
+episode line, up to 8 observations, any new or changed lasting facts, and the whole
+profile rewritten. The harness writes the files; the model never edits them directly.
+
+| File | Holds | Written by | Read |
+|---|---|---|---|
+| `facts.md` | The facts ledger: lasting facts (identity, family, work, where they live, health, allergies, diet rules), with source and date, earlier values, and conflicting reports kept side by side | The harness, from facts the model reports. A different value replaces the old one only when the model marks a real change; otherwise both are kept as a conflict | Every update and every answer |
+| `profile.md` | Who the person is now: Routines, How they want help, Goals, Right now, Changes; each claim cites observation IDs | The model rewrites it every event (8,000-character limit; over-long rewrites are shortened, and cut only as a last resort) | Every update and every answer |
+| `memory/episodes.md` | The episode log: one line per event and its numbered observations (`O-12.3`) | The harness appends; nothing is edited | The latest 10,000 characters during updates; when answering, the lines most relevant to the question (the whole log if it fits, otherwise BM25 search) |
+
+Answers and replies see the ledger, the profile and the relevant log lines, within a
+48,000-character budget. Every version of the profile and ledger is kept in
+`profile_versions.jsonl`.
+
+Other designs, kept for comparison:
+
+| `--method` | Memory | Model calls per event | Memory shown when answering |
+|---|---|---|---|
+| `profile` | Facts ledger, profile, episode log | 1 (plus shortening if over the limit) | Ledger + profile + relevant log lines, ≤ 48,000 chars |
+| `summary` | One rolling summary rewritten each event | 1 (plus shortening if over the limit) | The summary, ≤ 8,000 chars |
+| `recent` | None; keeps the raw sessions | 0 | The newest raw sessions, ≤ 48,000 chars |
+| `agent` | The structured workspace in [`agent.md`](agent.md): `context.md`, state files, episodes, archive | 1–8 (file tools; `finish` ends an event) | `context.md` + state files + reads and lookups, ≤ 48,000 chars |
 
 ## Setup
 
@@ -100,209 +55,136 @@ Requires Python ≥ 3.12 and [uv](https://docs.astral.sh/uv/).
 
 ```bash
 uv sync
-uv run pytest -q                     # 193 tests, offline, no credentials
-export GEMINI_API_KEY=...            # for real-model runs (default model: gemini-3.7-flash)
+uv run pytest -q                  # 213 tests, offline, no credentials
+export OPENAI_API_KEY=...         # real-model runs; the default model is gpt-5.4-mini
 ```
 
-Your free-tier limits are on your [AI Studio rate-limit dashboard](https://aistudio.google.com/rate-limit).
-On the free tier, Google may use prompts and outputs to improve its products. That's
-fine for HorizonBench's synthetic data, but **not for real FoodBody user data**,
-which needs a paid tier or another provider. Anthropic models also work: pass an
-Anthropic model ID as `--model`.
+- **Cost control.** Per-token prices for gpt-5.4-mini and gpt-6.1-sol are in
+  [`models/pricing.py`](src/context_harness/models/pricing.py). `--max-cost-usd`
+  pauses a run once its estimated spend reaches the cap; a model needs a price there
+  before a run on it can be capped.
+- **Other providers.** Pass a `gemini-*` model ID (reads `GEMINI_API_KEY`) or an
+  Anthropic model ID (reads `ANTHROPIC_API_KEY`) as `--model`. `--model fake` is an
+  offline, deterministic stand-in for tests and smoke runs.
+- **Data.** HorizonBench downloads from Hugging Face on first use (`--config sample`
+  or `benchmark`). The benchmarks used here are synthetic. Check a provider's data
+  terms before sending real FoodBody user data.
 
-## Commands
-
-```bash
-# Offline runs with the deterministic fake model
-uv run context-harness run --model fake --dataset tests/fixtures/tiny_benchmark.jsonl
-uv run context-harness run --model fake --config sample
-
-# Real-model demo: sample item 0, all 29 events, paced and capped for the free tier
-uv run context-harness run --model gemini-3.7-flash --items 0 --rpm 5 --timeout 240 --max-requests 40 --run-name demo_item0
-# A daily quota, provider outage or the request cap pauses it at the last completed event. Later:
-uv run context-harness run --model gemini-3.7-flash --items 0 --rpm 5 --timeout 240 --max-requests 40 --run-name demo_item0 --resume
-
-# Quicker smoke test: only the 16 most recent events (still includes item 0's life event)
-uv run context-harness run --model gemini-3.7-flash --items 0 --max-sessions 16 --rpm 5
-
-# Rerun only the answer step against a finished item's saved memory (about one call each)
-uv run context-harness replay-answer runs/<run>/items/<item> --model gpt-5.4-mini \
-    --strategy default --strategy dimension-first --repeats 5 --max-cost-usd 0.50
-
-# Grade a finished item's memory against the ground-truth preference attributes
-# (three judgings, majority grade; evaluator side only)
-uv run context-harness judge-memory runs/<run>/items/<item> --max-cost-usd 0.30
-
-# Short FoodBody-style histories with one known change (cents per run)
-uv run context-harness run --model gpt-5.4-mini --dataset scenarios/foodbody.jsonl --max-cost-usd 0.80
-
-# Write the reply the agent would send, from its saved memory, and compare it with
-# replies from no memory and the full history; a judge grades each against the labels
-uv run context-harness respond-eval runs/<run>/items/<item> --condition memory \
-    --condition none --condition full-history --repeats 2 --max-cost-usd 0.40
-
-# Check that each item's labeled change shows up in the person's own words
-uv run context-harness vet-items --config sample --items 0,2,3,5,6,7 --max-cost-usd 0.40
-
-# Inspect what the agent read and wrote, event by event, and every violation
-uv run context-harness inspect-memory runs/<run>/items/<item>
-
-# Baselines on the same model settings and budgets
-uv run context-harness run --method summary --model gemini-3.7-flash --items 0 --rpm 5
-uv run context-harness run --method recent  --model gemini-3.7-flash --items 0 --rpm 5
-
-# Aggregate runs; inspect or audit the dataset
-uv run context-harness summarize runs/<run-a> runs/<run-b>
-uv run context-harness inspect-data --config sample
-uv run context-harness audit-data --config benchmark --out data/audit_benchmark
-```
-
-Other options:
-- `--effort minimal|low|medium|high`: Gemini thinking level.
-- `--context-chars`: the `context.md` limit (default 6,000).
-- `--no-preload`: contract v1 behavior, where state files must be read explicitly.
-- `--max-requests`: a hard cap per invocation (the run pauses).
-- `--timeout`: seconds per response before a retry.
-- `--layout general|with-decisions|foodbody`: the file set and seed preference
-  dimensions (`general` is the default; `with-decisions` adds the decisions file;
-  `foodbody` adds profile topics such as diet and allergies).
-- `--max-cost-usd`: pauses once estimated spend reaches the cap (priced models).
-- `--review-step`: after each update, one more short call in which the agent re-reads
-  its memory and fixes contradictions (about 60% more cost; raised reply fit from
-  0.67 to 0.83 on the scenarios).
-- `--no-check-feedback`: don't show the agent the memory checks' open problems.
-- `--answer-strategy dimension-first|default`: how the agent uses memory when it
-  answers. `dimension-first` (the default) finds the dimension the candidate
-  responses differ on and reads its current value first.
-
-Two commands show how memory evolved:
-- `context-harness memory-timeline <item>`: what each event added, changed,
-  archived or removed in working context, episodic memory and state.
-- `context-harness inspect-memory <item>`: file access and violations.
-- `--order text`: the benchmark's original order (see the dataset notes).
-- `--no-scenarios`, `--log-prompts`.
-
-Run `context-harness run -h` for the full list.
-
-### External benchmarks: MemConflict and DynamicMem
-
-Two more benchmarks test the memory layer on tasks other than HorizonBench's
-multiple choice. Each one replays the benchmark's history through a memory method
-(`profile` or `summary`). It then answers the benchmark's questions from that memory
-alone, never from the raw history. The data stays in `data/external/` (git-ignored).
-
-| | MemConflict | DynamicMem |
-|---|---|---|
-| Asks | Is the right memory used when memories disagree? | Does the user model stay accurate over months? |
-| History | ~52 dated chat sessions per person (30 people) | 1,000–2,600 app-activity logs per user over ~15 months (10 users), replayed as weekly events |
-| Questions | 3,750 attached to sessions, of three types. Dynamic: a real update, so the new state must win. Static: a false later claim, so the true fact must survive. Conditional: a preference that holds only under a condition. | 5 checkpoints per user. State Completion: fill in 17–48 current habits and preferences. Personalized Service: one request per habit that depends on it. |
-| Scored by | A judge using MemConflict's published metric definitions: answer accuracy, update awareness and conflict recognition. Plus our own check of whether the memory itself holds the evidence. | DynamicMem's own evaluator, run from its clone. It gives the Core+Detail judge scores (`state_completion`, `personalized_service`; its default holistic judge) and a rule-based `state_value_f1`. |
-| License | None stated (data is read from the clone, never copied) | MIT |
+**MemConflict and DynamicMem** are read from local copies in `data/external/`, which
+git ignores. MemConflict states no license, so its data is never copied into this
+repository.
 
 ```bash
-# Setup (once)
 git clone --depth 1 https://github.com/TaoZhen1110/MemConflict data/external/MemConflict
 git clone --depth 1 https://github.com/wenyaxie023/DynamicMem data/external/DynamicMem
 uv run python -c "from huggingface_hub import snapshot_download as d; \
   d('xiewenya/dynamicmem', repo_type='dataset', local_dir='data/external/dynamicmem_data')"   # 80 MB
-
-# MemConflict: 2 people, 30 questions each (10 per conflict type), both designs
-uv run context-harness memconflict --people 0,1 --questions 30 --methods profile,summary --max-cost-usd 9
-
-# DynamicMem: one user, all 5 checkpoints, both designs, scored by DynamicMem's evaluator
-uv run context-harness dynamicmem --users 001_user_001 --methods profile,summary --max-cost-usd 5
 ```
 
-`--max-cost-usd` is one budget for memory updates, answers and our judge. DynamicMem's
-evaluator calls its judge itself, outside that budget; with `--judge-model gpt-5.4-mini`
-it saves its judge inputs to `judge_io.json`. The paper's judge is `gpt-5.4`, so
-absolute DynamicMem scores are comparable between our designs, not with the paper's
-tables. Offline smoke tests: add `--model fake` (and `--judge-model none` for
-DynamicMem's rule-based scores only).
+DynamicMem is scored by its own evaluator, run from that clone; it reads the same
+`OPENAI_API_KEY`.
+
+## Commands
+
+```bash
+# Run a design over histories (HorizonBench items, or a scenario file)
+uv run context-harness run --method profile --dataset scenarios/foodbody_long.jsonl --items 0,1,2 --max-cost-usd 2
+uv run context-harness run --method profile --config sample --items 0 --max-cost-usd 1
+uv run context-harness run --method profile --model fake --config sample      # offline check
+# A pause (cost cap, quota, outage) stops at the last completed event; continue with the same --run-name and --resume
+
+# Grade finished runs' memory and replies against reference checklists (evaluation framework)
+uv run context-harness evaluate runs/<run>/items/* --checklists scenarios/foodbody_long_checklists.json --max-cost-usd 2
+
+# MemConflict: people 0-4, 30 questions each (10 per conflict type), both designs
+uv run context-harness memconflict --people 0,1,2,3,4 --questions 30 --methods profile,summary --max-cost-usd 15
+
+# DynamicMem: users, all 5 checkpoints, both designs, scored by DynamicMem's evaluator
+uv run context-harness dynamicmem --users 001_user_001,002_user_002 --methods profile,summary --max-cost-usd 12
+
+# Tables with the spread across runs, people and users
+uv run python scenarios/summarize_evals.py runs/<evaluate run>/summary.json        # --by-run compares two versions
+uv run python scenarios/summarize_benchmarks.py runs/<memconflict run> runs/<dynamicmem run>
+```
+
+More:
+
+| Command | Does |
+|---|---|
+| `respond-eval` | Writes the reply each item's memory would give, plus replies with no memory and with the full history, and grades them against HorizonBench's labels |
+| `judge-memory` | Grades a finished item's memory against HorizonBench's ground-truth preference attributes |
+| `replay-answer` | Reruns only the answer step on a finished item's saved memory |
+| `vet-items` | Checks that each HorizonBench item's labeled change shows up in the person's own words |
+| `memory-timeline`, `inspect-memory` | What each event added, changed or removed; file access and rule violations (structured agent) |
+| `summarize`, `inspect-data`, `audit-data` | Aggregate runs; inspect or audit the HorizonBench data |
+| `scenarios/replay_memconflict_answers.py` | Re-answers a finished MemConflict run's questions on the same rebuilt memory, to test answer-side changes or measure answer noise |
+| `scenarios/rescore_dynamicmem.py` | Rebuilds a DynamicMem run's predictions from its trace and scores them again |
+
+Common options: `--model`, `--effort` (reasoning effort, default `medium`),
+`--max-cost-usd`, `--run-name`, `--out` (default `runs/`), `--timeout`. For
+benchmark commands, `--max-cost-usd` is one budget shared by memory updates, answers
+and our judge; DynamicMem's evaluator runs its own judge outside it. Run
+`context-harness <command> -h` for the full list.
 
 ## How a run works
 
 ```
-for each item:
-    for each event (a HorizonBench session), oldest first:
-        append it to raw_sessions.jsonl                 hash-chained, read-only to the agent
-        agent loop: fresh single-turn calls, ≤ 8        system = agent.md; ends on finish
-        memory checks on the workspace                  access, provenance, consistency, survival
-        checkpoint                                      a quota pause resumes here
-    answer the five-choice question (memory read-only)
-    score; trace the life event's evidence chain        answer key read only here
+for each item (one person's history):
+    for each event, oldest first:
+        append it to raw_sessions.jsonl          hash-chained; the design never reads it back
+        the design updates its memory            profile: one call; agent: a tool loop; summary: one call
+        checkpoint                               a pause resumes here
+    answer or reply from memory alone            labels and answer keys are never shown
+    score                                        evaluator side only
 ```
 
-`run_config.json` records the run's settings and `agent.md`'s hash. Per item, the
-run writes:
+Per item, a run writes `trace.jsonl` (every model call with its usage, every memory
+diff, every fact added, changed or kept as a conflict), `result.json`, the memory
+before and after (`snapshots/`), and for the profile `profile_versions.jsonl`.
+`run_config.json` records the settings.
 
-| File | Contents |
+## How quality is measured
+
+- **Evaluation framework** (`memeval.py`, the `evaluate` command). Before a run, a
+  person writes a reference checklist per scenario: facts and current preferences
+  the memory must contain, outdated beliefs it must no longer assert, and what a good
+  reply does. An LLM judge marks each item and scores six criteria (faithfulness,
+  currency, recall, change tracking, provenance, consistency) against the person's
+  own messages. Each judgment is made three times and the majority kept, with their
+  agreement reported.
+- **HorizonBench**: five-choice accuracy. Read the dataset notes first: the shortest
+  option is right 78.2% of the time.
+- **MemConflict**: answer accuracy per conflict type, update awareness and conflict
+  recognition (the benchmark's published definitions, applied by a judge), plus
+  whether the memory holds the evidence for the answer.
+- **DynamicMem**: its own evaluator's Core+Detail scores for State Completion and
+  Personalized Service, plus a rule-based value F1.
+
+Judges default to gpt-5.4-mini and stay fixed when the design or model changes. They
+haven't yet been checked against a person's grading.
+
+## Repository layout
+
+| Path | Contents |
 |---|---|
-| `workspace/` | The agent's files |
-| `trace.jsonl` | Every model call, tool call, file diff and memory check |
-| `memory_report.json` | Per-event access table, violations, metrics, entry lifecycles |
-| `snapshots/initial`, `snapshots/final` | The workspace before and after |
-| `result.json` | Answer, correctness, tokens, file operations, latency, memory summary, evidence chain |
-| `checkpoint.json` | Only present while an item is paused |
-
-### Baselines and comparable budgets
-
-| Budget | agent | summary | recent |
-|---|---|---|---|
-| Always-visible memory | `context.md` ≤ 6,000 chars | summary ≤ 8,000 | — |
-| Memory text at answer time (48,000) | `context.md` + reads / lookups | the summary | newest raw sessions |
-| Model calls per event | 1–8 (`finish` ends an event) | 1 | 0 |
-
-All three methods share one model configuration and one answer step: a
-`submit_answer` tool, with HorizonBench's letter extraction as a fallback.
-
-## Results example
-
-Fake model, all 10 sample items. These numbers check the pipeline and are **not
-model results**. The fake follows the contract perfectly and answers by word
-overlap. Files are in [`examples/results_example/`](examples/results_example).
-
-```
-  Overall            0.0%  [0.0, 0.0]     (n=10)
-  Shortest-option   80.0%  (label-free reference heuristic)
-  Memory layer: 901 events, 0 distinct violations (new ones in   0.0% of events, 0 unresolved at end); top: none
-  Final provenance 100.0%; context covers  17.4% of live state
-  Evolution evidence reached: in_state 10
-```
-
-The fake's accuracy moves whenever the prompt's wording does (it was 10% before
-v2), so it says nothing about the layer.
+| `src/context_harness/methods/` | The designs: `profile.py` (with `log_search.py`), `baselines.py` (summary, recent), `agent.py` |
+| `src/context_harness/benchmarks/` | MemConflict and DynamicMem adapters |
+| `src/context_harness/models/` | OpenAI, Gemini, Anthropic and fake adapters; prices and cost caps |
+| `src/context_harness/` | Orchestrator, tracing, evaluation framework (`memeval.py`), judges, the structured agent's workspace, tools and checks |
+| `scenarios/` | FoodBody-style scenarios and their checklists, result-table scripts |
+| `docs/` | Design log and dataset notes |
+| `examples/` | Each round's results (`RESULTS.txt`) and sample memories |
 
 ## Tests
 
 | File | Covers |
 |---|---|
-| `test_checks.py` | Every contract rule fires on a workspace that breaks it and stays quiet on one that follows it |
-| `test_resume.py` | A pause mid-item, mid-event or mid-answer resumes to the same end state as an uninterrupted run |
-| `test_context.py` | `agent.md` is the system prompt; `context.md` edits replace it on the next call; `finish` ends an event in one call; due reminders appear on time, and ignoring them is flagged |
-| `test_workspace.py` | Layout, allowlist, traversal, symlinks, limits, `lookup`, `archive`, access records, approval denial, raw-log integrity |
-| `test_gemini_adapter.py` | Requests and responses against the SDK's types; thinking text excluded; per-minute vs. per-day 429s; pacing |
-| `test_leakage.py` | Future sessions, the question and every label are kept from the agent, for all methods |
-| `test_dataset.py`, `test_audit.py` | Chronological ordering, the guarded parser, the dataset audit |
-| `test_scoring.py`, `test_end_to_end.py`, `test_anthropic_adapter.py` | Scoring and aggregation; CLI runs; the Anthropic adapter |
-| `test_judge.py` | The judge grades beliefs, not raw episodes; missing grades count as absent; repeats combine by majority |
-| `test_vet.py` | Vetting reads only the person's turns, split at the change; verdicts separate memory grading from answer scoring |
-| `test_supersede.py` | `supersede` links both entries, refuses revisions without `changed:` or over the length limit, and leaves files untouched when it refuses |
-| `test_respond.py` | Replies from memory (no options shown), from text or nothing; the reply judge's majority; answers record the entries they rest on |
-| `test_scenarios.py` | The scenario file matches its generator, and every scenario's labels are coherent |
-| `test_replay.py` | Answer-only replay restores the saved memory, reruns only the answer step, applies the strategy, and leaves the source run untouched |
-
-## Next steps
-
-1. **Make the profile method the main line**: more scenarios and repeated runs on
-   long histories, and decide which of the structured design's pieces (if any) to keep.
-2. **Measure variance:** run each scenario several times per version and compare
-   distributions, not single runs.
-3. **Add more neutral-ending scenarios.** They are the only tests so far where replies
-   without memory fail.
-4. **Score answers only on `usable` items** (0, 2 and 7 in the sample), and grade
-   memory on `memory_only` items too.
-5. **Check the judge against a person's reading** of a few memories, and try a
-   stronger judge model.
-6. **Add a FoodBody event renderer and decision/outcome statuses** once a schema is
-   supplied.
+| `test_profile.py` | One call per event, numbered evidence, saved versions; over-long rewrites shortened before any cut; the facts ledger (changes, conflicts, copied lines, survival across rewrites); log search and what answers see |
+| `test_benchmarks.py` | MemConflict and DynamicMem adapters: replay order, questions answered from memory as it stood, stratified sampling, weekly events, predictions in each benchmark's format, a shared cost cap, rows kept when a run stops |
+| `test_memeval.py` | The evaluation framework: the judge sees only the person's words; majority of repeats; checklists cover every scenario |
+| `test_openai_adapter.py`, `test_gemini_adapter.py`, `test_anthropic_adapter.py` | Requests and responses against each SDK's types; errors that pause a run; cost and cost caps |
+| `test_leakage.py` | Future sessions, the question and every label are kept from every design |
+| `test_resume.py` | A pause mid-item, mid-event or mid-answer resumes to the same end state |
+| `test_respond.py`, `test_replay.py`, `test_judge.py`, `test_vet.py` | Replies from memory, answer-only replay, the memory judge, item vetting |
+| `test_checks.py`, `test_context.py`, `test_workspace.py`, `test_supersede.py` | The structured agent's contract rules, working context, workspace and supersession |
+| `test_dataset.py`, `test_audit.py`, `test_scoring.py`, `test_scenarios.py`, `test_end_to_end.py` | Data loading and ordering, the audit, scoring, scenario files, CLI runs |

@@ -1,4 +1,6 @@
-"""Command line: `context-harness run | summarize | inspect-memory | inspect-data | audit-data`."""
+"""Command line for ContextHarness: replay histories through a memory design, evaluate the
+memory and replies, run the external benchmarks, and inspect runs. `context-harness -h`
+lists the commands."""
 
 from __future__ import annotations
 
@@ -16,7 +18,7 @@ from .models.pricing import PRICES_PER_MTOK, CostCap
 from .orchestrator import RunConfig, run
 from .workspace import CONTEXT_FILE, LAYOUTS
 
-DEFAULT_MODEL = "gemini-3.7-flash"
+DEFAULT_MODEL = "gpt-5.4-mini"
 
 
 def _add_dataset_args(p: argparse.ArgumentParser) -> None:
@@ -580,13 +582,14 @@ def main(argv: list[str] | None = None) -> int:
     p = sub.add_parser("run", help="Replay items through a method and score the final question")
     p.add_argument("--method", choices=sorted(METHODS), default="agent")
     p.add_argument("--model", default=DEFAULT_MODEL,
-                   help=f"'fake', a gemini-* id, or an Anthropic model id (default {DEFAULT_MODEL})")
+                   help=f"'fake' (offline), an OpenAI gpt-* id, a gemini-* id, or an Anthropic model id "
+                        f"(default {DEFAULT_MODEL})")
     _add_dataset_args(p)
     p.add_argument("--max-tokens", type=int, default=16000)
     p.add_argument("--effort", default="medium", choices=["minimal", "low", "medium", "high", "xhigh", "max", "none"],
                    help="Reasoning effort: Gemini thinking level, OpenAI reasoning_effort, or Anthropic effort; "
                         "'none' omits it")
-    p.add_argument("--rpm", type=float, help="Pace requests to at most this many per minute (free-tier quotas)")
+    p.add_argument("--rpm", type=float, help="Pace requests to at most this many per minute (for per-minute quotas)")
     p.add_argument("--timeout", type=float, default=300.0,
                    help="Seconds to wait for one model response before retrying (default 300)")
     p.add_argument("--max-cost-usd", type=float,

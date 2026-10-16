@@ -171,9 +171,9 @@ it is evaluator-side only.
 | A2 | Sessions dated after the probe | **Dropped** in `chronological`, because they are future information. The count is logged per item | Kept in `--order text` |
 | A3 | Is the probe prefix replayed as a session? | No. It is shown only at question time, as the "current conversation" together with the options | — |
 | A4 | Are `Scenario:` lines observations? | Yes. They are shown as session metadata, as HB shows them to every model | `--no-scenarios` hides them (and the "missing scenario" tell) |
-| A5 | Tools at answer time | Agent may `list_files`/`read_file`, not write. It answers with `submit_answer` | — |
+| A5 | Memory at answer time | Read-only. The structured agent may `list_files`/`read_file`; the profile and summary designs get their memory text in the prompt (the profile: its facts ledger, profile and the relevant episode-log lines). All answer with `submit_answer` | — |
 | A6 | "Immutable raw session log" | Written by the harness as an append-only, hash-chained `raw_sessions.jsonl` *outside* the workspace, chmod read-only at the end. Not reachable by agent tools | — |
-| A7 | "Memory evaluation" in milestone 1 | Deterministic: per-file edit counts and sizes, no-op sessions, plus an evaluator-side check of whether the agent wrote to memory during the evolution-event session(s) | LLM-judge over final memory (next milestone) |
+| A7 | Memory evaluation | Deterministic checks for the structured agent (per-file edits and sizes, no-op sessions, whether it wrote to memory during the evolution-event sessions), plus evaluator-side LLM judges: `judge-memory` against the ground-truth attributes, and the evaluation framework (`evaluate`) against reference checklists | — |
 | A8 | Item identity shown to agent | Opaque `item_key` (hash). The raw `id` would leak the domain | — |
 | A9 | Length artifact (finding 13) | Every summary reports the accuracy of a label-free shortest-option heuristic as a reference | — |
 | A10 | Parser mis-splits (finding 14) | `parse_sessions`: sessions start only on full timestamps; `Scenario:` only before the first turn | `hb_compat.parse_conversations` kept verbatim for comparison |

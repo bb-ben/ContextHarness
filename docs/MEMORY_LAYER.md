@@ -1,11 +1,92 @@
 # The memory layer
 
-This repository builds the context-management and user-state layer for a
-longitudinal health and wellness agent (FoodBody). HorizonBench is the current
-testbed. It supplies long, dated, sequential conversations in which preferences
-change after life events.
+This repository builds the context-management and user-memory layer for FoodBody, a
+longitudinal health and wellness agent. A memory design sees one person's history one
+dated event at a time and must keep what matters: what is true of them now, how they
+want help, and the details and evidence behind it. Designs are compared on
+HorizonBench, FoodBody-style scenarios, MemConflict and DynamicMem (see the
+[README](../README.md#how-quality-is-measured) for how each is scored).
 
-The layer has three parts:
+This document describes the current design and the ones kept for comparison, then
+the design log: every change, why it was made, and what it did to the results.
+
+## Current design: the profile method
+
+Code: [`methods/profile.py`](../src/context_harness/methods/profile.py) and
+[`methods/log_search.py`](../src/context_harness/methods/log_search.py).
+
+### Each event
+
+```
+shown to the model    facts.md + profile.md (with its length and limit) + the latest 10,000 chars
+                      of the episode log + the new event
+one call: record(     episode: one line on what happened
+                      observations: up to 8, each specific and self-contained, e.g. "drinks fresh
+                        orange juice as a morning boost before training"
+                      facts: lasting facts that are new or differ from facts.md, each marked as a
+                        real change or not
+                      profile: the whole profile, rewritten )
+the harness           appends the episode and numbered observations (O-12.1 ...) to the log
+                      applies the facts to the ledger
+                      replaces the profile (shortening it first if it is over the limit)
+                      saves the profile and ledger as a new version
+```
+
+### The memory
+
+| File | Holds | Rules |
+|---|---|---|
+| `facts.md` | Lasting facts: identity, family, education, work, where they live, health, allergies, medications, diet rules, household. One line each with the event and date it came from | Kept by the harness, never rewritten by the model. A new key is added. A different value replaces the old one only when the model marks a real change ("earlier: Darwin (until 2022-02-25)"); otherwise both are kept: "CONFLICT, also reported: …". A re-reported fact is a repeat. Up to 60 facts, values up to 160 characters |
+| `profile.md` | Who they are now, in five sections: Routines (days, times, place), How they want help (by context where it differs), Goals, Right now (temporary, with an end), Changes (dated). Each claim cites observation IDs | Rewritten by the model every event. Limit 8,000 characters, with the current length shown in every update. An over-long rewrite gets up to two calls asking for a shorter version; a hard cut is the last resort |
+| `memory/episodes.md` | One line per event, and up to 8 numbered observations of four kinds: stated, behavior, reaction, event | Appended by the harness; never edited |
+
+### Answering
+
+Answers and replies see `facts.md`, `profile.md`, and the episode-log lines most
+relevant to the question, oldest first with their dates, within the 48,000-character
+answer budget. If the whole log fits, all of it is shown. Otherwise BM25 against the
+question picks the lines, newest first among equally relevant ones.
+
+### The three kinds of memory
+
+| Kind | In the profile design |
+|---|---|
+| Working context | The event being processed and the latest log lines during an update; the current conversation and the relevant log lines when answering. It has no file of its own |
+| Episodic memory | `memory/episodes.md` |
+| Current user state | `facts.md` (true until it changes) and `profile.md` (how to help them now) |
+
+### What is recorded
+
+- **`trace.jsonl`**: every model call with its usage. A `profile_update` record per
+  event holds the new length, whether it was shortened or cut, the number of
+  observations, and the diff. A `fact` record per reported fact holds its outcome:
+  added, changed, conflict, repeated, or refused when the ledger is full.
+- **`profile_versions.jsonl`**: the profile and ledger after every event.
+
+### Why it looks like this
+
+- **One call per event, one document for "who they are now".** The structured agent
+  (below) needed many per-entry decisions per event, and every failure was one of them
+  going wrong ([the profile method](#the-profile-method-simpler-and-better-so-far)).
+- **A ledger the harness keeps.** A rewritten document drops facts mentioned once, and
+  "newest wins" took in false later claims
+  ([step 1](#step-1-a-facts-ledger-the-harness-keeps-and-a-routines-section)).
+- **More observations, searched when answering.** Details mentioned once (a preference
+  under a condition, a routine's time, a named possession) don't fit in 8,000
+  characters but don't need to
+  ([step 3](#step-3-more-observations-searched-when-answering)).
+
+## Baselines
+
+- **`summary`**: one rolling summary, rewritten after each event under the same
+  8,000-character limit and shortening step, read whole when answering.
+- **`recent`**: no memory; answers read the newest raw sessions that fit in 48,000
+  characters.
+
+## The structured agent (`--method agent`)
+
+The earlier design, kept for comparison. The agent maintains a workspace of files
+itself, through file tools, under a written contract.
 
 | Part | Where | What it does |
 |---|---|---|
@@ -13,7 +94,7 @@ The layer has three parts:
 | **Workspace** | `workspace.py`, `tools.py` | The files, their limits, and the only operations the agent has on them. |
 | **Instrumentation** | `entries.py`, `checks.py`, `evaluation.py` | Parses the files after every event and measures access, provenance, consistency and survival. |
 
-## Three kinds of memory
+### Three kinds of memory
 
 | Kind | Files | Shown to the agent |
 |---|---|---|
@@ -36,7 +117,7 @@ Evidence flows **event → observation → hypothesis → state**:
   - it rolls the oldest episode blocks into the archive, unchanged, once the episode
     log passes 80% of its limit.
 
-## What one model call contains
+### What one model call contains
 
 ```
 system   agent.md
@@ -56,7 +137,7 @@ version in the next call, and nothing persists between events except the files.
 `finish` lets the agent end an event in the same turn as its edits. With state
 already visible, most events take one call.
 
-## Instrumentation
+### Instrumentation
 
 After every event, `MemoryMonitor` parses the workspace and records which files were
 read and written. It then runs the checks below. Results go to the item's trace (a
@@ -91,14 +172,14 @@ A fake model that follows the contract produces zero violations on real
 HorizonBench items. `tests/test_checks.py` shows each rule firing on a workspace
 that breaks it.
 
-## Long runs on a daily quota
+## Long runs and pauses
 
-After every completed event the orchestrator writes `checkpoint.json`: the
-workspace, the method's state, the stats, the memory-check history and the elapsed
-time.
+After every completed event the orchestrator writes `checkpoint.json`: the design's
+memory and state (for the structured agent, its workspace and memory-check history),
+the stats and the elapsed time.
 
-When a provider reports a per-day quota error, the adapter raises `QuotaExhausted`.
-The run then pauses:
+When a provider reports a per-day quota error, or a run reaches its `--max-cost-usd`
+cap, it raises `QuotaExhausted` and the run pauses:
 - the interrupted event's partial edits are discarded;
 - the raw log is cut back to its last verified record;
 - `--resume` continues from the next event.
@@ -110,18 +191,18 @@ suggested delay, and `--rpm` paces requests.
 
 No FoodBody data schema has been supplied, so none is assumed. These seams exist:
 
-- **Events.** The layer consumes anything implementing `types.Event`: `event_id`,
+- **Events.** Every design consumes anything implementing `types.Event`: `event_id`,
   `event_type` and `date`. Supporting a new source means writing a renderer in
-  `prompts.render_event`. The workspace, tools and checks don't depend on the event
-  type.
-- **Decisions and outcomes.** The `with-decisions` layout adds `memory/decisions.md`.
-  `D` entries are the agent's recommendations or actions, with the evidence behind
-  them. `R` entries are what followed, linked by `decision:`. Their statuses are not
-  yet specified.
+  `prompts.render_event`. The DynamicMem adapter already feeds non-conversation
+  events: app-activity logs, grouped into weekly events.
+- **Lasting facts.** The facts ledger's categories (health, allergies, medications,
+  diet rules) are the ones FoodBody can't get wrong; its conflict rule means a
+  contradicting statement is raised, never silently applied.
 - **Action tools.** Subclass `tools.Tool` with `requires_approval = True`. The
   executor routes such calls through an `ApprovalGate`; the default approves nothing.
-- **Layouts.** File sets and limits are data (`workspace.Layout`), so a deployment can
-  add files without code changes.
+- **Structured agent only:** the `with-decisions` layout adds `memory/decisions.md`
+  (`D` entries for recommendations or actions, `R` entries for what followed), and
+  file sets and limits are data (`workspace.Layout`).
 
 ## Design log
 
@@ -800,6 +881,8 @@ user; earlier runs were reused where the code hadn't changed. Results are in
 
 ## Known gaps
 
+### Current design
+
 - **False later claims are still handled poorly** (MemConflict static 0.35). The
   ledger keeps the conflict, but answers often pick the later value or don't say
   which one is right.
@@ -809,13 +892,16 @@ user; earlier runs were reused where the code hadn't changed. Results are in
   the summary on 2 of 3 users.
 - **Answers are noisy:** about ±0.05 overall on 59 questions. One run per person or
   user can't separate smaller effects; more people and repeated runs are needed.
+- **The judge is one model grading against a coarse taxonomy.** Its grades are
+  consistent, but they haven't been checked against a person's reading, and it
+  can't tell a value tracked through a change from one that was there all along.
+
+### Structured agent (kept for comparison)
+
 - **The archive itself has no rollover yet** (200,000 chars). That's enough for
   HorizonBench, but not for years of FoodBody data.
 - **Semantic contradictions aren't detected yet.** Two current entries with
   different topics that conflict would need an LLM judge.
-- **The judge is one model grading against a coarse taxonomy.** Its grades are
-  consistent, but they haven't been checked against a person's reading, and it
-  can't tell a value tracked through a change from one that was there all along.
 - **Real-model data is thin, and the items are noisy.** Three items under v3.1, one
   item under v2 and v3. Vetting finds 3 of the 6 sample items with a labeled change
   usable as answer tests; it is one model's judgment per item and hasn't been checked

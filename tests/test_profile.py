@@ -1,5 +1,6 @@
-"""The profile method: one call per event records numbered evidence and rewrites one
-profile; every version is kept; answers read only the profile."""
+"""The profile method: one call per event records numbered evidence, reports lasting facts
+to a ledger the harness keeps, and rewrites one profile; every version is kept; answers
+read the ledger, the profile and the episode-log lines relevant to the question."""
 
 import json
 
